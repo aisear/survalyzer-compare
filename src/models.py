@@ -88,3 +88,57 @@ class Question:
             if lt.language.lower() == lang_lower:
                 return lt.text
         return self.texts[0].text if self.texts else ""
+
+
+# ---------------------------------------------------------------------------
+# Diff / comparison result models
+# ---------------------------------------------------------------------------
+
+@dataclass
+class TextDiff:
+    """Comparison result for a single language's text."""
+    language: str
+    status: str  # "exact", "similar", "different", "added", "removed"
+    similarity: float  # 0.0 – 1.0
+    old_text: str = ""
+    new_text: str = ""
+
+
+@dataclass
+class ChoiceDiff:
+    """Comparison result for a single answer option."""
+    code: str
+    status: str  # "unchanged", "text_changed", "added", "removed"
+    text_diffs: list[TextDiff] = field(default_factory=list)
+
+
+@dataclass
+class QuestionDiff:
+    """Full diff for one question across two questionnaires."""
+    code: str
+    element_type: str
+    status: str  # "identical", "text_changed", "structure_changed", "added", "removed"
+    text_diffs: list[TextDiff] = field(default_factory=list)
+    choice_diffs: list[ChoiceDiff] = field(default_factory=list)
+    matrix_row_diffs: list[ChoiceDiff] = field(default_factory=list)
+    matrix_column_diffs: list[ChoiceDiff] = field(default_factory=list)
+
+
+@dataclass
+class ComparisonResult:
+    """Complete comparison output for two questionnaires."""
+    source_a: str
+    source_b: str
+    question_diffs: list[QuestionDiff] = field(default_factory=list)
+
+    @property
+    def matched(self) -> list[QuestionDiff]:
+        return [d for d in self.question_diffs if d.status not in ("added", "removed")]
+
+    @property
+    def added(self) -> list[QuestionDiff]:
+        return [d for d in self.question_diffs if d.status == "added"]
+
+    @property
+    def removed(self) -> list[QuestionDiff]:
+        return [d for d in self.question_diffs if d.status == "removed"]
