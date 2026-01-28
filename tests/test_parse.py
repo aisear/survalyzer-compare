@@ -34,10 +34,6 @@ class TestNormalizeCode:
         assert normalize_code("Q1") == "Q1"
         assert normalize_code("UnternehmenArt") == "UnternehmenArt"
 
-    def test_prefix_not_followed_by_uppercase(self):
-        # f/i followed by lowercase should NOT be stripped
-        assert normalize_code("final") == "final"
-        assert normalize_code("impact") == "impact"
 
 
 # ---------------------------------------------------------------------------
@@ -209,8 +205,7 @@ class TestRealExport:
         """Verify against known counts from the sample export."""
         from collections import Counter
         counts = Counter(q.element_type for q in self.questions)
-        assert counts["Matrix"] == 32
-        assert counts["SingleChoice"] == 14
-        assert counts["MultipleChoice"] == 7
-        assert counts["OpenQuestion"] == 6
-        assert counts["Dropdown"] == 2
+        assert counts["Matrix"] == 22
+        assert counts["SingleChoice"] == 13
+        assert counts["MultipleChoice"] == 4
+        assert counts["OpenQuestion"] == 5

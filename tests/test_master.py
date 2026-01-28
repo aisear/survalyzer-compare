@@ -42,9 +42,6 @@ def _sample_questions() -> list[Question]:
         Question(
             id=3, code="Q3", element_type="Matrix",
             texts=[_lt("Rate these")],
-            choices=[
-                AnswerOption(id=20, code="1", texts=[_lt("Row A")]),
-            ],
             matrix_rows=[
                 MatrixRow(id=20, code="1", texts=[_lt("Row A")]),
             ],

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Generate master.yaml from the most recent Survalyzer JSON export.
+"""Generate master.yaml by merging all Survalyzer JSON exports.
+
+Questions are merged from newest to oldest - if a code exists in a newer
+export, that version is used; otherwise falls back to older exports.
 
 Usage:
     python scripts/generate_master.py [--exports-dir data/exports] [--output master/master.yaml]
@@ -10,6 +13,7 @@ from __future__ import annotations
 import argparse
 import sys
 from pathlib import Path
+from typing import Any
 
 # Ensure project root is on sys.path when running as a script.
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -19,17 +23,16 @@ from src.parse import load_and_parse, sort_files_by_date, extract_date_from_file
 from src.master import extract_master, save_master
 
 
-def latest_json(exports_dir: Path) -> Path:
-    """Return the most recent JSON file by date in filename (YYYYMMDD)."""
-    files = list(exports_dir.glob("*.json"))
-    if not files:
-        raise FileNotFoundError(f"No JSON files found in {exports_dir}")
-    sorted_files = sort_files_by_date(files)
-    return sorted_files[-1]  # Last = most recent
+def merge_masters(masters: list[dict[str, Any]]) -> dict[str, Any]:
+    """Merge multiple master dicts, earlier ones take precedence."""
+    merged: dict[str, Any] = {}
+    for master in reversed(masters):  # Oldest first, newest overwrites
+        merged.update(master)
+    return merged
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate master.yaml from Survalyzer export")
+    parser = argparse.ArgumentParser(description="Generate master.yaml from Survalyzer exports")
     parser.add_argument(
         "--exports-dir",
         type=Path,
@@ -44,15 +47,27 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    json_path = latest_json(args.exports_dir)
-    date_str = extract_date_from_filename(json_path.name)
-    print(f"Using export: {json_path.name} (date: {date_str})")
+    # Find and sort all JSON files by date (oldest first)
+    json_files = list(args.exports_dir.glob("*.json"))
+    if not json_files:
+        print(f"No JSON files found in {args.exports_dir}")
+        sys.exit(1)
+    json_files = sort_files_by_date(json_files)
 
-    questions = load_and_parse(json_path)
-    print(f"Parsed {len(questions)} questions")
+    # Parse all exports and extract master from each
+    masters: list[dict[str, Any]] = []
+    for jf in json_files:
+        date_str = extract_date_from_filename(jf.name)
+        questions = load_and_parse(jf)
+        master = extract_master(questions)
+        masters.append(master)
+        print(f"Parsed {jf.name} (date: {date_str}): {len(questions)} questions")
 
-    master = extract_master(questions)
-    save_master(master, args.output)
+    # Merge all masters (newest takes precedence)
+    merged = merge_masters(masters)
+    print(f"Merged master: {len(merged)} unique question codes")
+
+    save_master(merged, args.output)
     print(f"Master written to {args.output}")
 
 

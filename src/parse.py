@@ -128,6 +128,8 @@ def _parse_element(element: dict[str, Any], section_name: str | None) -> Questio
             )
             for c in element.get("choices", [])
         ]
+        # Clear choices for Matrix - rows are stored in matrix_rows
+        q.choices = []
 
     return q
 

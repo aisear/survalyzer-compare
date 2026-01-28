@@ -139,8 +139,9 @@ def compare_questions(
 ) -> QuestionDiff:
     """Produce a full diff for a single question present in both surveys."""
     text_diffs = compare_texts(old.texts, new.texts, threshold)
-    choice_diffs = compare_choices(old.choices, new.choices, threshold)
 
+    # For Matrix questions, use matrix_rows instead of choices
+    choice_diffs: list[ChoiceDiff] = []
     matrix_row_diffs: list[ChoiceDiff] = []
     matrix_col_diffs: list[ChoiceDiff] = []
     if old.element_type == "Matrix" or new.element_type == "Matrix":
@@ -148,6 +149,8 @@ def compare_questions(
         matrix_col_diffs = compare_matrix_columns(
             old.matrix_column_groups, new.matrix_column_groups, threshold,
         )
+    else:
+        choice_diffs = compare_choices(old.choices, new.choices, threshold)
 
     # Determine overall status
     has_text_change = any(td.status != "exact" for td in text_diffs)

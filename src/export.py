@@ -18,26 +18,30 @@ def _localized_texts_to_dict(texts: list[LocalizedText]) -> dict[str, str]:
 
 def _question_to_dict(q: Question) -> dict[str, Any]:
     """Convert Question to JSON-serializable dict."""
-    return {
+    d: dict[str, Any] = {
         "id": q.id,
         "code": q.code,
         "element_type": q.element_type,
         "section_name": q.section_name,
         "texts": _localized_texts_to_dict(q.texts),
-        "choices": [
-            {"code": c.code, "texts": _localized_texts_to_dict(c.texts)}
-            for c in q.choices
-        ],
-        "matrix_rows": [
+    }
+    # For Matrix: use matrix_rows/columns; for others: use choices
+    if q.element_type == "Matrix":
+        d["matrix_rows"] = [
             {"code": r.code, "texts": _localized_texts_to_dict(r.texts)}
             for r in q.matrix_rows
-        ] if q.matrix_rows else [],
-        "matrix_columns": [
+        ]
+        d["matrix_columns"] = [
             {"code": c.code, "texts": _localized_texts_to_dict(c.texts)}
             for cg in q.matrix_column_groups
             for c in cg.columns
-        ] if q.matrix_column_groups else [],
-    }
+        ]
+    else:
+        d["choices"] = [
+            {"code": c.code, "texts": _localized_texts_to_dict(c.texts)}
+            for c in q.choices
+        ]
+    return d
 
 
 def _question_diff_to_dict(qd) -> dict[str, Any]:
