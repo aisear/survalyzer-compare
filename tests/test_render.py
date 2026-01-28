@@ -134,7 +134,8 @@ class TestRenderReport:
     def test_contains_survey_column(self):
         result, qbs, master = _build_fixture()
         html = render_report([result], qbs, master, default_language="en")
-        assert "survey_A" in html
+        # Short name "A" is extracted from "survey_A"
+        assert ">A<" in html or ">A " in html
 
     def test_master_text_column(self):
         result, qbs, master = _build_fixture()
