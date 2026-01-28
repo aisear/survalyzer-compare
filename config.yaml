@@ -1,6 +1,6 @@
 similarity_threshold: 0.9
-default_language: "de-CH"
+default_language: "en"
 languages:
-  - "de-CH"
+  - "de-ch"
   - "fr"
   - "en"
