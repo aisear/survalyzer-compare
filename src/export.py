@@ -113,12 +113,12 @@ def export_data(
     for q in master_questions:
         master_dict[q.code] = _question_to_dict(q)
 
-    # Build survey questions dict
+    # Build survey questions dict (keyed by normalized code for consistency)
     surveys_dict = {}
     for survey_name, questions in questions_by_source.items():
         surveys_dict[survey_name] = {}
         for q in questions:
-            surveys_dict[survey_name][q.code] = _question_to_dict(q)
+            surveys_dict[survey_name][q.normalized_code] = _question_to_dict(q)
 
     # Build diffs dict: {code: {survey_name: diff}}
     diffs_dict = {}

@@ -7,6 +7,7 @@ KontaktCheck:
       personne et votre projet d’innovation, et les corriger si nécessaire.
     de-ch: Bitte überprüfen Sie als Erstes die folgenden Angaben zu Ihrer Person und
       zu Ihrem Innovationsprojekt und korrigieren Sie diese, falls erforderlich.
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
   choices:
   - code: '1'
     texts:
@@ -68,6 +69,7 @@ UnternehmenArt:
     en: Is your organisation ...
     fr: Votre organisation, est-elle ...
     de-ch: Ist Ihre Organisation …
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
   choices:
   - code: '1'
     texts:
@@ -96,12 +98,14 @@ Gruendungsjahr:
       commercial register.
     fr: Veuillez indiquer l'année de fondation de votre organisation selon le registre
       du commerce.
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
 IstStartup:
   element_type: SingleChoice
   texts:
     en: Do you consider your organisation to be a start-up?
     fr: Considérez-vous votre organisation comme une start-up ?
     de-ch: Bezeichnen Sie Ihre Organisation als Start-up?
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
   choices:
   - code: '6'
     texts:
@@ -121,6 +125,7 @@ Personal:
       stagiaires) votre organisation compte-t-elle ...
     de-ch: Wie viel Personal (Vollzeitäquivalente, inklusive Lernende und Praktikant/-innen)
       ...
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
   choices:
   - code: PEnde
     texts:
@@ -176,6 +181,7 @@ InnoAlsZiel:
       de l'organisation ou sur le marché ?
     de-ch: Verfolgt(e) Ihre Organisation das Ziel, mit dem geförderten Projekt eine
       konkrete Innovation in Ihrer Organisation oder auf dem Markt umzusetzen?
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
   choices:
   - code: '6'
     texts:
@@ -207,6 +213,7 @@ InnoUmgesetzt:
       nächsten 24 Monate</strong> geplant?
 
       '
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
   choices:
   - code: '6'
     texts:
@@ -259,6 +266,7 @@ IrgendeineInnoUm:
       Innovation auf den Markt, in der Gesellschaft oder in Ihrer Organisation umgesetzt?
 
       '
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
   choices:
   - code: '6'
     texts:
@@ -281,6 +289,7 @@ InnoArt:
     en: What type of innovation is the supported project?
     fr: Quel est le type d’innovation sur lequel le projet encouragé a porté ?
     de-ch: Um welche Art von Innovation handelt es sich bei dem geförderten Projekt?
+  section_name: Charakterisierung des Projektes
   choices:
   - code: '1'
     texts:
@@ -326,6 +335,7 @@ InnoTechOderSozial:
       en premier lieu sur ...
     de-ch: Beruht die Innovation aus Ihrem von Innosuisse geförderten Projekt primär
       auf ...
+  section_name: Charakterisierung des Projektes
   choices:
   - code: '1'
     texts:
@@ -351,6 +361,7 @@ AusmassRadikalitaet:
       indiquer ce qui s’applique à l’innovation poursuivie dans le cadre du projet:'
     de-ch: Innovationen können inkrementeller oder radikaler Natur sein. Bitte geben
       Sie an, was auf Ihre mit dem Projekt verfolgte Innovation zutrifft.
+  section_name: Charakterisierung des Projektes
   choices:
   - code: '1'
     texts:
@@ -414,6 +425,7 @@ AusmassDisruptivitaet:
     de-ch: Wie <strong>disruptiv </strong>schätzen Sie das Potenzial der im Projekt
       geförderten Innovation langfristig auf dem Markt ein (auch wenn die Innovation
       noch nicht umgesetzt ist)?
+  section_name: Charakterisierung des Projektes
   choices:
   - code: '1'
     texts: {}
@@ -468,6 +480,7 @@ Ergebnisse:
     de-ch: DIESE FRAGE IST AUS HISTORISCHEN/DATENTECHNISCHEN GRünden Hier und wird
       NIE angezeigt<br>Hat das geförderte Projekt bis jetzt zu einem der folgenden
       konkreten Ergebnissen geführt?
+  section_name: Ergebnisse
   choices:
   - code: '1'
     texts:
@@ -519,6 +532,7 @@ ProjektStand:
     fr: Comment évaluez-vous, à la fin du projet, la réalisation de l'objectif d'utilisation
       commerciale des résultats du projet et la poursuite de la mise en œuvre sur
       le marché ?
+  section_name: Ergebnisse
   choices:
   - code: '1'
     texts:
@@ -579,6 +593,7 @@ ErgebnisAnlagenPrototyp:
       ont-ils été développés dans le cadre du projet ?
     de-ch: Sind im Rahmen des Projekts Pilot- und Demonstrationsanlagen oder Prototyp(en)
       entwickelt worden?
+  section_name: Ergebnisse
   choices:
   - code: '6'
     texts:
@@ -595,7 +610,7 @@ ErgebnisAnlagenPrototyp:
       en: I cannot answer this question
       fr: Je ne peux pas répondre à cette question
       de-ch: Das kann ich nicht beantworten
-PRErgenisse:
+IPRErgebnisse:
   element_type: Matrix
   texts:
     de-ch: Haben die Ergebnisse des Projekts zu Eigentumsrechten geführt oder sind
@@ -605,6 +620,7 @@ PRErgenisse:
     fr: Les résultats du projet ont-ils donné lieu à des droits de propriété ou de
       tels droits sont-ils prévus (dans votre organisation et/ou chez le partenaire
       de recherche) ?
+  section_name: Ergebnisse
   choices:
   - code: '1'
     texts:
@@ -690,6 +706,7 @@ FoParZusArbeitWeiter:
       encouragé s’est-elle poursuivie après la fin du projet ?
     de-ch: Wurde nach dem Projektabschluss die Zusammenarbeit mit einem oder mehreren
       Forschungspartnern des geförderten Innovationsprojekts fortgeführt?
+  section_name: Ergebnisse
   choices:
   - code: '6'
     texts:
@@ -720,6 +737,7 @@ ForParAngestellt:
       anciens partenaires de recherche</strong> à la suite du projet encouragé ?
     de-ch: Hat Ihre Organisation als Folge des geförderten Projektes <strong>Personen
       des/der ehemaligen Forschungspartner(s) angestellt</strong>?
+  section_name: Ergebnisse
   choices:
   - code: '6'
     texts:
@@ -743,6 +761,7 @@ Umsatz:
     fr: <strong>Chiffre d’affaires total</strong> (hors TVA) à partir du lieu d’implantation
       en Suisse
     de-ch: <strong>Gesamtumsatz</strong> (ohne MWSt) ab Standort Schweiz
+  section_name: Ökonomische Projektwirkungen
   choices:
   - code: PEnde
     texts:
@@ -784,6 +803,7 @@ AusgabenFuE:
       votre organisation
     de-ch: <strong>Gesamte Ausgaben für </strong><strong>Forschung und Entwicklung</strong>
       in Ihrer Organisation
+  section_name: Ökonomische Projektwirkungen
   choices:
   - code: PEnde
     texts:
@@ -830,6 +850,7 @@ PersonalFuE:
     de-ch: Wie viel <strong>Personal </strong>(Vollzeitäquivalente, inklusive Lernende
       und Praktikant/-innen) hat Ihre Organisation im <strong>Bereich Forschung und
       Entwicklung</strong> …?
+  section_name: Ökonomische Projektwirkungen
   choices:
   - code: PEnde
     texts:
@@ -869,6 +890,7 @@ WirtSituation:
     de-ch: Trägt das geförderte Projekt dazu bei, ….
     en: Does the funded project help to ....
     fr: Le projet soutenu contribue-t-il à ...
+  section_name: Ökonomische Projektwirkungen
   choices:
   - code: '1'
     texts:
@@ -931,6 +953,7 @@ WirtImpQual:
       diminution des paramètres économiques suivants après la fin du projet ?
     de-ch: Hat das von Innosuisse geförderte Projekt nach dem Projektabschluss bei
       folgenden wirtschaftlichen Grössen zu einer Zu- oder Abnahme geführt?
+  section_name: Ökonomische Projektwirkungen
   choices:
   - code: '1'
     texts:
@@ -1072,6 +1095,7 @@ WirtImpQuan:
       Projektes</strong> bis zum aktuellen Zeitpunkt verändert?<br>Bitte beziehen
       Sie sich in Ihrer Schätzung auf das aktuelle Jahr im Vergleich zum Jahr des
       Projektstartes.
+  section_name: Ökonomische Projektwirkungen
   choices:
   - code: '1'
     texts:
@@ -1145,6 +1169,7 @@ Kosteneinsparungen:
       organisation ?
     de-ch: Hat das geförderte Projekt resp. die umgesetzte Innovation insgesamt <strong>zu
       direkten Kosteneinsparungen</strong> in Ihrer Organisation geführt?
+  section_name: Ökonomische Projektwirkungen
   choices:
   - code: '6'
     texts:
@@ -1170,6 +1195,7 @@ MarktanteilGewinn:
       grâce à l’innovation mise en œuvre ?
     de-ch: Konnten dank der umgesetzten Innovation <strong>zusätzliche Marktanteile</strong>
       gewonnen werden?
+  section_name: Ökonomische Projektwirkungen
   choices:
   - code: '6'
     texts:
@@ -1192,6 +1218,7 @@ Neuheitslevel:
     en: Is the implemented/planned innovation <strong>currently</strong> a ...
     fr: L’innovation mise en œuvre/planifiée est-elle ...
     de-ch: Ist die umgesetzte/geplante Innovation<strong> derzeit </strong>eine ...
+  section_name: Ökonomische Projektwirkungen
   choices:
   - code: '1'
     texts:
@@ -1262,6 +1289,7 @@ NeuheitslevelOffen:
       cette nouveauté :'
     de-ch: 'Falls die umgesetzte/geplante Innovation eine Neuheit für den internationalen/globalen
       Markt ist: Können Sie nachfolgend kurz beschreiben, was die Neuheit ausmacht:'
+  section_name: Ökonomische Projektwirkungen
 WirkFoerderung:
   element_type: Matrix
   texts:
@@ -1271,6 +1299,7 @@ WirkFoerderung:
       directs suivants dans votre organisation ?<br><br>
     de-ch: Hat die <strong>Projektförderung von Innosuisse</strong> in Ihrer Organisation
       zu folgenden, direkten Wirkungen geführt?
+  section_name: Weitere, nicht ökonomische Wirkungen
   choices:
   - code: '1'
     texts:
@@ -1332,6 +1361,7 @@ WirkProjekt:
       dans votre organisation ?
     de-ch: Hat <strong>das geförderte Projekt</strong> in Ihrer Organisation zu folgenden,
       weiteren Wirkungen geführt?
+  section_name: Weitere, nicht ökonomische Wirkungen
   choices:
   - code: '1'
     texts:
@@ -1438,6 +1468,7 @@ Nachhaltigkeit:
     de-ch: Leistet das geförderte Projekt oder die inzwischen eingeführte Innovation
       <strong>einen konkreten Beitrag zur ökologischen und/oder sozialen Nachhaltigkeit
       auf dem Markt oder für die Gesellschaft</strong>?
+  section_name: Weitere, nicht ökonomische Wirkungen
   choices:
   - code: '1'
     texts:
@@ -1510,6 +1541,7 @@ NachhaltigkeitOffen:
       de <strong>durabilité :</strong>
     de-ch: 'Bitte umschreiben Sie den Beitrag zur Nachhaltigkeit in einigen wenigen
       Sätzen:'
+  section_name: Weitere, nicht ökonomische Wirkungen
 WirtNutzenPotenzial:
   element_type: Matrix
   texts:
@@ -1523,6 +1555,7 @@ WirtNutzenPotenzial:
       des von Innosuisse geförderten Projekts?<br>Bitte beziehen Sie in Ihrer Einschätzung
       auch <strong>das Potenzial des wirtschaftlichen Nutzen</strong><strong>s</strong>
       mit ein.
+  section_name: Nutzen
   choices:
   - code: '1'
     texts:
@@ -1599,6 +1632,7 @@ SozialerNutzen:
       projet encouragé par Innosuisse, <strong>en dehors</strong> de votre organisation ?
     de-ch: Wie bewerten sie den <strong>gesellschaftlichen und/oder sozialen Nutzen</strong>
       des von Innosuisse geförderten Projekts <strong>ausserhalb</strong> Ihrer Organisation?
+  section_name: Nutzen
   choices:
   - code: '1'
     texts:
@@ -1659,6 +1693,7 @@ SozialerOffen:
       obtenue :'
     de-ch: 'Bitte umschreiben Sie den erzielten <strong>gesellschaftlichen oder sozialen
       Nutzen</strong> in einigen wenigen Sätzen:'
+  section_name: Nutzen
 GesamtNutzen:
   element_type: Matrix
   texts:
@@ -1668,6 +1703,7 @@ GesamtNutzen:
       qui va au-delà des effets économiques ?
     de-ch: Wie bewerten Sie den <strong>gesamten Nutzen</strong> des geförderten Projektes,
       der über die wirtschaftlichen Wirkungen hinaus geht?
+  section_name: Nutzen
   choices:
   - code: '1'
     texts:
@@ -1728,6 +1764,7 @@ Additionalitaet:
       d'Innosuisse</strong> ?
     de-ch: Hätten Sie Ihr Innovationsprojekt auch <strong>ohne die Innovationsförderung
       von Innosuisse</strong> durchgeführt?
+  section_name: Nutzen
   choices:
   - code: '6'
     texts:
@@ -1760,6 +1797,7 @@ ZielErreichung:
     en: Were the project goals achieved?
     fr: Les objectifs du projet ont-ils été atteints ?
     de-ch: Wurden die Projektziele erreicht?
+  section_name: Projekterfolg und Abschluss
   choices:
   - code: '1'
     texts:
@@ -1840,6 +1878,7 @@ ZielNichtGrund:
     de-ch: Aus welchen Gründen wurden die definierten Ziele nicht erreicht?
     fr: Pour quelles raisons les objectifs définis n'ont-ils pas été atteints ?
     en: For what reasons were the defined goals not achieved?
+  section_name: Projekterfolg und Abschluss
   choices:
   - code: '1'
     texts:
@@ -1916,6 +1955,7 @@ ErfolgBewertung:
     fr: Comment évalueriez-vous aujourd’hui le projet encouragé du point de vue de
       votre organisation ?
     de-ch: Wie beurteilen Sie heute das geförderte Projekt aus Sicht Ihrer Organisation?
+  section_name: Projekterfolg und Abschluss
   choices:
   - code: '1'
     texts:
@@ -1976,6 +2016,7 @@ Stellenwert:
     en: What is the significance of the supported project in your organisation?
     fr: Quelle est l'importance du projet encouragé dans votre organisation ?
     de-ch: Welchen Stellenwert besitzt das geförderte Projekt in Ihrer Organisation?
+  section_name: Projekterfolg und Abschluss
   choices:
   - code: '1'
     texts:
@@ -2066,6 +2107,7 @@ Involvement:
       dans le projet encouragé par Innosuisse ?
     en: Can you tell us how involved your organisation or the department concerned was
       in the supported project?
+  section_name: Projekterfolg und Abschluss
   choices:
   - code: '1'
     texts:
@@ -2127,12 +2169,14 @@ FeedbackOffen:
       suggestions sur l''enquête ci-dessus:'
     de-ch: 'Vielen Dank, wenn Sie uns nachfolgend Ihre Rückmeldungen, Kommentare und
       Anregungen zur Umfrage mitteilen:'
+  section_name: Projekterfolg und Abschluss
 FeedbackArt:
   element_type: MultipleChoice
   texts:
     de-ch: Handelt es sich bei Ihrer Rückmeldung um eine/einen ... ?
     en: Is your feedback a/an ... ?
     fr: Votre feed-back concerne-t-il un/une ... ?
+  section_name: Projekterfolg und Abschluss
   choices:
   - code: '1'
     texts:

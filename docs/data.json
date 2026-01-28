@@ -14,183 +14,102 @@
       "fr"
     ],
     "sections": {
-      "Other": [
+      "Nutzen": [
         "Additionalitaet",
+        "Additionalitaet_WasTun",
+        "EinflussProjekt",
+        "GesamtNutzen",
+        "ProjektBenefit",
+        "SozialerNutzen",
+        "SozialerOffen",
+        "WirtNutzenPotenzial"
+      ],
+      "Ökonomische Projektwirkungen": [
         "AusgabenFuE",
+        "Kosteneinsparungen",
+        "MarktanteilGewinn",
+        "Neuheitslevel",
+        "NeuheitslevelOffen",
+        "PersonalFuE",
+        "Umsatz",
+        "WirtImpQual",
+        "WirtImpQuan",
+        "WirtSituation"
+      ],
+      "Charakterisierung des Projekts": [
+        "AusmassDigital",
+        "FoerderInnosuisse",
+        "FoerderSNF",
+        "Treiber"
+      ],
+      "Charakterisierung des Projektes": [
         "AusmassDisruptivitaet",
         "AusmassRadikalitaet",
-        "ErfolgBewertung",
+        "InnoArt",
+        "InnoTechOderSozial"
+      ],
+      "Ergebnisse": [
+        "BeurteilungForPar",
         "ErgebnisAnlagenPrototyp",
         "Ergebnisse",
-        "FeedbackArt",
-        "FeedbackOffen",
         "FoParZusArbeitWeiter",
         "ForParAngestellt",
-        "GesamtNutzen",
+        "IPRErgebnisse",
+        "IPR_Inhaber",
+        "ProjektStand",
+        "TRLEnde",
+        "TRLStart"
+      ],
+      "Impuls": [
+        "C19EinflussAufGewinn",
+        "C19EinflussAufUmsatz",
+        "C19_EinflussExAnte",
+        "C19_EinflussExPost",
+        "C19_EinflussInnokraft",
+        "C19_ExtDL",
+        "C19_ExtDLMitnahme",
+        "C19_ExtDLQualitaet",
+        "C19_ExtDLWichtigkeit",
+        "C19_Offen"
+      ],
+      "Projekterfolg und Abschluss": [
+        "ErfolgBewertung",
+        "FeedbackArt",
+        "FeedbackOffen",
+        "Involvement",
+        "Stellenwert",
+        "ZielErreichung",
+        "ZielNichtGrund",
+        "ZufNichtGrund",
+        "Zufriedenheit"
+      ],
+      "(OhneTitel) Identifikation und Weichenfragen ": [
+        "GenerelleEmail",
         "Gruendungsjahr",
         "InnoAlsZiel",
-        "InnoArt",
-        "InnoTechOderSozial",
         "InnoUmgesetzt",
-        "Involvement",
         "IrgendeineInnoUm",
         "IstStartup",
         "KontaktCheck",
-        "Kosteneinsparungen",
-        "MarktanteilGewinn",
-        "Nachhaltigkeit",
-        "NachhaltigkeitOffen",
-        "Neuheitslevel",
-        "NeuheitslevelOffen",
-        "PRErgenisse",
         "Personal",
-        "PersonalFuE",
-        "ProjektStand",
-        "SozialerNutzen",
-        "SozialerOffen",
-        "Stellenwert",
-        "Umsatz",
-        "UnternehmenArt",
-        "WirkFoerderung",
-        "WirkProjekt",
-        "WirtImpQual",
-        "WirtImpQuan",
-        "WirtNutzenPotenzial",
-        "WirtSituation",
-        "ZielErreichung",
-        "ZielNichtGrund"
-      ],
-      "Ökonomische Projektwirkungen": [
-        "FAusgabenFuE",
-        "FPersonalFuE",
-        "FUmsatz",
-        "IAusgabenFuE",
-        "IKosteneinsparungen",
-        "IMarktanteilGewinn",
-        "INeuheitslevel",
-        "INeuheitslevelOffen",
-        "IPersonalFuE",
-        "IUmsatz",
-        "fWirtSituation",
-        "iWirtImpQual",
-        "iWirtImpQuan",
-        "iWirtSituation"
-      ],
-      "Charakterisierung des Projekts": [
-        "FAusmassDigital",
-        "FAusmassDisruptivitaet",
-        "FAusmassRadikalitaet",
-        "FInnoArt",
-        "FInnoTechOderSozial",
-        "FTreiber",
-        "fFoerderInnosuisse",
-        "fFoerderSNF"
-      ],
-      "Projekterfolg und Abschluss": [
-        "FErfolgBewertung",
-        "FFeedbackArt",
-        "FFeedbackOffen",
-        "FInvolvement",
-        "FStellenwert",
-        "FZielErreichung",
-        "FZielNichtGrund",
-        "FZufNichtGrund",
-        "FZufriedenheit",
-        "IErfolgBewertung",
-        "IFeedbackArt",
-        "IFeedbackOffen",
-        "IInvolvement",
-        "IStellenwert",
-        "IZielErreichung",
-        "IZielNichtGrund"
-      ],
-      "Ergebnisse": [
-        "FFoParZusArbeitWeiter",
-        "FTRLEnde",
-        "FTRLStart",
-        "IErgebnisse",
-        "IFoParZusArbeitWeiter",
-        "IForParAngestellt",
-        "IPRErgenisse",
-        "fBeurteilungForPar",
-        "fErgebnisAnlagenPrototyp",
-        "fIPRErgebnisse",
-        "fIPR_Inhaber",
-        "fProjektStand",
-        "iErgebnisAnlagenPrototyp",
-        "iProjektStand"
-      ],
-      "(OhneTitel) Identifikation und Weichenfragen ": [
-        "FGenerelleEmail",
-        "FInnoAlsZiel",
-        "FInnoUmgesetzt",
-        "FIstStartup",
-        "FKontaktCheck",
-        "FPersonal",
-        "FUnternehmenArt",
-        "IInnoAlsZiel",
-        "IInnoUmgesetzt",
-        "IIrgendeineInnoUm",
-        "IIstStartup",
-        "IKontaktCheck",
-        "IPersonal",
-        "IUnternehmenArt",
-        "fGruendungsjahr",
-        "fPersonalImProjekt",
-        "fSpinoff",
-        "iGruendungsjahr"
-      ],
-      "Nutzen": [
-        "FGesamtNutzen",
-        "FSozialerNutzen",
-        "FSozialerOffen",
-        "FWirtNutzenPotenzial",
-        "IAdditionalitaet",
-        "IGesamtNutzen",
-        "ISozialerNutzen",
-        "ISozialerOffen",
-        "IWirtNutzenPotenzial",
-        "fAdditionalitaet",
-        "fAdditionalitaet_WasTun",
-        "fEinflussProjekt",
-        "fProjektBenefit"
+        "PersonalImProjekt",
+        "Spinoff",
+        "UnternehmenArt"
       ],
       "Weitere, nicht ökonomische Wirkungen": [
-        "FNachhaltigkeit",
-        "FNachhaltigkeitOffen",
-        "FWirkFoerderung",
-        "FWirkProjekt",
-        "INachhaltigkeit",
-        "INachhaltigkeitOffen",
-        "iWirkFoerderung",
-        "iWirkProjekt"
-      ],
-      "Charakterisierung des Projektes": [
-        "IAusmassDisruptivitaet",
-        "IAusmassRadikalitaet",
-        "IInnoArt",
-        "IInnoTechOderSozial"
-      ],
-      "Impuls": [
-        "fC19EinflussAufGewinn",
-        "fC19EinflussAufUmsatz",
-        "fC19_EinflussExAnte",
-        "fC19_EinflussExPost",
-        "fC19_EinflussInnokraft",
-        "fC19_ExtDL",
-        "fC19_ExtDLMitnahme",
-        "fC19_ExtDLQualitaet",
-        "fC19_ExtDLWichtigkeit",
-        "fC19_Offen"
+        "Nachhaltigkeit",
+        "NachhaltigkeitOffen",
+        "WirkFoerderung",
+        "WirkProjekt"
       ]
     },
-    "total_questions": 149,
+    "total_questions": 70,
     "status_counts": {
-      "identical": 6,
+      "identical": 2,
       "text_changed": 7,
-      "structure_changed": 21,
-      "added": 0,
-      "removed": 10
+      "structure_changed": 17,
+      "added": 37,
+      "removed": 7
     }
   },
   "master": {
@@ -198,7 +117,7 @@
       "id": 0,
       "code": "KontaktCheck",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "(OhneTitel) Identifikation und Weichenfragen ",
       "texts": {
         "en": "Please check the following information about yourself and your innovation project and correct it if necessary.",
         "fr": "Tout d’abord, veuillez vérifier les informations suivantes concernant votre personne et votre projet d’innovation, et les corriger si nécessaire.",
@@ -299,7 +218,7 @@
       "id": 0,
       "code": "UnternehmenArt",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "(OhneTitel) Identifikation und Weichenfragen ",
       "texts": {
         "en": "Is your organisation ...",
         "fr": "Votre organisation, est-elle ...",
@@ -338,7 +257,7 @@
       "id": 0,
       "code": "Gruendungsjahr",
       "element_type": "OpenQuestion",
-      "section_name": null,
+      "section_name": "(OhneTitel) Identifikation und Weichenfragen ",
       "texts": {
         "de-ch": "Bitte geben Sie das Gründungsjahr Ihrer Organisation gemäss Handelsregister an.",
         "en": "Please indicate the year of foundation of your organisation according to the commercial register.",
@@ -352,7 +271,7 @@
       "id": 0,
       "code": "IstStartup",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "(OhneTitel) Identifikation und Weichenfragen ",
       "texts": {
         "en": "Do you consider your organisation to be a start-up?",
         "fr": "Considérez-vous votre organisation comme une start-up ?",
@@ -383,7 +302,7 @@
       "id": 0,
       "code": "Personal",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "(OhneTitel) Identifikation und Weichenfragen ",
       "texts": {
         "en": "How many staff (full-time positions, including apprentices and interns) ...",
         "fr": "Combien de personnel (postes à plein temps, y compris les apprentis et les stagiaires) votre organisation compte-t-elle ...",
@@ -448,7 +367,7 @@
       "id": 0,
       "code": "InnoAlsZiel",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "(OhneTitel) Identifikation und Weichenfragen ",
       "texts": {
         "en": "Does or did your organisation pursue the goal of implementing a concrete innovation in the organisation or on the market with the supported project?",
         "fr": "Votre organisation poursuit-elle ou a-t-elle poursuivi avec le projet encouragé par Innosuisse l'objectif de mettre en œuvre une innovation concrète au sein de l'organisation ou sur le marché ?",
@@ -479,7 +398,7 @@
       "id": 0,
       "code": "InnoUmgesetzt",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "(OhneTitel) Identifikation und Weichenfragen ",
       "texts": {
         "en": "Has this innovation already been implemented in the market, in society or in your organisation, or is this implementation planned <strong>within the next 24 months</strong>?",
         "fr": "Votre organisation a-t-elle déjà introduit cette innovation concrète sur le marché, dans la société ou dans votre organisation, ou cette introduction est-elle prévue <strong>dans les 24 mois à venir</strong>?\n",
@@ -542,7 +461,7 @@
       "id": 0,
       "code": "IrgendeineInnoUm",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "(OhneTitel) Identifikation und Weichenfragen ",
       "texts": {
         "en": "Has your organisation implemented<strong> another</strong>, concrete innovation in the market, in society or in your organisation in the last three years?",
         "fr": "Votre organisation a-t-elle mis en œuvre une <strong>autre</strong> innovation concrète sur le marché, dans la société ou au sein de votre organisation au cours des trois dernières années ?",
@@ -581,7 +500,7 @@
       "id": 0,
       "code": "InnoArt",
       "element_type": "MultipleChoice",
-      "section_name": null,
+      "section_name": "Charakterisierung des Projektes",
       "texts": {
         "en": "What type of innovation is the supported project?",
         "fr": "Quel est le type d’innovation sur lequel le projet encouragé a porté ?",
@@ -652,7 +571,7 @@
       "id": 0,
       "code": "InnoTechOderSozial",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "Charakterisierung des Projektes",
       "texts": {
         "en": "Is the innovation from your Innosuisse-supported project primarily based on ...",
         "fr": "L’innovation issue de votre projet encouragé par Innosuisse repose-t-elle en premier lieu sur ...",
@@ -691,7 +610,7 @@
       "id": 0,
       "code": "AusmassRadikalitaet",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Charakterisierung des Projektes",
       "texts": {
         "en": "Innovations can be incremental or radical in nature. Please indicate which applies to your innovation pursued with the project.",
         "fr": "Les innovations peuvent être de nature incrémentale ou radicale. Veuillez indiquer ce qui s’applique à l’innovation poursuivie dans le cadre du projet:",
@@ -780,7 +699,7 @@
       "id": 0,
       "code": "AusmassDisruptivitaet",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Charakterisierung des Projektes",
       "texts": {
         "en": "To what extent do you believe that the potential of the innovation supported by the project will be <strong>disruptive</strong> on the market in the long term, even if the innovation is not (yet) implemented?",
         "fr": "Dans quelle mesure pensez-vous que le potentiel de l'innovation soutenue par le projet sera <strong>disruptif</strong> sur le marché à long terme, même si l'innovation n'est pas (encore) mise en œuvre ?<br>",
@@ -861,7 +780,7 @@
       "id": 0,
       "code": "Ergebnisse",
       "element_type": "MultipleChoice",
-      "section_name": null,
+      "section_name": "Ergebnisse",
       "texts": {
         "en": "Has the supported project so far led to any of the following concrete results?",
         "fr": "Le projet encouragé a-t-il à ce jour abouti à l’un des résultats concrets suivants ?",
@@ -940,7 +859,7 @@
       "id": 0,
       "code": "ProjektStand",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "Ergebnisse",
       "texts": {
         "de-ch": "Wie beurteilen Sie das bei Projektabschluss erreichte Ziel der kommerziellen Nutzung der Projektergebnisse und die weitere Umsetzung auf dem Markt?",
         "en": "How do you assess at the end of the project the achieved goal of commercial utilisation of the project results and the further implementation on the market?",
@@ -1011,7 +930,7 @@
       "id": 0,
       "code": "ErgebnisAnlagenPrototyp",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "Ergebnisse",
       "texts": {
         "en": "Have pilot and demonstration plants or one or more prototypes been developed as part of the project?",
         "fr": "Des installations pilotes et de démonstration ou un ou plusieurs prototypes ont-ils été développés dans le cadre du projet ?",
@@ -1046,11 +965,11 @@
       "matrix_rows": [],
       "matrix_columns": []
     },
-    "PRErgenisse": {
+    "IPRErgebnisse": {
       "id": 0,
-      "code": "PRErgenisse",
+      "code": "IPRErgebnisse",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Ergebnisse",
       "texts": {
         "de-ch": "Haben die Ergebnisse des Projekts zu Eigentumsrechten geführt oder sind solche geplant (in Ihrer Organisation und/oder beim Forschungspartner)?",
         "en": "Have the results of the project led to property rights or are such rights planned (in your organisation and/or at the research partner)?",
@@ -1155,7 +1074,7 @@
       "id": 0,
       "code": "FoParZusArbeitWeiter",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "Ergebnisse",
       "texts": {
         "en": "Was the collaboration with one or more research partners of the supported innovation project continued after project completion?",
         "fr": "La collaboration avec un ou plusieurs partenaires de recherche du projet d’innovation encouragé s’est-elle poursuivie après la fin du projet ?",
@@ -1202,7 +1121,7 @@
       "id": 0,
       "code": "ForParAngestellt",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "Ergebnisse",
       "texts": {
         "en": "Has your organisation employed <strong>people from the former research partner(s)</strong> as a result of the supported project?",
         "fr": "Votre organisation a-t-elle employé <strong>des personnes de l’ancien ou des anciens partenaires de recherche</strong> à la suite du projet encouragé ?",
@@ -1241,7 +1160,7 @@
       "id": 0,
       "code": "Umsatz",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Ökonomische Projektwirkungen",
       "texts": {
         "en": "<strong>Total revenue </strong>(excluding VAT) from location Switzerland",
         "fr": "<strong>Chiffre d’affaires total</strong> (hors TVA) à partir du lieu d’implantation en Suisse",
@@ -1306,7 +1225,7 @@
       "id": 0,
       "code": "AusgabenFuE",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Ökonomische Projektwirkungen",
       "texts": {
         "en": "<strong>Total expenditure on research and development </strong>in your organisation",
         "fr": "<b>Total dépenses liées à la recherche et au développement </b>au sein de votre organisation",
@@ -1371,7 +1290,7 @@
       "id": 0,
       "code": "PersonalFuE",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Ökonomische Projektwirkungen",
       "texts": {
         "en": "How many <strong>staff</strong> (full-time positions, including apprentices and interns) does your organisation have in <strong>research and development</strong> ...?",
         "fr": "Combien de <strong>personne</strong><strong>l</strong><strong> </strong>(postes à plein temps, y compris les apprentis et les stagiaires) votre organisation a-t-elle dans <strong>le domaine de la recherche et du développement</strong> ... ?",
@@ -1436,7 +1355,7 @@
       "id": 0,
       "code": "WirtSituation",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Ökonomische Projektwirkungen",
       "texts": {
         "de-ch": "Trägt das geförderte Projekt dazu bei, ….",
         "en": "Does the funded project help to ....",
@@ -1533,7 +1452,7 @@
       "id": 0,
       "code": "WirtImpQual",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Ökonomische Projektwirkungen",
       "texts": {
         "en": "Did the project supported by Innosuisse lead to an increase or decrease in the following economic variables after project completion?",
         "fr": "Le projet encouragé par Innosuisse a-t-il entraîné une augmentation ou une diminution des paramètres économiques suivants après la fin du projet ?",
@@ -1694,7 +1613,7 @@
       "id": 0,
       "code": "WirtImpQuan",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Ökonomische Projektwirkungen",
       "texts": {
         "en": "To what extent have these variables changed as <strong>a result of the supported project</strong> up to the present time?<br>Please refer your estimation to the current year compared to the year of the project launch.",
         "fr": "<strong>Suite au projet encouragé</strong>, dans quelle mesure ces paramètres ont évolué à ce jour ?<br>Veuillez référer votre estimation à l'année en cours par rapport à l'année de lancement du projet.",
@@ -1783,7 +1702,7 @@
       "id": 0,
       "code": "Kosteneinsparungen",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "Ökonomische Projektwirkungen",
       "texts": {
         "en": "Did the supported project or the implemented innovation lead to <strong>direct cost savings</strong> in your organisation overall?",
         "fr": "Le projet encouragé ou l’innovation mise en œuvre ont-ils permis de réaliser dans l’ensemble <strong>des économies de coûts directes</strong> dans votre organisation ?",
@@ -1822,7 +1741,7 @@
       "id": 0,
       "code": "MarktanteilGewinn",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "Ökonomische Projektwirkungen",
       "texts": {
         "en": "Was it possible to gain <b>additional market share</b> thanks to the implemented innovation?",
         "fr": "A-t-il été possible de gagner <strong>des parts de marché supplémentaires</strong> grâce à l’innovation mise en œuvre ?",
@@ -1861,7 +1780,7 @@
       "id": 0,
       "code": "Neuheitslevel",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Ökonomische Projektwirkungen",
       "texts": {
         "en": "Is the implemented/planned innovation <strong>currently</strong> a ...",
         "fr": "L’innovation mise en œuvre/planifiée est-elle ...",
@@ -1966,7 +1885,7 @@
       "id": 0,
       "code": "NeuheitslevelOffen",
       "element_type": "OpenQuestion",
-      "section_name": null,
+      "section_name": "Ökonomische Projektwirkungen",
       "texts": {
         "en": "If the implemented/planned innovation is a novelty for the international/global market: Can you briefly describe below what constitutes the novelty:",
         "fr": "Si l'innovation mise en œuvre/planifiée est une nouveauté sur le marché international / mondial : Pouvez-vous décrire brièvement ci-dessous ce qui constitue cette nouveauté :",
@@ -1980,7 +1899,7 @@
       "id": 0,
       "code": "WirkFoerderung",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Weitere, nicht ökonomische Wirkungen",
       "texts": {
         "en": "Has the<strong> project funding by Innosuisse </strong>led to the following direct effects in your organisation?",
         "fr": "<strong>L'encouragement du projet par Innosuisse</strong> a-t-il eu les effets directs suivants dans votre organisation ?<br><br>",
@@ -2069,7 +1988,7 @@
       "id": 0,
       "code": "WirkProjekt",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Weitere, nicht ökonomische Wirkungen",
       "texts": {
         "en": "Has <strong>the supported project</strong> led to the following additional effects in your organisation?",
         "fr": "<strong>Le projet encouragé </strong>a-t-il eu les autres effets suivants dans votre organisation ?",
@@ -2222,7 +2141,7 @@
       "id": 0,
       "code": "Nachhaltigkeit",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Weitere, nicht ökonomische Wirkungen",
       "texts": {
         "en": "Does the supported project or the innovation since introduced make a <strong>specific contribution to ecological and/or social sustainability</strong><strong> in the market or for society</strong>?",
         "fr": "Le projet ou l’innovation lancé(e) depuis a-t-il/elle apporté une <strong>contribution concrète en termes de durabilité environnementale et/ou sociale</strong> sur le marché ou pour la société ?",
@@ -2327,7 +2246,7 @@
       "id": 0,
       "code": "NachhaltigkeitOffen",
       "element_type": "OpenQuestion",
-      "section_name": null,
+      "section_name": "Weitere, nicht ökonomische Wirkungen",
       "texts": {
         "en": "Please describe the contribution to sustainability in a few sentences:",
         "fr": "Veuillez décrire ci-dessous en quoi consiste la contribution apportée en termes de <strong>durabilité :</strong>",
@@ -2341,7 +2260,7 @@
       "id": 0,
       "code": "WirtNutzenPotenzial",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Nutzen",
       "texts": {
         "en": "How do you assess the<strong> </strong><strong>economic benefit</strong> of the Innosuisse-supported project in your organisation?<br>Please<strong> </strong>also <strong>include the potential economic benefit</strong> in your assessment.",
         "fr": "Comment évaluez-vous <strong>l’avantage économique direct</strong> que peut procurer à votre organisation le projet encouragé par Innosuisse ?<br>Veuillez inclure dans votre évaluation <strong>le potentiel d'avantages économiques.</strong>",
@@ -2446,7 +2365,7 @@
       "id": 0,
       "code": "SozialerNutzen",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Nutzen",
       "texts": {
         "en": "How do you assess the <strong>societal and/or social benefit</strong> of the Innosuisse-supported project, <strong>outside of</strong> your organisation?",
         "fr": "Comment évaluez-vous <strong>l’utilité sociétale et/ou sociale</strong> du projet encouragé par Innosuisse, <strong>en dehors</strong> de votre organisation ?",
@@ -2535,7 +2454,7 @@
       "id": 0,
       "code": "SozialerOffen",
       "element_type": "OpenQuestion",
-      "section_name": null,
+      "section_name": "Nutzen",
       "texts": {
         "en": "Please describe the <strong>s</strong><strong>ocietal or social benefit</strong> achieved in a few sentences:",
         "fr": "Veuillez décrire en quelques phrases l<strong>'utilité sociétale ou sociale</strong> obtenue :",
@@ -2549,7 +2468,7 @@
       "id": 0,
       "code": "GesamtNutzen",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Nutzen",
       "texts": {
         "en": "How do you assess the <strong>overall benefit</strong> of the supported project beyond the economic impacts?",
         "fr": "Comment évaluez-vous <strong>l'utilité global</strong> du projet encouragé, qui va au-delà des effets économiques ?",
@@ -2638,7 +2557,7 @@
       "id": 0,
       "code": "Additionalitaet",
       "element_type": "SingleChoice",
-      "section_name": null,
+      "section_name": "Nutzen",
       "texts": {
         "en": "Would you have carried out your innovation project <strong>even without the innovation support from Innosuisse</strong>?",
         "fr": "Auriez-vous réalisé votre projet d'innovation <strong>même sans le soutien d'Innosuisse</strong> ?",
@@ -2693,7 +2612,7 @@
       "id": 0,
       "code": "ZielErreichung",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Projekterfolg und Abschluss",
       "texts": {
         "en": "Were the project goals achieved?",
         "fr": "Les objectifs du projet ont-ils été atteints ?",
@@ -2814,7 +2733,7 @@
       "id": 0,
       "code": "ZielNichtGrund",
       "element_type": "MultipleChoice",
-      "section_name": null,
+      "section_name": "Projekterfolg und Abschluss",
       "texts": {
         "de-ch": "Aus welchen Gründen wurden die definierten Ziele nicht erreicht?",
         "fr": "Pour quelles raisons les objectifs définis n'ont-ils pas été atteints ?",
@@ -2909,7 +2828,7 @@
       "id": 0,
       "code": "ErfolgBewertung",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Projekterfolg und Abschluss",
       "texts": {
         "en": "How do you assess the supported project today from your organisation's point of view?",
         "fr": "Comment évalueriez-vous aujourd’hui le projet encouragé du point de vue de votre organisation ?",
@@ -2998,7 +2917,7 @@
       "id": 0,
       "code": "Stellenwert",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Projekterfolg und Abschluss",
       "texts": {
         "en": "What is the significance of the supported project in your organisation?",
         "fr": "Quelle est l'importance du projet encouragé dans votre organisation ?",
@@ -3135,7 +3054,7 @@
       "id": 0,
       "code": "Involvement",
       "element_type": "Matrix",
-      "section_name": null,
+      "section_name": "Projekterfolg und Abschluss",
       "texts": {
         "de-ch": "Können Sie uns noch sagen, wie stark Ihre Organisation oder die betreffende Abteilung im geförderten Projekt involviert war?",
         "fr": "Dans quelle mesure votre organisation ou la division concernée était impliquée dans le projet encouragé par Innosuisse ?",
@@ -3224,7 +3143,7 @@
       "id": 0,
       "code": "FeedbackOffen",
       "element_type": "OpenQuestion",
-      "section_name": null,
+      "section_name": "Projekterfolg und Abschluss",
       "texts": {
         "en": "Thank you for sharing your feedback, comments and suggestions on the survey:",
         "fr": "Nous vous remercions de nous faire part de vos réactions, commentaires et suggestions sur l'enquête ci-dessus:",
@@ -3238,7 +3157,7 @@
       "id": 0,
       "code": "FeedbackArt",
       "element_type": "MultipleChoice",
-      "section_name": null,
+      "section_name": "Projekterfolg und Abschluss",
       "texts": {
         "de-ch": "Handelt es sich bei Ihrer Rückmeldung um eine/einen ... ?",
         "en": "Is your feedback a/an ... ?",
@@ -3276,7 +3195,7 @@
   },
   "surveys": {
     "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-      "FKontaktCheck": {
+      "KontaktCheck": {
         "id": 51,
         "code": "FKontaktCheck",
         "element_type": "Matrix",
@@ -3381,7 +3300,7 @@
           }
         ]
       },
-      "FGenerelleEmail": {
+      "GenerelleEmail": {
         "id": 10,
         "code": "FGenerelleEmail",
         "element_type": "OpenQuestion",
@@ -3395,7 +3314,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FUnternehmenArt": {
+      "UnternehmenArt": {
         "id": 75,
         "code": "FUnternehmenArt",
         "element_type": "SingleChoice",
@@ -3434,7 +3353,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fGruendungsjahr": {
+      "Gruendungsjahr": {
         "id": 120,
         "code": "fGruendungsjahr",
         "element_type": "OpenQuestion",
@@ -3448,7 +3367,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FIstStartup": {
+      "IstStartup": {
         "id": 93,
         "code": "FIstStartup",
         "element_type": "SingleChoice",
@@ -3479,7 +3398,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fSpinoff": {
+      "Spinoff": {
         "id": 144,
         "code": "fSpinoff",
         "element_type": "SingleChoice",
@@ -3526,7 +3445,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FPersonal": {
+      "Personal": {
         "id": 94,
         "code": "FPersonal",
         "element_type": "Matrix",
@@ -3575,7 +3494,7 @@
           }
         ]
       },
-      "fPersonalImProjekt": {
+      "PersonalImProjekt": {
         "id": 146,
         "code": "fPersonalImProjekt",
         "element_type": "Matrix",
@@ -3616,7 +3535,7 @@
           }
         ]
       },
-      "FInnoAlsZiel": {
+      "InnoAlsZiel": {
         "id": 95,
         "code": "FInnoAlsZiel",
         "element_type": "SingleChoice",
@@ -3647,7 +3566,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FInnoUmgesetzt": {
+      "InnoUmgesetzt": {
         "id": 33,
         "code": "FInnoUmgesetzt",
         "element_type": "SingleChoice",
@@ -3710,7 +3629,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FTreiber": {
+      "Treiber": {
         "id": 97,
         "code": "FTreiber",
         "element_type": "SingleChoice",
@@ -3773,7 +3692,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FInnoArt": {
+      "InnoArt": {
         "id": 15,
         "code": "FInnoArt",
         "element_type": "MultipleChoice",
@@ -3844,7 +3763,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FInnoTechOderSozial": {
+      "InnoTechOderSozial": {
         "id": 23,
         "code": "FInnoTechOderSozial",
         "element_type": "SingleChoice",
@@ -3883,7 +3802,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fFoerderSNF": {
+      "FoerderSNF": {
         "id": 82,
         "code": "fFoerderSNF",
         "element_type": "MultipleChoice",
@@ -3954,7 +3873,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fFoerderInnosuisse": {
+      "FoerderInnosuisse": {
         "id": 96,
         "code": "fFoerderInnosuisse",
         "element_type": "MultipleChoice",
@@ -4097,7 +4016,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FAusmassDigital": {
+      "AusmassDigital": {
         "id": 21,
         "code": "FAusmassDigital",
         "element_type": "Matrix",
@@ -4202,7 +4121,7 @@
           }
         ]
       },
-      "FAusmassRadikalitaet": {
+      "AusmassRadikalitaet": {
         "id": 16,
         "code": "FAusmassRadikalitaet",
         "element_type": "Matrix",
@@ -4291,7 +4210,7 @@
           }
         ]
       },
-      "FAusmassDisruptivitaet": {
+      "AusmassDisruptivitaet": {
         "id": 76,
         "code": "FAusmassDisruptivitaet",
         "element_type": "Matrix",
@@ -4372,7 +4291,7 @@
           }
         ]
       },
-      "FTRLStart": {
+      "TRLStart": {
         "id": 25,
         "code": "FTRLStart",
         "element_type": "Dropdown",
@@ -4467,7 +4386,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FTRLEnde": {
+      "TRLEnde": {
         "id": 121,
         "code": "FTRLEnde",
         "element_type": "Dropdown",
@@ -4562,7 +4481,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fProjektStand": {
+      "ProjektStand": {
         "id": 122,
         "code": "fProjektStand",
         "element_type": "SingleChoice",
@@ -4625,7 +4544,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fErgebnisAnlagenPrototyp": {
+      "ErgebnisAnlagenPrototyp": {
         "id": 123,
         "code": "fErgebnisAnlagenPrototyp",
         "element_type": "SingleChoice",
@@ -4664,7 +4583,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fIPR_Inhaber": {
+      "IPR_Inhaber": {
         "id": 147,
         "code": "fIPR_Inhaber",
         "element_type": "SingleChoice",
@@ -4719,7 +4638,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fIPRErgebnisse": {
+      "IPRErgebnisse": {
         "id": 124,
         "code": "fIPRErgebnisse",
         "element_type": "Matrix",
@@ -4824,7 +4743,7 @@
           }
         ]
       },
-      "fBeurteilungForPar": {
+      "BeurteilungForPar": {
         "id": 98,
         "code": "fBeurteilungForPar",
         "element_type": "Matrix",
@@ -4913,7 +4832,7 @@
           }
         ]
       },
-      "FFoParZusArbeitWeiter": {
+      "FoParZusArbeitWeiter": {
         "id": 72,
         "code": "FFoParZusArbeitWeiter",
         "element_type": "SingleChoice",
@@ -4952,7 +4871,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FUmsatz": {
+      "Umsatz": {
         "id": 43,
         "code": "FUmsatz",
         "element_type": "Matrix",
@@ -4993,7 +4912,7 @@
           }
         ]
       },
-      "FAusgabenFuE": {
+      "AusgabenFuE": {
         "id": 44,
         "code": "FAusgabenFuE",
         "element_type": "Matrix",
@@ -5034,7 +4953,7 @@
           }
         ]
       },
-      "FPersonalFuE": {
+      "PersonalFuE": {
         "id": 40,
         "code": "FPersonalFuE",
         "element_type": "Matrix",
@@ -5083,7 +5002,7 @@
           }
         ]
       },
-      "fWirtSituation": {
+      "WirtSituation": {
         "id": 132,
         "code": "fWirtSituation",
         "element_type": "Matrix",
@@ -5180,7 +5099,7 @@
           }
         ]
       },
-      "FWirkFoerderung": {
+      "WirkFoerderung": {
         "id": 73,
         "code": "FWirkFoerderung",
         "element_type": "Matrix",
@@ -5285,7 +5204,7 @@
           }
         ]
       },
-      "FWirkProjekt": {
+      "WirkProjekt": {
         "id": 118,
         "code": "FWirkProjekt",
         "element_type": "Matrix",
@@ -5422,7 +5341,7 @@
           }
         ]
       },
-      "FNachhaltigkeit": {
+      "Nachhaltigkeit": {
         "id": 60,
         "code": "FNachhaltigkeit",
         "element_type": "Matrix",
@@ -5527,7 +5446,7 @@
           }
         ]
       },
-      "FNachhaltigkeitOffen": {
+      "NachhaltigkeitOffen": {
         "id": 20,
         "code": "FNachhaltigkeitOffen",
         "element_type": "OpenQuestion",
@@ -5541,7 +5460,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FWirtNutzenPotenzial": {
+      "WirtNutzenPotenzial": {
         "id": 34,
         "code": "FWirtNutzenPotenzial",
         "element_type": "Matrix",
@@ -5646,7 +5565,7 @@
           }
         ]
       },
-      "FSozialerNutzen": {
+      "SozialerNutzen": {
         "id": 36,
         "code": "FSozialerNutzen",
         "element_type": "Matrix",
@@ -5735,7 +5654,7 @@
           }
         ]
       },
-      "FSozialerOffen": {
+      "SozialerOffen": {
         "id": 37,
         "code": "FSozialerOffen",
         "element_type": "OpenQuestion",
@@ -5749,7 +5668,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fProjektBenefit": {
+      "ProjektBenefit": {
         "id": 150,
         "code": "fProjektBenefit",
         "element_type": "Matrix",
@@ -5918,7 +5837,7 @@
           }
         ]
       },
-      "FGesamtNutzen": {
+      "GesamtNutzen": {
         "id": 104,
         "code": "FGesamtNutzen",
         "element_type": "Matrix",
@@ -6007,7 +5926,7 @@
           }
         ]
       },
-      "fAdditionalitaet": {
+      "Additionalitaet": {
         "id": 149,
         "code": "fAdditionalitaet",
         "element_type": "SingleChoice",
@@ -6062,7 +5981,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fAdditionalitaet_WasTun": {
+      "Additionalitaet_WasTun": {
         "id": 151,
         "code": "fAdditionalitaet_WasTun",
         "element_type": "MultipleChoice",
@@ -6133,7 +6052,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fEinflussProjekt": {
+      "EinflussProjekt": {
         "id": 131,
         "code": "fEinflussProjekt",
         "element_type": "Matrix",
@@ -6230,7 +6149,7 @@
           }
         ]
       },
-      "fC19_EinflussExAnte": {
+      "C19_EinflussExAnte": {
         "id": 127,
         "code": "fC19_EinflussExAnte",
         "element_type": "Matrix",
@@ -6327,7 +6246,7 @@
           }
         ]
       },
-      "fC19_EinflussExPost": {
+      "C19_EinflussExPost": {
         "id": 129,
         "code": "fC19_EinflussExPost",
         "element_type": "Matrix",
@@ -6568,7 +6487,7 @@
           }
         ]
       },
-      "fC19EinflussAufUmsatz": {
+      "C19EinflussAufUmsatz": {
         "id": 130,
         "code": "fC19EinflussAufUmsatz",
         "element_type": "Matrix",
@@ -6657,7 +6576,7 @@
           }
         ]
       },
-      "fC19EinflussAufGewinn": {
+      "C19EinflussAufGewinn": {
         "id": 143,
         "code": "fC19EinflussAufGewinn",
         "element_type": "Matrix",
@@ -6746,7 +6665,7 @@
           }
         ]
       },
-      "fC19_ExtDL": {
+      "C19_ExtDL": {
         "id": 133,
         "code": "fC19_ExtDL",
         "element_type": "MultipleChoice",
@@ -6801,7 +6720,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fC19_ExtDLQualitaet": {
+      "C19_ExtDLQualitaet": {
         "id": 134,
         "code": "fC19_ExtDLQualitaet",
         "element_type": "Matrix",
@@ -6962,7 +6881,7 @@
           }
         ]
       },
-      "fC19_ExtDLWichtigkeit": {
+      "C19_ExtDLWichtigkeit": {
         "id": 135,
         "code": "fC19_ExtDLWichtigkeit",
         "element_type": "SingleChoice",
@@ -7025,7 +6944,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fC19_ExtDLMitnahme": {
+      "C19_ExtDLMitnahme": {
         "id": 136,
         "code": "fC19_ExtDLMitnahme",
         "element_type": "Matrix",
@@ -7090,7 +7009,7 @@
           }
         ]
       },
-      "fC19_EinflussInnokraft": {
+      "C19_EinflussInnokraft": {
         "id": 137,
         "code": "fC19_EinflussInnokraft",
         "element_type": "SingleChoice",
@@ -7161,7 +7080,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "fC19_Offen": {
+      "C19_Offen": {
         "id": 138,
         "code": "fC19_Offen",
         "element_type": "Matrix",
@@ -7214,7 +7133,7 @@
           }
         ]
       },
-      "FZielErreichung": {
+      "ZielErreichung": {
         "id": 46,
         "code": "FZielErreichung",
         "element_type": "Matrix",
@@ -7303,7 +7222,7 @@
           }
         ]
       },
-      "FZielNichtGrund": {
+      "ZielNichtGrund": {
         "id": 101,
         "code": "FZielNichtGrund",
         "element_type": "MultipleChoice",
@@ -7382,7 +7301,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FZufriedenheit": {
+      "Zufriedenheit": {
         "id": 47,
         "code": "FZufriedenheit",
         "element_type": "Matrix",
@@ -7463,7 +7382,7 @@
           }
         ]
       },
-      "FZufNichtGrund": {
+      "ZufNichtGrund": {
         "id": 69,
         "code": "FZufNichtGrund",
         "element_type": "OpenQuestion",
@@ -7477,7 +7396,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FErfolgBewertung": {
+      "ErfolgBewertung": {
         "id": 48,
         "code": "FErfolgBewertung",
         "element_type": "Matrix",
@@ -7566,7 +7485,7 @@
           }
         ]
       },
-      "FStellenwert": {
+      "Stellenwert": {
         "id": 102,
         "code": "FStellenwert",
         "element_type": "Matrix",
@@ -7703,7 +7622,7 @@
           }
         ]
       },
-      "FInvolvement": {
+      "Involvement": {
         "id": 80,
         "code": "FInvolvement",
         "element_type": "Matrix",
@@ -7792,7 +7711,7 @@
           }
         ]
       },
-      "FFeedbackOffen": {
+      "FeedbackOffen": {
         "id": 70,
         "code": "FFeedbackOffen",
         "element_type": "OpenQuestion",
@@ -7806,7 +7725,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "FFeedbackArt": {
+      "FeedbackArt": {
         "id": 81,
         "code": "FFeedbackArt",
         "element_type": "MultipleChoice",
@@ -7847,7 +7766,7 @@
       }
     },
     "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-      "IKontaktCheck": {
+      "KontaktCheck": {
         "id": 51,
         "code": "IKontaktCheck",
         "element_type": "Matrix",
@@ -7948,7 +7867,7 @@
           }
         ]
       },
-      "IUnternehmenArt": {
+      "UnternehmenArt": {
         "id": 177,
         "code": "IUnternehmenArt",
         "element_type": "SingleChoice",
@@ -7987,7 +7906,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "iGruendungsjahr": {
+      "Gruendungsjahr": {
         "id": 191,
         "code": "iGruendungsjahr",
         "element_type": "OpenQuestion",
@@ -8001,7 +7920,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IIstStartup": {
+      "IstStartup": {
         "id": 178,
         "code": "IIstStartup",
         "element_type": "SingleChoice",
@@ -8032,7 +7951,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IPersonal": {
+      "Personal": {
         "id": 40,
         "code": "IPersonal",
         "element_type": "Matrix",
@@ -8097,7 +8016,7 @@
           }
         ]
       },
-      "IInnoAlsZiel": {
+      "InnoAlsZiel": {
         "id": 78,
         "code": "IInnoAlsZiel",
         "element_type": "SingleChoice",
@@ -8128,7 +8047,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IInnoUmgesetzt": {
+      "InnoUmgesetzt": {
         "id": 33,
         "code": "IInnoUmgesetzt",
         "element_type": "SingleChoice",
@@ -8191,7 +8110,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IIrgendeineInnoUm": {
+      "IrgendeineInnoUm": {
         "id": 179,
         "code": "IIrgendeineInnoUm",
         "element_type": "SingleChoice",
@@ -8230,7 +8149,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IInnoArt": {
+      "InnoArt": {
         "id": 15,
         "code": "IInnoArt",
         "element_type": "MultipleChoice",
@@ -8301,7 +8220,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IInnoTechOderSozial": {
+      "InnoTechOderSozial": {
         "id": 88,
         "code": "IInnoTechOderSozial",
         "element_type": "SingleChoice",
@@ -8340,7 +8259,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IAusmassRadikalitaet": {
+      "AusmassRadikalitaet": {
         "id": 16,
         "code": "IAusmassRadikalitaet",
         "element_type": "Matrix",
@@ -8429,7 +8348,7 @@
           }
         ]
       },
-      "IAusmassDisruptivitaet": {
+      "AusmassDisruptivitaet": {
         "id": 76,
         "code": "IAusmassDisruptivitaet",
         "element_type": "Matrix",
@@ -8510,7 +8429,7 @@
           }
         ]
       },
-      "IErgebnisse": {
+      "Ergebnisse": {
         "id": 29,
         "code": "IErgebnisse",
         "element_type": "MultipleChoice",
@@ -8589,7 +8508,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "iProjektStand": {
+      "ProjektStand": {
         "id": 192,
         "code": "iProjektStand",
         "element_type": "SingleChoice",
@@ -8660,7 +8579,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "iErgebnisAnlagenPrototyp": {
+      "ErgebnisAnlagenPrototyp": {
         "id": 193,
         "code": "iErgebnisAnlagenPrototyp",
         "element_type": "SingleChoice",
@@ -8699,7 +8618,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IPRErgenisse": {
+      "IPRErgebnisse": {
         "id": 194,
         "code": "IPRErgenisse",
         "element_type": "Matrix",
@@ -8804,7 +8723,7 @@
           }
         ]
       },
-      "IFoParZusArbeitWeiter": {
+      "FoParZusArbeitWeiter": {
         "id": 72,
         "code": "IFoParZusArbeitWeiter",
         "element_type": "SingleChoice",
@@ -8851,7 +8770,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IForParAngestellt": {
+      "ForParAngestellt": {
         "id": 79,
         "code": "IForParAngestellt",
         "element_type": "SingleChoice",
@@ -8890,7 +8809,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IUmsatz": {
+      "Umsatz": {
         "id": 157,
         "code": "IUmsatz",
         "element_type": "Matrix",
@@ -8955,7 +8874,7 @@
           }
         ]
       },
-      "IAusgabenFuE": {
+      "AusgabenFuE": {
         "id": 158,
         "code": "IAusgabenFuE",
         "element_type": "Matrix",
@@ -9020,7 +8939,7 @@
           }
         ]
       },
-      "IPersonalFuE": {
+      "PersonalFuE": {
         "id": 41,
         "code": "IPersonalFuE",
         "element_type": "Matrix",
@@ -9085,7 +9004,7 @@
           }
         ]
       },
-      "iWirtSituation": {
+      "WirtSituation": {
         "id": 195,
         "code": "iWirtSituation",
         "element_type": "Matrix",
@@ -9182,7 +9101,7 @@
           }
         ]
       },
-      "iWirtImpQual": {
+      "WirtImpQual": {
         "id": 80,
         "code": "iWirtImpQual",
         "element_type": "Matrix",
@@ -9343,7 +9262,7 @@
           }
         ]
       },
-      "iWirtImpQuan": {
+      "WirtImpQuan": {
         "id": 83,
         "code": "iWirtImpQuan",
         "element_type": "Matrix",
@@ -9432,7 +9351,7 @@
           }
         ]
       },
-      "IKosteneinsparungen": {
+      "Kosteneinsparungen": {
         "id": 81,
         "code": "IKosteneinsparungen",
         "element_type": "SingleChoice",
@@ -9471,7 +9390,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IMarktanteilGewinn": {
+      "MarktanteilGewinn": {
         "id": 82,
         "code": "IMarktanteilGewinn",
         "element_type": "SingleChoice",
@@ -9510,7 +9429,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "INeuheitslevel": {
+      "Neuheitslevel": {
         "id": 98,
         "code": "INeuheitslevel",
         "element_type": "Matrix",
@@ -9615,7 +9534,7 @@
           }
         ]
       },
-      "INeuheitslevelOffen": {
+      "NeuheitslevelOffen": {
         "id": 133,
         "code": "INeuheitslevelOffen",
         "element_type": "OpenQuestion",
@@ -9629,7 +9548,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "iWirkFoerderung": {
+      "WirkFoerderung": {
         "id": 73,
         "code": "iWirkFoerderung",
         "element_type": "Matrix",
@@ -9718,7 +9637,7 @@
           }
         ]
       },
-      "iWirkProjekt": {
+      "WirkProjekt": {
         "id": 189,
         "code": "iWirkProjekt",
         "element_type": "Matrix",
@@ -9871,7 +9790,7 @@
           }
         ]
       },
-      "INachhaltigkeit": {
+      "Nachhaltigkeit": {
         "id": 60,
         "code": "INachhaltigkeit",
         "element_type": "Matrix",
@@ -9976,7 +9895,7 @@
           }
         ]
       },
-      "INachhaltigkeitOffen": {
+      "NachhaltigkeitOffen": {
         "id": 20,
         "code": "INachhaltigkeitOffen",
         "element_type": "OpenQuestion",
@@ -9990,7 +9909,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IWirtNutzenPotenzial": {
+      "WirtNutzenPotenzial": {
         "id": 34,
         "code": "IWirtNutzenPotenzial",
         "element_type": "Matrix",
@@ -10095,7 +10014,7 @@
           }
         ]
       },
-      "ISozialerNutzen": {
+      "SozialerNutzen": {
         "id": 36,
         "code": "ISozialerNutzen",
         "element_type": "Matrix",
@@ -10184,7 +10103,7 @@
           }
         ]
       },
-      "ISozialerOffen": {
+      "SozialerOffen": {
         "id": 37,
         "code": "ISozialerOffen",
         "element_type": "OpenQuestion",
@@ -10198,7 +10117,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IGesamtNutzen": {
+      "GesamtNutzen": {
         "id": 181,
         "code": "IGesamtNutzen",
         "element_type": "Matrix",
@@ -10287,7 +10206,7 @@
           }
         ]
       },
-      "IAdditionalitaet": {
+      "Additionalitaet": {
         "id": 131,
         "code": "IAdditionalitaet",
         "element_type": "SingleChoice",
@@ -10342,7 +10261,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IZielErreichung": {
+      "ZielErreichung": {
         "id": 132,
         "code": "IZielErreichung",
         "element_type": "Matrix",
@@ -10463,7 +10382,7 @@
           }
         ]
       },
-      "IZielNichtGrund": {
+      "ZielNichtGrund": {
         "id": 182,
         "code": "IZielNichtGrund",
         "element_type": "MultipleChoice",
@@ -10558,7 +10477,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IErfolgBewertung": {
+      "ErfolgBewertung": {
         "id": 48,
         "code": "IErfolgBewertung",
         "element_type": "Matrix",
@@ -10647,7 +10566,7 @@
           }
         ]
       },
-      "IStellenwert": {
+      "Stellenwert": {
         "id": 183,
         "code": "IStellenwert",
         "element_type": "Matrix",
@@ -10784,7 +10703,7 @@
           }
         ]
       },
-      "IInvolvement": {
+      "Involvement": {
         "id": 155,
         "code": "IInvolvement",
         "element_type": "Matrix",
@@ -10873,7 +10792,7 @@
           }
         ]
       },
-      "IFeedbackOffen": {
+      "FeedbackOffen": {
         "id": 70,
         "code": "IFeedbackOffen",
         "element_type": "OpenQuestion",
@@ -10887,7 +10806,7 @@
         "matrix_rows": [],
         "matrix_columns": []
       },
-      "IFeedbackArt": {
+      "FeedbackArt": {
         "id": 169,
         "code": "IFeedbackArt",
         "element_type": "MultipleChoice",
@@ -11609,176 +11528,22 @@
         "matrix_column_diffs": []
       }
     },
-    "IstStartup": {
+    "stStartup": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "IstStartup",
+        "code": "stStartup",
         "element_type": "SingleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Bezeichnen Sie Ihre Organisation als Start-up?",
-            "new_text": "Bezeichnen Sie Ihre Organisation als Start-up?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Do you consider your organisation to be a start-up?",
-            "new_text": "Do you consider your organisation to be a start-up?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Considérez-vous votre organisation comme une start-up ?",
-            "new_text": "Considérez-vous votre organisation comme une start-up ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "6",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja",
-                "new_text": "Ja"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes",
-                "new_text": "Yes"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui",
-                "new_text": "Oui"
-              }
-            ]
-          },
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Nein",
-                "new_text": "Nein"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No",
-                "new_text": "No"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non",
-                "new_text": "Non"
-              }
-            ]
-          }
-        ],
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       },
       "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "IstStartup",
+        "code": "stStartup",
         "element_type": "SingleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Bezeichnen Sie Ihre Organisation als Start-up?",
-            "new_text": "Bezeichnen Sie Ihre Organisation als Start-up?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Do you consider your organisation to be a start-up?",
-            "new_text": "Do you consider your organisation to be a start-up?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Considérez-vous votre organisation comme une start-up ?",
-            "new_text": "Considérez-vous votre organisation comme une start-up ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "6",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja",
-                "new_text": "Ja"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes",
-                "new_text": "Yes"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui",
-                "new_text": "Oui"
-              }
-            ]
-          },
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Nein",
-                "new_text": "Nein"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No",
-                "new_text": "No"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non",
-                "new_text": "Non"
-              }
-            ]
-          }
-        ],
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       }
@@ -11971,573 +11736,9 @@
         ]
       }
     },
-    "InnoAlsZiel": {
+    "nnoAlsZiel": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "InnoAlsZiel",
-        "element_type": "SingleChoice",
-        "status": "structure_changed",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Verfolgt(e) Ihre Organisation das Ziel, mit dem geförderten Projekt eine konkrete Innovation in Ihrer Organisation oder auf dem Markt umzusetzen?",
-            "new_text": "Verfolgt(e) Ihre Organisation das Ziel, mit dem geförderten Projekt eine konkrete Innovation in Ihrer Organisation oder auf dem Markt umzusetzen?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Does or did your organisation pursue the goal of implementing a concrete innovation in the organisation or on the market with the supported project?",
-            "new_text": "Does or did your organisation pursue the goal of implementing a concrete innovation in the organisation or on the market with the supported project?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Votre organisation poursuit-elle ou a-t-elle poursuivi avec le projet encouragé par Innosuisse l'objectif de mettre en œuvre une innovation concrète au sein de l'organisation ou sur le marché ?",
-            "new_text": "Votre organisation poursuit-elle ou a-t-elle poursuivi avec le projet encouragé par Innosuisse l'objectif de mettre en œuvre une innovation concrète au sein de l'organisation ou sur le marché ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "6",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja, unsere Beteiligung am Projekt verfolgt(e) das Ziel, die Innovation in unserer Organisation oder auf dem Markt umzusetzen.",
-                "new_text": "Ja, unsere Beteiligung am Projekt verfolgt(e) das Ziel, die Innovation in unserer Organisation oder auf dem Markt umzusetzen."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes, our participation in the project aims/aimed to implement the innovation in our organisation or on the market.",
-                "new_text": "Yes, our participation in the project aims/aimed to implement the innovation in our organisation or on the market."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui, notre participation au projet a/a eu pour but de mettre en œuvre l'innovation dans notre organisation ou sur le marché.",
-                "new_text": "Oui, notre participation au projet a/a eu pour but de mettre en œuvre l'innovation dans notre organisation ou sur le marché."
-              }
-            ]
-          },
-          {
-            "code": "1",
-            "status": "text_changed",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "similar",
-                "similarity": 0.9481481481481482,
-                "old_text": "Nein, wir waren als weiterer Umsetzungspartner am Projekt beteiligt.",
-                "new_text": "Nein, wir sind als weiterer Umsetzungspartner am Projekt beteiligt."
-              },
-              {
-                "language": "en",
-                "status": "similar",
-                "similarity": 0.9784172661870504,
-                "old_text": "No, we were involved in the project as another implementation partner.",
-                "new_text": "No, we are involved in the project as another implementation partner."
-              },
-              {
-                "language": "fr",
-                "status": "similar",
-                "similarity": 0.9942857142857143,
-                "old_text": "Non, nous participions au projet en tant que partenaire de mise en œuvre supplémentaire.",
-                "new_text": "Non, nous participons au projet en tant que partenaire de mise en œuvre supplémentaire."
-              }
-            ]
-          }
-        ],
-        "matrix_row_diffs": [],
-        "matrix_column_diffs": []
-      },
-      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "InnoAlsZiel",
-        "element_type": "SingleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Verfolgt(e) Ihre Organisation das Ziel, mit dem geförderten Projekt eine konkrete Innovation in Ihrer Organisation oder auf dem Markt umzusetzen?",
-            "new_text": "Verfolgt(e) Ihre Organisation das Ziel, mit dem geförderten Projekt eine konkrete Innovation in Ihrer Organisation oder auf dem Markt umzusetzen?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Does or did your organisation pursue the goal of implementing a concrete innovation in the organisation or on the market with the supported project?",
-            "new_text": "Does or did your organisation pursue the goal of implementing a concrete innovation in the organisation or on the market with the supported project?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Votre organisation poursuit-elle ou a-t-elle poursuivi avec le projet encouragé par Innosuisse l'objectif de mettre en œuvre une innovation concrète au sein de l'organisation ou sur le marché ?",
-            "new_text": "Votre organisation poursuit-elle ou a-t-elle poursuivi avec le projet encouragé par Innosuisse l'objectif de mettre en œuvre une innovation concrète au sein de l'organisation ou sur le marché ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "6",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja, unsere Beteiligung am Projekt verfolgt(e) das Ziel, die Innovation in unserer Organisation oder auf dem Markt umzusetzen.",
-                "new_text": "Ja, unsere Beteiligung am Projekt verfolgt(e) das Ziel, die Innovation in unserer Organisation oder auf dem Markt umzusetzen."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes, our participation in the project aims/aimed to implement the innovation in our organisation or on the market.",
-                "new_text": "Yes, our participation in the project aims/aimed to implement the innovation in our organisation or on the market."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui, notre participation au projet a/a eu pour but de mettre en œuvre l'innovation dans notre organisation ou sur le marché.",
-                "new_text": "Oui, notre participation au projet a/a eu pour but de mettre en œuvre l'innovation dans notre organisation ou sur le marché."
-              }
-            ]
-          },
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Nein, wir waren als weiterer Umsetzungspartner am Projekt beteiligt.",
-                "new_text": "Nein, wir waren als weiterer Umsetzungspartner am Projekt beteiligt."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No, we were involved in the project as another implementation partner.",
-                "new_text": "No, we were involved in the project as another implementation partner."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non, nous participions au projet en tant que partenaire de mise en œuvre supplémentaire.",
-                "new_text": "Non, nous participions au projet en tant que partenaire de mise en œuvre supplémentaire."
-              }
-            ]
-          }
-        ],
-        "matrix_row_diffs": [],
-        "matrix_column_diffs": []
-      }
-    },
-    "InnoUmgesetzt": {
-      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "InnoUmgesetzt",
-        "element_type": "SingleChoice",
-        "status": "structure_changed",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "similar",
-            "similarity": 0.9763779527559056,
-            "old_text": "Wurde diese Innovation auf dem Markt, in der Gesellschaft oder in Ihrer Organisation bereits umgesetzt oder ist diese Umsetzung <strong>innerhalb der nächsten 24 Monate</strong> geplant?\n",
-            "new_text": "Wurde diese Innovation auf dem Markt, in der Gesellschaft oder in Ihrer Organisation bereits umgesetzt oder ist diese Umsetzung <strong>innerhalb der nächsten 12 oder 24 Monate</strong> geplant?"
-          },
-          {
-            "language": "en",
-            "status": "similar",
-            "similarity": 0.9829545454545454,
-            "old_text": "Has this innovation already been implemented in the market, in society or in your organisation, or is this implementation planned <strong>within the next 24 months</strong>?",
-            "new_text": "Has this innovation already been implemented in the market, in society or in your organisation, or is this implementation planned <strong>within the next 12 or 24 months</strong>?"
-          },
-          {
-            "language": "fr",
-            "status": "similar",
-            "similarity": 0.9952153110047847,
-            "old_text": "Votre organisation a-t-elle déjà introduit cette innovation concrète sur le marché, dans la société ou dans votre organisation, ou cette introduction est-elle prévue <strong>dans les 24 mois à venir</strong>?\n",
-            "new_text": "Votre organisation a-t-elle déjà introduit cette innovation concrète sur le marché, dans la société ou dans votre organisation, ou cette introduction est-elle prévue <strong>dans les 24 mois à venir </strong>?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "6",
-            "status": "text_changed",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "different",
-                "similarity": 0.5549132947976878,
-                "old_text": "Ja, sie wurde <strong>bereits umgesetzt</strong>, und das geförderte Projekt wurde inzwischen <strong>abgeschlossen</strong>.",
-                "new_text": "Ja, sie wurde <strong>bereits umgesetzt</strong>"
-              },
-              {
-                "language": "en",
-                "status": "similar",
-                "similarity": 0.9348659003831418,
-                "old_text": "Yes, it has <strong>already been implemented</strong> and the supported project has since been <strong>completed</strong>.",
-                "new_text": "Yes, it has <strong>a</strong><strong>lready been implemented</strong> and the supported project has since been <strong>completed</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui, elle e a <strong>déjà été mise en œuvre</strong> et le <strong>projet</strong> encouragé est entretemps <strong>clos</strong>.",
-                "new_text": "Oui, elle e a <strong>déjà été mise en œuvre</strong> et le <strong>projet</strong> encouragé est entretemps <strong>clos</strong>."
-              }
-            ]
-          },
-          {
-            "code": "5",
-            "status": "text_changed",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "different",
-                "similarity": 0.40625,
-                "old_text": "Ja, sie wurde <strong>bereits umgesetzt</strong>, und das geförderte Projekt wird noch <strong>weitergeführt</strong>.",
-                "new_text": "Ja, sie wird <strong>in den nächsten 12 Monaten</strong> umgesetzt werden."
-              },
-              {
-                "language": "en",
-                "status": "different",
-                "similarity": 0.5393258426966292,
-                "old_text": "Yes, it has <strong>already been implemented</strong> and the supported project <strong>will continue</strong>.",
-                "new_text": "Yes, it will be implemented <strong>in the next 12 months</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "different",
-                "similarity": 0.45714285714285713,
-                "old_text": "Oui,elle a <strong>déjà été mise en œuvre, mais</strong> le projet encouragé est toujours en cours.",
-                "new_text": "Oui, elle va être mise en œuvre <strong>dans les 12 prochains mois.</strong>"
-              }
-            ]
-          },
-          {
-            "code": "4",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja, sie wird <strong>in den nächsten 24 Monaten</strong> umgesetzt werden.",
-                "new_text": "Ja, sie wird <strong>in den nächsten 24 Monaten</strong> umgesetzt werden."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes, it will be implemented <strong>in the next 24 months</strong>.",
-                "new_text": "Yes, it will be implemented <strong>in the next 24 months</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui, elle va être mise en œuvre <strong>dans les 24 prochains mois.</strong>",
-                "new_text": "Oui, elle va être mise en œuvre <strong>dans les 24 prochains mois.</strong>"
-              }
-            ]
-          },
-          {
-            "code": "3",
-            "status": "text_changed",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "similar",
-                "similarity": 0.9848484848484849,
-                "old_text": "Nein, aber eine Umsetzung ist<strong> für später</strong> geplant.",
-                "new_text": "Nein, aber eine Umsetzung ist <strong>für später</strong> geplant."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No, but an implementation is planned <strong>for later</strong>.",
-                "new_text": "No, but an implementation is planned <strong>for later</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non, mais une mise en œuvre est prévue <strong>pour plus tard</strong>.",
-                "new_text": "Non, mais une mise en œuvre est prévue <strong>pour plus tard</strong>."
-              }
-            ]
-          },
-          {
-            "code": "2",
-            "status": "text_changed",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "similar",
-                "similarity": 0.9318181818181818,
-                "old_text": "Nein, es ist keine Umsetzung geplant, aber die geförderte Innovationsidee wird <strong>in einem Folgeprojekt weitergeführt.</strong>",
-                "new_text": "Nein, es ist keine Umsetzung geplant, aber die geförderte Innovationsidee wird in einem <strong>Folgeprojekt weitergeführt</strong>."
-              },
-              {
-                "language": "en",
-                "status": "similar",
-                "similarity": 0.9348659003831418,
-                "old_text": "No implementation is planned, but the supported innovation idea <strong>will be continued in a follow-up project</strong>.",
-                "new_text": "No implementation is planned, but the supported innovation idea <strong>w</strong><strong>ill be continued in a follow-up project</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non, aucune mise en œuvre n’est prévue, mais l’idée d’innovation encouragée sera poursuivie <strong>dans le cadre d’un projet subséquent</strong>.",
-                "new_text": "Non, aucune mise en œuvre n’est prévue, mais l’idée d’innovation encouragée sera poursuivie <strong>dans le cadre d’un projet subséquent</strong>."
-              }
-            ]
-          },
-          {
-            "code": "1",
-            "status": "text_changed",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "similar",
-                "similarity": 0.927536231884058,
-                "old_text": "Nein, das geförderte Projekt <strong>wird nicht fortgeführt</strong>.",
-                "new_text": "Nein, das geförderte Projekt wird <strong>nicht fortgeführt</strong>."
-              },
-              {
-                "language": "en",
-                "status": "different",
-                "similarity": 0.8843537414965986,
-                "old_text": "No, the supported project <strong>will</strong> <strong>not be continued</strong>.",
-                "new_text": "No, the supported project <strong>will not be continued</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non, le projet encouragé <strong>ne sera pas poursuivi</strong>.",
-                "new_text": "Non, le projet encouragé <strong>ne sera pas poursuivi</strong>."
-              }
-            ]
-          }
-        ],
-        "matrix_row_diffs": [],
-        "matrix_column_diffs": []
-      },
-      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "InnoUmgesetzt",
-        "element_type": "SingleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Wurde diese Innovation auf dem Markt, in der Gesellschaft oder in Ihrer Organisation bereits umgesetzt oder ist diese Umsetzung <strong>innerhalb der nächsten 24 Monate</strong> geplant?\n",
-            "new_text": "Wurde diese Innovation auf dem Markt, in der Gesellschaft oder in Ihrer Organisation bereits umgesetzt oder ist diese Umsetzung <strong>innerhalb der nächsten 24 Monate</strong> geplant?\n"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Has this innovation already been implemented in the market, in society or in your organisation, or is this implementation planned <strong>within the next 24 months</strong>?",
-            "new_text": "Has this innovation already been implemented in the market, in society or in your organisation, or is this implementation planned <strong>within the next 24 months</strong>?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Votre organisation a-t-elle déjà introduit cette innovation concrète sur le marché, dans la société ou dans votre organisation, ou cette introduction est-elle prévue <strong>dans les 24 mois à venir</strong>?\n",
-            "new_text": "Votre organisation a-t-elle déjà introduit cette innovation concrète sur le marché, dans la société ou dans votre organisation, ou cette introduction est-elle prévue <strong>dans les 24 mois à venir</strong>?\n"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "6",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja, sie wurde <strong>bereits umgesetzt</strong>, und das geförderte Projekt wurde inzwischen <strong>abgeschlossen</strong>.",
-                "new_text": "Ja, sie wurde <strong>bereits umgesetzt</strong>, und das geförderte Projekt wurde inzwischen <strong>abgeschlossen</strong>."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes, it has <strong>already been implemented</strong> and the supported project has since been <strong>completed</strong>.",
-                "new_text": "Yes, it has <strong>already been implemented</strong> and the supported project has since been <strong>completed</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui, elle e a <strong>déjà été mise en œuvre</strong> et le <strong>projet</strong> encouragé est entretemps <strong>clos</strong>.",
-                "new_text": "Oui, elle e a <strong>déjà été mise en œuvre</strong> et le <strong>projet</strong> encouragé est entretemps <strong>clos</strong>."
-              }
-            ]
-          },
-          {
-            "code": "5",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja, sie wurde <strong>bereits umgesetzt</strong>, und das geförderte Projekt wird noch <strong>weitergeführt</strong>.",
-                "new_text": "Ja, sie wurde <strong>bereits umgesetzt</strong>, und das geförderte Projekt wird noch <strong>weitergeführt</strong>."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes, it has <strong>already been implemented</strong> and the supported project <strong>will continue</strong>.",
-                "new_text": "Yes, it has <strong>already been implemented</strong> and the supported project <strong>will continue</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui,elle a <strong>déjà été mise en œuvre, mais</strong> le projet encouragé est toujours en cours.",
-                "new_text": "Oui,elle a <strong>déjà été mise en œuvre, mais</strong> le projet encouragé est toujours en cours."
-              }
-            ]
-          },
-          {
-            "code": "4",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja, sie wird <strong>in den nächsten 24 Monaten</strong> umgesetzt werden.",
-                "new_text": "Ja, sie wird <strong>in den nächsten 24 Monaten</strong> umgesetzt werden."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes, it will be implemented <strong>in the next 24 months</strong>.",
-                "new_text": "Yes, it will be implemented <strong>in the next 24 months</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui, elle va être mise en œuvre <strong>dans les 24 prochains mois.</strong>",
-                "new_text": "Oui, elle va être mise en œuvre <strong>dans les 24 prochains mois.</strong>"
-              }
-            ]
-          },
-          {
-            "code": "3",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Nein, aber eine Umsetzung ist<strong> für später</strong> geplant.",
-                "new_text": "Nein, aber eine Umsetzung ist<strong> für später</strong> geplant."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No, but an implementation is planned <strong>for later</strong>.",
-                "new_text": "No, but an implementation is planned <strong>for later</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non, mais une mise en œuvre est prévue <strong>pour plus tard</strong>.",
-                "new_text": "Non, mais une mise en œuvre est prévue <strong>pour plus tard</strong>."
-              }
-            ]
-          },
-          {
-            "code": "2",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Nein, es ist keine Umsetzung geplant, aber die geförderte Innovationsidee wird <strong>in einem Folgeprojekt weitergeführt.</strong>",
-                "new_text": "Nein, es ist keine Umsetzung geplant, aber die geförderte Innovationsidee wird <strong>in einem Folgeprojekt weitergeführt.</strong>"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No implementation is planned, but the supported innovation idea <strong>will be continued in a follow-up project</strong>.",
-                "new_text": "No implementation is planned, but the supported innovation idea <strong>will be continued in a follow-up project</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non, aucune mise en œuvre n’est prévue, mais l’idée d’innovation encouragée sera poursuivie <strong>dans le cadre d’un projet subséquent</strong>.",
-                "new_text": "Non, aucune mise en œuvre n’est prévue, mais l’idée d’innovation encouragée sera poursuivie <strong>dans le cadre d’un projet subséquent</strong>."
-              }
-            ]
-          },
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Nein, das geförderte Projekt <strong>wird nicht fortgeführt</strong>.",
-                "new_text": "Nein, das geförderte Projekt <strong>wird nicht fortgeführt</strong>."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No, the supported project <strong>will</strong> <strong>not be continued</strong>.",
-                "new_text": "No, the supported project <strong>will</strong> <strong>not be continued</strong>."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non, le projet encouragé <strong>ne sera pas poursuivi</strong>.",
-                "new_text": "Non, le projet encouragé <strong>ne sera pas poursuivi</strong>."
-              }
-            ]
-          }
-        ],
-        "matrix_row_diffs": [],
-        "matrix_column_diffs": []
-      }
-    },
-    "IrgendeineInnoUm": {
-      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "IrgendeineInnoUm",
+        "code": "nnoAlsZiel",
         "element_type": "SingleChoice",
         "status": "removed",
         "text_diffs": [],
@@ -12546,787 +11747,91 @@
         "matrix_column_diffs": []
       },
       "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "IrgendeineInnoUm",
+        "code": "nnoAlsZiel",
         "element_type": "SingleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Hat Ihre Organisation in den letzten drei Jahren eine <strong>andere</strong> konkrete Innovation auf den Markt, in der Gesellschaft oder in Ihrer Organisation umgesetzt?\n",
-            "new_text": "Hat Ihre Organisation in den letzten drei Jahren eine <strong>andere</strong> konkrete Innovation auf den Markt, in der Gesellschaft oder in Ihrer Organisation umgesetzt?\n"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Has your organisation implemented<strong> another</strong>, concrete innovation in the market, in society or in your organisation in the last three years?",
-            "new_text": "Has your organisation implemented<strong> another</strong>, concrete innovation in the market, in society or in your organisation in the last three years?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Votre organisation a-t-elle mis en œuvre une <strong>autre</strong> innovation concrète sur le marché, dans la société ou au sein de votre organisation au cours des trois dernières années ?",
-            "new_text": "Votre organisation a-t-elle mis en œuvre une <strong>autre</strong> innovation concrète sur le marché, dans la société ou au sein de votre organisation au cours des trois dernières années ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "6",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja",
-                "new_text": "Ja"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes",
-                "new_text": "Yes"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui",
-                "new_text": "Oui"
-              }
-            ]
-          },
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Nein",
-                "new_text": "Nein"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No",
-                "new_text": "No"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non",
-                "new_text": "Non"
-              }
-            ]
-          },
-          {
-            "code": "99",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Das kann ich nicht beantworten",
-                "new_text": "Das kann ich nicht beantworten"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "I cannot answer this question",
-                "new_text": "I cannot answer this question"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Je ne peux pas répondre à cette question",
-                "new_text": "Je ne peux pas répondre à cette question"
-              }
-            ]
-          }
-        ],
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       }
     },
-    "InnoArt": {
+    "nnoUmgesetzt": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "InnoArt",
-        "element_type": "MultipleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Um welche Art von Innovation handelt es sich bei dem geförderten Projekt?",
-            "new_text": "Um welche Art von Innovation handelt es sich bei dem geförderten Projekt?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "What type of innovation is the supported project?",
-            "new_text": "What type of innovation is the supported project?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Quel est le type d’innovation sur lequel le projet encouragé a porté ?",
-            "new_text": "Quel est le type d’innovation sur lequel le projet encouragé a porté ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Produktinnovation",
-                "new_text": "Produktinnovation"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Product innovation",
-                "new_text": "Product innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation de produit",
-                "new_text": "Innovation de produit"
-              }
-            ]
-          },
-          {
-            "code": "2",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Dienstleistungsinnovation",
-                "new_text": "Dienstleistungsinnovation"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Service innovation",
-                "new_text": "Service innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation de service",
-                "new_text": "Innovation de service"
-              }
-            ]
-          },
-          {
-            "code": "3",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Prozessinnovation",
-                "new_text": "Prozessinnovation"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Process innovation",
-                "new_text": "Process innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation de processus",
-                "new_text": "Innovation de processus"
-              }
-            ]
-          },
-          {
-            "code": "4",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation beim Geschäftsmodell",
-                "new_text": "Innovation beim Geschäftsmodell"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Business model innovation",
-                "new_text": "Business model innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation de modèle d’entreprise",
-                "new_text": "Innovation de modèle d’entreprise"
-              }
-            ]
-          },
-          {
-            "code": "5",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation bei der Organisation",
-                "new_text": "Innovation bei der Organisation"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Organisational innovation",
-                "new_text": "Organisational innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation organisationnelle",
-                "new_text": "Innovation organisationnelle"
-              }
-            ]
-          },
-          {
-            "code": "6",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation beim Marketing",
-                "new_text": "Innovation beim Marketing"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Marketing innovation",
-                "new_text": "Marketing innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation marketing",
-                "new_text": "Innovation marketing"
-              }
-            ]
-          },
-          {
-            "code": "7",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Soziale Innovation",
-                "new_text": "Soziale Innovation"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Social innovation",
-                "new_text": "Social innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation sociale",
-                "new_text": "Innovation sociale"
-              }
-            ]
-          }
-        ],
+        "code": "nnoUmgesetzt",
+        "element_type": "SingleChoice",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       },
       "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "InnoArt",
-        "element_type": "MultipleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Um welche Art von Innovation handelt es sich bei dem geförderten Projekt?",
-            "new_text": "Um welche Art von Innovation handelt es sich bei dem geförderten Projekt?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "What type of innovation is the supported project?",
-            "new_text": "What type of innovation is the supported project?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Quel est le type d’innovation sur lequel le projet encouragé a porté ?",
-            "new_text": "Quel est le type d’innovation sur lequel le projet encouragé a porté ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Produktinnovation",
-                "new_text": "Produktinnovation"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Product innovation",
-                "new_text": "Product innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation de produit",
-                "new_text": "Innovation de produit"
-              }
-            ]
-          },
-          {
-            "code": "2",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Dienstleistungsinnovation",
-                "new_text": "Dienstleistungsinnovation"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Service innovation",
-                "new_text": "Service innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation de service",
-                "new_text": "Innovation de service"
-              }
-            ]
-          },
-          {
-            "code": "3",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Prozessinnovation",
-                "new_text": "Prozessinnovation"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Process innovation",
-                "new_text": "Process innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation de processus",
-                "new_text": "Innovation de processus"
-              }
-            ]
-          },
-          {
-            "code": "4",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation beim Geschäftsmodell",
-                "new_text": "Innovation beim Geschäftsmodell"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Business model innovation",
-                "new_text": "Business model innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation de modèle d’entreprise",
-                "new_text": "Innovation de modèle d’entreprise"
-              }
-            ]
-          },
-          {
-            "code": "5",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation bei der Organisation",
-                "new_text": "Innovation bei der Organisation"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Organisational innovation",
-                "new_text": "Organisational innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation organisationnelle",
-                "new_text": "Innovation organisationnelle"
-              }
-            ]
-          },
-          {
-            "code": "6",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation beim Marketing",
-                "new_text": "Innovation beim Marketing"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Marketing innovation",
-                "new_text": "Marketing innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation marketing",
-                "new_text": "Innovation marketing"
-              }
-            ]
-          },
-          {
-            "code": "7",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Soziale Innovation",
-                "new_text": "Soziale Innovation"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Social innovation",
-                "new_text": "Social innovation"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Innovation sociale",
-                "new_text": "Innovation sociale"
-              }
-            ]
-          }
-        ],
+        "code": "nnoUmgesetzt",
+        "element_type": "SingleChoice",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       }
     },
-    "InnoTechOderSozial": {
+    "rgendeineInnoUm": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "InnoTechOderSozial",
+        "code": "rgendeineInnoUm",
         "element_type": "SingleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Beruht die Innovation aus Ihrem von Innosuisse geförderten Projekt primär auf ...",
-            "new_text": "Beruht die Innovation aus Ihrem von Innosuisse geförderten Projekt primär auf ..."
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Is the innovation from your Innosuisse-supported project primarily based on ...",
-            "new_text": "Is the innovation from your Innosuisse-supported project primarily based on ..."
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "L’innovation issue de votre projet encouragé par Innosuisse repose-t-elle en premier lieu sur ...",
-            "new_text": "L’innovation issue de votre projet encouragé par Innosuisse repose-t-elle en premier lieu sur ..."
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "technologieorientierten oder naturwissenschaftlichen Grundlagen",
-                "new_text": "technologieorientierten oder naturwissenschaftlichen Grundlagen"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "technology-oriented or scientific basics",
-                "new_text": "technology-oriented or scientific basics"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "des bases technologiques ou orientées vers les sciences naturelles",
-                "new_text": "des bases technologiques ou orientées vers les sciences naturelles"
-              }
-            ]
-          },
-          {
-            "code": "2",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "wirtschafts-, sozial- oder geisteswissenschaftlichen Grundlagen",
-                "new_text": "wirtschafts-, sozial- oder geisteswissenschaftlichen Grundlagen"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "economic, social science or humanities basics",
-                "new_text": "economic, social science or humanities basics"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "des bases en sciences économiques, sociales ou humaines",
-                "new_text": "des bases en sciences économiques, sociales ou humaines"
-              }
-            ]
-          },
-          {
-            "code": "99",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Das kann ich nicht beantworten",
-                "new_text": "Das kann ich nicht beantworten"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "I cannot answer this question",
-                "new_text": "I cannot answer this question"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Je ne peux pas répondre à cette question",
-                "new_text": "Je ne peux pas répondre à cette question"
-              }
-            ]
-          }
-        ],
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       },
       "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "InnoTechOderSozial",
+        "code": "rgendeineInnoUm",
         "element_type": "SingleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Beruht die Innovation aus Ihrem von Innosuisse geförderten Projekt primär auf ...",
-            "new_text": "Beruht die Innovation aus Ihrem von Innosuisse geförderten Projekt primär auf ..."
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Is the innovation from your Innosuisse-supported project primarily based on ...",
-            "new_text": "Is the innovation from your Innosuisse-supported project primarily based on ..."
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "L’innovation issue de votre projet encouragé par Innosuisse repose-t-elle en premier lieu sur ...",
-            "new_text": "L’innovation issue de votre projet encouragé par Innosuisse repose-t-elle en premier lieu sur ..."
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "technologieorientierten oder naturwissenschaftlichen Grundlagen",
-                "new_text": "technologieorientierten oder naturwissenschaftlichen Grundlagen"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "technology-oriented or scientific basics",
-                "new_text": "technology-oriented or scientific basics"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "des bases technologiques ou orientées vers les sciences naturelles",
-                "new_text": "des bases technologiques ou orientées vers les sciences naturelles"
-              }
-            ]
-          },
-          {
-            "code": "2",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "wirtschafts-, sozial- oder geisteswissenschaftlichen Grundlagen",
-                "new_text": "wirtschafts-, sozial- oder geisteswissenschaftlichen Grundlagen"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "economic, social science or humanities basics",
-                "new_text": "economic, social science or humanities basics"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "des bases en sciences économiques, sociales ou humaines",
-                "new_text": "des bases en sciences économiques, sociales ou humaines"
-              }
-            ]
-          },
-          {
-            "code": "99",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Das kann ich nicht beantworten",
-                "new_text": "Das kann ich nicht beantworten"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "I cannot answer this question",
-                "new_text": "I cannot answer this question"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Je ne peux pas répondre à cette question",
-                "new_text": "Je ne peux pas répondre à cette question"
-              }
-            ]
-          }
-        ],
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "nnoArt": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "nnoArt",
+        "element_type": "MultipleChoice",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "nnoArt",
+        "element_type": "MultipleChoice",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "nnoTechOderSozial": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "nnoTechOderSozial",
+        "element_type": "SingleChoice",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "nnoTechOderSozial",
+        "element_type": "SingleChoice",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       }
@@ -14572,18 +13077,179 @@
         "matrix_column_diffs": []
       }
     },
-    "PRErgenisse": {
+    "IPRErgebnisse": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "PRErgenisse",
+        "code": "IPRErgebnisse",
         "element_type": "Matrix",
-        "status": "removed",
-        "text_diffs": [],
-        "choice_diffs": [],
-        "matrix_row_diffs": [],
-        "matrix_column_diffs": []
+        "status": "text_changed",
+        "text_diffs": [
+          {
+            "language": "de-ch",
+            "status": "different",
+            "similarity": 0.7565217391304347,
+            "old_text": "Haben die Ergebnisse des Projekts zu Eigentumsrechten geführt oder sind solche geplant (in Ihrer Organisation und/oder beim Forschungspartner)?",
+            "new_text": "Haben die Ergebnisse des Projekts zu Eigentumsrechten geführt oder sind solche geplant?"
+          },
+          {
+            "language": "en",
+            "status": "different",
+            "similarity": 0.7522935779816514,
+            "old_text": "Have the results of the project led to property rights or are such rights planned (in your organisation and/or at the research partner)?",
+            "new_text": "Have the results of the project led to property rights or are such rights planned?"
+          },
+          {
+            "language": "fr",
+            "status": "different",
+            "similarity": 0.7647058823529411,
+            "old_text": "Les résultats du projet ont-ils donné lieu à des droits de propriété ou de tels droits sont-ils prévus (dans votre organisation et/ou chez le partenaire de recherche) ?",
+            "new_text": "Les résultats du projet ont-ils donné lieu à des droits de propriété ou de tels droits sont-ils prévus ?"
+          }
+        ],
+        "choice_diffs": [
+          {
+            "code": "1",
+            "status": "unchanged",
+            "text_diffs": [
+              {
+                "language": "de-ch",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "Patent / Patentanmeldungen",
+                "new_text": "Patent / Patentanmeldungen"
+              },
+              {
+                "language": "en",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "Patent / Patent applications",
+                "new_text": "Patent / Patent applications"
+              },
+              {
+                "language": "fr",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "Brevet / Demandes de brevet",
+                "new_text": "Brevet / Demandes de brevet"
+              }
+            ]
+          },
+          {
+            "code": "2",
+            "status": "unchanged",
+            "text_diffs": [
+              {
+                "language": "de-ch",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "Trademarks / Urheberrechte / Designrechte",
+                "new_text": "Trademarks / Urheberrechte / Designrechte"
+              },
+              {
+                "language": "en",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "Trademarks / copyrights / design rights",
+                "new_text": "Trademarks / copyrights / design rights"
+              },
+              {
+                "language": "fr",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "Marques déposées / droits d'auteur / droits sur les dessins et modèles",
+                "new_text": "Marques déposées / droits d'auteur / droits sur les dessins et modèles"
+              }
+            ]
+          },
+          {
+            "code": "3",
+            "status": "unchanged",
+            "text_diffs": [
+              {
+                "language": "de-ch",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "<strong>In-licensing </strong><br>(Rechte zur Nutzung, Entwicklung oder Kommerzialisierung von geistigem Eigentum, welches sich im Besitz einer anderen Organisation befindet)<br><br>",
+                "new_text": "<strong>In-licensing </strong><br>(Rechte zur Nutzung, Entwicklung oder Kommerzialisierung von geistigem Eigentum, welches sich im Besitz einer anderen Organisation befindet)<br><br>"
+              },
+              {
+                "language": "en",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "<strong>In-licensing </strong><br>(rights to use, develop or commercialise intellectual property owned by another organisation)",
+                "new_text": "<strong>In-licensing </strong><br>(rights to use, develop or commercialise intellectual property owned by another organisation)"
+              },
+              {
+                "language": "fr",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "<strong>In-licensing </strong><br>(droits d'utiliser, de développer ou de commercialiser la propriété intellectuelle détenue par une autre organisation)",
+                "new_text": "<strong>In-licensing </strong><br>(droits d'utiliser, de développer ou de commercialiser la propriété intellectuelle détenue par une autre organisation)"
+              }
+            ]
+          },
+          {
+            "code": "4",
+            "status": "unchanged",
+            "text_diffs": [
+              {
+                "language": "de-ch",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "<strong>Out-licensing </strong><br>(Einräumung von Rechten zur Nutzung, Entwicklung oder Kommerzialisierung des eigenen geistigen Eigentums an eine andere Organisation)",
+                "new_text": "<strong>Out-licensing </strong><br>(Einräumung von Rechten zur Nutzung, Entwicklung oder Kommerzialisierung des eigenen geistigen Eigentums an eine andere Organisation)"
+              },
+              {
+                "language": "en",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "<strong>Out-licensing </strong><br>(granting rights to use, develop or commercialise one's own intellectual property to another organisation)",
+                "new_text": "<strong>Out-licensing </strong><br>(granting rights to use, develop or commercialise one's own intellectual property to another organisation)"
+              },
+              {
+                "language": "fr",
+                "status": "exact",
+                "similarity": 1.0,
+                "old_text": "<strong>Out-licensing </strong><br>(octroi de droits d'utilisation, de développement ou de commercialisation de sa propre propriété intellectuelle à une autre organisation)",
+                "new_text": "<strong>Out-licensing </strong><br>(octroi de droits d'utilisation, de développement ou de commercialisation de sa propre propriété intellectuelle à une autre organisation)"
+              }
+            ]
+          }
+        ],
+        "matrix_row_diffs": [
+          {
+            "code": "1",
+            "status": "unchanged"
+          },
+          {
+            "code": "2",
+            "status": "unchanged"
+          },
+          {
+            "code": "3",
+            "status": "unchanged"
+          },
+          {
+            "code": "4",
+            "status": "unchanged"
+          }
+        ],
+        "matrix_column_diffs": [
+          {
+            "code": "6",
+            "status": "unchanged"
+          },
+          {
+            "code": "4",
+            "status": "unchanged"
+          },
+          {
+            "code": "1",
+            "status": "unchanged"
+          }
+        ]
       },
       "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "PRErgenisse",
+        "code": "IPRErgebnisse",
         "element_type": "Matrix",
         "status": "identical",
         "text_diffs": [
@@ -14753,269 +13419,9 @@
         ]
       }
     },
-    "FoParZusArbeitWeiter": {
+    "oParZusArbeitWeiter": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "FoParZusArbeitWeiter",
-        "element_type": "SingleChoice",
-        "status": "structure_changed",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "different",
-            "similarity": 0.6613545816733067,
-            "old_text": "Wurde nach dem Projektabschluss die Zusammenarbeit mit einem oder mehreren Forschungspartnern des geförderten Innovationsprojekts fortgeführt?",
-            "new_text": "Ist es geplant, die Zusammenarbeit mit einem oder mehreren Forschungspartnern aus dem Projekt weiterzuführen?"
-          },
-          {
-            "language": "en",
-            "status": "different",
-            "similarity": 0.6126126126126126,
-            "old_text": "Was the collaboration with one or more research partners of the supported innovation project continued after project completion?",
-            "new_text": "Are there plans to continue collaborating with one or more research partners from the project?"
-          },
-          {
-            "language": "fr",
-            "status": "different",
-            "similarity": 0.6046511627906976,
-            "old_text": "La collaboration avec un ou plusieurs partenaires de recherche du projet d’innovation encouragé s’est-elle poursuivie après la fin du projet ?",
-            "new_text": "Est-il prévu de poursuivre la collaboration avec un ou plusieurs partenaires de recherche impliqués dans le projet ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "6",
-            "status": "text_changed",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "different",
-                "similarity": 0.09090909090909091,
-                "old_text": "Ja, die Zusammenarbeit besteht heute noch.",
-                "new_text": "Ja"
-              },
-              {
-                "language": "en",
-                "status": "different",
-                "similarity": 0.13953488372093023,
-                "old_text": "Yes, the cooperation still exists today.",
-                "new_text": "Yes"
-              },
-              {
-                "language": "fr",
-                "status": "different",
-                "similarity": 0.11538461538461539,
-                "old_text": "Oui, la coopération fructifie encore aujourd’hui.",
-                "new_text": "Oui"
-              }
-            ]
-          },
-          {
-            "code": "5",
-            "status": "removed",
-            "text_diffs": []
-          },
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Nein",
-                "new_text": "Nein"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No",
-                "new_text": "No"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non",
-                "new_text": "Non"
-              }
-            ]
-          },
-          {
-            "code": "99",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Das kann ich nicht beantworten",
-                "new_text": "Das kann ich nicht beantworten"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "I cannot answer this question",
-                "new_text": "I cannot answer this question"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Je ne peux pas répondre à cette question",
-                "new_text": "Je ne peux pas répondre à cette question"
-              }
-            ]
-          }
-        ],
-        "matrix_row_diffs": [],
-        "matrix_column_diffs": []
-      },
-      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "FoParZusArbeitWeiter",
-        "element_type": "SingleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Wurde nach dem Projektabschluss die Zusammenarbeit mit einem oder mehreren Forschungspartnern des geförderten Innovationsprojekts fortgeführt?",
-            "new_text": "Wurde nach dem Projektabschluss die Zusammenarbeit mit einem oder mehreren Forschungspartnern des geförderten Innovationsprojekts fortgeführt?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Was the collaboration with one or more research partners of the supported innovation project continued after project completion?",
-            "new_text": "Was the collaboration with one or more research partners of the supported innovation project continued after project completion?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "La collaboration avec un ou plusieurs partenaires de recherche du projet d’innovation encouragé s’est-elle poursuivie après la fin du projet ?",
-            "new_text": "La collaboration avec un ou plusieurs partenaires de recherche du projet d’innovation encouragé s’est-elle poursuivie après la fin du projet ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "6",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja, die Zusammenarbeit besteht heute noch.",
-                "new_text": "Ja, die Zusammenarbeit besteht heute noch."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes, the cooperation still exists today.",
-                "new_text": "Yes, the cooperation still exists today."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui, la coopération fructifie encore aujourd’hui.",
-                "new_text": "Oui, la coopération fructifie encore aujourd’hui."
-              }
-            ]
-          },
-          {
-            "code": "5",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja, aber die Zusammenarbeit wurde inzwischen wieder beendet.",
-                "new_text": "Ja, aber die Zusammenarbeit wurde inzwischen wieder beendet."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes, but the cooperation has since been terminated.",
-                "new_text": "Yes, but the cooperation has since been terminated."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui, mais la coopération est entre-temps terminée.",
-                "new_text": "Oui, mais la coopération est entre-temps terminée."
-              }
-            ]
-          },
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Nein",
-                "new_text": "Nein"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No",
-                "new_text": "No"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non",
-                "new_text": "Non"
-              }
-            ]
-          },
-          {
-            "code": "99",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Das kann ich nicht beantworten",
-                "new_text": "Das kann ich nicht beantworten"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "I cannot answer this question",
-                "new_text": "I cannot answer this question"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Je ne peux pas répondre à cette question",
-                "new_text": "Je ne peux pas répondre à cette question"
-              }
-            ]
-          }
-        ],
-        "matrix_row_diffs": [],
-        "matrix_column_diffs": []
-      }
-    },
-    "ForParAngestellt": {
-      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "ForParAngestellt",
+        "code": "oParZusArbeitWeiter",
         "element_type": "SingleChoice",
         "status": "removed",
         "text_diffs": [],
@@ -15024,115 +13430,31 @@
         "matrix_column_diffs": []
       },
       "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "ForParAngestellt",
+        "code": "oParZusArbeitWeiter",
         "element_type": "SingleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Hat Ihre Organisation als Folge des geförderten Projektes <strong>Personen des/der ehemaligen Forschungspartner(s) angestellt</strong>?",
-            "new_text": "Hat Ihre Organisation als Folge des geförderten Projektes <strong>Personen des/der ehemaligen Forschungspartner(s) angestellt</strong>?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Has your organisation employed <strong>people from the former research partner(s)</strong> as a result of the supported project?",
-            "new_text": "Has your organisation employed <strong>people from the former research partner(s)</strong> as a result of the supported project?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Votre organisation a-t-elle employé <strong>des personnes de l’ancien ou des anciens partenaires de recherche</strong> à la suite du projet encouragé ?",
-            "new_text": "Votre organisation a-t-elle employé <strong>des personnes de l’ancien ou des anciens partenaires de recherche</strong> à la suite du projet encouragé ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "6",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Ja",
-                "new_text": "Ja"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Yes",
-                "new_text": "Yes"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Oui",
-                "new_text": "Oui"
-              }
-            ]
-          },
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Nein",
-                "new_text": "Nein"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "No",
-                "new_text": "No"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Non",
-                "new_text": "Non"
-              }
-            ]
-          },
-          {
-            "code": "99",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Das kann ich nicht beantworten",
-                "new_text": "Das kann ich nicht beantworten"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "I cannot answer this question",
-                "new_text": "I cannot answer this question"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Je ne peux pas répondre à cette question",
-                "new_text": "Je ne peux pas répondre à cette question"
-              }
-            ]
-          }
-        ],
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "orParAngestellt": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "orParAngestellt",
+        "element_type": "SingleChoice",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "orParAngestellt",
+        "element_type": "SingleChoice",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       }
@@ -20366,482 +18688,62 @@
         ]
       }
     },
-    "Involvement": {
+    "nvolvement": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "Involvement",
+        "code": "nvolvement",
         "element_type": "Matrix",
-        "status": "structure_changed",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "different",
-            "similarity": 0.8571428571428571,
-            "old_text": "Können Sie uns noch sagen, wie stark Ihre Organisation oder die betreffende Abteilung im geförderten Projekt involviert war?",
-            "new_text": "Können Sie uns noch sagen, wie stark Ihre Organisation im geförderten Projekt involviert war?"
-          },
-          {
-            "language": "en",
-            "status": "different",
-            "similarity": 0.8444444444444444,
-            "old_text": "Can you tell us how involved your organisation or the department concerned was in the supported project?",
-            "new_text": "Can you tell us how involved your organisation was in the supported project?"
-          },
-          {
-            "language": "fr",
-            "status": "different",
-            "similarity": 0.8356807511737089,
-            "old_text": "Dans quelle mesure votre organisation ou la division concernée était impliquée dans le projet encouragé par Innosuisse ?",
-            "new_text": "Dans quelle mesure votre organisation était impliquée dans le projet soutenu par Innosuisse ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "1",
-            "status": "text_changed",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "different",
-                "similarity": 0.8253968253968254,
-                "old_text": "Meine Organisation/Abteilung war ...",
-                "new_text": "Meine Organisation war  ..."
-              },
-              {
-                "language": "en",
-                "status": "different",
-                "similarity": 0.8070175438596491,
-                "old_text": "My organisation/department was ...",
-                "new_text": "My organisation was ..."
-              },
-              {
-                "language": "fr",
-                "status": "different",
-                "similarity": 0.8524590163934426,
-                "old_text": "Mon organisation/division était ...",
-                "new_text": "Mon organisation était ..."
-              }
-            ]
-          }
-        ],
-        "matrix_row_diffs": [
-          {
-            "code": "1",
-            "status": "text_changed"
-          }
-        ],
-        "matrix_column_diffs": [
-          {
-            "code": "1",
-            "status": "unchanged"
-          },
-          {
-            "code": "2",
-            "status": "unchanged"
-          },
-          {
-            "code": "3",
-            "status": "unchanged"
-          },
-          {
-            "code": "4",
-            "status": "unchanged"
-          },
-          {
-            "code": "5",
-            "status": "unchanged"
-          },
-          {
-            "code": "6",
-            "status": "unchanged"
-          },
-          {
-            "code": "99",
-            "status": "text_changed"
-          }
-        ]
-      },
-      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "Involvement",
-        "element_type": "Matrix",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Können Sie uns noch sagen, wie stark Ihre Organisation oder die betreffende Abteilung im geförderten Projekt involviert war?",
-            "new_text": "Können Sie uns noch sagen, wie stark Ihre Organisation oder die betreffende Abteilung im geförderten Projekt involviert war?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Can you tell us how involved your organisation or the department concerned was in the supported project?",
-            "new_text": "Can you tell us how involved your organisation or the department concerned was in the supported project?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Dans quelle mesure votre organisation ou la division concernée était impliquée dans le projet encouragé par Innosuisse ?",
-            "new_text": "Dans quelle mesure votre organisation ou la division concernée était impliquée dans le projet encouragé par Innosuisse ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Meine Organisation/Abteilung war ...",
-                "new_text": "Meine Organisation/Abteilung war ..."
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "My organisation/department was ...",
-                "new_text": "My organisation/department was ..."
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Mon organisation/division était ...",
-                "new_text": "Mon organisation/division était ..."
-              }
-            ]
-          }
-        ],
-        "matrix_row_diffs": [
-          {
-            "code": "1",
-            "status": "unchanged"
-          }
-        ],
-        "matrix_column_diffs": [
-          {
-            "code": "1",
-            "status": "unchanged"
-          },
-          {
-            "code": "2",
-            "status": "unchanged"
-          },
-          {
-            "code": "3",
-            "status": "unchanged"
-          },
-          {
-            "code": "4",
-            "status": "unchanged"
-          },
-          {
-            "code": "5",
-            "status": "unchanged"
-          },
-          {
-            "code": "6",
-            "status": "unchanged"
-          },
-          {
-            "code": "99",
-            "status": "unchanged"
-          }
-        ]
-      }
-    },
-    "FeedbackOffen": {
-      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "FeedbackOffen",
-        "element_type": "OpenQuestion",
-        "status": "text_changed",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Vielen Dank, wenn Sie uns nachfolgend Ihre Rückmeldungen, Kommentare und Anregungen zur Umfrage mitteilen:",
-            "new_text": "Vielen Dank, wenn Sie uns nachfolgend Ihre Rückmeldungen, Kommentare und Anregungen zur Umfrage mitteilen:"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Thank you for sharing your feedback, comments and suggestions on the survey:",
-            "new_text": "Thank you for sharing your feedback, comments and suggestions on the survey:"
-          },
-          {
-            "language": "fr",
-            "status": "different",
-            "similarity": 0.8730964467005076,
-            "old_text": "Nous vous remercions de nous faire part de vos réactions, commentaires et suggestions sur l'enquête ci-dessus:",
-            "new_text": "Nous vous remercions de nous faire part de vos réactions, commentaires et suggestions :"
-          }
-        ],
+        "status": "removed",
+        "text_diffs": [],
         "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       },
       "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "FeedbackOffen",
-        "element_type": "OpenQuestion",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Vielen Dank, wenn Sie uns nachfolgend Ihre Rückmeldungen, Kommentare und Anregungen zur Umfrage mitteilen:",
-            "new_text": "Vielen Dank, wenn Sie uns nachfolgend Ihre Rückmeldungen, Kommentare und Anregungen zur Umfrage mitteilen:"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Thank you for sharing your feedback, comments and suggestions on the survey:",
-            "new_text": "Thank you for sharing your feedback, comments and suggestions on the survey:"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Nous vous remercions de nous faire part de vos réactions, commentaires et suggestions sur l'enquête ci-dessus:",
-            "new_text": "Nous vous remercions de nous faire part de vos réactions, commentaires et suggestions sur l'enquête ci-dessus:"
-          }
-        ],
+        "code": "nvolvement",
+        "element_type": "Matrix",
+        "status": "removed",
+        "text_diffs": [],
         "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       }
     },
-    "FeedbackArt": {
+    "eedbackOffen": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "FeedbackArt",
-        "element_type": "MultipleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Handelt es sich bei Ihrer Rückmeldung um eine/einen ... ?",
-            "new_text": "Handelt es sich bei Ihrer Rückmeldung um eine/einen ... ?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Is your feedback a/an ... ?",
-            "new_text": "Is your feedback a/an ... ?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Votre feed-back concerne-t-il un/une ... ?",
-            "new_text": "Votre feed-back concerne-t-il un/une ... ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Präzisierung Ihrer Antworten",
-                "new_text": "Präzisierung Ihrer Antworten"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Clarification of your answers",
-                "new_text": "Clarification of your answers"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Précision de vos réponses",
-                "new_text": "Précision de vos réponses"
-              }
-            ]
-          },
-          {
-            "code": "2",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Rückmeldung zum Innovationsprojekt",
-                "new_text": "Rückmeldung zum Innovationsprojekt"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Feedback on your innovation project",
-                "new_text": "Feedback on your innovation project"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Retour sur votre projet d'innovation",
-                "new_text": "Retour sur votre projet d'innovation"
-              }
-            ]
-          },
-          {
-            "code": "3",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Verbesserungsvorschlag für die Projektförderung Innosuisse",
-                "new_text": "Verbesserungsvorschlag für die Projektförderung Innosuisse"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Improvement proposal for the project promotion by Innosuisse",
-                "new_text": "Improvement proposal for the project promotion by Innosuisse"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Proposition d'amélioration pour l'encouragement des projets par Innosuisse",
-                "new_text": "Proposition d'amélioration pour l'encouragement des projets par Innosuisse"
-              }
-            ]
-          }
-        ],
+        "code": "eedbackOffen",
+        "element_type": "OpenQuestion",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       },
       "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
-        "code": "FeedbackArt",
+        "code": "eedbackOffen",
+        "element_type": "OpenQuestion",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "eedbackArt": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "eedbackArt",
         "element_type": "MultipleChoice",
-        "status": "identical",
-        "text_diffs": [
-          {
-            "language": "de-ch",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Handelt es sich bei Ihrer Rückmeldung um eine/einen ... ?",
-            "new_text": "Handelt es sich bei Ihrer Rückmeldung um eine/einen ... ?"
-          },
-          {
-            "language": "en",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Is your feedback a/an ... ?",
-            "new_text": "Is your feedback a/an ... ?"
-          },
-          {
-            "language": "fr",
-            "status": "exact",
-            "similarity": 1.0,
-            "old_text": "Votre feed-back concerne-t-il un/une ... ?",
-            "new_text": "Votre feed-back concerne-t-il un/une ... ?"
-          }
-        ],
-        "choice_diffs": [
-          {
-            "code": "1",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Präzisierung Ihrer Antworten",
-                "new_text": "Präzisierung Ihrer Antworten"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Clarification of your answers",
-                "new_text": "Clarification of your answers"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Précision de vos réponses",
-                "new_text": "Précision de vos réponses"
-              }
-            ]
-          },
-          {
-            "code": "2",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Rückmeldung zum Innovationsprojekt",
-                "new_text": "Rückmeldung zum Innovationsprojekt"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Feedback on your innovation project",
-                "new_text": "Feedback on your innovation project"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Retour sur votre projet d'innovation",
-                "new_text": "Retour sur votre projet d'innovation"
-              }
-            ]
-          },
-          {
-            "code": "3",
-            "status": "unchanged",
-            "text_diffs": [
-              {
-                "language": "de-ch",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Verbesserungsvorschlag für die Projektförderung Innosuisse",
-                "new_text": "Verbesserungsvorschlag für die Projektförderung Innosuisse"
-              },
-              {
-                "language": "en",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Improvement proposal for the project promotion by Innosuisse",
-                "new_text": "Improvement proposal for the project promotion by Innosuisse"
-              },
-              {
-                "language": "fr",
-                "status": "exact",
-                "similarity": 1.0,
-                "old_text": "Proposition d'amélioration pour l'encouragement des projets par Innosuisse",
-                "new_text": "Proposition d'amélioration pour l'encouragement des projets par Innosuisse"
-              }
-            ]
-          }
-        ],
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "eedbackArt",
+        "element_type": "MultipleChoice",
+        "status": "removed",
+        "text_diffs": [],
+        "choice_diffs": [],
         "matrix_row_diffs": [],
         "matrix_column_diffs": []
       }
@@ -20850,6 +18752,26 @@
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
         "code": "GenerelleEmail",
         "element_type": "OpenQuestion",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "IstStartup": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "IstStartup",
+        "element_type": "SingleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "IstStartup",
+        "element_type": "SingleChoice",
         "status": "added",
         "text_diffs": [],
         "choice_diffs": [],
@@ -20879,9 +18801,89 @@
         "matrix_column_diffs": []
       }
     },
+    "InnoAlsZiel": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "InnoAlsZiel",
+        "element_type": "SingleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "InnoAlsZiel",
+        "element_type": "SingleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "InnoUmgesetzt": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "InnoUmgesetzt",
+        "element_type": "SingleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "InnoUmgesetzt",
+        "element_type": "SingleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
     "Treiber": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
         "code": "Treiber",
+        "element_type": "SingleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "InnoArt": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "InnoArt",
+        "element_type": "MultipleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "InnoArt",
+        "element_type": "MultipleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "InnoTechOderSozial": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "InnoTechOderSozial",
+        "element_type": "SingleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "InnoTechOderSozial",
         "element_type": "SingleChoice",
         "status": "added",
         "text_diffs": [],
@@ -20956,9 +18958,9 @@
         "matrix_column_diffs": []
       }
     },
-    "IPRErgebnisse": {
+    "BeurteilungForPar": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "IPRErgebnisse",
+        "code": "BeurteilungForPar",
         "element_type": "Matrix",
         "status": "added",
         "text_diffs": [],
@@ -20967,10 +18969,19 @@
         "matrix_column_diffs": []
       }
     },
-    "BeurteilungForPar": {
+    "FoParZusArbeitWeiter": {
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
-        "code": "BeurteilungForPar",
-        "element_type": "Matrix",
+        "code": "FoParZusArbeitWeiter",
+        "element_type": "SingleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "FoParZusArbeitWeiter",
+        "element_type": "SingleChoice",
         "status": "added",
         "text_diffs": [],
         "choice_diffs": [],
@@ -21136,6 +19147,88 @@
       "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
         "code": "ZufNichtGrund",
         "element_type": "OpenQuestion",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "Involvement": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "Involvement",
+        "element_type": "Matrix",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "Involvement",
+        "element_type": "Matrix",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "FeedbackOffen": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "FeedbackOffen",
+        "element_type": "OpenQuestion",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "FeedbackOffen",
+        "element_type": "OpenQuestion",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "FeedbackArt": {
+      "survey_IPf_ImplementationsPartner_Final_20260127_1248": {
+        "code": "FeedbackArt",
+        "element_type": "MultipleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      },
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "FeedbackArt",
+        "element_type": "MultipleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "IrgendeineInnoUm": {
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "IrgendeineInnoUm",
+        "element_type": "SingleChoice",
+        "status": "added",
+        "text_diffs": [],
+        "choice_diffs": [],
+        "matrix_row_diffs": [],
+        "matrix_column_diffs": []
+      }
+    },
+    "ForParAngestellt": {
+      "survey_IPi_ImplementationsPartner_Impact_20260128_1057": {
+        "code": "ForParAngestellt",
+        "element_type": "SingleChoice",
         "status": "added",
         "text_diffs": [],
         "choice_diffs": [],

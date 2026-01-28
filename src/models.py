@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import re
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -11,13 +10,28 @@ from typing import Optional
 # Code normalization (strip F/I prefix for cross-survey matching)
 # ---------------------------------------------------------------------------
 
-# Pattern: leading F, f, I, or i followed by an uppercase letter
-_CODE_PREFIX_PATTERN = re.compile(r'^[FfIi](?=[A-Z])')
+# Alias mapping for known typos in source data
+_CODE_ALIASES = {
+    "IPRErgenisse": "IPRErgebnisse",  # Typo in Impact survey
+}
 
 
 def normalize_code(code: str) -> str:
-    """Strip survey-type prefix (F/f/I/i) from question code for matching."""
-    return _CODE_PREFIX_PATTERN.sub('', code)
+    """Strip survey-type prefix (F/f/I/i) from question code for matching.
+
+    Generally strips first character, except for known acronyms like "IPR".
+    Also applies alias mapping for known typos.
+    """
+    if not code:
+        return code
+    # Don't strip from known acronyms
+    if code.startswith('IPR'):
+        return _CODE_ALIASES.get(code, code)
+    # Strip F/f/I/i prefix
+    if code[0] in 'FfIi':
+        code = code[1:]
+    # Apply alias mapping
+    return _CODE_ALIASES.get(code, code)
 
 
 # ---------------------------------------------------------------------------
