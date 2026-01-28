@@ -262,12 +262,12 @@
               {% endfor %}
               {% for choice_code in choice_codes %}
                 {# Find master choice text #}
-                {% set master_choice_text = '' %}
+                {% set master_choice_ns = namespace(text='') %}
                 {% if q_master %}
                   {% for c in q_master.choices %}
                     {% if c.code == choice_code %}
                       {% for lt in c.texts %}
-                        {% if lt.language == default_language %}{% set master_choice_text = lt.text %}{% endif %}
+                        {% if lt.language == default_language %}{% set master_choice_ns.text = lt.text %}{% endif %}
                       {% endfor %}
                     {% endif %}
                   {% endfor %}
@@ -293,20 +293,20 @@
                 <td>{{ choice_code }}</td>
                 <td><span class="status-badge badge-{{ choice_ns.worst }}">{{ choice_ns.worst | replace('_', ' ') }}</span></td>
                 <td>{{ "%.0f" | format(choice_ns.worst_sim * 100) }}%</td>
-                <td class="text-cell">{{ master_choice_text | truncate(100) if master_choice_text else '—' }}</td>
+                <td class="text-cell">{{ master_choice_ns.text | truncate(100) if master_choice_ns.text else '—' }}</td>
                 {% for survey in survey_names %}
-                  {% set survey_choice_text = '' %}
+                  {% set survey_choice_ns = namespace(text='') %}
                   {% set q_survey = q_sources.get(survey) %}
                   {% if q_survey %}
                     {% for c in q_survey.choices %}
                       {% if c.code == choice_code %}
                         {% for lt in c.texts %}
-                          {% if lt.language == default_language %}{% set survey_choice_text = lt.text %}{% endif %}
+                          {% if lt.language == default_language %}{% set survey_choice_ns.text = lt.text %}{% endif %}
                         {% endfor %}
                       {% endif %}
                     {% endfor %}
                   {% endif %}
-                  <td class="text-cell">{{ survey_choice_text | truncate(100) if survey_choice_text else '—' }}</td>
+                  <td class="text-cell">{{ survey_choice_ns.text | truncate(100) if survey_choice_ns.text else '—' }}</td>
                 {% endfor %}
               </tr>
               {% endfor %}
@@ -348,12 +348,12 @@
               {% endfor %}
               {% for row_code in row_codes %}
                 {# Find master row text #}
-                {% set master_row_text = '' %}
+                {% set master_row_ns = namespace(text='') %}
                 {% if q_master and q_master.matrix_rows %}
                   {% for r in q_master.matrix_rows %}
                     {% if r.code == row_code %}
                       {% for lt in r.texts %}
-                        {% if lt.language == default_language %}{% set master_row_text = lt.text %}{% endif %}
+                        {% if lt.language == default_language %}{% set master_row_ns.text = lt.text %}{% endif %}
                       {% endfor %}
                     {% endif %}
                   {% endfor %}
@@ -374,20 +374,20 @@
                 <td>{{ row_code }}</td>
                 <td><span class="status-badge badge-{{ row_ns.worst }}">{{ row_ns.worst | replace('_', ' ') }}</span></td>
                 <td>{{ "%.0f" | format(row_ns.worst_sim * 100) }}%</td>
-                <td class="text-cell">{{ master_row_text | truncate(100) if master_row_text else '—' }}</td>
+                <td class="text-cell">{{ master_row_ns.text | truncate(100) if master_row_ns.text else '—' }}</td>
                 {% for survey in survey_names %}
-                  {% set survey_row_text = '' %}
+                  {% set survey_row_ns = namespace(text='') %}
                   {% set q_survey = q_sources.get(survey) %}
                   {% if q_survey and q_survey.matrix_rows %}
                     {% for r in q_survey.matrix_rows %}
                       {% if r.code == row_code %}
                         {% for lt in r.texts %}
-                          {% if lt.language == default_language %}{% set survey_row_text = lt.text %}{% endif %}
+                          {% if lt.language == default_language %}{% set survey_row_ns.text = lt.text %}{% endif %}
                         {% endfor %}
                       {% endif %}
                     {% endfor %}
                   {% endif %}
-                  <td class="text-cell">{{ survey_row_text | truncate(100) if survey_row_text else '—' }}</td>
+                  <td class="text-cell">{{ survey_row_ns.text | truncate(100) if survey_row_ns.text else '—' }}</td>
                 {% endfor %}
               </tr>
               {% endfor %}
@@ -431,13 +431,13 @@
               {% endfor %}
               {% for col_code in col_codes %}
                 {# Find master column text #}
-                {% set master_col_text = '' %}
+                {% set master_col_ns = namespace(text='') %}
                 {% if q_master and q_master.matrix_column_groups %}
                   {% for cg in q_master.matrix_column_groups %}
                     {% for c in cg.columns %}
                       {% if c.code == col_code %}
                         {% for lt in c.texts %}
-                          {% if lt.language == default_language %}{% set master_col_text = lt.text %}{% endif %}
+                          {% if lt.language == default_language %}{% set master_col_ns.text = lt.text %}{% endif %}
                         {% endfor %}
                       {% endif %}
                     {% endfor %}
@@ -459,22 +459,22 @@
                 <td>{{ col_code }}</td>
                 <td><span class="status-badge badge-{{ col_ns.worst }}">{{ col_ns.worst | replace('_', ' ') }}</span></td>
                 <td>{{ "%.0f" | format(col_ns.worst_sim * 100) }}%</td>
-                <td class="text-cell">{{ master_col_text | truncate(100) if master_col_text else '—' }}</td>
+                <td class="text-cell">{{ master_col_ns.text | truncate(100) if master_col_ns.text else '—' }}</td>
                 {% for survey in survey_names %}
-                  {% set survey_col_text = '' %}
+                  {% set survey_col_ns = namespace(text='') %}
                   {% set q_survey = q_sources.get(survey) %}
                   {% if q_survey and q_survey.matrix_column_groups %}
                     {% for cg in q_survey.matrix_column_groups %}
                       {% for c in cg.columns %}
                         {% if c.code == col_code %}
                           {% for lt in c.texts %}
-                            {% if lt.language == default_language %}{% set survey_col_text = lt.text %}{% endif %}
+                            {% if lt.language == default_language %}{% set survey_col_ns.text = lt.text %}{% endif %}
                           {% endfor %}
                         {% endif %}
                       {% endfor %}
                     {% endfor %}
                   {% endif %}
-                  <td class="text-cell">{{ survey_col_text | truncate(100) if survey_col_text else '—' }}</td>
+                  <td class="text-cell">{{ survey_col_ns.text | truncate(100) if survey_col_ns.text else '—' }}</td>
                 {% endfor %}
               </tr>
               {% endfor %}
