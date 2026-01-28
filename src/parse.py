@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -17,6 +18,27 @@ from src.models import (
 
 # Element types we treat as questions (everything else is skipped).
 QUESTION_TYPES = {"SingleChoice", "MultipleChoice", "OpenQuestion", "Matrix", "Dropdown"}
+
+# Pattern to extract YYYYMMDD from filename like "survey_..._20260127_1248.json"
+_DATE_PATTERN = re.compile(r'_(\d{8})_\d{4}\.json$')
+
+
+# ---------------------------------------------------------------------------
+# Filename utilities
+# ---------------------------------------------------------------------------
+
+def extract_date_from_filename(filename: str) -> str | None:
+    """Extract YYYYMMDD date string from filename, or None if not found."""
+    match = _DATE_PATTERN.search(filename)
+    return match.group(1) if match else None
+
+
+def sort_files_by_date(files: list[Path]) -> list[Path]:
+    """Sort files by date extracted from filename (oldest first)."""
+    def sort_key(p: Path) -> str:
+        date = extract_date_from_filename(p.name)
+        return date if date else "00000000"
+    return sorted(files, key=sort_key)
 
 
 # ---------------------------------------------------------------------------

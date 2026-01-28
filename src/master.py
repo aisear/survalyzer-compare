@@ -77,3 +77,59 @@ def load_master(path: str | Path) -> dict[str, Any]:
     """Read a master YAML file back into a dict."""
     with open(path, encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
+
+
+# ---------------------------------------------------------------------------
+# Convert master dict back to Question objects
+# ---------------------------------------------------------------------------
+
+def _dict_to_texts(d: dict[str, str]) -> list[LocalizedText]:
+    return [LocalizedText(language=lang, text=text) for lang, text in d.items()]
+
+
+def _dict_to_choice(d: dict[str, Any], idx: int) -> AnswerOption:
+    return AnswerOption(
+        id=idx,
+        code=d.get("code", ""),
+        texts=_dict_to_texts(d.get("texts", {})),
+    )
+
+
+def _dict_to_matrix_row(d: dict[str, Any], idx: int) -> MatrixRow:
+    return MatrixRow(
+        id=idx,
+        code=d.get("code", ""),
+        texts=_dict_to_texts(d.get("texts", {})),
+    )
+
+
+def _dict_to_matrix_col(d: dict[str, Any], idx: int) -> MatrixColumn:
+    return MatrixColumn(
+        id=idx,
+        code=d.get("code", ""),
+        texts=_dict_to_texts(d.get("texts", {})),
+    )
+
+
+def dict_to_question(code: str, d: dict[str, Any]) -> Question:
+    """Convert a master dict entry back to a Question object."""
+    q = Question(
+        id=0,
+        code=code,  # Use normalized code
+        element_type=d.get("element_type", ""),
+        texts=_dict_to_texts(d.get("texts", {})),
+    )
+    if "choices" in d:
+        q.choices = [_dict_to_choice(c, i) for i, c in enumerate(d["choices"])]
+    if "matrix_rows" in d:
+        q.matrix_rows = [_dict_to_matrix_row(r, i) for i, r in enumerate(d["matrix_rows"])]
+    if "matrix_columns" in d:
+        # Wrap columns in a single group
+        cols = [_dict_to_matrix_col(c, i) for i, c in enumerate(d["matrix_columns"])]
+        q.matrix_column_groups = [MatrixColumnGroup(id=0, columns=cols)]
+    return q
+
+
+def master_to_questions(master: dict[str, Any]) -> list[Question]:
+    """Convert full master dict to a list of Question objects."""
+    return [dict_to_question(code, data) for code, data in master.items()]

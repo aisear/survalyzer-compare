@@ -15,16 +15,17 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.parse import load_and_parse
+from src.parse import load_and_parse, sort_files_by_date, extract_date_from_filename
 from src.master import extract_master, save_master
 
 
 def latest_json(exports_dir: Path) -> Path:
-    """Return the most recently modified JSON file in *exports_dir*."""
-    files = sorted(exports_dir.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+    """Return the most recent JSON file by date in filename (YYYYMMDD)."""
+    files = list(exports_dir.glob("*.json"))
     if not files:
         raise FileNotFoundError(f"No JSON files found in {exports_dir}")
-    return files[0]
+    sorted_files = sort_files_by_date(files)
+    return sorted_files[-1]  # Last = most recent
 
 
 def main() -> None:
@@ -44,7 +45,8 @@ def main() -> None:
     args = parser.parse_args()
 
     json_path = latest_json(args.exports_dir)
-    print(f"Using export: {json_path.name}")
+    date_str = extract_date_from_filename(json_path.name)
+    print(f"Using export: {json_path.name} (date: {date_str})")
 
     questions = load_and_parse(json_path)
     print(f"Parsed {len(questions)} questions")
