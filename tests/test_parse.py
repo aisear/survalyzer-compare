@@ -51,12 +51,12 @@ class TestParseLocalized:
 
     def test_normal(self):
         raw = [
-            {"languageCode": "de-CH", "text": "Hallo"},
+            {"languageCode": "de-ch", "text": "Hallo"},
             {"languageCode": "en", "text": "Hello"},
         ]
         result = _parse_localized(raw)
         assert len(result) == 2
-        assert result[0].language == "de-CH"
+        assert result[0].language == "de-ch"
         assert result[0].text == "Hallo"
 
 

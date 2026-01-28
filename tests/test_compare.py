@@ -68,16 +68,16 @@ class TestCompareTexts:
         assert diffs[0].similarity < 0.9
 
     def test_language_added(self):
-        old = [_lt("Hallo", "de-CH")]
-        new = [_lt("Hallo", "de-CH"), _lt("Hello", "en")]
+        old = [_lt("Hallo", "de-ch")]
+        new = [_lt("Hallo", "de-ch"), _lt("Hello", "en")]
         diffs = compare_texts(old, new)
         by_lang = {d.language: d for d in diffs}
         assert by_lang["de-ch"].status == "exact"
         assert by_lang["en"].status == "added"
 
     def test_language_removed(self):
-        old = [_lt("Hallo", "de-CH"), _lt("Hello", "en")]
-        new = [_lt("Hallo", "de-CH")]
+        old = [_lt("Hallo", "de-ch"), _lt("Hello", "en")]
+        new = [_lt("Hallo", "de-ch")]
         diffs = compare_texts(old, new)
         by_lang = {d.language: d for d in diffs}
         assert by_lang["en"].status == "removed"
