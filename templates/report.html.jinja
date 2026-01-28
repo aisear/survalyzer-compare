@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survalyzer Questionnaire Comparison</title>
+<style>
+  :root {
+    --green: #c6efce;
+    --green-border: #6aa84f;
+    --yellow: #fff2cc;
+    --yellow-border: #f1c232;
+    --red: #f4cccc;
+    --red-border: #cc4125;
+    --grey: #d9d9d9;
+    --grey-border: #999;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; color: #333; padding: 20px; background: #fafafa; }
+  h1 { margin-bottom: 8px; }
+  .summary { margin-bottom: 20px; padding: 12px 16px; background: #fff; border: 1px solid #ddd; border-radius: 6px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .summary .stat { text-align: center; }
+  .summary .stat .num { font-size: 24px; font-weight: 700; }
+  .summary .stat .label { font-size: 12px; color: #666; text-transform: uppercase; }
+  .legend { margin-bottom: 16px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .legend span { padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+  .legend .green { background: var(--green); border: 1px solid var(--green-border); }
+  .legend .yellow { background: var(--yellow); border: 1px solid var(--yellow-border); }
+  .legend .red { background: var(--red); border: 1px solid var(--red-border); }
+  .legend .grey { background: var(--grey); border: 1px solid var(--grey-border); }
+
+  .filter-bar { margin-bottom: 16px; display: flex; gap: 12px; align-items: center; }
+  .filter-bar label { font-weight: 600; }
+  .filter-bar select, .filter-bar input { padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px; }
+
+  .section-group { margin-bottom: 24px; }
+  .section-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; padding: 6px 12px; background: #e8e8e8; border-radius: 4px; cursor: pointer; }
+  .section-title:hover { background: #ddd; }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; }
+  th, td { padding: 8px 10px; border: 1px solid #ddd; text-align: left; vertical-align: top; }
+  th { background: #f5f5f5; font-weight: 600; position: sticky; top: 0; z-index: 2; }
+  .code-col { width: 140px; font-family: monospace; font-weight: 600; }
+  .type-col { width: 110px; font-size: 12px; color: #666; }
+  .text-col { min-width: 200px; }
+
+  .cell-green { background: var(--green); }
+  .cell-yellow { background: var(--yellow); }
+  .cell-red { background: var(--red); }
+  .cell-grey { background: var(--grey); }
+
+  .status-badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+  .badge-identical { background: var(--green); color: #274e13; }
+  .badge-text_changed { background: var(--yellow); color: #7f6000; }
+  .badge-structure_changed { background: var(--red); color: #660000; }
+  .badge-added { background: var(--grey); color: #333; }
+  .badge-removed { background: var(--grey); color: #333; }
+
+  .detail-row { display: none; }
+  .detail-row.open { display: table-row; }
+  .detail-content { padding: 12px 16px; background: #fefefe; }
+  .detail-content h4 { margin: 8px 0 4px; }
+  .detail-content table { margin: 4px 0 12px; font-size: 13px; }
+  .detail-content td, .detail-content th { padding: 4px 8px; }
+
+  .diff-added { color: #274e13; font-weight: 600; }
+  .diff-removed { text-decoration: line-through; color: #990000; }
+  .diff-changed { color: #7f6000; }
+
+  .clickable { cursor: pointer; }
+  .clickable:hover { filter: brightness(0.95); }
+</style>
+</head>
+<body>
+
+<h1>Questionnaire Comparison Report</h1>
+
+<div class="summary">
+  <div class="stat"><div class="num">{{ total_questions }}</div><div class="label">Total Questions</div></div>
+  <div class="stat"><div class="num">{{ status_counts.get('identical', 0) }}</div><div class="label">Identical</div></div>
+  <div class="stat"><div class="num">{{ status_counts.get('text_changed', 0) }}</div><div class="label">Text Changed</div></div>
+  <div class="stat"><div class="num">{{ status_counts.get('structure_changed', 0) }}</div><div class="label">Structure Changed</div></div>
+  <div class="stat"><div class="num">{{ status_counts.get('added', 0) + status_counts.get('removed', 0) }}</div><div class="label">Added / Removed</div></div>
+</div>
+
+<div class="legend">
+  <span class="green">Identical</span>
+  <span class="yellow">Text changed</span>
+  <span class="red">Structure changed</span>
+  <span class="grey">Added / Removed / Missing</span>
+</div>
+
+<div class="filter-bar">
+  <label for="status-filter">Filter:</label>
+  <select id="status-filter">
+    <option value="all">All</option>
+    <option value="identical">Identical</option>
+    <option value="text_changed">Text Changed</option>
+    <option value="structure_changed">Structure Changed</option>
+    <option value="added">Added</option>
+    <option value="removed">Removed</option>
+    <option value="changed">Any Change</option>
+  </select>
+  <label for="search-box">Search:</label>
+  <input type="text" id="search-box" placeholder="Question code or text...">
+</div>
+
+{% for section in sections %}
+<div class="section-group" data-section="{{ section.name }}">
+  <div class="section-title" onclick="toggleSection(this)">{{ section.name }} ({{ section.codes | length }} questions)</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="code-col">Code</th>
+        <th class="type-col">Type</th>
+        <th class="text-col">Question Text</th>
+        {% for pair in pair_keys %}
+        <th>{{ pair }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+    {% for code in section.codes %}
+      {% set q_sources = question_index.get(code, {}) %}
+      {% set q_sample = q_sources.values() | first if q_sources else None %}
+      {% set code_diffs = diff_lookup.get(code, {}) %}
+      {# Determine worst status for this row #}
+      {% set ns = namespace(worst='identical') %}
+      {% for pair, qd in code_diffs.items() %}
+        {% if qd.status == 'structure_changed' %}{% set ns.worst = 'structure_changed' %}
+        {% elif qd.status in ('text_changed',) and ns.worst not in ('structure_changed',) %}{% set ns.worst = 'text_changed' %}
+        {% elif qd.status in ('added', 'removed') and ns.worst == 'identical' %}{% set ns.worst = qd.status %}
+        {% endif %}
+      {% endfor %}
+      <tr class="question-row" data-code="{{ code }}" data-status="{{ ns.worst }}">
+        <td class="code-col">{{ code }}</td>
+        <td class="type-col">{{ q_sample.element_type if q_sample else '—' }}</td>
+        <td class="text-col">{{ q_sample.get_text(default_language) | truncate(120) if q_sample else '—' }}</td>
+        {% for pair in pair_keys %}
+          {% set qd = code_diffs.get(pair) %}
+          {% if qd %}
+          <td class="cell-{{ status_color.get(qd.status, '') }} clickable" onclick="toggleDetail('{{ code }}')">
+            <span class="status-badge badge-{{ qd.status }}">{{ qd.status | replace('_', ' ') }}</span>
+          </td>
+          {% else %}
+          <td class="cell-grey">—</td>
+          {% endif %}
+        {% endfor %}
+      </tr>
+      {# Detail / expandable row #}
+      <tr class="detail-row" id="detail-{{ code }}">
+        <td colspan="{{ 3 + pair_keys | length }}">
+          <div class="detail-content">
+            {% for pair in pair_keys %}
+              {% set qd = code_diffs.get(pair) %}
+              {% if qd %}
+              <h4>{{ pair }} — <span class="status-badge badge-{{ qd.status }}">{{ qd.status | replace('_', ' ') }}</span></h4>
+
+              {% if qd.text_diffs %}
+              <table>
+                <tr><th>Language</th><th>Status</th><th>Similarity</th><th>Old Text</th><th>New Text</th></tr>
+                {% for td in qd.text_diffs %}
+                <tr>
+                  <td>{{ td.language }}</td>
+                  <td><span class="status-badge badge-{{ td.status }}">{{ td.status }}</span></td>
+                  <td>{{ "%.0f" | format(td.similarity * 100) }}%</td>
+                  <td>{% if td.status == 'removed' %}<span class="diff-removed">{{ td.old_text | truncate(200) }}</span>{% else %}{{ td.old_text | truncate(200) }}{% endif %}</td>
+                  <td>{% if td.status == 'added' %}<span class="diff-added">{{ td.new_text | truncate(200) }}</span>{% elif td.status != 'exact' %}<span class="diff-changed">{{ td.new_text | truncate(200) }}</span>{% else %}{{ td.new_text | truncate(200) }}{% endif %}</td>
+                </tr>
+                {% endfor %}
+              </table>
+              {% endif %}
+
+              {% if qd.choice_diffs %}
+              <h4>Answer Options</h4>
+              <table>
+                <tr><th>Code</th><th>Status</th><th>Details</th></tr>
+                {% for cd in qd.choice_diffs %}
+                <tr>
+                  <td>{{ cd.code }}</td>
+                  <td><span class="status-badge badge-{{ cd.status }}">{{ cd.status | replace('_', ' ') }}</span></td>
+                  <td>
+                    {% for td in cd.text_diffs %}
+                      {{ td.language }}: {{ "%.0f" | format(td.similarity * 100) }}%{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                  </td>
+                </tr>
+                {% endfor %}
+              </table>
+              {% endif %}
+
+              {% if qd.matrix_row_diffs %}
+              <h4>Matrix Rows</h4>
+              <table>
+                <tr><th>Code</th><th>Status</th></tr>
+                {% for rd in qd.matrix_row_diffs %}
+                <tr>
+                  <td>{{ rd.code }}</td>
+                  <td><span class="status-badge badge-{{ rd.status }}">{{ rd.status | replace('_', ' ') }}</span></td>
+                </tr>
+                {% endfor %}
+              </table>
+              {% endif %}
+
+              {% if qd.matrix_column_diffs %}
+              <h4>Matrix Columns</h4>
+              <table>
+                <tr><th>Code</th><th>Status</th></tr>
+                {% for cd in qd.matrix_column_diffs %}
+                <tr>
+                  <td>{{ cd.code }}</td>
+                  <td><span class="status-badge badge-{{ cd.status }}">{{ cd.status | replace('_', ' ') }}</span></td>
+                </tr>
+                {% endfor %}
+              </table>
+              {% endif %}
+
+              {% endif %}
+            {% endfor %}
+          </div>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endfor %}
+
+<script>
+function toggleDetail(code) {
+  const row = document.getElementById('detail-' + code);
+  if (row) row.classList.toggle('open');
+}
+
+function toggleSection(el) {
+  const table = el.nextElementSibling;
+  if (table) table.style.display = table.style.display === 'none' ? '' : 'none';
+}
+
+document.getElementById('status-filter').addEventListener('change', function() {
+  const val = this.value;
+  document.querySelectorAll('.question-row').forEach(function(row) {
+    const status = row.dataset.status;
+    let show = true;
+    if (val === 'changed') {
+      show = status !== 'identical';
+    } else if (val !== 'all') {
+      show = status === val;
+    }
+    row.style.display = show ? '' : 'none';
+    // Also hide detail row
+    const detailRow = document.getElementById('detail-' + row.dataset.code);
+    if (detailRow && !show) { detailRow.classList.remove('open'); detailRow.style.display = 'none'; }
+    else if (detailRow && show) { detailRow.style.display = ''; }
+  });
+});
+
+document.getElementById('search-box').addEventListener('input', function() {
+  const term = this.value.toLowerCase();
+  document.querySelectorAll('.question-row').forEach(function(row) {
+    const text = row.textContent.toLowerCase();
+    const match = !term || text.includes(term);
+    row.style.display = match ? '' : 'none';
+    const detailRow = document.getElementById('detail-' + row.dataset.code);
+    if (detailRow && !match) { detailRow.classList.remove('open'); detailRow.style.display = 'none'; }
+    else if (detailRow && match) { detailRow.style.display = ''; }
+  });
+});
+</script>
+
+</body>
+</html>
