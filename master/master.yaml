@@ -67,16 +67,16 @@ UnternehmenArt:
   texts:
     en: Is your organisation ...
     fr: Votre organisation, est-elle ...
-    de-CH: Ist Ihre Organisation …
+    de-ch: Ist Ihre Organisation …
   choices:
   - code: '1'
     texts:
       fr: une entreprise du secteur privé à but lucratif
       en: a profit-oriented private enterprise
-      de-CH: ein gewinnorientiertes privatwirtschaftliches Unternehmen
+      de-ch: ein gewinnorientiertes privatwirtschaftliches Unternehmen
   - code: '2'
     texts:
-      de-CH: ein öffentliches Unternehmen oder eine der öffentlichen Verwaltung zugeordnete
+      de-ch: ein öffentliches Unternehmen oder eine der öffentlichen Verwaltung zugeordnete
         Institution (inkl. öffentliche Spitäler)
       fr: une entreprise publique ou une institution rattachée à l'administration
         publique (y compris les hôpitaux publiques)
@@ -86,11 +86,11 @@ UnternehmenArt:
     texts:
       fr: un autre type d'organisation (par ex. ONG, NPO, association, fondation)
       en: another type of organisation (e.g. NGO, NPO, association, foundation)
-      de-CH: eine andere Art von Organisation (z.B. NGO, NPO, Verein, Stiftung)
+      de-ch: eine andere Art von Organisation (z.B. NGO, NPO, Verein, Stiftung)
 Gruendungsjahr:
   element_type: OpenQuestion
   texts:
-    de-CH: Bitte geben Sie das Gründungsjahr Ihrer Organisation gemäss Handelsregister
+    de-ch: Bitte geben Sie das Gründungsjahr Ihrer Organisation gemäss Handelsregister
       an.
     en: Please indicate the year of foundation of your organisation according to the
       commercial register.
@@ -101,16 +101,16 @@ IstStartup:
   texts:
     en: Do you consider your organisation to be a start-up?
     fr: Considérez-vous votre organisation comme une start-up ?
-    de-CH: Bezeichnen Sie Ihre Organisation als Start-up?
+    de-ch: Bezeichnen Sie Ihre Organisation als Start-up?
   choices:
   - code: '6'
     texts:
       fr: Oui
       en: 'Yes'
-      de-CH: Ja
+      de-ch: Ja
   - code: '1'
     texts:
-      de-CH: Nein
+      de-ch: Nein
       fr: Non
       en: 'No'
 Personal:
@@ -124,7 +124,7 @@ Personal:
   choices:
   - code: PEnde
     texts:
-      de-CH: … hatte Ihre Organisation <strong>bei Projektabschluss</strong>, d.h. per
+      de-ch: … hatte Ihre Organisation <strong>bei Projektabschluss</strong>, d.h. per
         Ende {{member.AbschlussJahr}}
       fr: '... <strong>à la fin du projet</strong>, c''est-à-dire fin {{member.AbschlussJahr}}
         (en ETP)'
@@ -141,7 +141,7 @@ Personal:
   matrix_rows:
   - code: PEnde
     texts:
-      de-CH: … hatte Ihre Organisation <strong>bei Projektabschluss</strong>, d.h. per
+      de-ch: … hatte Ihre Organisation <strong>bei Projektabschluss</strong>, d.h. per
         Ende {{member.AbschlussJahr}}
       fr: '... <strong>à la fin du projet</strong>, c''est-à-dire fin {{member.AbschlussJahr}}
         (en ETP)'
@@ -314,7 +314,7 @@ InnoArt:
       de-ch: Innovation beim Marketing
   - code: '7'
     texts:
-      de-CH: Soziale Innovation
+      de-ch: Soziale Innovation
       fr: Innovation sociale
       en: Social innovation
 InnoTechOderSozial:
@@ -476,12 +476,12 @@ Ergebnisse:
       de-ch: Pilot- und Demonstrationsanlagen
   - code: '2'
     texts:
-      de-CH: Konzept oder Dienstleistung umsetzungsreif
+      de-ch: Konzept oder Dienstleistung umsetzungsreif
       fr: Concept ou service prêt à être mis en œuvre
       en: Concept or service ready to be implemented
   - code: '3'
     texts:
-      de-CH: Produkt, Konzept oder Dienstleistung auf dem Markt eingeführt
+      de-ch: Produkt, Konzept oder Dienstleistung auf dem Markt eingeführt
       fr: Produit, concept ou service mis en œuvre sur le marché
       en: Product, concept or service introduced to the market
   - code: '4'
@@ -512,7 +512,7 @@ Ergebnisse:
 ProjektStand:
   element_type: SingleChoice
   texts:
-    de-CH: Wie beurteilen Sie das bei Projektabschluss erreichte Ziel der kommerziellen
+    de-ch: Wie beurteilen Sie das bei Projektabschluss erreichte Ziel der kommerziellen
       Nutzung der Projektergebnisse und die weitere Umsetzung auf dem Markt?
     en: How do you assess at the end of the project the achieved goal of commercial
       utilisation of the project results and the further implementation on the market?
@@ -562,7 +562,7 @@ ProjektStand:
         und generiert Umsatz und/oder stärkt die Leistung der Organisation.
   - code: '9'
     texts:
-      de-CH: Das Projekt wird nicht weitergeführt bzw. umgesetzt.
+      de-ch: Das Projekt wird nicht weitergeführt bzw. umgesetzt.
       fr: Le projet n'est pas poursuivi ou mis en œuvre.
       en: The project will not be continued or implemented.
   - code: '99'
@@ -598,7 +598,7 @@ ErgebnisAnlagenPrototyp:
 PRErgenisse:
   element_type: Matrix
   texts:
-    de-CH: Haben die Ergebnisse des Projekts zu Eigentumsrechten geführt oder sind
+    de-ch: Haben die Ergebnisse des Projekts zu Eigentumsrechten geführt oder sind
       solche geplant (in Ihrer Organisation und/oder beim Forschungspartner)?
     en: Have the results of the project led to property rights or are such rights
       planned (in your organisation and/or at the research partner)?
@@ -608,7 +608,7 @@ PRErgenisse:
   choices:
   - code: '1'
     texts:
-      de-CH: Patent / Patentanmeldungen
+      de-ch: Patent / Patentanmeldungen
       en: Patent / Patent applications
       fr: Brevet / Demandes de brevet
   - code: '2'
@@ -638,7 +638,7 @@ PRErgenisse:
   matrix_rows:
   - code: '1'
     texts:
-      de-CH: Patent / Patentanmeldungen
+      de-ch: Patent / Patentanmeldungen
       en: Patent / Patent applications
       fr: Brevet / Demandes de brevet
   - code: '2'
@@ -668,17 +668,17 @@ PRErgenisse:
   matrix_columns:
   - code: '6'
     texts:
-      de-CH: ja, bereits erfolgt<br>
+      de-ch: ja, bereits erfolgt<br>
       en: yes, already done
       fr: oui, déjà fait
   - code: '4'
     texts:
-      de-CH: ja, geplant<br>
+      de-ch: ja, geplant<br>
       en: yes, planned
       fr: oui, prévu
   - code: '1'
     texts:
-      de-CH: nein
+      de-ch: nein
       en: 'no'
       fr: non
 FoParZusArbeitWeiter:
@@ -746,34 +746,34 @@ Umsatz:
   choices:
   - code: PEnde
     texts:
-      de-CH: '... bei Projektabschluss, d.h. im Jahr'
+      de-ch: '... bei Projektabschluss, d.h. im Jahr'
       fr: '... à la fin du projet, c.à.d. au cours de'
       en: '... at the end of the project, i. e. in the year'
   - code: heute
     texts:
-      de-CH: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
+      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
       fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
       en: '... today, i.e. in the last completed business year'
   matrix_rows:
   - code: PEnde
     texts:
-      de-CH: '... bei Projektabschluss, d.h. im Jahr'
+      de-ch: '... bei Projektabschluss, d.h. im Jahr'
       fr: '... à la fin du projet, c.à.d. au cours de'
       en: '... at the end of the project, i. e. in the year'
   - code: heute
     texts:
-      de-CH: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
+      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
       fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
       en: '... today, i.e. in the last completed business year'
   matrix_columns:
   - code: Jahr
     texts:
-      de-CH: Jahr
+      de-ch: Jahr
       fr: Année
       en: Year
   - code: CHF
     texts:
-      de-CH: Mio. CHF
+      de-ch: Mio. CHF
       fr: CHF mio.
       en: CHF million
 AusgabenFuE:
@@ -787,34 +787,34 @@ AusgabenFuE:
   choices:
   - code: PEnde
     texts:
-      de-CH: '... bei Projektabschluss, d.h. im Jahr'
+      de-ch: '... bei Projektabschluss, d.h. im Jahr'
       en: '... at the end of the project, i. e. in the year<br><br>'
       fr: '... à la fin du projet, c.à.d. au cours de '
   - code: Heute
     texts:
-      de-CH: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
+      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
       en: '... today, i.e. in the last completed business year'
       fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
   matrix_rows:
   - code: PEnde
     texts:
-      de-CH: '... bei Projektabschluss, d.h. im Jahr'
+      de-ch: '... bei Projektabschluss, d.h. im Jahr'
       en: '... at the end of the project, i. e. in the year<br><br>'
       fr: '... à la fin du projet, c.à.d. au cours de '
   - code: Heute
     texts:
-      de-CH: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
+      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
       en: '... today, i.e. in the last completed business year'
       fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
   matrix_columns:
   - code: Jahr
     texts:
-      de-CH: Jahr
+      de-ch: Jahr
       en: Year
       fr: Année
   - code: CHF
     texts:
-      de-CH: Mio. CHF
+      de-ch: Mio. CHF
       en: CHF million
       fr: CHF mio.
 PersonalFuE:
@@ -838,7 +838,7 @@ PersonalFuE:
       de-ch: … bei Projektabschluss, d.h.&nbsp;per Ende {{member.AbschlussJahr}}
   - code: Heute
     texts:
-      de-CH: … heute, d.h. per Ende des letzten abgeschlossenen Geschäftsjahres
+      de-ch: … heute, d.h. per Ende des letzten abgeschlossenen Geschäftsjahres
       fr: '... aujourd''hui, c''est-à-dire à la fin du dernier exercice clos'
       en: '... today, i.e. at the end of the last completed business year'
   matrix_rows:
@@ -849,7 +849,7 @@ PersonalFuE:
       de-ch: … bei Projektabschluss, d.h.&nbsp;per Ende {{member.AbschlussJahr}}
   - code: Heute
     texts:
-      de-CH: … heute, d.h. per Ende des letzten abgeschlossenen Geschäftsjahres
+      de-ch: … heute, d.h. per Ende des letzten abgeschlossenen Geschäftsjahres
       fr: '... aujourd''hui, c''est-à-dire à la fin du dernier exercice clos'
       en: '... today, i.e. at the end of the last completed business year'
   matrix_columns:
@@ -866,29 +866,29 @@ PersonalFuE:
 WirtSituation:
   element_type: Matrix
   texts:
-    de-CH: Trägt das geförderte Projekt dazu bei, ….
+    de-ch: Trägt das geförderte Projekt dazu bei, ….
     en: Does the funded project help to ....
     fr: Le projet soutenu contribue-t-il à ...
   choices:
   - code: '1'
     texts:
-      de-CH: '... die wirtschaftliche Situation Ihrer Organisation zu stärken?'
+      de-ch: '... die wirtschaftliche Situation Ihrer Organisation zu stärken?'
       en: '... strengthen the economic situation of your organisation?'
       fr: '... renforcer la situation économique de votre organisation ?'
   - code: '2'
     texts:
-      de-CH: '... die Wettbewerbsfähigkeit auf den Märkten zu stärken?'
+      de-ch: '... die Wettbewerbsfähigkeit auf den Märkten zu stärken?'
       en: '... strengthen competitiveness in the markets?'
       fr: '... renforcer la compétitivité sur les marchés ?'
   matrix_rows:
   - code: '1'
     texts:
-      de-CH: '... die wirtschaftliche Situation Ihrer Organisation zu stärken?'
+      de-ch: '... die wirtschaftliche Situation Ihrer Organisation zu stärken?'
       en: '... strengthen the economic situation of your organisation?'
       fr: '... renforcer la situation économique de votre organisation ?'
   - code: '2'
     texts:
-      de-CH: '... die Wettbewerbsfähigkeit auf den Märkten zu stärken?'
+      de-ch: '... die Wettbewerbsfähigkeit auf den Märkten zu stärken?'
       en: '... strengthen competitiveness in the markets?'
       fr: '... renforcer la compétitivité sur les marchés ?'
   matrix_columns:
@@ -950,7 +950,7 @@ WirtImpQual:
         als Folge des Projektes …
   - code: Export
     texts:
-      de-CH: Das <strong>Exportvolumen</strong> hat als Folge des Projekts ...
+      de-ch: Das <strong>Exportvolumen</strong> hat als Folge des Projekts ...
       fr: Suite au projet, <strong>le volume des exportations</strong> ...
       en: As a result of the project, <strong>the export volume</strong> ...
   - code: '3'
@@ -977,7 +977,7 @@ WirtImpQual:
         des Projektes …
   - code: '6'
     texts:
-      de-CH: Die <strong>Produktivität</strong> (d.h. Wertschöpfung je Vollzeitstelle)
+      de-ch: Die <strong>Produktivität</strong> (d.h. Wertschöpfung je Vollzeitstelle)
         in Ihrer Organisation hat als Folge des Projektes ….
       en: As a result of the project,<strong> productivity</strong>  (i.e. value added
         per full-time positions) in our organisation has ...
@@ -1002,7 +1002,7 @@ WirtImpQual:
         als Folge des Projektes …
   - code: Export
     texts:
-      de-CH: Das <strong>Exportvolumen</strong> hat als Folge des Projekts ...
+      de-ch: Das <strong>Exportvolumen</strong> hat als Folge des Projekts ...
       fr: Suite au projet, <strong>le volume des exportations</strong> ...
       en: As a result of the project, <strong>the export volume</strong> ...
   - code: '3'
@@ -1029,7 +1029,7 @@ WirtImpQual:
         des Projektes …
   - code: '6'
     texts:
-      de-CH: Die <strong>Produktivität</strong> (d.h. Wertschöpfung je Vollzeitstelle)
+      de-ch: Die <strong>Produktivität</strong> (d.h. Wertschöpfung je Vollzeitstelle)
         in Ihrer Organisation hat als Folge des Projektes ….
       en: As a result of the project,<strong> productivity</strong>  (i.e. value added
         per full-time positions) in our organisation has ...
@@ -1200,17 +1200,17 @@ Neuheitslevel:
       de-ch: Neuheit für die Organisation
   - code: '2'
     texts:
-      de-CH: Neuheit für den nationalen Markt
+      de-ch: Neuheit für den nationalen Markt
       fr: une nouveauté sur le marché national ?
       en: Novelty for the national market
   - code: '3'
     texts:
-      de-CH: Neuheit auf einem oder mehreren internationalen Märkten
+      de-ch: Neuheit auf einem oder mehreren internationalen Märkten
       en: Novelty on one or more international markets
       fr: une nouveauté sur un ou plusieurs marchés internationaux ?
   - code: '4'
     texts:
-      de-CH: Neuheit auf allen internationalen Märkten (globaler Markt)
+      de-ch: Neuheit auf allen internationalen Märkten (globaler Markt)
       en: Novelty on all international markets (global market)?
       fr: und nouveauté sur tous les marchés internationaux (marché mondial) ?
   matrix_rows:
@@ -1221,17 +1221,17 @@ Neuheitslevel:
       de-ch: Neuheit für die Organisation
   - code: '2'
     texts:
-      de-CH: Neuheit für den nationalen Markt
+      de-ch: Neuheit für den nationalen Markt
       fr: une nouveauté sur le marché national ?
       en: Novelty for the national market
   - code: '3'
     texts:
-      de-CH: Neuheit auf einem oder mehreren internationalen Märkten
+      de-ch: Neuheit auf einem oder mehreren internationalen Märkten
       en: Novelty on one or more international markets
       fr: une nouveauté sur un ou plusieurs marchés internationaux ?
   - code: '4'
     texts:
-      de-CH: Neuheit auf allen internationalen Märkten (globaler Markt)
+      de-ch: Neuheit auf allen internationalen Märkten (globaler Markt)
       en: Novelty on all international markets (global market)?
       fr: und nouveauté sur tous les marchés internationaux (marché mondial) ?
   matrix_columns:
@@ -1352,22 +1352,22 @@ WirkProjekt:
       de-ch: Stärkung der Forschungs- und Innovationskultur in der Organisation<br>
   - code: '4'
     texts:
-      de-CH: Wird nie angezeigt Stärkung der Entwicklung unserer Organisation
+      de-ch: Wird nie angezeigt Stärkung der Entwicklung unserer Organisation
       fr: Renforcement du développement de notre organisation
       en: Strengthening the development of our organisation
   - code: C19_Ausgaben
     texts:
-      de-CH: Zusätzliche Ausgaben in F&E ausserhalb des geförderten Projektes
+      de-ch: Zusätzliche Ausgaben in F&E ausserhalb des geförderten Projektes
       en: Additional expenditure on R&D outside of the supported project
       fr: Dépenses supplémentaires en R&D en dehors du projet encouragé
   - code: C19_Digit
     texts:
-      de-CH: Zusätzliche Beschleunigung der Digitalisierung
+      de-ch: Zusätzliche Beschleunigung der Digitalisierung
       en: Additional acceleration of digitalisation
       fr: Accélération supplémentaire de la digitalisation
   - code: C19_Proj
     texts:
-      de-CH: Inangriffnahme von weiteren konkreten Innovationsprojekten
+      de-ch: Inangriffnahme von weiteren konkreten Innovationsprojekten
       en: Initiation of further specific innovation projects
       fr: Lancement d'autres projets d'innovation concrets
   matrix_rows:
@@ -1390,22 +1390,22 @@ WirkProjekt:
       de-ch: Stärkung der Forschungs- und Innovationskultur in der Organisation<br>
   - code: '4'
     texts:
-      de-CH: Wird nie angezeigt Stärkung der Entwicklung unserer Organisation
+      de-ch: Wird nie angezeigt Stärkung der Entwicklung unserer Organisation
       fr: Renforcement du développement de notre organisation
       en: Strengthening the development of our organisation
   - code: C19_Ausgaben
     texts:
-      de-CH: Zusätzliche Ausgaben in F&E ausserhalb des geförderten Projektes
+      de-ch: Zusätzliche Ausgaben in F&E ausserhalb des geförderten Projektes
       en: Additional expenditure on R&D outside of the supported project
       fr: Dépenses supplémentaires en R&D en dehors du projet encouragé
   - code: C19_Digit
     texts:
-      de-CH: Zusätzliche Beschleunigung der Digitalisierung
+      de-ch: Zusätzliche Beschleunigung der Digitalisierung
       en: Additional acceleration of digitalisation
       fr: Accélération supplémentaire de la digitalisation
   - code: C19_Proj
     texts:
-      de-CH: Inangriffnahme von weiteren konkreten Innovationsprojekten
+      de-ch: Inangriffnahme von weiteren konkreten Innovationsprojekten
       en: Initiation of further specific innovation projects
       fr: Lancement d'autres projets d'innovation concrets
   matrix_columns:
@@ -1768,12 +1768,12 @@ ZielErreichung:
       de-ch: '... aus technischer Sicht'
   - code: '2'
     texts:
-      de-CH: '... aus wirtschaftlicher und inhaltlicher Sicht'
+      de-ch: '... aus wirtschaftlicher und inhaltlicher Sicht'
       fr: '... du point de vue économique et du contenu'
       en: '... from an economic and content point of view'
   - code: '3'
     texts:
-      de-CH: Insgesamt
+      de-ch: Insgesamt
       fr: Dans l'ensemble
       en: Overall
   matrix_rows:
@@ -1784,12 +1784,12 @@ ZielErreichung:
       de-ch: '... aus technischer Sicht'
   - code: '2'
     texts:
-      de-CH: '... aus wirtschaftlicher und inhaltlicher Sicht'
+      de-ch: '... aus wirtschaftlicher und inhaltlicher Sicht'
       fr: '... du point de vue économique et du contenu'
       en: '... from an economic and content point of view'
   - code: '3'
     texts:
-      de-CH: Insgesamt
+      de-ch: Insgesamt
       fr: Dans l'ensemble
       en: Overall
   matrix_columns:
@@ -1837,13 +1837,13 @@ ZielErreichung:
 ZielNichtGrund:
   element_type: MultipleChoice
   texts:
-    de-CH: Aus welchen Gründen wurden die definierten Ziele nicht erreicht?
+    de-ch: Aus welchen Gründen wurden die definierten Ziele nicht erreicht?
     fr: Pour quelles raisons les objectifs définis n'ont-ils pas été atteints ?
     en: For what reasons were the defined goals not achieved?
   choices:
   - code: '1'
     texts:
-      de-CH: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Projektergebnisse</div>Weiterführende
+      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Projektergebnisse</div>Weiterführende
         Forschungs- und Entwicklungsarbeiten bis zur Umsetzung/Verwertung erforderlich
       fr: '<div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Résultats
         du projet</div>Travaux de recherche et de développement supplémentaires nécessaires
@@ -1854,24 +1854,24 @@ ZielNichtGrund:
         results</div>Further research and development work required until implementation/utilisation
   - code: '2'
     texts:
-      de-CH: Leistungen des Forschungspartners / der Forschungspartner entsprachen
+      de-ch: Leistungen des Forschungspartners / der Forschungspartner entsprachen
         nicht unseren Erwartungen
       fr: Les prestations du/des partenaire(s) de recherche n'ont pas répondu à nos
         attentes
       en: Performance of the research partner(s) did not meet our expectations
   - code: '3'
     texts:
-      de-CH: Zusammenarbeit mit beteiligtem Umsetzungspartner ungenügend
+      de-ch: Zusammenarbeit mit beteiligtem Umsetzungspartner ungenügend
       fr: Collaboration avec partenaire de mise en œuvre impliqué insuffisante
       en: Insufficient cooperation with implementation partner involved
   - code: '4'
     texts:
-      de-CH: Zu hohe Komplexität / zu hohe Risiken im Projekt
+      de-ch: Zu hohe Komplexität / zu hohe Risiken im Projekt
       fr: Complexité trop grande du projet  / risques trop élevés
       en: Too high complexity / too high risks in the project
   - code: '5'
     texts:
-      de-CH: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Marktsituation</div>Keine
+      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Marktsituation</div>Keine
         oder zu geringe Nachfrage auf dem Markt
       fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Situation
         du marché</div>Demande sur le marché faible ou inexistant
@@ -1879,13 +1879,13 @@ ZielNichtGrund:
         situation</div>No or too little demand on the market
   - code: '6'
     texts:
-      de-CH: Wettbewerber haben eine vergleichbare Innovation schneller auf den Markt
+      de-ch: Wettbewerber haben eine vergleichbare Innovation schneller auf den Markt
         gebracht
       fr: Des concurrents ont mis sur le marché une innovation comparable plus rapidement
       en: Competitors have brought a comparable innovation to the market faster
   - code: '7'
     texts:
-      de-CH: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Umsetzung
+      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Umsetzung
         in der Organisation</div>Kosten des Projekts (inklusive Umsetzung) höher als
         erwartet
       fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Mise
@@ -1895,12 +1895,12 @@ ZielNichtGrund:
         than expected
   - code: '8'
     texts:
-      de-CH: Fehlende personelle Ressourcen in der Organisation
+      de-ch: Fehlende personelle Ressourcen in der Organisation
       fr: Manque de ressources internes dans l'organisation
       en: Lack of personal resources in the organisation
   - code: '9'
     texts:
-      de-CH: Zu geringe Finanzierung für Umsetzung
+      de-ch: Zu geringe Finanzierung für Umsetzung
       fr: Financement trop faible pour la mise en œuvre
       en: Too little funding for implementation
   - code: '10'
@@ -1984,17 +1984,17 @@ Stellenwert:
       de-ch: '... aus strategischer Sicht'
   - code: '2'
     texts:
-      de-CH: '... aus wirtschaftlicher oder betrieblicher Sicht'
+      de-ch: '... aus wirtschaftlicher oder betrieblicher Sicht'
       fr: '... d''un point de vue économique ou opérationnel'
       en: '... from an economic or operational point of view'
   - code: '3'
     texts:
-      de-CH: '... aus Sicht von Innovation, Forschung und Entwicklung'
+      de-ch: '... aus Sicht von Innovation, Forschung und Entwicklung'
       fr: '... d''un point de vue de l''innovation, de la recherche et développement'
       en: '... from the point of view of innovation, research and development'
   - code: '4'
     texts:
-      de-CH: Insgesamt
+      de-ch: Insgesamt
       fr: Globalement
       en: Overall
   matrix_rows:
@@ -2005,17 +2005,17 @@ Stellenwert:
       de-ch: '... aus strategischer Sicht'
   - code: '2'
     texts:
-      de-CH: '... aus wirtschaftlicher oder betrieblicher Sicht'
+      de-ch: '... aus wirtschaftlicher oder betrieblicher Sicht'
       fr: '... d''un point de vue économique ou opérationnel'
       en: '... from an economic or operational point of view'
   - code: '3'
     texts:
-      de-CH: '... aus Sicht von Innovation, Forschung und Entwicklung'
+      de-ch: '... aus Sicht von Innovation, Forschung und Entwicklung'
       fr: '... d''un point de vue de l''innovation, de la recherche et développement'
       en: '... from the point of view of innovation, research and development'
   - code: '4'
     texts:
-      de-CH: Insgesamt
+      de-ch: Insgesamt
       fr: Globalement
       en: Overall
   matrix_columns:
@@ -2060,7 +2060,7 @@ Stellenwert:
 Involvement:
   element_type: Matrix
   texts:
-    de-CH: Können Sie uns noch sagen, wie stark Ihre Organisation oder die betreffende
+    de-ch: Können Sie uns noch sagen, wie stark Ihre Organisation oder die betreffende
       Abteilung im geförderten Projekt involviert war?
     fr: Dans quelle mesure votre organisation ou la division concernée était impliquée
       dans le projet encouragé par Innosuisse ?
@@ -2069,49 +2069,49 @@ Involvement:
   choices:
   - code: '1'
     texts:
-      de-CH: Meine Organisation/Abteilung war ...
+      de-ch: Meine Organisation/Abteilung war ...
       fr: Mon organisation/division était ...
       en: My organisation/department was ...
   matrix_rows:
   - code: '1'
     texts:
-      de-CH: Meine Organisation/Abteilung war ...
+      de-ch: Meine Organisation/Abteilung war ...
       fr: Mon organisation/division était ...
       en: My organisation/department was ...
   matrix_columns:
   - code: '1'
     texts:
-      de-CH: überhaupt nicht involviert
+      de-ch: überhaupt nicht involviert
       fr: pratiquement pas impliquée
       en: practically not involved
   - code: '2'
     texts:
-      de-CH: schwach involviert
+      de-ch: schwach involviert
       fr: peu impliquée
       en: little involved
   - code: '3'
     texts:
-      de-CH: eher schwach involviert
+      de-ch: eher schwach involviert
       fr: plutôt peu impliquée
       en: rather little involved
   - code: '4'
     texts:
-      de-CH: eher stark involviert
+      de-ch: eher stark involviert
       fr: plutôt fortement impliquée
       en: rather strongly involved
   - code: '5'
     texts:
-      de-CH: stark involviert
+      de-ch: stark involviert
       fr: fortement impliquée
       en: strongly involved
   - code: '6'
     texts:
-      de-CH: sehr stark involviert
+      de-ch: sehr stark involviert
       fr: très fortement impliquée
       en: very strongly involved
   - code: '99'
     texts:
-      de-CH: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
+      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
         nicht beantworten</div>
       fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
         répondre à cette question</div>
@@ -2130,22 +2130,22 @@ FeedbackOffen:
 FeedbackArt:
   element_type: MultipleChoice
   texts:
-    de-CH: Handelt es sich bei Ihrer Rückmeldung um eine/einen ... ?
+    de-ch: Handelt es sich bei Ihrer Rückmeldung um eine/einen ... ?
     en: Is your feedback a/an ... ?
     fr: Votre feed-back concerne-t-il un/une ... ?
   choices:
   - code: '1'
     texts:
-      de-CH: Präzisierung Ihrer Antworten
+      de-ch: Präzisierung Ihrer Antworten
       en: Clarification of your answers
       fr: Précision de vos réponses
   - code: '2'
     texts:
-      de-CH: Rückmeldung zum Innovationsprojekt
+      de-ch: Rückmeldung zum Innovationsprojekt
       en: Feedback on your innovation project
       fr: Retour sur votre projet d'innovation
   - code: '3'
     texts:
-      de-CH: Verbesserungsvorschlag für die Projektförderung Innosuisse
+      de-ch: Verbesserungsvorschlag für die Projektförderung Innosuisse
       en: Improvement proposal for the project promotion by Innosuisse
       fr: Proposition d'amélioration pour l'encouragement des projets par Innosuisse
