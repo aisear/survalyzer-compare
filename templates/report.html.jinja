@@ -18,6 +18,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; color: #333; padding: 20px; background: #fafafa; }
   h1 { margin-bottom: 8px; }
+  .subtitle { margin-bottom: 16px; color: #666; font-size: 13px; }
   .summary { margin-bottom: 20px; padding: 12px 16px; background: #fff; border: 1px solid #ddd; border-radius: 6px; display: flex; gap: 24px; flex-wrap: wrap; }
   .summary .stat { text-align: center; }
   .summary .stat .num { font-size: 24px; font-weight: 700; }
@@ -40,6 +41,7 @@
   table { width: 100%; border-collapse: collapse; background: #fff; }
   th, td { padding: 8px 10px; border: 1px solid #ddd; text-align: left; vertical-align: top; }
   th { background: #f5f5f5; font-weight: 600; position: sticky; top: 0; z-index: 2; }
+  th.survey-col { font-size: 11px; min-width: 100px; max-width: 180px; word-wrap: break-word; }
   .code-col { width: 140px; font-family: monospace; font-weight: 600; }
   .type-col { width: 110px; font-size: 12px; color: #666; }
   .text-col { min-width: 200px; }
@@ -74,6 +76,7 @@
 <body>
 
 <h1>Questionnaire Comparison Report</h1>
+<p class="subtitle">Each survey compared against master</p>
 
 <div class="summary">
   <div class="stat"><div class="num">{{ total_questions }}</div><div class="label">Total Questions</div></div>
@@ -84,10 +87,10 @@
 </div>
 
 <div class="legend">
-  <span class="green">Identical</span>
+  <span class="green">Identical to master</span>
   <span class="yellow">Text changed</span>
   <span class="red">Structure changed</span>
-  <span class="grey">Added / Removed / Missing</span>
+  <span class="grey">Not in master / Not in survey</span>
 </div>
 
 <div class="filter-bar">
@@ -97,8 +100,8 @@
     <option value="identical">Identical</option>
     <option value="text_changed">Text Changed</option>
     <option value="structure_changed">Structure Changed</option>
-    <option value="added">Added</option>
-    <option value="removed">Removed</option>
+    <option value="added">Added (not in master)</option>
+    <option value="removed">Removed (not in survey)</option>
     <option value="changed">Any Change</option>
   </select>
   <label for="search-box">Search:</label>
@@ -113,20 +116,20 @@
       <tr>
         <th class="code-col">Code</th>
         <th class="type-col">Type</th>
-        <th class="text-col">Question Text</th>
-        {% for pair in pair_keys %}
-        <th>{{ pair }}</th>
+        <th class="text-col">Master Text</th>
+        {% for survey in survey_names %}
+        <th class="survey-col">{{ survey }}</th>
         {% endfor %}
       </tr>
     </thead>
     <tbody>
     {% for code in section.codes %}
       {% set q_sources = question_index.get(code, {}) %}
-      {% set q_sample = q_sources.values() | first if q_sources else None %}
+      {% set q_master = q_sources.get('master') %}
       {% set code_diffs = diff_lookup.get(code, {}) %}
       {# Determine worst status for this row #}
       {% set ns = namespace(worst='identical') %}
-      {% for pair, qd in code_diffs.items() %}
+      {% for survey, qd in code_diffs.items() %}
         {% if qd.status == 'structure_changed' %}{% set ns.worst = 'structure_changed' %}
         {% elif qd.status in ('text_changed',) and ns.worst not in ('structure_changed',) %}{% set ns.worst = 'text_changed' %}
         {% elif qd.status in ('added', 'removed') and ns.worst == 'identical' %}{% set ns.worst = qd.status %}
@@ -134,10 +137,10 @@
       {% endfor %}
       <tr class="question-row" data-code="{{ code }}" data-status="{{ ns.worst }}">
         <td class="code-col">{{ code }}</td>
-        <td class="type-col">{{ q_sample.element_type if q_sample else '—' }}</td>
-        <td class="text-col">{{ q_sample.get_text(default_language) | truncate(120) if q_sample else '—' }}</td>
-        {% for pair in pair_keys %}
-          {% set qd = code_diffs.get(pair) %}
+        <td class="type-col">{{ q_master.element_type if q_master else '—' }}</td>
+        <td class="text-col">{{ q_master.get_text(default_language) | truncate(120) if q_master else '—' }}</td>
+        {% for survey in survey_names %}
+          {% set qd = code_diffs.get(survey) %}
           {% if qd %}
           <td class="cell-{{ status_color.get(qd.status, '') }} clickable" onclick="toggleDetail('{{ code }}')">
             <span class="status-badge badge-{{ qd.status }}">{{ qd.status | replace('_', ' ') }}</span>
@@ -149,16 +152,16 @@
       </tr>
       {# Detail / expandable row #}
       <tr class="detail-row" id="detail-{{ code }}">
-        <td colspan="{{ 3 + pair_keys | length }}">
+        <td colspan="{{ 3 + survey_names | length }}">
           <div class="detail-content">
-            {% for pair in pair_keys %}
-              {% set qd = code_diffs.get(pair) %}
+            {% for survey in survey_names %}
+              {% set qd = code_diffs.get(survey) %}
               {% if qd %}
-              <h4>{{ pair }} — <span class="status-badge badge-{{ qd.status }}">{{ qd.status | replace('_', ' ') }}</span></h4>
+              <h4>{{ survey }} vs Master — <span class="status-badge badge-{{ qd.status }}">{{ qd.status | replace('_', ' ') }}</span></h4>
 
               {% if qd.text_diffs %}
               <table>
-                <tr><th>Language</th><th>Status</th><th>Similarity</th><th>Old Text</th><th>New Text</th></tr>
+                <tr><th>Language</th><th>Status</th><th>Similarity</th><th>Master Text</th><th>Survey Text</th></tr>
                 {% for td in qd.text_diffs %}
                 <tr>
                   <td>{{ td.language }}</td>

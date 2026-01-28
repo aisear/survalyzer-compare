@@ -14,18 +14,30 @@ TEMPLATES_DIR = Path(__file__).resolve().parent.parent / "templates"
 
 def _build_question_index(
     questions_by_source: dict[str, list[Question]],
+    master_questions: list[Question],
 ) -> dict[str, dict[str, Question]]:
     """Return {normalized_code: {source_name: Question}} for quick lookup."""
     index: dict[str, dict[str, Question]] = {}
+    # Add master questions
+    for q in master_questions:
+        index.setdefault(q.normalized_code, {})["master"] = q
+    # Add survey questions
     for source, qlist in questions_by_source.items():
         for q in qlist:
             index.setdefault(q.normalized_code, {})[source] = q
     return index
 
 
-def _collect_all_codes(questions_by_source: dict[str, list[Question]]) -> list[str]:
-    """Return ordered unique normalized codes across all sources, preserving first-seen order."""
+def _collect_all_codes(
+    questions_by_source: dict[str, list[Question]],
+    master_questions: list[Question],
+) -> list[str]:
+    """Return ordered unique normalized codes across all sources, preserving master order first."""
     seen: dict[str, None] = {}
+    # Master codes first
+    for q in master_questions:
+        seen.setdefault(q.normalized_code, None)
+    # Then survey codes
     for qlist in questions_by_source.values():
         for q in qlist:
             seen.setdefault(q.normalized_code, None)
@@ -34,12 +46,24 @@ def _collect_all_codes(questions_by_source: dict[str, list[Question]]) -> list[s
 
 def _collect_sections(
     questions_by_source: dict[str, list[Question]],
+    master_questions: list[Question],
 ) -> list[dict[str, Any]]:
     """Group normalized codes by section name, preserving order."""
     section_order: list[str] = []
     section_codes: dict[str, list[str]] = {}
     seen_codes: set[str] = set()
 
+    # Process master first (may not have section_name)
+    for q in master_questions:
+        section = q.section_name or "Uncategorized"
+        if section not in section_codes:
+            section_order.append(section)
+            section_codes[section] = []
+        if q.normalized_code not in seen_codes:
+            section_codes[section].append(q.normalized_code)
+            seen_codes.add(q.normalized_code)
+
+    # Then surveys
     for qlist in questions_by_source.values():
         for q in qlist:
             section = q.section_name or "Uncategorized"
@@ -59,12 +83,15 @@ def _collect_sections(
 def _build_diff_lookup(
     results: list[ComparisonResult],
 ) -> dict[str, dict[str, Any]]:
-    """Return {code: {source_pair: QuestionDiff}} for template access."""
+    """Return {code: {survey_name: QuestionDiff}} for template access.
+
+    Each result compares master → survey, so we key by source_b (the survey name).
+    """
     lookup: dict[str, dict[str, Any]] = {}
     for result in results:
-        pair_key = f"{result.source_a} → {result.source_b}"
+        survey_name = result.source_b
         for qd in result.question_diffs:
-            lookup.setdefault(qd.code, {})[pair_key] = qd
+            lookup.setdefault(qd.code, {})[survey_name] = qd
     return lookup
 
 
@@ -82,23 +109,28 @@ STATUS_COLOR = {
 def render_report(
     results: list[ComparisonResult],
     questions_by_source: dict[str, list[Question]],
+    master_questions: list[Question],
     default_language: str = "de-CH",
 ) -> str:
-    """Render a self-contained HTML comparison report."""
+    """Render a self-contained HTML comparison report.
+
+    Each result is a comparison of master → survey_name.
+    """
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
         autoescape=True,
     )
     template = env.get_template("report.html.jinja")
 
-    question_index = _build_question_index(questions_by_source)
-    sections = _collect_sections(questions_by_source)
+    question_index = _build_question_index(questions_by_source, master_questions)
+    sections = _collect_sections(questions_by_source, master_questions)
     diff_lookup = _build_diff_lookup(results)
-    sources = list(questions_by_source.keys())
-    pair_keys = [f"{r.source_a} → {r.source_b}" for r in results]
+
+    # Survey names (columns in the report)
+    survey_names = [r.source_b for r in results]
 
     # Summary stats
-    all_codes = _collect_all_codes(questions_by_source)
+    all_codes = _collect_all_codes(questions_by_source, master_questions)
     status_counts = {"identical": 0, "text_changed": 0, "structure_changed": 0, "added": 0, "removed": 0}
     for code in all_codes:
         code_diffs = diff_lookup.get(code, {})
@@ -113,8 +145,7 @@ def render_report(
 
     return template.render(
         sections=sections,
-        sources=sources,
-        pair_keys=pair_keys,
+        survey_names=survey_names,
         question_index=question_index,
         diff_lookup=diff_lookup,
         status_color=STATUS_COLOR,
