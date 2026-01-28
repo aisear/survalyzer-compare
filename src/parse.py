@@ -41,6 +41,17 @@ def sort_files_by_date(files: list[Path]) -> list[Path]:
     return sorted(files, key=sort_key)
 
 
+def extract_short_name(filename: str) -> str:
+    """Extract short name from filename (element between first two underscores).
+
+    e.g., 'survey_IPf_ImplementationsPartner_Final_20260127_1248.json' -> 'IPf'
+    """
+    parts = filename.split("_")
+    if len(parts) >= 2:
+        return parts[1]
+    return filename
+
+
 # ---------------------------------------------------------------------------
 # Low-level helpers
 # ---------------------------------------------------------------------------

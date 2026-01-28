@@ -8,6 +8,7 @@ from typing import Any
 from jinja2 import Environment, FileSystemLoader
 
 from src.models import ComparisonResult, Question
+from src.parse import extract_short_name
 
 TEMPLATES_DIR = Path(__file__).resolve().parent.parent / "templates"
 
@@ -129,6 +130,16 @@ def render_report(
     # Survey names (columns in the report)
     survey_names = [r.source_b for r in results]
 
+    # Short names for display (IPf, IPi, etc.)
+    short_names = {name: extract_short_name(name) for name in survey_names}
+
+    # Available languages (collect from master questions)
+    available_languages = set()
+    for q in master_questions:
+        for lt in q.texts:
+            available_languages.add(lt.language)
+    languages = sorted(available_languages) if available_languages else ["en"]
+
     # Summary stats
     all_codes = _collect_all_codes(questions_by_source, master_questions)
     status_counts = {"identical": 0, "text_changed": 0, "structure_changed": 0, "added": 0, "removed": 0}
@@ -146,6 +157,8 @@ def render_report(
     return template.render(
         sections=sections,
         survey_names=survey_names,
+        short_names=short_names,
+        languages=languages,
         question_index=question_index,
         diff_lookup=diff_lookup,
         status_color=STATUS_COLOR,
