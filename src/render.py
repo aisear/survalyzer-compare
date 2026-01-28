@@ -15,27 +15,27 @@ TEMPLATES_DIR = Path(__file__).resolve().parent.parent / "templates"
 def _build_question_index(
     questions_by_source: dict[str, list[Question]],
 ) -> dict[str, dict[str, Question]]:
-    """Return {code: {source_name: Question}} for quick lookup."""
+    """Return {normalized_code: {source_name: Question}} for quick lookup."""
     index: dict[str, dict[str, Question]] = {}
     for source, qlist in questions_by_source.items():
         for q in qlist:
-            index.setdefault(q.code, {})[source] = q
+            index.setdefault(q.normalized_code, {})[source] = q
     return index
 
 
 def _collect_all_codes(questions_by_source: dict[str, list[Question]]) -> list[str]:
-    """Return ordered unique question codes across all sources, preserving first-seen order."""
+    """Return ordered unique normalized codes across all sources, preserving first-seen order."""
     seen: dict[str, None] = {}
     for qlist in questions_by_source.values():
         for q in qlist:
-            seen.setdefault(q.code, None)
+            seen.setdefault(q.normalized_code, None)
     return list(seen)
 
 
 def _collect_sections(
     questions_by_source: dict[str, list[Question]],
 ) -> list[dict[str, Any]]:
-    """Group question codes by section name, preserving order."""
+    """Group normalized codes by section name, preserving order."""
     section_order: list[str] = []
     section_codes: dict[str, list[str]] = {}
     seen_codes: set[str] = set()
@@ -46,9 +46,9 @@ def _collect_sections(
             if section not in section_codes:
                 section_order.append(section)
                 section_codes[section] = []
-            if q.code not in seen_codes:
-                section_codes[section].append(q.code)
-                seen_codes.add(q.code)
+            if q.normalized_code not in seen_codes:
+                section_codes[section].append(q.normalized_code)
+                seen_codes.add(q.normalized_code)
 
     return [
         {"name": name, "codes": section_codes[name]}

@@ -6,10 +6,38 @@ from pathlib import Path
 import pytest
 
 from src.parse import parse_survey, load_and_parse, _parse_localized
-from src.models import Question
+from src.models import Question, normalize_code
 
 EXPORTS_DIR = Path(__file__).resolve().parent.parent / "data" / "exports"
 SAMPLE_JSON = next(EXPORTS_DIR.glob("*.json"), None)
+
+
+# ---------------------------------------------------------------------------
+# Code normalization tests
+# ---------------------------------------------------------------------------
+
+class TestNormalizeCode:
+    def test_f_prefix(self):
+        assert normalize_code("FUnternehmenArt") == "UnternehmenArt"
+        assert normalize_code("FPersonal") == "Personal"
+
+    def test_i_prefix(self):
+        assert normalize_code("IUnternehmenArt") == "UnternehmenArt"
+        assert normalize_code("IPersonal") == "Personal"
+
+    def test_lowercase_prefix(self):
+        assert normalize_code("fGruendungsjahr") == "Gruendungsjahr"
+        assert normalize_code("iGruendungsjahr") == "Gruendungsjahr"
+
+    def test_no_prefix(self):
+        # Codes without F/I prefix should be unchanged
+        assert normalize_code("Q1") == "Q1"
+        assert normalize_code("UnternehmenArt") == "UnternehmenArt"
+
+    def test_prefix_not_followed_by_uppercase(self):
+        # f/i followed by lowercase should NOT be stripped
+        assert normalize_code("final") == "final"
+        assert normalize_code("impact") == "impact"
 
 
 # ---------------------------------------------------------------------------

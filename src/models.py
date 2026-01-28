@@ -2,8 +2,22 @@
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from typing import Optional
+
+
+# ---------------------------------------------------------------------------
+# Code normalization (strip F/I prefix for cross-survey matching)
+# ---------------------------------------------------------------------------
+
+# Pattern: leading F, f, I, or i followed by an uppercase letter
+_CODE_PREFIX_PATTERN = re.compile(r'^[FfIi](?=[A-Z])')
+
+
+def normalize_code(code: str) -> str:
+    """Strip survey-type prefix (F/f/I/i) from question code for matching."""
+    return _CODE_PREFIX_PATTERN.sub('', code)
 
 
 # ---------------------------------------------------------------------------
@@ -88,6 +102,11 @@ class Question:
             if lt.language.lower() == lang_lower:
                 return lt.text
         return self.texts[0].text if self.texts else ""
+
+    @property
+    def normalized_code(self) -> str:
+        """Return code with survey-type prefix stripped for matching."""
+        return normalize_code(self.code)
 
 
 # ---------------------------------------------------------------------------
