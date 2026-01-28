@@ -95,7 +95,7 @@ class Question:
 
     # ---- convenience helpers ------------------------------------------------
 
-    def get_text(self, language: str = "de-CH") -> str:
+    def get_text(self, language: str = "de-ch") -> str:
         """Return question text for *language*, falling back to first available."""
         lang_lower = language.lower()
         for lt in self.texts:

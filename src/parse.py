@@ -61,7 +61,7 @@ def _parse_localized(raw: list[dict[str, str]] | None) -> list[LocalizedText]:
     if not raw:
         return []
     return [
-        LocalizedText(language=item["languageCode"], text=item.get("text", ""))
+        LocalizedText(language=item["languageCode"].lower(), text=item.get("text", ""))
         for item in raw
     ]
 

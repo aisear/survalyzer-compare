@@ -111,7 +111,7 @@ def render_report(
     results: list[ComparisonResult],
     questions_by_source: dict[str, list[Question]],
     master_questions: list[Question],
-    default_language: str = "de-CH",
+    default_language: str = "de-ch",
 ) -> str:
     """Render a self-contained HTML comparison report.
 

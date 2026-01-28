@@ -29,10 +29,10 @@ def _sample_questions() -> list[Question]:
     return [
         Question(
             id=1, code="Q1", element_type="SingleChoice",
-            texts=[_lt("Pick one"), _lt("Wählen Sie", "de-CH")],
+            texts=[_lt("Pick one"), _lt("Wählen Sie", "de-ch")],
             choices=[
-                AnswerOption(id=10, code="1", texts=[_lt("Yes"), _lt("Ja", "de-CH")]),
-                AnswerOption(id=11, code="2", texts=[_lt("No"), _lt("Nein", "de-CH")]),
+                AnswerOption(id=10, code="1", texts=[_lt("Yes"), _lt("Ja", "de-ch")]),
+                AnswerOption(id=11, code="2", texts=[_lt("No"), _lt("Nein", "de-ch")]),
             ],
         ),
         Question(
@@ -72,7 +72,7 @@ class TestExtractMaster:
         q1 = master["Q1"]
         assert q1["element_type"] == "SingleChoice"
         assert q1["texts"]["en"] == "Pick one"
-        assert q1["texts"]["de-CH"] == "Wählen Sie"
+        assert q1["texts"]["de-ch"] == "Wählen Sie"
         assert len(q1["choices"]) == 2
         assert q1["choices"][0]["code"] == "1"
         assert q1["choices"][0]["texts"]["en"] == "Yes"

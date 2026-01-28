@@ -43,8 +43,8 @@ def main() -> None:
     )
     parser.add_argument(
         "--language",
-        default="de-CH",
-        help="Default display language (default: de-CH)",
+        default="de-ch",
+        help="Default display language (default: de-ch)",
     )
     args = parser.parse_args()
 
