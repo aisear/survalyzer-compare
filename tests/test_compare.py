@@ -210,3 +210,33 @@ class TestCompareSurveys:
         assert by_code["Q2"].status == "text_changed"
         assert by_code["Q3"].status == "removed"
         assert by_code["Q4"].status == "added"
+
+    def test_cross_survey_prefix_matching(self):
+        """Test that F-prefixed and I-prefixed codes match on normalized code."""
+        # Final survey uses F prefix
+        final = [
+            _question("FUnternehmenArt", "Organisation type"),
+            _question("FPersonal", "Staff count"),
+        ]
+        # Impact survey uses I prefix
+        impact = [
+            _question("IUnternehmenArt", "Organisation type - updated"),
+            _question("IPersonal", "Staff count"),
+        ]
+        result = compare_surveys(final, impact, source_a="Final", source_b="Impact")
+        # Should match on normalized codes (without F/I prefix)
+        assert len(result.question_diffs) == 2
+        by_code = {d.code: d for d in result.question_diffs}
+        assert "UnternehmenArt" in by_code
+        assert "Personal" in by_code
+        assert by_code["UnternehmenArt"].status == "text_changed"
+        assert by_code["Personal"].status == "identical"
+
+    def test_lowercase_prefix_matching(self):
+        """Test that lowercase f/i prefixes are also normalized."""
+        a = [_question("fGruendungsjahr", "Founded")]
+        b = [_question("iGruendungsjahr", "Founded")]
+        result = compare_surveys(a, b)
+        assert len(result.question_diffs) == 1
+        # Should not treat as added/removed
+        assert result.question_diffs[0].status == "identical"

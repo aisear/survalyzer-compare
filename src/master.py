@@ -57,8 +57,8 @@ def question_to_dict(q: Question) -> dict[str, Any]:
 
 
 def extract_master(questions: list[Question]) -> dict[str, Any]:
-    """Build a master dict keyed by question code."""
-    return {q.code: question_to_dict(q) for q in questions}
+    """Build a master dict keyed by normalized question code."""
+    return {q.normalized_code: question_to_dict(q) for q in questions}
 
 
 # ---------------------------------------------------------------------------

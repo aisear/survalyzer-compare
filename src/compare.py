@@ -185,22 +185,29 @@ def compare_surveys(
     source_b: str = "B",
     threshold: float = DEFAULT_SIMILARITY_THRESHOLD,
 ) -> ComparisonResult:
-    """Compare two full question lists and return a ComparisonResult."""
-    map_a = {q.code: q for q in questions_a}
-    map_b = {q.code: q for q in questions_b}
+    """Compare two full question lists and return a ComparisonResult.
+
+    Questions are matched by normalized_code (with F/I prefix stripped).
+    """
+    # Index by normalized code for cross-survey matching
+    map_a = {q.normalized_code: q for q in questions_a}
+    map_b = {q.normalized_code: q for q in questions_b}
     all_codes = list(dict.fromkeys(
-        [q.code for q in questions_a] + [q.code for q in questions_b]
+        [q.normalized_code for q in questions_a] + [q.normalized_code for q in questions_b]
     ))
 
     diffs: list[QuestionDiff] = []
-    for code in all_codes:
-        qa = map_a.get(code)
-        qb = map_b.get(code)
+    for norm_code in all_codes:
+        qa = map_a.get(norm_code)
+        qb = map_b.get(norm_code)
         if qa is None:
-            diffs.append(QuestionDiff(code=code, element_type=qb.element_type, status="added"))
+            diffs.append(QuestionDiff(code=norm_code, element_type=qb.element_type, status="added"))
         elif qb is None:
-            diffs.append(QuestionDiff(code=code, element_type=qa.element_type, status="removed"))
+            diffs.append(QuestionDiff(code=norm_code, element_type=qa.element_type, status="removed"))
         else:
-            diffs.append(compare_questions(qa, qb, threshold))
+            diff = compare_questions(qa, qb, threshold)
+            # Use normalized code in the diff for consistent matching
+            diff.code = norm_code
+            diffs.append(diff)
 
     return ComparisonResult(source_a=source_a, source_b=source_b, question_diffs=diffs)
