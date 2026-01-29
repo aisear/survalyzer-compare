@@ -18,7 +18,7 @@
     --lightgrey-border: #ccc;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; color: #333; padding: 20px; background: #fafafa; }
+  body { font-family: Arial, sans-serif; font-size: 14px; color: #333; padding: 20px; background: #fafafa; }
   h1 { margin-bottom: 8px; }
   .subtitle { margin-bottom: 16px; color: #666; font-size: 13px; }
   .loading { text-align: center; padding: 40px; color: #666; }
@@ -45,11 +45,11 @@
   .section-title:hover { background: #ddd; }
 
   table { width: 100%; border-collapse: collapse; background: #fff; font-size: 12px; }
-  th, td { padding: 8px 10px; border: 1px solid #ddd; text-align: left; vertical-align: top; }
+  th, td { padding: 8px 10px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: none; border-right: none; text-align: left; vertical-align: top; }
   th { background: #f5f5f5; font-weight: 600; position: sticky; top: 0; z-index: 2; }
   th.survey-col { font-size: 11px; min-width: 80px; max-width: 120px; }
-  .code-col { width: 200px; font-family: monospace; font-weight: 600; }
-  .type-col { width: 110px; color: #666; }
+  .code-col { width: 200px; font-weight: 600; }
+  .type-col { width: 110px; }
   .text-col { min-width: 200px; }
 
   .cell-green { background: var(--green); }
@@ -61,9 +61,9 @@
   .status-badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
   .badge-identical { background: var(--green); color: #274e13; }
   .badge-exact { background: var(--green); color: #274e13; }
-  .badge-text_changed { background: var(--yellow); color: #7f6000; }
-  .badge-similar { background: var(--yellow); color: #7f6000; }
   .badge-different { background: var(--red); color: #660000; }
+  .badge-text_changed { background: var(--red); color: #660000; }
+  .badge-similar { background: var(--red); color: #660000; }
   .badge-structure_changed { background: var(--red); color: #660000; }
   .badge-added { background: var(--grey); color: #333; }
   .badge-removed { background: transparent; color: #999; font-weight: normal; }
@@ -77,7 +77,7 @@
   .detail-content td, .detail-content th { padding: 4px 8px; }
   .detail-content .text-cell { overflow: hidden; text-overflow: ellipsis; }
   /* Consistent column widths for detail tables */
-  .detail-content .col-code { width: 200px; font-family: monospace; }
+  .detail-content .col-code { width: 200px; }
   .detail-content .col-status { width: 100px; }
   .detail-content .col-sim { width: 70px; text-align: right; }
   .detail-content .col-text { min-width: 150px; }
@@ -98,7 +98,7 @@
 <script>
 const STATUS_COLOR = {
   identical: 'green',
-  text_changed: 'yellow',
+  text_changed: 'red',
   structure_changed: 'red',
   added: 'grey',
   removed: 'lightgrey'
@@ -149,7 +149,7 @@ function getWorstStatus(code) {
 function shouldShowRow(code) {
   const status = getWorstStatus(code);
   if (currentFilter === 'all') return true;
-  if (currentFilter === 'changed') return status !== 'identical';
+  if (currentFilter === 'different') return status === 'text_changed' || status === 'structure_changed';
   return status === currentFilter;
 }
 
@@ -168,19 +168,18 @@ function matchesSearch(code) {
 
 function renderSummary() {
   const s = DATA.meta.status_counts;
+  const different = (s.text_changed || 0) + (s.structure_changed || 0);
   return `
     <div class="summary">
       <div class="stat"><div class="num">${DATA.meta.total_questions}</div><div class="label">Total Questions</div></div>
       <div class="stat"><div class="num">${s.identical || 0}</div><div class="label">Identical</div></div>
-      <div class="stat"><div class="num">${s.text_changed || 0}</div><div class="label">Text Changed</div></div>
-      <div class="stat"><div class="num">${s.structure_changed || 0}</div><div class="label">Structure Changed</div></div>
-      <div class="stat"><div class="num">${(s.added || 0) + (s.removed || 0)}</div><div class="label">Added / Removed</div></div>
+      <div class="stat"><div class="num">${different}</div><div class="label">Different</div></div>
+      <div class="stat"><div class="num">${(s.added || 0) + (s.removed || 0)}</div><div class="label">Not in Survey</div></div>
     </div>
     <div class="legend">
-      <span class="green">Identical to master</span>
-      <span class="yellow">Text changed</span>
-      <span class="red">Structure changed</span>
-      <span class="grey">Not in master / Not in survey</span>
+      <span class="green">Identical</span>
+      <span class="red">Different</span>
+      <span class="grey">Not in survey</span>
     </div>
   `;
 }
@@ -197,11 +196,8 @@ function renderFilters() {
       <select id="status-filter">
         <option value="all"${currentFilter === 'all' ? ' selected' : ''}>All</option>
         <option value="identical"${currentFilter === 'identical' ? ' selected' : ''}>Identical</option>
-        <option value="text_changed"${currentFilter === 'text_changed' ? ' selected' : ''}>Text Changed</option>
-        <option value="structure_changed"${currentFilter === 'structure_changed' ? ' selected' : ''}>Structure Changed</option>
-        <option value="added"${currentFilter === 'added' ? ' selected' : ''}>Added</option>
-        <option value="removed"${currentFilter === 'removed' ? ' selected' : ''}>Removed</option>
-        <option value="changed"${currentFilter === 'changed' ? ' selected' : ''}>Any Change</option>
+        <option value="different"${currentFilter === 'different' ? ' selected' : ''}>Different</option>
+        <option value="removed"${currentFilter === 'removed' ? ' selected' : ''}>Not in Survey</option>
       </select>
       <label for="search-box">Search:</label>
       <input type="text" id="search-box" placeholder="Question code or text..." value="${escapeHtml(searchTerm)}">
@@ -222,7 +218,8 @@ function renderQuestionRow(code) {
     const diff = codeDiffs[survey];
     if (diff) {
       const color = STATUS_COLOR[diff.status] || '';
-      const label = diff.status === 'removed' ? '—' : diff.status.replace('_', ' ');
+      const label = diff.status === 'removed' ? '—' :
+        (diff.status === 'text_changed' || diff.status === 'structure_changed') ? 'different' : diff.status;
       surveyCells += `<td class="cell-${color} clickable" onclick="toggleDetail('${code}')">
         <span class="status-badge badge-${diff.status}">${label}</span>
       </td>`;
