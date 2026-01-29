@@ -14,6 +14,8 @@
     --red-border: #cc4125;
     --grey: #d9d9d9;
     --grey-border: #999;
+    --lightgrey: #efefef;
+    --lightgrey-border: #ccc;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; color: #333; padding: 20px; background: #fafafa; }
@@ -54,6 +56,7 @@
   .cell-yellow { background: var(--yellow); }
   .cell-red { background: var(--red); }
   .cell-grey { background: var(--grey); }
+  .cell-lightgrey { background: var(--lightgrey); }
 
   .status-badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
   .badge-identical { background: var(--green); color: #274e13; }
@@ -63,16 +66,21 @@
   .badge-different { background: var(--red); color: #660000; }
   .badge-structure_changed { background: var(--red); color: #660000; }
   .badge-added { background: var(--grey); color: #333; }
-  .badge-removed { background: var(--grey); color: #333; }
+  .badge-removed { background: transparent; color: #999; font-weight: normal; }
 
   .detail-row { display: none; }
   .detail-row.open { display: table-row; }
   .detail-content { padding: 12px 16px; background: #fefefe; }
   .detail-content h4 { margin: 16px 0 8px; font-size: 14px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
   .detail-content h4:first-child { margin-top: 0; }
-  .detail-content table { margin: 4px 0 12px; font-size: 13px; }
+  .detail-content table { margin: 4px 0 12px; font-size: 12px; table-layout: fixed; width: 100%; }
   .detail-content td, .detail-content th { padding: 4px 8px; }
-  .detail-content .text-cell { max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+  .detail-content .text-cell { overflow: hidden; text-overflow: ellipsis; }
+  /* Consistent column widths for detail tables */
+  .detail-content .col-code { width: 120px; font-family: monospace; }
+  .detail-content .col-status { width: 100px; }
+  .detail-content .col-sim { width: 70px; text-align: right; }
+  .detail-content .col-text { min-width: 150px; }
 
   .clickable { cursor: pointer; }
   .clickable:hover { filter: brightness(0.95); }
@@ -93,7 +101,7 @@ const STATUS_COLOR = {
   text_changed: 'yellow',
   structure_changed: 'red',
   added: 'grey',
-  removed: 'grey'
+  removed: 'lightgrey'
 };
 
 let DATA = null;
@@ -214,11 +222,12 @@ function renderQuestionRow(code) {
     const diff = codeDiffs[survey];
     if (diff) {
       const color = STATUS_COLOR[diff.status] || '';
+      const label = diff.status === 'removed' ? '—' : diff.status.replace('_', ' ');
       surveyCells += `<td class="cell-${color} clickable" onclick="toggleDetail('${code}')">
-        <span class="status-badge badge-${diff.status}">${diff.status.replace('_', ' ')}</span>
+        <span class="status-badge badge-${diff.status}">${label}</span>
       </td>`;
     } else {
-      surveyCells += `<td class="cell-grey">—</td>`;
+      surveyCells += `<td class="cell-lightgrey">—</td>`;
     }
   }
 
@@ -243,45 +252,43 @@ function renderDetailContent(code) {
   const shortNames = DATA.meta.short_names;
   let html = '';
 
-  // Question Text Section
-  html += '<h4>Question</h4><table><tr><th>Language</th><th>Status</th><th>Similarity</th><th>Master Text</th>';
+  // Question Text Section (filtered to selected language)
+  html += '<h4>Question</h4><table><colgroup><col class="col-status"><col class="col-sim"><col class="col-text">';
+  for (const survey of DATA.meta.survey_names) html += '<col class="col-text">';
+  html += '</colgroup><tr><th>Status</th><th>Similarity</th><th>Master Text</th>';
   for (const survey of DATA.meta.survey_names) {
     html += `<th>${escapeHtml(shortNames[survey] || survey)} Text</th>`;
   }
   html += '</tr>';
 
-  for (const lang of DATA.meta.languages) {
-    const masterText = master ? (master.texts[lang] || '') : '';
-    let worstStatus = 'exact';
-    let worstSim = 1.0;
-    let surveyTexts = [];
+  const masterText = master ? (master.texts[currentLanguage] || '') : '';
+  let worstStatus = 'exact';
+  let worstSim = 1.0;
+  let surveyTexts = [];
 
-    for (const survey of DATA.meta.survey_names) {
-      const diff = codeDiffs[survey];
-      let surveyText = '';
-      if (diff && diff.text_diffs) {
-        for (const td of diff.text_diffs) {
-          if (td.language === lang) {
-            surveyText = td.new_text || '';
-            if (td.status === 'different') worstStatus = 'different';
-            else if (['similar', 'added', 'removed'].includes(td.status) && worstStatus === 'exact') worstStatus = td.status;
-            if (td.similarity < worstSim) worstSim = td.similarity;
-          }
+  for (const survey of DATA.meta.survey_names) {
+    const diff = codeDiffs[survey];
+    let surveyText = '';
+    if (diff && diff.text_diffs) {
+      for (const td of diff.text_diffs) {
+        if (td.language === currentLanguage) {
+          surveyText = td.new_text || '';
+          if (td.status === 'different') worstStatus = 'different';
+          else if (['similar', 'added', 'removed'].includes(td.status) && worstStatus === 'exact') worstStatus = td.status;
+          if (td.similarity < worstSim) worstSim = td.similarity;
         }
       }
-      surveyTexts.push(surveyText);
     }
-
-    html += `<tr><td>${lang}</td>`;
-    html += `<td><span class="status-badge badge-${worstStatus}">${worstStatus}</span></td>`;
-    html += `<td>${Math.round(worstSim * 100)}%</td>`;
-    html += `<td class="text-cell">${escapeHtml(truncate(masterText, 150)) || '—'}</td>`;
-    for (const st of surveyTexts) {
-      html += `<td class="text-cell">${escapeHtml(truncate(st, 150)) || '—'}</td>`;
-    }
-    html += '</tr>';
+    surveyTexts.push(surveyText);
   }
-  html += '</table>';
+
+  html += `<tr><td><span class="status-badge badge-${worstStatus}">${worstStatus}</span></td>`;
+  html += `<td>${Math.round(worstSim * 100)}%</td>`;
+  html += `<td class="text-cell">${escapeHtml(truncate(masterText, 150)) || '—'}</td>`;
+  for (const st of surveyTexts) {
+    html += `<td class="text-cell">${escapeHtml(truncate(st, 150)) || '—'}</td>`;
+  }
+  html += '</tr></table>';
 
   // Answer Options Section
   const allChoiceCodes = new Set();
@@ -296,7 +303,9 @@ function renderDetailContent(code) {
   }
 
   if (allChoiceCodes.size > 0) {
-    html += '<h4>Answer Options</h4><table><tr><th>Code</th><th>Status</th><th>Similarity</th><th>Master Text</th>';
+    html += '<h4>Answer Options</h4><table><colgroup><col class="col-code"><col class="col-status"><col class="col-sim"><col class="col-text">';
+    for (const survey of DATA.meta.survey_names) html += '<col class="col-text">';
+    html += '</colgroup><tr><th>Code</th><th>Status</th><th>Sim</th><th>Master Text</th>';
     for (const survey of DATA.meta.survey_names) {
       html += `<th>${escapeHtml(shortNames[survey] || survey)} Text</th>`;
     }
@@ -325,7 +334,7 @@ function renderDetailContent(code) {
         }
       }
 
-      html += `<tr><td>${escapeHtml(choiceCode)}</td>`;
+      html += `<tr><td class="col-code">${escapeHtml(choiceCode)}</td>`;
       html += `<td><span class="status-badge badge-${worstStatus}">${worstStatus.replace('_', ' ')}</span></td>`;
       html += `<td>${Math.round(worstSim * 100)}%</td>`;
       html += `<td class="text-cell">${escapeHtml(truncate(masterChoiceText, 100)) || '—'}</td>`;
@@ -357,7 +366,9 @@ function renderDetailContent(code) {
   }
 
   if (allRowCodes.size > 0) {
-    html += '<h4>Matrix Rows</h4><table><tr><th>Code</th><th>Status</th><th>Similarity</th><th>Master Text</th>';
+    html += '<h4>Matrix Rows</h4><table><colgroup><col class="col-code"><col class="col-status"><col class="col-sim"><col class="col-text">';
+    for (const survey of DATA.meta.survey_names) html += '<col class="col-text">';
+    html += '</colgroup><tr><th>Code</th><th>Status</th><th>Sim</th><th>Master Text</th>';
     for (const survey of DATA.meta.survey_names) {
       html += `<th>${escapeHtml(shortNames[survey] || survey)} Text</th>`;
     }
@@ -370,7 +381,7 @@ function renderDetailContent(code) {
         if (mr) masterRowText = mr.texts[currentLanguage] || '';
       }
 
-      html += `<tr><td>${escapeHtml(rowCode)}</td>`;
+      html += `<tr><td class="col-code">${escapeHtml(rowCode)}</td>`;
       html += `<td><span class="status-badge badge-identical">identical</span></td>`;
       html += `<td>100%</td>`;
       html += `<td class="text-cell">${escapeHtml(truncate(masterRowText, 100)) || '—'}</td>`;
@@ -402,7 +413,9 @@ function renderDetailContent(code) {
   }
 
   if (allColCodes.size > 0) {
-    html += '<h4>Matrix Columns</h4><table><tr><th>Code</th><th>Status</th><th>Similarity</th><th>Master Text</th>';
+    html += '<h4>Matrix Columns</h4><table><colgroup><col class="col-code"><col class="col-status"><col class="col-sim"><col class="col-text">';
+    for (const survey of DATA.meta.survey_names) html += '<col class="col-text">';
+    html += '</colgroup><tr><th>Code</th><th>Status</th><th>Sim</th><th>Master Text</th>';
     for (const survey of DATA.meta.survey_names) {
       html += `<th>${escapeHtml(shortNames[survey] || survey)} Text</th>`;
     }
@@ -415,7 +428,7 @@ function renderDetailContent(code) {
         if (mc) masterColText = mc.texts[currentLanguage] || '';
       }
 
-      html += `<tr><td>${escapeHtml(colCode)}</td>`;
+      html += `<tr><td class="col-code">${escapeHtml(colCode)}</td>`;
       html += `<td><span class="status-badge badge-identical">identical</span></td>`;
       html += `<td>100%</td>`;
       html += `<td class="text-cell">${escapeHtml(truncate(masterColText, 100)) || '—'}</td>`;
