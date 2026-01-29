@@ -365,7 +365,9 @@
                   {% if qd and qd.matrix_row_diffs %}
                     {% for rd in qd.matrix_row_diffs %}
                       {% if rd.code == row_code %}
-                        {% if rd.status in ('added', 'removed') and row_ns.worst == 'identical' %}{% set row_ns.worst = rd.status %}{% endif %}
+                        {% if rd.status == 'structure_changed' %}{% set row_ns.worst = 'structure_changed' %}
+                        {% elif rd.status == 'text_changed' and row_ns.worst not in ('structure_changed',) %}{% set row_ns.worst = 'text_changed' %}
+                        {% elif rd.status in ('added', 'removed') and row_ns.worst == 'identical' %}{% set row_ns.worst = rd.status %}{% endif %}
                       {% endif %}
                     {% endfor %}
                   {% endif %}
@@ -450,7 +452,9 @@
                   {% if qd and qd.matrix_column_diffs %}
                     {% for cd in qd.matrix_column_diffs %}
                       {% if cd.code == col_code %}
-                        {% if cd.status in ('added', 'removed') and col_ns.worst == 'identical' %}{% set col_ns.worst = cd.status %}{% endif %}
+                        {% if cd.status == 'structure_changed' %}{% set col_ns.worst = 'structure_changed' %}
+                        {% elif cd.status == 'text_changed' and col_ns.worst not in ('structure_changed',) %}{% set col_ns.worst = 'text_changed' %}
+                        {% elif cd.status in ('added', 'removed') and col_ns.worst == 'identical' %}{% set col_ns.worst = cd.status %}{% endif %}
                       {% endif %}
                     {% endfor %}
                   {% endif %}

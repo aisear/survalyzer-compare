@@ -366,9 +366,30 @@ function renderDetailContent(code) {
         if (mr) masterRowText = mr.texts[currentLanguage] || '';
       }
 
+      // Compute worst status from diffs
+      let worstStatus = 'identical';
+      let worstSim = 1.0;
+      for (const survey of DATA.meta.survey_names) {
+        const diff = codeDiffs[survey];
+        if (diff && diff.matrix_row_diffs) {
+          for (const rd of diff.matrix_row_diffs) {
+            if (rd.code === rowCode) {
+              if (rd.status === 'structure_changed') worstStatus = 'structure_changed';
+              else if (rd.status === 'text_changed' && worstStatus !== 'structure_changed') worstStatus = 'text_changed';
+              else if (['added', 'removed'].includes(rd.status) && worstStatus === 'identical') worstStatus = rd.status;
+              if (rd.text_diffs) {
+                for (const td of rd.text_diffs) {
+                  if (td.similarity < worstSim) worstSim = td.similarity;
+                }
+              }
+            }
+          }
+        }
+      }
+
       html += `<tr><td class="col-code">${escapeHtml(rowCode)}</td>`;
-      html += `<td><span class="status-badge badge-identical">identical</span></td>`;
-      html += `<td>100%</td>`;
+      html += `<td><span class="status-badge badge-${worstStatus}">${worstStatus.replace('_', ' ')}</span></td>`;
+      html += `<td>${Math.round(worstSim * 100)}%</td>`;
       html += `<td class="text-cell">${escapeHtml(truncate(masterRowText, 100)) || '—'}</td>`;
 
       for (const survey of DATA.meta.survey_names) {
@@ -413,9 +434,30 @@ function renderDetailContent(code) {
         if (mc) masterColText = mc.texts[currentLanguage] || '';
       }
 
+      // Compute worst status from diffs
+      let worstStatus = 'identical';
+      let worstSim = 1.0;
+      for (const survey of DATA.meta.survey_names) {
+        const diff = codeDiffs[survey];
+        if (diff && diff.matrix_column_diffs) {
+          for (const cd of diff.matrix_column_diffs) {
+            if (cd.code === colCode) {
+              if (cd.status === 'structure_changed') worstStatus = 'structure_changed';
+              else if (cd.status === 'text_changed' && worstStatus !== 'structure_changed') worstStatus = 'text_changed';
+              else if (['added', 'removed'].includes(cd.status) && worstStatus === 'identical') worstStatus = cd.status;
+              if (cd.text_diffs) {
+                for (const td of cd.text_diffs) {
+                  if (td.similarity < worstSim) worstSim = td.similarity;
+                }
+              }
+            }
+          }
+        }
+      }
+
       html += `<tr><td class="col-code">${escapeHtml(colCode)}</td>`;
-      html += `<td><span class="status-badge badge-identical">identical</span></td>`;
-      html += `<td>100%</td>`;
+      html += `<td><span class="status-badge badge-${worstStatus}">${worstStatus.replace('_', ' ')}</span></td>`;
+      html += `<td>${Math.round(worstSim * 100)}%</td>`;
       html += `<td class="text-cell">${escapeHtml(truncate(masterColText, 100)) || '—'}</td>`;
 
       for (const survey of DATA.meta.survey_names) {
