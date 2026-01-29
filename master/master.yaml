@@ -1,13 +1,15 @@
 KontaktCheck:
   element_type: Matrix
   texts:
-    en: Please check the following information about yourself and your innovation
-      project and correct it if necessary.
-    fr: Tout d’abord, veuillez vérifier les informations suivantes concernant votre
-      personne et votre projet d’innovation, et les corriger si nécessaire.
-    de-ch: Bitte überprüfen Sie als Erstes die folgenden Angaben zu Ihrer Person und
-      zu Ihrem Innovationsprojekt und korrigieren Sie diese, falls erforderlich.
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+    en: First of all, please check the following information about yourself, your
+      innovation project and your research institution and correct it if necessary.
+    fr: Veuillez tout d'abord vérifier les informations suivantes concernant votre
+      personne, votre projet d'innovation et votre institution de recherche et les
+      corriger si nécessaire.
+    de-ch: Bitte überprüfen Sie als Erstes die folgenden Angaben zu Ihrer Person,
+      zu Ihrem Innovationsprojekt und zu Ihrer Forschungsinstitution und korrigieren
+      Sie diese, falls erforderlich.
+  section_name: Angaben FE
   matrix_rows:
   - code: '1'
     texts:
@@ -36,12 +38,15 @@ KontaktCheck:
       en: 'Title of the project funded by Innosuisse:'
       fr: 'Titre du projet encouragé par Innosuisse:'
       de-ch: 'Titel des von Innosuisse geförderten Projektes:'
+  - code: '6'
+    texts:
+      de-ch: 'Übergeordnete Forschungsinstitution (Hochschule):'
+      en: 'Higher-level research institution (university):'
+      fr: 'Institution de recherche supérieure (université) :'
   matrix_columns:
   - code: '1'
     texts:
-      de-ch: <undefined> </undefined>
       fr: <undefined> </undefined>
-      en: '&nbsp;'
 UnternehmenArt:
   element_type: SingleChoice
   texts:
@@ -276,44 +281,42 @@ InnoArt:
 InnoTechOderSozial:
   element_type: SingleChoice
   texts:
-    en: Is the innovation from your Innosuisse-supported project primarily based on
-      ...
-    fr: L’innovation issue de votre projet encouragé par Innosuisse repose-t-elle
-      en premier lieu sur ...
-    de-ch: Beruht die Innovation aus Ihrem von Innosuisse geförderten Projekt primär
-      auf ...
-  section_name: Charakterisierung des Projekts
+    en: Is the research and innovation in your funded innovation project primarily
+      based on ...
+    fr: La recherche et l'innovation dans votre projet d'innovation subventionné reposent-elles
+      principalement sur ...<br>
+    de-ch: Beruht die Forschung und Innovation in Ihrem geförderten Innovationsprojekt
+      primär auf …
+  section_name: Charakterisierung (TRL ) + Komeptenzen
   choices:
   - code: '1'
     texts:
-      en: technology-oriented or scientific basics
+      en: technology-oriented or scientific fundamentals
       fr: des bases technologiques ou orientées vers les sciences naturelles
       de-ch: technologieorientierten oder naturwissenschaftlichen Grundlagen
   - code: '2'
     texts:
-      en: economic, social science or humanities basics
+      en: economic, social science or humanities fundamentals
       fr: des bases en sciences économiques, sociales ou humaines
       de-ch: wirtschafts-, sozial- oder geisteswissenschaftlichen Grundlagen
-  - code: '99'
-    texts:
-      de-ch: Das kann ich nicht beantworten
-      fr: Je ne peux pas répondre à cette question
-      en: I cannot answer this question
 AusmassRadikalitaet:
   element_type: Matrix
   texts:
-    en: Innovations can be incremental or radical in nature. Please indicate which
-      applies to your innovation pursued with the project.
-    fr: 'Les innovations peuvent être de nature incrémentale ou radicale. Veuillez
-      indiquer ce qui s’applique à l’innovation poursuivie dans le cadre du projet:'
-    de-ch: Innovationen können inkrementeller oder radikaler Natur sein. Bitte geben
-      Sie an, was auf Ihre mit dem Projekt verfolgte Innovation zutrifft.
-  section_name: Charakterisierung des Projekts
+    en: The innovations pursued by the project can be <strong>incremental or radical
+      in nature</strong>. Please indicate which applies to your innovation pursued
+      with the project.
+    fr: Les innovations poursuivies par le projet peuvent être de<strong> nature incrémentale
+      ou radicale</strong>. Veuillez indiquer ce qui s’applique à l’innovation poursuivie
+      dans le cadre du projet.
+    de-ch: Die mit dem Projekt verfolgten Innovationen können<strong> inkrementeller
+      oder radikaler Natur</strong> sein. Bitte geben Sie an, was aus Ihrer Sicht
+      auf die mit dem geförderten Projekt verfolgte Innovation zutrifft.
+  section_name: Charakterisierung (Surveyübergreifend)
   matrix_rows:
   - code: '1'
     texts:
       en: The innovation pursued with the project is ...
-      fr: L’innovation à laquelle le projet est voué est...
+      fr: L'innovation poursuivie par le projet est ...
       de-ch: Die mit dem Projekt verfolgte Innovation ist ...
   matrix_columns:
   - code: '1'
@@ -328,12 +331,12 @@ AusmassRadikalitaet:
       de-ch: inkrementell
   - code: '3'
     texts:
-      en: relatively incremental
+      en: rather incremental
       fr: plutôt incrémentale
       de-ch: eher inkrementell
   - code: '4'
     texts:
-      en: relatively radical
+      en: rather radical
       fr: plutôt radicale
       de-ch: eher radikal
   - code: '5'
@@ -346,14 +349,6 @@ AusmassRadikalitaet:
       en: very radical
       fr: fortement radicale
       de-ch: ausgesprochen radikal
-  - code: '99'
-    texts:
-      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
-        répondre à cette question</div>
-      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
-        nicht beantworten</div>
 AusmassDisruptivitaet:
   element_type: Matrix
   texts:
@@ -410,113 +405,170 @@ AusmassDisruptivitaet:
       de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
         nicht beantworten</div>
 Ergebnisse:
-  element_type: MultipleChoice
+  element_type: Matrix
   texts:
-    en: Has the supported project so far led to any of the following concrete results?
-    fr: Le projet encouragé a-t-il à ce jour abouti à l’un des résultats concrets
-      suivants ?
-    de-ch: DIESE FRAGE IST AUS HISTORISCHEN/DATENTECHNISCHEN GRünden Hier und wird
-      NIE angezeigt<br>Hat das geförderte Projekt bis jetzt zu einem der folgenden
-      konkreten Ergebnissen geführt?
-  section_name: Ergebnisse
-  choices:
+    de-ch: Welche <strong>konkreten Ergebnisse</strong> hat Ihre Forschungseinheit
+      mit dem abgeschlossenen Innovationsprojekt bis zum heutigen Zeitpunkt erreicht?
+    fr: Quels <strong>résultats concrets</strong> votre unité de recherche a-t-elle
+      obtenus à ce jour avec le projet d'innovation achevé ?
+    en: What <strong>concrete </strong><strong>results</strong> has your research
+      unit achieved with the completed innovation project to date?
+  section_name: Zielerreichung und Ergebnisse
+  matrix_rows:
+  - code: '0'
+    texts:
+      de-ch: '<strong>Wissenschaftliche Arbeiten</strong><div style="margin-left:
+        20px;">Bachelorarbeiten</div>'
+      en: '<strong>Scientific work </strong><div style="margin-left: 20px;">Bachelor
+        theses</div>'
+      fr: '<strong>Travaux scientifiques </strong><div style="margin-left: 20px;">Travaux
+        de bachelor</div>'
   - code: '1'
     texts:
-      en: Pilot and demonstration equipment
-      fr: Installations pilotes et de démonstration
-      de-ch: Pilot- und Demonstrationsanlagen
+      de-ch: '<div style="margin-left: 20px;">Masterarbeiten</div>'
+      en: '<div style="margin-left: 20px;">Master theses</div>'
+      fr: '<div style="margin-left: 20px;">Travaux de master</div>'
   - code: '2'
     texts:
-      de-ch: Konzept oder Dienstleistung umsetzungsreif
-      fr: Concept ou service prêt à être mis en œuvre
-      en: Concept or service ready to be implemented
+      de-ch: '<div style="margin-left: 20px;">Dissertationen</div>'
+      en: '<div style="margin-left: 20px;">Dissertations</div>'
+      fr: '<div style="margin-left: 20px;">Thèses de doctorat</div>'
   - code: '3'
     texts:
-      de-ch: Produkt, Konzept oder Dienstleistung auf dem Markt eingeführt
-      fr: Produit, concept ou service mis en œuvre sur le marché
-      en: Product, concept or service introduced to the market
+      de-ch: '<div style="margin-left: 20px;">Wissenschaftliche Publikationen (Double-Peer-Reviewed,
+        Peer-Reviewed)</div>'
+      en: '<div style="margin-left: 20px;">Scientific publications (Double-Peer Rewied,
+        Peer-Reviewed)</div>'
+      fr: '<div style="margin-left: 20px;">Publications scientifiques (évaluées, évaluées
+        par les pairs)</div>'
   - code: '4'
     texts:
-      en: Process innovation introduced in the organisation
-      fr: Processus mis en œuvre dans l'organisation
-      de-ch: Prozessinnovation in der Organisation eingeführt
+      de-ch: '<div style="margin-left: 20px;">Andere wissenschaftliche Publikationen</div>'
+      en: '<div style="margin-left: 20px;">Other scientific publications</div>'
+      fr: '<div style="margin-left: 20px;">Autres publications scientifiques</div>'
   - code: '5'
     texts:
-      en: Patent or patent application
-      fr: Brevet ou demande de brevet
-      de-ch: Patent oder Patentanmeldung
+      de-ch: '<strong>Forschung und Entwicklung</strong><div style="margin-left: 20px;">Anstellung
+        von Forschenden über das Projekt hinaus</div>'
+      en: '<strong>Research and development </strong><div style="margin-left: 20px;">Employment
+        of researchers beyond the scope of the project</div>'
+      fr: '<strong>Recherche et développement </strong><div style="margin-left: 20px;">Engagement
+        de chercheurs au-delà du projet</div>'
   - code: '6'
     texts:
-      en: Trademark or design rights
-      fr: Droits sur les marques ou les modèles
-      de-ch: Rechte an Marken oder Design
+      de-ch: '<div style="margin-left: 20px;">Pilot- und Demonstrationsanlagen</div>'
+      en: '<div style="margin-left: 20px;">Pilot and demonstration plants</div>'
+      fr: '<div style="margin-left: 20px;">Installations pilotes et de démonstration</div>'
   - code: '7'
     texts:
-      en: Licences
-      fr: Licences
-      de-ch: Lizenzen
+      de-ch: '<div style="margin-left: 20px;">Weitere Veröffentlichungen (Software,
+        Daten, etc.)</div>'
+      en: '<div style="margin-left: 20px;">Other publications (software, data, etc.)</div>'
+      fr: '<div style="margin-left: 20px;">Autres publications (logiciels, données,
+        etc.)</div>'
   - code: '8'
     texts:
-      en: 'Other, please specify:'
-      fr: 'Autres, veuillez préciser:'
-      de-ch: 'Anderes, bitte präzisieren:'
+      de-ch: '<strong>Wissens- und Technologietransfer</strong><div style="margin-left:
+        20px;">Ko-Publikationen mit Umsetzungspartner</div>'
+      en: '<strong>Knowledge and technology transfer </strong><div style="margin-left:
+        20px;">Co-publications with implementation partners</div>'
+      fr: '<strong>Transfert de connaissances et de technologies </strong><div style="margin-left:
+        20px;">Co-publications avec des partenaires de mise en œuvre</div>'
+  - code: '9'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Lizenzvereinbarungen</div>'
+      en: '<div style="margin-left: 20px;">Licensing agreements</div>'
+      fr: '<div style="margin-left: 20px;">Accords de licence</div>'
+  - code: '10'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Transfer von Forschungspersonal zu Umsetzungspartner</div>'
+      en: '<div style="margin-left: 20px;">Transfer of research staff to implementation
+        partners</div>'
+      fr: '<div style="margin-left: 20px;">Transfert de personnel de recherche vers
+        des partenaires de mise en œuvre</div>'
+  - code: '11'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Transfer von Mitarbeiter:innen von Umsetzungspartnern
+        zu Forschungspartner</div>'
+      en: '<div style="margin-left: 20px;">Transfer of staff from implementation partners
+        to research partners</div>'
+      fr: '<div style="margin-left: 20px;">Transfert de collaborateurs/trices de partenaires
+        de mise en œuvre à des partenaires de recherche</div>'
+  - code: '12'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Kooperation mit nichtgewinnorientierten
+        Organisationen (NGO''s, Stiftungen, ohne öffentliche Verwaltungen)</div>'
+      en: '<div style="margin-left: 20px;">Cooperation with non-profit organisations
+        (NGOs, foundations, excluding public administrations)</div>'
+      fr: '<div style="margin-left: 20px;">Coopération avec des organisations à but
+        non lucratif (ONG, fondations, sans les administrations publiques)</div>'
+  matrix_columns:
+  - code: laufend
+    texts:
+      de-ch: laufend/geplant
+      fr: en cours/planifié
+      en: ongoing/planned
+  - code: abgeschlossen
+    texts:
+      de-ch: abgeschlossen
+      fr: achevé
+      en: completed
+  - code: keine
+    texts:
+      de-ch: keine<br>
+      fr: aucun
+      en: none
 ProjektStand:
   element_type: SingleChoice
   texts:
-    de-ch: Wie beurteilen Sie das bei Projektabschluss erreichte Ziel der kommerziellen
-      Nutzung der Projektergebnisse und die weitere Umsetzung auf dem Markt?
-    en: How do you assess at the end of the project the achieved goal of commercial
-      utilisation of the project results and the further implementation on the market?
-    fr: Comment évaluez-vous, à la fin du projet, la réalisation de l'objectif d'utilisation
-      commerciale des résultats du projet et la poursuite de la mise en œuvre sur
-      le marché ?
-  section_name: Ergebnisse
+    en: From the point of view of your research unit, how do you assess the implementation
+      and utilisation possibilities of the results at the end of the project?
+    fr: Du point de vue de votre unité de recherche, comment évaluez-vous les possibilités
+      de mise en œuvre et d'utilisation des résultats à la fin du projet ?
+    de-ch: Wie beurteilen Sie aus Sicht Ihrer Forschungseinheit die Umsetzungs- und
+      Nutzungsmöglichkeiten der Ergebnisse beim Projektabschluss? 
+  section_name: BeurteilungUmsetzungsmöglichkeien
   choices:
   - code: '1'
     texts:
-      de-ch: Die Projektergebnisse sind noch nicht so weit fortgeschritten, um über
-        eine mögliche Anwendung entscheiden zu können.
-      en: The project results are not yet sufficiently advanced to be able to decide
-        on a possible application.
-      fr: Les résultats du projet ne sont pas encore suffisamment avancés pour pouvoir
-        décider d'une éventuelle application.
+      fr: Les résultats du projet ne sont pas encore suffisamment avancés pour que
+        l'on puisse décider des prochaines étapes de développement pour une éventuelle
+        application ; nous devons encore clarifier des questions de recherche fondamentales.
+      en: The project results are not yet so far advanced that one can decide on the
+        next development steps for a possible application; we still have to clarify
+        fundamental research questions.
+      de-ch: Die Projektergebnisse sind noch nicht so weit fortgeschritten, dass man
+        über die nächsten Entwicklungsschritte für eine mögliche Anwendung entscheiden
+        kann; wir müssen noch grundlegende Forschungsfragen klären.
   - code: '4'
     texts:
-      de-ch: Die Machbarkeit der Projektziele wurde geprüft und konkrete Umsetzungsschritte
-        sind möglich.
-      en: The feasibility of the project goals has been examined and concrete implementation
-        steps are possible.
-      fr: La faisabilité des objectifs du projet a été vérifiée et des étapes concrètes
-        de mise en œuvre sont possibles.
+      de-ch: Die Machbarkeit der Projektziele wurde geprüft und diese Prüfung zeigt,
+        dass konkrete Umsetzungsschritte durchaus möglich sind.
+      fr: La faisabilité des objectifs du projet a été vérifiée et cette vérification
+        montre que des étapes concrètes de mise en œuvre sont tout à fait possibles.
+      en: The feasibility of the project goals was examined and this examination shows
+        that concrete implementation steps are definitely possible.
   - code: '6'
     texts:
-      de-ch: Schlüssige Ergebnisse ermöglichen es, konkrete und weitere Umsetzungsschritte
-        vorzunehmen.
-      en: Conclusive results make it possible to take concrete and further implementation
-        steps.
-      fr: Des résultats concluants permettent de prendre des mesures concrètes et
-        supplémentaires de mise en œuvre.
+      de-ch: Es wurden schlüssige Ergebnisse erzielt, die es ermöglichen, konkrete
+        und weitere Umsetzungsschritte vorzunehmen.
+      fr: Des résultats concluants ont été obtenus, qui permettent d'entreprendre
+        des étapes de mise en œuvre concrètes et ultérieures.<br>
+      en: Conclusive results have been achieved that make it possible to take concrete
+        and further implementation steps.
   - code: '7'
     texts:
-      de-ch: Das Projekt befindet sich konkret in de Umsetzungs- und Einführungsphase
-        (intern oder auf dem Markt).
-      en: The project is currently in the implementation and introduction phase (internally
-        or on the market).
-      fr: Le projet est concrètement en phase de réalisation et de lancement (en interne
-        ou sur le marché).
+      en: The project is currently in the implementation and introduction phase.
+      fr: Le projet est concrètement en phase de réalisation et de lancement.
+      de-ch: Das Projekt befindet sich konkret in der Umsetzungs- und Einführungsphase.
   - code: '8'
     texts:
-      de-ch: Das Projekt wurde erfolgreich in der Organisation umgesetzt und generiert
-        Umsatz und/oder stärkt die Leistung der Organisation.
-      en: The project has been successfully implemented in the organisation and generates
-        sales and/or strengthens the performance of the organisation.
-      fr: Le projet a été mis en œuvre avec succès dans l'organisation et génère des
-        revenus et/ou renforce les performances de l'organisation.
-  - code: '99'
-    texts:
-      de-ch: Das kann ich nicht beantworten
-      fr: Je ne peux pas répondre à cette question
-      en: I cannot answer this question
+      en: The project has been successfully implemented and generates sales for the
+        implementation partner,
+      fr: Le projet a été mis en œuvre avec succès et génère des revenus chez le partenaire
+        de mise en œuvre.
+      de-ch: Das Projekt wurde erfolgreich umgesetzt und generiert beim Umsetzungspartner
+        Umsatz.
 ErgebnisAnlagenPrototyp:
   element_type: SingleChoice
   texts:
@@ -546,59 +598,60 @@ ErgebnisAnlagenPrototyp:
 IPRErgebnisse:
   element_type: Matrix
   texts:
-    de-ch: Haben die Ergebnisse des Projekts zu Eigentumsrechten geführt oder sind
-      solche geplant?
     en: Have the results of the project led to property rights or are such rights
-      planned?
+      planned&nbsp;(in your research institution or at the implementation partner)?
     fr: Les résultats du projet ont-ils donné lieu à des droits de propriété ou de
-      tels droits sont-ils prévus ?
-  section_name: Ergebnisse
+      tels droits sont-ils prévus (dans votre institution de recherche ou chez le
+      partenaire de mise en œuvre) ?
+    de-ch: Haben die Ergebnisse des Projekts zu Eigentumsrechten geführt oder sind
+      solche geplant (in Ihrer Forschungsinstitution oder beim Umsetzungspartner)?<br>
+  section_name: IPR (Rest)
   matrix_rows:
   - code: '1'
     texts:
-      de-ch: Patent / Patentanmeldungen
       en: Patent / Patent applications
       fr: Brevet / Demandes de brevet
+      de-ch: Patent / Patentanmeldungen
   - code: '2'
     texts:
       de-ch: Trademarks / Urheberrechte / Designrechte
-      en: Trademarks / copyrights / design rights
       fr: Marques déposées / droits d'auteur / droits sur les dessins et modèles
+      en: Trademarks / copyrights / design rights
   - code: '3'
     texts:
-      de-ch: <strong>In-licensing </strong><br>(Rechte zur Nutzung, Entwicklung oder
+      de-ch: <strong>In-licensing</strong><br>(Rechte zur Nutzung, Entwicklung oder
         Kommerzialisierung von geistigem Eigentum, welches sich im Besitz einer anderen
         Organisation befindet)<br><br>
-      en: <strong>In-licensing </strong><br>(rights to use, develop or commercialise
-        intellectual property owned by another organisation)
-      fr: <strong>In-licensing </strong><br>(droits d'utiliser, de développer ou de
+      fr: <strong>In-licensing </strong><br>(droits d'utiliser, de développer ou de
         commercialiser la propriété intellectuelle détenue par une autre organisation)
+      en: <strong>In-licensing </strong><br>(rights to use, develop or commercialise
+        intellectual property owned by another organisation)
   - code: '4'
     texts:
       de-ch: <strong>Out-licensing </strong><br>(Einräumung von Rechten zur Nutzung,
         Entwicklung oder Kommerzialisierung des eigenen geistigen Eigentums an eine
         andere Organisation)
-      en: <strong>Out-licensing </strong><br>(granting rights to use, develop or commercialise
-        one's own intellectual property to another organisation)
-      fr: <strong>Out-licensing </strong><br>(octroi de droits d'utilisation, de développement
+      fr: <strong>Out-licensing </strong><br>(octroi de droits d'utilisation, de développement
         ou de commercialisation de sa propre propriété intellectuelle à une autre
         organisation)
+      en: <strong>Out-licensing </strong><br>(granting rights to use, develop or commercialise
+        one's own intellectual property to another organisation)
   matrix_columns:
   - code: '6'
     texts:
-      de-ch: ja, bereits erfolgt<br>
       en: yes, already done
       fr: oui, déjà fait
+      de-ch: ja, bereits erfolgt
   - code: '4'
     texts:
-      de-ch: ja, geplant<br>
       en: yes, planned
       fr: oui, prévu
+      de-ch: ja, geplant
   - code: '1'
     texts:
-      de-ch: nein
       en: 'no'
       fr: non
+      de-ch: nein
 FoParZusArbeitWeiter:
   element_type: SingleChoice
   texts:
@@ -1129,18 +1182,18 @@ WirkProjekt:
 Nachhaltigkeit:
   element_type: Matrix
   texts:
-    en: Can the project or project idea supported by Innosuisse contribute to<strong> ecological
+    en: Can the project or project idea supported by Innosuisse contribute to<strong> environmental
       and/or social sustainability</strong>?
     fr: Le projet ou l’idée de projet soutenu par Innosuisse peut-il apporter une
       contribution à la <strong>durabilité écologique et/ou sociale</strong> à l’avenir ?
     de-ch: Kann das von Innosuisse geförderte Projekt oder die Projektidee einen Beitrag
-      zur <strong>ökologischen und/oder sozialen Nachhaltigkeit </strong>leisten?
-  section_name: Weitere, nicht ökonomische Wirkungen
+      zur<strong> ökologischen und/oder sozialen Nachhaltigkeit </strong>leisten?
+  section_name: Charakterisierung (Surveyübergreifend)
   matrix_rows:
   - code: '1'
     texts:
       en: In terms of <strong>environmental sustainability</strong>, the project or
-        project idea makes...
+        project idea makes ...
       fr: En matière de <strong>durabilité environnementale</strong>, le projet ou
         l’idée de projet …
       de-ch: An die <strong>ökologische Nachhaltigkeit </strong>leistet das Projekt
@@ -1152,7 +1205,7 @@ Nachhaltigkeit:
       fr: En matière de <strong>durabilité sociale</strong>, le projet ou l’idée de
         projet ...
       de-ch: An die <strong>soziale Nachhaltigkeit</strong> leistet das Projekt oder
-        die Projektidee  ...
+        die Projektidee ...
   matrix_columns:
   - code: '1'
     texts:
@@ -1166,12 +1219,12 @@ Nachhaltigkeit:
       de-ch: einen geringen Beitrag
   - code: '3'
     texts:
-      en: a relatively small contribution
+      en: a rather small contribution
       fr: apporte une contribution assez faible
       de-ch: einen eher geringen Beitrag
   - code: '4'
     texts:
-      en: a relatively big contribution
+      en: a rather big contribution
       fr: apporte une contribution assez élevée
       de-ch: einen eher hohen Beitrag
   - code: '5'
@@ -1184,22 +1237,15 @@ Nachhaltigkeit:
       en: a very big contribution
       fr: apporte une contribution très élevée
       de-ch: einen sehr hohen Beitrag
-  - code: '99'
-    texts:
-      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
-        répondre à cette question</div>
-      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
-        nicht beantworten</div>
 NachhaltigkeitOffen:
   element_type: OpenQuestion
   texts:
-    en: 'Please describe the contribution to sustainability in a few sentences:'
-    fr: 'Veuillez décrire la contribution à la durabilité en quelques phrases :'
     de-ch: 'Bitte umschreiben Sie den Beitrag zur Nachhaltigkeit in einigen wenigen
       Sätzen:'
-  section_name: Weitere, nicht ökonomische Wirkungen
+    en: 'Please describe the contribution to sustainability in a few sentences:'
+    fr: 'Veuillez décrire ci-dessous en quoi consiste la contribution apportée en
+      termes de durabilité :'
+  section_name: Charakterisierung (Surveyübergreifend)
 WirtNutzenPotenzial:
   element_type: Matrix
   texts:
@@ -1390,76 +1436,188 @@ GesamtNutzen:
 Additionalitaet:
   element_type: SingleChoice
   texts:
-    de-ch: Hätten Sie Ihr Innovationsprojekt auch <strong>ohne die Innovationsförderung
-      von Innosuisse</strong>&nbsp;durchgeführt?
-    en: Would you have carried out your innovation project even <strong>without the
-      innovation support from Innosuisse</strong>?
-    fr: Auriez-vous réalisé votre projet d'innovation <strong>même sans le soutien
-      d'Innosuisse</strong>&nbsp;?
-  section_name: Nutzen
+    en: Would you have carried out the project even without project funding from Innosuisse{{custom.TextAdditional}}?
+    fr: Auriez-vous réalisé le projet même sans financement de projet par Innosuisse{{custom.TextAdditional}}
+      ?
+    de-ch: Hätten Sie das Projekt auch ohne Projektfinanzierung durch die Innosuisse{{custom.TextAdditional}}
+      durchgeführt?
+  section_name: Erfolg und Additionalität
   choices:
   - code: '6'
     texts:
-      de-ch: Ja, im gleichen Umfang
+      de-ch: Ja, in gleichem Umfang
       en: Yes, to the same extent
       fr: Oui, dans la même mesure
   - code: '5'
     texts:
-      de-ch: Ja, in etwas reduziertem Umfang
-      en: Yes, to a somewhat reduced extent
-      fr: Oui, dans une mesure quelque peu réduite
+      de-ch: Ja, in etwas geringerem Umfang
+      en: Yes, to a slightly lesser extent
+      fr: Oui, dans une mesure légèrement moindre
   - code: '4'
     texts:
-      de-ch: Ja, in stark reduziertem Umfang
-      en: Yes, to a greatly reduced extent
-      fr: Oui, dans une mesure très réduite
+      de-ch: Ja, in deutlich geringerem Umfang
+      en: Yes, to a much lesser extent
+      fr: Oui, dans une mesure nettement moindre
   - code: '1'
     texts:
-      de-ch: Nein
-      en: 'No'
-      fr: Non
-  - code: '99'
-    texts:
-      de-ch: Das kann ich nicht beantworten
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
+      de-ch: Nein, wir hätten das Projekt nicht durchgeführt
+      en: No, we would not have carried out the project
+      fr: Non, nous n'aurions pas réalisé le projet
 ZielErreichung:
   element_type: Matrix
   texts:
-    en: Have the technical and content-related project goals been achieved at the
-      end of the project?
-    fr: Du point de vue technique, les objectives du projet encouragé par Innosuisse
-      ont-elles été atteints ?
-    de-ch: Sind die technischen und inhaltlichen Projektziele bei Projektabschluss
-      erreicht worden?
-  section_name: Projekterfolg und Abschluss
+    en: 'From the point of view of your research unit: Were the objectives of the
+      project achieved in the strategically important areas of research, application
+      and implementation that you mentioned above?'
+    fr: Du point de vue de votre unité de recherche, les objectifs du projet ont-ils
+      été atteints pour les thèmes stratégiques importants que vous avez mentionnés
+      plus haut dans le domaine de la recherche ou de l'application et de la mise
+      en œuvre ?
+    de-ch: 'Aus Sicht Ihrer Forschungseinheit: Wurden die Ziele des Projektes bei
+      den von Ihnen, weiter oben genannten strategisch wichtigen Themen im Bereich
+      Forschung respektive der Anwendung und Umsetzung erreicht?'
+  section_name: Zielerreichung und Ergebnisse
   matrix_rows:
-  - code: '1'
+  - code: '3'
     texts:
-      en: The technical and content-related goals were ...
-      fr: Les objectives techniques et de contenu ont été
-      de-ch: Die technischen und inhaltlichen Ziele wurden ...
+      de-ch: '<div style="margin-left: 20px;"><span style="font-size: 1rem;">Stärkung
+        der eher grundlagenorientierten Forschung</span></div>'
+      fr: '<div style="margin-left: 20px;">Renforcement la recherche plutôt fondamentale</div>'
+      en: '<div style="margin-left: 20px;">Strengthening more basic research</div>'
+  - code: '4'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Stärkung der eher anwendungsorientierten
+        Forschung und Entwicklung</div>'
+      fr: '<div style="margin-left: 20px;">Renforcement de la recherche et du développement
+        plutôt orientés vers les applications</div>'
+      en: '<div style="margin-left: 20px;">Strengthening of more application-oriented
+        research and development</div>'
+  - code: '5'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Akademische Qualifikationen (Master,
+        PhD, Postdoc) und Stärkung von akademischen Laufbahnen</div>'
+      fr: '<div style="margin-left: 20px;">Qualifications académiques (master, PhD,
+        postdoc) et renforcement des carrières académiques</div>'
+      en: '<div style="margin-left: 20px;">Academic qualifications (Master, PhD, Postdoc)
+        and strengthening of academic careers</div>'
+  - code: '6'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Verfassen von wissenschaftlichen Publikationen
+        (reviewed, peer reviewed)</div>'
+      fr: '<div style="margin-left: 20px;">Rédaction de publications scientifiques
+        (évaluées, évaluées par les pairs)</div>'
+      en: '<div style="margin-left: 20px;">Writing scientific publications (reviewed,
+        peer reviewed)</div>'
+  - code: '7'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Einbringen von Drittmittteln für die
+        Finanzierung der Forschung</div>'
+      fr: '<div style="margin-left: 20px;">Obtention de fonds de tiers pour le financement
+        de la recherche</div>'
+      en: '<div style="margin-left: 20px;">Raising third-party funding to finance
+        research</div>'
+  - code: '8'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Weitere Themen der Forschung: {{StrategischeZiele_6_text}}</div>'
+      fr: '<div style="margin-left: 20px;">Autres thèmes de recherche : {{StrategischeZiele_6_text}}</div>'
+      en: '<div style="margin-left: 20px;">Other research themes: {{StrategischeZiele_6_text}}</div>'
+  - code: '9'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Transferieren von Forschungsergebnissen
+        in Markt und in Praxis</div>'
+      fr: '<div style="margin-left: 20px;">Transfert des résultats de la recherche
+        sur le marché et dans la pratique</div>'
+      en: '<div style="margin-left: 20px;">Transferring research results into the
+        market and into practice</div>'
+  - code: '10'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Gewinnen von Erfahrungen aus Wirtschaft
+        und Praxis für die Forschung</div>'
+      fr: '<div style="margin-left: 20px;">Obtenir des expériences de l''économie
+        et de la pratique pour la recherche</div>'
+      en: '<div style="margin-left: 20px;">Gaining experience from business and practice
+        for research</div>'
+  - code: '11'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Vorbereiten einer Spin-off/Start-up
+        Gründung</div>'
+      fr: '<div style="margin-left: 20px;">Préparer la création d''une spin-off/start-up</div>'
+      en: '<div style="margin-left: 20px;">Preparing a spin-off/start-up foundation</div>'
+  - code: '12'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Stärken einer nicht akademischen Karriere
+        von Projektmitarbeiter:innen</div>'
+      fr: '<div style="margin-left: 20px;">Renforcement de la carrière non académique
+        des collaborateurs/trices du projet</div>'
+      en: '<div style="margin-left: 20px;">Strengthening a non-academic career of
+        project members</div>'
+  - code: '13'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Stärken der Zusammenarbeit mit Umsetzungspartner(n)
+        oder Spin-off</div>'
+      fr: '<div style="margin-left: 20px;">Renforcement de la collaboration avec les
+        partenaires de mise en œuvre ou spin-off</div>'
+      en: '<div style="margin-left: 20px;">Strengthening cooperation with implementation
+        partner(s) or spin-off</div>'
+  - code: '14'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Sicherung des geistigen Eigentums /
+        Patentanmeldung</div>'
+      fr: '<div style="margin-left: 20px;">Sécurisation de la propriété intellectuelle
+        / dépôt de brevet</div>'
+      en: '<div style="margin-left: 20px;">Securing intellectual property / patent
+        application</div>'
+  - code: '15'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Vorbereiten eines Folgeprojektes mit
+        einem Umsetzungspartner</div>'
+      fr: '<div style="margin-left: 20px;">Préparation d''un projet de suivi avec
+        un partenaire de valorisation</div>'
+      en: '<div style="margin-left: 20px;">Preparing a follow-up project with an implementation
+        partner</div>'
+  - code: '16'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Weitere Themen der Anwendung und Umsetzung
+        {{StrategischeZiele_14_text}}</div>'
+      fr: '<div style="margin-left: 20px;">Autres thèmes d''application et de mise
+        en œuvre {{StrategischeZiele_14_text}}</div>'
+      en: '<div style="margin-left: 20px;">Other topics of application and implementation
+        {{StrategischeZiele_14_text}}</div>'
+  - code: FoGes
+    texts:
+      en: <br>The objectives in the area of research were <strong>overall ...</strong>
+      fr: <br>Les objectifs en matière de recherche ont été <strong>globalement ...</strong>
+      de-ch: <br>Die Ziele im Bereich Forschung wurden <strong>insgesamt</strong>
+        ...
+  - code: AnGes
+    texts:
+      de-ch: Die Ziele im Bereich Anwendung und Umsetzung wurden <strong>insgesamt</strong>
+        ...
+      en: The objectives in the area of application and implementation <strong>were
+        overall ...</strong>
+      fr: Les objectifs en matière d'application et de mise en œuvre ont été <strong>globalement
+        ...</strong>
   matrix_columns:
   - code: '1'
     texts:
-      en: not achieved
-      fr: pas atteints
-      de-ch: nicht erreicht
+      en: not achieved at all
+      fr: pas du tout atteints
+      de-ch: überhaupt nicht erreicht
   - code: '2'
     texts:
-      en: little achieved
-      fr: peu atteints
-      de-ch: wenig erreicht
+      en: not achieved
+      fr: non-atteints
+      de-ch: nicht erreicht
   - code: '3'
     texts:
-      en: rather little achieved
-      fr: plutôt peu atteints
-      de-ch: eher wenig erreicht
+      en: rather not achieved
+      fr: plutôt non-atteints
+      de-ch: eher nicht erreicht
   - code: '4'
     texts:
-      en: achieved by majority
-      fr: majoritairement atteints
-      de-ch: mehrheitlich erreicht
+      en: rather achieved
+      fr: plutôt atteints
+      de-ch: eher erreicht
   - code: '5'
     texts:
       en: fully achieved
@@ -1470,21 +1628,6 @@ ZielErreichung:
       en: exceeded
       fr: surpassés
       de-ch: übertroffen
-  - code: '99'
-    texts:
-      de-ch: '<div style="border-left:1px solid black;padding-left:4px;">Das kann
-        ich nicht beantworten</div>
-
-        '
-      fr: '<div style="border-left:1px solid black;padding-left:4px;">
-
-        Je ne peux pas répondre à cette question</div>
-
-        '
-      en: '<div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-
-        '
 ZielNichtGrund:
   element_type: MultipleChoice
   texts:
@@ -1552,59 +1695,47 @@ ZielNichtGrund:
 ErfolgBewertung:
   element_type: Matrix
   texts:
-    en: How do you assess the supported project from your organisation's point of
-      view?
-    fr: Comment évalueriez-vous le projet encouragé du point de vue de votre organisation ?
-    de-ch: Wie beurteilen Sie das geförderte Projekt aus Sicht Ihrer Organisation?
-  section_name: Projekterfolg und Abschluss
+    en: How do you assess the success of the project in general?
+    fr: D'une manière générale, comment jugez-vous le succès du projet ?
+    de-ch: 'Wie beurteilen Sie generell den Erfolg des Projektes? '
+  section_name: Erfolg und Additionalität
   matrix_rows:
   - code: '1'
     texts:
-      en: The project was…
-      fr: Le projet est ...
-      de-ch: Das Projekt ist  ...
+      de-ch: Der Erfolg des  Projekts ist ...<br>
+      fr: Le succès du projet est ...
+      en: The success of the project is ...
   matrix_columns:
   - code: '1'
     texts:
-      en: not successful
-      fr: un échec
-      de-ch: kein Erfolg
+      en: not existing
+      fr: inexistant
+      de-ch: nicht vorhanden<br>
   - code: '2'
     texts:
-      en: a small success
-      fr: un succès restreint
-      de-ch: ein geringer Erfolg
+      de-ch: gering
+      en: low
+      fr: faible
   - code: '3'
     texts:
-      en: a rather small success
-      fr: un succès plutôt restreint
-      de-ch: ein eher geringer Erfolg
+      de-ch: eher gering
+      en: rather low
+      fr: plutôt faible
   - code: '4'
     texts:
-      en: a rather big success
-      fr: un succès plutôt important
-      de-ch: ein eher grosser Erfolg
+      de-ch: eher gross<br>
+      en: rather high
+      fr: plutôt élevé
   - code: '5'
     texts:
-      en: a big success
-      fr: un succès important
-      de-ch: ein grosser Erfolg
+      de-ch: gross<br>
+      en: high
+      fr: élevé
   - code: '6'
     texts:
-      en: a very big success
-      fr: un succès très important
-      de-ch: ein sehr grosser Erfolg
-  - code: '99'
-    texts:
-      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-      fr: '<div style="border-left:1px solid black;padding-left:4px;">
-
-        Je ne peux pas répondre à cette question</div>
-
-        '
-      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
-        nicht beantworten</div>
+      de-ch: sehr gross (über den Erwartungen)
+      en: Very high (above expectations)
+      fr: très élevé (supérieur aux attentes)
 Stellenwert:
   element_type: Matrix
   texts:
@@ -1735,19 +1866,20 @@ Involvement:
 FeedbackOffen:
   element_type: OpenQuestion
   texts:
-    en: 'Thank you for sharing your feedback, comments and suggestions on the survey:'
-    fr: 'Nous vous remercions de nous faire part de vos réactions, commentaires et
-      suggestions :'
-    de-ch: 'Vielen Dank, wenn Sie uns nachfolgend Ihre Rückmeldungen, Kommentare und
-      Anregungen zur Umfrage mitteilen:'
-  section_name: Projekterfolg und Abschluss
+    en: The following response field is available for feedback, comments and suggestions
+      on the survey.
+    fr: Le champ de réponse suivant est à votre disposition pour vos réactions, commentaires
+      et suggestions concernant l'enquête.
+    de-ch: Das nachfolgende Antwortfeld, steht Ihnen für Rückmeldungen, Kommentare
+      und Anregungen zur Umfrage zur Verfügung.
+  section_name: Zufriedenheit
 FeedbackArt:
   element_type: MultipleChoice
   texts:
-    de-ch: Handelt es sich bei Ihrer Rückmeldung um eine/einen ... ?
+    de-ch: Handelt es sich bei Ihrer Rückmeldung um eine/einen ... 
     en: Is your feedback a/an ... ?
     fr: Votre feed-back concerne-t-il un/une ... ?
-  section_name: Projekterfolg und Abschluss
+  section_name: Zufriedenheit
   choices:
   - code: '1'
     texts:
@@ -1767,15 +1899,15 @@ FeedbackArt:
 GenerelleEmail:
   element_type: OpenQuestion
   texts:
-    en: Please provide us with a general e-mail address for your organisation (i.e.,
+    en: Please provide us with a general e-mail address for your organisation (i.e.
       an e-mail address not tied to an individual).
-    fr: 'Veuillez nous indiquer une adresse électronique neutre de votre organisation
-      (c’est-à-dire non liée à une personne):'
+    fr: 'Veuillez nous indiquer une adresse email neutre de votre organisation (c’est-à-dire
+      non liée à une personne):'
     de-ch: 'Bitte geben Sie uns eine generelle E-Mail-Adresse Ihrer Organisation an
       (d.h. eine nicht an eine Person gebundene E-Mail-Adresse).
 
       '
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_name: Angaben FE
 Spinoff:
   element_type: SingleChoice
   texts:
@@ -1840,45 +1972,46 @@ PersonalImProjekt:
       fr: Moyenne annuelle des équivalents temps plein
       de-ch: Durchschnittliche jährliche Vollzeitäquivalente
 Treiber:
-  element_type: SingleChoice
+  element_type: Matrix
   texts:
     en: Where did the impulse or the initiative for the funded innovation project
       come from?
     fr: D'où est venue l'impulsion ou l'initiative pour le projet d'innovation encouragé
-      ?
+      ?<br>
     de-ch: Woher kam der Impuls respektive die Initiative für das geförderte Innovationsprojekt?
-  section_name: Charakterisierung des Projekts
-  choices:
+  section_name: ProjektLancierung fur MitUP
+  matrix_rows:
+  - code: Impuls
+    texts:
+      de-ch: Der Impuls kam vom<br>
+      fr: L'impulsion est venue du
+      en: The impulse came from
+  matrix_columns:
   - code: '1'
     texts:
-      de-ch: Von unserer Organisation
-      fr: De notre organisation
-      en: From our organisation
+      de-ch: Umsetzungspartner<br>
+      fr: Partenaire de mise en œuvre
+      en: Implementation partner
   - code: '2'
     texts:
-      en: On the part of the research partner(s) involved
-      fr: De la part du/des partenaire(s) de recherche impliqué(s)
-      de-ch: Seitens des/der beteiligten Forschungspartner(s)
+      en: Research partner
+      fr: Partenaires de recherche
+      de-ch: Forschungspartner
   - code: '3'
     texts:
-      en: Jointly on the part of research and implementation partners
-      fr: En commun de la part des partenaires de recherche et de mise en œuvre
       de-ch: Gemeinsam seitens Forschungs- und Umsetzungspartner
+      fr: Conjointement de la part des partenaires de recherche et de mise en œuvre
+      en: Jointly on the part of research and implementation partners
   - code: '4'
     texts:
-      en: From another implementation partner of the project
-      fr: Autre partenaire de mise en œuvre impliqué dans le projet
-      de-ch: Seitens eines weiteren beteiligten Umsetzungspartners des Projekts
-  - code: '5'
-    texts:
       de-ch: Weitere Quelle
-      en: Other source
       fr: Autre source
+      en: Other source
   - code: '99'
     texts:
-      de-ch: Das kann ich nicht beantworten
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
+      de-ch: Weiss nicht / keine Antwort<br>
+      fr: Ne sait pas / pas de réponse<br>
+      en: Don't know / no answer
 FoerderSNF:
   element_type: MultipleChoice
   texts:
@@ -2033,13 +2166,13 @@ AusmassDigital:
   element_type: Matrix
   texts:
     en: Is the Innosuisse-supported project based on <strong>new</strong> <strong>digital
-      technologies</strong> or <strong>new</strong> <strong>digital business model</strong><strong>s</strong>?
+      technologies</strong> or <strong>new</strong> <strong>digital business models</strong>?
     fr: Le projet soutenu par Innosuisse repose-t-il sur de <strong>nouvelles technologies
       numériques</strong> ou sur de<strong> nouveaux modèles commerciaux numériques</strong>
       ?
     de-ch: Beruht das von Innosuisse geförderte Projekt auf<strong> neuen digitalen
       Technologien</strong> oder auf <strong>neuen digitalen Geschäftsmodellen</strong>?
-  section_name: Charakterisierung des Projekts
+  section_name: Charakterisierung (Surveyübergreifend)
   matrix_rows:
   - code: '1'
     texts:
@@ -2059,12 +2192,12 @@ AusmassDigital:
       de-ch: gar nicht
   - code: '2'
     texts:
-      en: little
+      en: a little
       fr: peu
       de-ch: wenig
   - code: '3'
     texts:
-      en: rather little
+      en: rather a little
       fr: plutôt peu
       de-ch: eher wenig
   - code: '4'
@@ -2082,139 +2215,20 @@ AusmassDigital:
       en: very strongly
       fr: très fort
       de-ch: sehr stark
-  - code: '99'
-    texts:
-      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
-        répondre à cette question</div>
-      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
-        nicht beantworten</div>
 TRLStart:
   element_type: Dropdown
   texts:
-    en: 'Innovations go through different stages of maturity: <br>In your estimation,
-      what stage did your project have <strong>at the beginning</strong> of the funding
-      period?<br><br>'
-    fr: 'Les innovations passent par différents stades de maturité: <br>Selon vous,
-      à quel stade se trouvait votre projet <strong>au début</strong> de l''encouragement
-      ?<br><br>'
-    de-ch: 'Innovationen durchlaufen verschiedene Reifestufen: <br>Nach Ihrer Einschätzung,
-      welche Stufe hatte Ihr Projekt <strong>zu Beginn</strong> der Förderung?<br><br>'
-  section_name: Ergebnisse
-  choices:
-  - code: '1'
-    texts:
-      de-ch: '<strong>Grundlagenforschung</strong><div style="margin-left: 20px;">TRL/SRL
-        1 - Beobachtung und Beschreibung des Grundprinzips einer Technologie und/oder
-        einer Funktion oder einer Anwendung. Grundlagenforschung wird durchgeführt
-        und dargestellt.</div>'
-      fr: '<strong>Recherche fondamentale</strong><div style="margin-left: 20px;">TRL/SRL
-        1 - Observation et description du principe de base d''une technologie et/ou
-        d''une fonction ou d''une application. La recherche fondamentale est enregistrée
-        et présentée.</div>'
-      en: '<strong>Basic research</strong><div style="margin-left: 20px;">TRL/SRL
-        1 - Observation and description of the basic principle of a technology and/or
-        a function or an application. Basic research is recorded and presented.</div>'
-  - code: '2'
-    texts:
-      de-ch: '<div style="margin-left: 20px;">TRL/SRL 2 - Technologie- und/oder Anwendungskonzept
-        formuliert (Identifikation von möglichen Anwendungen). Beschreibung der Anwendung</div>'
-      fr: '<div style="margin-left: 20px;">TRL/SRL 2 - Formulation du concept de technologie
-        et/ou d''application (identification des applications possibles). Description
-        de l''application.</div>'
-      en: '<div style="margin-left: 20px;">TRL/SRL 2 - Technology and/or application
-        concept formulated (identification of possible applications). Description
-        of the application.</div>'
-  - code: '3'
-    texts:
-      en: '<strong>Application oriented research / Applied research / Experimental
-        development</strong><div style="margin-left: 20px;">TRL/SRL 3 - Experimental
-        proof of concept. Analytical and experimental demonstration concept of critical
-        function and/or specification.</div>'
-      fr: '<strong>Recherche orientée vers l''application / Recherche appliquée /
-        Développement expérimental</strong><div style="margin-left: 20px;">TRL/SRL
-        3 - Preuve expérimentale du concept. Concept de démonstration analytique et
-        expérimentale d''une fonction critique et/ou d''une spécification.</div>'
-      de-ch: '<strong>Anwendungsorientierte Forschung / Angewandte Forschung / Experimentelle
-        Entwicklung</strong><div style="margin-left: 20px;">TRL/SRL 3 - Experimenteller
-        Nachweis des Konzepts. Analytisches und experimentelles Demonstrationskonzept
-        der kritischen Funktion und/oder Spezifikation.</div>'
-  - code: '4'
-    texts:
-      en: '<div style="margin-left: 20px;">TRL/SRL 4 - Technology or solution validated
-        in the laboratory/in the field. Test setup in the laboratory/in the field.</div>'
-      fr: '<div style="margin-left: 20px;">TRL/SRL 4 - Technologie ou solution validée
-        en laboratoire ou sur le terrain. Mise en place d''essais en laboratoire ou
-        sur le terrain.</div>'
-      de-ch: '<div style="margin-left: 20px;">TRL/SRL 4 - Technologie/Lösung im Labor
-        oder Feld validiert. Testaufbau im Labor/im Feld.</div>'
-  - code: '5'
-    texts:
-      en: '<div style="margin-left: 20px;">TRL/SRL 5 - Experimental development. Test
-        set-up and technology or solution validated in operational environment.</div>'
-      fr: '<div style="margin-left: 20px;">TRL/SRL 5 - Développement expérimental.
-        Montage d''essai et validation de la technologie ou de la solution dans un
-        environnement opérationnel.</div>'
-      de-ch: '<div style="margin-left: 20px;">TRL/SRL 5 - Experimentelle Entwicklung.
-        Versuchsaufbau und Technologie bzw. Lösung in betrieblicher Umgebung validiert.</div>'
-  - code: '6'
-    texts:
-      en: '<div style="margin-left: 20px;">TRL/SRL 6 - Technology/solution demonstrated
-        in relevant environment.</div>'
-      fr: '<div style="margin-left: 20px;">TRL/SRL 6 - Démonstration de la technologie/solution
-        dans un environnement pertinent.</div>'
-      de-ch: '<div style="margin-left: 20px;">TRL/SRL 6 - Technologie/Lösung in relevanter
-        Umgebung demonstriert.</div>'
-  - code: '7'
-    texts:
-      en: '<strong>Demonstration and pilot plants / Prototypes / Solution demonstrated</strong><div
-        style="margin-left: 20px;">TRL/SRL 7 - System/solution prototype demonstrated
-        in a development environment. Prototype in use.</div>'
-      fr: '<strong>Démonstration et installations pilotes / Prototypes / Solution
-        démontrée</strong><div style="margin-left: 20px;">TRL/SRL 7 - Prototype de
-        système/solution démontré dans un environnement de développement. Prototype
-        utilisé.</div>'
-      de-ch: '<strong>Demonstrations- und Pilotanlagen / Prototypen / Demonstrierte
-        Lösung</strong><div style="margin-left: 20px;">TRL/SRL 7 - System-/Lösungsprototyp
-        in einer Entwicklungsumgebung demonstriert. Prototyp im Einsatz.</div>'
-  - code: '8'
-    texts:
-      en: '<div style="margin-left: 20px;">TRL/SRL 8 - System/solution complete and
-        qualified with proof of functionality in operational environment through testing
-        and demonstration.</div>'
-      fr: '<div style="margin-left: 20px;">TRL/SRL 8 - Système/solution complet et
-        qualifié avec preuve de fonctionnalité dans un environnement opérationnel
-        par le biais d''essais et de démonstrations.</div>'
-      de-ch: '<div style="margin-left: 20px;">TRL/SRL 8 - System/Lösung vollständig
-        qualifiziert mit Nachweis der Funktionstüchtigkeit in betrieblicher Umgebung
-        durch Tests und Demonstration.</div>'
-  - code: '9'
-    texts:
-      de-ch: '<strong>Umsetzung</strong><div style="margin-left: 20px;">TRL/SRL 9
-        - Qualifiziertes System/L&ouml;sung hat sich im betrieblichen Umfeld bew&auml;hrt,
-        mit Nachweis des erfolgreichen Einsatzes. Produktion unter Wettbewerbsbedingungen.</div>'
-      fr: '<strong>Mise en œuvre</strong><div style="margin-left: 20px;">TRL/SRL 9
-        - Le système/la solution qualifié(e) a été éprouvé(e) dans l''environnement
-        opérationnel, avec la preuve d''une utilisation réussie. Production dans des
-        conditions concurrentielles..</div>'
-      en: '<strong>Implementation&nbsp;</strong><div style="margin-left: 20px;">TRL/SRL
-        9 - Qualified system/solution has been proven in the operational environment
-        with evidence of successful use. Production under competitive conditions.</div>'
-  - code: '99'
-    texts:
-      en: TRL resp. SRL not applicable to project / don't know
-      fr: TRL ou SRL non applicable au projet / ne sait pas
-      de-ch: TRL resp. SRL nicht auf Projekt anwendbar / weiss nicht
-TRLEnde:
-  element_type: Dropdown
-  texts:
-    en: '... and what level did it reach <strong>at the end</strong> of the funding
-      period?<br><br>'
-    fr: '... et quel stade a-t-il atteint <strong>&agrave; la fin</strong> de l&#39;encouragement&nbsp;?<br><br>'
-    de-ch: '... und welche Stufe erreichte es <strong>beim Abschluss</strong> der
-      Förderung?<br><br>'
-  section_name: Ergebnisse
+    en: 'Innovations go through different maturity levels: Which level (Technology
+      Readiness Level, TRL, or Social Readiness Level, SRL) did your innovation project
+      have <strong>at the beginning</strong> of the funding by Innosuisse?'
+    fr: 'Les innovations passent par différents niveaux de maturité : A quel stade
+      (Technology Readiness Level, TRL, ou Social Readiness Level, SRL) se trouvait
+      votre projet d''innovation <strong>au début </strong>du soutien d''Innosuisse
+      ?'
+    de-ch: 'Innovationen durchlaufen verschiedene Reifestufen: Welche Stufe (Technology
+      Readiness Level, TRL, oder Social Readiness Level, SRL) hatte Ihre Innovationsprojekt
+      <strong>zu Beginn</strong> der Förderung durch Innosuisse?'
+  section_name: Charakterisierung (TRL ) + Komeptenzen
   choices:
   - code: '1'
     texts:
@@ -2311,9 +2325,134 @@ TRLEnde:
         - Le système/la solution qualifié(e) a été éprouvé(e) dans l''environnement
         opérationnel, avec la preuve d''une utilisation réussie. Production dans des
         conditions concurrentielles..</div>'
-      en: '<strong>Implementation&nbsp;</strong><div style="margin-left: 20px;">TRL/SRL
-        9 - Qualified system/solution has been proven in the operational environment
-        with evidence of successful use. Production under competitive conditions.</div>'
+      en: '"<strong>Implementation </strong><div>TRL/SRL 9 - Qualified system/solution
+        has been proven in the operational environment with evidence of successful
+        use. Production under competitive conditions.</div>'
+  - code: '-99'
+    texts:
+      en: TRL resp. SRL not applicable to project / don't know
+      fr: TRL ou SRL non applicable au projet / ne sait pas
+      de-ch: TRL resp. SRL nicht auf Projekt anwendbar / weiss nicht
+TRLEnde:
+  element_type: Matrix
+  texts:
+    en: '... and what level of maturity was aimed for (goal) or achieved by the project
+      <strong>at the end</strong> of the funding?<br><br>'
+    fr: '... et quel était le degré de maturité visé (objectif) ou atteint par le
+      projet <strong>à la fin</strong> de la subvention ?'
+    de-ch: '... und welcher Reifegrad wurde angestrebt (Ziel) resp. erreichte das
+      Projekt <strong>beim Abschluss</strong> der Förderung?'
+  section_name: Charakterisierung (TRL ) + Komeptenzen
+  matrix_rows:
+  - code: Angestrebt
+    texts:
+      de-ch: angestrebt:<br>
+      en: 'targeted:'
+      fr: 'visé :'
+  - code: Erreicht
+    texts:
+      de-ch: erreicht:<br>
+      en: 'achieved:'
+      fr: 'atteint :'
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: '<strong>Grundlagenforschung</strong><div style="margin-left: 20px;">TRL/SRL
+        1 - Beobachtung und Beschreibung des Grundprinzips einer Technologie und/oder
+        einer Funktion oder einer Anwendung. Grundlagenforschung wird durchgeführt
+        und dargestellt.</div>'
+      fr: '<strong>Recherche fondamentale</strong><div style="margin-left: 20px;">TRL/SRL
+        1 - Observation et description du principe de base d''une technologie et/ou
+        d''une fonction ou d''une application. La recherche fondamentale est enregistrée
+        et présentée.</div>'
+      en: '<strong>Basic research</strong><div style="margin-left: 20px;">TRL/SRL
+        1 - Observation and description of the basic principle of a technology and/or
+        a function or an application. Basic research is recorded and presented.</div>'
+  - code: '2'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">TRL/SRL 2 - Technologie- und/oder Anwendungskonzept
+        formuliert (Identifikation von möglichen Anwendungen). Beschreibung der Anwendung</div>'
+      fr: '<div style="margin-left: 20px;">TRL/SRL 2 - Formulation du concept de technologie
+        et/ou d''application (identification des applications possibles). Description
+        de l''application.</div>'
+      en: '<div style="margin-left: 20px;">TRL/SRL 2 - Technology and/or application
+        concept formulated (identification of possible applications). Description
+        of the application.</div>'
+  - code: '3'
+    texts:
+      en: '<strong>Application oriented research / Applied research / Experimental
+        development</strong><div style="margin-left: 20px;">TRL/SRL 3 - Experimental
+        proof of concept. Analytical and experimental demonstration concept of critical
+        function and/or specification.</div>'
+      fr: '<strong>Recherche orientée vers l''application / Recherche appliquée /
+        Développement expérimental</strong><div style="margin-left: 20px;">TRL/SRL
+        3 - Preuve expérimentale du concept. Concept de démonstration analytique et
+        expérimentale d''une fonction critique et/ou d''une spécification.</div>'
+      de-ch: '<strong>Anwendungsorientierte Forschung / Angewandte Forschung / Experimentelle
+        Entwicklung</strong><div style="margin-left: 20px;">TRL/SRL 3 - Experimenteller
+        Nachweis des Konzepts. Analytisches und experimentelles Demonstrationskonzept
+        der kritischen Funktion und/oder Spezifikation.</div>'
+  - code: '4'
+    texts:
+      en: '<div style="margin-left: 20px;">TRL/SRL 4 - Technology or solution validated
+        in the laboratory/in the field. Test setup in the laboratory/in the field.</div>'
+      fr: '<div style="margin-left: 20px;">TRL/SRL 4 - Technologie ou solution validée
+        en laboratoire ou sur le terrain. Mise en place d''essais en laboratoire ou
+        sur le terrain.</div>'
+      de-ch: '<div style="margin-left: 20px;">TRL/SRL 4 - Technologie/Lösung im Labor
+        oder Feld validiert. Testaufbau im Labor/im Feld.</div>'
+  - code: '5'
+    texts:
+      en: '<div style="margin-left: 20px;">TRL/SRL 5 - Experimental development. Test
+        set-up and technology or solution validated in operational environment.</div>'
+      fr: '<div style="margin-left: 20px;">TRL/SRL 5 - Développement expérimental.
+        Montage d''essai et validation de la technologie ou de la solution dans un
+        environnement opérationnel.</div>'
+      de-ch: '<div style="margin-left: 20px;">TRL/SRL 5 - Experimentelle Entwicklung.
+        Versuchsaufbau und Technologie bzw. Lösung in betrieblicher Umgebung validiert.</div>'
+  - code: '6'
+    texts:
+      en: '<div style="margin-left: 20px;">TRL/SRL 6 - Technology/solution demonstrated
+        in relevant environment.</div>'
+      fr: '<div style="margin-left: 20px;">TRL/SRL 6 - Démonstration de la technologie/solution
+        dans un environnement pertinent.</div>'
+      de-ch: '<div style="margin-left: 20px;">TRL/SRL 6 - Technologie/Lösung in relevanter
+        Umgebung demonstriert.</div>'
+  - code: '7'
+    texts:
+      en: '<strong>Demonstration and pilot plants / Prototypes / Solution demonstrated</strong><div
+        style="margin-left: 20px;">TRL/SRL 7 - System/solution prototype demonstrated
+        in a development environment. Prototype in use.</div>'
+      fr: '<strong>Démonstration et installations pilotes / Prototypes / Solution
+        démontrée</strong><div style="margin-left: 20px;">TRL/SRL 7 - Prototype de
+        système/solution démontré dans un environnement de développement. Prototype
+        utilisé.</div>'
+      de-ch: '<strong>Demonstrations- und Pilotanlagen / Prototypen / Demonstrierte
+        Lösung</strong><div style="margin-left: 20px;">TRL/SRL 7 - System-/Lösungsprototyp
+        in einer Entwicklungsumgebung demonstriert. Prototyp im Einsatz.</div>'
+  - code: '8'
+    texts:
+      en: '<div style="margin-left: 20px;">TRL/SRL 8 - System/solution complete and
+        qualified with proof of functionality in operational environment through testing
+        and demonstration.</div>'
+      fr: '<div style="margin-left: 20px;">TRL/SRL 8 - Système/solution complet et
+        qualifié avec preuve de fonctionnalité dans un environnement opérationnel
+        par le biais d''essais et de démonstrations.</div>'
+      de-ch: '<div style="margin-left: 20px;">TRL/SRL 8 - System/Lösung vollständig
+        qualifiziert mit Nachweis der Funktionstüchtigkeit in betrieblicher Umgebung
+        durch Tests und Demonstration.</div>'
+  - code: '9'
+    texts:
+      de-ch: '<strong>Umsetzung</strong><div style="margin-left: 20px;">TRL/SRL 9
+        - Qualifiziertes System/Lösung hat sich im betrieblichen Umfeld bewährt, mit
+        Nachweis des erfolgreichen Einsatzes. Produktion unter Wettbewerbsbedingungen.</div>'
+      fr: '<strong>Mise en œuvre</strong><div style="margin-left: 20px;">TRL/SRL 9
+        - Le système/la solution qualifié(e) a été éprouvé(e) dans l''environnement
+        opérationnel, avec la preuve d''une utilisation réussie. Production dans des
+        conditions concurrentielles..</div>'
+      en: <strong>Implementation </strong><div>TRL/SRL 9 - Qualified system/solution
+        has been proven in the operational environment with evidence of successful
+        use. Production under competitive conditions.</div>
   - code: '99'
     texts:
       en: TRL resp. SRL not applicable to project / don't know
@@ -2480,50 +2619,42 @@ ProjektBenefit:
 Additionalitaet_WasTun:
   element_type: MultipleChoice
   texts:
-    de-ch: 'Wie hätten Sie Ihr Projekt weitergeführt, wenn der Innosuisse-Antrag erfolglos
-
-      geblieben wäre?'
-    en: How would you have continued your project if the Innosuisse application had
-      been unsuccessful?
-    fr: Comment auriez-vous poursuivi votre projet si la demande Innosuisse n'avait
+    en: How would your project have developed if the Innosuisse application had been
+      unsuccessful?
+    fr: Comment votre projet se serait-il développé si la demande Innosuisse n'avait
       pas abouti ?
-  section_name: Nutzen
+    de-ch: Wie hätte sich Ihr Projekt entwickelt, wenn der Innosuisse-Antrag erfolglos
+      geblieben wäre?
+  section_name: Erfolg und Additionalität
   choices:
-  - code: andereSubvent
+  - code: '1'
     texts:
-      de-ch: durch eine andere öffentliche Förderung
-      en: through other public funding
-      fr: par une autre aide publique
+      en: We would have looked for another funding opportunity.
+      fr: Nous aurions recherché une autre possibilité de financement.
+      de-ch: Wir hätten uns nach einer anderen Finanzierungsmöglichkeit umgesehen.
   - code: '2'
     texts:
-      de-ch: mit eigenen finanziellen Mitteln
-      en: with own financial resources
-      fr: par des moyens financiers propres
-  - code: FremdKap
-    texts:
-      de-ch: durch zusätzliches Fremdkapital
-      en: through additional borrowed capital
-      fr: par des capitaux étrangers supplémentaires
-  - code: anderePrivat
-    texts:
-      de-ch: durch eine andere private Finanzierung
-      en: through other private financing
-      fr: par un autre financement privé
+      en: We would have developed the project further with funding from my university/research
+        institution.
+      fr: Nous aurions continué à développer le projet avec des fonds de mon université/institut
+        de recherche.
+      de-ch: Wir hätten das Projekt mit Mitteln meiner Universität/Forschungseinrichtung
+        weiterentwickelt.
   - code: '5'
     texts:
-      de-ch: durch die Vereinfachung des Projektdesign
-      en: by simplifying the project design
-      fr: par la simplification de la conception du projet
+      de-ch: Wir hätten das Projektdesign vereinfacht
+      fr: Nous aurions simplifié la conception du projet
+      en: We would have simplified the project design
   - code: '3'
     texts:
-      de-ch: durch eine Verlängerung der Realisierungsdauer des Projekts
-      fr: par une prolongation de la durée de réalisation du projet
-      en: by extending the realisation period of the project
+      de-ch: Die Realisierung des Projekts hätte länger gedauert.
+      en: The realisation of the project would have taken longer.
+      fr: La réalisation du projet aurait pris plus de temps.
   - code: '4'
     texts:
-      de-ch: Weiteres (bitte angeben)
-      fr: Autre (veuillez préciser) -
-      en: Other (please specify)
+      de-ch: Weiteres (bitte angeben):<br>
+      en: 'Other (please specify):'
+      fr: 'Autre (veuillez préciser) :'
 EinflussProjekt:
   element_type: Matrix
   texts:
@@ -3230,18 +3361,18 @@ C19_Offen:
 Zufriedenheit:
   element_type: Matrix
   texts:
-    en: From the point of view of your organisation, <strong>how satisfied </strong>are
-      you with Innosuisse’s project promotion?
-    fr: Du point de vue de votre organisation, <strong>dans quelle mesure êtes-vous
+    en: From the perspective of your research unit, <strong>how satisfied</strong>
+      are you with Innosuisse's project funding?
+    fr: Du point de vue de votre unité de recherche, <strong>dans quelle mesure êtes-vous
       satisfait</strong> de l'encouragement des projets par Innosuisse ?
-    de-ch: <strong>Wie zufrieden </strong>sind Sie aus Sicht Ihrer Organisation mit
-      der Projektförderung von Innosuisse?
-  section_name: Projekterfolg und Abschluss
+    de-ch: <strong>Wie zufrieden </strong>sind Sie aus Sicht Ihrer Forschungseinheit
+      mit der Projektförderung von Innosuisse?
+  section_name: Zufriedenheit
   matrix_rows:
   - code: '1'
     texts:
-      en: With the structure of the funding instrument and the implementation of the
-        project promotion by Innosuisse, I am …
+      en: With the design of the funding instrument and the implementation of project
+        funding by Innosuisse, I am …
       fr: Avec la conception de l’instrument de l'encouragement et son mise en œuvre
         par Innosuisse, je suis …
       de-ch: Mit der Ausgestaltung des Förderinstrumentes und der Umsetzung der Projektförderung
@@ -3249,17 +3380,17 @@ Zufriedenheit:
   matrix_columns:
   - code: '1'
     texts:
-      en: not at all satisfied
-      fr: pas du tout satisfait
+      en: very dissatisfied
+      fr: très insatisfait
       de-ch: überhaupt nicht zufrieden
   - code: '2'
     texts:
-      en: not satisfied
-      fr: pas satisfait
+      en: dissatisfied
+      fr: insatisfait
       de-ch: nicht zufrieden
   - code: '3'
     texts:
-      en: rather not satisfied
+      en: rather dissatisfied
       fr: plutôt insatisfait
       de-ch: eher nicht zufrieden
   - code: '4'
@@ -3284,3 +3415,1565 @@ ZufNichtGrund:
     fr: 'Veuillez nous faire savoir les causes d’insatisfaction :'
     de-ch: 'Bitte teilen Sie uns mit, was Unzufriedenheit verursachte:'
   section_name: Projekterfolg und Abschluss
+ProjektBeteiligte:
+  element_type: Matrix
+  texts:
+    en: How many staff (incl. technical and laboratory staff) were involved in the
+      implementation of the innovation project <strong>at your </strong><strong>research
+      unit</strong>?
+    fr: Combien de personnes (y compris le personnel technique et le personnel de
+      laboratoire) ont participé à la réalisation du projet d'innovation <strong>dans
+      votre unité de recherche </strong>?
+    de-ch: Wie viel Personal (inkl. technisches Personal und Labor-Personal) war <strong>in
+      Ihrer Forschungseinheit</strong> an der Durchführung des Innovationsprojekt
+      beteiligt?<br>
+  section_name: Angaben FE
+  matrix_rows:
+  - code: '0'
+    texts:
+      de-ch: Bachelor- und Masterstudierende ohne Entlöhnung<br>
+      en: Bachelor and Master students without remuneration
+      fr: Étudiant-e-s bachelor et master sans rémunération
+  - code: '1'
+    texts:
+      de-ch: Bachelor- und Masterstudierende mit Entlöhnung<br>
+      en: Bachelor and Master students with remuneration
+      fr: Étudiant-e-s bachelor et master avec rémunération
+  - code: '2'
+    texts:
+      de-ch: Doktorierende (Pre-doc)
+      en: Doctoral students (Pre-doc)
+      fr: Doctorant-e-s (pre-doc)
+  - code: '3'
+    texts:
+      de-ch: Post-docs
+      en: Post-docs
+      fr: Post-docs
+  - code: '4'
+    texts:
+      de-ch: Professor:innen
+      en: Professors
+      fr: Professeur-e-s
+  - code: '5'
+    texts:
+      de-ch: Weiteres Forschungspersonal mit akademischem Abschluss
+      en: Other research staff with academic degree
+      fr: Autre personnel de recherche avec diplôme académique
+  - code: '6'
+    texts:
+      de-ch: Weiteres Personal (Techniker:innen, Laborpersonal, etc.)
+      en: Other staff (technicians, laboratory staff, etc.)
+      fr: Autre personnel (technicien-ne-s, personnel de laboratoire, etc.)
+  - code: Total
+    texts:
+      de-ch: Total
+      en: Total
+      fr: Total
+  matrix_columns:
+  - code: '1'
+    texts:
+      fr: Nombre de personnes
+      en: Number of persons
+      de-ch: Anzahl Personen<br>
+Beteiligte:
+  element_type: Matrix
+  texts:
+    en: How many of the involved {{custom.PersonalAngestellt}} persons with remuneration
+      were ...
+    fr: Parmi les {{custom.PersonalAngestellt}} personnes impliquées et rémunérées,
+      combien étaient ...
+    de-ch: Wie viele der beteiligten {{custom.PersonalAngestellt}} Personen mit Entlöhnung
+      waren ... <br>
+  section_name: Angaben FE
+  matrix_rows:
+  - code: Frauen
+    texts:
+      de-ch: '... Frauen<br>'
+      en: '... women'
+      fr: '... femmes'
+  - code: GenderNonKonform
+    texts:
+      de-ch: '... gender-nonkonforme Personen<br>'
+      en: '... gender-nonconforming persons'
+      fr: '... personnes non conformes au genre'
+  - code: Ausl
+    texts:
+      de-ch: '... Personen ohne Schweizer Staatsbürgerschaft<br>'
+      en: '... persons without Swiss citizenship<br>'
+      fr: '... personnes sans nationalité suisse'
+  matrix_columns:
+  - code: '1'
+    texts:
+      fr: Nombre de personnes
+      en: Number of persons
+      de-ch: Anzahl Personen<br>
+ErstesTreffen:
+  element_type: Matrix
+  texts: {}
+  section_name: ProjektLancierung fur MitUP
+  matrix_rows:
+  - code: Organisierte
+    texts:
+      de-ch: WIRD NICHT MEHR ANGEZEIGT Das erste Treffen organisierte der<br>
+      en: The first meeting was organised by the
+      fr: La première réunion a été organisée par le
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: Umsetzungspartner<br>
+      fr: Partenaire de mise en œuvre
+      en: Implementation partner
+  - code: '2'
+    texts:
+      en: Research partner
+      fr: Partenaire de recherche
+      de-ch: Forschungspartner
+  - code: '99'
+    texts:
+      de-ch: Weiss nicht / keine Antwort<br>
+      en: Don't know / no answer
+      fr: Ne sait pas / pas de réponse
+Foerder:
+  element_type: MultipleChoice
+  texts:
+    en: Was or is the completed project or the project idea&nbsp;additionally funded?
+    fr: Le projet achevé ou l'idée du projet, a-t-il bénéficié ou bénéficie-t-il d'un
+      financement supplémentaire&nbsp;?
+    de-ch: Wurde oder wird das abgeschlossene Projekt oder die Projektidee&nbsp;zusätzlich
+      gefördert?
+  section_name: Projektlancierung und Ziele
+  choices:
+  - code: '15'
+    texts:
+      en: No additional public or private funding to date<br>
+      fr: Pas de soutien public ou privé supplémentaire jusqu'à présent<br>
+      de-ch: Bisher keine zusätzliche öffentliche oder private Förderung<br>
+  - code: '3'
+    texts:
+      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Förderinstrumente
+        Innosuisse:</div>Innovationsprojekt ohne Umsetzungspartner
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Innosuisse
+        funding instruments:</div>Innovation project without implementation partner
+      fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Instruments
+        de promotion Innosuisse :</div>Projet d'innovation sans partenaire de mise
+        en œuvre
+  - code: '4'
+    texts:
+      de-ch: Innovationsprojekt mit Umsetzungspartner
+      en: Innovation project with implementation partner
+      fr: Projet d'innovation avec partenaire de mise en œuvre
+  - code: '5'
+    texts:
+      de-ch: Innovationsprojekt mit internationalen Partnern oder grenzüberschreitendes
+        Innovationsprojekt (Europäische Union, Eurostars, Eureka, bilaterale Projekte
+        mit anderen Ländern)
+      en: Innovation project with international partners or cross-border innovation
+        project (European Union, Eurostars, Eureka, bilateral projects with other
+        countries)
+      fr: Projet d'innovation avec des partenaires internationaux ou projet d'innovation
+        transfrontalier (Union européenne, Eurostars, Eureka, projets bilatéraux avec
+        d'autres pays)
+  - code: '2'
+    texts:
+      en: Innovation cheque
+      fr: Chèque d'innovation
+      de-ch: Innovationsscheck
+  - code: '7'
+    texts:
+      en: BRIDGE Proof of Concept
+      fr: BRIDGE Proof of Concept
+      de-ch: BRIDGE Proof of Concept
+  - code: '6'
+    texts:
+      de-ch: BRIDGE Discovery
+      fr: BRIDGE Discovery
+      en: BRIDGE Discovery
+  - code: '10'
+    texts:
+      en: Energy Research (SCCER)
+      fr: Recherche énergétique (SCCER)
+      de-ch: Energieforschung (SCCER)
+  - code: '8'
+    texts:
+      de-ch: NTN Thematische Netzwerke / Innovation Booster
+      fr: NTN Réseaux thématiques / Innovation Booster
+      en: NTN Thematic Networks / Innovation Booster
+  - code: '16'
+    texts:
+      de-ch: Network Event Series / Thematische Netzwerkveranstaltungen
+      en: Network Event Series / Thematic networking events
+      fr: Network Event Series / Événements de réseau thématiques
+  - code: '9'
+    texts:
+      de-ch: Flagship-Projekt
+      fr: Projet Flagship
+      en: Flagship Project
+  - code: '12'
+    texts:
+      de-ch: Start-up Training
+      en: Start-up Training
+      fr: Start-up Training
+  - code: '13'
+    texts:
+      de-ch: Start-up Coaching
+      fr: Start-up Coaching
+      en: Start-up Coaching
+  - code: '14'
+    texts:
+      de-ch: 'Andere Innosuisse Förderung, bitte angeben:'
+      fr: 'Autre promotion Innosuisse, veuillez préciser :'
+      en: 'Other Innosuisse funding, please specify:'
+  - code: SNF_NFP
+    texts:
+      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Förderung
+        Schweizerischer Nationalfonds:</strong></div>Nationales Forschungsprogramm
+        (NFP)
+      fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Soutien
+        du Fonds national suisse :</strong></div>Programme national de recherche (PNR)
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Funding
+        Swiss National Science Foundation:</strong></div>National Research Programme
+        (NRP)
+  - code: SNF_NFS
+    texts:
+      de-ch: Nationale Forschungsschwerpunkte (NFS)
+      fr: Pôles de recherche nationaux (PRN)
+      en: National Centres of Competence in Research (NCCR)
+  - code: SNF_Projekt
+    texts:
+      de-ch: Projektförderung SNF
+      en: Project funding SNF
+      fr: Encouragement de projets FNS
+  - code: SNF_Person
+    texts:
+      de-ch: Personenförderung SNF
+      en: Individual funding SNF
+      fr: Encouragement de personnes FNS
+  - code: SNF_Weiteres
+    texts:
+      de-ch: 'Andere SNF Förderung, bitte angeben:'
+      en: 'Other SNF funding, please specify:'
+      fr: 'Autre encouragement FNS, veuillez préciser :'
+  - code: Wei1
+    texts:
+      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Weitere
+        öffentliche Förderung:</div>Finanzierung und Grants der Forschungsinstitution
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Other
+        public funding:</div>Funding and grants from the research institution
+      fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Autre
+        financement public :</div>Financement et subventions de l'institution de recherche
+  - code: Wei2
+    texts:
+      de-ch: Weitere öffentliche nationale Förderung (z.B. BFE, BAFU)
+      en: Other public national funding (e.g. SFOE, FOEN)
+      fr: Autre soutien public national (par ex. OFEN, OFEV)
+  - code: Wei3
+    texts:
+      de-ch: Internationale Förderung (Europäische oder internationale Forschungsprogramme,
+        etc.)
+      en: International funding (European or international research programmes, etc.)
+      fr: Soutien international (programmes de recherche européens ou internationaux,
+        etc.)
+  - code: Wei4
+    texts:
+      de-ch: Kantonale / regionale Förderung
+      en: Cantonal / regional funding
+      fr: Encouragement cantonal / régional
+  - code: Wei5
+    texts:
+      de-ch: Private Förderung IMMER AUSBLENDEN
+      en: Private funding
+      fr: Soutien privé
+  - code: Wei6
+    texts:
+      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Weitere
+        Förderung:</div>Private Finanzierung und Auftragsforschung
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Other
+        funding:</div>Private funding and contract research
+      fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Autre
+        Financement :</div>Financement priv&eacute; et recherche sous contrat
+StrategischeZiele:
+  element_type: Matrix
+  texts:
+    en: Which of the following mentioned themes were <strong>strategically</strong>
+      important to you when submitting the project or during the course of the project?
+    fr: Parmi les thèmes suivants, quels sont ceux qui ont été <strong>stratégiquement</strong>
+      importants pour vous lors de la soumission du projet ou au cours de son déroulement
+      ?
+    de-ch: Welche der folgenden der genannten Themen waren für Sie bei der Einreichung
+      des Projekts oder während des Projektverlaufs <strong>strategisch</strong> wichtig?
+  section_name: Projektlancierung und Ziele
+  matrix_rows:
+  - code: '1'
+    texts:
+      de-ch: '<strong>Forschung:</strong><div style="margin-left: 20px;">Stärkung
+        der eher grundlagenorientierten Forschung</div>'
+      fr: '<strong>Recherche :</strong><div style="margin-left: 20px;">Renforcement
+        de la recherche plutôt fondamentale</div>'
+      en: '<strong>Research:</strong><div style="margin-left: 20px;">Strengthening
+        more basic research</div>'
+  - code: '2'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Stärkung der eher anwendungsorientierten
+        Forschung und Entwicklung</div>'
+      fr: '<div style="margin-left: 20px;">Renforcement de la recherche plutôt appliquée
+        et du développement</div>'
+      en: '<div style="margin-left: 20px;">Strengthening of more application-oriented
+        research and development</div>'
+  - code: '3'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Akademische Qualifikationen (Master,
+        PhD, Postdoc) und Stärkung von akademischen Laufbahnen</div>'
+      fr: '<div style="margin-left: 20px;">Qualifications académiques (master, PhD,
+        postdoc) et renforcement des carrières académiques</div>'
+      en: '<div style="margin-left: 20px;">Academic qualifications (Master, PhD, Postdoc)
+        and strengthening of academic careers</div>'
+  - code: '4'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Verfassen von wissenschaftlichen Publikationen
+        (reviewed, peer reviewed)</div>'
+      fr: '<div style="margin-left: 20px;">Rédaction de publications scientifiques
+        (évaluées, évaluées par les pairs)</div>'
+      en: '<div style="margin-left: 20px;">Writing scientific publications (reviewed,
+        peer reviewed)</div>'
+  - code: '5'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Einbringen von Drittmittteln für die
+        Finanzierung der Forschung</div>'
+      fr: '<div style="margin-left: 20px;">Obtention de fonds de tiers pour le financement
+        de la recherche</div>'
+      en: '<div style="margin-left: 20px;">Raising third-party funds to finance research</div>'
+  - code: '6'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Weitere Themen der Forschung (bitte
+        angeben):<br></div>'
+      fr: '<div style="margin-left: 20px;">Autres thèmes de recherche (à préciser)
+        :</div>'
+      en: '<div style="margin-left: 20px;">Other research themes (please specify):</div>'
+  - code: '7'
+    texts:
+      de-ch: '<strong>Anwendung und Umsetzung der Ergebnisse:</strong><div style="margin-left:
+        20px;">Transferieren von Forschungsergebnissen in Markt und in Praxis</div>'
+      fr: '<strong>Application et mise en œuvre des résultats :</strong><div style="margin-left:
+        20px;">Transfert des résultats de la recherche sur le marché et dans la pratique</div>'
+      en: '<strong>Application and implementation of results:</strong><div style="margin-left:
+        20px;">Transferring research results into the market and into practice</div>'
+  - code: '8'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Gewinnen von Erfahrungen aus Wirtschaft
+        und Praxis für die Forschung</div>'
+      fr: '<div style="margin-left: 20px;">Obtention d''expériences de l''économie
+        et de la pratique pour la recherche</div>'
+      en: '<div style="margin-left: 20px;">Gaining experience from business and practice
+        for research</div>'
+  - code: '9'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Vorbereiten einer Spin-off/Start-up
+        Gründung</div>'
+      fr: '<div style="margin-left: 20px;">Préparation pour la création d''une spin-off/start-up</div>'
+      en: '<div style="margin-left: 20px;">Preparing a spin-off/start-up foundation</div>'
+  - code: '10'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Stärken einer nicht akademischen Karriere
+        von Projektmitarbeiter:innen<br></div>'
+      fr: '<div style="margin-left: 20px;">Renforcement de la carrière non académique
+        des collaborateurs/trices du projet</div>'
+      en: '<div style="margin-left: 20px;">Strengthening a non-academic career of
+        project members</div>'
+  - code: '11'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Stärken der Zusammenarbeit mit Umsetzungspartner(n)
+        oder Spin-off</div>'
+      fr: '<div style="margin-left: 20px;">Renforcement de la collaboration avec les
+        partenaires de mise en œuvre ou spin-off</div>'
+      en: '<div style="margin-left: 20px;">Strengthening cooperation with implementation
+        partner(s) or spin-off</div>'
+  - code: '12'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Sicherung des geistigen Eigentums /
+        Patentanmeldung</div>'
+      fr: '<div style="margin-left: 20px;">Sécurisation de la propriété intellectuelle
+        / dépôt de brevet</div>'
+      en: '<div style="margin-left: 20px;">Securing intellectual property / patent
+        application</div>'
+  - code: '13'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Vorbereiten eines Folgeprojektes mit
+        einem Umsetzungspartner</div>'
+      fr: '<div style="margin-left: 20px;">Préparation d''un projet de suivi avec
+        un partenaire de mise en oeuvre</div>'
+      en: '<div style="margin-left: 20px;">Preparing a follow-up project with an implementation
+        partner</div>'
+  - code: '14'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Weitere Themen der Anwendung und Umsetzung
+        (bitte angeben):<br></div>'
+      fr: '<div style="margin-left: 20px;">Autres thèmes d''application et de mise
+        en œuvre (à préciser) :</div>'
+      en: '<div style="margin-left: 20px;">Other topics of application and implementation
+        (please specify):</div>'
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: überhaupt nicht wichtig<br>
+      en: not important at all
+      fr: pas du tout important
+  - code: '2'
+    texts:
+      de-ch: nicht wichtig<br>
+      en: not important
+      fr: pas important
+  - code: '3'
+    texts:
+      de-ch: eher nicht wichtig<br>
+      en: rather not important
+      fr: plutôt pas important
+  - code: '4'
+    texts:
+      de-ch: eher wichtig<br>
+      en: rather important
+      fr: plutôt important
+  - code: '5'
+    texts:
+      de-ch: wichtig<br>
+      en: important
+      fr: important
+  - code: '6'
+    texts:
+      de-ch: sehr wichtig<br>
+      en: very important<br>
+      fr: très important<br>
+ZusArbeit_Doch:
+  element_type: SingleChoice
+  texts:
+    en: Has cooperation with one or more implementation partners already taken place
+      by the end of the project?
+    fr: Une collaboration avec un ou plusieurs partenaires de mise en œuvre a-t-elle
+      déjà eu lieu jusqu'à la fin du projet ?
+    de-ch: Hat bis zum Abschluss des Projektes bereits eine Zusammenarbeit mit einem
+      oder mehreren Umsetzungspartner stattgefunden?
+  section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  choices:
+  - code: '1'
+    texts:
+      fr: Non
+      en: 'No'
+      de-ch: Nein
+  - code: '2'
+    texts:
+      de-ch: Ja, mit einem Umsetzungspartner<br>
+      fr: Oui, avec un partenaire de mise en œuvre
+      en: Yes, with one implementation partner
+  - code: '3'
+    texts:
+      de-ch: Ja, mit mehreren Umsetzungspartner, bitte Anzahl angeben:<br>
+      fr: 'Oui, avec plusieurs partenaires de mise en œuvre. Veuillez préciser le
+        nombre:'
+      en: 'Yes, with several implementation partners. Please specify the number:'
+ZusArbeit_DochNeu:
+  element_type: Matrix
+  texts:
+    en: Has cooperation with one or more implementation partners already taken place
+      by the end of the project&nbsp;or is such cooperation planned?
+    fr: Une collaboration avec un ou plusieurs partenaires de mise en œuvre a-t-elle
+      déjà eu lieu jusqu'à la fin du projet ?
+    de-ch: Hat bis zum Abschluss des Projektes bereits eine Zusammenarbeit mit einem
+      oder mehreren Umsetzungspartner stattgefunden oder ist eine solche geplant?
+  section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  matrix_rows:
+  - code: AndereIP
+    texts:
+      de-ch: Mit einem oder mehreren Umsetzungspartner(n)
+      en: With one or more implementation partner
+      fr: Avec un ou plusieurs partenaire(s) de mise en œuvre
+  - code: EigenesSpinoff
+    texts:
+      de-ch: Mit einem aus den Projektergebnissen hervorgegangen Start-up oder Spin-off
+      en: With a start-up or spin-off that has emerged from the project results
+      fr: Avec une start-up ou une spin-off issue des résultats du projet
+  matrix_columns:
+  - code: '6'
+    texts:
+      fr: Oui, cela a eu lieu
+      en: Yes, it has taken place
+      de-ch: Ja, hat stattgefunden
+  - code: '5'
+    texts:
+      de-ch: Ist geplant<br>
+      fr: C'est planifié
+      en: Is planned
+  - code: '1'
+    texts:
+      de-ch: Nein<br>
+      fr: Non
+      en: 'No'
+ZusArbeit_DochTypIPMain:
+  element_type: SingleChoice
+  texts:
+    en: What applies to the main implementation partner?
+    fr: Qu'est-ce qui s'applique au partenaire principal de mise en œuvre ?
+    de-ch: Was trifft auf den Haupt-Umsetzungspartner zu?
+  section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  choices:
+  - code: '1'
+    texts:
+      fr: Start-up/spin-off (10 ans ou plus jeune)
+      en: Start-up/spin-off (10 years old or younger)
+      de-ch: Start-up/Spin-off (10 Jahre oder jünger)
+  - code: '2'
+    texts:
+      de-ch: KMU (< 250 VZÄ) und kein Start-up/Spin-off<br>
+      fr: PME (< 250 EPT), pas de start-up/spin-off
+      en: SME (<250 FTE), no start-up/spin-off
+  - code: '3'
+    texts:
+      de-ch: Privatwirtschaftliches Unternehmen mit 250 oder mehr VZÄ<br>
+      fr: Entreprise du secteur privé avec 250 EPT et plus
+      en: Private sector company with 250 FTE and more
+  - code: '4'
+    texts:
+      de-ch: Öffentlicher Sektor / Verwaltung<br>
+      fr: Secteur public / administration
+      en: Public sector / administration
+  - code: '5'
+    texts:
+      de-ch: NGO / NPO<br>
+      fr: ONG / NPO
+      en: NGO / NPO
+SpinOff:
+  element_type: SingleChoice
+  texts:
+    en: Is a start-up/spin-off planned or already established using the project results?
+    fr: La création d'une start-up/spin-off utilisant les résultats du projet est-elle
+      prévue ou a-t-elle déjà eu lieu ?
+    de-ch: Ist eine Gründung eines Start-up/Spin-offs unter Verwendung der Projektergebnisse
+      geplant oder bereits erfolgt?
+  section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  choices:
+  - code: '6'
+    texts:
+      en: Yes, is already in the process of founding or founded
+      fr: Oui, est déjà en cours de création ou a été créée
+      de-ch: Ja, ist bereits im Gründungsprozess oder gegründet
+  - code: '5'
+    texts:
+      en: Yes, is planned
+      fr: Oui, est prévu
+      de-ch: Ja, ist geplant<br>
+  - code: '4'
+    texts:
+      de-ch: Noch nicht entschieden
+      fr: Pas encore décidé
+      en: Not yet decided
+  - code: '1'
+    texts:
+      de-ch: Keine Pläne zur Gründung
+      en: No plans to found
+      fr: Pas de projet de création
+ZusArbeit_DochTypIPRest:
+  element_type: MultipleChoice
+  texts:
+    en: What applies to the other implementation partner(s)?
+    fr: Qu'en est-il du ou des autres partenaires de mise en œuvre ?
+    de-ch: Was trifft auf den/die übrigen Umsetzungspartner zu?<br>
+  section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  choices:
+  - code: '1'
+    texts:
+      fr: Start-up/spin-off (10 ans ou plus jeune)
+      en: Start-up/spin-off (10 years old or younger)
+      de-ch: Start-up/Spin-off (10 Jahre oder jünger)
+  - code: '2'
+    texts:
+      de-ch: KMU (< 250 VZÄ) und kein Start-up/Spin-off<br>
+      fr: PME (< 250 EPT), pas de start-up/spin-off
+      en: SME (<250 FTE), no start-up/spin-off
+  - code: '3'
+    texts:
+      de-ch: Privatwirtschaftliches Unternehmen mit 250 oder mehr VZÄ<br>
+      en: Private sector company with 250 FTE and more
+      fr: Entreprise du secteur privé avec 250 EPT et plus
+  - code: '4'
+    texts:
+      de-ch: Öffentlicher Sektor / Verwaltung<br>
+      en: Public sector / administration
+      fr: Secteur public / administration
+  - code: '5'
+    texts:
+      de-ch: NGO / NPO<br>
+      en: NGO / NPO
+      fr: ONG / NPO
+ZusArbeitArt:
+  element_type: Matrix
+  texts:
+    en: What did the collaboration with the implementation partner(s) include in terms
+      of content in the context of the funded project?
+    fr: Quel était le contenu de la collaboration avec le(s) partenaire(s) de mise
+      en œuvre dans le cadre du projet encouragé ?
+    de-ch: Was umfasste die Zusammenarbeit mit dem/den Umsetzungspartner(n) inhaltlich
+      im Rahmen des geförderten Projektes?
+  section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  matrix_rows:
+  - code: '1'
+    texts:
+      de-ch: Einbindung der Expertise des Umsetzungspartners in Forschung und Entwicklung
+      fr: Intégration de l'expertise du partenaire de mise en œuvre dans la recherche
+        et le développement
+      en: Integration of the implementation partner's expertise in research and development
+  - code: '2'
+    texts:
+      de-ch: Nutzung der Infrastruktur des Umsetzungspartners
+      fr: Utilisation de l'infrastructure du partenaire de mise en œuvre
+      en: Use of the implementation partner's infrastructure
+  - code: '3'
+    texts:
+      de-ch: Entwicklung und Gestaltung des Produkts, Verfahrens oder der Dienstleistung
+      fr: Développement et conception du produit, du processus ou du service
+      en: Collaboration in the development and design of the product, process or service
+  - code: '4'
+    texts:
+      de-ch: Vorbereitung für Marktumsetzung / Markteinführungsphase
+      fr: Préparation à la mise sur le marché&nbsp;
+      en: Preparation for the market implementation /market introduction
+  matrix_columns:
+  - code: '1'
+    texts:
+      fr: Échange d'informations
+      en: Exchange of information
+      de-ch: Informationsaustausch
+  - code: '2'
+    texts:
+      de-ch: Lockere Zusammenarbeit<br>
+      fr: Collaboration décontractée
+      en: Loose collaboration
+  - code: '3'
+    texts:
+      de-ch: Intensive Zusammenarbeit<br>
+      en: Intensive collaboration
+      fr: Collaboration intensive
+ZA_Anderes:
+  element_type: OpenQuestion
+  texts:
+    de-ch: Hatten Sie mit dem/den Implementationspartnern weitere Formen von Austausch
+      oder Zusammenarbeit? Wenn ja, welche?<br>
+    en: Did you have any other forms of exchange or collaboration with the implementation
+      partner(s)? If yes, which ones?
+    fr: Avez-vous eu d'autres formes d'échange ou de collaboration avec le(s) partenaire(s)
+      de mise en œuvre ? Si oui, lesquelles ?
+  section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+ZusArbeitBeurteilung:
+  element_type: Matrix
+  texts:
+    en: How successful was the collaboration with the implementation partner(s)?
+    fr: Dans quelle mesure estimez-vous que la collaboration avec le(s) partenaire(s)
+      de mise en œuvre impliqué(s) est réussie ?
+    de-ch: Wie erfolgreich stufen Sie die Zusammenarbeit mit dem/den beteiligten Umsetzungspartner/n
+      ein?
+  section_name: Zusammenarbeit im Projekt (Weiter)
+  matrix_rows:
+  - code: '1'
+    texts:
+      de-ch: Die Zusammenarbeit war<br>
+      en: The collaboration was
+      fr: La collaboration a été
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: highly unsuccessful
+      fr: pas du tout réussie <br>
+      de-ch: gar nicht erfolgreich
+  - code: '2'
+    texts:
+      en: unsuccessful
+      fr: non-réussie
+      de-ch: wenig erfolgreich
+  - code: '3'
+    texts:
+      en: rather unsuccessful
+      fr: plutôt non-réussie
+      de-ch: eher wenig erfolgreich
+  - code: '4'
+    texts:
+      en: rather successful
+      fr: plutôt réussie
+      de-ch: eher erfolgreich
+  - code: '5'
+    texts:
+      en: successful
+      fr: réussie
+      de-ch: erfolgreich
+  - code: '6'
+    texts:
+      de-ch: sehr erfolgreich
+      fr: très réussie
+      en: highly successful
+ZusArbeitNichtGutOffen:
+  element_type: OpenQuestion
+  texts:
+    en: Why was the collaboration with the implementation partner only partially successful
+      or unsuccessful?
+    fr: Pourquoi la collaboration avec le partenaire chargé de la mise en œuvre a-t-elle
+      été peu ou non-réussie ?
+    de-ch: Warum war die Zusammenarbeit mit dem Umsetzungspartner weniger oder nicht
+      erfolgreich?<br>
+  section_name: Zusammenarbeit im Projekt (Weiter)
+ZusArbeitWeiter:
+  element_type: SingleChoice
+  texts:
+    en: Do you continue or plan to continue the collaboration with at least one implementation
+      partner <strong>after project completion</strong>?
+    fr: Poursuivez-vous ou prévoyez-vous de poursuivre la collaboration avec au moins
+      un partenaire de mise en œuvre <strong>après la fin du projet</strong> ?
+    de-ch: Führen Sie die Zusammenarbeit mit mindestens einem Umsetzungspartner <strong>auch
+      nach dem Projektabschluss</strong> weiter oder planen Sie dies zu tun?
+  section_name: Zusammenarbeit im Projekt (Weiter)
+  choices:
+  - code: '1'
+    texts:
+      en: No, no further collaboration
+      fr: Non, pas de collaboration future
+      de-ch: Nein, keine weitere Zusammenarbeit
+  - code: '2'
+    texts:
+      en: Uncertain about further collaboration
+      fr: Incertain quant à la poursuite de la collaboration
+      de-ch: Unsicher hinsichtlich weiterer Zusammenarbeit
+  - code: '3'
+    texts:
+      en: Yes, without public funding
+      fr: Oui, sans financement public
+      de-ch: Ja, ohne öffentliche Förderung
+  - code: '4'
+    texts:
+      en: Yes, with public funding
+      fr: Oui, avec un soutien public
+      de-ch: Ja, mit öffentlicher Förderung
+  - code: '99'
+    texts:
+      en: Don't know / no answer
+      fr: Ne sait pas / pas de réponse<br>
+      de-ch: Weiss nicht / keine Antwort
+ProjektWeiter:
+  element_type: SingleChoice
+  texts:
+    de-ch: Führen Sie das Projekt in Ihrer Forschungseinheit weiter oder ist dies
+      geplant? Wenn ja, in welcher Form?
+    fr: Poursuivez-vous le projet dans votre unité de recherche ou cela est-il prévu
+      ? Si oui, sous quelle forme ?
+    en: Are you continuing the project in your research unit or is this planned? If
+      so, in what form?
+  section_name: Weiterführung des Projekts
+  choices:
+  - code: '1'
+    texts:
+      de-ch: Nein, keine Fortführung des Projekts
+      en: No, no continuation of the project
+      fr: Non, pas de poursuite du projet
+  - code: '2'
+    texts:
+      de-ch: Unsicher über Fortführung des Projekts
+      en: Unsure about continuation of the project
+      fr: Incertain quant à la poursuite du projet
+  - code: '3'
+    texts:
+      de-ch: Ja, ohne öffentliche Förderung
+      en: Yes, without public funding
+      fr: Oui, sans financement public
+  - code: '5'
+    texts:
+      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Ja,
+        mit öffentlicher Förderung von Innosuisse:</strong></div>Innovationsprojekt
+        mit Umsetzungspartner
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Yes,
+        with public funding from Innosuisse:</strong></div>Innovation project with
+        implementation partner
+      fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Oui,
+        avec un soutien public d'Innosuisse :</strong></div>Projet d'innovation avec
+        partenaire de mise en œuvre
+  - code: '6'
+    texts:
+      de-ch: Innovationsprojekt ohne Umsetzungspartner
+      en: Innovation project without implementation partner
+      fr: Projet d'innovation sans partenaire de mise en œuvre
+  - code: '7'
+    texts:
+      de-ch: 'Weitere Innosuisse-Förderung, bitte nennen:'
+      en: 'Other Innousisse funding, please name:'
+      fr: 'Autre soutien d''Innousisse, veuillez le mentionner :'
+  - code: '4'
+    texts:
+      de-ch: Ja, mit öffentlicher Förderung <strong>ausserhalb</strong> von Innosuisse
+      en: Yes, with public funding <strong>outside</strong> Innosuisse
+      fr: Oui, avec un soutien public <strong>en dehors</strong> d'Innosuisse
+UmsetzungWahrscheinlich:
+  element_type: Matrix
+  texts:
+    en: How do you assess the likelihood that the project results will be translated
+      into an innovation on the market or by an implementation partner&nbsp;in the
+      medium and long term?
+    fr: Quelle est, selon vous, la probabilité que les résultats du projet se traduisent
+      à moyen et long terme&nbsp;par une innovation sur le marché ou chez un partenaire
+      de mise en œuvre&nbsp;?
+    de-ch: Wie schätzen Sie die Wahrscheinlichkeit ein, dass die Projektergebnisse
+      mittel- und langfristig in einer Innovation auf dem Markt oder bei einem Umsetzungspartner&nbsp;umgesetzt
+      werden?<br>
+  section_name: Weiterführung des Projekts
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: The likelihood is ...
+      fr: La probabilité est ...
+      de-ch: Die Wahrscheinlichkeit ist ...<br>
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: keine Umsetzung
+      fr: pas de mise en œuvre
+      en: no implementation
+  - code: '2'
+    texts:
+      de-ch: gering
+      fr: faible
+      en: low
+  - code: '3'
+    texts:
+      de-ch: eher gering
+      fr: plutôt faible
+      en: rather low
+  - code: '4'
+    texts:
+      de-ch: eher hoch
+      fr: plutôt élevée
+      en: rather high
+  - code: '5'
+    texts:
+      de-ch: hoch
+      fr: élevée
+      en: high
+  - code: '6'
+    texts:
+      de-ch: sehr hoch
+      fr: très élevée
+      en: very high
+IPRVereinbarung:
+  element_type: SingleChoice
+  texts:
+    en: Has an IPR agreement been signed between the research and implementation partner?
+    fr: Un accord DPI a-t-il été signé entre le partenaire de recherche et le partenaire
+      de mise en œuvre?
+    de-ch: Ist eine IPR-Vereinbarung zwischen Forschungs- und Umsetzungspartner unterzeichnet
+      worden?
+  section_name: IPR (Teil UP Start)
+  choices:
+  - code: '6'
+    texts:
+      en: Yes, before or at the start of the project
+      fr: Oui, avant ou au moment du lancement du projet
+      de-ch: Ja, vor oder bei Projektstart
+  - code: '5'
+    texts:
+      de-ch: Ja, nach dem Projektstart
+      en: Yes, after the start of the project
+      fr: Oui, après le lancement du projet
+  - code: '1'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+IPRInhaber:
+  element_type: SingleChoice
+  texts:
+    en: Who <strong>currently</strong> owns the property rights to the project results
+      according to the ownership agreement, including any modifications?
+    fr: A qui appartiennent <strong>actuellement </strong>les droits de propriété
+      sur les résultats du projet conformément à l'accord de propriété, y compris
+      les éventuelles modifications ?
+    de-ch: Wem gehören <strong>aktuell</strong> die Eigentumsrechte an den Projektergebnissen
+      gemäss der eigentumsrechtlichen Vereinbarung, inklusive allfälliger Modifikationen?
+  section_name: IPR (Rest)
+  choices:
+  - code: '1'
+    texts:
+      de-ch: Keine Vereinbarung und Eigentumsrechte definiert
+      fr: Pas d'accord et droits de propriété définis
+      en: No agreement and ownership rights defined
+  - code: '2'
+    texts:
+      en: Implementation partner
+      fr: Partenaire de mise en œuvre
+      de-ch: Umsetzungspartner
+  - code: '3'
+    texts:
+      en: Us / our research institution
+      fr: Nous / notre institution de recherche
+      de-ch: Uns resp. unserer Forschungsinstitution<br>
+  - code: '4'
+    texts:
+      de-ch: Einem anderen Forschungspartner<em><br></em>
+      fr: Un autre partenaire de recherche
+      en: Another research partner
+  - code: '5'
+    texts:
+      de-ch: Gemeinsame Eigentumsrechte mit Umsetzungspartner, z.B. Mitberechtigung
+      fr: Droits de propriété communs avec le partenaire de mise en œuvre, par ex.
+        co-autorisation
+      en: Joint ownership rights with implementation partner, e.g. co-authorisation
+  - code: '6'
+    texts:
+      de-ch: 'Weitere Form der eigentumsrechtlichen Vereinbarung, bitte angeben:'
+      fr: 'Autre forme d''accord de propriété, à préciser :'
+      en: 'Other form of ownership agreement, please specify:'
+IPRForm:
+  element_type: Matrix
+  texts:
+    en: What conditions regarding rights of use have been negotiated in your project?
+    fr: Quelles conditions relatives aux droits d'utilisation ont été négociées dans
+      le cadre de votre projet ?
+    de-ch: Welche Konditionen bezüglich Nutzungsrechte sind in Ihrem Projekt ausgehandelt
+      worden?
+  section_name: IPR (Rest)
+  matrix_rows:
+  - code: '1'
+    texts:
+      de-ch: «Freie Nicht-Exklusive Rechte» auf Eigentumsrechte zugunsten der Umsetzungspartner<s><br></s>
+      en: '"Free non-exclusive rights" to property rights in favour of the implementation
+        partners'
+      fr: «Droits libres non exclusifs» sur les droits de propriété en faveur des
+        partenaires de mise en œuvre
+  - code: '2'
+    texts:
+      de-ch: «Kostbare Exklusive Lizenzrechte auf Eigentumsrechte» zugunsten der Umsetzungspartner
+      en: '"Valuable Exclusive Licence Rights to Property Rights" in favour of the
+        implementation partners'
+      fr: «Droits de licence exclusifs précieux sur les droits de propriété» en faveur
+        des partenaires de mise en œuvre
+  - code: '3'
+    texts:
+      de-ch: «Freie Exklusive Lizenzrechte» auf Eigentumsrechte zugunsten der Umsetzungspartner
+      en: '"Free Exclusive Licence Rights" to property rights in favour of the implementation
+        partners'
+      fr: «Droits de licence exclusifs libres» sur les droits de propriété en faveur
+        des partenaires de mise en œuvre
+  - code: '4'
+    texts:
+      de-ch: Registrierung von Eigentumsrechten (Patente, Trademarks, Urheberrechte,
+        Designrechte, etc) durch Umsetzungspartner und/oder Forschungspartner<br>
+      en: Registration of property rights (patents, trademarks, copyrights, design
+        rights, etc) by implementation partners and/or research partners
+      fr: Enregistrement des droits de propriété (brevets, marques déposées, droits
+        d'auteur, droits sur les dessins et modèles etc.) par les partenaires de mise
+        en œuvre et/ou les partenaires de recherche
+  matrix_columns:
+  - code: '6'
+    texts:
+      de-ch: erfolgt<br>
+      fr: achevé <br>
+      en: done
+  - code: '4'
+    texts:
+      de-ch: geplant
+      fr: prévu
+      en: planned
+  - code: '1'
+    texts:
+      de-ch: nein<br>
+      fr: non
+      en: 'no'
+IPRFormRegistrierung:
+  element_type: SingleChoice
+  texts:
+    de-ch: In wessen Namen und durch wen erfolgte die Registrierung der Eigentumsrechte?<br>
+    en: In whose name and by whom was the registration of property rights carried
+      out?
+    fr: Au nom de qui et par qui l'enregistrement des droits de propriété a-t-il été
+      effectué ?
+  section_name: IPR (Rest)
+  choices:
+  - code: '1'
+    texts:
+      de-ch: Durch den Umsetzungspartner im Namen des Umsetzungspartners
+      fr: Par le partenaire de mise en œuvre au nom du partenaire de mise en œuvre
+      en: By the implementation partner on behalf of the implementation partner
+  - code: '2'
+    texts:
+      de-ch: Durch den Forschungspartner im Namen des Forschungspartners
+      fr: Par le partenaire de recherche au nom du partenaire de recherche
+      en: By the research partner on behalf of the research partner
+  - code: '3'
+    texts:
+      de-ch: Durch den Forschungspartner und den Umsetzungspartner im Namen des Forschungspartners
+        und des Umsetzungspartners
+      fr: Par le partenaire de recherche et le partenaire de mise en œuvre au nom
+        du partenaire de recherche et du partenaire de mise en œuvre
+      en: By the research partner and the implementation partner on behalf of the
+        research partner and the implementation partner
+IPR_Unterstuetzung:
+  element_type: Matrix
+  texts:
+    en: Have you used <strong>external support </strong>to settle property rights?
+    fr: Avez-vous fait appel à une <strong>aide extérieure</strong> pour régler les
+      droits de propriété ?
+    de-ch: Haben Sie eine <strong>externe Unterstützung</strong> zur Regelung der
+      Eigentumsrechte in Anspruch genommen?
+  section_name: IPR (Rest)
+  matrix_rows:
+  - code: '1'
+    texts:
+      de-ch: Bei der Transferstelle unserer Forschungsinstitution
+      fr: Auprès du service de transfert de notre institution de recherche
+      en: At the transfer office of our research institution
+  - code: '2'
+    texts:
+      de-ch: Beim Eidgenössischen Institut für geistiges Eigentum
+      fr: Auprès de l'Institut fédéral de la propriété intellectuelle
+      en: At the Swiss Federal Institute of Intellectual Property
+  - code: '3'
+    texts:
+      de-ch: 'Bei einer weiteren Organisation, bitte nennen:'
+      fr: Auprès d'une autre organisation, veuillez préciser :<br>
+      en: 'At another organisation, please name:'
+  matrix_columns:
+  - code: '6'
+    texts:
+      de-ch: ja, erfolgt<br>
+      fr: oui, achevé
+      en: yes, done<br>
+  - code: '4'
+    texts:
+      de-ch: ja, geplant
+      fr: oui, prévu
+      en: yes, planned
+  - code: '1'
+    texts:
+      de-ch: nein<br>
+      fr: non
+      en: 'no'
+NeueKompetenzen:
+  element_type: MultipleChoice
+  texts:
+    en: Did additional know-how and/or knowledge have to be integrated into the project
+      during the course of the project by additional project staff that was not planned
+      at the start of the project ?
+    fr: Le projet a-t-il nécessité l'intégration d'un savoir-faire et/ou de connaissances
+      supplémentaires par des collaborateurs/trices supplémentaires qui n'étaient
+      pas prévus au début du projet ?&nbsp;?
+    de-ch: Musste während des Projektverlaufes weiteres Know-how und/oder Wissen durch
+      zusätzliche Projektmitarbeiter:innen in das Projekt integriert werden, das bei
+      Projektstart nicht eingeplant war?
+  section_name: Charakterisierung (TRL ) + Komeptenzen
+  choices:
+  - code: '1'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+  - code: '6'
+    texts:
+      en: Yes, with research partner(s)
+      fr: Oui, chez le(s) partenaire(s) de recherche
+      de-ch: Ja, bei Forschungspartner(n)
+  - code: '5'
+    texts:
+      de-ch: Ja, bei Umsetzungspartner(n)
+      fr: Oui, chez le(s) partenaire(s) de mise en œuvre
+      en: Yes, with implementation partner(s)
+Disziplinaritaet:
+  element_type: SingleChoice
+  texts:
+    en: How do you assess the funded project with regard to the <strong>integration
+      of different discipline</strong><strong>s</strong><strong>?</strong>
+    fr: Comment jugez-vous le projet financé en termes d'<strong>intégration de différentes
+      disciplines </strong>?
+    de-ch: Wie beurteilen Sie das geförderte Projekt hinsichtlich der<strong> Integration
+      unterschiedlicher Disziplinen</strong><strong>?</strong>
+  section_name: Charakterisierung (Surveyübergreifend)
+  choices:
+  - code: '4'
+    texts:
+      en: <strong>Multidisciplinary:</strong> Involvement of different scientific
+        fields or disciplines with specific knowledge and perspectives, <u>each using
+        their disciplinary knowledge</u> to contribute to the solution of the research
+        problem.
+      fr: <strong>Multidisciplinaire :</strong> participation de différents domaines
+        ou disciplines scientifiques avec des connaissances et des perspectives spécifiques,
+        <u>chacun utilisant ses connaissances disciplinaires</u> pour contribuer à
+        la résolution du problème de recherche.
+      de-ch: '<strong>Multidisziplinär</strong>: Beteiligung verschiedener wissenschaftlicher
+        Bereiche oder Disziplinen mit spezifischen Kenntnissen und Perspektiven, <u>wobei
+        jeder sein disziplinäres Wissen nutzt</u>, um zur Lösung des Forschungsproblems
+        beizutragen.'
+  - code: '5'
+    texts:
+      de-ch: <strong>Interdisziplinär: </strong>Zusammenarbeit verschiedener wissenschaftlicher
+        Bereiche oder Disziplinen, um gemeinsam Lösungen zu finden oder Ergebnisse
+        zu erzielen, <u>indem Wissen und Methoden aus verschiedenen Disziplinen integriert
+        werden</u> und eine echte Synthese von Ansätzen verwendet wird.
+      en: '<strong>Interdisciplinary: </strong>Collaboration of different scientific
+        fields or disciplines to jointly find solutions or achieve results by <u>integrating
+        knowledge and methods from different disciplines</u> and using a true synthesis
+        of approaches.'
+      fr: <strong>Interdisciplinaire :</strong> collaboration entre différents domaines
+        ou disciplines scientifiques afin de trouver des solutions ou d'obtenir des
+        résultats ensemble, <u>en intégrant des connaissances et des méthodes issues
+        de différentes disciplines</u> et en utilisant une véritable synthèse des
+        approches.
+  - code: '6'
+    texts:
+      de-ch: <strong>Transdisziplinär:</strong> Zusammenarbeit verschiedener wissenschaftlicher
+        Disziplinen unter zusätzlicher Beteiligung von Akteuren außerhalb der Wissenschaft,
+        der Politik, der Gesellschaft oder anderer Organisationen oder Gruppen, <u>um
+        neue Denkansätze oder Methoden zur Veränderung des Systems oder der Umwelt
+        zu entwickeln.</u>
+      en: <strong>Transdisciplinary:</strong> Collaboration of different scientific
+        disciplines with additional participation of actors outside science, politics,
+        society or other organisations or groups <u>to develop new ways of thinking
+        or methods to change the system or the environment</u>.
+      fr: <strong>Transdisciplinaire :</strong> collaboration entre différentes disciplines
+        scientifiques, avec la participation supplémentaire d'acteurs extérieurs à
+        la science, à la politique, à la société ou à d'autres organisations ou groupes,
+        <u>afin de développer de nouvelles approches ou méthodes de réflexion pour
+        modifier le système ou l'environnement</u>.
+  - code: '1'
+    texts:
+      de-ch: <strong>Keine</strong> Integration unterschiedlicher Disziplinen
+      fr: <strong>Pas d'intégration</strong> de différentes disciplines
+      en: <strong>No integration</strong> of different disciplines
+ErgebnisseGeplant:
+  element_type: Matrix
+  texts:
+    de-ch: Bitte geben Sie nachfolgend die Anzahl der <strong>geplanten/laufenden</strong>
+      Ergebnisse an.
+    fr: Veuillez indiquer ci-dessous le nombre de résultats <strong>planifiés/en </strong><strong>cours</strong>.
+    en: Please indicate below the number of <strong>planned/ongoing</strong> results.
+  section_name: Zielerreichung und Ergebnisse
+  matrix_rows:
+  - code: '0'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Bachelorarbeiten</div>'
+      fr: '<div style="margin-left: 20px;">Travaux de bachelor</div>'
+      en: '<div style="margin-left: 20px;">Bachelor theses</div>'
+  - code: '1'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Masterarbeiten</div>'
+      fr: '<div style="margin-left: 20px;">Travaux de master</div>'
+      en: '<div style="margin-left: 20px;">Master theses</div>'
+  - code: '2'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Dissertationen</div>'
+      fr: '<div style="margin-left: 20px;">Thèses de doctorat</div>'
+      en: '<div style="margin-left: 20px;">Dissertations</div>'
+  - code: '3'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Wissenschaftliche Publikationen (Double-Peer-Reviewed,
+        Peer-Reviewed)</div>'
+      fr: '<div style="margin-left: 20px;">Publications scientifiques (évaluées, évaluées
+        par les pairs)</div>'
+      en: '<div style="margin-left: 20px;">Scientific publications (Double-Peer Rewied,
+        Peer-Reviewed)</div>'
+  - code: '4'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Andere wissenschaftliche Publikationen</div>'
+      fr: '<div style="margin-left: 20px;">Autres publications scientifiques</div>'
+      en: '<div style="margin-left: 20px;">Other scientific publications</div>'
+  - code: '5'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Anstellung von Forschenden über das
+        Projekt hinaus</div>'
+      fr: '<div style="margin-left: 20px;">Engagement de chercheurs au-delà du projet</div>'
+      en: '<div style="margin-left: 20px;">Employment of researchers beyond the scope
+        of the project</div>'
+  - code: '6'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Pilot- und Demonstrationsanlagen</div>'
+      fr: '<div style="margin-left: 20px;">Installations pilotes et de démonstration</div>'
+      en: '<div style="margin-left: 20px;">Pilot and demonstration plants</div>'
+  - code: '7'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Weitere Veröffentlichungen (Software,
+        Daten, etc.)</div>'
+      fr: '<div style="margin-left: 20px;">Autres publications (logiciels, données,
+        etc.)</div>'
+      en: '<div style="margin-left: 20px;">Other publications (software, data, etc.)</div>'
+  - code: '8'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Ko-Publikationen mit Umsetzungspartner</div>'
+      fr: '<div style="margin-left: 20px;">Co-publications avec des partenaires de
+        mise en œuvre</div>'
+      en: '<div style="margin-left: 20px;">Co-publications with implementation partners</div>'
+  - code: '9'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Lizenzvereinbarungen</div>'
+      fr: '<div style="margin-left: 20px;">Accords de licence</div>'
+      en: '<div style="margin-left: 20px;">Licensing agreements</div>'
+  - code: '10'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Transfer von Forschungspersonal zu Umsetzungspartner</div>'
+      fr: '<div style="margin-left: 20px;">Transfert de personnel de recherche vers
+        des partenaires de mise en œuvre</div>'
+      en: '<div style="margin-left: 20px;">Transfer of research staff to implementation
+        partners</div>'
+  - code: '11'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Transfer von Mitarbeiter:innen von Umsetzungspartnern
+        zu Forschungspartner</div>'
+      fr: '<div style="margin-left: 20px;">Transfert de collaborateurs/trices de partenaires
+        de mise en œuvre à des partenaires de recherche</div>'
+      en: '<div style="margin-left: 20px;">Transfer of staff from implementation partners
+        to research partners</div>'
+  - code: '12'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Kooperation mit nichtgewinnorientierten
+        Organisationen (NGO''s, Stiftungen, ohne öffentliche Verwaltungen)</div>'
+      fr: '<div style="margin-left: 20px;">Coopération avec des organisations à but
+        non lucratif (ONG, fondations, sans les administrations publiques)</div>'
+      en: '<div style="margin-left: 20px;">Cooperation with non-profit organisations
+        (NGOs, foundations, excluding public administrations)</div>'
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: Anzahl geplant/laufend<br>
+      fr: Nombre planifiés/en cours
+      en: Number planned/ongoing
+ErgebnisseAbgeschlossen:
+  element_type: Matrix
+  texts:
+    de-ch: Bitte geben Sie nachfolgend die Anzahl der <strong>abgeschlossenen</strong>
+      Ergebnisse an.
+    en: Please indicate the number of <strong>completed</strong> results below.
+    fr: Veuillez indiquer ci-dessous le nombre de résultats<strong> achevés.</strong>
+  section_name: Zielerreichung und Ergebnisse
+  matrix_rows:
+  - code: '0'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Bachelorarbeiten</div>'
+      en: '<div style="margin-left: 20px;">Bachelor theses</div>'
+      fr: '<div style="margin-left: 20px;">Travaux de bachelor</div>'
+  - code: '1'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Masterarbeiten</div>'
+      en: '<div style="margin-left: 20px;">Master theses</div>'
+      fr: '<div style="margin-left: 20px;">Travaux de master</div>'
+  - code: '2'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Dissertationen</div>'
+      en: '<div style="margin-left: 20px;">Dissertations</div>'
+      fr: '<div style="margin-left: 20px;">Thèses de doctorat</div>'
+  - code: '3'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Wissenschaftliche Publikationen (Double-Peer-Reviewed,
+        Peer-Reviewed)</div>'
+      en: '<div style="margin-left: 20px;">Scientific publications (Double-Peer Rewied,
+        Peer-Reviewed)</div>'
+      fr: '<div style="margin-left: 20px;">Publications scientifiques (évaluées, évaluées
+        par les pairs)</div>'
+  - code: '4'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Andere wissenschaftliche Publikationen</div>'
+      en: '<div style="margin-left: 20px;">Other scientific publications</div>'
+      fr: '<div style="margin-left: 20px;">Autres publications scientifiques</div>'
+  - code: '5'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Anstellung von Forschenden über das
+        Projekt hinaus</div>'
+      en: '<div style="margin-left: 20px;">Employment of researchers beyond the scope
+        of the project</div>'
+      fr: '<div style="margin-left: 20px;">Engagement de chercheurs au-delà du projet</div>'
+  - code: '6'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Pilot- und Demonstrationsanlagen</div>'
+      en: '<div style="margin-left: 20px;">Pilot and demonstration plants</div>'
+      fr: '<div style="margin-left: 20px;">Installations pilotes et de démonstration</div>'
+  - code: '7'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Weitere Veröffentlichungen (Software,
+        Daten, etc.)</div>'
+      en: '<div style="margin-left: 20px;">Other publications (software, data, etc.)</div>'
+      fr: '<div style="margin-left: 20px;">Autres publications (logiciels, données,
+        etc.)</div>'
+  - code: '8'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Ko-Publikationen mit Umsetzungspartner</div>'
+      en: '<div style="margin-left: 20px;">Co-publications with implementation partners</div>'
+      fr: '<div style="margin-left: 20px;">Co-publications avec des partenaires de
+        mise en œuvre</div>'
+  - code: '9'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Lizenzvereinbarungen</div>'
+      en: '<div style="margin-left: 20px;">Licensing agreements</div>'
+      fr: '<div style="margin-left: 20px;">Accords de licence</div>'
+  - code: '10'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Transfer von Forschungspersonal zu Umsetzungspartner</div>'
+      en: '<div style="margin-left: 20px;">Transfer of research staff to implementation
+        partners</div>'
+      fr: '<div style="margin-left: 20px;">Transfert de personnel de recherche vers
+        des partenaires de mise en œuvre</div>'
+  - code: '11'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Transfer von Mitarbeiter:innen von Umsetzungspartnern
+        zu Forschungspartner</div>'
+      en: '<div style="margin-left: 20px;">Transfer of staff from implementation partners
+        to research partners</div>'
+      fr: '<div style="margin-left: 20px;">Transfert de collaborateurs/trices de partenaires
+        de mise en œuvre à des partenaires de recherche</div>'
+  - code: '12'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Kooperation mit nichtgewinnorientierten
+        Organisationen (NGO''s, Stiftungen, ohne öffentliche Verwaltungen)</div>'
+      en: '<div style="margin-left: 20px;">Cooperation with non-profit organisations
+        (NGOs, foundations, excluding public administrations)</div>'
+      fr: '<div style="margin-left: 20px;">Coopération avec des organisations à but
+        non lucratif (ONG, fondations, sans les administrations publiques)</div>'
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: Anzahl abgeschlossen<br>
+      en: Number completed
+      fr: Nombre achevés
+WirkProjekt_InEinheit:
+  element_type: Matrix
+  texts:
+    en: What effects has the funded project achieved in your research unit?<br>
+    fr: Quels ont été les effets du projet financé dans votre unité de recherche ?
+    de-ch: Welche Wirkungen hat das geförderte Projekt in Ihrer Forschungseinheit
+      erzielt?
+  section_name: Wirkungen und Nutzen
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: '<strong>Research and teaching</strong><div style="margin-left: 20px;">Strengthening
+        research cooperation and networks</div>'
+      fr: '<strong>Recherche et enseignement</strong><div style="margin-left: 20px;">Renforcement
+        des coopérations et des réseaux de recherche</div>'
+      de-ch: '<strong>Forschung und Lehre</strong><div style="margin-left: 20px;top:15px;">Stärkung
+        Forschungskooperationen und -netzwerke</div>'
+  - code: '2'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Stärkung akademischer Karrieremöglichkeiten
+        der Projektmitarbeiter/-innen</div>'
+      en: '<div style="margin-left: 20px;">Strengthening academic career opportunities
+        for project staff</div>'
+      fr: '<div style="margin-left: 20px;">Renforcement des possibilités de carrière
+        académique des collaborateurs/trices du projet</div>'
+  - code: '3'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Anwendung der Forschungs- und Projektergebnisse
+        in der Ausbildung</div>'
+      en: '<div style="margin-left: 20px;">Application of research and project results
+        in education and training</div>'
+      fr: '<div style="margin-left: 20px;">Application des résultats de la recherche
+        et des projets dans la formation</div>'
+  - code: '4'
+    texts:
+      de-ch: '<strong>Wissens- und Technologietransfer sowie Umsetzung</strong><div
+        style="margin-left: 20px;">Erhöhte Sichtbarkeit in der Zielgruppe</div>'
+      en: '<strong>Knowledge and technology transfer and implementation</strong><div
+        style="margin-left: 20px;">Increased visibility in the target group</div>'
+      fr: '<strong>Transfert de connaissances et de technologies et mise en œuvre</strong><div
+        style="margin-left: 20px;">Visibilité accrue au sein du groupe cible</div>'
+  - code: '5'
+    texts:
+      de-ch: '<div data-empty="true" style="margin-left: 20px;">Demonstration der
+        kommerziellen Umsetzbarkeit</div>'
+      en: '<div style="margin-left: 20px;">Demonstration of commercial feasibility</div>'
+      fr: '<div style="margin-left: 20px;">Démonstration de la faisabilité commerciale</div>'
+  - code: '6'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Sensibilisierung für Verwertung und
+        Umsetzung wissenschaftlicher Ergebnisse (inkl. Spin-offs)</div>'
+      en: '<div style="margin-left: 20px;">Raising awareness of the exploitation and
+        implementation of scientific results (incl. spin-offs)</div>'
+      fr: '<div style="margin-left: 20px;">Sensibilisation à l''exploitation et à
+        la mise en œuvre des résultats scientifiques (y compris les spin-offs)</div>'
+  - code: '7'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Stärkung nicht-akademischer Karrieremöglichkeiten
+        ausserhalb der Forschung</div>'
+      en: '<div style="margin-left: 20px;">Strengthening non-academic career opportunities
+        outside research</div>'
+      fr: '<div style="margin-left: 20px;">Renforcement des possibilités de carrières
+        non académiques en dehors de la recherche</div>'
+  - code: '8'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Learnings aus Wirtschaft, Industrie
+        und Praxis für die eigene Forschung</div>'
+      en: '<div style="margin-left: 20px;">Learning from business, industry and practice
+        for own research</div>'
+      fr: '<div style="margin-left: 20px;">Leçons tirées de l''économie, de l''industrie
+        et de la pratique pour la propre recherche</div>'
+  - code: '9'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Stärkung der Attraktivität unserer Forschungsinstitution
+        als Kooperationspartner</div>'
+      en: '<div style="margin-left: 20px;">Strengthening the attractiveness our research
+        unit as a cooperation partner</div>'
+      fr: '<div style="margin-left: 20px;">Renforcement de l''attractivité de notre
+        unité de recherche en tant que partenaire de coopération</div>'
+  - code: '10'
+    texts:
+      de-ch: '<strong>Weitere Wirkungen</strong><div style="margin-left: 20px;">Entstehen
+        neuer Forschungsideen ausserhalb des Projekts</div>'
+      en: '<strong>Further effects</strong><div style="margin-left: 20px;">Emergence
+        of new research ideas outside the project</div>'
+      fr: '<strong>Autres effets</strong><div style="margin-left: 20px;">Emergence
+        de nouvelles id&eacute;es de recherche en dehors du projet</div>'
+  - code: '11'
+    texts:
+      de-ch: '<div style="margin-left: 20px;">Entstehen neuer Innovationsideen ausserhalb
+        des Projekts</div>'
+      en: '<div style="margin-left: 20px;">Emergence of new innovation ideas outside
+        the project</div>'
+      fr: '<div style="margin-left: 20px;">Emergence de nouvelles id&eacute;es d&#39;innovation
+        en dehors du projet</div>'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: no effect at all
+      fr: pas d'effet du tout
+      de-ch: überhaupt keine Wirkung
+  - code: '2'
+    texts:
+      en: weak effect
+      fr: effet faible
+      de-ch: geringe Wirkung
+  - code: '3'
+    texts:
+      en: rather weak effect
+      fr: effet plutôt faible
+      de-ch: eher geringe Wirkung<br>
+  - code: '4'
+    texts:
+      en: rather strong effect
+      fr: effet plutôt fort
+      de-ch: eher starke Wirkung
+  - code: '5'
+    texts:
+      en: strong effect
+      fr: effet fort
+      de-ch: starke Wirkung
+  - code: '6'
+    texts:
+      en: very strong effect
+      fr: effet très fort
+      de-ch: sehr starke Wirkung
+ForschungWeiter:
+  element_type: SingleChoice
+  texts:
+    en: Has research and development in the specific thematic area of the funded innovation
+      project been continued at your research unit since the project was completed?
+    fr: La recherche et le développement dans le domaine thématique concret du projet
+      d'innovation financé ont-ils été poursuivis dans votre unité de recherche depuis
+      la fin du projet ?
+    de-ch: Wird die Forschung und Entwicklung im konkreten Themengebiet des geförderten
+      Innovationsprojektes an Ihrer Forschungseinheit weitergeführt?
+  section_name: Wirkungen und Nutzen
+  choices:
+  - code: '1'
+    texts:
+      de-ch: Nein, wird nicht weitergeführt
+      fr: Non, ne sera pas poursuivi
+      en: No, will not be continued
+  - code: '3'
+    texts:
+      en: Yes, but research and development is less important
+      fr: Oui, mais la recherche et le développement sont moins importants
+      de-ch: Ja, aber die Forschung und Entwicklung ist weniger wichtig
+  - code: '4'
+    texts:
+      de-ch: Ja, ungefähr im gleichen Ausmass
+      fr: Oui, à peu près dans la même mesure
+      en: Yes, to about the same extent
+  - code: '5'
+    texts:
+      de-ch: Ja die Forschung und Entwicklung in diesem Themengebiet hat sich verstärkt
+      fr: Oui la recherche et le développement dans ce domaine thématique se sont
+        renforcés
+      en: Yes research and development in this thematic area has increased
+  - code: '6'
+    texts:
+      de-ch: Ja, es hat sich ein neuer Forschungsschwerpunkt gebildet
+      fr: Oui, un nouveau pôle de recherche s'est formé
+      en: Yes, a new research focus has emerged
+Nutzen:
+  element_type: Matrix
+  texts:
+    en: How do you assess the <strong>benefit </strong>of the innovation project in
+      terms of ....
+    fr: Comment évaluez-vous <strong>les bénéfices</strong><strong> </strong>du projet
+      d'innovation en ce qui concerne ....
+    de-ch: Wie beurteilen Sie den<strong> Nutzen</strong> des Innovationsprojektes
+      hinsichtlich ….
+  section_name: Wirkungen und Nutzen
+  matrix_rows:
+  - code: '1'
+    texts:
+      de-ch: Forschungsaktivitäten
+      fr: Activités de recherche
+      en: Research activities
+  - code: '2'
+    texts:
+      de-ch: Anwendungsorientierung der Forschung
+      fr: Orientation de la recherche vers les applications
+      en: Application orientation of research
+  - code: '3'
+    texts:
+      de-ch: Konkrete Umsetzung der Forschungsergebnisse
+      fr: Mise en œuvre concrète des résultats de la recherche
+      en: Concrete implementation of research findings
+  - code: '4'
+    texts:
+      de-ch: Nachwuchsförderung
+      fr: Promotion de la relève
+      en: Promotion of young researchers
+  - code: '5'
+    texts:
+      de-ch: Transferaktivitäten von Forschung zu Wirtschaft
+      fr: Activités de transfert de la recherche vers l'économie
+      en: Transfer activities from research to industry
+  - code: '6'
+    texts:
+      de-ch: Transferaktivitäten von Wirtschaft zu Forschung
+      fr: Activités de transfert de l'économie vers la recherche
+      en: Transfer activities from industry to research
+  - code: '7'
+    texts:
+      de-ch: <strong>Gesamter Nutzen f&uuml;r Forschungseinheit</strong>
+      fr: Bénéfice global pour l'unité de recherche
+      en: Overall benefit for research unit
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not existing
+      fr: inexistant
+      de-ch: nicht vorhanden
+  - code: '2'
+    texts:
+      en: low
+      fr: faible
+      de-ch: gering
+  - code: '3'
+    texts:
+      en: rather low
+      fr: plutôt faible
+      de-ch: eher gering
+  - code: '4'
+    texts:
+      en: rather high
+      fr: plutôt élevé
+      de-ch: eher hoch
+  - code: '5'
+    texts:
+      en: high
+      fr: élevé
+      de-ch: hoch
+  - code: '6'
+    texts:
+      en: very high
+      fr: très élevé
+      de-ch: sehr hoch
+ZufriedenNichtOffen:
+  element_type: OpenQuestion
+  texts:
+    en: 'Please let us know why you were dissatisfied:'
+    fr: Veuillez nous faire savoir les causes d’insatisfaction :<br>
+    de-ch: 'Bitte teilen Sie uns die Gründe mit, weshalb sie unzufrieden waren:'
+  section_name: Zufriedenheit
