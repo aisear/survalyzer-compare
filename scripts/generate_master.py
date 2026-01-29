@@ -24,9 +24,9 @@ from src.master import extract_master, save_master
 
 
 def merge_masters(masters: list[dict[str, Any]]) -> dict[str, Any]:
-    """Merge multiple master dicts, earlier ones take precedence."""
+    """Merge multiple master dicts, newer ones take precedence."""
     merged: dict[str, Any] = {}
-    for master in reversed(masters):  # Oldest first, newest overwrites
+    for master in masters:  # Oldest first, newest overwrites
         merged.update(master)
     return merged
 

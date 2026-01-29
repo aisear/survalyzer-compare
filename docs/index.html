@@ -14,6 +14,8 @@
     --red-border: #cc4125;
     --grey: #d9d9d9;
     --grey-border: #999;
+    --lightgrey: #efefef;
+    --lightgrey-border: #ccc;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; color: #333; padding: 20px; background: #fafafa; }
@@ -54,6 +56,7 @@
   .cell-yellow { background: var(--yellow); }
   .cell-red { background: var(--red); }
   .cell-grey { background: var(--grey); }
+  .cell-lightgrey { background: var(--lightgrey); }
 
   .status-badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
   .badge-identical { background: var(--green); color: #274e13; }
@@ -63,7 +66,7 @@
   .badge-different { background: var(--red); color: #660000; }
   .badge-structure_changed { background: var(--red); color: #660000; }
   .badge-added { background: var(--grey); color: #333; }
-  .badge-removed { background: var(--grey); color: #333; }
+  .badge-removed { background: transparent; color: #999; font-weight: normal; }
 
   .detail-row { display: none; }
   .detail-row.open { display: table-row; }
@@ -93,7 +96,7 @@ const STATUS_COLOR = {
   text_changed: 'yellow',
   structure_changed: 'red',
   added: 'grey',
-  removed: 'grey'
+  removed: 'lightgrey'
 };
 
 let DATA = null;
@@ -214,11 +217,12 @@ function renderQuestionRow(code) {
     const diff = codeDiffs[survey];
     if (diff) {
       const color = STATUS_COLOR[diff.status] || '';
+      const label = diff.status === 'removed' ? '—' : diff.status.replace('_', ' ');
       surveyCells += `<td class="cell-${color} clickable" onclick="toggleDetail('${code}')">
-        <span class="status-badge badge-${diff.status}">${diff.status.replace('_', ' ')}</span>
+        <span class="status-badge badge-${diff.status}">${label}</span>
       </td>`;
     } else {
-      surveyCells += `<td class="cell-grey">—</td>`;
+      surveyCells += `<td class="cell-lightgrey">—</td>`;
     }
   }
 
