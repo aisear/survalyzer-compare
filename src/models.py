@@ -19,7 +19,8 @@ _CODE_ALIASES = {
 def normalize_code(code: str) -> str:
     """Strip survey-type prefix (F/f/I/i) from question code for matching.
 
-    Generally strips first character, except for known acronyms like "IPR".
+    Only strips the prefix if it's followed by an uppercase letter (indicating
+    it's a survey-type prefix like F/I, not part of the word itself).
     Also applies alias mapping for known typos.
     """
     if not code:
@@ -27,8 +28,9 @@ def normalize_code(code: str) -> str:
     # Don't strip from known acronyms
     if code.startswith('IPR'):
         return _CODE_ALIASES.get(code, code)
-    # Strip F/f/I/i prefix
-    if code[0] in 'FfIi':
+    # Strip F/f/I/i prefix only if followed by uppercase letter
+    # This ensures normalization is idempotent (e.g., "IstStartup" stays as is)
+    if len(code) > 1 and code[0] in 'FfIi' and code[1].isupper():
         code = code[1:]
     # Apply alias mapping
     return _CODE_ALIASES.get(code, code)
