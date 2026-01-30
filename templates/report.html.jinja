@@ -79,6 +79,7 @@
 
   .lang-text { display: none; }
   .lang-text.active { display: inline; }
+  .lang-status { display: none; }
 </style>
 </head>
 <body>
@@ -261,52 +262,80 @@
                 {% endif %}
               {% endfor %}
               {% for choice_code in choice_codes %}
-                {# Find master choice text #}
-                {% set master_choice_ns = namespace(text='') %}
+                {# Find master choice text for each language #}
+                {% set master_choice_texts = {} %}
                 {% if q_master %}
                   {% for c in q_master.choices %}
                     {% if c.code == choice_code %}
                       {% for lt in c.texts %}
-                        {% if lt.language == default_language %}{% set master_choice_ns.text = lt.text %}{% endif %}
+                        {% set _ = master_choice_texts.__setitem__(lt.language, lt.text) %}
                       {% endfor %}
                     {% endif %}
                   {% endfor %}
                 {% endif %}
-                {# Find worst status across surveys #}
-                {% set choice_ns = namespace(worst='identical', worst_sim=1.0) %}
-                {% for survey in survey_names %}
-                  {% set qd = code_diffs.get(survey) %}
-                  {% if qd and qd.choice_diffs %}
-                    {% for cd in qd.choice_diffs %}
-                      {% if cd.code == choice_code %}
-                        {% if cd.status == 'structure_changed' %}{% set choice_ns.worst = 'structure_changed' %}
-                        {% elif cd.status == 'text_changed' and choice_ns.worst not in ('structure_changed',) %}{% set choice_ns.worst = 'text_changed' %}
-                        {% elif cd.status in ('added', 'removed') and choice_ns.worst == 'identical' %}{% set choice_ns.worst = cd.status %}{% endif %}
-                        {% for td in cd.text_diffs %}
-                          {% if td.similarity < choice_ns.worst_sim %}{% set choice_ns.worst_sim = td.similarity %}{% endif %}
-                        {% endfor %}
-                      {% endif %}
-                    {% endfor %}
-                  {% endif %}
+                {# Find status per language (worst across surveys for each language) #}
+                {% set choice_lang_status = {} %}
+                {% set choice_lang_sim = {} %}
+                {% for lang in languages %}
+                  {% set lang_ns = namespace(worst='exact', worst_sim=1.0, has_structural=false) %}
+                  {% for survey in survey_names %}
+                    {% set qd = code_diffs.get(survey) %}
+                    {% if qd and qd.choice_diffs %}
+                      {% for cd in qd.choice_diffs %}
+                        {% if cd.code == choice_code %}
+                          {% if cd.status in ('added', 'removed') %}
+                            {% set lang_ns.has_structural = true %}
+                            {% set lang_ns.worst = cd.status %}
+                          {% elif cd.text_diffs %}
+                            {% for td in cd.text_diffs %}
+                              {% if td.language == lang %}
+                                {% if td.status == 'different' %}{% set lang_ns.worst = 'different' %}
+                                {% elif td.status in ('similar', 'added', 'removed') and lang_ns.worst == 'exact' %}{% set lang_ns.worst = td.status %}{% endif %}
+                                {% if td.similarity < lang_ns.worst_sim %}{% set lang_ns.worst_sim = td.similarity %}{% endif %}
+                              {% endif %}
+                            {% endfor %}
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                  {% endfor %}
+                  {% set _ = choice_lang_status.__setitem__(lang, lang_ns.worst) %}
+                  {% set _ = choice_lang_sim.__setitem__(lang, lang_ns.worst_sim) %}
                 {% endfor %}
               <tr>
                 <td>{{ choice_code }}</td>
-                <td><span class="status-badge badge-{{ choice_ns.worst }}">{{ choice_ns.worst | replace('_', ' ') }}</span></td>
-                <td>{{ "%.0f" | format(choice_ns.worst_sim * 100) }}%</td>
-                <td class="text-cell">{{ master_choice_ns.text | truncate(100) if master_choice_ns.text else '—' }}</td>
+                <td>
+                  {% for lang in languages %}
+                  <span class="status-badge badge-{{ choice_lang_status.get(lang, 'exact') }} lang-status" data-lang="{{ lang }}">{{ choice_lang_status.get(lang, 'exact') | replace('_', ' ') }}</span>
+                  {% endfor %}
+                </td>
+                <td>
+                  {% for lang in languages %}
+                  <span class="lang-status" data-lang="{{ lang }}">{{ "%.0f" | format(choice_lang_sim.get(lang, 1.0) * 100) }}%</span>
+                  {% endfor %}
+                </td>
+                <td class="text-cell">
+                  {% for lang in languages %}
+                  <span class="lang-text" data-lang="{{ lang }}">{{ master_choice_texts.get(lang, '') | truncate(100) if master_choice_texts.get(lang) else '—' }}</span>
+                  {% endfor %}
+                </td>
                 {% for survey in survey_names %}
-                  {% set survey_choice_ns = namespace(text='') %}
+                  {% set survey_choice_texts = {} %}
                   {% set q_survey = q_sources.get(survey) %}
                   {% if q_survey %}
                     {% for c in q_survey.choices %}
                       {% if c.code == choice_code %}
                         {% for lt in c.texts %}
-                          {% if lt.language == default_language %}{% set survey_choice_ns.text = lt.text %}{% endif %}
+                          {% set _ = survey_choice_texts.__setitem__(lt.language, lt.text) %}
                         {% endfor %}
                       {% endif %}
                     {% endfor %}
                   {% endif %}
-                  <td class="text-cell">{{ survey_choice_ns.text | truncate(100) if survey_choice_ns.text else '—' }}</td>
+                  <td class="text-cell">
+                    {% for lang in languages %}
+                    <span class="lang-text" data-lang="{{ lang }}">{{ survey_choice_texts.get(lang, '') | truncate(100) if survey_choice_texts.get(lang) else '—' }}</span>
+                    {% endfor %}
+                  </td>
                 {% endfor %}
               </tr>
               {% endfor %}
@@ -347,49 +376,80 @@
                 {% endif %}
               {% endfor %}
               {% for row_code in row_codes %}
-                {# Find master row text #}
-                {% set master_row_ns = namespace(text='') %}
+                {# Find master row text for each language #}
+                {% set master_row_texts = {} %}
                 {% if q_master and q_master.matrix_rows %}
                   {% for r in q_master.matrix_rows %}
                     {% if r.code == row_code %}
                       {% for lt in r.texts %}
-                        {% if lt.language == default_language %}{% set master_row_ns.text = lt.text %}{% endif %}
+                        {% set _ = master_row_texts.__setitem__(lt.language, lt.text) %}
                       {% endfor %}
                     {% endif %}
                   {% endfor %}
                 {% endif %}
-                {# Find worst status #}
-                {% set row_ns = namespace(worst='identical', worst_sim=1.0) %}
-                {% for survey in survey_names %}
-                  {% set qd = code_diffs.get(survey) %}
-                  {% if qd and qd.matrix_row_diffs %}
-                    {% for rd in qd.matrix_row_diffs %}
-                      {% if rd.code == row_code %}
-                        {% if rd.status == 'structure_changed' %}{% set row_ns.worst = 'structure_changed' %}
-                        {% elif rd.status == 'text_changed' and row_ns.worst not in ('structure_changed',) %}{% set row_ns.worst = 'text_changed' %}
-                        {% elif rd.status in ('added', 'removed') and row_ns.worst == 'identical' %}{% set row_ns.worst = rd.status %}{% endif %}
-                      {% endif %}
-                    {% endfor %}
-                  {% endif %}
+                {# Find status per language (worst across surveys for each language) #}
+                {% set row_lang_status = {} %}
+                {% set row_lang_sim = {} %}
+                {% for lang in languages %}
+                  {% set lang_ns = namespace(worst='exact', worst_sim=1.0, has_structural=false) %}
+                  {% for survey in survey_names %}
+                    {% set qd = code_diffs.get(survey) %}
+                    {% if qd and qd.matrix_row_diffs %}
+                      {% for rd in qd.matrix_row_diffs %}
+                        {% if rd.code == row_code %}
+                          {% if rd.status in ('added', 'removed') %}
+                            {% set lang_ns.has_structural = true %}
+                            {% set lang_ns.worst = rd.status %}
+                          {% elif rd.text_diffs %}
+                            {% for td in rd.text_diffs %}
+                              {% if td.language == lang %}
+                                {% if td.status == 'different' %}{% set lang_ns.worst = 'different' %}
+                                {% elif td.status in ('similar', 'added', 'removed') and lang_ns.worst == 'exact' %}{% set lang_ns.worst = td.status %}{% endif %}
+                                {% if td.similarity < lang_ns.worst_sim %}{% set lang_ns.worst_sim = td.similarity %}{% endif %}
+                              {% endif %}
+                            {% endfor %}
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                  {% endfor %}
+                  {% set _ = row_lang_status.__setitem__(lang, lang_ns.worst) %}
+                  {% set _ = row_lang_sim.__setitem__(lang, lang_ns.worst_sim) %}
                 {% endfor %}
               <tr>
                 <td>{{ row_code }}</td>
-                <td><span class="status-badge badge-{{ row_ns.worst }}">{{ row_ns.worst | replace('_', ' ') }}</span></td>
-                <td>{{ "%.0f" | format(row_ns.worst_sim * 100) }}%</td>
-                <td class="text-cell">{{ master_row_ns.text | truncate(100) if master_row_ns.text else '—' }}</td>
+                <td>
+                  {% for lang in languages %}
+                  <span class="status-badge badge-{{ row_lang_status.get(lang, 'exact') }} lang-status" data-lang="{{ lang }}">{{ row_lang_status.get(lang, 'exact') | replace('_', ' ') }}</span>
+                  {% endfor %}
+                </td>
+                <td>
+                  {% for lang in languages %}
+                  <span class="lang-status" data-lang="{{ lang }}">{{ "%.0f" | format(row_lang_sim.get(lang, 1.0) * 100) }}%</span>
+                  {% endfor %}
+                </td>
+                <td class="text-cell">
+                  {% for lang in languages %}
+                  <span class="lang-text" data-lang="{{ lang }}">{{ master_row_texts.get(lang, '') | truncate(100) if master_row_texts.get(lang) else '—' }}</span>
+                  {% endfor %}
+                </td>
                 {% for survey in survey_names %}
-                  {% set survey_row_ns = namespace(text='') %}
+                  {% set survey_row_texts = {} %}
                   {% set q_survey = q_sources.get(survey) %}
                   {% if q_survey and q_survey.matrix_rows %}
                     {% for r in q_survey.matrix_rows %}
                       {% if r.code == row_code %}
                         {% for lt in r.texts %}
-                          {% if lt.language == default_language %}{% set survey_row_ns.text = lt.text %}{% endif %}
+                          {% set _ = survey_row_texts.__setitem__(lt.language, lt.text) %}
                         {% endfor %}
                       {% endif %}
                     {% endfor %}
                   {% endif %}
-                  <td class="text-cell">{{ survey_row_ns.text | truncate(100) if survey_row_ns.text else '—' }}</td>
+                  <td class="text-cell">
+                    {% for lang in languages %}
+                    <span class="lang-text" data-lang="{{ lang }}">{{ survey_row_texts.get(lang, '') | truncate(100) if survey_row_texts.get(lang) else '—' }}</span>
+                    {% endfor %}
+                  </td>
                 {% endfor %}
               </tr>
               {% endfor %}
@@ -432,53 +492,84 @@
                 {% endif %}
               {% endfor %}
               {% for col_code in col_codes %}
-                {# Find master column text #}
-                {% set master_col_ns = namespace(text='') %}
+                {# Find master column text for each language #}
+                {% set master_col_texts = {} %}
                 {% if q_master and q_master.matrix_column_groups %}
                   {% for cg in q_master.matrix_column_groups %}
                     {% for c in cg.columns %}
                       {% if c.code == col_code %}
                         {% for lt in c.texts %}
-                          {% if lt.language == default_language %}{% set master_col_ns.text = lt.text %}{% endif %}
+                          {% set _ = master_col_texts.__setitem__(lt.language, lt.text) %}
                         {% endfor %}
                       {% endif %}
                     {% endfor %}
                   {% endfor %}
                 {% endif %}
-                {# Find worst status #}
-                {% set col_ns = namespace(worst='identical', worst_sim=1.0) %}
-                {% for survey in survey_names %}
-                  {% set qd = code_diffs.get(survey) %}
-                  {% if qd and qd.matrix_column_diffs %}
-                    {% for cd in qd.matrix_column_diffs %}
-                      {% if cd.code == col_code %}
-                        {% if cd.status == 'structure_changed' %}{% set col_ns.worst = 'structure_changed' %}
-                        {% elif cd.status == 'text_changed' and col_ns.worst not in ('structure_changed',) %}{% set col_ns.worst = 'text_changed' %}
-                        {% elif cd.status in ('added', 'removed') and col_ns.worst == 'identical' %}{% set col_ns.worst = cd.status %}{% endif %}
-                      {% endif %}
-                    {% endfor %}
-                  {% endif %}
+                {# Find status per language (worst across surveys for each language) #}
+                {% set col_lang_status = {} %}
+                {% set col_lang_sim = {} %}
+                {% for lang in languages %}
+                  {% set lang_ns = namespace(worst='exact', worst_sim=1.0, has_structural=false) %}
+                  {% for survey in survey_names %}
+                    {% set qd = code_diffs.get(survey) %}
+                    {% if qd and qd.matrix_column_diffs %}
+                      {% for cd in qd.matrix_column_diffs %}
+                        {% if cd.code == col_code %}
+                          {% if cd.status in ('added', 'removed') %}
+                            {% set lang_ns.has_structural = true %}
+                            {% set lang_ns.worst = cd.status %}
+                          {% elif cd.text_diffs %}
+                            {% for td in cd.text_diffs %}
+                              {% if td.language == lang %}
+                                {% if td.status == 'different' %}{% set lang_ns.worst = 'different' %}
+                                {% elif td.status in ('similar', 'added', 'removed') and lang_ns.worst == 'exact' %}{% set lang_ns.worst = td.status %}{% endif %}
+                                {% if td.similarity < lang_ns.worst_sim %}{% set lang_ns.worst_sim = td.similarity %}{% endif %}
+                              {% endif %}
+                            {% endfor %}
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                  {% endfor %}
+                  {% set _ = col_lang_status.__setitem__(lang, lang_ns.worst) %}
+                  {% set _ = col_lang_sim.__setitem__(lang, lang_ns.worst_sim) %}
                 {% endfor %}
               <tr>
                 <td>{{ col_code }}</td>
-                <td><span class="status-badge badge-{{ col_ns.worst }}">{{ col_ns.worst | replace('_', ' ') }}</span></td>
-                <td>{{ "%.0f" | format(col_ns.worst_sim * 100) }}%</td>
-                <td class="text-cell">{{ master_col_ns.text | truncate(100) if master_col_ns.text else '—' }}</td>
+                <td>
+                  {% for lang in languages %}
+                  <span class="status-badge badge-{{ col_lang_status.get(lang, 'exact') }} lang-status" data-lang="{{ lang }}">{{ col_lang_status.get(lang, 'exact') | replace('_', ' ') }}</span>
+                  {% endfor %}
+                </td>
+                <td>
+                  {% for lang in languages %}
+                  <span class="lang-status" data-lang="{{ lang }}">{{ "%.0f" | format(col_lang_sim.get(lang, 1.0) * 100) }}%</span>
+                  {% endfor %}
+                </td>
+                <td class="text-cell">
+                  {% for lang in languages %}
+                  <span class="lang-text" data-lang="{{ lang }}">{{ master_col_texts.get(lang, '') | truncate(100) if master_col_texts.get(lang) else '—' }}</span>
+                  {% endfor %}
+                </td>
                 {% for survey in survey_names %}
-                  {% set survey_col_ns = namespace(text='') %}
+                  {% set survey_col_texts = {} %}
                   {% set q_survey = q_sources.get(survey) %}
                   {% if q_survey and q_survey.matrix_column_groups %}
                     {% for cg in q_survey.matrix_column_groups %}
                       {% for c in cg.columns %}
                         {% if c.code == col_code %}
                           {% for lt in c.texts %}
-                            {% if lt.language == default_language %}{% set survey_col_ns.text = lt.text %}{% endif %}
+                            {% set _ = survey_col_texts.__setitem__(lt.language, lt.text) %}
                           {% endfor %}
                         {% endif %}
                       {% endfor %}
                     {% endfor %}
                   {% endif %}
-                  <td class="text-cell">{{ survey_col_ns.text | truncate(100) if survey_col_ns.text else '—' }}</td>
+                  <td class="text-cell">
+                    {% for lang in languages %}
+                    <span class="lang-text" data-lang="{{ lang }}">{{ survey_col_texts.get(lang, '') | truncate(100) if survey_col_texts.get(lang) else '—' }}</span>
+                    {% endfor %}
+                  </td>
                 {% endfor %}
               </tr>
               {% endfor %}
@@ -505,7 +596,7 @@ function toggleSection(el) {
   if (table) table.style.display = table.style.display === 'none' ? '' : 'none';
 }
 
-// Language filter - show/hide text spans based on selected language
+// Language filter - show/hide text spans and status badges based on selected language
 function updateLanguageDisplay() {
   const lang = document.getElementById('language-filter').value;
   // Update main table text columns
@@ -515,6 +606,10 @@ function updateLanguageDisplay() {
   // Update detail table rows
   document.querySelectorAll('.lang-row').forEach(function(row) {
     row.style.display = row.dataset.lang === lang ? '' : 'none';
+  });
+  // Update language-specific status badges and similarity values
+  document.querySelectorAll('.lang-status').forEach(function(el) {
+    el.style.display = el.dataset.lang === lang ? '' : 'none';
   });
 }
 

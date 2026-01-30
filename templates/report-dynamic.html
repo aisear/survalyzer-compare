@@ -303,25 +303,35 @@ function renderDetailContent(code) {
         if (mc) masterChoiceText = mc.texts[currentLanguage] || '';
       }
 
-      let worstStatus = 'identical';
-      let worstSim = 1.0;
-      const diff = codeDiffs[DATA.meta.survey_names[0]];
-      if (diff && diff.choice_diffs) {
-        for (const cd of diff.choice_diffs) {
-          if (cd.code === choiceCode) {
-            if (cd.status === 'structure_changed') worstStatus = 'structure_changed';
-            else if (cd.status === 'text_changed' && worstStatus !== 'structure_changed') worstStatus = 'text_changed';
-            else if (['added', 'removed'].includes(cd.status) && worstStatus === 'identical') worstStatus = cd.status;
-            for (const td of cd.text_diffs) {
-              if (td.similarity < worstSim) worstSim = td.similarity;
+      // Compute status for the selected language only
+      let langStatus = 'exact';
+      let langSim = 1.0;
+      for (const survey of DATA.meta.survey_names) {
+        const diff = codeDiffs[survey];
+        if (diff && diff.choice_diffs) {
+          for (const cd of diff.choice_diffs) {
+            if (cd.code === choiceCode) {
+              // Structural changes (added/removed) apply regardless of language
+              if (['added', 'removed'].includes(cd.status)) {
+                langStatus = cd.status;
+              } else if (cd.text_diffs) {
+                // Find the status for the current language
+                for (const td of cd.text_diffs) {
+                  if (td.language === currentLanguage) {
+                    if (td.status === 'different') langStatus = 'different';
+                    else if (['similar', 'added', 'removed'].includes(td.status) && langStatus === 'exact') langStatus = td.status;
+                    if (td.similarity < langSim) langSim = td.similarity;
+                  }
+                }
+              }
             }
           }
         }
       }
 
       html += `<tr><td class="col-code">${escapeHtml(choiceCode)}</td>`;
-      html += `<td><span class="status-badge badge-${worstStatus}">${worstStatus.replace('_', ' ')}</span></td>`;
-      html += `<td>${Math.round(worstSim * 100)}%</td>`;
+      html += `<td><span class="status-badge badge-${langStatus}">${langStatus.replace('_', ' ')}</span></td>`;
+      html += `<td>${Math.round(langSim * 100)}%</td>`;
       html += `<td class="text-cell">${escapeHtml(truncate(masterChoiceText, 100)) || '—'}</td>`;
 
       for (const survey of DATA.meta.survey_names) {
@@ -366,20 +376,25 @@ function renderDetailContent(code) {
         if (mr) masterRowText = mr.texts[currentLanguage] || '';
       }
 
-      // Compute worst status from diffs
-      let worstStatus = 'identical';
-      let worstSim = 1.0;
+      // Compute status for the selected language only
+      let langStatus = 'exact';
+      let langSim = 1.0;
       for (const survey of DATA.meta.survey_names) {
         const diff = codeDiffs[survey];
         if (diff && diff.matrix_row_diffs) {
           for (const rd of diff.matrix_row_diffs) {
             if (rd.code === rowCode) {
-              if (rd.status === 'structure_changed') worstStatus = 'structure_changed';
-              else if (rd.status === 'text_changed' && worstStatus !== 'structure_changed') worstStatus = 'text_changed';
-              else if (['added', 'removed'].includes(rd.status) && worstStatus === 'identical') worstStatus = rd.status;
-              if (rd.text_diffs) {
+              // Structural changes (added/removed) apply regardless of language
+              if (['added', 'removed'].includes(rd.status)) {
+                langStatus = rd.status;
+              } else if (rd.text_diffs) {
+                // Find the status for the current language
                 for (const td of rd.text_diffs) {
-                  if (td.similarity < worstSim) worstSim = td.similarity;
+                  if (td.language === currentLanguage) {
+                    if (td.status === 'different') langStatus = 'different';
+                    else if (['similar', 'added', 'removed'].includes(td.status) && langStatus === 'exact') langStatus = td.status;
+                    if (td.similarity < langSim) langSim = td.similarity;
+                  }
                 }
               }
             }
@@ -388,8 +403,8 @@ function renderDetailContent(code) {
       }
 
       html += `<tr><td class="col-code">${escapeHtml(rowCode)}</td>`;
-      html += `<td><span class="status-badge badge-${worstStatus}">${worstStatus.replace('_', ' ')}</span></td>`;
-      html += `<td>${Math.round(worstSim * 100)}%</td>`;
+      html += `<td><span class="status-badge badge-${langStatus}">${langStatus.replace('_', ' ')}</span></td>`;
+      html += `<td>${Math.round(langSim * 100)}%</td>`;
       html += `<td class="text-cell">${escapeHtml(truncate(masterRowText, 100)) || '—'}</td>`;
 
       for (const survey of DATA.meta.survey_names) {
@@ -434,20 +449,25 @@ function renderDetailContent(code) {
         if (mc) masterColText = mc.texts[currentLanguage] || '';
       }
 
-      // Compute worst status from diffs
-      let worstStatus = 'identical';
-      let worstSim = 1.0;
+      // Compute status for the selected language only
+      let langStatus = 'exact';
+      let langSim = 1.0;
       for (const survey of DATA.meta.survey_names) {
         const diff = codeDiffs[survey];
         if (diff && diff.matrix_column_diffs) {
           for (const cd of diff.matrix_column_diffs) {
             if (cd.code === colCode) {
-              if (cd.status === 'structure_changed') worstStatus = 'structure_changed';
-              else if (cd.status === 'text_changed' && worstStatus !== 'structure_changed') worstStatus = 'text_changed';
-              else if (['added', 'removed'].includes(cd.status) && worstStatus === 'identical') worstStatus = cd.status;
-              if (cd.text_diffs) {
+              // Structural changes (added/removed) apply regardless of language
+              if (['added', 'removed'].includes(cd.status)) {
+                langStatus = cd.status;
+              } else if (cd.text_diffs) {
+                // Find the status for the current language
                 for (const td of cd.text_diffs) {
-                  if (td.similarity < worstSim) worstSim = td.similarity;
+                  if (td.language === currentLanguage) {
+                    if (td.status === 'different') langStatus = 'different';
+                    else if (['similar', 'added', 'removed'].includes(td.status) && langStatus === 'exact') langStatus = td.status;
+                    if (td.similarity < langSim) langSim = td.similarity;
+                  }
                 }
               }
             }
@@ -456,8 +476,8 @@ function renderDetailContent(code) {
       }
 
       html += `<tr><td class="col-code">${escapeHtml(colCode)}</td>`;
-      html += `<td><span class="status-badge badge-${worstStatus}">${worstStatus.replace('_', ' ')}</span></td>`;
-      html += `<td>${Math.round(worstSim * 100)}%</td>`;
+      html += `<td><span class="status-badge badge-${langStatus}">${langStatus.replace('_', ' ')}</span></td>`;
+      html += `<td>${Math.round(langSim * 100)}%</td>`;
       html += `<td class="text-cell">${escapeHtml(truncate(masterColText, 100)) || '—'}</td>`;
 
       for (const survey of DATA.meta.survey_names) {
