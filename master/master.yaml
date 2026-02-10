@@ -210,161 +210,132 @@ ErstesTreffen:
 Foerder:
   element_type: MultipleChoice
   texts:
-    en: Was or is the completed project or the project idea&nbsp;additionally funded?
-    fr: Le projet achevé ou l'idée du projet, a-t-il bénéficié ou bénéficie-t-il d'un
-      financement supplémentaire&nbsp;?
-    de-ch: Wurde oder wird das abgeschlossene Projekt oder die Projektidee&nbsp;zusätzlich
-      gefördert?
-  section_name: Projektlancierung und Ziele
+    fr: L'idée d'innovation est-elle née des travaux ou des résultats de l'un des
+      instruments d'encouragement suivants ?
+    en: Did the innovation idea arise from the work or results of one of the following
+      funding instruments?
+    de-ch: Ist die Innovationsidee aus den Arbeiten oder Ergebnissen einer der nachfolgenden
+      Förderinstrumente entstanden?
+  section_name: Ursprung der Idee
   choices:
-  - code: '15'
+  - code: Innosuisse_3
     texts:
-      en: No additional public or private funding to date<br>
-      fr: Pas de soutien public ou privé supplémentaire jusqu'à présent<br>
-      de-ch: Bisher keine zusätzliche öffentliche oder private Förderung<br>
-  - code: '3'
+      fr: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Instruments de soutien Innosuisse:</div>Oui, projet d'innovation <strong>sans
+        </strong>partenaire de mise en œuvre
+      en: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Innovation
+        funding instruments Innosuisse:</div>Yes, innovation project <strong>without</strong>
+        implementation partners
+      de-ch: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Förderinstrumente
+        Innosuisse:</div>Ja, Innovationsprojekt <strong>ohne</strong> Umsetzungspartner
+  - code: Innosuisse_4
     texts:
-      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Förderinstrumente
-        Innosuisse:</div>Innovationsprojekt ohne Umsetzungspartner
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Innosuisse
-        funding instruments:</div>Innovation project without implementation partner
-      fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Instruments
-        de promotion Innosuisse :</div>Projet d'innovation sans partenaire de mise
-        en œuvre
-  - code: '4'
+      fr: Oui, projet d'innovation <strong>avec</strong> partenaire de mise en œuvre
+      en: Yes, innovation project <strong>with</strong> implementation partners
+      de-ch: Ja, Innovationsprojekt <strong>mit</strong> Umsetzungspartner
+  - code: '1'
     texts:
-      de-ch: Innovationsprojekt mit Umsetzungspartner
-      en: Innovation project with implementation partner
-      fr: Projet d'innovation avec partenaire de mise en œuvre
-  - code: '5'
-    texts:
-      de-ch: Innovationsprojekt mit internationalen Partnern oder grenzüberschreitendes
+      de-ch: Ja, Innovationsprojekt mit internationalen Partnern oder grenzüberschreitendes
         Innovationsprojekt (Europäische Union, Eurostars, Eureka, bilaterale Projekte
         mit anderen Ländern)
-      en: Innovation project with international partners or cross-border innovation
+      en: Yes, innovation project with international partners or cross-border innovation
         project (European Union, Eurostars, Eureka, bilateral projects with other
         countries)
-      fr: Projet d'innovation avec des partenaires internationaux ou projet d'innovation
+      fr: Oui, projet d'innovation avec des partenaires internationaux ou projet d'innovation
         transfrontalier (Union européenne, Eurostars, Eureka, projets bilatéraux avec
         d'autres pays)
-  - code: '2'
+  - code: Innosuisse_12
     texts:
-      en: Innovation cheque
-      fr: Chèque d'innovation
-      de-ch: Innovationsscheck
-  - code: '7'
+      fr: Oui, Start-up Training
+      en: Yes, Start-up Training
+      de-ch: Ja, Start-up Training
+  - code: Innosuisse_13
     texts:
-      en: BRIDGE Proof of Concept
-      fr: BRIDGE Proof of Concept
-      de-ch: BRIDGE Proof of Concept
-  - code: '6'
+      fr: Oui, coaching de start-up Innosuisse
+      en: Yes, Start-up Coaching Innosuisse
+      de-ch: Ja, Start-up Coaching Innosuisse
+  - code: Innosuisse_7
     texts:
-      de-ch: BRIDGE Discovery
-      fr: BRIDGE Discovery
-      en: BRIDGE Discovery
-  - code: '10'
+      fr: Oui, BRIDGE Preuve de concept
+      en: Yes, BRIDGE Proof-of-Concept
+      de-ch: Ja, BRIDGE Proof-of-Concept
+  - code: Innosuisse_6
     texts:
-      en: Energy Research (SCCER)
-      fr: Recherche énergétique (SCCER)
-      de-ch: Energieforschung (SCCER)
-  - code: '8'
+      fr: Oui, BRIDGE Discovery
+      en: Yes, BRIDGE Discovery
+      de-ch: Ja, BRIDGE Discovery
+  - code: Innosuisse_10
     texts:
-      de-ch: NTN Thematische Netzwerke / Innovation Booster
-      fr: NTN Réseaux thématiques / Innovation Booster
-      en: NTN Thematic Networks / Innovation Booster
-  - code: '16'
+      fr: Oui, programme énergétique Innosuisse (SCCER)
+      en: Yes, Innosuisse energy programme (SCCER)
+      de-ch: Ja, Energieprogramm Innosuisse (SCCER)
+  - code: Innosuisse_9
     texts:
-      de-ch: Network Event Series / Thematische Netzwerkveranstaltungen
-      en: Network Event Series / Thematic networking events
-      fr: Network Event Series / Événements de réseau thématiques
-  - code: '9'
+      fr: Oui, projet Flagship
+      en: Yes, Flagship project
+      de-ch: Ja, Flagship-Projekte
+  - code: Innosuisse_8
     texts:
-      de-ch: Flagship-Projekt
-      fr: Projet Flagship
-      en: Flagship Project
-  - code: '12'
+      fr: Oui, Innovation Booster
+      en: Yes, Innovation Booster
+      de-ch: Ja, Innovation Booster
+  - code: Innosuisse_14
     texts:
-      de-ch: Start-up Training
-      en: Start-up Training
-      fr: Start-up Training
-  - code: '13'
+      fr: 'Oui, par un autre programme Innosuisse, veuillez préciser:'
+      en: 'Yes, through another Innosuisse programme, please specify:'
+      de-ch: 'Ja, eine weitere Innosuisse Förderung, bitte nennen:'
+  - code: SNF_1
     texts:
-      de-ch: Start-up Coaching
-      fr: Start-up Coaching
-      en: Start-up Coaching
-  - code: '14'
-    texts:
-      de-ch: 'Andere Innosuisse Förderung, bitte angeben:'
-      fr: 'Autre promotion Innosuisse, veuillez préciser :'
-      en: 'Other Innosuisse funding, please specify:'
-  - code: SNF_NFP
-    texts:
-      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Förderung
-        Schweizerischer Nationalfonds:</strong></div>Nationales Forschungsprogramm
-        (NFP)
-      fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Soutien
-        du Fonds national suisse :</strong></div>Programme national de recherche (PNR)
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Funding
-        Swiss National Science Foundation:</strong></div>National Research Programme
+      fr: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Encouragement du fonds national suisse:</div>Oui, programmes nationaux
+        de recherche (PNR)
+
+        '
+      en: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Swiss
+        National Science Foundation funding:</div>Yes, National Research Programme
         (NRP)
-  - code: SNF_NFS
+      de-ch: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Förderung
+        Schweizerischer Nationalfonds:</div>Ja, Nationales Forschungsprogramm (NFP)
+  - code: SNF_2
     texts:
-      de-ch: Nationale Forschungsschwerpunkte (NFS)
-      fr: Pôles de recherche nationaux (PRN)
-      en: National Centres of Competence in Research (NCCR)
-  - code: SNF_Projekt
+      fr: Oui, pôles de recherche nationaux (PRN)
+      en: Yes, National Centres of Competence in Research (NCCR)
+      de-ch: Ja, Nationale Forschungsschwerpunkte (NFS)
+  - code: SNF_3
     texts:
-      de-ch: Projektförderung SNF
-      en: Project funding SNF
-      fr: Encouragement de projets FNS
-  - code: SNF_Person
+      fr: Oui, encouragement de projets par le FNS
+      en: Yes, Project funding SNSF
+      de-ch: Ja, Projektförderung SNF
+  - code: SNF_4
     texts:
-      de-ch: Personenförderung SNF
-      en: Individual funding SNF
-      fr: Encouragement de personnes FNS
-  - code: SNF_Weiteres
+      fr: Oui, subside pour chercheur FNS
+      en: Yes, Researcher funding SNSF
+      de-ch: Ja, Personenförderung SNF
+  - code: SNF_5
     texts:
-      de-ch: 'Andere SNF Förderung, bitte angeben:'
-      en: 'Other SNF funding, please specify:'
-      fr: 'Autre encouragement FNS, veuillez préciser :'
-  - code: Wei1
+      fr: 'Oui, autre encouragement FNS, veuillez préciser:'
+      en: 'Yes, other SNSF funding, please specify:'
+      de-ch: 'Ja, eine weitere SNF Förderung, bitte nennen:'
+  - code: AndereKantNat
     texts:
-      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Weitere
-        öffentliche Förderung:</div>Finanzierung und Grants der Forschungsinstitution
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Other
-        public funding:</div>Funding and grants from the research institution
-      fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Autre
-        financement public :</div>Financement et subventions de l'institution de recherche
-  - code: Wei2
+      fr: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Autres subventions:</div>Oui, autres subventions publiques (cantonales
+        ou nationales), veuillez préciser:'
+      en: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Other
+        funding:</div>Yes, other public funding (cantonal or national), please specify:'
+      de-ch: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Weitere
+        Förderung:</div>Ja, eine weitere öffentliche Förderung (kantonal oder national),
+        bitte nennen:'
+  - code: AndereAusl
     texts:
-      de-ch: Weitere öffentliche nationale Förderung (z.B. BFE, BAFU)
-      en: Other public national funding (e.g. SFOE, FOEN)
-      fr: Autre soutien public national (par ex. OFEN, OFEV)
-  - code: Wei3
+      fr: Oui, autre aide publique étrangère
+      en: Yes, other foreign public funding
+      de-ch: Ja, eine weitere ausländische öffentliche Förderung
+  - code: WeissNicht
     texts:
-      de-ch: Internationale Förderung (Europäische oder internationale Forschungsprogramme,
-        etc.)
-      en: International funding (European or international research programmes, etc.)
-      fr: Soutien international (programmes de recherche européens ou internationaux,
-        etc.)
-  - code: Wei4
-    texts:
-      de-ch: Kantonale / regionale Förderung
-      en: Cantonal / regional funding
-      fr: Encouragement cantonal / régional
-  - code: Wei5
-    texts:
-      de-ch: Private Förderung IMMER AUSBLENDEN
-      en: Private funding
-      fr: Soutien privé
-  - code: Wei6
-    texts:
-      de-ch: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Weitere
-        Förderung:</div>Private Finanzierung und Auftragsforschung
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Other
-        funding:</div>Private funding and contract research
-      fr: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Autre
-        Financement :</div>Financement priv&eacute; et recherche sous contrat
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
 StrategischeZiele:
   element_type: Matrix
   texts:
@@ -2249,80 +2220,55 @@ ForschungWeiter:
 Nutzen:
   element_type: Matrix
   texts:
-    en: How do you assess the <strong>benefit </strong>of the innovation project in
-      terms of ....
-    fr: Comment évaluez-vous <strong>les bénéfices</strong><strong> </strong>du projet
-      d'innovation en ce qui concerne ....
-    de-ch: Wie beurteilen Sie den<strong> Nutzen</strong> des Innovationsprojektes
-      hinsichtlich ….
-  section_name: Wirkungen und Nutzen
+    fr: Comment jugez-vous le bénéfice du chèque d'innovation achevé pour votre organisation
+      ?
+    en: How would you rate the benefits of the completed innovation check for your
+      organisation?
+    de-ch: Wie beurteilen Sie den Nutzen des abgeschlossenen Innovationsscheck für
+      Ihre Organisation?
+  section_name: Zufriedenheit mit Innosuisse Programm
   matrix_rows:
   - code: '1'
     texts:
-      de-ch: Forschungsaktivitäten
-      fr: Activités de recherche
-      en: Research activities
-  - code: '2'
-    texts:
-      de-ch: Anwendungsorientierung der Forschung
-      fr: Orientation de la recherche vers les applications
-      en: Application orientation of research
-  - code: '3'
-    texts:
-      de-ch: Konkrete Umsetzung der Forschungsergebnisse
-      fr: Mise en œuvre concrète des résultats de la recherche
-      en: Concrete implementation of research findings
-  - code: '4'
-    texts:
-      de-ch: Nachwuchsförderung
-      fr: Promotion de la relève
-      en: Promotion of young researchers
-  - code: '5'
-    texts:
-      de-ch: Transferaktivitäten von Forschung zu Wirtschaft
-      fr: Activités de transfert de la recherche vers l'économie
-      en: Transfer activities from research to industry
-  - code: '6'
-    texts:
-      de-ch: Transferaktivitäten von Wirtschaft zu Forschung
-      fr: Activités de transfert de l'économie vers la recherche
-      en: Transfer activities from industry to research
-  - code: '7'
-    texts:
-      de-ch: <strong>Gesamter Nutzen f&uuml;r Forschungseinheit</strong>
-      fr: Bénéfice global pour l'unité de recherche
-      en: Overall benefit for research unit
+      fr: Le bénéfice du chèque d'innovation achevé est...
+      en: The benefit of the completed innovation cheque is...
+      de-ch: Der Nutzen des abgeschlossenen Innovationsschecks ist...
   matrix_columns:
   - code: '1'
     texts:
-      en: not existing
-      fr: inexistant
-      de-ch: nicht vorhanden
+      fr: Inexistant
+      en: Non-existent
+      de-ch: Nicht vorhanden
   - code: '2'
     texts:
-      en: low
-      fr: faible
-      de-ch: gering
+      fr: Faible
+      en: Low
+      de-ch: Gering
   - code: '3'
     texts:
-      en: rather low
-      fr: plutôt faible
-      de-ch: eher gering
+      fr: Plutôt faible
+      en: Rather low
+      de-ch: Eher gering
   - code: '4'
     texts:
-      en: rather high
-      fr: plutôt élevé
-      de-ch: eher hoch
+      fr: Plutôt élevé
+      en: Rather high
+      de-ch: Eher hoch
   - code: '5'
     texts:
-      en: high
-      fr: élevé
-      de-ch: hoch
+      fr: Élevé
+      en: High
+      de-ch: Hoch
   - code: '6'
     texts:
-      en: very high
-      fr: très élevé
-      de-ch: sehr hoch
+      fr: Très élevé
+      en: Very high
+      de-ch: Sehr hoch
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
 ErfolgBewertung:
   element_type: Matrix
   texts:
@@ -2682,56 +2628,451 @@ Personal:
       en: '... abroad'
       fr: '... à l’étranger'
       de-ch: im Ausland
-PersonalImProjekt:
+PersonalFuE:
   element_type: Matrix
   texts:
-    en: On average, how many employees of your organisation worked directly on the
-      project during the Innosuisse funding period (incl. application)?<br>
-    fr: Combien de personnel de votre organisation ont travaillé en moyenne directement
-      sur votre projet pendant la période de financement par Innosuisse (y compris
-      la demande) ?
-    de-ch: Wie viele Mitarbeitende Ihrer Organisation haben während der Innosuisse-Förderung
-      des Projektes (inkl. Gesuch) im Durchschnitt direkt an Ihrem Innosuisse Projekt
-      gearbeitet? <br>
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+    en: How many <strong>staff</strong> (full-time positions, including apprentices
+      and interns) does your organisation have in <strong>research and development</strong>
+      ...?
+    fr: Combien de <strong>personne</strong><strong>l</strong><strong> </strong>(postes
+      à plein temps, y compris les apprentis et les stagiaires) votre organisation
+      a-t-elle dans <strong>le domaine de la recherche et du développement</strong>
+      ... ?
+    de-ch: Wie viel <strong>Personal </strong>(Vollzeitäquivalente, inklusive Lernende
+      und Praktikant/-innen) hat Ihre Organisation im <strong>Bereich Forschung und
+      Entwicklung</strong> …?
+  section_name: Ökonomische Projektwirkungen
   matrix_rows:
-  - code: heute
+  - code: PEnde
     texts:
-      en: Employees of the own organisation working on the project
-      fr: Employées de la propre organisation travaillant sur le projet
-      de-ch: Im Projekt tätige Mitarbeitende der eigenen Organisation
+      en: '... at the end of the project, i.e.&nbsp;at the end of the year&nbsp;{{member.AbschlussJahr}}'
+      fr: '... à la fin du projet, c''est-à-dire&nbsp;à la fin de l''année {{member.AbschlussJahr}}'
+      de-ch: … bei Projektabschluss, d.h.&nbsp;per Ende {{member.AbschlussJahr}}
+  - code: Heute
+    texts:
+      de-ch: … heute, d.h. per Ende des letzten abgeschlossenen Geschäftsjahres
+      fr: '... aujourd''hui, c''est-à-dire à la fin du dernier exercice clos'
+      en: '... today, i.e. at the end of the last completed business year'
   matrix_columns:
-  - code: Organisation
+  - code: '1'
     texts:
-      en: Average annual full-time equivalents
-      fr: Moyenne annuelle des équivalents temps plein
-      de-ch: Durchschnittliche jährliche Vollzeitäquivalente
-InnoAlsZiel:
+      en: '... in Switzerland'
+      fr: '... en Suisse'
+      de-ch: in der Schweiz
+  - code: '2'
+    texts:
+      en: '... abroad'
+      fr: '... à l’étranger'
+      de-ch: im Ausland
+FoerderMentoring:
   element_type: SingleChoice
   texts:
-    en: Does or did your organisation pursue the goal of implementing a concrete innovation
-      in the organisation or on the market with the supported project?
-    fr: Votre organisation poursuit-elle ou a-t-elle poursuivi avec le projet encouragé
-      par Innosuisse l'objectif de mettre en œuvre une innovation concrète au sein
-      de l'organisation ou sur le marché ?
-    de-ch: Verfolgt(e) Ihre Organisation das Ziel, mit dem geförderten Projekt eine
-      konkrete Innovation in Ihrer Organisation oder auf dem Markt umzusetzen?
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+    fr: Le dépôt d'un chèque d'innovation est-il le résultat d'un mentoring Innosuisse
+      ?
+    en: Is the submission of an innovation cheque the result of Innosuisse mentoring?
+    de-ch: Ist die Einreichung eines Innovationsschecks das Resultat eines Innosuisse-Mentorings?
+  section_name: Ursprung der Idee
   choices:
   - code: '6'
     texts:
-      en: Yes, our participation in the project aims/aimed to implement the innovation
-        in our organisation or on the market.
-      fr: Oui, notre participation au projet a/a eu pour but de mettre en œuvre l'innovation
-        dans notre organisation ou sur le marché.
-      de-ch: Ja, unsere Beteiligung am Projekt verfolgt(e) das Ziel, die Innovation
-        in unserer Organisation oder auf dem Markt umzusetzen.
+      fr: Oui
+      en: 'Yes'
+      de-ch: Ja
   - code: '1'
     texts:
-      en: No, we were involved in the project as another implementation partner.
-      fr: Non, nous participions au projet en tant que partenaire de mise en œuvre
-        supplémentaire.
-      de-ch: Nein, wir waren als weiterer Umsetzungspartner am Projekt beteiligt.
+      fr: Non
+      en: 'No'
+      de-ch: Nein
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+FoerderAnders:
+  element_type: SingleChoice
+  texts:
+    fr: L'idée d'innovation est-elle née ou s'est-elle concrétisée de manière significative
+      à partir des résultats d'autres instruments d'encouragement antérieurs ?
+    en: Did the innovation idea arise from the results of other previous funding instruments
+      or was it significantly concretised through it?
+    de-ch: Ist die Innovationsidee aus den Ergebnissen anderer vorgängiger Förderungen
+      entstanden bzw. massgeblich konkretisiert worden?
+  section_name: Ursprung der Idee
+  choices:
+  - code: '6'
+    texts:
+      fr: Oui
+      en: 'Yes'
+      de-ch: Ja
+  - code: '1'
+    texts:
+      fr: Non, l'idée n'a pas été encouragée au préalable
+      en: No, the idea was not previously funded
+      de-ch: Nein, die Idee wurde vorgängig nicht gefördert
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+Motivation:
+  element_type: MultipleChoice
+  texts:
+    fr: Qu'est-ce qui vous a motivé à déposer un chèque d'innovation ?
+    en: What motivated you to submit an innovation cheque?
+    de-ch: Was hat Sie dazu motiviert, einen Innovationsscheck einzureichen?
+  section_name: Ursprung der Idee
+  choices:
+  - code: '12'
+    texts:
+      de-ch: '...unsere F&E Aktivitäten mit externem Knowhow stärken'
+      fr: '...renforcer nos activités de R&D avec un savoir-faire externe'
+      en: ..strengthen our R&D activities with external expertise
+  - code: '10'
+    texts:
+      fr: '...envisager une collaboration avec un partenaire de recherche'
+      en: '...explore collaboration with a research partner'
+      de-ch: '...die Zusammenarbeit mit einem Forschungspartner prüfen'
+  - code: '2'
+    texts:
+      fr: '...préparer un projet d''innovation auprès d''Innosuisse'
+      en: '...prepare an innovation project at Innosuisse'
+      de-ch: '...ein Innovationsprojekt bei Innosuisse vorbereiten'
+  - code: '3'
+    texts:
+      fr: '...préparer un autre projet d’encouragement auprès d''Innosuisse'
+      en: '...prepare another innovation funding at Innosuisse'
+      de-ch: '...eine andere Innovationsförderung bei Innosuisse vorbereiten'
+  - code: '4'
+    texts:
+      fr: '...développer / tester une idée d''innovation'
+      en: '...further develop / test an innovation idea'
+      de-ch: '...eine Innovationsidee weiterentwickeln / testen'
+  - code: '11'
+    texts:
+      de-ch: …unsere F&E Aktivitäten ressourcenmässig entlasten
+      en: '...relieve our R&D activities in terms of resources'
+      fr: '...soulager nos activités de R&D en termes de ressources'
+  - code: '5'
+    texts:
+      fr: '...obtenir des résultats concrets et utilisables'
+      en: '...achieve concrete and usable results'
+      de-ch: '...konkrete und bereits nutzbare Ergebnisse erzielen'
+  - code: '8'
+    texts:
+      fr: '...vérifier la faisabilité d''une nouvelle idée'
+      en: '...test the feasibility of a new idea'
+      de-ch: '...die Umsetzbarkeit / Machbarkeit einer neuen Idee prüfen'
+  - code: '9'
+    texts:
+      fr: '...chercher une nouvelle solution pour le développement de nos produits'
+      en: '...look for a new solution approach for our product development'
+      de-ch: '...einen neuen Lösungsansatz für unsere Produktentwicklung suchen'
+  - code: '6'
+    texts:
+      fr: 'Autre, veuillez préciser :'
+      en: 'Other, please specify:'
+      de-ch: 'Sonstiges, bitte angeben:'
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+WichtigsteZiele:
+  element_type: MultipleChoice
+  texts:
+    fr: Quel était l'objectif principal de votre projet de chèque d'innovation ? (max.
+      2 réponses)
+    en: What was the most important goal of your innovation check project? (max. 2
+      answers)
+    de-ch: Was war das wichtigste Ziel Ihres Innovationscheck-Projekts? (max. 2 Antworten)
+  section_name: Zielerreichung des Innovationscheck
+  choices:
+  - code: '1'
+    texts:
+      fr: Concrétiser ou développer une idée d'innovation ou une idée commerciale
+      en: Concretise or further develop an innovation idea or business idea
+      de-ch: Eine Innovationsidee oder Geschäftsidee konkretisieren oder weiterentwickeln
+  - code: '3'
+    texts:
+      fr: Examiner la faisabilité d'une idée d'innovation ou d'une idée commerciale
+        (technique, conceptuelle ou économique)
+      en: Check the feasibility of an innovation or business idea (technical, conceptual
+        or economic)
+      de-ch: Die Machbarkeit einer Innovations- oder Geschäftsidee (technisch, konzeptionell
+        oder wirtschaftlich) prüfen
+  - code: '2'
+    texts:
+      fr: Analyser le potentiel du marché ou l'impact sur la société
+      en: Analyse the market potential or social impact
+      de-ch: Das Marktpotenzial oder gesellschaftliche Wirkung analysieren
+  - code: ZAPruefen
+    texts:
+      de-ch: Die Zusammenarbeit mit Forschungspartner testen, aufbauen oder vertiefen
+      fr: Tester, mettre en place ou approfondir la collaboration avec des partenaires
+        de recherche
+      en: Test, establish or intensify collaboration with research partners
+  - code: ProjVor
+    texts:
+      fr: Préparer un projet d'innovation (p. ex. avec le soutien d'Innosuisse)
+      en: Prepare an innovation project (e.g. with Innosuisse funding)
+      de-ch: Ein Innovationsprojekt (z.B. mit Innosuisse-Förderung) vorbereiten
+  - code: '4'
+    texts:
+      fr: Obtenir des résultats concrets et exploitables (p. ex. premier prototype,
+        concept, analyse de marché)
+      en: Achieve concrete and usable results (e.g. first prototype, concept, market
+        analysis)
+      de-ch: Konkrete und verwertbare Ergebnisse erzielen (z.B. erster Prototyp, Konzept,
+        Marktanalyse)
+  - code: '5'
+    texts:
+      fr: Utiliser de manière ciblée les ressources externes (personnel, infrastructure)
+        du partenaire de recherche
+      en: Use the research partner's external resources (personnel, infrastructure)
+        in a targeted manner
+      de-ch: Externe Ressourcen (Personal, Infrastruktur) des Forschungspartners gezielt
+        einsetzen
+  - code: '7'
+    texts:
+      fr: 'Autre objectif important, veuillez le mentionner :'
+      en: 'Other important goal, please specify:'
+      de-ch: 'Anderes wichtiges Ziel, bitte nennen:'
+  - code: '8'
+    texts:
+      fr: Traduit avec DeepL.com (version gratuite)
+      en: Don't know
+      de-ch: Weiss nicht
+  - code: '6'
+    texts:
+      de-ch: deakt iviert
+ErgebnisseErreicht:
+  element_type: Matrix
+  texts:
+    fr: Quels résultats avez-vous obtenus grâce au chèque d'innovation ?
+    en: What have you achieved with the innovation cheque?
+    de-ch: Was haben Sie mit dem Innovationsscheck konkret erreicht?
+  section_name: Zielerreichung des Innovationscheck
+  matrix_rows:
+  - code: '4'
+    texts:
+      fr: Nous avons concrétisé ou développé l'idée d'innovation ou l'idée commerciale
+      en: We were able to concretise or further develop the innovation idea or business
+        idea
+      de-ch: Wir konnten die Innovationsidee oder Geschäftsidee konkretisieren oder
+        weiterentwickeln
+  - code: machbar
+    texts:
+      de-ch: Wir haben die Machbarkeit einer Innovations- oder Geschäftsidee (technisch,
+        konzeptionell oder wirtschaftlich) geprüft
+      fr: Nous avons examiné la faisabilité d'une idée d'innovation ou commerciale
+        (technique, conceptuelle ou économique)
+      en: We have examined the feasibility of an innovation or business idea (technically,
+        conceptually or economically)
+  - code: markt
+    texts:
+      de-ch: 'Wir haben das Marktpotenzial oder gesellschaftliche Wirkungen analysiert '
+      fr: 'Nous avons analysé le potentiel du marché ou les effets sociaux '
+      en: 'We have analysed the market potential or social impact '
+  - code: '1'
+    texts:
+      fr: 'Nous avons testé, mis en place ou approfondi la collaboration avec le partenaire
+        de recherche '
+      en: 'We were able to test, establish or intensify collaboration with the research
+        partner '
+      de-ch: 'Wir konnten die Zusammenarbeit mit dem Forschungspartner testen, aufbauen
+        oder vertiefen '
+  - code: ProjVor
+    texts:
+      de-ch: Wir haben ein Innovationsprojekt (z.B. mit Innosuisse-Förderung) massgeblich
+        vorbereitet
+      fr: Nous avons préparé de manière déterminante un projet d'innovation (p. ex.
+        avec l'aide d'Innosuisse)
+      en: We have significantly prepared an innovation project (e.g. with Innosuisse
+        funding)
+  - code: '5'
+    texts:
+      fr: Nous avons obtenu des résultats concrets et exploitables (p. ex. premier
+        prototype, concept, analyse de marché)
+      en: We have achieved concrete and usable results (e.g. first prototype, concept,
+        market analysis)&nbsp;
+      de-ch: Wir haben konkrete und verwertbare Ergebnisse erzielt (z.B. erster Prototyp,
+        Konzept, Marktanalyse)
+  - code: ExtRes
+    texts:
+      de-ch: Wir konnten die Ressourcen unseres Forschungspartners nutzen
+      fr: Nous avons utilisé les ressources de notre partenaire de recherche
+      en: We were able to utilise the resources of our research partner
+  - code: '6'
+    texts:
+      fr: 'Autre, veuillez préciser :'
+      en: 'Other, please specify:'
+      de-ch: '{{WichtigsteZiele_7_text}}'
+  - code: '2'
+    texts:
+      de-ch: deaktvieren
+  - code: '3'
+    texts:
+      fr: Désactiver Nous avons pu préparer la soumission à un autre instrument de
+        promotion de l'innovation auprès d'Innosuisse
+      en: Deactivate We were able to prepare the submission to another Innosuisse
+        innovation funding instrument
+      de-ch: Deaktivieren Wir konnten die Eingabe bei einem anderen Instrument der
+        Innovationsförderung bei Innosuisse vorbereiten
+  matrix_columns:
+  - code: '1'
+    texts:
+      fr: Non pertinent /<br>Ne sait pas
+      en: Not relevant /<br>Don't know
+      de-ch: Nicht relevant /<br>Weiss nicht
+  - code: '2'
+    texts:
+      fr: Pas atteint
+      en: Not achieved
+      de-ch: Nicht erreicht
+  - code: '3'
+    texts:
+      fr: Partiellement atteint
+      en: Partially achieved
+      de-ch: Teilweise erreicht
+  - code: '4'
+    texts:
+      fr: Concrètement atteint
+      en: Concretely achieved
+      de-ch: Konkret erreicht
+ZielNichtGrund_ISf:
+  element_type: MultipleChoice
+  texts:
+    fr: Quelles sont les principales raisons pour lesquelles vous n'avez pas ou seulement
+      partiellement atteint les objectifs visés ?
+    en: What are the main reasons why you have not or only partially achieved the
+      intended objectives?
+    de-ch: Was sind die wichtigsten Gründe, warum Sie die angestrebten Ziele nicht
+      oder nur teilweise erreicht haben?
+  section_name: Zielerreichung des Innovationscheck
+  choices:
+  - code: '1'
+    texts:
+      fr: Défis internes (p. ex. objectifs peu clairs, manque de priorisation ou manque
+        de ressources)
+      en: Internal challenges (e.g. unclear objectives, lack of prioritisation or
+        resource bottlenecks)
+      de-ch: Interne Herausforderungen (z.B. unklare Zielsetzungen, mangelnde Priorisierung
+        oder Ressourcenengpässe)
+  - code: '2'
+    texts:
+      fr: Attentes trop élevées quant à l'utilité ou aux résultats
+      en: Expectations regarding the benefits or results were too high
+      de-ch: Zu hohe Erwartungen an den Nutzen oder die Ergebnisse
+  - code: '3'
+    texts:
+      fr: Résultats insuffisants ou manque de savoir-faire chez le partenaire de recherche
+      en: Insufficient results or lack of expertise on the part of the research partner
+      de-ch: Unzureichende Ergebnisse oder fehlendes Know-how beim Forschungspartner
+  - code: '4'
+    texts:
+      fr: Subvention trop faible pour les prestations prévues
+      en: Insufficient funding for planned services
+      de-ch: Zu geringer Förderbeitrag für geplante Leistungen
+  - code: '5'
+    texts:
+      fr: Le soutien de la part d'Innosuisse (délai, accompagnement, etc.) était insuffisant
+      en: Support from Innosuisse (timeframe, support, etc.) was insufficient
+      de-ch: Unterstützung seitens Innosuisse (Zeitrahmen, Begleitung, usw.) war unzureichend
+  - code: '6'
+    texts:
+      fr: Le projet était plus complexe que prévu
+      en: The project was more complex than expected
+      de-ch: Das Vorhaben war komplexer als erwartet
+  - code: '7'
+    texts:
+      fr: Obstacles externes ou imprévisibles (changement de personnel, dépendances
+        externes)
+      en: External or unforeseeable obstacles (staff changes, external dependencies)
+      de-ch: Externe oder unvorhersehbare Hindernisse (Personalwechsel, externe Abhängigkeiten)
+  - code: '8'
+    texts:
+      fr: 'Autres raisons, veuillez préciser :'
+      en: 'Other reasons, please specify:'
+      de-ch: 'Weitere Gründe, bitte nennen:'
+  - code: '9'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+ErgebnisseWeitere:
+  element_type: MultipleChoice
+  texts:
+    fr: Quels sont les autres résultats concrets que vous avez obtenus grâce au chèque
+      d'innovation ?
+    en: What other specific results have you achieved with the innovation cheque?
+    de-ch: Welche weiteren konkreten Ergebnisse haben Sie mit dem Innovationsscheck
+      erzielt?
+  section_name: Ergebnisse des Innovationschecks
+  choices:
+  - code: '1'
+    texts:
+      fr: L'idée d'innovation a été développée plus rapidement
+      en: The innovation idea was developed more quickly
+      de-ch: Die Innovationsidee konnte schneller weiterentwickelt werden
+  - code: '2'
+    texts:
+      fr: La faisabilité d'une nouvelle idée a été examinée
+      en: The feasibility of a new idea was tested
+      de-ch: WEG Die Umsetzbarkeit /Machbarkeit einer neuen Idee wurde geprüft
+  - code: '3'
+    texts:
+      fr: La recherche et le développement au sein de notre organisation ont été renforcés
+      en: Research and development in our organisation was strengthened
+      de-ch: Die Forschung und Entwicklung in unserer Organisation wurde gestärkt
+  - code: '4'
+    texts:
+      fr: La collaboration et les contacts avec le partenaire de recherche externe
+        ont été établis ou renforcés
+      en: Collaboration and contacts with the external research partner were established
+        or strengthened
+      de-ch: Die Zusammenarbeit und Kontakte mit dem externen Forschungspartner wurden
+        aufgebaut oder gestärkt
+  - code: '5'
+    texts:
+      fr: Un projet d'innovation de courte durée a été achevé
+      en: A short innovation project was completed
+      de-ch: Ein kurzes Innovationsprojekt wurde abgeschlossen
+  - code: '6'
+    texts:
+      fr: Une nouvelle approche de solution dans le développement de produits, de
+        processus ou de services a été testée
+      en: A new solution approach in product, process or service development was tested
+      de-ch: Ein neuer Lösungsansatz in der Produkt-, Prozess- oder Dienstleistungsentwicklung
+        wurde erprobt
+  - code: '7'
+    texts:
+      fr: Un travail concret de recherche ou de développement a été encouragé au sein
+        de l'institution de recherche
+      en: A concrete research or development project was funded at the research institution
+      de-ch: Eine konkrete Forschungs- oder Entwicklungsarbeit wurde an der Forschungsinstitution
+        gefördert
+  - code: '10'
+    texts:
+      fr: Une ou plusieurs nouvelles idées d'innovation ont vu le jour
+      en: One or more new innovation ideas have emerged
+      de-ch: Es sind eine oder mehrere neue Innovationsideen entstanden
+  - code: '8'
+    texts:
+      fr: Il est devenu évident que l'idée d'innovation initiale ne peut pas être
+        poursuivie
+      en: It became clear that the original innovation idea cannot be pursued further
+      de-ch: Es wurde deutlich, dass die ursprüngliche Innovationsidee nicht weiterverfolgt
+        werden kann
+  - code: '9'
+    texts:
+      fr: 'Autres résultats concrets, veuillez préciser :'
+      en: 'Other concrete results, please specify:'
+      de-ch: 'Weitere konkrete Ergebnisse, bitte angeben:'
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
 InnoUmgesetzt:
   element_type: SingleChoice
   texts:
@@ -2789,6 +3130,484 @@ InnoUmgesetzt:
       en: No, the supported project <strong>will</strong> <strong>not be continued</strong>.
       fr: Non, le projet encouragé <strong>ne sera pas poursuivi</strong>.
       de-ch: Nein, das geförderte Projekt <strong>wird nicht fortgeführt</strong>.
+WeiterEntwickelt:
+  element_type: SingleChoice
+  texts:
+    fr: L'innovation est-elle/a-t-elle été développée après la clôture du chèque d'innovation
+      ?
+    en: Is/was the innovation further developed after completion of the innovation
+      cheque?
+    de-ch: Wird/Wurde die Innovation nach Abschluss des Innovationsschecks weiterentwickelt?
+  section_name: Weiterfuehrung
+  choices:
+  - code: '6'
+    texts:
+      fr: Oui
+      en: 'Yes'
+      de-ch: Ja
+  - code: '3'
+    texts:
+      fr: Planifiée ou en cours d'évaluation
+      en: Planned or in clarification
+      de-ch: Geplant oder in Abklärung
+  - code: '1'
+    texts:
+      fr: Non
+      en: 'No'
+      de-ch: Nein
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+WeiterEntForm:
+  element_type: MultipleChoice
+  texts:
+    fr: 'Sous quelle forme avez-vous développé l''idée d''innovation après la clôture
+      du chèque d''innovation ou que prévoyez-vous de faire ? '
+    en: 'In what form have you further developed the innovation idea after the innovation
+      cheque''s completition, or what are your plans? '
+    de-ch: In welcher Form haben Sie die Innovationsidee nach Abschluss des Innovationsschecks
+      weiterentwickelt oder was planen Sie? 
+  section_name: Weiterfuehrung
+  choices:
+  - code: Alleine
+    texts:
+      fr: Développement avec vos propres ressources
+      en: Further development with own resources
+      de-ch: Weiterentwicklung mit eigenen Ressourcen
+  - code: MitPartnern
+    texts:
+      fr: Développement avec des partenaires externes sans financement
+      en: Further development with external partners without funding
+      de-ch: Weiterentwicklung mit externen Partnern ohne Förderung
+  - code: MitInnosuisse
+    texts:
+      fr: Développement dans le cadre d'un encouragement Innosuisse
+      en: Further development with an Innosuisse funding
+      de-ch: Weiterentwicklung im Rahmen einer Innosuisse-Förderung
+  - code: MitAndererFoerd
+    texts:
+      fr: Poursuite du développement dans le cadre d'un encouragement en dehors d'Innosuisse
+      en: Further development with funding outside of Innosuisse
+      de-ch: Weiterentwicklung im Rahmen einer Förderung ausserhalb von Innosuisse
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+WeiterEntPhase:
+  element_type: MultipleChoice
+  texts:
+    fr: À quel stade se trouve l'encouragement du développement de l'idée d'innovation
+      ?
+    en: At what stage is the funding for the further development of the innovation
+      idea?
+    de-ch: In welcher Phase befindet sich die Förderung für die Weiterentwicklung
+      der Innovationsidee?
+  section_name: Weiterfuehrung
+  choices:
+  - code: '1'
+    texts:
+      fr: "<div style=\"position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%\
+        \ ;\">Projet d'innovation Innosuisse:</div>Projet d'innovation approuvé\r\n"
+      en: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Innovation
+        project Innosuisse:</div>Innovation project approved
+
+        '
+      de-ch: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Innovationsprojekt
+        Innosuisse:</div>Innovationsprojekt bewilligt
+
+        '
+  - code: '2'
+    texts:
+      fr: Demande déposée, mais évaluation en attente
+      en: Application submitted, but evaluation still pending
+      de-ch: Gesuch eingereicht, aber Beurteilung noch aussstehend
+  - code: '3'
+    texts:
+      fr: Dépôt de la demande prévu dans les 12 prochains mois
+      en: Application submission planned within the next 12 months
+      de-ch: Gesuchseinreichung ist in den nächsten 12 Monaten geplant
+  - code: '4'
+    texts:
+      fr: Dépôt de la demande prévu à plus long terme
+      en: Application submission planned in a longer term
+      de-ch: Gesuchseinreichung längerfristig geplant
+  - code: GesuchAbgelehnt
+    texts:
+      de-ch: Gesuch wurde eingereicht, wurde aber abgelehnt
+      fr: Demande déposée mais refusée
+      en: Application submitted, but rejected
+  - code: '6'
+    texts:
+      fr: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Autre instrument Innosuisse:</div>Autre instrument Innosuisse <strong>approuvé</strong>,
+        veuillez précisez :'
+      en: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Further
+        Innosuisse instrument:</div>Further Innosuisse instrument <strong>approved</strong>,
+        please specify:'
+      de-ch: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Weiteres
+        Innosuisse-Instrument:</div>Weiteres Innosuisse-Instrument <strong>bewilligt</strong>,
+        bitte nennen:'
+  - code: '7'
+    texts:
+      fr: 'Autre instrument Innosuisse <strong>prévu</strong>, veuillez précisez :'
+      en: 'Further Innosuisse instrument <strong>planned</strong>, please specify:'
+      de-ch: 'Weiteres Innosuisse-Instrument <strong>geplant</strong>, bitte nennen:'
+  - code: '8'
+    texts:
+      fr: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Autre soutien en dehors d''Innosuisse:</div>Autre soutien en dehors d''Innosuisse
+        <strong>approuvé</strong>, veuillez préciser :'
+      en: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Further
+        funding outside Innosuisse:</div>Further funding <strong>approved</strong>
+        outside Innosuisse, please specify:'
+      de-ch: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Weitere
+        Förderung ausserhalb von Innosuisse:</div>Weitere Förderung ausserhalb von
+        Innosuisse <strong>bewilligt</strong>, bitte nennen:'
+  - code: '9'
+    texts:
+      fr: 'Autre soutien <strong>prévu</strong> en dehors d''Innosuisse, veuillez
+        préciser :'
+      en: 'Further funding <strong>planned</strong> outside Innosuisse, please specify:'
+      de-ch: 'Weitere Förderung ausserhalb von Innosuisse <strong>geplant</strong>,
+        bitte nennen:'
+  - code: '10'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+WeiterEntNichtGrund:
+  element_type: MultipleChoice
+  texts:
+    fr: 'Pourquoi l''idée d''innovation n''a-t-elle pas été développée après la clôture
+      du chèque d''innovation ? '
+    en: 'Why was the innovation idea not further developed after the innovation cheque
+      was completed? '
+    de-ch: Warum wurde die Innovationsidee nach Abschluss des Innovationsschecks nicht
+      weiterentwickelt? 
+  section_name: Weiterfuehrung
+  choices:
+  - code: '1'
+    texts:
+      fr: La mise en œuvre a eu lieu, aucun développement supplémentaire nécessaire
+      en: Implementation has taken place, no further development necessary
+      de-ch: Umsetzung ist erfolgt, keine zusätzliche Weiterentwicklung nötig
+  - code: '2'
+    texts:
+      fr: Les résultats du chèque d'innovation n'étaient pas assez prometteurs
+      en: The results of the innovation cheque were not promising enough
+      de-ch: Die Ergebnisse der Innovationsschecks waren zu wenig erfolgsversprechend
+  - code: '3'
+    texts:
+      fr: Le risque de l'idée d'innovation est/était trop élevé
+      en: The risk of the innovation idea is/was too high
+      de-ch: Das Risiko der Innovationsidee ist/war zu hoch
+  - code: '4'
+    texts:
+      fr: Nos ressources internes (temps / compétences / financement) étaient limitées
+      en: Our internal resources (time / competencies / funding) were limited
+      de-ch: Unsere internen Ressourcen (Zeit / Kompetenzen / Finanzierung) sind beschränkt
+  - code: '5'
+    texts:
+      fr: Nous n'avons pas trouvé de possibilité de collaboration supplémentaire avec
+        des partenaires de recherche ou des entreprises
+      en: We have not found any possibility for further co-operation with research
+        partners or companies
+      de-ch: Wir haben keine Möglichkeit zur weiteren Zusammenarbeit mit Forschungspartnern
+        oder Unternehmen gefunden
+  - code: '6'
+    texts:
+      fr: Aucune suite n'était prévue lors du dépôt du chèque d'innovation
+      en: No follow-up was planned when the innovation cheque was submitted
+      de-ch: Bei Einreichung des Innovationsschecks war keine Weiterverfolgung geplant
+  - code: '7'
+    texts:
+      fr: La demande de soutien financier supplémentaire a été rejetée
+      en: The application for further financial support was rejected
+      de-ch: Das Gesuch auf weitere finanzielle Förderung wurde abgelehnt
+  - code: '8'
+    texts:
+      fr: 'Autres raisons, veuillez préciser :'
+      en: 'Other reasons, please specify:'
+      de-ch: 'Andere Gründe, bitte angeben:'
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+ForPaZA_ErstesMal:
+  element_type: SingleChoice
+  texts:
+    fr: Votre organisation a-t-elle collaboré pour la première fois avec une institution
+      de recherche grâce au chèque d'innovation ?
+    en: Has your organisation collaborated with a research institution for the first
+      time through the innovation cheque?
+    de-ch: Hat Ihre Organisation durch den Innovationsscheck zum ersten Mal mit einer
+      Forschungsinstitution zusammengearbeitet?
+  section_name: 'Zusammenarbeit mit Forschungspartner '
+  choices:
+  - code: '6'
+    texts:
+      fr: Oui
+      en: 'Yes'
+      de-ch: Ja
+  - code: '1'
+    texts:
+      fr: Non
+      en: 'No'
+      de-ch: Nein
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+ForPa_Ausgetauscht:
+  element_type: SingleChoice
+  texts:
+    fr: Votre organisation a-t-elle changé de partenaire de recherche avant la fin
+      du chèque d'innovation ?
+    en: Did your organisation change research partners before completing the innovation
+      cheque?
+    de-ch: Hat Ihre Organisation den Forschungspartner vor Abschluss des Innovationsschecks
+      ausgetauscht?
+  section_name: 'Zusammenarbeit mit Forschungspartner '
+  choices:
+  - code: '6'
+    texts:
+      fr: 'Oui, veuillez indiquer la raison principale :'
+      en: 'Yes, please state your main reason:'
+      de-ch: 'Ja, bitte Hauptgrund nennen:'
+  - code: '1'
+    texts:
+      fr: Non
+      en: 'No'
+      de-ch: Nein
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+ForPa_Art:
+  element_type: SingleChoice
+  texts:
+    fr: Avec quel partenaire de recherche avez-vous terminé le chèque d'innovation?<br>
+    en: With which research partner did you complete the innovation cheque ?<br>
+    de-ch: Mit welchem Forschungspartner haben Sie die Arbeiten zum Innovationsscheck
+      abgeschlossen?<br>
+  section_name: 'Zusammenarbeit mit Forschungspartner '
+  choices:
+  - code: '1'
+    texts:
+      fr: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Universités:</div>Domaine des EPF
+
+        '
+      en: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Universities:</div>ETH
+        Domain.
+
+        '
+      de-ch: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Universitäre
+        Hochschulen:</div>ETH/EPFL-Bereich
+
+        '
+  - code: '2'
+    texts:
+      fr: Université cantonale et institutions associées (par ex. hôpital universitaire)
+      en: Cantonal university and associated institutions (e.g. university hospital)
+      de-ch: Kantonale Universität und assoziierte Institutionen (z.B. Unispital)
+  - code: '4'
+    texts:
+      fr: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Hautes écoles spécialisées et hautes écoles pédagogiques:</div>Haute école
+        spécialisée (HES)
+      en: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Universities
+        of Applied Sciences and Universities of Teacher Education:</div>University
+        of Applied Sciences (UAS)
+      de-ch: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Fachhochschulen
+        und Pädagogische Hochschulen:</div>Fachhochschule (FH)
+  - code: '5'
+    texts:
+      fr: Haute école pédagogique (HEP)
+      en: University of Teacher Education (PH/HEP)
+      de-ch: Pädagogische Hochschule (PH)
+  - code: '7'
+    texts:
+      fr: "<div style=\"position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%\
+        \ ;\">Autres types de partenaires de recherche:</div>Administration fédérale,\
+        \ institution de recherche non commerciale en dehors du domaine des hautes\
+        \ écoles, infrastructures de recherche, centres de compétence technologique,\
+        \ autres institutions de recherche\r\n"
+      en: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Other
+        type of research partner:</div>Federal administration, non-commercial research
+        institutions outside the higher education sector, research infrastructures,
+        technology competence centres, other research institutions
+      de-ch: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Andere
+        Art von Forschungspartner:</div>Bundesverwaltung, nichtkommerzielle Forschungsinstitution
+        ausserhalb des Hochschulbereichs, Forschungsinfrastrukturen, Technologiekompetenzentren,
+        weitere Forschungsinstitutionen
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+Beurteilung_ForPar:
+  element_type: Matrix
+  texts:
+    fr: Comment évaluez-vous la prestation du partenaire de recherche pour le chèque
+      d'innovation ?
+    en: How would you rate the performance of the research partner for the innovation
+      cheque?
+    de-ch: Wie bewerten Sie die Leistung des Forschungspartners für den Innovationsscheck?
+  section_name: 'Zusammenarbeit mit Forschungspartner '
+  matrix_rows:
+  - code: '1'
+    texts:
+      fr: La prestation du partenaire de recherche pour le chèque d'innovation était...
+      en: The performance of the research partner for the innovation cheque was...
+      de-ch: Die Leistung des Forschungspartners für den Innovationsscheck war...
+  matrix_columns:
+  - code: '1'
+    texts:
+      fr: Très mauvaise
+      en: Very poor
+      de-ch: Sehr schlecht
+  - code: '2'
+    texts:
+      fr: Mauvaise
+      en: Poor
+      de-ch: Schlecht
+  - code: '3'
+    texts:
+      fr: Plutôt mauvais
+      en: Rather poor
+      de-ch: Eher schlecht
+  - code: '4'
+    texts:
+      fr: Plutôt bonne
+      en: Rather good
+      de-ch: Eher gut
+  - code: '5'
+    texts:
+      fr: Bonne
+      en: Good
+      de-ch: Gut
+  - code: '6'
+    texts:
+      fr: Très bonne
+      en: Very good
+      de-ch: Sehr gut
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+ForPa_LeistungUnzufrieden:
+  element_type: OpenQuestion
+  texts:
+    fr: Pourquoi n'êtes-vous pas satisfait de la prestation du partenaire de recherche
+      ?
+    en: Why are you not satisfied with the research partner's performance?
+    de-ch: Weshalb sind Sie mit der Leistung des Forschungspartners nicht zufrieden?
+  section_name: 'Zusammenarbeit mit Forschungspartner '
+FoParZusArbeitWeiter:
+  element_type: SingleChoice
+  texts:
+    en: Was the collaboration with one or more research partners of the supported
+      innovation project continued after project completion?
+    fr: La collaboration avec un ou plusieurs partenaires de recherche du projet d’innovation
+      encouragé s’est-elle poursuivie après la fin du projet ?
+    de-ch: Wurde nach dem Projektabschluss die Zusammenarbeit mit einem oder mehreren
+      Forschungspartnern des geförderten Innovationsprojekts fortgeführt?
+  section_name: Ergebnisse
+  choices:
+  - code: '6'
+    texts:
+      en: Yes, the cooperation still exists today.
+      fr: Oui, la coopération fructifie encore aujourd’hui.
+      de-ch: Ja, die Zusammenarbeit besteht heute noch.
+  - code: '5'
+    texts:
+      en: Yes, but the cooperation has since been terminated.
+      fr: Oui, mais la coopération est entre-temps terminée.
+      de-ch: Ja, aber die Zusammenarbeit wurde inzwischen wieder beendet.
+  - code: '1'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+  - code: '99'
+    texts:
+      en: I cannot answer this question
+      fr: Je ne peux pas répondre à cette question
+      de-ch: Das kann ich nicht beantworten
+IPR_Geregelt:
+  element_type: SingleChoice
+  texts:
+    fr: Les droits de propriété ont-ils été réglés par contrat entre vous et le partenaire
+      de recherche ?
+    en: Have the property rights been contractually regulated between you and the
+      research partner?
+    de-ch: Wurden die Eigentumsrechte zwischen Ihnen und dem Forschungspartner vertraglich
+      geregelt?
+  section_name: Eigentumsrechte
+  choices:
+  - code: '6'
+    texts:
+      fr: Oui, les droits de propriété sont réglés par contrat
+      en: Yes, the property rights are contractually regulated
+      de-ch: Ja, die Eigentumsrechte sind vertraglich geregelt
+  - code: '5'
+    texts:
+      fr: Oui, il est prévu de régler les droits de propriété
+      en: Yes, there are firm plans to regulate property rights
+      de-ch: Ja, es ist fest geplant die Eigentumsrechte zu regeln
+  - code: '1'
+    texts:
+      fr: Non
+      en: 'No'
+      de-ch: Nein
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+IPR_Inhaber:
+  element_type: SingleChoice
+  texts:
+    de-ch: 'Wenn Eigentumsrechte vertraglich geregelt wurden: Wem gehören die Eigentumsrechte?'
+    fr: 'Si les droits de propriété ont été réglés par contrat : à qui appartiennent
+      les droits de propriété ?'
+    en: 'If property rights have been contractually regulated: who owns the property
+      rights?'
+  section_name: Ergebnisse
+  choices:
+  - code: '6'
+    texts:
+      de-ch: Unserer Organisation<br>
+      fr: A notre organisation
+      en: Our organisation
+  - code: '4'
+    texts:
+      de-ch: Einem Forschungspartner
+      fr: Au partenaire de recherche
+      en: The research partner
+  - code: '5'
+    texts:
+      de-ch: Sowohl unserer Organisation als auch dem Forschungspartner
+      fr: Tant notre organisation que le partenaire de recherche
+      en: Both our organisation and the research partner
+  - code: '2'
+    texts:
+      de-ch: Einem anderem, am Projekt beteiligten Umsetzungspartner
+      fr: A un autre partenaire de mise en œuvre impliqué dans le projet
+      en: Another implementation partner involved in the project
+  - code: '1'
+    texts:
+      de-ch: Eigentumsrechte sind nicht vertraglich geregelt
+      fr: Les droits de propriété ne sont pas réglés par contrat
+      en: Property rights are not contractually regulated
 InnoArt:
   element_type: MultipleChoice
   texts:
@@ -2832,6 +3651,422 @@ InnoArt:
       de-ch: Soziale Innovation
       fr: Innovation sociale
       en: Social innovation
+TRL:
+  element_type: Matrix
+  texts:
+    fr: À quel stade de maturité <strong>(Technology Readiness Level TRL ou Social
+      Readiness Level SRL)</strong> se trouvait votre innovation au moment du lancement
+      du chèque d'innovation et après la clôture du chèque d'innovation ?
+    en: At what stage of maturity <strong>(Technology Readiness Level TRL or Social
+      Readiness Level SRL)</strong> was your innovation at the start of the innovation
+      cheque and after completion of the innovation cheque?
+    de-ch: In welchem Reifestadium <strong>(Technology Readiness Level TRL oder Social
+      Readiness Level SRL) </strong>befand sich Ihre Innovation beim Start des Innovationsschecks
+      und nach Abschluss des Innovationsschecks?
+  section_name: Eigenschaften der Innovation
+  matrix_rows:
+  - code: Start
+    texts:
+      fr: Au lancement du chèque d'innovation
+      en: At the start of the innovation cheque
+      de-ch: Beim Start des Innovationsschecks
+  - code: Ende
+    texts:
+      fr: Après la clôture du chèque d'innovation
+      en: After completion of the innovation cheque
+      de-ch: Nach Abschluss des Innovationsschecks
+  matrix_columns:
+  - code: '1'
+    texts:
+      fr: TRL/SRL 1
+      en: TRL/SRL 1
+      de-ch: 'TRL/SRL 1
+
+        '
+  - code: '2'
+    texts:
+      fr: TRL/SRL 2
+      en: TRL/SRL 2
+      de-ch: TRL/SRL 2
+  - code: '3'
+    texts:
+      fr: TRL/SRL 3
+      en: TRL/SRL 3
+      de-ch: 'TRL/SRL 3
+
+        '
+  - code: '4'
+    texts:
+      fr: TRL/SRL 4
+      en: TRL/SRL 4
+      de-ch: TRL/SRL 4
+  - code: '5'
+    texts:
+      fr: TRL/SRL 5
+      en: TRL/SRL 5
+      de-ch: TRL/SRL 5
+  - code: '6'
+    texts:
+      fr: TRL/SRL 6
+      en: 'TRL/SRL 6
+
+        '
+      de-ch: 'TRL/SRL 6
+
+        '
+  - code: '7'
+    texts:
+      fr: TRL/SRL 7
+      en: TRL/SRL 7
+      de-ch: TRL/SRL 7
+  - code: '8'
+    texts:
+      fr: TRL/SRL 8
+      en: TRL/SRL 8
+      de-ch: TRL/SRL 8
+  - code: '9'
+    texts:
+      fr: TRL/SRL 9
+      en: 'TRL/SRL 9
+
+        '
+      de-ch: 'TRL/SRL 9
+
+        '
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+AusmassDisruptivitaet:
+  element_type: Matrix
+  texts:
+    en: To what extent do you believe that the potential of the innovation supported
+      by the project will be <strong>disruptive</strong> on the market in the long
+      term, even if the innovation is not (yet) implemented?
+    fr: Dans quelle mesure pensez-vous que le potentiel de l'innovation soutenue par
+      le projet sera <strong>disruptif</strong> sur le marché à long terme, même si
+      l'innovation n'est pas (encore) mise en œuvre ?<br>
+    de-ch: Wie <strong>disruptiv </strong>schätzen Sie das Potenzial der im Projekt
+      geförderten Innovation langfristig auf dem Markt ein (auch wenn die Innovation
+      noch nicht umgesetzt ist)?
+  section_name: Charakterisierung des Projektes
+  matrix_rows:
+  - code: '1'
+    texts: {}
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not at all disruptive
+      fr: pas du tout disruptif
+      de-ch: überhaupt nicht disruptiv
+  - code: '2'
+    texts:
+      en: hardly disruptive
+      fr: à peine disruptif
+      de-ch: kaum disruptiv
+  - code: '3'
+    texts:
+      en: slightly disruptive
+      fr: peu disruptif
+      de-ch: eher wenig disruptiv
+  - code: '4'
+    texts:
+      en: somewhat disruptive
+      fr: plutôt disruptif
+      de-ch: eher disruptiv
+  - code: '5'
+    texts:
+      en: disruptive
+      fr: disruptif
+      de-ch: disruptiv
+  - code: '6'
+    texts:
+      en: very disruptive
+      fr: fortement disruptif
+      de-ch: ausgesprochen disruptiv
+  - code: '99'
+    texts:
+      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
+        this question</div>
+      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
+        répondre à cette question</div>
+      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
+        nicht beantworten</div>
+Nachhaltigkeit_1:
+  element_type: Matrix
+  texts:
+    fr: L'idée d'innovation peut-elle contribuer à la <strong>durabilité environnementale</strong>
+      si elle est mise en œuvre concrètement ?
+    en: Can the innovation idea contribute to <strong>environmental sustainability</strong>
+      when implemented in practice?
+    de-ch: Kann die Innovationsidee bei einer konkreten Umsetzung zur <strong>ökologischen
+      Nachhaltigkeit</strong> beitragen?
+  section_name: Eigenschaften der Innovation
+  matrix_rows:
+  - code: '1'
+    texts:
+      fr: La contribution à la durabilité environnementale est ...
+      en: The contribution to environmental sustainability is ...
+      de-ch: Der Beitrag an die ökologische Nachhaltigkeit ist …
+  matrix_columns:
+  - code: '1'
+    texts:
+      fr: Inexistante
+      en: Non-existent
+      de-ch: Nicht vorhanden
+  - code: '2'
+    texts:
+      fr: Faible
+      en: Weak
+      de-ch: Gering
+  - code: '3'
+    texts:
+      fr: Plutôt faible
+      en: Rather weak
+      de-ch: Eher gering
+  - code: '4'
+    texts:
+      fr: Plutôt forte
+      en: Rather strong
+      de-ch: Eher stark
+  - code: '5'
+    texts:
+      fr: Forte
+      en: Strong
+      de-ch: Stark
+  - code: '6'
+    texts:
+      fr: Très forte
+      en: Very strong
+      de-ch: Sehr stark
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+Nachhaltigkeit_2:
+  element_type: Matrix
+  texts:
+    fr: L'idée d'innovation peut-elle contribuer à la <strong>durabilité sociale</strong>
+      si elle est mise en œuvre concrètement ?
+    en: Can the innovation idea contribute to <strong>social sustainability</strong>
+      when implemented in practice?
+    de-ch: Kann die Innovationsidee bei einer konkreten Umsetzung zur <strong>sozialen
+      Nachhaltigkeit</strong> beitragen?
+  section_name: Eigenschaften der Innovation
+  matrix_rows:
+  - code: '1'
+    texts:
+      fr: La contribution à la durabilité sociale est ...
+      en: The contribution to social sustainability is ...
+      de-ch: Der Beitrag an die soziale Nachhaltigkeit ist …
+  matrix_columns:
+  - code: '1'
+    texts:
+      fr: Inexistante
+      en: Non-existent
+      de-ch: Nicht vorhanden
+  - code: '2'
+    texts:
+      fr: Faible
+      en: Weak
+      de-ch: Gering
+  - code: '3'
+    texts:
+      fr: Plutôt faible
+      en: Rather weak
+      de-ch: Eher gering
+  - code: '4'
+    texts:
+      fr: Plutôt forte
+      en: Rather strong
+      de-ch: Eher stark
+  - code: '5'
+    texts:
+      fr: Forte
+      en: Strong
+      de-ch: Stark
+  - code: '6'
+    texts:
+      fr: Très forte
+      en: Very strong
+      de-ch: Sehr stark
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+ZufNichtGrund:
+  element_type: OpenQuestion
+  texts:
+    en: 'Please let us know why you were dissatisfied:'
+    fr: 'Veuillez nous faire savoir les causes d’insatisfaction :'
+    de-ch: 'Bitte teilen Sie uns mit, was Unzufriedenheit verursachte:'
+  section_name: Projekterfolg und Abschluss
+Verbesserungen:
+  element_type: MultipleChoice
+  texts:
+    fr: Dans quels domaines voyez-vous des possibilités d'amélioration substantielles
+      pour le chèque d'innovation du point de vue de votre organisation ?
+    en: In which areas do you see substantial room for improvement for the innovation
+      check from your organisation's perspective?
+    de-ch: In welchen Bereichen sehen Sie substanzielle Verbesserungsmöglichkeiten
+      für den Innovationsscheck aus Sicht Ihrer Organisation?
+  section_name: Zufriedenheit mit Innosuisse Programm
+  choices:
+  - code: '1'
+    texts:
+      fr: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Aucune possibilité d'amélioration:</div>Aucune amélioration nécessaire
+      en: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">No
+        opportunities for improvement:</div>No improvements needed
+      de-ch: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Keine
+        Verbesserungsmöglichkeiten:</div>Keine Verbesserungen notwendig
+  - code: '2'
+    texts:
+      fr: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Améliorations administratives et procédurales:</div>Plus longue période
+        d''utilisation du chèque innovation (> 6 mois)
+
+        '
+      en: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Administrative
+        and procedural improvements:</div>Longer period for using the innovation cheque
+        (> 6 months)
+
+        '
+      de-ch: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Administrative
+        und prozessuale Verbesserungen:</div>Längerer Zeitraum für die Bearbeitung
+        des Innovationsschecks (> 6 Monate)
+
+        '
+  - code: '3'
+    texts:
+      fr: Suivi plus étroit du projet par Innosuisse
+      en: Closer project support by Innosuisse
+      de-ch: Engere Projektbegleitung durch Innosuisse
+  - code: '4'
+    texts:
+      fr: Possibilités de coopération avec plusieurs partenaires de recherche
+      en: Opportunities for cooperation with several research partners
+      de-ch: Kooperationsmöglichkeiten mit mehreren Forschungspartnern
+  - code: '5'
+    texts:
+      fr: Collaboration plus intensive avec les partenaires de recherche
+      en: Intensified cooperation with research partners
+      de-ch: Intensivere Zusammenarbeit mit Forschungspartner
+  - code: '6'
+    texts:
+      fr: Bilan de situation après la clôture du chèque d'innovation
+      en: Situation assessment after completion of the innovation cheque
+      de-ch: Standortbestimmung nach Abschluss des Innovationsschecks
+  - code: '7'
+    texts:
+      fr: Réduction de la charge administrative
+      en: Less administrative effort (less red tape)
+      de-ch: Geringerer administrativer Aufwand
+  - code: '8'
+    texts:
+      fr: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Nouveautés en termes de contenu:</div>Projet d'innovation indépendant et
+        de courte durée ou réalisation d'une étude sans intention de financement supplémentaire
+      en: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Innovations
+        in content:</div>Independent and short innovation project or a study completion
+        without any further funding intention
+      de-ch: <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Inhaltliche
+        Neuerungen:</div>Eigenständiges und kurzes Innovationsprojekt oder eine für
+        sich abgeschlossene Studie ohne weitere Förderabsicht
+  - code: '9'
+    texts:
+      fr: Traitement plus intensif de l'idée d'innovation dans le cadre du chèque
+        d'innovation
+      en: Intensified processing of the innovation idea within the framework of the
+        innovation check
+      de-ch: Intensivere Bearbeitung der Innovationsidee im Rahmen des Innovationsschecks
+  - code: '10'
+    texts:
+      fr: Allègement plus important des activités de R&D de sa propre organisation
+      en: Greater relief for the R&D activities of one's own organisation
+      de-ch: Stärkere Entlastung der F&E-Aktivitäten der eigenen Organisation
+  - code: '11'
+    texts:
+      fr: ' <div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%
+        ;">Autres possibilités d''amélioration:</div>Autres possibilités d''amélioration,
+        veuillez préciser :
+
+        '
+      en: "<div style=\"position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;\"\
+        >Other opportunities for improvement:</div>Other opportunities for improvement,\
+        \ please mention:\r\n"
+      de-ch: '<div style="position:absolute;left:0px;top:-20px;font-weight:bold;background-color:lightgrey;width:100%;">Weitere
+        Verbesserungsmöglichkeiten:</div>Weitere Verbesserungsmöglichkeiten, bitte
+        nennen:
+
+        '
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+WeitereVerbesserungen:
+  element_type: OpenQuestion
+  texts:
+    fr: Avez-vous d'autres suggestions concrètes d'amélioration pour le chèque innovation
+      ?
+    en: Do you have any other concrete suggestions for improvement of the innovation
+      cheque?
+    de-ch: Haben Sie weitere konkrete Verbesserungsvorschläge für den Innovationsscheck?
+  section_name: Zufriedenheit mit Innosuisse Programm
+PersonalImProjekt:
+  element_type: Matrix
+  texts:
+    en: On average, how many employees of your organisation worked directly on the
+      project during the Innosuisse funding period (incl. application)?<br>
+    fr: Combien de personnel de votre organisation ont travaillé en moyenne directement
+      sur votre projet pendant la période de financement par Innosuisse (y compris
+      la demande) ?
+    de-ch: Wie viele Mitarbeitende Ihrer Organisation haben während der Innosuisse-Förderung
+      des Projektes (inkl. Gesuch) im Durchschnitt direkt an Ihrem Innosuisse Projekt
+      gearbeitet? <br>
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  matrix_rows:
+  - code: heute
+    texts:
+      en: Employees of the own organisation working on the project
+      fr: Employées de la propre organisation travaillant sur le projet
+      de-ch: Im Projekt tätige Mitarbeitende der eigenen Organisation
+  matrix_columns:
+  - code: Organisation
+    texts:
+      en: Average annual full-time equivalents
+      fr: Moyenne annuelle des équivalents temps plein
+      de-ch: Durchschnittliche jährliche Vollzeitäquivalente
+InnoAlsZiel:
+  element_type: SingleChoice
+  texts:
+    en: Does or did your organisation pursue the goal of implementing a concrete innovation
+      in the organisation or on the market with the supported project?
+    fr: Votre organisation poursuit-elle ou a-t-elle poursuivi avec le projet encouragé
+      par Innosuisse l'objectif de mettre en œuvre une innovation concrète au sein
+      de l'organisation ou sur le marché ?
+    de-ch: Verfolgt(e) Ihre Organisation das Ziel, mit dem geförderten Projekt eine
+      konkrete Innovation in Ihrer Organisation oder auf dem Markt umzusetzen?
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  choices:
+  - code: '6'
+    texts:
+      en: Yes, our participation in the project aims/aimed to implement the innovation
+        in our organisation or on the market.
+      fr: Oui, notre participation au projet a/a eu pour but de mettre en œuvre l'innovation
+        dans notre organisation ou sur le marché.
+      de-ch: Ja, unsere Beteiligung am Projekt verfolgt(e) das Ziel, die Innovation
+        in unserer Organisation oder auf dem Markt umzusetzen.
+  - code: '1'
+    texts:
+      en: No, we were involved in the project as another implementation partner.
+      fr: Non, nous participions au projet en tant que partenaire de mise en œuvre
+        supplémentaire.
+      de-ch: Nein, wir waren als weiterer Umsetzungspartner am Projekt beteiligt.
 FoerderSNF:
   element_type: MultipleChoice
   texts:
@@ -2982,61 +4217,6 @@ FoerderInnosuisse:
       en: '<p style="font-size: 4px;"> </p>I cannot answer this question
 
         '
-AusmassDisruptivitaet:
-  element_type: Matrix
-  texts:
-    en: To what extent do you believe that the potential of the innovation supported
-      by the project will be <strong>disruptive</strong> on the market in the long
-      term, even if the innovation is not (yet) implemented?
-    fr: Dans quelle mesure pensez-vous que le potentiel de l'innovation soutenue par
-      le projet sera <strong>disruptif</strong> sur le marché à long terme, même si
-      l'innovation n'est pas (encore) mise en œuvre ?<br>
-    de-ch: Wie <strong>disruptiv </strong>schätzen Sie das Potenzial der im Projekt
-      geförderten Innovation langfristig auf dem Markt ein (auch wenn die Innovation
-      noch nicht umgesetzt ist)?
-  section_name: Charakterisierung des Projektes
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: not at all disruptive
-      fr: pas du tout disruptif
-      de-ch: überhaupt nicht disruptiv
-  - code: '2'
-    texts:
-      en: hardly disruptive
-      fr: à peine disruptif
-      de-ch: kaum disruptiv
-  - code: '3'
-    texts:
-      en: slightly disruptive
-      fr: peu disruptif
-      de-ch: eher wenig disruptiv
-  - code: '4'
-    texts:
-      en: somewhat disruptive
-      fr: plutôt disruptif
-      de-ch: eher disruptiv
-  - code: '5'
-    texts:
-      en: disruptive
-      fr: disruptif
-      de-ch: disruptiv
-  - code: '6'
-    texts:
-      en: very disruptive
-      fr: fortement disruptif
-      de-ch: ausgesprochen disruptiv
-  - code: '99'
-    texts:
-      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
-        répondre à cette question</div>
-      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
-        nicht beantworten</div>
 ErgebnisAnlagenPrototyp:
   element_type: SingleChoice
   texts:
@@ -3063,41 +4243,6 @@ ErgebnisAnlagenPrototyp:
       en: I cannot answer this question
       fr: Je ne peux pas répondre à cette question
       de-ch: Das kann ich nicht beantworten
-IPR_Inhaber:
-  element_type: SingleChoice
-  texts:
-    de-ch: 'Wenn Eigentumsrechte vertraglich geregelt wurden: Wem gehören die Eigentumsrechte?'
-    fr: 'Si les droits de propriété ont été réglés par contrat : à qui appartiennent
-      les droits de propriété ?'
-    en: 'If property rights have been contractually regulated: who owns the property
-      rights?'
-  section_name: Ergebnisse
-  choices:
-  - code: '6'
-    texts:
-      de-ch: Unserer Organisation<br>
-      fr: A notre organisation
-      en: Our organisation
-  - code: '4'
-    texts:
-      de-ch: Einem Forschungspartner
-      fr: Au partenaire de recherche
-      en: The research partner
-  - code: '5'
-    texts:
-      de-ch: Sowohl unserer Organisation als auch dem Forschungspartner
-      fr: Tant notre organisation que le partenaire de recherche
-      en: Both our organisation and the research partner
-  - code: '2'
-    texts:
-      de-ch: Einem anderem, am Projekt beteiligten Umsetzungspartner
-      fr: A un autre partenaire de mise en œuvre impliqué dans le projet
-      en: Another implementation partner involved in the project
-  - code: '1'
-    texts:
-      de-ch: Eigentumsrechte sind nicht vertraglich geregelt
-      fr: Les droits de propriété ne sont pas réglés par contrat
-      en: Property rights are not contractually regulated
 BeurteilungForPar:
   element_type: Matrix
   texts:
@@ -3153,37 +4298,6 @@ BeurteilungForPar:
         répondre à cette question</div>
       de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
         nicht beantworten</div>
-FoParZusArbeitWeiter:
-  element_type: SingleChoice
-  texts:
-    en: Was the collaboration with one or more research partners of the supported
-      innovation project continued after project completion?
-    fr: La collaboration avec un ou plusieurs partenaires de recherche du projet d’innovation
-      encouragé s’est-elle poursuivie après la fin du projet ?
-    de-ch: Wurde nach dem Projektabschluss die Zusammenarbeit mit einem oder mehreren
-      Forschungspartnern des geförderten Innovationsprojekts fortgeführt?
-  section_name: Ergebnisse
-  choices:
-  - code: '6'
-    texts:
-      en: Yes, the cooperation still exists today.
-      fr: Oui, la coopération fructifie encore aujourd’hui.
-      de-ch: Ja, die Zusammenarbeit besteht heute noch.
-  - code: '5'
-    texts:
-      en: Yes, but the cooperation has since been terminated.
-      fr: Oui, mais la coopération est entre-temps terminée.
-      de-ch: Ja, aber die Zusammenarbeit wurde inzwischen wieder beendet.
-  - code: '1'
-    texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 Umsatz:
   element_type: Matrix
   texts:
@@ -3245,42 +4359,6 @@ AusgabenFuE:
       de-ch: Mio. CHF
       en: CHF million
       fr: CHF mio.
-PersonalFuE:
-  element_type: Matrix
-  texts:
-    en: How many <strong>staff</strong> (full-time positions, including apprentices
-      and interns) does your organisation have in <strong>research and development</strong>
-      ...?
-    fr: Combien de <strong>personne</strong><strong>l</strong><strong> </strong>(postes
-      à plein temps, y compris les apprentis et les stagiaires) votre organisation
-      a-t-elle dans <strong>le domaine de la recherche et du développement</strong>
-      ... ?
-    de-ch: Wie viel <strong>Personal </strong>(Vollzeitäquivalente, inklusive Lernende
-      und Praktikant/-innen) hat Ihre Organisation im <strong>Bereich Forschung und
-      Entwicklung</strong> …?
-  section_name: Ökonomische Projektwirkungen
-  matrix_rows:
-  - code: PEnde
-    texts:
-      en: '... at the end of the project, i.e.&nbsp;at the end of the year&nbsp;{{member.AbschlussJahr}}'
-      fr: '... à la fin du projet, c''est-à-dire&nbsp;à la fin de l''année {{member.AbschlussJahr}}'
-      de-ch: … bei Projektabschluss, d.h.&nbsp;per Ende {{member.AbschlussJahr}}
-  - code: Heute
-    texts:
-      de-ch: … heute, d.h. per Ende des letzten abgeschlossenen Geschäftsjahres
-      fr: '... aujourd''hui, c''est-à-dire à la fin du dernier exercice clos'
-      en: '... today, i.e. at the end of the last completed business year'
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: '... in Switzerland'
-      fr: '... en Suisse'
-      de-ch: in der Schweiz
-  - code: '2'
-    texts:
-      en: '... abroad'
-      fr: '... à l’étranger'
-      de-ch: im Ausland
 WirtSituation:
   element_type: Matrix
   texts:
@@ -4474,13 +5552,6 @@ ZielNichtGrund:
       en: 'Other reasons (please indicate):'
       fr: 'Autres raisons (veuillez préciser):'
       de-ch: 'Andere Gründe (bitte angeben):'
-ZufNichtGrund:
-  element_type: OpenQuestion
-  texts:
-    en: 'Please let us know why you were dissatisfied:'
-    fr: 'Veuillez nous faire savoir les causes d’insatisfaction :'
-    de-ch: 'Bitte teilen Sie uns mit, was Unzufriedenheit verursachte:'
-  section_name: Projekterfolg und Abschluss
 Stellenwert:
   element_type: Matrix
   texts:
