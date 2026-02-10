@@ -37,6 +37,12 @@
   .filter-bar label { font-weight: 600; }
   .filter-bar select, .filter-bar input { padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px; }
 
+  .target-selector { margin-bottom: 16px; padding: 10px 16px; background: #fff; border: 1px solid #ddd; border-radius: 6px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .target-selector label.group-label { font-weight: 600; margin-right: 4px; }
+  .target-selector .target-option { display: flex; align-items: center; gap: 4px; }
+  .target-selector .target-option input { cursor: pointer; }
+  .target-selector .target-option label { cursor: pointer; font-size: 13px; }
+
   .section-group { margin-bottom: 24px; }
   .section-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; padding: 6px 12px; background: #e8e8e8; border-radius: 4px; cursor: pointer; }
   .section-title:hover { background: #ddd; }
@@ -72,7 +78,6 @@
   .detail-content table { margin: 4px 0 12px; font-size: 12px; table-layout: fixed; width: 100%; }
   .detail-content td, .detail-content th { padding: 4px 8px; }
   .detail-content .text-cell { overflow: hidden; text-overflow: ellipsis; }
-  /* Consistent column widths for detail tables */
   .detail-content .col-code { width: 200px; }
   .detail-content .col-status { width: 100px; }
   .detail-content .col-sim { width: 70px; text-align: right; }
@@ -85,7 +90,7 @@
 <body>
 
 <h1>Questionnaire Comparison Report</h1>
-<p class="subtitle">Each survey compared against master</p>
+<p class="subtitle" id="subtitle">Flexible survey comparison</p>
 
 <div id="app">
   <div class="loading">Loading data...</div>
@@ -100,10 +105,14 @@ const STATUS_COLOR = {
   removed: 'lightgrey'
 };
 
+const ARROW = '\u2192';
+
 let DATA = null;
 let currentLanguage = 'de-ch';
 let currentFilter = 'all';
 let searchTerm = '';
+let currentReference = '';  // selected reference source
+let selectedTargets = [];   // selected target sources to compare against
 
 async function loadData() {
   try {
@@ -111,6 +120,8 @@ async function loadData() {
     if (!response.ok) throw new Error('Failed to load data.json');
     DATA = await response.json();
     currentLanguage = DATA.meta.languages.includes('de-ch') ? 'de-ch' : DATA.meta.languages[0];
+    currentReference = DATA.meta.default_reference || DATA.meta.sources[0];
+    selectedTargets = DATA.meta.sources.filter(s => s !== currentReference);
     render();
   } catch (err) {
     document.getElementById('app').innerHTML = `<div class="error">Error loading data: ${err.message}</div>`;
@@ -129,12 +140,20 @@ function truncate(text, len) {
   return text.length > len ? text.slice(0, len) + '...' : text;
 }
 
+function getDiffKey(refSource, targetSource) {
+  return refSource + ARROW + targetSource;
+}
+
+function getDiffsForPair(refSource, targetSource) {
+  return DATA.diffs[getDiffKey(refSource, targetSource)] || {};
+}
+
 function getWorstStatus(code) {
-  const codeDiffs = DATA.diffs[code] || {};
   let worst = 'identical';
   const priority = ['structure_changed', 'text_changed', 'added', 'removed', 'identical'];
-  for (const survey of DATA.meta.survey_names) {
-    const diff = codeDiffs[survey];
+  for (const target of selectedTargets) {
+    const pairDiffs = getDiffsForPair(currentReference, target);
+    const diff = pairDiffs[code];
     if (diff && priority.indexOf(diff.status) < priority.indexOf(worst)) {
       worst = diff.status;
     }
@@ -153,21 +172,74 @@ function matchesSearch(code) {
   if (!searchTerm) return true;
   const term = searchTerm.toLowerCase();
   if (code.toLowerCase().includes(term)) return true;
-  const master = DATA.master[code];
-  if (master) {
-    for (const text of Object.values(master.texts)) {
+  const refQ = DATA.questions[currentReference] ? DATA.questions[currentReference][code] : null;
+  if (refQ) {
+    for (const text of Object.values(refQ.texts)) {
       if (text.toLowerCase().includes(term)) return true;
     }
   }
   return false;
 }
 
+function getShortName(source) {
+  return DATA.meta.short_names[source] || source;
+}
+
 function renderSummary() {
+  // Compute summary stats dynamically based on current reference/targets
+  const counts = { identical: 0, text_changed: 0, structure_changed: 0, added: 0, removed: 0 };
+  const allCodes = new Set();
+  for (const source of DATA.meta.sources) {
+    const qs = DATA.questions[source];
+    if (qs) for (const code of Object.keys(qs)) allCodes.add(code);
+  }
+  for (const code of allCodes) {
+    const worst = getWorstStatus(code);
+    counts[worst] = (counts[worst] || 0) + 1;
+  }
+
   return `
+    <div class="summary">
+      <div class="stat"><div class="num">${allCodes.size}</div><div class="label">Total</div></div>
+      <div class="stat"><div class="num">${counts.identical}</div><div class="label">Identical</div></div>
+      <div class="stat"><div class="num">${counts.text_changed}</div><div class="label">Text Changed</div></div>
+      <div class="stat"><div class="num">${counts.structure_changed}</div><div class="label">Structure Changed</div></div>
+      <div class="stat"><div class="num">${counts.added}</div><div class="label">Added</div></div>
+      <div class="stat"><div class="num">${counts.removed}</div><div class="label">Removed</div></div>
+    </div>
     <div class="legend">
       <span class="green">Identical</span>
       <span class="blue">Different</span>
       <span class="grey">Not in survey</span>
+    </div>
+  `;
+}
+
+function renderReferenceSelector() {
+  const options = DATA.meta.sources.map(s =>
+    `<option value="${escapeHtml(s)}"${s === currentReference ? ' selected' : ''}>${escapeHtml(getShortName(s))}</option>`
+  ).join('');
+  return `
+    <label for="reference-selector">Reference:</label>
+    <select id="reference-selector">${options}</select>
+  `;
+}
+
+function renderTargetCheckboxes() {
+  const checkboxes = DATA.meta.sources
+    .filter(s => s !== currentReference)
+    .map(s => {
+      const checked = selectedTargets.includes(s) ? ' checked' : '';
+      const id = 'target-' + s.replace(/[^a-zA-Z0-9]/g, '_');
+      return `<span class="target-option">
+        <input type="checkbox" id="${id}" value="${escapeHtml(s)}"${checked}>
+        <label for="${id}">${escapeHtml(getShortName(s))}</label>
+      </span>`;
+    }).join('');
+  return `
+    <div class="target-selector">
+      <label class="group-label">Compare against:</label>
+      ${checkboxes}
     </div>
   `;
 }
@@ -178,6 +250,7 @@ function renderFilters() {
   ).join('');
   return `
     <div class="filter-bar">
+      ${renderReferenceSelector()}
       <label for="language-filter">Language:</label>
       <select id="language-filter">${langOptions}</select>
       <label for="status-filter">Filter:</label>
@@ -190,29 +263,29 @@ function renderFilters() {
       <label for="search-box">Search:</label>
       <input type="text" id="search-box" placeholder="Question code or text..." value="${escapeHtml(searchTerm)}">
     </div>
+    ${renderTargetCheckboxes()}
   `;
 }
 
 function renderQuestionRow(code) {
-  const master = DATA.master[code];
-  const codeDiffs = DATA.diffs[code] || {};
+  const refQ = DATA.questions[currentReference] ? DATA.questions[currentReference][code] : null;
   const worstStatus = getWorstStatus(code);
 
-  const masterText = master ? escapeHtml(truncate(master.texts[currentLanguage] || '', 120)) : '—';
-  const elementType = master ? master.element_type : '—';
+  const refText = refQ ? escapeHtml(truncate(refQ.texts[currentLanguage] || '', 120)) : '\u2014';
+  const elementType = refQ ? refQ.element_type : '\u2014';
 
   let surveyCells = '';
-  for (const survey of DATA.meta.survey_names) {
-    const diff = codeDiffs[survey];
+  for (const target of selectedTargets) {
+    const pairDiffs = getDiffsForPair(currentReference, target);
+    const diff = pairDiffs[code];
     if (diff) {
-      const color = STATUS_COLOR[diff.status] || '';
-      const label = diff.status === 'removed' ? '—' :
+      const label = diff.status === 'removed' ? '\u2014' :
         (diff.status === 'text_changed' || diff.status === 'structure_changed') ? 'different' : diff.status;
       surveyCells += `<td class="clickable" onclick="toggleDetail('${code}')">
         <span class="status-badge badge-${diff.status}">${label}</span>
       </td>`;
     } else {
-      surveyCells += `<td><span class="status-badge badge-removed">—</span></td>`;
+      surveyCells += `<td><span class="status-badge badge-removed">\u2014</span></td>`;
     }
   }
 
@@ -220,11 +293,11 @@ function renderQuestionRow(code) {
     <tr class="question-row" data-code="${code}" data-status="${worstStatus}">
       <td class="code-col">${escapeHtml(code)}</td>
       <td class="type-col">${escapeHtml(elementType)}</td>
-      <td class="text-col">${masterText || '—'}</td>
+      <td class="text-col">${refText || '\u2014'}</td>
       ${surveyCells}
     </tr>
     <tr class="detail-row" id="detail-${code}">
-      <td colspan="${3 + DATA.meta.survey_names.length}">
+      <td colspan="${3 + selectedTargets.length}">
         <div class="detail-content">${renderDetailContent(code)}</div>
       </td>
     </tr>
@@ -232,27 +305,27 @@ function renderQuestionRow(code) {
 }
 
 function renderDetailContent(code) {
-  const master = DATA.master[code];
-  const codeDiffs = DATA.diffs[code] || {};
-  const shortNames = DATA.meta.short_names;
+  const refQ = DATA.questions[currentReference] ? DATA.questions[currentReference][code] : null;
+  const refShort = getShortName(currentReference);
   let html = '';
 
-  // Question Text Section (filtered to selected language)
+  // Question Text Section
   html += '<h4>Question</h4><table><colgroup><col class="col-status"><col class="col-sim"><col class="col-text">';
-  for (const survey of DATA.meta.survey_names) html += '<col class="col-text">';
-  html += '</colgroup><tr><th>Status</th><th>Similarity</th><th>Master Text</th>';
-  for (const survey of DATA.meta.survey_names) {
-    html += `<th>${escapeHtml(shortNames[survey] || survey)} Text</th>`;
+  for (const target of selectedTargets) html += '<col class="col-text">';
+  html += `</colgroup><tr><th>Status</th><th>Similarity</th><th>${escapeHtml(refShort)} Text</th>`;
+  for (const target of selectedTargets) {
+    html += `<th>${escapeHtml(getShortName(target))} Text</th>`;
   }
   html += '</tr>';
 
-  const masterText = master ? (master.texts[currentLanguage] || '') : '';
+  const refText = refQ ? (refQ.texts[currentLanguage] || '') : '';
   let worstStatus = 'exact';
   let worstSim = 1.0;
   let surveyTexts = [];
 
-  for (const survey of DATA.meta.survey_names) {
-    const diff = codeDiffs[survey];
+  for (const target of selectedTargets) {
+    const pairDiffs = getDiffsForPair(currentReference, target);
+    const diff = pairDiffs[code];
     let surveyText = '';
     if (diff && diff.text_diffs) {
       for (const td of diff.text_diffs) {
@@ -269,69 +342,77 @@ function renderDetailContent(code) {
 
   html += `<tr><td><span class="status-badge badge-${worstStatus}">${worstStatus}</span></td>`;
   html += `<td>${Math.round(worstSim * 100)}%</td>`;
-  html += `<td class="text-cell">${escapeHtml(truncate(masterText, 150)) || '—'}</td>`;
+  html += `<td class="text-cell">${escapeHtml(truncate(refText, 150)) || '\u2014'}</td>`;
   for (const st of surveyTexts) {
-    html += `<td class="text-cell">${escapeHtml(truncate(st, 150)) || '—'}</td>`;
+    html += `<td class="text-cell">${escapeHtml(truncate(st, 150)) || '\u2014'}</td>`;
   }
   html += '</tr></table>';
 
   // Answer Options Section
   const allChoiceCodes = new Set();
-  if (master && master.choices) {
-    for (const c of master.choices) allChoiceCodes.add(c.code);
+  if (refQ && refQ.choices) {
+    for (const c of refQ.choices) allChoiceCodes.add(c.code);
   }
-  for (const survey of DATA.meta.survey_names) {
-    const surveyQ = DATA.surveys[survey] ? DATA.surveys[survey][code] : null;
-    if (surveyQ && surveyQ.choices) {
-      for (const c of surveyQ.choices) allChoiceCodes.add(c.code);
+  for (const target of selectedTargets) {
+    const targetQ = DATA.questions[target] ? DATA.questions[target][code] : null;
+    if (targetQ && targetQ.choices) {
+      for (const c of targetQ.choices) allChoiceCodes.add(c.code);
     }
   }
 
   if (allChoiceCodes.size > 0) {
     html += '<h4>Answer Options</h4><table><colgroup><col class="col-code"><col class="col-status"><col class="col-sim"><col class="col-text">';
-    for (const survey of DATA.meta.survey_names) html += '<col class="col-text">';
-    html += '</colgroup><tr><th>Code</th><th>Status</th><th>Sim</th><th>Master Text</th>';
-    for (const survey of DATA.meta.survey_names) {
-      html += `<th>${escapeHtml(shortNames[survey] || survey)} Text</th>`;
+    for (const target of selectedTargets) html += '<col class="col-text">';
+    html += `</colgroup><tr><th>Code</th><th>Status</th><th>Sim</th><th>${escapeHtml(refShort)} Text</th>`;
+    for (const target of selectedTargets) {
+      html += `<th>${escapeHtml(getShortName(target))} Text</th>`;
     }
     html += '</tr>';
 
     for (const choiceCode of allChoiceCodes) {
-      let masterChoiceText = '';
-      if (master && master.choices) {
-        const mc = master.choices.find(c => c.code === choiceCode);
-        if (mc) masterChoiceText = mc.texts[currentLanguage] || '';
+      let refChoiceText = '';
+      if (refQ && refQ.choices) {
+        const mc = refQ.choices.find(c => c.code === choiceCode);
+        if (mc) refChoiceText = mc.texts[currentLanguage] || '';
       }
 
-      let worstStatus = 'identical';
-      let worstSim = 1.0;
-      const diff = codeDiffs[DATA.meta.survey_names[0]];
-      if (diff && diff.choice_diffs) {
-        for (const cd of diff.choice_diffs) {
-          if (cd.code === choiceCode) {
-            if (cd.status === 'structure_changed') worstStatus = 'structure_changed';
-            else if (cd.status === 'text_changed' && worstStatus !== 'structure_changed') worstStatus = 'text_changed';
-            else if (['added', 'removed'].includes(cd.status) && worstStatus === 'identical') worstStatus = cd.status;
-            for (const td of cd.text_diffs) {
-              if (td.similarity < worstSim) worstSim = td.similarity;
+      let langStatus = 'exact';
+      let langSim = 1.0;
+      for (const target of selectedTargets) {
+        const pairDiffs = getDiffsForPair(currentReference, target);
+        const diff = pairDiffs[code];
+        if (diff && diff.choice_diffs) {
+          for (const cd of diff.choice_diffs) {
+            if (cd.code === choiceCode) {
+              if (['added', 'removed'].includes(cd.status)) {
+                langStatus = cd.status;
+              } else if (cd.text_diffs) {
+                for (const td of cd.text_diffs) {
+                  if (td.language === currentLanguage) {
+                    if (td.status === 'different') langStatus = 'different';
+                    else if (['similar', 'added', 'removed'].includes(td.status) && langStatus === 'exact') langStatus = td.status;
+                    if (td.similarity < langSim) langSim = td.similarity;
+                  }
+                }
+              }
             }
           }
         }
       }
 
       html += `<tr><td class="col-code">${escapeHtml(choiceCode)}</td>`;
-      html += `<td><span class="status-badge badge-${worstStatus}">${worstStatus.replace('_', ' ')}</span></td>`;
-      html += `<td>${Math.round(worstSim * 100)}%</td>`;
-      html += `<td class="text-cell">${escapeHtml(truncate(masterChoiceText, 100)) || '—'}</td>`;
+      html += `<td><span class="status-badge badge-${langStatus}">${langStatus.replace('_', ' ')}</span></td>`;
+      html += `<td>${Math.round(langSim * 100)}%</td>`;
+      html += `<td class="text-cell">${escapeHtml(truncate(refChoiceText, 100)) || '\u2014'}</td>`;
 
-      for (const survey of DATA.meta.survey_names) {
-        let surveyChoiceText = '';
-        const surveyQ = DATA.surveys[survey] ? DATA.surveys[survey][code] : null;
-        if (surveyQ && surveyQ.choices) {
-          const sc = surveyQ.choices.find(c => c.code === choiceCode);
-          if (sc) surveyChoiceText = sc.texts[currentLanguage] || '';
+      for (const target of selectedTargets) {
+        let targetChoiceText = '';
+        const targetQ = DATA.questions[target] ? DATA.questions[target][code] : null;
+        if (targetQ && targetQ.choices) {
+          const sc = targetQ.choices.find(c => c.code === choiceCode);
+          if (sc) targetChoiceText = sc.texts[currentLanguage] || '';
         }
-        html += `<td class="text-cell">${escapeHtml(truncate(surveyChoiceText, 100)) || '—'}</td>`;
+        html += `<td class="text-cell">${escapeHtml(truncate(targetChoiceText, 100)) || '\u2014'}</td>`;
       }
       html += '</tr>';
     }
@@ -340,46 +421,49 @@ function renderDetailContent(code) {
 
   // Matrix Rows Section
   const allRowCodes = new Set();
-  if (master && master.matrix_rows) {
-    for (const r of master.matrix_rows) allRowCodes.add(r.code);
+  if (refQ && refQ.matrix_rows) {
+    for (const r of refQ.matrix_rows) allRowCodes.add(r.code);
   }
-  for (const survey of DATA.meta.survey_names) {
-    const surveyQ = DATA.surveys[survey] ? DATA.surveys[survey][code] : null;
-    if (surveyQ && surveyQ.matrix_rows) {
-      for (const r of surveyQ.matrix_rows) allRowCodes.add(r.code);
+  for (const target of selectedTargets) {
+    const targetQ = DATA.questions[target] ? DATA.questions[target][code] : null;
+    if (targetQ && targetQ.matrix_rows) {
+      for (const r of targetQ.matrix_rows) allRowCodes.add(r.code);
     }
   }
 
   if (allRowCodes.size > 0) {
     html += '<h4>Matrix Rows</h4><table><colgroup><col class="col-code"><col class="col-status"><col class="col-sim"><col class="col-text">';
-    for (const survey of DATA.meta.survey_names) html += '<col class="col-text">';
-    html += '</colgroup><tr><th>Code</th><th>Status</th><th>Sim</th><th>Master Text</th>';
-    for (const survey of DATA.meta.survey_names) {
-      html += `<th>${escapeHtml(shortNames[survey] || survey)} Text</th>`;
+    for (const target of selectedTargets) html += '<col class="col-text">';
+    html += `</colgroup><tr><th>Code</th><th>Status</th><th>Sim</th><th>${escapeHtml(refShort)} Text</th>`;
+    for (const target of selectedTargets) {
+      html += `<th>${escapeHtml(getShortName(target))} Text</th>`;
     }
     html += '</tr>';
 
     for (const rowCode of allRowCodes) {
-      let masterRowText = '';
-      if (master && master.matrix_rows) {
-        const mr = master.matrix_rows.find(r => r.code === rowCode);
-        if (mr) masterRowText = mr.texts[currentLanguage] || '';
+      let refRowText = '';
+      if (refQ && refQ.matrix_rows) {
+        const mr = refQ.matrix_rows.find(r => r.code === rowCode);
+        if (mr) refRowText = mr.texts[currentLanguage] || '';
       }
 
-      // Compute worst status from diffs
-      let worstStatus = 'identical';
-      let worstSim = 1.0;
-      for (const survey of DATA.meta.survey_names) {
-        const diff = codeDiffs[survey];
+      let langStatus = 'exact';
+      let langSim = 1.0;
+      for (const target of selectedTargets) {
+        const pairDiffs = getDiffsForPair(currentReference, target);
+        const diff = pairDiffs[code];
         if (diff && diff.matrix_row_diffs) {
           for (const rd of diff.matrix_row_diffs) {
             if (rd.code === rowCode) {
-              if (rd.status === 'structure_changed') worstStatus = 'structure_changed';
-              else if (rd.status === 'text_changed' && worstStatus !== 'structure_changed') worstStatus = 'text_changed';
-              else if (['added', 'removed'].includes(rd.status) && worstStatus === 'identical') worstStatus = rd.status;
-              if (rd.text_diffs) {
+              if (['added', 'removed'].includes(rd.status)) {
+                langStatus = rd.status;
+              } else if (rd.text_diffs) {
                 for (const td of rd.text_diffs) {
-                  if (td.similarity < worstSim) worstSim = td.similarity;
+                  if (td.language === currentLanguage) {
+                    if (td.status === 'different') langStatus = 'different';
+                    else if (['similar', 'added', 'removed'].includes(td.status) && langStatus === 'exact') langStatus = td.status;
+                    if (td.similarity < langSim) langSim = td.similarity;
+                  }
                 }
               }
             }
@@ -388,18 +472,18 @@ function renderDetailContent(code) {
       }
 
       html += `<tr><td class="col-code">${escapeHtml(rowCode)}</td>`;
-      html += `<td><span class="status-badge badge-${worstStatus}">${worstStatus.replace('_', ' ')}</span></td>`;
-      html += `<td>${Math.round(worstSim * 100)}%</td>`;
-      html += `<td class="text-cell">${escapeHtml(truncate(masterRowText, 100)) || '—'}</td>`;
+      html += `<td><span class="status-badge badge-${langStatus}">${langStatus.replace('_', ' ')}</span></td>`;
+      html += `<td>${Math.round(langSim * 100)}%</td>`;
+      html += `<td class="text-cell">${escapeHtml(truncate(refRowText, 100)) || '\u2014'}</td>`;
 
-      for (const survey of DATA.meta.survey_names) {
-        let surveyRowText = '';
-        const surveyQ = DATA.surveys[survey] ? DATA.surveys[survey][code] : null;
-        if (surveyQ && surveyQ.matrix_rows) {
-          const sr = surveyQ.matrix_rows.find(r => r.code === rowCode);
-          if (sr) surveyRowText = sr.texts[currentLanguage] || '';
+      for (const target of selectedTargets) {
+        let targetRowText = '';
+        const targetQ = DATA.questions[target] ? DATA.questions[target][code] : null;
+        if (targetQ && targetQ.matrix_rows) {
+          const sr = targetQ.matrix_rows.find(r => r.code === rowCode);
+          if (sr) targetRowText = sr.texts[currentLanguage] || '';
         }
-        html += `<td class="text-cell">${escapeHtml(truncate(surveyRowText, 100)) || '—'}</td>`;
+        html += `<td class="text-cell">${escapeHtml(truncate(targetRowText, 100)) || '\u2014'}</td>`;
       }
       html += '</tr>';
     }
@@ -408,46 +492,49 @@ function renderDetailContent(code) {
 
   // Matrix Columns Section
   const allColCodes = new Set();
-  if (master && master.matrix_columns) {
-    for (const c of master.matrix_columns) allColCodes.add(c.code);
+  if (refQ && refQ.matrix_columns) {
+    for (const c of refQ.matrix_columns) allColCodes.add(c.code);
   }
-  for (const survey of DATA.meta.survey_names) {
-    const surveyQ = DATA.surveys[survey] ? DATA.surveys[survey][code] : null;
-    if (surveyQ && surveyQ.matrix_columns) {
-      for (const c of surveyQ.matrix_columns) allColCodes.add(c.code);
+  for (const target of selectedTargets) {
+    const targetQ = DATA.questions[target] ? DATA.questions[target][code] : null;
+    if (targetQ && targetQ.matrix_columns) {
+      for (const c of targetQ.matrix_columns) allColCodes.add(c.code);
     }
   }
 
   if (allColCodes.size > 0) {
     html += '<h4>Matrix Columns</h4><table><colgroup><col class="col-code"><col class="col-status"><col class="col-sim"><col class="col-text">';
-    for (const survey of DATA.meta.survey_names) html += '<col class="col-text">';
-    html += '</colgroup><tr><th>Code</th><th>Status</th><th>Sim</th><th>Master Text</th>';
-    for (const survey of DATA.meta.survey_names) {
-      html += `<th>${escapeHtml(shortNames[survey] || survey)} Text</th>`;
+    for (const target of selectedTargets) html += '<col class="col-text">';
+    html += `</colgroup><tr><th>Code</th><th>Status</th><th>Sim</th><th>${escapeHtml(refShort)} Text</th>`;
+    for (const target of selectedTargets) {
+      html += `<th>${escapeHtml(getShortName(target))} Text</th>`;
     }
     html += '</tr>';
 
     for (const colCode of allColCodes) {
-      let masterColText = '';
-      if (master && master.matrix_columns) {
-        const mc = master.matrix_columns.find(c => c.code === colCode);
-        if (mc) masterColText = mc.texts[currentLanguage] || '';
+      let refColText = '';
+      if (refQ && refQ.matrix_columns) {
+        const mc = refQ.matrix_columns.find(c => c.code === colCode);
+        if (mc) refColText = mc.texts[currentLanguage] || '';
       }
 
-      // Compute worst status from diffs
-      let worstStatus = 'identical';
-      let worstSim = 1.0;
-      for (const survey of DATA.meta.survey_names) {
-        const diff = codeDiffs[survey];
+      let langStatus = 'exact';
+      let langSim = 1.0;
+      for (const target of selectedTargets) {
+        const pairDiffs = getDiffsForPair(currentReference, target);
+        const diff = pairDiffs[code];
         if (diff && diff.matrix_column_diffs) {
           for (const cd of diff.matrix_column_diffs) {
             if (cd.code === colCode) {
-              if (cd.status === 'structure_changed') worstStatus = 'structure_changed';
-              else if (cd.status === 'text_changed' && worstStatus !== 'structure_changed') worstStatus = 'text_changed';
-              else if (['added', 'removed'].includes(cd.status) && worstStatus === 'identical') worstStatus = cd.status;
-              if (cd.text_diffs) {
+              if (['added', 'removed'].includes(cd.status)) {
+                langStatus = cd.status;
+              } else if (cd.text_diffs) {
                 for (const td of cd.text_diffs) {
-                  if (td.similarity < worstSim) worstSim = td.similarity;
+                  if (td.language === currentLanguage) {
+                    if (td.status === 'different') langStatus = 'different';
+                    else if (['similar', 'added', 'removed'].includes(td.status) && langStatus === 'exact') langStatus = td.status;
+                    if (td.similarity < langSim) langSim = td.similarity;
+                  }
                 }
               }
             }
@@ -456,18 +543,18 @@ function renderDetailContent(code) {
       }
 
       html += `<tr><td class="col-code">${escapeHtml(colCode)}</td>`;
-      html += `<td><span class="status-badge badge-${worstStatus}">${worstStatus.replace('_', ' ')}</span></td>`;
-      html += `<td>${Math.round(worstSim * 100)}%</td>`;
-      html += `<td class="text-cell">${escapeHtml(truncate(masterColText, 100)) || '—'}</td>`;
+      html += `<td><span class="status-badge badge-${langStatus}">${langStatus.replace('_', ' ')}</span></td>`;
+      html += `<td>${Math.round(langSim * 100)}%</td>`;
+      html += `<td class="text-cell">${escapeHtml(truncate(refColText, 100)) || '\u2014'}</td>`;
 
-      for (const survey of DATA.meta.survey_names) {
-        let surveyColText = '';
-        const surveyQ = DATA.surveys[survey] ? DATA.surveys[survey][code] : null;
-        if (surveyQ && surveyQ.matrix_columns) {
-          const sc = surveyQ.matrix_columns.find(c => c.code === colCode);
-          if (sc) surveyColText = sc.texts[currentLanguage] || '';
+      for (const target of selectedTargets) {
+        let targetColText = '';
+        const targetQ = DATA.questions[target] ? DATA.questions[target][code] : null;
+        if (targetQ && targetQ.matrix_columns) {
+          const sc = targetQ.matrix_columns.find(c => c.code === colCode);
+          if (sc) targetColText = sc.texts[currentLanguage] || '';
         }
-        html += `<td class="text-cell">${escapeHtml(truncate(surveyColText, 100)) || '—'}</td>`;
+        html += `<td class="text-cell">${escapeHtml(truncate(targetColText, 100)) || '\u2014'}</td>`;
       }
       html += '</tr>';
     }
@@ -481,10 +568,11 @@ function renderSection(sectionName, codes) {
   const filteredCodes = codes.filter(code => shouldShowRow(code) && matchesSearch(code));
   if (filteredCodes.length === 0) return '';
 
-  const surveyHeaders = DATA.meta.survey_names.map(s =>
-    `<th class="survey-col">${escapeHtml(DATA.meta.short_names[s] || s)}</th>`
+  const surveyHeaders = selectedTargets.map(s =>
+    `<th class="survey-col">${escapeHtml(getShortName(s))}</th>`
   ).join('');
 
+  const refShort = getShortName(currentReference);
   const rows = filteredCodes.map(code => renderQuestionRow(code)).join('');
 
   return `
@@ -495,7 +583,7 @@ function renderSection(sectionName, codes) {
           <tr>
             <th class="code-col">Code</th>
             <th class="type-col">Type</th>
-            <th class="text-col">Master Text</th>
+            <th class="text-col">${escapeHtml(refShort)} Text</th>
             ${surveyHeaders}
           </tr>
         </thead>
@@ -506,6 +594,18 @@ function renderSection(sectionName, codes) {
 }
 
 function render() {
+  if (selectedTargets.length === 0) {
+    document.getElementById('app').innerHTML = renderFilters() +
+      '<div style="text-align:center;padding:40px;color:#666">Select at least one target survey to compare against.</div>';
+    document.getElementById('subtitle').textContent =
+      `Reference: ${getShortName(currentReference)}`;
+    attachEventListeners();
+    return;
+  }
+
+  document.getElementById('subtitle').textContent =
+    `Reference: ${getShortName(currentReference)} \u2192 comparing against: ${selectedTargets.map(getShortName).join(', ')}`;
+
   let html = renderSummary() + renderFilters();
 
   for (const [sectionName, codes] of Object.entries(DATA.meta.sections)) {
@@ -517,6 +617,13 @@ function render() {
 }
 
 function attachEventListeners() {
+  document.getElementById('reference-selector').addEventListener('change', function() {
+    currentReference = this.value;
+    // Remove the new reference from targets, keep the rest
+    selectedTargets = selectedTargets.filter(s => s !== currentReference);
+    render();
+  });
+
   document.getElementById('language-filter').addEventListener('change', function() {
     currentLanguage = this.value;
     render();
@@ -530,6 +637,18 @@ function attachEventListeners() {
   document.getElementById('search-box').addEventListener('input', function() {
     searchTerm = this.value;
     render();
+  });
+
+  // Target checkboxes
+  const checkboxes = document.querySelectorAll('.target-option input[type="checkbox"]');
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', function() {
+      selectedTargets = [];
+      document.querySelectorAll('.target-option input[type="checkbox"]:checked').forEach(el => {
+        selectedTargets.push(el.value);
+      });
+      render();
+    });
   });
 }
 
