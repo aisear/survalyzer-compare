@@ -107,6 +107,7 @@ class Question:
     matrix_column_groups: list[MatrixColumnGroup] = field(default_factory=list)
     force_response: bool = False
     section_name: Optional[str] = None
+    section_index: int = 0
     conditions: Optional[list] = None
 
     # ---- convenience helpers ------------------------------------------------

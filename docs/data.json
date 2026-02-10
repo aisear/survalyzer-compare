@@ -21,138 +21,86 @@
       "fr"
     ],
     "sections": {
-      "Nutzen": [
-        "Additionalitaet",
-        "Additionalitaet_WasTun",
-        "EinflussProjekt",
-        "GesamtNutzen",
-        "ProjektBenefit",
-        "SozialerNutzen",
-        "SozialerOffen",
-        "WirtNutzenPotenzial"
-      ],
-      "Ökonomische Projektwirkungen": [
-        "AusgabenFuE",
-        "Kosteneinsparungen",
-        "MarktanteilGewinn",
-        "Neuheitslevel",
-        "NeuheitslevelOffen",
-        "PersonalFuE",
-        "Umsatz",
-        "WirtImpQual",
-        "WirtImpQuan",
-        "WirtSituation"
-      ],
-      "Charakterisierung des Projekts": [
-        "AusmassDigital",
-        "FoerderInnosuisse",
-        "FoerderSNF",
-        "Treiber"
-      ],
-      "Charakterisierung des Projektes": [
-        "AusmassDisruptivitaet",
-        "AusmassRadikalitaet",
-        "InnoArt",
-        "InnoTechOderSozial"
+      "(OhneTitel) Identifikation und Weichenfragen": [
+        "KontaktCheck",
+        "GenerelleEmail",
+        "UnternehmenArt",
+        "Gruendungsjahr",
+        "IstStartup",
+        "Spinoff",
+        "Personal",
+        "InnoUmgesetzt",
+        "PersonalImProjekt",
+        "InnoAlsZiel",
+        "IrgendeineInnoUm"
       ],
       "Angaben FE": [
-        "Beteiligte",
-        "ProjektBeteiligte"
+        "ProjektBeteiligte",
+        "Beteiligte"
       ],
-      "Ergebnisse": [
-        "BeurteilungForPar",
-        "ErgebnisAnlagenPrototyp",
-        "Ergebnisse",
-        "FoParZusArbeitWeiter",
-        "ForParAngestellt",
-        "IPRErgebnisse",
-        "IPR_Inhaber",
-        "ProjektStand",
-        "TRLEnde",
-        "TRLStart"
-      ],
-      "Zusammenarbeit mit Forschungspartner ": [
-        "Beurteilung_ForPar",
-        "ForPaZA_ErstesMal",
-        "ForPa_Art",
-        "ForPa_Ausgetauscht",
-        "ForPa_LeistungUnzufrieden"
-      ],
-      "Impuls": [
-        "C19EinflussAufGewinn",
-        "C19EinflussAufUmsatz",
-        "C19_EinflussExAnte",
-        "C19_EinflussExPost",
-        "C19_EinflussInnokraft",
-        "C19_ExtDL",
-        "C19_ExtDLMitnahme",
-        "C19_ExtDLQualitaet",
-        "C19_ExtDLWichtigkeit",
-        "C19_Offen"
-      ],
-      "Charakterisierung (Surveyübergreifend)": [
-        "Disziplinaritaet"
-      ],
-      "Projekterfolg und Abschluss": [
-        "ErfolgBewertung",
-        "FeedbackArt",
-        "FeedbackOffen",
-        "Involvement",
-        "Stellenwert",
-        "ZielErreichung",
-        "ZielNichtGrund",
-        "ZufNichtGrund",
-        "Zufriedenheit"
-      ],
-      "Zielerreichung und Ergebnisse": [
-        "ErgebnisseAbgeschlossen",
-        "ErgebnisseGeplant"
-      ],
-      "Zielerreichung des Innovationscheck": [
-        "ErgebnisseErreicht",
-        "WichtigsteZiele",
-        "ZielNichtGrund_ISf"
-      ],
-      "Ergebnisse des Innovationschecks": [
-        "ErgebnisseWeitere"
+      "Charakterisierung des Projekts": [
+        "Treiber",
+        "InnoTechOderSozial",
+        "AusmassRadikalitaet",
+        "AusmassDigital",
+        "InnoArt",
+        "AusmassDisruptivitaet",
+        "FoerderSNF",
+        "FoerderInnosuisse"
       ],
       "ProjektLancierung fur MitUP": [
         "ErstesTreffen"
       ],
       "Ursprung der Idee": [
         "Foerder",
-        "FoerderAnders",
         "FoerderMentoring",
+        "FoerderAnders",
         "Motivation"
       ],
-      "Wirkungen und Nutzen": [
-        "ForschungWeiter",
-        "WirkProjekt_InEinheit"
+      "Projektlancierung und Ziele": [
+        "StrategischeZiele"
       ],
-      "(OhneTitel) Identifikation und Weichenfragen ": [
-        "GenerelleEmail",
-        "Gruendungsjahr",
-        "InnoAlsZiel",
-        "InnoUmgesetzt",
-        "IrgendeineInnoUm",
-        "IstStartup",
-        "KontaktCheck",
-        "Personal",
-        "PersonalImProjekt",
-        "Spinoff",
-        "UnternehmenArt"
+      "Ergebnisse": [
+        "ProjektStand",
+        "IPRErgebnisse",
+        "TRLStart",
+        "TRLEnde",
+        "Ergebnisse",
+        "FoParZusArbeitWeiter",
+        "IPR_Inhaber",
+        "ErgebnisAnlagenPrototyp",
+        "BeurteilungForPar",
+        "ForParAngestellt"
       ],
-      "IPR (Rest)": [
-        "IPRForm",
-        "IPRFormRegistrierung",
-        "IPRInhaber",
-        "IPR_Unterstuetzung"
+      "Zusammenarbeit Im Projekt (Start Nicht UP)": [
+        "ZusArbeit_Doch",
+        "ZusArbeit_DochNeu",
+        "ZusArbeit_DochTypIPMain",
+        "SpinOff",
+        "ZusArbeit_DochTypIPRest",
+        "ZusArbeitArt",
+        "ZA_Anderes"
+      ],
+      "Zusammenarbeit im Projekt (Weiter)": [
+        "ZusArbeitBeurteilung",
+        "ZusArbeitNichtGutOffen",
+        "ZusArbeitWeiter"
+      ],
+      "Weiterführung des Projekts": [
+        "ProjektWeiter",
+        "UmsetzungWahrscheinlich"
       ],
       "IPR (Teil UP Start)": [
         "IPRVereinbarung"
       ],
-      "Eigentumsrechte": [
-        "IPR_Geregelt"
+      "IPR (Rest)": [
+        "IPRInhaber",
+        "IPRForm",
+        "IPRFormRegistrierung",
+        "IPR_Unterstuetzung"
+      ],
+      "Charakterisierung (TRL ) + Komeptenzen": [
+        "NeueKompetenzen"
       ],
       "Weitere, nicht ökonomische Wirkungen": [
         "Nachhaltigkeit",
@@ -160,51 +108,110 @@
         "WirkFoerderung",
         "WirkProjekt"
       ],
-      "Eigenschaften der Innovation": [
-        "Nachhaltigkeit_1",
-        "Nachhaltigkeit_2",
-        "TRL"
+      "Charakterisierung (Surveyübergreifend)": [
+        "Disziplinaritaet"
       ],
-      "Charakterisierung (TRL ) + Komeptenzen": [
-        "NeueKompetenzen"
+      "Projekterfolg und Abschluss": [
+        "ZielErreichung",
+        "ErfolgBewertung",
+        "Zufriedenheit",
+        "FeedbackOffen",
+        "FeedbackArt",
+        "ZufNichtGrund",
+        "ZielNichtGrund",
+        "Stellenwert",
+        "Involvement"
+      ],
+      "Zielerreichung und Ergebnisse": [
+        "ErgebnisseGeplant",
+        "ErgebnisseAbgeschlossen"
+      ],
+      "Wirkungen und Nutzen": [
+        "WirkProjekt_InEinheit",
+        "ForschungWeiter"
       ],
       "Zufriedenheit mit Innosuisse Programm": [
         "Nutzen",
         "Verbesserungen",
         "WeitereVerbesserungen"
       ],
-      "Weiterführung des Projekts": [
-        "ProjektWeiter",
-        "UmsetzungWahrscheinlich"
-      ],
-      "Zusammenarbeit Im Projekt (Start Nicht UP)": [
-        "SpinOff",
-        "ZA_Anderes",
-        "ZusArbeitArt",
-        "ZusArbeit_Doch",
-        "ZusArbeit_DochNeu",
-        "ZusArbeit_DochTypIPMain",
-        "ZusArbeit_DochTypIPRest"
-      ],
-      "Projektlancierung und Ziele": [
-        "StrategischeZiele"
-      ],
-      "Weiterfuehrung": [
-        "WeiterEntForm",
-        "WeiterEntNichtGrund",
-        "WeiterEntPhase",
-        "WeiterEntwickelt"
+      "Nutzen": [
+        "Additionalitaet",
+        "Additionalitaet_WasTun",
+        "WirtNutzenPotenzial",
+        "SozialerNutzen",
+        "SozialerOffen",
+        "ProjektBenefit",
+        "GesamtNutzen",
+        "EinflussProjekt"
       ],
       "Zufriedenheit": [
         "ZufriedenNichtOffen"
       ],
-      "Zusammenarbeit im Projekt (Weiter)": [
-        "ZusArbeitBeurteilung",
-        "ZusArbeitNichtGutOffen",
-        "ZusArbeitWeiter"
-      ]
+      "Ökonomische Projektwirkungen": [
+        "PersonalFuE",
+        "Umsatz",
+        "AusgabenFuE",
+        "WirtSituation",
+        "WirtImpQual",
+        "WirtImpQuan",
+        "Kosteneinsparungen",
+        "MarktanteilGewinn",
+        "Neuheitslevel",
+        "NeuheitslevelOffen"
+      ],
+      "Zielerreichung des Innovationscheck": [
+        "WichtigsteZiele",
+        "ErgebnisseErreicht",
+        "ZielNichtGrund_ISf"
+      ],
+      "Ergebnisse des Innovationschecks": [
+        "ErgebnisseWeitere"
+      ],
+      "Weiterfuehrung": [
+        "WeiterEntwickelt",
+        "WeiterEntForm",
+        "WeiterEntPhase",
+        "WeiterEntNichtGrund"
+      ],
+      "Zusammenarbeit mit Forschungspartner": [
+        "ForPaZA_ErstesMal",
+        "ForPa_Ausgetauscht",
+        "ForPa_Art",
+        "Beurteilung_ForPar",
+        "ForPa_LeistungUnzufrieden"
+      ],
+      "Eigentumsrechte": [
+        "IPR_Geregelt"
+      ],
+      "Eigenschaften der Innovation": [
+        "TRL",
+        "Nachhaltigkeit_1",
+        "Nachhaltigkeit_2"
+      ],
+      "Impuls": [
+        "C19_EinflussExAnte",
+        "C19_EinflussExPost",
+        "C19EinflussAufUmsatz",
+        "C19EinflussAufGewinn",
+        "C19_ExtDL",
+        "C19_ExtDLQualitaet",
+        "C19_ExtDLWichtigkeit",
+        "C19_ExtDLMitnahme",
+        "C19_EinflussInnokraft",
+        "C19_Offen"
+      ],
+      "BeurteilungUmsetzungsmöglichkeien": [],
+      "Erfolg und Additionalität": [],
+      "Profil der Organisation": [],
+      "Informationen zu Ihrer Organisation": []
     },
-    "total_questions": 122
+    "total_questions": 122,
+    "section_aliases": {
+      "Charakterisierung des Projekts": [
+        "Charakterisierung des Projektes"
+      ]
+    }
   },
   "questions": {
     "master": {

@@ -46,6 +46,7 @@
   .section-group { margin-bottom: 24px; }
   .section-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; padding: 6px 12px; background: #e8e8e8; border-radius: 4px; cursor: pointer; }
   .section-title:hover { background: #ddd; }
+  .section-alias { font-size: 11px; color: #888; font-weight: normal; margin-left: 8px; }
 
   table { width: 100%; border-collapse: collapse; background: #fff; font-size: 12px; }
   th, td { padding: 8px 10px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: none; border-right: none; text-align: left; vertical-align: top; }
@@ -564,6 +565,13 @@ function renderDetailContent(code) {
   return html;
 }
 
+function getSectionAliasHtml(sectionName) {
+  const aliases = DATA.meta.section_aliases;
+  if (!aliases || !aliases[sectionName]) return '';
+  const aliasList = aliases[sectionName];
+  return `<span class="section-alias" title="Also known as: ${escapeHtml(aliasList.join(', '))}">\u2190 ${escapeHtml(aliasList.join(', '))}</span>`;
+}
+
 function renderSection(sectionName, codes) {
   const filteredCodes = codes.filter(code => shouldShowRow(code) && matchesSearch(code));
   if (filteredCodes.length === 0) return '';
@@ -574,10 +582,11 @@ function renderSection(sectionName, codes) {
 
   const refShort = getShortName(currentReference);
   const rows = filteredCodes.map(code => renderQuestionRow(code)).join('');
+  const aliasHtml = getSectionAliasHtml(sectionName);
 
   return `
     <div class="section-group" data-section="${escapeHtml(sectionName)}">
-      <div class="section-title" onclick="toggleSection(this)">${escapeHtml(sectionName)} (${filteredCodes.length} questions)</div>
+      <div class="section-title" onclick="toggleSection(this)">${escapeHtml(sectionName)} (${filteredCodes.length} questions)${aliasHtml}</div>
       <table>
         <thead>
           <tr>

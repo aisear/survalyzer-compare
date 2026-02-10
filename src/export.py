@@ -8,6 +8,7 @@ from typing import Any
 
 from src.models import ComparisonResult, Question, LocalizedText
 from src.parse import extract_short_name
+from src.sections import SectionNormalizer
 
 
 def _localized_texts_to_dict(texts: list[LocalizedText]) -> dict[str, str]:
@@ -97,6 +98,7 @@ def export_data(
     questions_by_source: dict[str, list[Question]],
     master_questions: list[Question] | None = None,
     default_reference: str = "master",
+    section_normalizer: SectionNormalizer | None = None,
 ) -> dict[str, Any]:
     """Export comparison data to a JSON-serializable dict.
 
@@ -107,17 +109,15 @@ def export_data(
     - questions: all sources indexed by source name, then normalized code
     - diffs: pairwise diffs indexed by "sourceA→sourceB", then question code
     """
+    # Build unified sources dict (Question objects) for section ordering
+    all_sources: dict[str, list[Question]] = {}
+    if master_questions is not None:
+        all_sources["master"] = master_questions
+    all_sources.update(questions_by_source)
+
     # Build unified questions dict for all sources (keyed by normalized code)
     questions_dict: dict[str, dict[str, Any]] = {}
-
-    # Include master as a source if provided
-    if master_questions is not None:
-        questions_dict["master"] = {}
-        for q in master_questions:
-            questions_dict["master"][q.normalized_code] = _question_to_dict(q)
-
-    # Include all survey sources
-    for source_name, questions in questions_by_source.items():
+    for source_name, questions in all_sources.items():
         questions_dict[source_name] = {}
         for q in questions:
             questions_dict[source_name][q.normalized_code] = _question_to_dict(q)
@@ -149,32 +149,52 @@ def export_data(
         for qd in result.question_diffs:
             diffs_dict[pair_key][qd.code] = _question_diff_to_dict(qd)
 
-    # Collect all normalized codes across all sources
+    # Build sections using normalizer (reference-based ordering + fuzzy merge)
+    # or fall back to simple grouping
+    if section_normalizer is not None:
+        section_list = section_normalizer.ordered_sections(all_sources)
+        sections = {s["name"]: s["codes"] for s in section_list}
+        section_aliases = section_normalizer.all_aliases
+    else:
+        # Fallback: group by raw section_name, ordered by reference source
+        sections = {}
+        seen_codes: set[str] = set()
+        ref_source = all_sources.get(default_reference, [])
+        other_sources = [q for s, qs in all_sources.items() if s != default_reference for q in qs]
+        for q in sorted(ref_source, key=lambda q: q.section_index):
+            section = q.section_name or "Other"
+            if section not in sections:
+                sections[section] = []
+            if q.normalized_code not in seen_codes:
+                sections[section].append(q.normalized_code)
+                seen_codes.add(q.normalized_code)
+        for q in other_sources:
+            section = q.section_name or "Other"
+            if section not in sections:
+                sections[section] = []
+            if q.normalized_code not in seen_codes:
+                sections[section].append(q.normalized_code)
+                seen_codes.add(q.normalized_code)
+        section_aliases = {}
+
+    # Count total unique codes
     all_codes: set[str] = set()
     for source_questions in questions_dict.values():
         all_codes.update(source_questions.keys())
 
-    # Group codes by section (prefer master ordering, then surveys)
-    sections: dict[str, list[str]] = {}
-    for code in sorted(all_codes):
-        section = "Other"
-        for source_questions in questions_dict.values():
-            if code in source_questions:
-                section = source_questions[code].get("section_name") or "Other"
-                break
-        if section not in sections:
-            sections[section] = []
-        sections[section].append(code)
+    meta: dict[str, Any] = {
+        "sources": source_names,
+        "short_names": short_names,
+        "default_reference": default_reference,
+        "languages": sorted_languages,
+        "sections": sections,
+        "total_questions": len(all_codes),
+    }
+    if section_aliases:
+        meta["section_aliases"] = section_aliases
 
     return {
-        "meta": {
-            "sources": source_names,
-            "short_names": short_names,
-            "default_reference": default_reference,
-            "languages": sorted_languages,
-            "sections": sections,
-            "total_questions": len(all_codes),
-        },
+        "meta": meta,
         "questions": questions_dict,
         "diffs": diffs_dict,
     }

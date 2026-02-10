@@ -1,0 +1,13 @@
+# Section name aliases: maps variant names to their canonical form.
+#
+# Format:  "variant name": "canonical name"
+#
+# These are applied BEFORE fuzzy matching, so use this for cases where
+# fuzzy matching alone wouldn't catch the difference (e.g., different
+# words, not just typos) or where you want explicit control.
+
+# German genitive variants
+"Charakterisierung des Projektes": "Charakterisierung des Projekts"
+
+# Trailing whitespace (stripped automatically, but listed for documentation)
+# "(OhneTitel) Identifikation und Weichenfragen ": "Identifikation und Weichenfragen"

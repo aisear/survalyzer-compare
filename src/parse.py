@@ -96,7 +96,7 @@ def _parse_matrix_column_group(raw: dict[str, Any]) -> MatrixColumnGroup:
 # Element → Question
 # ---------------------------------------------------------------------------
 
-def _parse_element(element: dict[str, Any], section_name: str | None) -> Question | None:
+def _parse_element(element: dict[str, Any], section_name: str | None, section_index: int = 0) -> Question | None:
     etype = element.get("elementType")
     if etype not in QUESTION_TYPES:
         return None
@@ -110,6 +110,7 @@ def _parse_element(element: dict[str, Any], section_name: str | None) -> Questio
         choices=[_parse_choice(c) for c in element.get("choices", [])],
         force_response=element.get("forceResponse", False),
         section_name=section_name,
+        section_index=section_index,
         conditions=element.get("conditions"),
     )
 
@@ -141,10 +142,10 @@ def _parse_element(element: dict[str, Any], section_name: str | None) -> Questio
 def parse_survey(data: dict[str, Any]) -> list[Question]:
     """Parse a full Survalyzer survey dict and return all Question objects."""
     questions: list[Question] = []
-    for section in data.get("sections", []):
+    for section_idx, section in enumerate(data.get("sections", [])):
         section_name = section.get("name")
         for element in section.get("elements", []):
-            q = _parse_element(element, section_name)
+            q = _parse_element(element, section_name, section_index=section_idx)
             if q is not None:
                 questions.append(q)
     return questions
