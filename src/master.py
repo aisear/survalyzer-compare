@@ -45,6 +45,8 @@ def question_to_dict(q: Question) -> dict[str, Any]:
     }
     if q.section_name:
         d["section_name"] = q.section_name
+    if q.section_index:
+        d["section_index"] = q.section_index
     if q.choices:
         d["choices"] = [_choice_to_dict(c) for c in q.choices]
     if q.matrix_rows:
@@ -121,6 +123,7 @@ def dict_to_question(code: str, d: dict[str, Any]) -> Question:
         element_type=d.get("element_type", ""),
         texts=_dict_to_texts(d.get("texts", {})),
         section_name=d.get("section_name"),
+        section_index=d.get("section_index", 0),
     )
     if "choices" in d:
         q.choices = [_dict_to_choice(c, i) for i, c in enumerate(d["choices"])]

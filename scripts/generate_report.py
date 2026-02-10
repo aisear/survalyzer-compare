@@ -19,6 +19,7 @@ from src.parse import load_and_parse, sort_files_by_date, extract_date_from_file
 from src.compare import compare_surveys
 from src.master import load_master, master_to_questions
 from src.export import export_data, save_data
+from src.sections import build_section_normalizer, load_section_aliases
 
 TEMPLATE_PATH = PROJECT_ROOT / "templates" / "report-dynamic.html"
 
@@ -45,6 +46,12 @@ def main() -> None:
         "--language",
         default="de-ch",
         help="Default display language (default: de-ch)",
+    )
+    parser.add_argument(
+        "--section-aliases",
+        type=Path,
+        default=PROJECT_ROOT / "config" / "section_aliases.yaml",
+        help="YAML file mapping section name variants to canonical names",
     )
     args = parser.parse_args()
 
@@ -94,16 +101,25 @@ def main() -> None:
                   f"{len(result.added)} added, "
                   f"{len(result.removed)} removed")
 
+    # Build section normalizer
+    default_ref = "master" if "master" in all_sources else source_names[0]
+    aliases = load_section_aliases(args.section_aliases)
+    if aliases:
+        print(f"Loaded {len(aliases)} section aliases from {args.section_aliases}")
+    normalizer = build_section_normalizer(all_sources, default_ref, aliases)
+    if normalizer.all_aliases:
+        print(f"Section merges: {normalizer.all_aliases}")
+
     # Separate master_questions from survey sources for export
     questions_by_source = {k: v for k, v in all_sources.items() if k != "master"}
 
     # Export data to JSON
-    default_ref = "master" if "master" in all_sources else source_names[0]
     data = export_data(
         results,
         questions_by_source,
         master_questions=master_questions,
         default_reference=default_ref,
+        section_normalizer=normalizer,
     )
 
     # Ensure output directory exists

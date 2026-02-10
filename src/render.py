@@ -9,6 +9,7 @@ from jinja2 import Environment, FileSystemLoader
 
 from src.models import ComparisonResult, Question
 from src.parse import extract_short_name
+from src.sections import SectionNormalizer
 
 TEMPLATES_DIR = Path(__file__).resolve().parent.parent / "templates"
 
@@ -49,14 +50,21 @@ def _collect_all_codes(
 def _collect_sections(
     questions_by_source: dict[str, list[Question]],
     reference_questions: list[Question],
+    reference_name: str = "master",
+    section_normalizer: SectionNormalizer | None = None,
 ) -> list[dict[str, Any]]:
-    """Group normalized codes by section name, preserving order."""
+    """Group normalized codes by section name, preserving reference order."""
+    if section_normalizer is not None:
+        all_sources = {reference_name: reference_questions}
+        all_sources.update(questions_by_source)
+        return section_normalizer.ordered_sections(all_sources)
+
+    # Fallback: simple grouping by raw section_name
     section_order: list[str] = []
     section_codes: dict[str, list[str]] = {}
     seen_codes: set[str] = set()
 
-    # Process reference first (may not have section_name)
-    for q in reference_questions:
+    for q in sorted(reference_questions, key=lambda q: q.section_index):
         section = q.section_name or "Uncategorized"
         if section not in section_codes:
             section_order.append(section)
@@ -65,7 +73,6 @@ def _collect_sections(
             section_codes[section].append(q.normalized_code)
             seen_codes.add(q.normalized_code)
 
-    # Then surveys
     for qlist in questions_by_source.values():
         for q in qlist:
             section = q.section_name or "Uncategorized"
@@ -114,6 +121,7 @@ def render_report(
     reference_questions: list[Question],
     reference_name: str = "master",
     default_language: str = "de-ch",
+    section_normalizer: SectionNormalizer | None = None,
 ) -> str:
     """Render a self-contained HTML comparison report.
 
@@ -126,7 +134,7 @@ def render_report(
     template = env.get_template("report.html.jinja")
 
     question_index = _build_question_index(questions_by_source, reference_questions, reference_name)
-    sections = _collect_sections(questions_by_source, reference_questions)
+    sections = _collect_sections(questions_by_source, reference_questions, reference_name, section_normalizer)
     diff_lookup = _build_diff_lookup(results)
 
     # Survey names (columns in the report)
