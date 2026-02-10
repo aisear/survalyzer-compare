@@ -8,6 +8,7 @@ KontaktCheck:
     de-ch: Bitte überprüfen Sie als Erstes die folgenden Angaben zu Ihrer Person und
       zu Ihrem Innovationsprojekt und korrigieren Sie diese, falls erforderlich.
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
   matrix_rows:
   - code: '1'
     texts:
@@ -49,6 +50,7 @@ GenerelleEmail:
 
       '
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
 ProjektBeteiligte:
   element_type: Matrix
   texts:
@@ -62,6 +64,7 @@ ProjektBeteiligte:
       Ihrer Forschungseinheit</strong> an der Durchführung des Innovationsprojekt
       beteiligt?<br>
   section_name: Angaben FE
+  section_index: 2
   matrix_rows:
   - code: '0'
     texts:
@@ -119,6 +122,7 @@ Beteiligte:
     de-ch: Wie viele der beteiligten {{custom.PersonalAngestellt}} Personen mit Entlöhnung
       waren ... <br>
   section_name: Angaben FE
+  section_index: 2
   matrix_rows:
   - code: Frauen
     texts:
@@ -150,6 +154,7 @@ Treiber:
       ?
     de-ch: Woher kam der Impuls respektive die Initiative für das geförderte Innovationsprojekt?
   section_name: Charakterisierung des Projekts
+  section_index: 2
   choices:
   - code: '1'
     texts:
@@ -185,6 +190,7 @@ ErstesTreffen:
   element_type: Matrix
   texts: {}
   section_name: ProjektLancierung fur MitUP
+  section_index: 3
   matrix_rows:
   - code: Organisierte
     texts:
@@ -217,6 +223,7 @@ Foerder:
     de-ch: Ist die Innovationsidee aus den Arbeiten oder Ergebnissen einer der nachfolgenden
       Förderinstrumente entstanden?
   section_name: Ursprung der Idee
+  section_index: 3
   choices:
   - code: Innosuisse_3
     texts:
@@ -347,6 +354,7 @@ StrategischeZiele:
     de-ch: Welche der folgenden der genannten Themen waren für Sie bei der Einreichung
       des Projekts oder während des Projektverlaufs <strong>strategisch</strong> wichtig?
   section_name: Projektlancierung und Ziele
+  section_index: 4
   matrix_rows:
   - code: '1'
     texts:
@@ -498,6 +506,7 @@ ProjektStand:
       commerciale des résultats du projet et la poursuite de la mise en œuvre sur
       le marché ?
   section_name: Ergebnisse
+  section_index: 3
   choices:
   - code: '1'
     texts:
@@ -559,6 +568,7 @@ ZusArbeit_Doch:
     de-ch: Hat bis zum Abschluss des Projektes bereits eine Zusammenarbeit mit einem
       oder mehreren Umsetzungspartner stattgefunden?
   section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  section_index: 6
   choices:
   - code: '1'
     texts:
@@ -586,6 +596,7 @@ ZusArbeit_DochNeu:
     de-ch: Hat bis zum Abschluss des Projektes bereits eine Zusammenarbeit mit einem
       oder mehreren Umsetzungspartner stattgefunden oder ist eine solche geplant?
   section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  section_index: 6
   matrix_rows:
   - code: AndereIP
     texts:
@@ -620,6 +631,7 @@ ZusArbeit_DochTypIPMain:
     fr: Qu'est-ce qui s'applique au partenaire principal de mise en œuvre ?
     de-ch: Was trifft auf den Haupt-Umsetzungspartner zu?
   section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  section_index: 6
   choices:
   - code: '1'
     texts:
@@ -655,6 +667,7 @@ SpinOff:
     de-ch: Ist eine Gründung eines Start-up/Spin-offs unter Verwendung der Projektergebnisse
       geplant oder bereits erfolgt?
   section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  section_index: 6
   choices:
   - code: '6'
     texts:
@@ -683,6 +696,7 @@ ZusArbeit_DochTypIPRest:
     fr: Qu'en est-il du ou des autres partenaires de mise en œuvre ?
     de-ch: Was trifft auf den/die übrigen Umsetzungspartner zu?<br>
   section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  section_index: 6
   choices:
   - code: '1'
     texts:
@@ -719,6 +733,7 @@ ZusArbeitArt:
     de-ch: Was umfasste die Zusammenarbeit mit dem/den Umsetzungspartner(n) inhaltlich
       im Rahmen des geförderten Projektes?
   section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  section_index: 6
   matrix_rows:
   - code: '1'
     texts:
@@ -767,6 +782,7 @@ ZA_Anderes:
     fr: Avez-vous eu d'autres formes d'échange ou de collaboration avec le(s) partenaire(s)
       de mise en œuvre ? Si oui, lesquelles ?
   section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
+  section_index: 6
 ZusArbeitBeurteilung:
   element_type: Matrix
   texts:
@@ -776,6 +792,7 @@ ZusArbeitBeurteilung:
     de-ch: Wie erfolgreich stufen Sie die Zusammenarbeit mit dem/den beteiligten Umsetzungspartner/n
       ein?
   section_name: Zusammenarbeit im Projekt (Weiter)
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -823,6 +840,7 @@ ZusArbeitNichtGutOffen:
     de-ch: Warum war die Zusammenarbeit mit dem Umsetzungspartner weniger oder nicht
       erfolgreich?<br>
   section_name: Zusammenarbeit im Projekt (Weiter)
+  section_index: 7
 ZusArbeitWeiter:
   element_type: SingleChoice
   texts:
@@ -833,6 +851,7 @@ ZusArbeitWeiter:
     de-ch: Führen Sie die Zusammenarbeit mit mindestens einem Umsetzungspartner <strong>auch
       nach dem Projektabschluss</strong> weiter oder planen Sie dies zu tun?
   section_name: Zusammenarbeit im Projekt (Weiter)
+  section_index: 7
   choices:
   - code: '1'
     texts:
@@ -869,6 +888,7 @@ ProjektWeiter:
     en: Are you continuing the project in your research unit or is this planned? If
       so, in what form?
   section_name: Weiterführung des Projekts
+  section_index: 8
   choices:
   - code: '1'
     texts:
@@ -924,6 +944,7 @@ UmsetzungWahrscheinlich:
       mittel- und langfristig in einer Innovation auf dem Markt oder bei einem Umsetzungspartner&nbsp;umgesetzt
       werden?<br>
   section_name: Weiterführung des Projekts
+  section_index: 8
   matrix_rows:
   - code: '1'
     texts:
@@ -970,6 +991,7 @@ IPRVereinbarung:
     de-ch: Ist eine IPR-Vereinbarung zwischen Forschungs- und Umsetzungspartner unterzeichnet
       worden?
   section_name: IPR (Teil UP Start)
+  section_index: 9
   choices:
   - code: '6'
     texts:
@@ -997,6 +1019,7 @@ IPRErgebnisse:
       tels droits sont-ils prévus (dans votre organisation et/ou chez le partenaire
       de recherche) ?
   section_name: Ergebnisse
+  section_index: 3
   matrix_rows:
   - code: '1'
     texts:
@@ -1054,6 +1077,7 @@ IPRInhaber:
     de-ch: Wem gehören <strong>aktuell</strong> die Eigentumsrechte an den Projektergebnissen
       gemäss der eigentumsrechtlichen Vereinbarung, inklusive allfälliger Modifikationen?
   section_name: IPR (Rest)
+  section_index: 10
   choices:
   - code: '1'
     texts:
@@ -1095,6 +1119,7 @@ IPRForm:
     de-ch: Welche Konditionen bezüglich Nutzungsrechte sind in Ihrem Projekt ausgehandelt
       worden?
   section_name: IPR (Rest)
+  section_index: 10
   matrix_rows:
   - code: '1'
     texts:
@@ -1151,6 +1176,7 @@ IPRFormRegistrierung:
     fr: Au nom de qui et par qui l'enregistrement des droits de propriété a-t-il été
       effectué ?
   section_name: IPR (Rest)
+  section_index: 10
   choices:
   - code: '1'
     texts:
@@ -1179,6 +1205,7 @@ IPR_Unterstuetzung:
     de-ch: Haben Sie eine <strong>externe Unterstützung</strong> zur Regelung der
       Eigentumsrechte in Anspruch genommen?
   section_name: IPR (Rest)
+  section_index: 10
   matrix_rows:
   - code: '1'
     texts:
@@ -1221,6 +1248,7 @@ InnoTechOderSozial:
     de-ch: Beruht die Innovation aus Ihrem von Innosuisse geförderten Projekt primär
       auf ...
   section_name: Charakterisierung des Projektes
+  section_index: 2
   choices:
   - code: '1'
     texts:
@@ -1249,6 +1277,7 @@ TRLStart:
     de-ch: 'Innovationen durchlaufen verschiedene Reifestufen: <br>Nach Ihrer Einschätzung,
       welche Stufe hatte Ihr Projekt <strong>zu Beginn</strong> der Förderung?<br><br>'
   section_name: Ergebnisse
+  section_index: 3
   choices:
   - code: '1'
     texts:
@@ -1362,6 +1391,7 @@ TRLEnde:
     de-ch: '... und welche Stufe erreichte es <strong>beim Abschluss</strong> der
       Förderung?<br><br>'
   section_name: Ergebnisse
+  section_index: 3
   choices:
   - code: '1'
     texts:
@@ -1479,6 +1509,7 @@ NeueKompetenzen:
       zusätzliche Projektmitarbeiter:innen in das Projekt integriert werden, das bei
       Projektstart nicht eingeplant war?
   section_name: Charakterisierung (TRL ) + Komeptenzen
+  section_index: 11
   choices:
   - code: '1'
     texts:
@@ -1505,6 +1536,7 @@ AusmassRadikalitaet:
     de-ch: Innovationen können inkrementeller oder radikaler Natur sein. Bitte geben
       Sie an, was auf Ihre mit dem Projekt verfolgte Innovation zutrifft.
   section_name: Charakterisierung des Projektes
+  section_index: 2
   matrix_rows:
   - code: '1'
     texts:
@@ -1563,6 +1595,7 @@ Nachhaltigkeit:
       <strong>einen konkreten Beitrag zur ökologischen und/oder sozialen Nachhaltigkeit
       auf dem Markt oder für die Gesellschaft</strong>?
   section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 5
   matrix_rows:
   - code: '1'
     texts:
@@ -1623,6 +1656,7 @@ NachhaltigkeitOffen:
     de-ch: 'Bitte umschreiben Sie den Beitrag zur Nachhaltigkeit in einigen wenigen
       Sätzen:'
   section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 5
 AusmassDigital:
   element_type: Matrix
   texts:
@@ -1634,6 +1668,7 @@ AusmassDigital:
     de-ch: Beruht das von Innosuisse geförderte Projekt auf<strong> neuen digitalen
       Technologien</strong> oder auf <strong>neuen digitalen Geschäftsmodellen</strong>?
   section_name: Charakterisierung des Projekts
+  section_index: 2
   matrix_rows:
   - code: '1'
     texts:
@@ -1694,6 +1729,7 @@ Disziplinaritaet:
     de-ch: Wie beurteilen Sie das geförderte Projekt hinsichtlich der<strong> Integration
       unterschiedlicher Disziplinen</strong><strong>?</strong>
   section_name: Charakterisierung (Surveyübergreifend)
+  section_index: 12
   choices:
   - code: '4'
     texts:
@@ -1752,6 +1788,7 @@ ZielErreichung:
     fr: Les objectifs du projet ont-ils été atteints ?
     de-ch: Wurden die Projektziele erreicht?
   section_name: Projekterfolg und Abschluss
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -1820,6 +1857,7 @@ Ergebnisse:
       NIE angezeigt<br>Hat das geförderte Projekt bis jetzt zu einem der folgenden
       konkreten Ergebnissen geführt?
   section_name: Ergebnisse
+  section_index: 3
   choices:
   - code: '1'
     texts:
@@ -1869,6 +1907,7 @@ ErgebnisseGeplant:
     fr: Veuillez indiquer ci-dessous le nombre de résultats <strong>planifiés/en </strong><strong>cours</strong>.
     en: Please indicate below the number of <strong>planned/ongoing</strong> results.
   section_name: Zielerreichung und Ergebnisse
+  section_index: 13
   matrix_rows:
   - code: '0'
     texts:
@@ -1965,6 +2004,7 @@ ErgebnisseAbgeschlossen:
     en: Please indicate the number of <strong>completed</strong> results below.
     fr: Veuillez indiquer ci-dessous le nombre de résultats<strong> achevés.</strong>
   section_name: Zielerreichung und Ergebnisse
+  section_index: 13
   matrix_rows:
   - code: '0'
     texts:
@@ -2061,6 +2101,7 @@ WirkProjekt_InEinheit:
     de-ch: Welche Wirkungen hat das geförderte Projekt in Ihrer Forschungseinheit
       erzielt?
   section_name: Wirkungen und Nutzen
+  section_index: 14
   matrix_rows:
   - code: '1'
     texts:
@@ -2190,6 +2231,7 @@ ForschungWeiter:
     de-ch: Wird die Forschung und Entwicklung im konkreten Themengebiet des geförderten
       Innovationsprojektes an Ihrer Forschungseinheit weitergeführt?
   section_name: Wirkungen und Nutzen
+  section_index: 14
   choices:
   - code: '1'
     texts:
@@ -2227,6 +2269,7 @@ Nutzen:
     de-ch: Wie beurteilen Sie den Nutzen des abgeschlossenen Innovationsscheck für
       Ihre Organisation?
   section_name: Zufriedenheit mit Innosuisse Programm
+  section_index: 10
   matrix_rows:
   - code: '1'
     texts:
@@ -2278,6 +2321,7 @@ ErfolgBewertung:
       votre organisation ?
     de-ch: Wie beurteilen Sie heute das geförderte Projekt aus Sicht Ihrer Organisation?
   section_name: Projekterfolg und Abschluss
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -2336,6 +2380,7 @@ Additionalitaet:
     de-ch: Hätten Sie Ihr Innovationsprojekt auch <strong>ohne die Innovationsförderung
       von Innosuisse</strong> durchgeführt?
   section_name: Nutzen
+  section_index: 6
   choices:
   - code: '6'
     texts:
@@ -2373,6 +2418,7 @@ Additionalitaet_WasTun:
     fr: Comment auriez-vous poursuivi votre projet si la demande Innosuisse n'avait
       pas abouti ?
   section_name: Nutzen
+  section_index: 6
   choices:
   - code: andereSubvent
     texts:
@@ -2419,6 +2465,7 @@ Zufriedenheit:
     de-ch: <strong>Wie zufrieden </strong>sind Sie aus Sicht Ihrer Organisation mit
       der Projektförderung von Innosuisse?
   section_name: Projekterfolg und Abschluss
+  section_index: 8
   matrix_rows:
   - code: '1'
     texts:
@@ -2466,6 +2513,7 @@ ZufriedenNichtOffen:
     fr: Veuillez nous faire savoir les causes d’insatisfaction :<br>
     de-ch: 'Bitte teilen Sie uns die Gründe mit, weshalb sie unzufrieden waren:'
   section_name: Zufriedenheit
+  section_index: 16
 FeedbackOffen:
   element_type: OpenQuestion
   texts:
@@ -2475,6 +2523,7 @@ FeedbackOffen:
     de-ch: 'Vielen Dank, wenn Sie uns nachfolgend Ihre Rückmeldungen, Kommentare und
       Anregungen zur Umfrage mitteilen:'
   section_name: Projekterfolg und Abschluss
+  section_index: 7
 FeedbackArt:
   element_type: MultipleChoice
   texts:
@@ -2482,6 +2531,7 @@ FeedbackArt:
     en: Is your feedback a/an ... ?
     fr: Votre feed-back concerne-t-il un/une ... ?
   section_name: Projekterfolg und Abschluss
+  section_index: 7
   choices:
   - code: '1'
     texts:
@@ -2505,6 +2555,7 @@ UnternehmenArt:
     fr: Votre organisation, est-elle ...
     de-ch: Ist Ihre Organisation …
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
   choices:
   - code: '1'
     texts:
@@ -2534,6 +2585,7 @@ Gruendungsjahr:
     fr: Veuillez indiquer l'année de fondation de votre organisation selon le registre
       du commerce.
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
 IstStartup:
   element_type: SingleChoice
   texts:
@@ -2541,6 +2593,7 @@ IstStartup:
     fr: Considérez-vous votre organisation comme une start-up ?
     de-ch: Bezeichnen Sie Ihre Organisation als Start-up?
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
   choices:
   - code: '6'
     texts:
@@ -2562,6 +2615,7 @@ Spinoff:
     de-ch: Ist Ihr Start-up ein Spin-off, der massgeblich auf erzielten wissenschaftlichen
       Ergebnissen des geförderten Projekts basiert ?
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
   choices:
   - code: '6'
     texts:
@@ -2600,6 +2654,7 @@ Personal:
     de-ch: Wie viel Personal (Vollzeitäquivalente, inklusive Lernende und Praktikant/-innen)
       ...
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
   matrix_rows:
   - code: PEnde
     texts:
@@ -2642,6 +2697,7 @@ PersonalFuE:
       und Praktikant/-innen) hat Ihre Organisation im <strong>Bereich Forschung und
       Entwicklung</strong> …?
   section_name: Ökonomische Projektwirkungen
+  section_index: 4
   matrix_rows:
   - code: PEnde
     texts:
@@ -2672,6 +2728,7 @@ FoerderMentoring:
     en: Is the submission of an innovation cheque the result of Innosuisse mentoring?
     de-ch: Ist die Einreichung eines Innovationsschecks das Resultat eines Innosuisse-Mentorings?
   section_name: Ursprung der Idee
+  section_index: 3
   choices:
   - code: '6'
     texts:
@@ -2698,6 +2755,7 @@ FoerderAnders:
     de-ch: Ist die Innovationsidee aus den Ergebnissen anderer vorgängiger Förderungen
       entstanden bzw. massgeblich konkretisiert worden?
   section_name: Ursprung der Idee
+  section_index: 3
   choices:
   - code: '6'
     texts:
@@ -2721,6 +2779,7 @@ Motivation:
     en: What motivated you to submit an innovation cheque?
     de-ch: Was hat Sie dazu motiviert, einen Innovationsscheck einzureichen?
   section_name: Ursprung der Idee
+  section_index: 3
   choices:
   - code: '12'
     texts:
@@ -2786,6 +2845,7 @@ WichtigsteZiele:
       answers)
     de-ch: Was war das wichtigste Ziel Ihres Innovationscheck-Projekts? (max. 2 Antworten)
   section_name: Zielerreichung des Innovationscheck
+  section_index: 4
   choices:
   - code: '1'
     texts:
@@ -2852,6 +2912,7 @@ ErgebnisseErreicht:
     en: What have you achieved with the innovation cheque?
     de-ch: Was haben Sie mit dem Innovationsscheck konkret erreicht?
   section_name: Zielerreichung des Innovationscheck
+  section_index: 4
   matrix_rows:
   - code: '4'
     texts:
@@ -2949,6 +3010,7 @@ ZielNichtGrund_ISf:
     de-ch: Was sind die wichtigsten Gründe, warum Sie die angestrebten Ziele nicht
       oder nur teilweise erreicht haben?
   section_name: Zielerreichung des Innovationscheck
+  section_index: 4
   choices:
   - code: '1'
     texts:
@@ -3008,6 +3070,7 @@ ErgebnisseWeitere:
     de-ch: Welche weiteren konkreten Ergebnisse haben Sie mit dem Innovationsscheck
       erzielt?
   section_name: Ergebnisse des Innovationschecks
+  section_index: 5
   choices:
   - code: '1'
     texts:
@@ -3090,6 +3153,7 @@ InnoUmgesetzt:
 
       '
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
   choices:
   - code: '6'
     texts:
@@ -3139,6 +3203,7 @@ WeiterEntwickelt:
       cheque?
     de-ch: Wird/Wurde die Innovation nach Abschluss des Innovationsschecks weiterentwickelt?
   section_name: Weiterfuehrung
+  section_index: 6
   choices:
   - code: '6'
     texts:
@@ -3170,6 +3235,7 @@ WeiterEntForm:
     de-ch: In welcher Form haben Sie die Innovationsidee nach Abschluss des Innovationsschecks
       weiterentwickelt oder was planen Sie? 
   section_name: Weiterfuehrung
+  section_index: 6
   choices:
   - code: Alleine
     texts:
@@ -3206,6 +3272,7 @@ WeiterEntPhase:
     de-ch: In welcher Phase befindet sich die Förderung für die Weiterentwicklung
       der Innovationsidee?
   section_name: Weiterfuehrung
+  section_index: 6
   choices:
   - code: '1'
     texts:
@@ -3288,6 +3355,7 @@ WeiterEntNichtGrund:
     de-ch: Warum wurde die Innovationsidee nach Abschluss des Innovationsschecks nicht
       weiterentwickelt? 
   section_name: Weiterfuehrung
+  section_index: 6
   choices:
   - code: '1'
     texts:
@@ -3347,6 +3415,7 @@ ForPaZA_ErstesMal:
     de-ch: Hat Ihre Organisation durch den Innovationsscheck zum ersten Mal mit einer
       Forschungsinstitution zusammengearbeitet?
   section_name: 'Zusammenarbeit mit Forschungspartner '
+  section_index: 7
   choices:
   - code: '6'
     texts:
@@ -3373,6 +3442,7 @@ ForPa_Ausgetauscht:
     de-ch: Hat Ihre Organisation den Forschungspartner vor Abschluss des Innovationsschecks
       ausgetauscht?
   section_name: 'Zusammenarbeit mit Forschungspartner '
+  section_index: 7
   choices:
   - code: '6'
     texts:
@@ -3397,6 +3467,7 @@ ForPa_Art:
     de-ch: Mit welchem Forschungspartner haben Sie die Arbeiten zum Innovationsscheck
       abgeschlossen?<br>
   section_name: 'Zusammenarbeit mit Forschungspartner '
+  section_index: 7
   choices:
   - code: '1'
     texts:
@@ -3461,6 +3532,7 @@ Beurteilung_ForPar:
       cheque?
     de-ch: Wie bewerten Sie die Leistung des Forschungspartners für den Innovationsscheck?
   section_name: 'Zusammenarbeit mit Forschungspartner '
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -3511,6 +3583,7 @@ ForPa_LeistungUnzufrieden:
     en: Why are you not satisfied with the research partner's performance?
     de-ch: Weshalb sind Sie mit der Leistung des Forschungspartners nicht zufrieden?
   section_name: 'Zusammenarbeit mit Forschungspartner '
+  section_index: 7
 FoParZusArbeitWeiter:
   element_type: SingleChoice
   texts:
@@ -3521,6 +3594,7 @@ FoParZusArbeitWeiter:
     de-ch: Wurde nach dem Projektabschluss die Zusammenarbeit mit einem oder mehreren
       Forschungspartnern des geförderten Innovationsprojekts fortgeführt?
   section_name: Ergebnisse
+  section_index: 3
   choices:
   - code: '6'
     texts:
@@ -3552,6 +3626,7 @@ IPR_Geregelt:
     de-ch: Wurden die Eigentumsrechte zwischen Ihnen und dem Forschungspartner vertraglich
       geregelt?
   section_name: Eigentumsrechte
+  section_index: 8
   choices:
   - code: '6'
     texts:
@@ -3582,6 +3657,7 @@ IPR_Inhaber:
     en: 'If property rights have been contractually regulated: who owns the property
       rights?'
   section_name: Ergebnisse
+  section_index: 3
   choices:
   - code: '6'
     texts:
@@ -3615,6 +3691,7 @@ InnoArt:
     fr: Quel est le type d’innovation sur lequel le projet encouragé a porté ?
     de-ch: Um welche Art von Innovation handelt es sich bei dem geförderten Projekt?
   section_name: Charakterisierung des Projektes
+  section_index: 2
   choices:
   - code: '1'
     texts:
@@ -3664,6 +3741,7 @@ TRL:
       Readiness Level SRL) </strong>befand sich Ihre Innovation beim Start des Innovationsschecks
       und nach Abschluss des Innovationsschecks?
   section_name: Eigenschaften der Innovation
+  section_index: 9
   matrix_rows:
   - code: Start
     texts:
@@ -3751,6 +3829,7 @@ AusmassDisruptivitaet:
       geförderten Innovation langfristig auf dem Markt ein (auch wenn die Innovation
       noch nicht umgesetzt ist)?
   section_name: Charakterisierung des Projektes
+  section_index: 2
   matrix_rows:
   - code: '1'
     texts: {}
@@ -3803,6 +3882,7 @@ Nachhaltigkeit_1:
     de-ch: Kann die Innovationsidee bei einer konkreten Umsetzung zur <strong>ökologischen
       Nachhaltigkeit</strong> beitragen?
   section_name: Eigenschaften der Innovation
+  section_index: 9
   matrix_rows:
   - code: '1'
     texts:
@@ -3855,6 +3935,7 @@ Nachhaltigkeit_2:
     de-ch: Kann die Innovationsidee bei einer konkreten Umsetzung zur <strong>sozialen
       Nachhaltigkeit</strong> beitragen?
   section_name: Eigenschaften der Innovation
+  section_index: 9
   matrix_rows:
   - code: '1'
     texts:
@@ -3904,6 +3985,7 @@ ZufNichtGrund:
     fr: 'Veuillez nous faire savoir les causes d’insatisfaction :'
     de-ch: 'Bitte teilen Sie uns mit, was Unzufriedenheit verursachte:'
   section_name: Projekterfolg und Abschluss
+  section_index: 8
 Verbesserungen:
   element_type: MultipleChoice
   texts:
@@ -3914,6 +3996,7 @@ Verbesserungen:
     de-ch: In welchen Bereichen sehen Sie substanzielle Verbesserungsmöglichkeiten
       für den Innovationsscheck aus Sicht Ihrer Organisation?
   section_name: Zufriedenheit mit Innosuisse Programm
+  section_index: 10
   choices:
   - code: '1'
     texts:
@@ -4017,6 +4100,7 @@ WeitereVerbesserungen:
       cheque?
     de-ch: Haben Sie weitere konkrete Verbesserungsvorschläge für den Innovationsscheck?
   section_name: Zufriedenheit mit Innosuisse Programm
+  section_index: 10
 PersonalImProjekt:
   element_type: Matrix
   texts:
@@ -4029,6 +4113,7 @@ PersonalImProjekt:
       des Projektes (inkl. Gesuch) im Durchschnitt direkt an Ihrem Innosuisse Projekt
       gearbeitet? <br>
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
   matrix_rows:
   - code: heute
     texts:
@@ -4052,6 +4137,7 @@ InnoAlsZiel:
     de-ch: Verfolgt(e) Ihre Organisation das Ziel, mit dem geförderten Projekt eine
       konkrete Innovation in Ihrer Organisation oder auf dem Markt umzusetzen?
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
   choices:
   - code: '6'
     texts:
@@ -4077,6 +4163,7 @@ FoerderSNF:
     de-ch: Beruht die Projektidee oder ein massgeblicher Teil des Projektes auf einer
       Forschungsförderung des Schweizerischen Nationalfonds SNF?
   section_name: Charakterisierung des Projekts
+  section_index: 2
   choices:
   - code: '1'
     texts:
@@ -4123,6 +4210,7 @@ FoerderInnosuisse:
     de-ch: Wurde die Projektidee oder ein massgeblicher Teil des Projektes bereits
       anderweitig durch Innosuisse gef&ouml;rdert oder unterst&uuml;tzt?
   section_name: Charakterisierung des Projekts
+  section_index: 2
   choices:
   - code: '1'
     texts:
@@ -4227,6 +4315,7 @@ ErgebnisAnlagenPrototyp:
     de-ch: Sind im Rahmen des Projekts Pilot- und Demonstrationsanlagen oder Prototyp(en)
       entwickelt worden?
   section_name: Ergebnisse
+  section_index: 3
   choices:
   - code: '6'
     texts:
@@ -4253,6 +4342,7 @@ BeurteilungForPar:
     de-ch: Wie bewerten Sie die Leistung des Forschungspartners zur Erreichung der
       Projektziele?
   section_name: Ergebnisse
+  section_index: 3
   matrix_rows:
   - code: '1'
     texts:
@@ -4306,6 +4396,7 @@ Umsatz:
       en Suisse
     de-ch: <strong>Gesamtumsatz</strong> (ohne MWSt) ab Standort Schweiz
   section_name: Ökonomische Projektwirkungen
+  section_index: 4
   matrix_rows:
   - code: PEnde
     texts:
@@ -4337,6 +4428,7 @@ AusgabenFuE:
     de-ch: <strong>Gesamte Ausgaben für </strong><strong>Forschung und Entwicklung</strong>
       in Ihrer Organisation
   section_name: Ökonomische Projektwirkungen
+  section_index: 4
   matrix_rows:
   - code: PEnde
     texts:
@@ -4366,6 +4458,7 @@ WirtSituation:
     en: Does the funded project help to ....
     fr: Le projet soutenu contribue-t-il à ...
   section_name: Ökonomische Projektwirkungen
+  section_index: 4
   matrix_rows:
   - code: '1'
     texts:
@@ -4418,6 +4511,7 @@ WirkFoerderung:
     de-ch: Hat die <strong>Projektförderung von Innosuisse</strong> in Ihrer Organisation
       zu folgenden, direkten Wirkungen geführt?
   section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 5
   matrix_rows:
   - code: '1'
     texts:
@@ -4463,6 +4557,7 @@ WirkProjekt:
     de-ch: Hat <strong>das geförderte Projekt</strong> in Ihrer Organisation zu folgenden,
       weiteren Wirkungen geführt?
   section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 5
   matrix_rows:
   - code: '1'
     texts:
@@ -4533,6 +4628,7 @@ WirtNutzenPotenzial:
       auch <strong>das Potenzial des wirtschaftlichen Nutzen</strong><strong>s</strong>
       mit ein.
   section_name: Nutzen
+  section_index: 6
   matrix_rows:
   - code: '1'
     texts:
@@ -4596,6 +4692,7 @@ SozialerNutzen:
     de-ch: Wie bewerten sie den <strong>gesellschaftlichen und/oder sozialen Nutzen</strong>
       des von Innosuisse geförderten Projekts <strong>ausserhalb</strong> Ihrer Organisation?
   section_name: Nutzen
+  section_index: 6
   matrix_rows:
   - code: '1'
     texts:
@@ -4651,6 +4748,7 @@ SozialerOffen:
     de-ch: 'Bitte umschreiben Sie den erzielten <strong>gesellschaftlichen oder sozialen
       Nutzen</strong> in einigen wenigen Sätzen:'
   section_name: Nutzen
+  section_index: 6
 ProjektBenefit:
   element_type: Matrix
   texts:
@@ -4659,6 +4757,7 @@ ProjektBenefit:
       ? '
     de-ch: Wie hat Ihre Organisation von der Teilnahme am Projekt profitiert?
   section_name: Nutzen
+  section_index: 6
   matrix_rows:
   - code: ZA_FuE
     texts:
@@ -4729,6 +4828,7 @@ GesamtNutzen:
     de-ch: Wie bewerten Sie den <strong>gesamten Nutzen</strong> des geförderten Projektes,
       der über die wirtschaftlichen Wirkungen hinaus geht?
   section_name: Nutzen
+  section_index: 6
   matrix_rows:
   - code: '1'
     texts:
@@ -4787,6 +4887,7 @@ EinflussProjekt:
       financé, les dépenses totales de R&amp;D et/ou l'ensemble des activités d'innovation
       auraient diminué dans notre organisation au cours de cette période."
   section_name: Nutzen
+  section_index: 6
   matrix_rows:
   - code: '1'
     texts:
@@ -4843,6 +4944,7 @@ C19_EinflussExAnte:
       estimait-elle l'influence <strong>présumée</strong> de la pandémie Covid-19
       sur l'ensemble des activités d'innovation de votre organisation ?
   section_name: Impuls
+  section_index: 7
   matrix_rows:
   - code: Insgesamt
     texts:
@@ -4902,6 +5004,7 @@ C19_EinflussExPost:
       impact</strong> of the Covid-19 pandemic on the individual innovation activities
       in your organisation?
   section_name: Impuls
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -5116,6 +5219,7 @@ C19EinflussAufUmsatz:
       2020 et 2021 ?
     en: How did the Covid-19 pandemic affect the 2020 and 2021 financial statements?
   section_name: Impuls
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -5165,6 +5269,7 @@ C19EinflussAufGewinn:
     fr: ''
     en: ''
   section_name: Impuls
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -5216,6 +5321,7 @@ C19_ExtDL:
       project?
     fr: Quelles formes de services externes ont été utilisées au cours du projet ?
   section_name: Impuls
+  section_index: 7
   choices:
   - code: Energie
     texts:
@@ -5261,6 +5367,7 @@ C19_ExtDLQualitaet:
     en: How would you rate the quality of the external services provided?
     fr: Comment jugez-vous la qualité des services externes fournis ?
   section_name: Impuls
+  section_index: 7
   matrix_rows:
   - code: Energie
     texts:
@@ -5345,6 +5452,7 @@ C19_ExtDLWichtigkeit:
     en: How important were these external services for the achievement of objectives
       and the success of the project?
   section_name: Impuls
+  section_index: 7
   choices:
   - code: '1'
     texts:
@@ -5383,6 +5491,7 @@ C19_ExtDLMitnahme:
     fr: Auriez-vous également soumis le projet ...
     en: Would you also have submitted the project ...
   section_name: Impuls
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -5417,6 +5526,7 @@ C19_EinflussInnokraft:
       votre organisation ?
     en: How has the Covid-19 pandemic affected the innovative strength of your organisation?
   section_name: Impuls
+  section_index: 7
   choices:
   - code: '1'
     texts:
@@ -5463,6 +5573,7 @@ C19_Offen:
     fr: Avez-vous d'autres commentaires sur l'impact de la pandémie Covid-19 sur votre
       organisation{{custom.TextImpuls}}?
   section_name: Impuls
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -5484,6 +5595,7 @@ ZielNichtGrund:
     fr: Pour quelles raisons les objectifs définis n'ont-ils pas été atteints ?
     en: For what reasons were the defined goals not achieved?
   section_name: Projekterfolg und Abschluss
+  section_index: 7
   choices:
   - code: '1'
     texts:
@@ -5559,6 +5671,7 @@ Stellenwert:
     fr: Quelle est l'importance du projet encouragé dans votre organisation ?
     de-ch: Welchen Stellenwert besitzt das geförderte Projekt in Ihrer Organisation?
   section_name: Projekterfolg und Abschluss
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -5629,6 +5742,7 @@ Involvement:
     en: Can you tell us how involved your organisation or the department concerned was
       in the supported project?
   section_name: Projekterfolg und Abschluss
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
@@ -5689,6 +5803,7 @@ IrgendeineInnoUm:
 
       '
   section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
   choices:
   - code: '6'
     texts:
@@ -5715,6 +5830,7 @@ ForParAngestellt:
     de-ch: Hat Ihre Organisation als Folge des geförderten Projektes <strong>Personen
       des/der ehemaligen Forschungspartner(s) angestellt</strong>?
   section_name: Ergebnisse
+  section_index: 3
   choices:
   - code: '6'
     texts:
@@ -5741,6 +5857,7 @@ WirtImpQual:
     de-ch: Hat das von Innosuisse geförderte Projekt nach dem Projektabschluss bei
       folgenden wirtschaftlichen Grössen zu einer Zu- oder Abnahme geführt?
   section_name: Ökonomische Projektwirkungen
+  section_index: 4
   matrix_rows:
   - code: '1'
     texts:
@@ -5831,6 +5948,7 @@ WirtImpQuan:
       Sie sich in Ihrer Schätzung auf das aktuelle Jahr im Vergleich zum Jahr des
       Projektstartes.
   section_name: Ökonomische Projektwirkungen
+  section_index: 4
   matrix_rows:
   - code: '1'
     texts:
@@ -5878,6 +5996,7 @@ Kosteneinsparungen:
     de-ch: Hat das geförderte Projekt resp. die umgesetzte Innovation insgesamt <strong>zu
       direkten Kosteneinsparungen</strong> in Ihrer Organisation geführt?
   section_name: Ökonomische Projektwirkungen
+  section_index: 4
   choices:
   - code: '6'
     texts:
@@ -5904,6 +6023,7 @@ MarktanteilGewinn:
     de-ch: Konnten dank der umgesetzten Innovation <strong>zusätzliche Marktanteile</strong>
       gewonnen werden?
   section_name: Ökonomische Projektwirkungen
+  section_index: 4
   choices:
   - code: '6'
     texts:
@@ -5927,6 +6047,7 @@ Neuheitslevel:
     fr: L’innovation mise en œuvre/planifiée est-elle ...
     de-ch: Ist die umgesetzte/geplante Innovation<strong> derzeit </strong>eine ...
   section_name: Ökonomische Projektwirkungen
+  section_index: 4
   matrix_rows:
   - code: '1'
     texts:
@@ -5977,3 +6098,4 @@ NeuheitslevelOffen:
     de-ch: 'Falls die umgesetzte/geplante Innovation eine Neuheit für den internationalen/globalen
       Markt ist: Können Sie nachfolgend kurz beschreiben, was die Neuheit ausmacht:'
   section_name: Ökonomische Projektwirkungen
+  section_index: 4
