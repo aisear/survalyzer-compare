@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-from dataclasses import asdict
 from pathlib import Path
 from typing import Any
 
@@ -88,96 +87,95 @@ def _question_diff_to_dict(qd) -> dict[str, Any]:
     }
 
 
+def _diff_pair_key(source_a: str, source_b: str) -> str:
+    """Build a canonical key for a directed comparison pair."""
+    return f"{source_a}\u2192{source_b}"
+
+
 def export_data(
     results: list[ComparisonResult],
     questions_by_source: dict[str, list[Question]],
-    master_questions: list[Question],
+    master_questions: list[Question] | None = None,
+    default_reference: str = "master",
 ) -> dict[str, Any]:
     """Export comparison data to a JSON-serializable dict.
 
+    Supports flexible comparison: any source can be the reference.
+
     Returns a dict with:
-    - meta: summary stats, survey names, languages
-    - master: master questions indexed by code
-    - surveys: survey questions indexed by survey name, then code
-    - diffs: comparison diffs indexed by code, then survey name
+    - meta: source names, short names, languages, sections, default reference
+    - questions: all sources indexed by source name, then normalized code
+    - diffs: pairwise diffs indexed by "sourceA→sourceB", then question code
     """
-    # Collect survey names and short names
-    survey_names = [r.source_b for r in results]
-    short_names = {name: extract_short_name(name) for name in survey_names}
+    # Build unified questions dict for all sources (keyed by normalized code)
+    questions_dict: dict[str, dict[str, Any]] = {}
 
-    # Collect available languages from master
-    languages = set()
-    for q in master_questions:
-        for lt in q.texts:
-            languages.add(lt.language)
-    languages = sorted(languages) if languages else ["en"]
+    # Include master as a source if provided
+    if master_questions is not None:
+        questions_dict["master"] = {}
+        for q in master_questions:
+            questions_dict["master"][q.normalized_code] = _question_to_dict(q)
 
-    # Build master questions dict
-    master_dict = {}
-    for q in master_questions:
-        master_dict[q.code] = _question_to_dict(q)
-
-    # Build survey questions dict (keyed by normalized code for consistency)
-    surveys_dict = {}
-    for survey_name, questions in questions_by_source.items():
-        surveys_dict[survey_name] = {}
+    # Include all survey sources
+    for source_name, questions in questions_by_source.items():
+        questions_dict[source_name] = {}
         for q in questions:
-            surveys_dict[survey_name][q.normalized_code] = _question_to_dict(q)
+            questions_dict[source_name][q.normalized_code] = _question_to_dict(q)
 
-    # Build diffs dict: {code: {survey_name: diff}}
-    diffs_dict = {}
-    for result in results:
-        survey_name = result.source_b
-        for qd in result.question_diffs:
-            if qd.code not in diffs_dict:
-                diffs_dict[qd.code] = {}
-            diffs_dict[qd.code][survey_name] = _question_diff_to_dict(qd)
+    # Collect all source names in order
+    source_names = list(questions_dict.keys())
 
-    # Collect all codes and sections
-    all_codes = set(master_dict.keys())
-    for survey_questions in surveys_dict.values():
-        all_codes.update(survey_questions.keys())
-
-    # Group codes by section
-    sections = {}
-    for code in sorted(all_codes):
-        # Find section from master or any survey
-        section = "Other"
-        if code in master_dict:
-            section = master_dict[code].get("section_name") or "Other"
+    # Build short names for all sources
+    short_names = {}
+    for name in source_names:
+        if name == "master":
+            short_names[name] = "Master"
         else:
-            for survey_questions in surveys_dict.values():
-                if code in survey_questions:
-                    section = survey_questions[code].get("section_name") or "Other"
-                    break
+            short_names[name] = extract_short_name(name)
+
+    # Collect available languages from all sources
+    languages: set[str] = set()
+    for source_questions in questions_dict.values():
+        for q_dict in source_questions.values():
+            for lang in q_dict.get("texts", {}).keys():
+                languages.add(lang)
+    sorted_languages = sorted(languages) if languages else ["en"]
+
+    # Build pairwise diffs: {"sourceA→sourceB": {code: diff}}
+    diffs_dict: dict[str, dict[str, Any]] = {}
+    for result in results:
+        pair_key = _diff_pair_key(result.source_a, result.source_b)
+        diffs_dict[pair_key] = {}
+        for qd in result.question_diffs:
+            diffs_dict[pair_key][qd.code] = _question_diff_to_dict(qd)
+
+    # Collect all normalized codes across all sources
+    all_codes: set[str] = set()
+    for source_questions in questions_dict.values():
+        all_codes.update(source_questions.keys())
+
+    # Group codes by section (prefer master ordering, then surveys)
+    sections: dict[str, list[str]] = {}
+    for code in sorted(all_codes):
+        section = "Other"
+        for source_questions in questions_dict.values():
+            if code in source_questions:
+                section = source_questions[code].get("section_name") or "Other"
+                break
         if section not in sections:
             sections[section] = []
         sections[section].append(code)
 
-    # Calculate summary stats
-    status_counts = {"identical": 0, "text_changed": 0, "structure_changed": 0, "added": 0, "removed": 0}
-    for code in all_codes:
-        code_diffs = diffs_dict.get(code, {})
-        if not code_diffs:
-            continue
-        worst = "identical"
-        priority = ["structure_changed", "text_changed", "added", "removed", "identical"]
-        for qd in code_diffs.values():
-            if priority.index(qd["status"]) < priority.index(worst):
-                worst = qd["status"]
-        status_counts[worst] = status_counts.get(worst, 0) + 1
-
     return {
         "meta": {
-            "survey_names": survey_names,
+            "sources": source_names,
             "short_names": short_names,
-            "languages": languages,
+            "default_reference": default_reference,
+            "languages": sorted_languages,
             "sections": sections,
             "total_questions": len(all_codes),
-            "status_counts": status_counts,
         },
-        "master": master_dict,
-        "surveys": surveys_dict,
+        "questions": questions_dict,
         "diffs": diffs_dict,
     }
 

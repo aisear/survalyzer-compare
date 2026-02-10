@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Generate HTML comparison report comparing each survey against master.
+"""Generate HTML comparison report with flexible reference survey selection.
 
 Usage:
-    python scripts/generate_report.py [--exports-dir data/exports] [--output docs/index.html]
+    python scripts/generate_report.py [--exports-dir data/exports] [--output-dir docs]
 """
 
 from __future__ import annotations
@@ -48,15 +48,18 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    # Load master
-    if not args.master.exists():
-        print(f"Master file not found: {args.master}")
-        print("Run scripts/generate_master.py first.")
-        sys.exit(1)
+    # Build unified sources dict: {source_name: [Question, ...]}
+    all_sources: dict[str, list] = {}
 
-    master_dict = load_master(args.master)
-    master_questions = master_to_questions(master_dict)
-    print(f"Loaded master: {len(master_questions)} questions")
+    # Load master (optional – if the file exists, include it as a source)
+    if args.master.exists():
+        master_dict = load_master(args.master)
+        master_questions = master_to_questions(master_dict)
+        all_sources["master"] = master_questions
+        print(f"Loaded master: {len(master_questions)} questions")
+    else:
+        master_questions = None
+        print(f"Master file not found: {args.master} (proceeding without master)")
 
     # Find and sort all JSON files by date in filename
     json_files = list(args.exports_dir.glob("*.json"))
@@ -66,30 +69,42 @@ def main() -> None:
     json_files = sort_files_by_date(json_files)
 
     # Parse all exports
-    questions_by_source: dict[str, list] = {}
     for jf in json_files:
         name = jf.stem
         date_str = extract_date_from_filename(jf.name)
-        questions_by_source[name] = load_and_parse(jf)
-        print(f"Parsed {name} (date: {date_str}): {len(questions_by_source[name])} questions")
+        all_sources[name] = load_and_parse(jf)
+        print(f"Parsed {name} (date: {date_str}): {len(all_sources[name])} questions")
 
-    # Compare each survey against master
+    # Compute ALL pairwise comparisons
+    source_names = list(all_sources.keys())
     results = []
-    for source_name, questions in questions_by_source.items():
-        result = compare_surveys(
-            master_questions,
-            questions,
-            source_a="master",
-            source_b=source_name,
-        )
-        results.append(result)
-        print(f"Compared master → {source_name}: "
-              f"{len(result.matched)} matched, "
-              f"{len(result.added)} added, "
-              f"{len(result.removed)} removed")
+    for i, name_a in enumerate(source_names):
+        for j, name_b in enumerate(source_names):
+            if i == j:
+                continue
+            result = compare_surveys(
+                all_sources[name_a],
+                all_sources[name_b],
+                source_a=name_a,
+                source_b=name_b,
+            )
+            results.append(result)
+            print(f"Compared {name_a} \u2192 {name_b}: "
+                  f"{len(result.matched)} matched, "
+                  f"{len(result.added)} added, "
+                  f"{len(result.removed)} removed")
+
+    # Separate master_questions from survey sources for export
+    questions_by_source = {k: v for k, v in all_sources.items() if k != "master"}
 
     # Export data to JSON
-    data = export_data(results, questions_by_source, master_questions)
+    default_ref = "master" if "master" in all_sources else source_names[0]
+    data = export_data(
+        results,
+        questions_by_source,
+        master_questions=master_questions,
+        default_reference=default_ref,
+    )
 
     # Ensure output directory exists
     args.output_dir.mkdir(parents=True, exist_ok=True)

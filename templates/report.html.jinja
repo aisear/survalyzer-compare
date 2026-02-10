@@ -85,7 +85,7 @@
 <body>
 
 <h1>Questionnaire Comparison Report</h1>
-<p class="subtitle">Each survey compared against master</p>
+<p class="subtitle">Each survey compared against {{ short_names.get(reference_name, reference_name) }}</p>
 
 <div class="summary">
   <div class="stat"><div class="num">{{ total_questions }}</div><div class="label">Total Questions</div></div>
@@ -96,10 +96,10 @@
 </div>
 
 <div class="legend">
-  <span class="green">Identical to master</span>
+  <span class="green">Identical to {{ short_names.get(reference_name, reference_name) }}</span>
   <span class="yellow">Text changed</span>
   <span class="red">Structure changed</span>
-  <span class="grey">Not in master / Not in survey</span>
+  <span class="grey">Not in {{ short_names.get(reference_name, reference_name) }} / Not in survey</span>
 </div>
 
 <div class="filter-bar">
@@ -115,7 +115,7 @@
     <option value="identical">Identical</option>
     <option value="text_changed">Text Changed</option>
     <option value="structure_changed">Structure Changed</option>
-    <option value="added">Added (not in master)</option>
+    <option value="added">Added (not in {{ short_names.get(reference_name, reference_name) }})</option>
     <option value="removed">Removed (not in survey)</option>
     <option value="changed">Any Change</option>
   </select>
@@ -131,7 +131,7 @@
       <tr>
         <th class="code-col">Code</th>
         <th class="type-col">Type</th>
-        <th class="text-col">Master Text</th>
+        <th class="text-col">{{ short_names.get(reference_name, reference_name) }} Text</th>
         {% for survey in survey_names %}
         <th class="survey-col">{{ short_names.get(survey, survey) }}</th>
         {% endfor %}
@@ -140,7 +140,7 @@
     <tbody>
     {% for code in section.codes %}
       {% set q_sources = question_index.get(code, {}) %}
-      {% set q_master = q_sources.get('master') %}
+      {% set q_ref = q_sources.get(reference_name) %}
       {% set code_diffs = diff_lookup.get(code, {}) %}
       {# Determine worst status for this row #}
       {% set ns = namespace(worst='identical') %}
@@ -152,10 +152,10 @@
       {% endfor %}
       <tr class="question-row" data-code="{{ code }}" data-status="{{ ns.worst }}">
         <td class="code-col">{{ code }}</td>
-        <td class="type-col">{{ q_master.element_type if q_master else '—' }}</td>
+        <td class="type-col">{{ q_ref.element_type if q_ref else '—' }}</td>
         <td class="text-col">
-          {% if q_master %}
-            {% for lt in q_master.texts %}
+          {% if q_ref %}
+            {% for lt in q_ref.texts %}
             <span class="lang-text" data-lang="{{ lt.language }}">{{ lt.text | truncate(120) }}</span>
             {% endfor %}
           {% else %}—{% endif %}
@@ -182,7 +182,7 @@
                 <th>Language</th>
                 <th>Status</th>
                 <th>Similarity</th>
-                <th>Master Text</th>
+                <th>{{ short_names.get(reference_name, reference_name) }} Text</th>
                 {% for survey in survey_names %}
                 <th>{{ short_names.get(survey, survey) }} Text</th>
                 {% endfor %}
@@ -191,10 +191,10 @@
               <tr data-lang="{{ lang }}" class="lang-row">
                 <td>{{ lang }}</td>
                 {# Collect text diffs for this language across surveys #}
-                {% set master_ns = namespace(text='') %}
-                {% if q_master %}
-                  {% for lt in q_master.texts %}
-                    {% if lt.language == lang %}{% set master_ns.text = lt.text %}{% endif %}
+                {% set ref_ns = namespace(text='') %}
+                {% if q_ref %}
+                  {% for lt in q_ref.texts %}
+                    {% if lt.language == lang %}{% set ref_ns.text = lt.text %}{% endif %}
                   {% endfor %}
                 {% endif %}
                 {# Find worst status for this language #}
@@ -213,7 +213,7 @@
                 {% endfor %}
                 <td><span class="status-badge badge-{{ lang_ns.worst_status }}">{{ lang_ns.worst_status }}</span></td>
                 <td>{{ "%.0f" | format(lang_ns.worst_sim * 100) }}%</td>
-                <td class="text-cell">{{ master_ns.text | truncate(150) if master_ns.text else '—' }}</td>
+                <td class="text-cell">{{ ref_ns.text | truncate(150) if ref_ns.text else '—' }}</td>
                 {% for survey in survey_names %}
                   {% set qd = code_diffs.get(survey) %}
                   {% set survey_ns = namespace(text='') %}
@@ -234,22 +234,22 @@
               {% set qd = code_diffs.get(survey) %}
               {% if qd and qd.choice_diffs %}{% set has_choices = true %}{% endif %}
             {% endfor %}
-            {% if has_choices or (q_master and q_master.choices) %}
+            {% if has_choices or (q_ref and q_ref.choices) %}
             <h4>Answer Options</h4>
             <table>
               <tr>
                 <th>Code</th>
                 <th>Status</th>
                 <th>Similarity</th>
-                <th>Master Text</th>
+                <th>{{ short_names.get(reference_name, reference_name) }} Text</th>
                 {% for survey in survey_names %}
                 <th>{{ short_names.get(survey, survey) }} Text</th>
                 {% endfor %}
               </tr>
               {# Collect all choice codes #}
               {% set choice_codes = [] %}
-              {% if q_master %}
-                {% for c in q_master.choices %}
+              {% if q_ref %}
+                {% for c in q_ref.choices %}
                   {% if c.code not in choice_codes %}{% set _ = choice_codes.append(c.code) %}{% endif %}
                 {% endfor %}
               {% endif %}
@@ -262,13 +262,13 @@
                 {% endif %}
               {% endfor %}
               {% for choice_code in choice_codes %}
-                {# Find master choice text for each language #}
-                {% set master_choice_texts = {} %}
-                {% if q_master %}
-                  {% for c in q_master.choices %}
+                {# Find reference choice text for each language #}
+                {% set ref_choice_texts = {} %}
+                {% if q_ref %}
+                  {% for c in q_ref.choices %}
                     {% if c.code == choice_code %}
                       {% for lt in c.texts %}
-                        {% set _ = master_choice_texts.__setitem__(lt.language, lt.text) %}
+                        {% set _ = ref_choice_texts.__setitem__(lt.language, lt.text) %}
                       {% endfor %}
                     {% endif %}
                   {% endfor %}
@@ -316,7 +316,7 @@
                 </td>
                 <td class="text-cell">
                   {% for lang in languages %}
-                  <span class="lang-text" data-lang="{{ lang }}">{{ master_choice_texts.get(lang, '') | truncate(100) if master_choice_texts.get(lang) else '—' }}</span>
+                  <span class="lang-text" data-lang="{{ lang }}">{{ ref_choice_texts.get(lang, '') | truncate(100) if ref_choice_texts.get(lang) else '—' }}</span>
                   {% endfor %}
                 </td>
                 {% for survey in survey_names %}
@@ -348,22 +348,22 @@
               {% set qd = code_diffs.get(survey) %}
               {% if qd and qd.matrix_row_diffs %}{% set has_rows = true %}{% endif %}
             {% endfor %}
-            {% if has_rows or (q_master and q_master.matrix_rows) %}
+            {% if has_rows or (q_ref and q_ref.matrix_rows) %}
             <h4>Matrix Rows</h4>
             <table>
               <tr>
                 <th>Code</th>
                 <th>Status</th>
                 <th>Similarity</th>
-                <th>Master Text</th>
+                <th>{{ short_names.get(reference_name, reference_name) }} Text</th>
                 {% for survey in survey_names %}
                 <th>{{ short_names.get(survey, survey) }} Text</th>
                 {% endfor %}
               </tr>
               {# Collect all row codes #}
               {% set row_codes = [] %}
-              {% if q_master and q_master.matrix_rows %}
-                {% for r in q_master.matrix_rows %}
+              {% if q_ref and q_ref.matrix_rows %}
+                {% for r in q_ref.matrix_rows %}
                   {% if r.code not in row_codes %}{% set _ = row_codes.append(r.code) %}{% endif %}
                 {% endfor %}
               {% endif %}
@@ -376,13 +376,13 @@
                 {% endif %}
               {% endfor %}
               {% for row_code in row_codes %}
-                {# Find master row text for each language #}
-                {% set master_row_texts = {} %}
-                {% if q_master and q_master.matrix_rows %}
-                  {% for r in q_master.matrix_rows %}
+                {# Find reference row text for each language #}
+                {% set ref_row_texts = {} %}
+                {% if q_ref and q_ref.matrix_rows %}
+                  {% for r in q_ref.matrix_rows %}
                     {% if r.code == row_code %}
                       {% for lt in r.texts %}
-                        {% set _ = master_row_texts.__setitem__(lt.language, lt.text) %}
+                        {% set _ = ref_row_texts.__setitem__(lt.language, lt.text) %}
                       {% endfor %}
                     {% endif %}
                   {% endfor %}
@@ -430,7 +430,7 @@
                 </td>
                 <td class="text-cell">
                   {% for lang in languages %}
-                  <span class="lang-text" data-lang="{{ lang }}">{{ master_row_texts.get(lang, '') | truncate(100) if master_row_texts.get(lang) else '—' }}</span>
+                  <span class="lang-text" data-lang="{{ lang }}">{{ ref_row_texts.get(lang, '') | truncate(100) if ref_row_texts.get(lang) else '—' }}</span>
                   {% endfor %}
                 </td>
                 {% for survey in survey_names %}
@@ -462,22 +462,22 @@
               {% set qd = code_diffs.get(survey) %}
               {% if qd and qd.matrix_column_diffs %}{% set has_cols = true %}{% endif %}
             {% endfor %}
-            {% if has_cols or (q_master and q_master.matrix_column_groups) %}
+            {% if has_cols or (q_ref and q_ref.matrix_column_groups) %}
             <h4>Matrix Columns</h4>
             <table>
               <tr>
                 <th>Code</th>
                 <th>Status</th>
                 <th>Similarity</th>
-                <th>Master Text</th>
+                <th>{{ short_names.get(reference_name, reference_name) }} Text</th>
                 {% for survey in survey_names %}
                 <th>{{ short_names.get(survey, survey) }} Text</th>
                 {% endfor %}
               </tr>
               {# Collect all column codes #}
               {% set col_codes = [] %}
-              {% if q_master and q_master.matrix_column_groups %}
-                {% for cg in q_master.matrix_column_groups %}
+              {% if q_ref and q_ref.matrix_column_groups %}
+                {% for cg in q_ref.matrix_column_groups %}
                   {% for c in cg.columns %}
                     {% if c.code not in col_codes %}{% set _ = col_codes.append(c.code) %}{% endif %}
                   {% endfor %}
@@ -492,14 +492,14 @@
                 {% endif %}
               {% endfor %}
               {% for col_code in col_codes %}
-                {# Find master column text for each language #}
-                {% set master_col_texts = {} %}
-                {% if q_master and q_master.matrix_column_groups %}
-                  {% for cg in q_master.matrix_column_groups %}
+                {# Find reference column text for each language #}
+                {% set ref_col_texts = {} %}
+                {% if q_ref and q_ref.matrix_column_groups %}
+                  {% for cg in q_ref.matrix_column_groups %}
                     {% for c in cg.columns %}
                       {% if c.code == col_code %}
                         {% for lt in c.texts %}
-                          {% set _ = master_col_texts.__setitem__(lt.language, lt.text) %}
+                          {% set _ = ref_col_texts.__setitem__(lt.language, lt.text) %}
                         {% endfor %}
                       {% endif %}
                     {% endfor %}
@@ -548,7 +548,7 @@
                 </td>
                 <td class="text-cell">
                   {% for lang in languages %}
-                  <span class="lang-text" data-lang="{{ lang }}">{{ master_col_texts.get(lang, '') | truncate(100) if master_col_texts.get(lang) else '—' }}</span>
+                  <span class="lang-text" data-lang="{{ lang }}">{{ ref_col_texts.get(lang, '') | truncate(100) if ref_col_texts.get(lang) else '—' }}</span>
                   {% endfor %}
                 </td>
                 {% for survey in survey_names %}

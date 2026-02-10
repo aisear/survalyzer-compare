@@ -137,10 +137,15 @@ class TestRenderReport:
         # Short name "A" is extracted from "survey_A"
         assert ">A<" in html or ">A " in html
 
-    def test_master_text_column(self):
+    def test_reference_text_column_default(self):
         result, qbs, master = _build_fixture()
         html = render_report([result], qbs, master, default_language="en")
         assert "Master Text" in html
+
+    def test_reference_text_column_custom(self):
+        result, qbs, master = _build_fixture()
+        html = render_report([result], qbs, master, reference_name="survey_A", default_language="en")
+        assert "A Text" in html
 
 
 class TestSaveReport:
