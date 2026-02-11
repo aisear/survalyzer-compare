@@ -7,13 +7,14 @@
 # words, not just typos) or where you want explicit control.
 
 # German genitive variants
-"(OhneTitel) Identifikation und Weichenfragen ": "Identifikation und Weichenfragen"
+"(OhneTitel) Identifikation und Weichenfragen ": "Identifikation und Weichenfragen" #IP
 "(OhneTitel) Identifikation und Weichenfragen": "Identifikation und Weichenfragen"
+"Angaben FE": "Identifikation und Weichenfragen" #RP
 "Charakterisierung des Projektes": "Charakterisierung des Projekts"
 "Charakterisierung (TRL ) + Komeptenzen": "Charakterisierung des Projekts"
 "Charakterisierung (Surveyübergreifend)": "Charakterisierung des Projekts"
 "ProjektLancierung fur MitUP": "Projektlancierung und Ziele"
-"Ergebnisse des Innovationschecks": "Zielerreichung des Innovationscheck"
+"Ergebnisse des Innovationschecks": "Zielerreichung des Innovationscheck" # IS
 "Weiterfuehrung": "Weiterführung des Projekts"
 "IPR (Teil UP Start)": "Ergebnisse"
 "IPR (Rest)": "Ergebnisse"
@@ -23,3 +24,13 @@
 "Eigenschaften der Innovation": "Ergebnisse"
 "Zielerreichung und Ergebnisse": "Ergebnisse"
 "Wirkungen und Nutzen": "Nutzen"
+"Zusammenarbeit Im Projekt (Start Nicht UP)": "Zusammenarbeit im Projekt"
+"Zusammenarbeit im Projekt (Weiter)": "Zusammenarbeit im Projekt"
+"Personalien": "Identifikation und Weichenfragen" # BP
+"Characteristics of your BRIDGE Proof of Concept project": "Charakterisierung des Projekts"
+"Project development": "Charakterisierung des Projekts"
+"Implementation pathways": "Ergebnisse"
+"Impact of the BRIDGE support": "Ökonomische Projektwirkungen"
+"Property rights": "Ergebnisse"
+"Zusammenarbeit mit Forschungspartner": "Zusammenarbeit im Projekt"
+"Overall assessment": "Projekterfolg und Abschluss"
