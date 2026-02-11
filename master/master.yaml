@@ -498,43 +498,66 @@ StrategischeZiele:
 ProjektStand:
   element_type: SingleChoice
   texts:
-    en: How do you assess at the end of the project the achieved goal of commercial
+    de-ch: Wie beurteilen Sie das bei Projektabschluss erreichte Ziel der kommerziellen
+      Nutzung der Projektergebnisse und die weitere Umsetzung auf dem Markt?
+    en: How do you assess at the end of the project the achieved goal of commercial
       utilisation of the project results and the further implementation on the market?
-  section_name: Implementation pathways
+    fr: Comment évaluez-vous, à la fin du projet, la réalisation de l'objectif d'utilisation
+      commerciale des résultats du projet et la poursuite de la mise en œuvre sur
+      le marché ?
+  section_name: Ergebnisse
   section_index: 3
   choices:
   - code: '1'
     texts:
-      en: The project results are not yet sufficiently advanced to decide on a concrete
-        application or implementation path (e.g. start-up, implementation in an existing
-        organisation, or via implementation partners)
-  - code: '2'
+      en: The project results are not yet sufficiently advanced to be able to decide
+        on a possible application.
+      fr: Les résultats du projet ne sont pas encore suffisamment avancés pour pouvoir
+        décider d'une éventuelle application.
+      de-ch: Die Projektergebnisse sind noch nicht so weit fortgeschritten, um über
+        eine mögliche Anwendung entscheiden zu können.
+  - code: '4'
     texts:
       en: The feasibility of the project goals has been examined and concrete implementation
-        steps are identifiable (e.g. start-up formation, licensing, market or societal
-        implementation within an existing organisation, or collaboration with implementation
-        partners).
-  - code: '3'
+        steps are possible.
+      fr: La faisabilité des objectifs du projet a été vérifiée et des étapes concrètes
+        de mise en œuvre sont possibles.
+      de-ch: Die Machbarkeit der Projektziele wurde geprüft und konkrete Umsetzungsschritte
+        sind möglich.
+  - code: '6'
     texts:
       en: Conclusive results make it possible to take concrete and further implementation
         steps.
-  - code: '4'
+      fr: Des résultats concluants permettent de prendre des mesures concrètes et
+        supplémentaires de mise en œuvre.
+      de-ch: Schlüssige Ergebnisse ermöglichen es, konkrete und weitere Umsetzungsschritte
+        vorzunehmen.
+  - code: '7'
     texts:
-      en: The project or the innovation is currently in the implementation and introduction
-        phase, either on the market or in a societal / institutional context (e.g.
-        through a start-up, within an existing organisation, or together with implementation
-        partners)
-  - code: '5'
+      en: The project/the innovation is currently in the implementation and introduction
+        phase (internally or on the market).
+      fr: Le projet/l'innovation est concrètement en phase de réalisation et de lancement
+        (en interne ou sur le marché).
+      de-ch: Das Projekt/die Innovation befindet sich konkret in der Umsetzungs- und
+        Einführungsphase (intern oder auf dem Markt).
+  - code: '8'
     texts:
-      en: The project/the innovation has been successfully implemented and already
-        generates revenues and/or demonstrates measurable societal benefits or strengthens
-        organisational performance.
-  - code: '6'
+      en: The project/the innovation has been successfully implemented in the organisation
+        and generates sales and/or strengthens the performance of the organisation.
+      fr: Le projet/l'innovation a été mis en œuvre avec succès dans l'organisation
+        et génère des revenus et/ou renforce les performances de l'organisation.
+      de-ch: Das Projekt/die Innovation wurde erfolgreich in der Organisation umgesetzt
+        und generiert Umsatz und/oder stärkt die Leistung der Organisation.
+  - code: '9'
     texts:
+      de-ch: Das Projekt wird nicht weitergeführt bzw. umgesetzt.
+      fr: Le projet n'est pas poursuivi ou mis en œuvre.
       en: The project will not be continued or implemented.
   - code: '99'
     texts:
       en: I cannot answer this question
+      fr: Je ne peux pas répondre à cette question
+      de-ch: Das kann ich nicht beantworten
 ZusArbeit_Doch:
   element_type: SingleChoice
   texts:
@@ -1218,19 +1241,30 @@ IPR_Unterstuetzung:
 InnoTechOderSozial:
   element_type: SingleChoice
   texts:
-    en: Is the innovation from your supported project primarily based on ...
-  section_name: Characteristics of your BRIDGE Proof of Concept project
-  section_index: 1
+    en: Is the innovation from your Innosuisse-supported project primarily based on
+      ...
+    fr: L’innovation issue de votre projet encouragé par Innosuisse repose-t-elle
+      en premier lieu sur ...
+    de-ch: Beruht die Innovation aus Ihrem von Innosuisse geförderten Projekt primär
+      auf ...
+  section_name: Charakterisierung des Projektes
+  section_index: 2
   choices:
   - code: '1'
     texts:
       en: technology-oriented or scientific basics
+      fr: des bases technologiques ou orientées vers les sciences naturelles
+      de-ch: technologieorientierten oder naturwissenschaftlichen Grundlagen
   - code: '2'
     texts:
       en: economic, social science or humanities basics
+      fr: des bases en sciences économiques, sociales ou humaines
+      de-ch: wirtschafts-, sozial- oder geisteswissenschaftlichen Grundlagen
   - code: '99'
     texts:
-      en: don't know / no answer
+      en: I cannot answer this question
+      fr: Je ne peux pas répondre à cette question
+      de-ch: Das kann ich nicht beantworten
 TRLStart:
   element_type: Dropdown
   texts:
@@ -1495,71 +1529,124 @@ NeueKompetenzen:
 AusmassRadikalitaet:
   element_type: Matrix
   texts:
-    en: 'Innovation can be incremental or radical in nature.
-
-      Please indicate which applies to the innovation you pursued with your
-
-      BRIDGE Proof of Concept project.'
-  section_name: Characteristics of your BRIDGE Proof of Concept project
-  section_index: 1
+    en: Innovations can be incremental or radical in nature. Please indicate which
+      applies to your innovation pursued with the project.
+    fr: 'Les innovations peuvent être de nature incrémentale ou radicale. Veuillez
+      indiquer ce qui s’applique à l’innovation poursuivie dans le cadre du projet:'
+    de-ch: Innovationen können inkrementeller oder radikaler Natur sein. Bitte geben
+      Sie an, was auf Ihre mit dem Projekt verfolgte Innovation zutrifft.
+  section_name: Charakterisierung des Projektes
+  section_index: 2
   matrix_rows:
   - code: '1'
-    texts: {}
+    texts:
+      en: The innovation pursued by the project is ...
+      fr: L’innovation à laquelle le projet est voué est...
+      de-ch: Die mit dem Projekt verfolgte Innovation ist….
   matrix_columns:
   - code: '1'
     texts:
-      en: strongly incremental
+      en: very incremental
+      fr: fortement incrémentale
+      de-ch: ausgesprochen inkrementell
   - code: '2'
     texts:
       en: incremental
+      fr: incrémentale
+      de-ch: inkrementell
   - code: '3'
     texts:
-      en: rather incremental
+      en: relatively incremental
+      fr: plutôt incrémentale
+      de-ch: eher inkrementell
   - code: '4'
     texts:
-      en: rather radical
+      en: relatively radical
+      fr: plutôt radicale
+      de-ch: eher radikal
   - code: '5'
     texts:
       en: radical
+      fr: radicale
+      de-ch: radikal
   - code: '6'
     texts:
-      en: strongly radical
+      en: very radical
+      fr: fortement radicale
+      de-ch: ausgesprochen radikal
   - code: '99'
     texts:
-      en: don't know / no answer
+      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
+        this question</div>
+      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
+        répondre à cette question</div>
+      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
+        nicht beantworten</div>
 Nachhaltigkeit:
   element_type: Matrix
   texts:
-    en: Does the BRIDGE Proof of Concept project lead to environmentally and/or social
-      sustainable solutions?
-  section_name: Characteristics of your BRIDGE Proof of Concept project
-  section_index: 1
+    en: Does the supported project or the innovation since introduced make a <strong>specific
+      contribution to ecological and/or social sustainability</strong><strong> in
+      the market or for society</strong>?
+    fr: Le projet ou l’innovation lancé(e) depuis a-t-il/elle apporté une <strong>contribution
+      concrète en termes de durabilité environnementale et/ou sociale</strong> sur
+      le marché ou pour la société ?
+    de-ch: Leistet das geförderte Projekt oder die inzwischen eingeführte Innovation
+      <strong>einen konkreten Beitrag zur ökologischen und/oder sozialen Nachhaltigkeit
+      auf dem Markt oder für die Gesellschaft</strong>?
+  section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 5
   matrix_rows:
   - code: '1'
     texts:
-      en: Contribution to <strong>environmental </strong>sustainability
+      en: The contribution to <strong>ecological sustainability</strong> is ...
+      fr: La contribution apportée jusqu’à présent en termes de <b>durabilité environnementale</b>
+        est ... 
+      de-ch: Der Beitrag<strong> an die ökologische Nachhaltigkeit </strong>ist …
   - code: '2'
     texts:
-      en: Contribution to <strong>social </strong>sustainability
+      en: The contribution to <strong>social sustainability</strong> is ...
+      fr: La contribution apportée jusqu’à présent en termes de<b> durabilité sociale</b>
+        est ...
+      de-ch: Der Beitrag <strong>an die soziale Nachhaltigkeit</strong> ist …
   matrix_columns:
   - code: '1'
     texts:
-      en: Not at all
+      en: not existing
+      fr: inexistante
+      de-ch: nicht vorhanden
   - code: '2'
     texts:
-      en: Very weakly
+      en: small
+      fr: faible
+      de-ch: gering
   - code: '3'
     texts:
-      en: Rather weakly
+      en: relatively small
+      fr: plutôt faible
+      de-ch: eher gering
   - code: '4'
     texts:
-      en: Rather strongly
+      en: relatively big
+      fr: plutôt élevée
+      de-ch: eher hoch
   - code: '5'
     texts:
-      en: Strongly
+      en: big
+      fr: élevée
+      de-ch: hoch
   - code: '6'
     texts:
-      en: Very strongly
+      en: very big
+      fr: très élevée
+      de-ch: sehr hoch
+  - code: '99'
+    texts:
+      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
+        this question</div>
+      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
+        répondre à cette question</div>
+      de-ch: Das kann ich nicht beantworten
 NachhaltigkeitOffen:
   element_type: OpenQuestion
   texts:
@@ -1573,36 +1660,65 @@ NachhaltigkeitOffen:
 AusmassDigital:
   element_type: Matrix
   texts:
-    en: To what extent did your BRIDGE Proof of Conept project focus on the development
-      of digital technologies and / or digital business models?
-  section_name: Characteristics of your BRIDGE Proof of Concept project
-  section_index: 1
+    en: Is the Innosuisse-supported project based on <strong>new</strong> <strong>digital
+      technologies</strong> or <strong>new</strong> <strong>digital business model</strong><strong>s</strong>?
+    fr: Le projet soutenu par Innosuisse repose-t-il sur de <strong>nouvelles technologies
+      numériques</strong> ou sur de<strong> nouveaux modèles commerciaux numériques</strong>
+      ?
+    de-ch: Beruht das von Innosuisse geförderte Projekt auf<strong> neuen digitalen
+      Technologien</strong> oder auf <strong>neuen digitalen Geschäftsmodellen</strong>?
+  section_name: Charakterisierung des Projekts
+  section_index: 2
   matrix_rows:
-  - code: tech
+  - code: '1'
     texts:
-      en: Focus on digital technologies
-  - code: models
+      en: It is based on new <strong>digital technologies</strong> ...
+      fr: Sur des nouvelles <strong>technologies numériques</strong> ...
+      de-ch: Auf neuen<strong> digitalen Technologien</strong> beruht es ...
+  - code: '2'
     texts:
-      en: Focus on digital business models
+      de-ch: Auf neuen <strong>digitalen Geschäftsmodellen</strong> beruht es ...
+      en: It is based on new <strong>digital business models</strong> ...
+      fr: Sue des nouveaux<strong> modèles commerciaux numériques</strong> ...
   matrix_columns:
   - code: '1'
     texts:
-      en: Not at all
+      en: not at all
+      fr: pas du tout
+      de-ch: gar nicht
   - code: '2'
     texts:
-      en: Very weakly
+      en: little
+      fr: peu
+      de-ch: wenig
   - code: '3'
     texts:
-      en: Rather weakly
+      en: rather little
+      fr: plutôt peu
+      de-ch: eher wenig
   - code: '4'
     texts:
-      en: Rather strongly
+      en: rather strongly
+      fr: plutôt fort
+      de-ch: eher stark
   - code: '5'
     texts:
-      en: Strongly
+      en: strongly
+      fr: fort
+      de-ch: stark
   - code: '6'
     texts:
-      en: Very strongly
+      en: very strongly
+      fr: très fort
+      de-ch: sehr stark
+  - code: '99'
+    texts:
+      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
+        this question</div>
+      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
+        répondre à cette question</div>
+      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
+        nicht beantworten</div>
 Disziplinaritaet:
   element_type: SingleChoice
   texts:
@@ -2221,27 +2337,40 @@ ErfolgBewertung:
 Additionalitaet:
   element_type: SingleChoice
   texts:
-    en: Would you have carried out the project or taken comparable steps towards practical
-      implementation without BRIDGE Proof of Concept funding?
-  section_name: 'Impact of the BRIDGE support '
-  section_index: 4
+    en: Would you have carried out your innovation project <strong>even without the
+      innovation support from Innosuisse</strong>?
+    fr: Auriez-vous réalisé votre projet d'innovation <strong>même sans le soutien
+      d'Innosuisse</strong> ?
+    de-ch: Hätten Sie Ihr Innovationsprojekt auch <strong>ohne die Innovationsförderung
+      von Innosuisse</strong> durchgeführt?
+  section_name: Nutzen
+  section_index: 6
   choices:
-  - code: '1'
+  - code: '6'
     texts:
-      en: No, I would not have carried out the project or taken steps towards practical
-        implementation.
-  - code: '2'
+      en: Yes, to the same extent
+      fr: Oui, dans la même mesure
+      de-ch: Ja, im gleichen Umfang
+  - code: '5'
     texts:
-      en: Yes, but likely to a much lesser extent.
-  - code: '3'
-    texts:
-      en: Yes, but likely to a slightly lesser extent.
+      en: Yes, to a somewhat reduced extent
+      fr: Oui, dans une mesure quelque peu réduite
+      de-ch: Ja, in etwas reduziertem Umfang
   - code: '4'
     texts:
-      en: Yes, most likely to more or less the same extent.
+      en: Yes, to a greatly reduced extent
+      fr: Oui, dans une mesure très réduite
+      de-ch: Ja, in stark reduziertem Umfang
+  - code: '1'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
   - code: '99'
     texts:
-      en: Don’t know
+      en: I cannot answer this question
+      fr: Je ne peux pas répondre à cette question
+      de-ch: Das kann ich nicht beantworten
 Additionalitaet_WasTun:
   element_type: MultipleChoice
   texts:
@@ -3523,29 +3652,45 @@ InnoArt:
   element_type: MultipleChoice
   texts:
     en: What type of innovation is the supported project?
-  section_name: Characteristics of your BRIDGE Proof of Concept project
-  section_index: 1
+    fr: Quel est le type d’innovation sur lequel le projet encouragé a porté ?
+    de-ch: Um welche Art von Innovation handelt es sich bei dem geförderten Projekt?
+  section_name: Charakterisierung des Projektes
+  section_index: 2
   choices:
   - code: '1'
     texts:
       en: Product innovation
+      fr: Innovation de produit
+      de-ch: Produktinnovation
   - code: '2'
     texts:
       en: Service innovation
+      fr: Innovation de service
+      de-ch: Dienstleistungsinnovation
   - code: '3'
     texts:
       en: Process innovation
+      fr: Innovation de processus
+      de-ch: Prozessinnovation
   - code: '4'
     texts:
       en: Business model innovation
+      fr: Innovation de modèle d’entreprise
+      de-ch: Innovation beim Geschäftsmodell
   - code: '5'
     texts:
       en: Organisational innovation
+      fr: Innovation organisationnelle
+      de-ch: Innovation bei der Organisation
   - code: '6'
     texts:
       en: Marketing innovation
+      fr: Innovation marketing
+      de-ch: Innovation beim Marketing
   - code: '7'
     texts:
+      de-ch: Soziale Innovation
+      fr: Innovation sociale
       en: Social innovation
 TRL:
   element_type: Matrix
@@ -3638,10 +3783,17 @@ TRL:
 AusmassDisruptivitaet:
   element_type: Matrix
   texts:
-    en: To what extent does the business idea/innovation of your BRIDGE Proof of Concept
-      project have a disruptive market potential?
-  section_name: Characteristics of your BRIDGE Proof of Concept project
-  section_index: 1
+    en: To what extent do you believe that the potential of the innovation supported
+      by the project will be <strong>disruptive</strong> on the market in the long
+      term, even if the innovation is not (yet) implemented?
+    fr: Dans quelle mesure pensez-vous que le potentiel de l'innovation soutenue par
+      le projet sera <strong>disruptif</strong> sur le marché à long terme, même si
+      l'innovation n'est pas (encore) mise en œuvre ?<br>
+    de-ch: Wie <strong>disruptiv </strong>schätzen Sie das Potenzial der im Projekt
+      geförderten Innovation langfristig auf dem Markt ein (auch wenn die Innovation
+      noch nicht umgesetzt ist)?
+  section_name: Charakterisierung des Projektes
+  section_index: 2
   matrix_rows:
   - code: '1'
     texts: {}
@@ -3649,24 +3801,41 @@ AusmassDisruptivitaet:
   - code: '1'
     texts:
       en: not at all disruptive
+      fr: pas du tout disruptif
+      de-ch: überhaupt nicht disruptiv
   - code: '2'
     texts:
       en: hardly disruptive
+      fr: à peine disruptif
+      de-ch: kaum disruptiv
   - code: '3'
     texts:
       en: slightly disruptive
+      fr: peu disruptif
+      de-ch: eher wenig disruptiv
   - code: '4'
     texts:
       en: somewhat disruptive
+      fr: plutôt disruptif
+      de-ch: eher disruptiv
   - code: '5'
     texts:
       en: disruptive
+      fr: disruptif
+      de-ch: disruptiv
   - code: '6'
     texts:
       en: very disruptive
+      fr: fortement disruptif
+      de-ch: ausgesprochen disruptiv
   - code: '99'
     texts:
-      en: don't know/no answer
+      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
+        this question</div>
+      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
+        répondre à cette question</div>
+      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
+        nicht beantworten</div>
 Nachhaltigkeit_1:
   element_type: Matrix
   texts:
@@ -3896,6 +4065,1393 @@ WeitereVerbesserungen:
     de-ch: Haben Sie weitere konkrete Verbesserungsvorschläge für den Innovationsscheck?
   section_name: Zufriedenheit mit Innosuisse Programm
   section_index: 10
+KontaktCheck_1_1:
+  element_type: OpenQuestion
+  texts:
+    en: Full name of main applicant
+  section_name: Personalien
+KontaktCheck_4_1:
+  element_type: OpenQuestion
+  texts:
+    en: Title of BRIDGE Proof of Concept project (as in application)
+  section_name: Personalien
+BerufzielZuBeginn:
+  element_type: MultipleChoice
+  texts:
+    en: At the start of the BRIDGE Proof of Concept project, what was your intended
+      career or professional direction?
+  section_name: Personalien
+  choices:
+  - code: '1'
+    texts:
+      en: Continue and further develop my current role in academia
+  - code: '2'
+    texts:
+      en: Found or co-found a start-up
+  - code: '3'
+    texts:
+      en: Transition from academia to industry
+  - code: '4'
+    texts:
+      en: Transition from academia to the public sector
+  - code: '5'
+    texts:
+      en: Transition from academia to a non-profit / NGO context
+  - code: '6'
+    texts:
+      en: Explore new career options without a fixed plan
+  - code: '9'
+    texts:
+      en: 'Other (please specify): '
+BerufsstatusAktuell:
+  element_type: Matrix
+  texts:
+    en: Which of the following professional situations currently applies to you?
+  section_name: Personalien
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Current professional situation
+  - code: '3'
+    texts:
+      en: Foreseeable future situation (in the next 12 to 24 months
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Founder / co-founder of a start-up or company
+  - code: '2'
+    texts:
+      en: Employed in a start-up or young company
+  - code: '3'
+    texts:
+      en: 'Employed in an established company (industry / SME / corporate group) '
+  - code: '4'
+    texts:
+      en: Employed in the public sector
+  - code: '5'
+    texts:
+      en: Employed in a non-profit / NGO organisation
+  - code: '6'
+    texts:
+      en: 'Employed in academia or a research institution '
+  - code: '7'
+    texts:
+      en: Self-employed / freelancer
+  - code: '8'
+    texts:
+      en: Currently not employed / in transition
+  - code: '9'
+    texts:
+      en: Other (please specify)
+BerufstandAktuellAnders:
+  element_type: Matrix
+  texts:
+    en: ''
+  section_name: Personalien
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: 'Please specify the other situation:'
+  matrix_columns:
+  - code: '9'
+    texts:
+      en: 'Current professional situation '
+  - code: '10'
+    texts:
+      en: Foreseeable future situation (in the next 12 to 24 months
+AktSitRelatedToBridge:
+  element_type: Matrix
+  texts:
+    en: To what extent is your current or future professional situation related to
+      the BRIDGE Proof of Concept project?
+  section_name: Personalien
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: ''
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not related
+  - code: '2'
+    texts:
+      en: weakly related
+  - code: '3'
+    texts:
+      en: rather weakly related
+  - code: '4'
+    texts:
+      en: rather strongly related
+  - code: '5'
+    texts:
+      en: strongly related
+  - code: '6'
+    texts:
+      en: very strongly related
+  - code: '99'
+    texts:
+      en: don't know / no answer
+Nachhaltigkeitoffen:
+  element_type: OpenQuestion
+  texts:
+    en: 'Please describe the contribution to environmental sustainability in a few
+      sentences:'
+  section_name: Characteristics of your BRIDGE Proof of Concept project
+  section_index: 1
+NachhaltigkeitSozialOffen:
+  element_type: OpenQuestion
+  texts:
+    en: 'Please describe the contribution to social sustainability in a few sentences:'
+  section_name: Characteristics of your BRIDGE Proof of Concept project
+  section_index: 1
+FundingBefore:
+  element_type: SingleChoice
+  texts:
+    en: Before submitting your BRIDGE Proof of Concept project, were the scientific
+      foundations or the underlying project idea (for Proof of Concept) previously
+      supported by funding from the SNSF or Innosuisse?
+  section_name: Project development
+  section_index: 2
+  choices:
+  - code: '1'
+    texts:
+      en: 'Yes'
+  - code: '2'
+    texts:
+      en: 'No'
+  - code: '3'
+    texts:
+      en: Don't know / no answer
+FundedBeforeBy:
+  element_type: MultipleChoice
+  texts:
+    en: 'Which funding instruments supported the scientific foundations or project
+      idea prior to the BRIDGE Proof of Concept ?<br><span style="font-size: 10px;"><br></span>'
+  section_name: Project development
+  section_index: 2
+  choices:
+  - code: '15'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>SNSF
+        funding</strong></div>SNSF project funding
+  - code: '1'
+    texts:
+      en: SNSF career funding
+  - code: '16'
+    texts:
+      en: SNSF National Centres of Competence in Research (NCCR)<br>please provide
+        NCCR number and name
+  - code: '17'
+    texts:
+      en: SNSF National Research Programmes (NRP)<br>please provide the programme
+        number and title of the project
+  - code: '18'
+    texts:
+      en: 'Other SNSF funding instrument:'
+  - code: '3'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Innosuisse
+        funding</strong></div>Innovation project with implementation partner
+  - code: '4'
+    texts:
+      en: Innovation project without implementation partner
+  - code: '7'
+    texts:
+      en: International innovation funding (e.g. EUREKA/Eurostars via Innosuisse,
+        bilateral projects))
+  - code: '11'
+    texts:
+      en: Flagship projects
+  - code: '12'
+    texts:
+      en: Innovation booster
+  - code: '13'
+    texts:
+      en: SCEER (Swiss Competence Centers of Energy Research)
+  - code: '14'
+    texts:
+      en: Other Innosuisse funding (please specify)
+  - code: '10'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Other&nbsp;</strong></div>Other
+        (please specify)
+BridgeCoachingYesNo:
+  element_type: SingleChoice
+  texts:
+    en: Did you use the BRIDGE Coaching support (10 hours) during the project?
+  section_name: Project development
+  section_index: 2
+  choices:
+  - code: '6'
+    texts:
+      en: 'yes'
+  - code: '1'
+    texts:
+      en: 'no'
+BridgeCoachingNuetzlichkeit:
+  element_type: Matrix
+  texts:
+    en: How useful was the BRIDGE Coaching (10 hours) for you and your project?
+  section_name: Project development
+  section_index: 2
+  matrix_rows:
+  - code: '1'
+    texts: {}
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all useful
+  - code: '2'
+    texts:
+      en: Slightly useful
+  - code: '3'
+    texts:
+      en: Rather sligthly useful
+  - code: '4'
+    texts:
+      en: Rather useful
+  - code: '5'
+    texts:
+      en: Useful
+  - code: '6'
+    texts:
+      en: Very useful
+  - code: '99'
+    texts:
+      en: Not applicable / no opinion
+BridgeCoachingNutzen_Offen:
+  element_type: OpenQuestion
+  texts:
+    en: In which areas was the BRIDGE Coaching most useful for you?
+  section_name: Project development
+  section_index: 2
+InnosuisseSupportYesNo:
+  element_type: Matrix
+  texts:
+    en: Did you use or are you planning to use any additional coaching or support
+      related to the implementation of the project?
+  section_name: Project development
+  section_index: 2
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Innosuisse Entrepreneurship Training
+  - code: '2'
+    texts:
+      en: Innosuisse Start-up Coaching
+  - code: '3'
+    texts:
+      en: Other, please specify
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: used
+  - code: '2'
+    texts:
+      en: planned
+  - code: '3'
+    texts:
+      en: neither
+NutzlichkeitTraining:
+  element_type: Matrix
+  texts:
+    en: How useful was the Innosuisse Entrepreneurship Training for you in relation
+      to your BRIDGE Proof of Concept project?
+  section_name: Project development
+  section_index: 2
+  matrix_rows:
+  - code: '1'
+    texts: {}
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all useful
+  - code: '2'
+    texts:
+      en: Slightly useful
+  - code: '3'
+    texts:
+      en: Rather sligthly useful
+  - code: '4'
+    texts:
+      en: Rather useful
+  - code: '5'
+    texts:
+      en: Useful
+  - code: '6'
+    texts:
+      en: Very useful
+  - code: '99'
+    texts:
+      en: Not applicable / no opinion
+StartUpTrainingNutzen_offen:
+  element_type: OpenQuestion
+  texts:
+    en: In which areas was the Innosuisse Entrepreneurship Training most useful for
+      you?
+  section_name: Project development
+  section_index: 2
+AktuellerStatus:
+  element_type: SingleChoice
+  texts:
+    en: Which status best describes your BRIDGE Proof of Concept-funded project at
+      the end of the funding?<br><br>
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Start-ups
+        and spin-offs</strong></div> A start-up or spin-off has been established (legal
+        entity)
+  - code: '2'
+    texts:
+      en: ' A start-up or spin-off is in preparation or planned'
+  - code: '3'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Non-profit
+        initiatives</strong></div> A non-profit organisation / NGO has been established
+  - code: '4'
+    texts:
+      en: ' A non-profit organisation / NGO is in preparation or planned'
+  - code: '5'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Licensing
+        / transfer</strong></div> Licensing or transfer of results to a company or
+        organisation has been completed
+  - code: '6'
+    texts:
+      en: ' Licensing or transfer of results is planned or under negotiation'
+  - code: '7'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Collaboration
+        with partners</strong></div> Further development with an implementation partner
+        is ongoing&nbsp;(cooperation, employment)
+  - code: '8'
+    texts:
+      en: ' Further development with an implementation partner is planned&nbsp;(cooperation,
+        employment)'
+  - code: '9'
+    texts:
+      en: Project continues mainly in research and development (cooperation, further
+        employment)
+  - code: '11'
+    texts:
+      en: '<div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Other</strong></div>
+        Project has been completed but not further implemented: overall feasibility
+        not confirmed (technical, business, organisational)'
+  - code: '10'
+    texts:
+      en: ' Other (please specify)'
+FinanzierungSicherheitFuerNaechstesJahr:
+  element_type: Matrix
+  texts:
+    en: To what extent is the financing of your project secured?
+  section_name: Implementation pathways
+  section_index: 3
+  matrix_rows:
+  - code: short
+    texts:
+      en: for the next 12 months
+  - code: long
+    texts:
+      en: and in a longer perspective (2 to 5 years)
+  matrix_columns:
+  - code: '2'
+    texts:
+      en: No financing / financing is not secured at all
+  - code: '3'
+    texts:
+      en: Financing is hardly secured
+  - code: '4'
+    texts:
+      en: Financing is partially secured
+  - code: '5'
+    texts:
+      en: Financing is largely secured
+  - code: '6'
+    texts:
+      en: Financing is fully secured
+  - code: '99'
+    texts:
+      en: Don’t know / not applicable
+ObstaclesFaced:
+  element_type: MultipleChoice
+  texts:
+    en: In which areas did you face the most significant barriers obstacles during
+      the project or in the follow-up phase after the end of the project?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Research-to-Application
+        and Implementation Pathways&nbsp;</strong></div>Unclear pathway to application
+        or implementation
+  - code: '2'
+    texts:
+      en: Unclear pathway to application or implementation
+  - code: '3'
+    texts:
+      en: Intended start-up pathway not realistic or not suitable
+  - code: '4'
+    texts:
+      en: No suitable implementation (e.g. industry, public sector)
+  - code: '5'
+    texts:
+      en: Limited career opportunities outside academia
+  - code: '6'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Scientific,
+        Conceptual or Technical Challenges&nbsp;</strong></div>Scientific results
+        not sufficiently promising
+  - code: '7'
+    texts:
+      en: Technical or conceptional feasibility too low
+  - code: '8'
+    texts:
+      en: Scientific, methodological issues or data-related challenge
+  - code: '9'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Personal
+        or Career Related Factors&nbsp;</strong></div>Missing career opportunity outside
+        of BRIDGE Proof of Concept
+  - code: '10'
+    texts:
+      en: Lack of time or personal capacity
+  - code: '11'
+    texts:
+      en: Shift in personal or other priorities
+  - code: '12'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Institutional
+        or Resources-related Constraints&nbsp;</strong></div>Lack of staff or relevant
+        expertise
+  - code: '13'
+    texts:
+      en: No follow-up funding available
+  - code: '14'
+    texts:
+      en: High administrative or organisational burden
+  - code: '15'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Market
+        or Stakeholder-related Challenges&nbsp;</strong></div>Low or unclear market
+        potential or societal demand
+  - code: '16'
+    texts:
+      en: Collaboration challenges with partners or stakeholders
+  - code: '17'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Intellectual
+        Property and Legal Aspects&nbsp;</strong></div>Unclear ownership or access
+        to intellectual property
+  - code: '18'
+    texts:
+      en: Negotiation with host institution about intellectual property rights
+  - code: '19'
+    texts:
+      en: Limited support or clarity regarding IP strategy at the Proof of Concept
+        stage
+  - code: '20'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Other&nbsp;</strong></div>Other
+        factors (please specify)
+MainObstacle:
+  element_type: SingleChoice
+  texts:
+    en: Which of the selected obstacles is the main or most decisive one?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: Unclear pathway to application or implementation
+  - code: '2'
+    texts:
+      en: Unclear pathway to application or implementation
+  - code: '3'
+    texts:
+      en: Intended start-up pathway not realistic or not suitable
+  - code: '4'
+    texts:
+      en: No suitable implementation (e.g. industry, public sector)
+  - code: '5'
+    texts:
+      en: Limited career opportunities outside academia
+  - code: '6'
+    texts:
+      en: Scientific results not sufficiently promising
+  - code: '7'
+    texts:
+      en: Technical or conceptional feasibility too low
+  - code: '8'
+    texts:
+      en: Scientific, methodological issues or data-related challenge
+  - code: '9'
+    texts:
+      en: Missing career opportunity outside of BRIDGE Proof of Concept
+  - code: '10'
+    texts:
+      en: Lack of time or personal capacity
+  - code: '11'
+    texts:
+      en: Shift in personal or other priorities
+  - code: '12'
+    texts:
+      en: Lack of staff or relevant expertise
+  - code: '13'
+    texts:
+      en: No follow-up funding available
+  - code: '14'
+    texts:
+      en: High administrative or organisational burden
+  - code: '15'
+    texts:
+      en: Low or unclear market potential or societal demand
+  - code: '16'
+    texts:
+      en: Collaboration challenges with partners or stakeholders
+  - code: '17'
+    texts:
+      en: Unclear ownership or access to intellectual property
+  - code: '18'
+    texts:
+      en: Negotiation with host institution about intellectual property rights
+  - code: '19'
+    texts:
+      en: Limited support or clarity regarding IP strategy at the Proof of Concept
+        stage
+  - code: '20'
+    texts:
+      en: '{{ObstaclesFaced_20_text}}'
+BRLStart:
+  element_type: Dropdown
+  texts:
+    en: Which Business Readiness Level (BRL) did your project have at the beginning
+      of the BRIDGE Proof of Concept funding?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: '<strong>Early concept phase</strong><div style="margin-left: 20px;"><strong>BRL
+        1 &ndash; Basic hypotheses</strong></div><div style="margin-left: 20px;">Initial
+        hypotheses regarding a possible business, implementation or societal impact
+        concept.</div>'
+  - code: '2'
+    texts:
+      en: '<div style="margin-left: 20px;"><strong>BRL 2 &ndash; First business model
+        or concept described</strong><br>First description of a business, implementation
+        or societal impact concept. Initial understanding of target groups, needs
+        or problem context.</div>'
+  - code: '3'
+    texts:
+      en: '<strong>Business model and concept development phase&nbsp;</strong><div
+        style="margin-left: 20px;"><strong>BRL 3 &ndash; Development of business model
+        or concept</strong><br>Draft business model or draft implementation / impact
+        logic. <br>Market potential and/or societal relevance and stakeholder landscape
+        described.</div>'
+  - code: '4'
+    texts:
+      en: '<div style="margin-left: 20px;"><strong>BRL 4 &ndash; First validated business
+        model or concept</strong><br>First structured business model or implementation
+        and impact concept. Initial projections of economic viability, market potential
+        and/or societal relevance. <br>Initial assumptions on feasibility, relevance
+        and potential effects.</div>'
+  - code: '5'
+    texts:
+      en: '<strong>Validation phase&nbsp;</strong><div style="margin-left: 20px;"><strong>BRL
+        5 &ndash; Business model or concept testing<br></strong>Testing of the business
+        model or of implementation pathways, user acceptance or societal relevance.
+        Key assumptions validated with external stakeholders or; where applicable,
+        first revenue model and initial competitive positioning.</div>'
+  - code: '6'
+    texts:
+      en: '<div style="margin-left: 20px;"><strong>BRL 6 &ndash; Advanced business
+        model or concept validation<br></strong>Business model or implementation /
+        impact concept largely validated. <br>Pricing or cost assumptions verified
+        with customers, users or implementing actors, where applicable Product-market
+        fit and finetuning</div>'
+  - code: '7'
+    texts:
+      en: '<div style="margin-left: 20px;"><strong>BRL 7 &ndash; Demonstrated applicability
+        and relevance<br></strong>Product-market fit or solution/context fit demonstrated.
+        <br>Clear value proposition for customers or beneficiaries and implementing
+        actors.</div>'
+  - code: '8'
+    texts:
+      en: '<div style="margin-left: 20px;"><strong>BRL 8 &ndash; Business model or
+        concept finetuned<br></strong>Business model or broader implementation readiness
+        / impact model refined. <br>Evidence that the approach is robust and transferable
+        to broader contexts.</div>'
+  - code: '9'
+    texts:
+      en: '<div><strong>Scaling and broader implementation&nbsp;</strong></div><div
+        style="margin-left: 20px;"><strong>BRL 9 &ndash; Scaling and implementation
+        readiness<br></strong>Business scaling with recurring revenues or readiness
+        for larger-scale implementation, institutional embedding or policy uptake.</div>'
+  - code: '99'
+    texts:
+      en: BRL not applicable / don't know
+BRLEnd:
+  element_type: Dropdown
+  texts:
+    en: Which Business Readiness Level (BRL) best describes the status of your project
+      at the end of the BRIDGE Proof of Concept funding?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: <strong>Basic hypotheses</strong><br>BRL 1 - Hypothesizing on possible business
+        concept
+  - code: '2'
+    texts:
+      en: BRL 2 - First business concept described. Identified overall market & some
+        competitors.
+  - code: '3'
+    texts:
+      en: <strong>Development of business model</strong><br>BRL 3 - Draft of business
+        model. Described market potential & competitive overview.
+  - code: '4'
+    texts:
+      en: BRL 4 - First version of business model, first projections of economic viability
+        & market potential
+  - code: '5'
+    texts:
+      en: BRL 5 - Business model testing, first revenue model, competitive position
+        verified im market
+  - code: '6'
+    texts:
+      en: BRL 6 - Full business model including pricing verified on customers
+  - code: '7'
+    texts:
+      en: <strong>Product market fit / finetuning</strong><br>BRL 7 - Product/market
+        fit demonstrated. Attractive revenue/cost projections.
+  - code: '8'
+    texts:
+      en: BRL 8 - Business model is finetuned. Sales & metrics show business model
+        holds and can scale
+  - code: '9'
+    texts:
+      en: <strong>Business scaling</strong><br>BRL 9 - Business model finalised. Business
+        scaling with recurring revenues
+  - code: '10'
+    texts:
+      en: BRL not applicable / don't know
+OutcomeAchievedEnd:
+  element_type: Matrix
+  texts:
+    en: To what extent have the following outcomes been achieved by the end of your
+      BRIDGE Proof of Concept project?
+  section_name: Implementation pathways
+  section_index: 3
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: '<div style="font-weight:bold;background-color:lightgrey;width:100%;"><strong>Concrete
+        outputs and validation</strong></div><div style="margin-left: 20px;">Prototype,
+        demonstrator or Minimum Viable Product developed (incl. user perspective)</div>'
+  - code: '2'
+    texts:
+      en: '<div style="margin-left: 20px;">Technical or methodological feasibility
+        validated</div>'
+  - code: '3'
+    texts:
+      en: '<div style="margin-left: 20px;">Business feasibility or implementation
+        pathways clarified</div>'
+  - code: '4'
+    texts:
+      en: '<div style="font-weight:bold;background-color:lightgrey;width:100%;"><strong>Implementation
+        and exploitation</strong></div><div style="margin-left: 20px;">Market, user
+        or societal demand verified</div>'
+  - code: '5'
+    texts:
+      en: '<div style="margin-left: 20px;">Preparation for implementation (e.g. start-up,
+        licensing, organisation)</div>'
+  - code: '6'
+    texts:
+      en: '<div style="margin-left: 20px;">Establishment or strengthening of cooperation
+        with potential implementation partners</div>'
+  - code: '7'
+    texts:
+      en: '<div style="margin-left: 20px;">Employment in a business environment</div>'
+  - code: '8'
+    texts:
+      en: '<div style="margin-left: 20px;">Licensing or sale of results to a company
+        or organisation</div>'
+  - code: '9'
+    texts:
+      en: '<div style="font-weight:bold;background-color:lightgrey;width:100%;"><strong>Intellectual
+        property and funding</strong></div><div style="margin-left: 20px;">Securing
+        intellectual property / filing a patent or similar protection (licences)</div>'
+  - code: '10'
+    texts:
+      en: '<div style="margin-left: 20px;">Follow-up funding acquired or prepared</div>'
+  - code: '11'
+    texts:
+      en: '<div style="font-weight:bold;background-color:lightgrey;width:100%;"><strong>Societal
+        and other impacts</strong></div><div style="margin-left: 20px;">Contribution
+        to a societal, environmental or technological challenge</div>'
+  - code: '12'
+    texts:
+      en: '<div style="margin-left: 20px;">Other results or impacts achieved (please
+        specify)</div>'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not relevant for my BRIDGE Proof of Concept project
+  - code: '2'
+    texts:
+      en: not achieved
+  - code: '3'
+    texts:
+      en: slightly achieved
+  - code: '4'
+    texts:
+      en: rather slightly achieved
+  - code: '5'
+    texts:
+      en: rather achieved
+  - code: '6'
+    texts:
+      en: fully achieved
+  - code: '7'
+    texts:
+      en: 'exceeded expectations '
+OutcomesAdditionalitaet:
+  element_type: Matrix
+  texts:
+    en: How likely is it that the above-mentioned outcomes would have been achieved
+      without BRIDGE funding?
+  section_name: Implementation pathways
+  section_index: 3
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: ''
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not at all – only possible because of BRIDGE
+  - code: '2'
+    texts:
+      en: unlikely
+  - code: '3'
+    texts:
+      en: rather unlikely
+  - code: '4'
+    texts:
+      en: rather likely
+  - code: '5'
+    texts:
+      en: likely
+  - code: '6'
+    texts:
+      en: very likely – would have happened anyway
+  - code: '7'
+    texts:
+      en: no answer possible
+WahrscheinlichkeitUmsetzung:
+  element_type: Matrix
+  texts:
+    en: How likely is it that&nbsp;your innovation will achieve implementation on
+      the market and/or in society in the medium to long term (e.g. through sales,
+      licensing, integration into an organisation, continued use or long-term application)?
+  section_name: Implementation pathways
+  section_index: 3
+  matrix_rows:
+  - code: '1'
+    texts: {}
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not at all likely
+  - code: '2'
+    texts:
+      en: slightly likely
+  - code: '3'
+    texts:
+      en: rather unlikely
+  - code: '4'
+    texts:
+      en: rather likely
+  - code: '5'
+    texts:
+      en: likely
+  - code: '6'
+    texts:
+      en: very likely
+BeitragZuStartupGruendung:
+  element_type: Matrix
+  texts:
+    en: To what extent did the BRIDGE Proof of Concept funding contribute to the implementation
+      of your innovative idea?
+  section_name: 'Impact of the BRIDGE support '
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Decision for founding a start-up or to pursue an implementation pathway
+  - code: '2'
+    texts:
+      en: Timing or acceleration of the founding or implementation process
+  - code: '3'
+    texts:
+      en: Quality of the start-up or implementation setup
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all
+  - code: '2'
+    texts:
+      en: Slightly
+  - code: '3'
+    texts:
+      en: Rather weak
+  - code: '4'
+    texts:
+      en: Rather strong
+  - code: '5'
+    texts:
+      en: Strong
+  - code: '6'
+    texts:
+      en: Essential (the implementation would not have occurred&nbsp;without BRIDGE
+        funding)
+IPR_Ergebnisse:
+  element_type: Matrix
+  texts:
+    en: What kind of intellectual property rights protection is being realised and
+      planned?
+  section_name: Property rights
+  section_index: 5
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Patent application(s)
+  - code: '2'
+    texts:
+      en: Trademark(s) / Copyright / Design right(s)
+  - code: '3'
+    texts:
+      en: <strong>In-licensing</strong> (rights to use, develop, or commercialize
+        intellectual property assets that are owned by another entity)
+  - code: '4'
+    texts:
+      en: <strong>Out-licensing</strong> (granting another entity the rights to use,
+        develop, or commercialize its own intellectual property assets)
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: planned
+  - code: '2'
+    texts:
+      en: already realised
+  - code: '3'
+    texts:
+      en: not relevant
+StartUpEntwicklungsstand:
+  element_type: Matrix
+  texts:
+    en: What is the current development status of your organisation or implementation
+      setup with regard to the following elements?
+  section_name: 'Start-up Development '
+  section_index: 6
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: '<div style="left:0px;top:-15px;font-weight:bold;background-color:lightgrey;"><strong>Team
+        &amp; Organisation</strong></div><div style="margin-left: 20px;">Founding
+        team assembled</div>'
+  - code: '2'
+    texts:
+      en: '<div style="margin-left: 20px;">Basic company structures set up (e.g. roles,
+        responsibilities, processes)</div>'
+  - code: '3'
+    texts:
+      en: '<div style="margin-left: 20px;">Suitable location or infrastructure identified</div>'
+  - code: '4'
+    texts:
+      en: '<div style="margin-left: 20px;">Legal entity registered or preparations
+        underway</div>'
+  - code: '5'
+    texts:
+      en: '<div style="left:0px;top:-15px;font-weight:bold;background-color:lightgrey;"><strong>Market
+        &amp; Business</strong></div><div style="margin-left: 20px;">Initial contacts
+        established with potential customers or pilot partners</div>'
+  - code: '6'
+    texts:
+      en: '<div style="margin-left: 20px;">Minimum viable product (MVP developed or
+        tested</div>'
+  - code: '7'
+    texts:
+      en: '<div style="margin-left: 20px;">First customers acquired and / or renvenues
+        achieved</div>'
+  - code: '8'
+    texts:
+      en: '<div style="left:0px;top:-15px;font-weight:bold;background-color:lightgrey;"><strong>Funding
+        &amp; Strategy</strong></div><div style="margin-left: 20px;">Initial funding
+        plan or financing options mapped out</div>'
+  - code: '9'
+    texts:
+      en: '<div style="margin-left: 20px;">Preliminary go-to-market approach outlined</div>'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not started
+  - code: '2'
+    texts:
+      en: In progress
+  - code: '3'
+    texts:
+      en: Mostly completed
+  - code: '4'
+    texts:
+      en: Fully completed
+  - code: '5'
+    texts:
+      en: Not relevant
+StartupGruendungWann:
+  element_type: SingleChoice
+  texts:
+    en: When did or will the foundation of a start-up related to your BRIDGE Proof
+      of Concept project take place?
+  section_name: 'Start-up Development '
+  section_index: 6
+  choices:
+  - code: '1'
+    texts:
+      en: Before the start of the BRIDGE PoC project
+  - code: '2'
+    texts:
+      en: Shortly after the start of the project
+  - code: '3'
+    texts:
+      en: During the project (before completion)
+  - code: '4'
+    texts:
+      en: After completion of the project
+  - code: '5'
+    texts:
+      en: Not yet founded, but planned
+PersonalCH:
+  element_type: OpenQuestion
+  texts:
+    en: How many employees (FTE) did your company have at the end of [previous year]
+      / currently (full-time equivalents, FTE)?
+  section_name: 'Start-up Development '
+  section_index: 6
+RK_Akquise:
+  element_type: SingleChoice
+  texts:
+    en: Since the founding of your start-up, have you undertaken concrete efforts
+      to raise risk capital (dilutive funding)?
+  section_name: 'Start-up Development '
+  section_index: 6
+  choices:
+  - code: '1'
+    texts:
+      en: Yes, with successful financing
+  - code: '2'
+    texts:
+      en: Yes, but without a successful outcome so far
+  - code: '3'
+    texts:
+      en: No, not yet
+  - code: '4'
+    texts:
+      en: No, we are pursuing a bootstrapping strategy (financing exclusively through
+        internal resources and revenues; no external equity financing planned)
+  - code: '99'
+    texts:
+      en: Can’t answer
+InvestorsContacted:
+  element_type: MultipleChoice
+  texts:
+    en: Which type(s) of investors provided the financing or were actively approached?
+  section_name: 'Start-up Development '
+  section_index: 6
+  choices:
+  - code: '1'
+    texts:
+      en: Family, Friends and Fools (FFF)
+  - code: '2'
+    texts:
+      en: Business Angels
+  - code: '3'
+    texts:
+      en: Venture capital investors
+  - code: '4'
+    texts:
+      en: Corporate or strategic investors
+  - code: '5'
+    texts:
+      en: 'Other (please specify): '
+NonDilutivesPrices:
+  element_type: Matrix
+  texts:
+    en: Have you raised other funds&nbsp;(non-dilutive) at home or abroad (since the
+      start-up was established)?
+  section_name: 'Start-up Development '
+  section_index: 6
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Scholarships
+  - code: '2'
+    texts:
+      en: Prizes
+  - code: '3'
+    texts:
+      en: Grants not to be reimbursed
+  - code: '4'
+    texts:
+      en: 'Other, please specify:'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: 'yes'
+  - code: '2'
+    texts:
+      en: 'no'
+  - code: '99'
+    texts:
+      en: can't answer
+KarriereNuetzlichkeit:
+  element_type: Matrix
+  texts:
+    en: To what extent did the BRIDGE Proof of Concept project contribute to your
+      knowledge development and career development?
+  section_name: Career path
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: <strong>Development of knowledge and understanding</strong><br><em>(e.g.
+        scientific, technical, entrepreneurial or application-related knowledge)</em>
+  - code: '2'
+    texts:
+      en: <strong>Concrete career development</strong><br><em>(e.g. new career direction,
+        transition to another sector, strengthened professional role)</em>
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all
+  - code: '2'
+    texts:
+      en: Slightly
+  - code: '3'
+    texts:
+      en: Rather slightly
+  - code: '4'
+    texts:
+      en: Rather strongly
+  - code: '5'
+    texts:
+      en: Strongly
+  - code: '6'
+    texts:
+      en: Very strongly
+  - code: '99'
+    texts:
+      en: Not relevant for my situation
+KarriereNutzenFuer:
+  element_type: MultipleChoice
+  texts:
+    en: In which areas did the BRIDGE PoC funding contribute most to your career development?
+  section_name: Career path
+  section_index: 7
+  choices:
+  - code: '1'
+    texts:
+      en: Improving employability outside academia
+  - code: '2'
+    texts:
+      en: Strengthening professional networks
+  - code: '3'
+    texts:
+      en: Developing entrepreneurial and innovation skills
+  - code: '4'
+    texts:
+      en: Gaining experience in project management and leadership
+  - code: '5'
+    texts:
+      en: Increasing visibility or reputation within the research community
+  - code: '6'
+    texts:
+      en: Enhancing confidence to take risks or pursue new ideas
+  - code: '7'
+    texts:
+      en: Other (please specify)
+ImagineOffer:
+  element_type: SingleChoice
+  texts:
+    en: Imagine you received an attractive job offer from a prestigious research institution
+      or company, but accepting it would mean discontinuing your work on commercializing
+      or practically implementing your BRIDGE innovation. What would you do?
+  section_name: Career path
+  section_index: 7
+  choices:
+  - code: '1'
+    texts:
+      en: Accept the position – advancing my research career is the priority
+  - code: '2'
+    texts:
+      en: Negotiate to continue the innovation work part-time or in parallel
+  - code: '3'
+    texts:
+      en: Decline the offer – bringing this innovation to application is too important
+  - code: '4'
+    texts:
+      en: Accept, but plan to return to the innovation later
+  - code: '5'
+    texts:
+      en: Not sure / depends on circumstances
+EinbezugKunden:
+  element_type: MultipleChoice
+  texts:
+    en: Were customers or users actively involved in the development within your BRIDGE
+      Proof of Concept project?
+  section_name: Entrepreneurial Mindset and Behaviour
+  section_index: 8
+  choices:
+  - code: '1'
+    texts:
+      en: No, customers or users were not actively involved
+  - code: '2'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Exporation
+        and early feedback&nbsp;</strong></div>Interviews, surveys or exploratory
+        feedback
+  - code: '3'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Validation&nbsp;</strong></div>Testing
+        with prototypes, mock-ups or demonstrators
+  - code: '4'
+    texts:
+      en: Pilot projects or test phases with users, customers or beneficiaries
+  - code: '5'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Market-oriented
+        or contextual validation (where applicable)&nbsp;</strong></div>Letters of
+        Intent (LoI) or Memoranda of Understanding (MoU)
+  - code: '6'
+    texts:
+      en: Testing willingness to pay or willingness to adopt
+  - code: '7'
+    texts:
+      en: Initial sales, pre-orders or comparable commitments
+  - code: '8'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Other&nbsp;</strong></div>Other
+        activities, (please specify)
+BeitragSoftImpacts:
+  element_type: Matrix
+  texts:
+    en: To what extent did the BRIDGE Proof of Concept funding support you in the
+      following aspects?
+  section_name: Entrepreneurial Mindset and Behaviour
+  section_index: 8
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Recognising opportunities and thinking entrepreneurially
+  - code: '2'
+    texts:
+      en: Experimenting with ideas and validating assumptions
+  - code: '3'
+    texts:
+      en: Dealing with uncertainty, setbacks and learning from failure
+  - code: '4'
+    texts:
+      en: Bringing innovation ideas into practice<br>(e.g. engaging users, beneficiaries,
+        partners or markets)
+  - code: '5'
+    texts:
+      en: Enhancing negotiation and interaction skills<br>
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all
+  - code: '2'
+    texts:
+      en: Slightly
+  - code: '3'
+    texts:
+      en: Rather weak
+  - code: '4'
+    texts:
+      en: Rather strong
+  - code: '5'
+    texts:
+      en: Strong
+  - code: '6'
+    texts:
+      en: 'Essential '
+BeitragKompetenzen:
+  element_type: Matrix
+  texts:
+    en: To what extent did the BRIDGE Proof of Concept funding strengthen your entrepreneurial
+      and innovation-related competencies?
+  section_name: Entrepreneurial Mindset and Behaviour
+  section_index: 8
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Customer, user or beneficiary discovery (problem–solution fit)
+  - code: '2'
+    texts:
+      en: Developing and testing ideas in practice
+  - code: '3'
+    texts:
+      en: 'Building networks and partnerships relevant for implementation
+
+        <br>(e.g. companies, public sector, NGOs or other organisations)'
+  - code: '4'
+    texts:
+      en: Leading and taking responsibility for implementation
+  - code: '5'
+    texts:
+      en: Designing value propositions and implementation or business models
+  - code: '6'
+    texts:
+      en: 'Go-to-market or implementation basics<br>
+
+        (e.g. positioning, channels, pricing, cost recovery or adoption tests)'
+  - code: '7'
+    texts:
+      en: 'Understanding and preparing financing options for further development
+
+        <br>(e.g. private, public or blended financing)'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all
+  - code: '2'
+    texts:
+      en: Slightly
+  - code: '3'
+    texts:
+      en: Rather weak
+  - code: '4'
+    texts:
+      en: Rather strong
+  - code: '5'
+    texts:
+      en: Strong
+  - code: '6'
+    texts:
+      en: Essential (would not have developed without funding)
+Zielerreichung:
+  element_type: Matrix
+  texts:
+    en: Overall, how successful do you consider your BRIDGE Proof of Concept project
+      to have been in achieving its intended objectives?
+  section_name: Overall assessment
+  section_index: 9
+  matrix_rows:
+  - code: '1'
+    texts: {}
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all successful
+  - code: '2'
+    texts:
+      en: Slightly successful
+  - code: '3'
+    texts:
+      en: Rather sligtly successful
+  - code: '4'
+    texts:
+      en: Rather successful
+  - code: '5'
+    texts:
+      en: Successful
+  - code: '6'
+    texts:
+      en: Very successful
+ZufriedenheitOverall:
+  element_type: Matrix
+  texts:
+    en: Overall, how satisfied are you with the BRIDGE Proof of Concept funding and
+      support?
+  section_name: Overall assessment
+  section_index: 9
+  matrix_rows:
+  - code: '1'
+    texts: {}
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all satisfied
+  - code: '2'
+    texts:
+      en: Slightly satisfied
+  - code: '3'
+    texts:
+      en: Rather slightly satisfied
+  - code: '4'
+    texts:
+      en: Rather satisfied
+  - code: '5'
+    texts:
+      en: Satisfied
+  - code: '6'
+    texts:
+      en: Very satisfied
+Zufriedenheit_Umsetzung:
+  element_type: Matrix
+  texts:
+    en: Specifically, how satisfied are you with the support you received during the
+      project?
+  section_name: Overall assessment
+  section_index: 9
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Support from the university/research institution (e.g., Research Office,
+        Technology Transfer Office, etc.)
+  - code: '2'
+    texts:
+      en: Support from the BRIDGE Office
+  - code: '3'
+    texts:
+      en: Support from SNSF and/or Innosuisse
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all satisfied
+  - code: '2'
+    texts:
+      en: Slightly satisfied
+  - code: '3'
+    texts:
+      en: Rather slightly satisfied
+  - code: '4'
+    texts:
+      en: Rather satisfied
+  - code: '5'
+    texts:
+      en: Satisfied
+  - code: '6'
+    texts:
+      en: Very satisfied
+GutwarOffen:
+  element_type: OpenQuestion
+  texts:
+    en: Looking back at your participation in the BRIDGE Proof of Concept programme:<br>What
+      worked particulary well?
+  section_name: Overall assessment
+  section_index: 9
+VerbesserungOffen:
+  element_type: OpenQuestion
+  texts:
+    en: Where do you see room for improvement?
+  section_name: Overall assessment
+  section_index: 9
 PersonalImProjekt:
   element_type: Matrix
   texts:
@@ -5894,1390 +7450,3 @@ NeuheitslevelOffen:
       Markt ist: Können Sie nachfolgend kurz beschreiben, was die Neuheit ausmacht:'
   section_name: Ökonomische Projektwirkungen
   section_index: 4
-KontaktCheck_1_1:
-  element_type: OpenQuestion
-  texts:
-    en: Full name of main applicant
-  section_name: Personalien
-KontaktCheck_4_1:
-  element_type: OpenQuestion
-  texts:
-    en: Title of BRIDGE Proof of Concept project (as in application)
-  section_name: Personalien
-BerufzielZuBeginn:
-  element_type: MultipleChoice
-  texts:
-    en: At the start of the BRIDGE Proof of Concept project, what was your intended
-      career or professional direction?
-  section_name: Personalien
-  choices:
-  - code: '1'
-    texts:
-      en: Continue and further develop my current role in academia
-  - code: '2'
-    texts:
-      en: Found or co-found a start-up
-  - code: '3'
-    texts:
-      en: Transition from academia to industry
-  - code: '4'
-    texts:
-      en: Transition from academia to the public sector
-  - code: '5'
-    texts:
-      en: Transition from academia to a non-profit / NGO context
-  - code: '6'
-    texts:
-      en: Explore new career options without a fixed plan
-  - code: '9'
-    texts:
-      en: 'Other (please specify): '
-BerufsstatusAktuell:
-  element_type: Matrix
-  texts:
-    en: Which of the following professional situations currently applies to you?
-  section_name: Personalien
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Current professional situation
-  - code: '3'
-    texts:
-      en: Foreseeable future situation (in the next 12 to 24 months
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Founder / co-founder of a start-up or company
-  - code: '2'
-    texts:
-      en: Employed in a start-up or young company
-  - code: '3'
-    texts:
-      en: 'Employed in an established company (industry / SME / corporate group) '
-  - code: '4'
-    texts:
-      en: Employed in the public sector
-  - code: '5'
-    texts:
-      en: Employed in a non-profit / NGO organisation
-  - code: '6'
-    texts:
-      en: 'Employed in academia or a research institution '
-  - code: '7'
-    texts:
-      en: Self-employed / freelancer
-  - code: '8'
-    texts:
-      en: Currently not employed / in transition
-  - code: '9'
-    texts:
-      en: Other (please specify)
-BerufstandAktuellAnders:
-  element_type: Matrix
-  texts:
-    en: ''
-  section_name: Personalien
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: 'Please specify the other situation:'
-  matrix_columns:
-  - code: '9'
-    texts:
-      en: 'Current professional situation '
-  - code: '10'
-    texts:
-      en: Foreseeable future situation (in the next 12 to 24 months
-AktSitRelatedToBridge:
-  element_type: Matrix
-  texts:
-    en: To what extent is your current or future professional situation related to
-      the BRIDGE Proof of Concept project?
-  section_name: Personalien
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: ''
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: not related
-  - code: '2'
-    texts:
-      en: weakly related
-  - code: '3'
-    texts:
-      en: rather weakly related
-  - code: '4'
-    texts:
-      en: rather strongly related
-  - code: '5'
-    texts:
-      en: strongly related
-  - code: '6'
-    texts:
-      en: very strongly related
-  - code: '99'
-    texts:
-      en: don't know / no answer
-Nachhaltigkeitoffen:
-  element_type: OpenQuestion
-  texts:
-    en: 'Please describe the contribution to environmental sustainability in a few
-      sentences:'
-  section_name: Characteristics of your BRIDGE Proof of Concept project
-  section_index: 1
-NachhaltigkeitSozialOffen:
-  element_type: OpenQuestion
-  texts:
-    en: 'Please describe the contribution to social sustainability in a few sentences:'
-  section_name: Characteristics of your BRIDGE Proof of Concept project
-  section_index: 1
-FundingBefore:
-  element_type: SingleChoice
-  texts:
-    en: Before submitting your BRIDGE Proof of Concept project, were the scientific
-      foundations or the underlying project idea (for Proof of Concept) previously
-      supported by funding from the SNSF or Innosuisse?
-  section_name: Project development
-  section_index: 2
-  choices:
-  - code: '1'
-    texts:
-      en: 'Yes'
-  - code: '2'
-    texts:
-      en: 'No'
-  - code: '3'
-    texts:
-      en: Don't know / no answer
-FundedBeforeBy:
-  element_type: MultipleChoice
-  texts:
-    en: 'Which funding instruments supported the scientific foundations or project
-      idea prior to the BRIDGE Proof of Concept ?<br><span style="font-size: 10px;"><br></span>'
-  section_name: Project development
-  section_index: 2
-  choices:
-  - code: '15'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>SNSF
-        funding</strong></div>SNSF project funding
-  - code: '1'
-    texts:
-      en: SNSF career funding
-  - code: '16'
-    texts:
-      en: SNSF National Centres of Competence in Research (NCCR)<br>please provide
-        NCCR number and name
-  - code: '17'
-    texts:
-      en: SNSF National Research Programmes (NRP)<br>please provide the programme
-        number and title of the project
-  - code: '18'
-    texts:
-      en: 'Other SNSF funding instrument:'
-  - code: '3'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Innosuisse
-        funding</strong></div>Innovation project with implementation partner
-  - code: '4'
-    texts:
-      en: Innovation project without implementation partner
-  - code: '7'
-    texts:
-      en: International innovation funding (e.g. EUREKA/Eurostars via Innosuisse,
-        bilateral projects))
-  - code: '11'
-    texts:
-      en: Flagship projects
-  - code: '12'
-    texts:
-      en: Innovation booster
-  - code: '13'
-    texts:
-      en: SCEER (Swiss Competence Centers of Energy Research)
-  - code: '14'
-    texts:
-      en: Other Innosuisse funding (please specify)
-  - code: '10'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Other&nbsp;</strong></div>Other
-        (please specify)
-BridgeCoachingYesNo:
-  element_type: SingleChoice
-  texts:
-    en: Did you use the BRIDGE Coaching support (10 hours) during the project?
-  section_name: Project development
-  section_index: 2
-  choices:
-  - code: '6'
-    texts:
-      en: 'yes'
-  - code: '1'
-    texts:
-      en: 'no'
-BridgeCoachingNuetzlichkeit:
-  element_type: Matrix
-  texts:
-    en: How useful was the BRIDGE Coaching (10 hours) for you and your project?
-  section_name: Project development
-  section_index: 2
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all useful
-  - code: '2'
-    texts:
-      en: Slightly useful
-  - code: '3'
-    texts:
-      en: Rather sligthly useful
-  - code: '4'
-    texts:
-      en: Rather useful
-  - code: '5'
-    texts:
-      en: Useful
-  - code: '6'
-    texts:
-      en: Very useful
-  - code: '99'
-    texts:
-      en: Not applicable / no opinion
-BridgeCoachingNutzen_Offen:
-  element_type: OpenQuestion
-  texts:
-    en: In which areas was the BRIDGE Coaching most useful for you?
-  section_name: Project development
-  section_index: 2
-InnosuisseSupportYesNo:
-  element_type: Matrix
-  texts:
-    en: Did you use or are you planning to use any additional coaching or support
-      related to the implementation of the project?
-  section_name: Project development
-  section_index: 2
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Innosuisse Entrepreneurship Training
-  - code: '2'
-    texts:
-      en: Innosuisse Start-up Coaching
-  - code: '3'
-    texts:
-      en: Other, please specify
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: used
-  - code: '2'
-    texts:
-      en: planned
-  - code: '3'
-    texts:
-      en: neither
-NutzlichkeitTraining:
-  element_type: Matrix
-  texts:
-    en: How useful was the Innosuisse Entrepreneurship Training for you in relation
-      to your BRIDGE Proof of Concept project?
-  section_name: Project development
-  section_index: 2
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all useful
-  - code: '2'
-    texts:
-      en: Slightly useful
-  - code: '3'
-    texts:
-      en: Rather sligthly useful
-  - code: '4'
-    texts:
-      en: Rather useful
-  - code: '5'
-    texts:
-      en: Useful
-  - code: '6'
-    texts:
-      en: Very useful
-  - code: '99'
-    texts:
-      en: Not applicable / no opinion
-StartUpTrainingNutzen_offen:
-  element_type: OpenQuestion
-  texts:
-    en: In which areas was the Innosuisse Entrepreneurship Training most useful for
-      you?
-  section_name: Project development
-  section_index: 2
-AktuellerStatus:
-  element_type: SingleChoice
-  texts:
-    en: Which status best describes your BRIDGE Proof of Concept-funded project at
-      the end of the funding?<br><br>
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Start-ups
-        and spin-offs</strong></div> A start-up or spin-off has been established (legal
-        entity)
-  - code: '2'
-    texts:
-      en: ' A start-up or spin-off is in preparation or planned'
-  - code: '3'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Non-profit
-        initiatives</strong></div> A non-profit organisation / NGO has been established
-  - code: '4'
-    texts:
-      en: ' A non-profit organisation / NGO is in preparation or planned'
-  - code: '5'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Licensing
-        / transfer</strong></div> Licensing or transfer of results to a company or
-        organisation has been completed
-  - code: '6'
-    texts:
-      en: ' Licensing or transfer of results is planned or under negotiation'
-  - code: '7'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Collaboration
-        with partners</strong></div> Further development with an implementation partner
-        is ongoing&nbsp;(cooperation, employment)
-  - code: '8'
-    texts:
-      en: ' Further development with an implementation partner is planned&nbsp;(cooperation,
-        employment)'
-  - code: '9'
-    texts:
-      en: Project continues mainly in research and development (cooperation, further
-        employment)
-  - code: '11'
-    texts:
-      en: '<div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>Other</strong></div>
-        Project has been completed but not further implemented: overall feasibility
-        not confirmed (technical, business, organisational)'
-  - code: '10'
-    texts:
-      en: ' Other (please specify)'
-FinanzierungSicherheitFuerNaechstesJahr:
-  element_type: Matrix
-  texts:
-    en: To what extent is the financing of your project secured?
-  section_name: Implementation pathways
-  section_index: 3
-  matrix_rows:
-  - code: short
-    texts:
-      en: for the next 12 months
-  - code: long
-    texts:
-      en: and in a longer perspective (2 to 5 years)
-  matrix_columns:
-  - code: '2'
-    texts:
-      en: No financing / financing is not secured at all
-  - code: '3'
-    texts:
-      en: Financing is hardly secured
-  - code: '4'
-    texts:
-      en: Financing is partially secured
-  - code: '5'
-    texts:
-      en: Financing is largely secured
-  - code: '6'
-    texts:
-      en: Financing is fully secured
-  - code: '99'
-    texts:
-      en: Don’t know / not applicable
-ObstaclesFaced:
-  element_type: MultipleChoice
-  texts:
-    en: In which areas did you face the most significant barriers obstacles during
-      the project or in the follow-up phase after the end of the project?
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Research-to-Application
-        and Implementation Pathways&nbsp;</strong></div>Unclear pathway to application
-        or implementation
-  - code: '2'
-    texts:
-      en: Unclear pathway to application or implementation
-  - code: '3'
-    texts:
-      en: Intended start-up pathway not realistic or not suitable
-  - code: '4'
-    texts:
-      en: No suitable implementation (e.g. industry, public sector)
-  - code: '5'
-    texts:
-      en: Limited career opportunities outside academia
-  - code: '6'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Scientific,
-        Conceptual or Technical Challenges&nbsp;</strong></div>Scientific results
-        not sufficiently promising
-  - code: '7'
-    texts:
-      en: Technical or conceptional feasibility too low
-  - code: '8'
-    texts:
-      en: Scientific, methodological issues or data-related challenge
-  - code: '9'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Personal
-        or Career Related Factors&nbsp;</strong></div>Missing career opportunity outside
-        of BRIDGE Proof of Concept
-  - code: '10'
-    texts:
-      en: Lack of time or personal capacity
-  - code: '11'
-    texts:
-      en: Shift in personal or other priorities
-  - code: '12'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Institutional
-        or Resources-related Constraints&nbsp;</strong></div>Lack of staff or relevant
-        expertise
-  - code: '13'
-    texts:
-      en: No follow-up funding available
-  - code: '14'
-    texts:
-      en: High administrative or organisational burden
-  - code: '15'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Market
-        or Stakeholder-related Challenges&nbsp;</strong></div>Low or unclear market
-        potential or societal demand
-  - code: '16'
-    texts:
-      en: Collaboration challenges with partners or stakeholders
-  - code: '17'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Intellectual
-        Property and Legal Aspects&nbsp;</strong></div>Unclear ownership or access
-        to intellectual property
-  - code: '18'
-    texts:
-      en: Negotiation with host institution about intellectual property rights
-  - code: '19'
-    texts:
-      en: Limited support or clarity regarding IP strategy at the Proof of Concept
-        stage
-  - code: '20'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Other&nbsp;</strong></div>Other
-        factors (please specify)
-MainObstacle:
-  element_type: SingleChoice
-  texts:
-    en: Which of the selected obstacles is the main or most decisive one?
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: Unclear pathway to application or implementation
-  - code: '2'
-    texts:
-      en: Unclear pathway to application or implementation
-  - code: '3'
-    texts:
-      en: Intended start-up pathway not realistic or not suitable
-  - code: '4'
-    texts:
-      en: No suitable implementation (e.g. industry, public sector)
-  - code: '5'
-    texts:
-      en: Limited career opportunities outside academia
-  - code: '6'
-    texts:
-      en: Scientific results not sufficiently promising
-  - code: '7'
-    texts:
-      en: Technical or conceptional feasibility too low
-  - code: '8'
-    texts:
-      en: Scientific, methodological issues or data-related challenge
-  - code: '9'
-    texts:
-      en: Missing career opportunity outside of BRIDGE Proof of Concept
-  - code: '10'
-    texts:
-      en: Lack of time or personal capacity
-  - code: '11'
-    texts:
-      en: Shift in personal or other priorities
-  - code: '12'
-    texts:
-      en: Lack of staff or relevant expertise
-  - code: '13'
-    texts:
-      en: No follow-up funding available
-  - code: '14'
-    texts:
-      en: High administrative or organisational burden
-  - code: '15'
-    texts:
-      en: Low or unclear market potential or societal demand
-  - code: '16'
-    texts:
-      en: Collaboration challenges with partners or stakeholders
-  - code: '17'
-    texts:
-      en: Unclear ownership or access to intellectual property
-  - code: '18'
-    texts:
-      en: Negotiation with host institution about intellectual property rights
-  - code: '19'
-    texts:
-      en: Limited support or clarity regarding IP strategy at the Proof of Concept
-        stage
-  - code: '20'
-    texts:
-      en: '{{ObstaclesFaced_20_text}}'
-BRLStart:
-  element_type: Dropdown
-  texts:
-    en: Which Business Readiness Level (BRL) did your project have at the beginning
-      of the BRIDGE Proof of Concept funding?
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: '<strong>Early concept phase</strong><div style="margin-left: 20px;"><strong>BRL
-        1 &ndash; Basic hypotheses</strong></div><div style="margin-left: 20px;">Initial
-        hypotheses regarding a possible business, implementation or societal impact
-        concept.</div>'
-  - code: '2'
-    texts:
-      en: '<div style="margin-left: 20px;"><strong>BRL 2 &ndash; First business model
-        or concept described</strong><br>First description of a business, implementation
-        or societal impact concept. Initial understanding of target groups, needs
-        or problem context.</div>'
-  - code: '3'
-    texts:
-      en: '<strong>Business model and concept development phase&nbsp;</strong><div
-        style="margin-left: 20px;"><strong>BRL 3 &ndash; Development of business model
-        or concept</strong><br>Draft business model or draft implementation / impact
-        logic. <br>Market potential and/or societal relevance and stakeholder landscape
-        described.</div>'
-  - code: '4'
-    texts:
-      en: '<div style="margin-left: 20px;"><strong>BRL 4 &ndash; First validated business
-        model or concept</strong><br>First structured business model or implementation
-        and impact concept. Initial projections of economic viability, market potential
-        and/or societal relevance. <br>Initial assumptions on feasibility, relevance
-        and potential effects.</div>'
-  - code: '5'
-    texts:
-      en: '<strong>Validation phase&nbsp;</strong><div style="margin-left: 20px;"><strong>BRL
-        5 &ndash; Business model or concept testing<br></strong>Testing of the business
-        model or of implementation pathways, user acceptance or societal relevance.
-        Key assumptions validated with external stakeholders or; where applicable,
-        first revenue model and initial competitive positioning.</div>'
-  - code: '6'
-    texts:
-      en: '<div style="margin-left: 20px;"><strong>BRL 6 &ndash; Advanced business
-        model or concept validation<br></strong>Business model or implementation /
-        impact concept largely validated. <br>Pricing or cost assumptions verified
-        with customers, users or implementing actors, where applicable Product-market
-        fit and finetuning</div>'
-  - code: '7'
-    texts:
-      en: '<div style="margin-left: 20px;"><strong>BRL 7 &ndash; Demonstrated applicability
-        and relevance<br></strong>Product-market fit or solution/context fit demonstrated.
-        <br>Clear value proposition for customers or beneficiaries and implementing
-        actors.</div>'
-  - code: '8'
-    texts:
-      en: '<div style="margin-left: 20px;"><strong>BRL 8 &ndash; Business model or
-        concept finetuned<br></strong>Business model or broader implementation readiness
-        / impact model refined. <br>Evidence that the approach is robust and transferable
-        to broader contexts.</div>'
-  - code: '9'
-    texts:
-      en: '<div><strong>Scaling and broader implementation&nbsp;</strong></div><div
-        style="margin-left: 20px;"><strong>BRL 9 &ndash; Scaling and implementation
-        readiness<br></strong>Business scaling with recurring revenues or readiness
-        for larger-scale implementation, institutional embedding or policy uptake.</div>'
-  - code: '99'
-    texts:
-      en: BRL not applicable / don't know
-BRLEnd:
-  element_type: Dropdown
-  texts:
-    en: Which Business Readiness Level (BRL) best describes the status of your project
-      at the end of the BRIDGE Proof of Concept funding?
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: <strong>Basic hypotheses</strong><br>BRL 1 - Hypothesizing on possible business
-        concept
-  - code: '2'
-    texts:
-      en: BRL 2 - First business concept described. Identified overall market & some
-        competitors.
-  - code: '3'
-    texts:
-      en: <strong>Development of business model</strong><br>BRL 3 - Draft of business
-        model. Described market potential & competitive overview.
-  - code: '4'
-    texts:
-      en: BRL 4 - First version of business model, first projections of economic viability
-        & market potential
-  - code: '5'
-    texts:
-      en: BRL 5 - Business model testing, first revenue model, competitive position
-        verified im market
-  - code: '6'
-    texts:
-      en: BRL 6 - Full business model including pricing verified on customers
-  - code: '7'
-    texts:
-      en: <strong>Product market fit / finetuning</strong><br>BRL 7 - Product/market
-        fit demonstrated. Attractive revenue/cost projections.
-  - code: '8'
-    texts:
-      en: BRL 8 - Business model is finetuned. Sales & metrics show business model
-        holds and can scale
-  - code: '9'
-    texts:
-      en: <strong>Business scaling</strong><br>BRL 9 - Business model finalised. Business
-        scaling with recurring revenues
-  - code: '10'
-    texts:
-      en: BRL not applicable / don't know
-OutcomeAchievedEnd:
-  element_type: Matrix
-  texts:
-    en: To what extent have the following outcomes been achieved by the end of your
-      BRIDGE Proof of Concept project?
-  section_name: Implementation pathways
-  section_index: 3
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: '<div style="font-weight:bold;background-color:lightgrey;width:100%;"><strong>Concrete
-        outputs and validation</strong></div><div style="margin-left: 20px;">Prototype,
-        demonstrator or Minimum Viable Product developed (incl. user perspective)</div>'
-  - code: '2'
-    texts:
-      en: '<div style="margin-left: 20px;">Technical or methodological feasibility
-        validated</div>'
-  - code: '3'
-    texts:
-      en: '<div style="margin-left: 20px;">Business feasibility or implementation
-        pathways clarified</div>'
-  - code: '4'
-    texts:
-      en: '<div style="font-weight:bold;background-color:lightgrey;width:100%;"><strong>Implementation
-        and exploitation</strong></div><div style="margin-left: 20px;">Market, user
-        or societal demand verified</div>'
-  - code: '5'
-    texts:
-      en: '<div style="margin-left: 20px;">Preparation for implementation (e.g. start-up,
-        licensing, organisation)</div>'
-  - code: '6'
-    texts:
-      en: '<div style="margin-left: 20px;">Establishment or strengthening of cooperation
-        with potential implementation partners</div>'
-  - code: '7'
-    texts:
-      en: '<div style="margin-left: 20px;">Employment in a business environment</div>'
-  - code: '8'
-    texts:
-      en: '<div style="margin-left: 20px;">Licensing or sale of results to a company
-        or organisation</div>'
-  - code: '9'
-    texts:
-      en: '<div style="font-weight:bold;background-color:lightgrey;width:100%;"><strong>Intellectual
-        property and funding</strong></div><div style="margin-left: 20px;">Securing
-        intellectual property / filing a patent or similar protection (licences)</div>'
-  - code: '10'
-    texts:
-      en: '<div style="margin-left: 20px;">Follow-up funding acquired or prepared</div>'
-  - code: '11'
-    texts:
-      en: '<div style="font-weight:bold;background-color:lightgrey;width:100%;"><strong>Societal
-        and other impacts</strong></div><div style="margin-left: 20px;">Contribution
-        to a societal, environmental or technological challenge</div>'
-  - code: '12'
-    texts:
-      en: '<div style="margin-left: 20px;">Other results or impacts achieved (please
-        specify)</div>'
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not relevant for my BRIDGE Proof of Concept project
-  - code: '2'
-    texts:
-      en: not achieved
-  - code: '3'
-    texts:
-      en: slightly achieved
-  - code: '4'
-    texts:
-      en: rather slightly achieved
-  - code: '5'
-    texts:
-      en: rather achieved
-  - code: '6'
-    texts:
-      en: fully achieved
-  - code: '7'
-    texts:
-      en: 'exceeded expectations '
-OutcomesAdditionalitaet:
-  element_type: Matrix
-  texts:
-    en: How likely is it that the above-mentioned outcomes would have been achieved
-      without BRIDGE funding?
-  section_name: Implementation pathways
-  section_index: 3
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: ''
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: not at all – only possible because of BRIDGE
-  - code: '2'
-    texts:
-      en: unlikely
-  - code: '3'
-    texts:
-      en: rather unlikely
-  - code: '4'
-    texts:
-      en: rather likely
-  - code: '5'
-    texts:
-      en: likely
-  - code: '6'
-    texts:
-      en: very likely – would have happened anyway
-  - code: '7'
-    texts:
-      en: no answer possible
-WahrscheinlichkeitUmsetzung:
-  element_type: Matrix
-  texts:
-    en: How likely is it that&nbsp;your innovation will achieve implementation on
-      the market and/or in society in the medium to long term (e.g. through sales,
-      licensing, integration into an organisation, continued use or long-term application)?
-  section_name: Implementation pathways
-  section_index: 3
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: not at all likely
-  - code: '2'
-    texts:
-      en: slightly likely
-  - code: '3'
-    texts:
-      en: rather unlikely
-  - code: '4'
-    texts:
-      en: rather likely
-  - code: '5'
-    texts:
-      en: likely
-  - code: '6'
-    texts:
-      en: very likely
-BeitragZuStartupGruendung:
-  element_type: Matrix
-  texts:
-    en: To what extent did the BRIDGE Proof of Concept funding contribute to the implementation
-      of your innovative idea?
-  section_name: 'Impact of the BRIDGE support '
-  section_index: 4
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Decision for founding a start-up or to pursue an implementation pathway
-  - code: '2'
-    texts:
-      en: Timing or acceleration of the founding or implementation process
-  - code: '3'
-    texts:
-      en: Quality of the start-up or implementation setup
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all
-  - code: '2'
-    texts:
-      en: Slightly
-  - code: '3'
-    texts:
-      en: Rather weak
-  - code: '4'
-    texts:
-      en: Rather strong
-  - code: '5'
-    texts:
-      en: Strong
-  - code: '6'
-    texts:
-      en: Essential (the implementation would not have occurred&nbsp;without BRIDGE
-        funding)
-IPR_Ergebnisse:
-  element_type: Matrix
-  texts:
-    en: What kind of intellectual property rights protection is being realised and
-      planned?
-  section_name: Property rights
-  section_index: 5
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Patent application(s)
-  - code: '2'
-    texts:
-      en: Trademark(s) / Copyright / Design right(s)
-  - code: '3'
-    texts:
-      en: <strong>In-licensing</strong> (rights to use, develop, or commercialize
-        intellectual property assets that are owned by another entity)
-  - code: '4'
-    texts:
-      en: <strong>Out-licensing</strong> (granting another entity the rights to use,
-        develop, or commercialize its own intellectual property assets)
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: planned
-  - code: '2'
-    texts:
-      en: already realised
-  - code: '3'
-    texts:
-      en: not relevant
-StartUpEntwicklungsstand:
-  element_type: Matrix
-  texts:
-    en: What is the current development status of your organisation or implementation
-      setup with regard to the following elements?
-  section_name: 'Start-up Development '
-  section_index: 6
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: '<div style="left:0px;top:-15px;font-weight:bold;background-color:lightgrey;"><strong>Team
-        &amp; Organisation</strong></div><div style="margin-left: 20px;">Founding
-        team assembled</div>'
-  - code: '2'
-    texts:
-      en: '<div style="margin-left: 20px;">Basic company structures set up (e.g. roles,
-        responsibilities, processes)</div>'
-  - code: '3'
-    texts:
-      en: '<div style="margin-left: 20px;">Suitable location or infrastructure identified</div>'
-  - code: '4'
-    texts:
-      en: '<div style="margin-left: 20px;">Legal entity registered or preparations
-        underway</div>'
-  - code: '5'
-    texts:
-      en: '<div style="left:0px;top:-15px;font-weight:bold;background-color:lightgrey;"><strong>Market
-        &amp; Business</strong></div><div style="margin-left: 20px;">Initial contacts
-        established with potential customers or pilot partners</div>'
-  - code: '6'
-    texts:
-      en: '<div style="margin-left: 20px;">Minimum viable product (MVP developed or
-        tested</div>'
-  - code: '7'
-    texts:
-      en: '<div style="margin-left: 20px;">First customers acquired and / or renvenues
-        achieved</div>'
-  - code: '8'
-    texts:
-      en: '<div style="left:0px;top:-15px;font-weight:bold;background-color:lightgrey;"><strong>Funding
-        &amp; Strategy</strong></div><div style="margin-left: 20px;">Initial funding
-        plan or financing options mapped out</div>'
-  - code: '9'
-    texts:
-      en: '<div style="margin-left: 20px;">Preliminary go-to-market approach outlined</div>'
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not started
-  - code: '2'
-    texts:
-      en: In progress
-  - code: '3'
-    texts:
-      en: Mostly completed
-  - code: '4'
-    texts:
-      en: Fully completed
-  - code: '5'
-    texts:
-      en: Not relevant
-StartupGruendungWann:
-  element_type: SingleChoice
-  texts:
-    en: When did or will the foundation of a start-up related to your BRIDGE Proof
-      of Concept project take place?
-  section_name: 'Start-up Development '
-  section_index: 6
-  choices:
-  - code: '1'
-    texts:
-      en: Before the start of the BRIDGE PoC project
-  - code: '2'
-    texts:
-      en: Shortly after the start of the project
-  - code: '3'
-    texts:
-      en: During the project (before completion)
-  - code: '4'
-    texts:
-      en: After completion of the project
-  - code: '5'
-    texts:
-      en: Not yet founded, but planned
-PersonalCH:
-  element_type: OpenQuestion
-  texts:
-    en: How many employees (FTE) did your company have at the end of [previous year]
-      / currently (full-time equivalents, FTE)?
-  section_name: 'Start-up Development '
-  section_index: 6
-RK_Akquise:
-  element_type: SingleChoice
-  texts:
-    en: Since the founding of your start-up, have you undertaken concrete efforts
-      to raise risk capital (dilutive funding)?
-  section_name: 'Start-up Development '
-  section_index: 6
-  choices:
-  - code: '1'
-    texts:
-      en: Yes, with successful financing
-  - code: '2'
-    texts:
-      en: Yes, but without a successful outcome so far
-  - code: '3'
-    texts:
-      en: No, not yet
-  - code: '4'
-    texts:
-      en: No, we are pursuing a bootstrapping strategy (financing exclusively through
-        internal resources and revenues; no external equity financing planned)
-  - code: '99'
-    texts:
-      en: Can’t answer
-InvestorsContacted:
-  element_type: MultipleChoice
-  texts:
-    en: Which type(s) of investors provided the financing or were actively approached?
-  section_name: 'Start-up Development '
-  section_index: 6
-  choices:
-  - code: '1'
-    texts:
-      en: Family, Friends and Fools (FFF)
-  - code: '2'
-    texts:
-      en: Business Angels
-  - code: '3'
-    texts:
-      en: Venture capital investors
-  - code: '4'
-    texts:
-      en: Corporate or strategic investors
-  - code: '5'
-    texts:
-      en: 'Other (please specify): '
-NonDilutivesPrices:
-  element_type: Matrix
-  texts:
-    en: Have you raised other funds&nbsp;(non-dilutive) at home or abroad (since the
-      start-up was established)?
-  section_name: 'Start-up Development '
-  section_index: 6
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Scholarships
-  - code: '2'
-    texts:
-      en: Prizes
-  - code: '3'
-    texts:
-      en: Grants not to be reimbursed
-  - code: '4'
-    texts:
-      en: 'Other, please specify:'
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: 'yes'
-  - code: '2'
-    texts:
-      en: 'no'
-  - code: '99'
-    texts:
-      en: can't answer
-KarriereNuetzlichkeit:
-  element_type: Matrix
-  texts:
-    en: To what extent did the BRIDGE Proof of Concept project contribute to your
-      knowledge development and career development?
-  section_name: Career path
-  section_index: 7
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: <strong>Development of knowledge and understanding</strong><br><em>(e.g.
-        scientific, technical, entrepreneurial or application-related knowledge)</em>
-  - code: '2'
-    texts:
-      en: <strong>Concrete career development</strong><br><em>(e.g. new career direction,
-        transition to another sector, strengthened professional role)</em>
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all
-  - code: '2'
-    texts:
-      en: Slightly
-  - code: '3'
-    texts:
-      en: Rather slightly
-  - code: '4'
-    texts:
-      en: Rather strongly
-  - code: '5'
-    texts:
-      en: Strongly
-  - code: '6'
-    texts:
-      en: Very strongly
-  - code: '99'
-    texts:
-      en: Not relevant for my situation
-KarriereNutzenFuer:
-  element_type: MultipleChoice
-  texts:
-    en: In which areas did the BRIDGE PoC funding contribute most to your career development?
-  section_name: Career path
-  section_index: 7
-  choices:
-  - code: '1'
-    texts:
-      en: Improving employability outside academia
-  - code: '2'
-    texts:
-      en: Strengthening professional networks
-  - code: '3'
-    texts:
-      en: Developing entrepreneurial and innovation skills
-  - code: '4'
-    texts:
-      en: Gaining experience in project management and leadership
-  - code: '5'
-    texts:
-      en: Increasing visibility or reputation within the research community
-  - code: '6'
-    texts:
-      en: Enhancing confidence to take risks or pursue new ideas
-  - code: '7'
-    texts:
-      en: Other (please specify)
-ImagineOffer:
-  element_type: SingleChoice
-  texts:
-    en: Imagine you received an attractive job offer from a prestigious research institution
-      or company, but accepting it would mean discontinuing your work on commercializing
-      or practically implementing your BRIDGE innovation. What would you do?
-  section_name: Career path
-  section_index: 7
-  choices:
-  - code: '1'
-    texts:
-      en: Accept the position – advancing my research career is the priority
-  - code: '2'
-    texts:
-      en: Negotiate to continue the innovation work part-time or in parallel
-  - code: '3'
-    texts:
-      en: Decline the offer – bringing this innovation to application is too important
-  - code: '4'
-    texts:
-      en: Accept, but plan to return to the innovation later
-  - code: '5'
-    texts:
-      en: Not sure / depends on circumstances
-EinbezugKunden:
-  element_type: MultipleChoice
-  texts:
-    en: Were customers or users actively involved in the development within your BRIDGE
-      Proof of Concept project?
-  section_name: Entrepreneurial Mindset and Behaviour
-  section_index: 8
-  choices:
-  - code: '1'
-    texts:
-      en: No, customers or users were not actively involved
-  - code: '2'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Exporation
-        and early feedback&nbsp;</strong></div>Interviews, surveys or exploratory
-        feedback
-  - code: '3'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Validation&nbsp;</strong></div>Testing
-        with prototypes, mock-ups or demonstrators
-  - code: '4'
-    texts:
-      en: Pilot projects or test phases with users, customers or beneficiaries
-  - code: '5'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Market-oriented
-        or contextual validation (where applicable)&nbsp;</strong></div>Letters of
-        Intent (LoI) or Memoranda of Understanding (MoU)
-  - code: '6'
-    texts:
-      en: Testing willingness to pay or willingness to adopt
-  - code: '7'
-    texts:
-      en: Initial sales, pre-orders or comparable commitments
-  - code: '8'
-    texts:
-      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;"><strong>&nbsp;Other&nbsp;</strong></div>Other
-        activities, (please specify)
-BeitragSoftImpacts:
-  element_type: Matrix
-  texts:
-    en: To what extent did the BRIDGE Proof of Concept funding support you in the
-      following aspects?
-  section_name: Entrepreneurial Mindset and Behaviour
-  section_index: 8
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Recognising opportunities and thinking entrepreneurially
-  - code: '2'
-    texts:
-      en: Experimenting with ideas and validating assumptions
-  - code: '3'
-    texts:
-      en: Dealing with uncertainty, setbacks and learning from failure
-  - code: '4'
-    texts:
-      en: Bringing innovation ideas into practice<br>(e.g. engaging users, beneficiaries,
-        partners or markets)
-  - code: '5'
-    texts:
-      en: Enhancing negotiation and interaction skills<br>
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all
-  - code: '2'
-    texts:
-      en: Slightly
-  - code: '3'
-    texts:
-      en: Rather weak
-  - code: '4'
-    texts:
-      en: Rather strong
-  - code: '5'
-    texts:
-      en: Strong
-  - code: '6'
-    texts:
-      en: 'Essential '
-BeitragKompetenzen:
-  element_type: Matrix
-  texts:
-    en: To what extent did the BRIDGE Proof of Concept funding strengthen your entrepreneurial
-      and innovation-related competencies?
-  section_name: Entrepreneurial Mindset and Behaviour
-  section_index: 8
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Customer, user or beneficiary discovery (problem–solution fit)
-  - code: '2'
-    texts:
-      en: Developing and testing ideas in practice
-  - code: '3'
-    texts:
-      en: 'Building networks and partnerships relevant for implementation
-
-        <br>(e.g. companies, public sector, NGOs or other organisations)'
-  - code: '4'
-    texts:
-      en: Leading and taking responsibility for implementation
-  - code: '5'
-    texts:
-      en: Designing value propositions and implementation or business models
-  - code: '6'
-    texts:
-      en: 'Go-to-market or implementation basics<br>
-
-        (e.g. positioning, channels, pricing, cost recovery or adoption tests)'
-  - code: '7'
-    texts:
-      en: 'Understanding and preparing financing options for further development
-
-        <br>(e.g. private, public or blended financing)'
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all
-  - code: '2'
-    texts:
-      en: Slightly
-  - code: '3'
-    texts:
-      en: Rather weak
-  - code: '4'
-    texts:
-      en: Rather strong
-  - code: '5'
-    texts:
-      en: Strong
-  - code: '6'
-    texts:
-      en: Essential (would not have developed without funding)
-Zielerreichung:
-  element_type: Matrix
-  texts:
-    en: Overall, how successful do you consider your BRIDGE Proof of Concept project
-      to have been in achieving its intended objectives?
-  section_name: Overall assessment
-  section_index: 9
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all successful
-  - code: '2'
-    texts:
-      en: Slightly successful
-  - code: '3'
-    texts:
-      en: Rather sligtly successful
-  - code: '4'
-    texts:
-      en: Rather successful
-  - code: '5'
-    texts:
-      en: Successful
-  - code: '6'
-    texts:
-      en: Very successful
-ZufriedenheitOverall:
-  element_type: Matrix
-  texts:
-    en: Overall, how satisfied are you with the BRIDGE Proof of Concept funding and
-      support?
-  section_name: Overall assessment
-  section_index: 9
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all satisfied
-  - code: '2'
-    texts:
-      en: Slightly satisfied
-  - code: '3'
-    texts:
-      en: Rather slightly satisfied
-  - code: '4'
-    texts:
-      en: Rather satisfied
-  - code: '5'
-    texts:
-      en: Satisfied
-  - code: '6'
-    texts:
-      en: Very satisfied
-Zufriedenheit_Umsetzung:
-  element_type: Matrix
-  texts:
-    en: Specifically, how satisfied are you with the support you received during the
-      project?
-  section_name: Overall assessment
-  section_index: 9
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Support from the university/research institution (e.g., Research Office,
-        Technology Transfer Office, etc.)
-  - code: '2'
-    texts:
-      en: Support from the BRIDGE Office
-  - code: '3'
-    texts:
-      en: Support from SNSF and/or Innosuisse
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all satisfied
-  - code: '2'
-    texts:
-      en: Slightly satisfied
-  - code: '3'
-    texts:
-      en: Rather slightly satisfied
-  - code: '4'
-    texts:
-      en: Rather satisfied
-  - code: '5'
-    texts:
-      en: Satisfied
-  - code: '6'
-    texts:
-      en: Very satisfied
-GutwarOffen:
-  element_type: OpenQuestion
-  texts:
-    en: Looking back at your participation in the BRIDGE Proof of Concept programme:<br>What
-      worked particulary well?
-  section_name: Overall assessment
-  section_index: 9
-VerbesserungOffen:
-  element_type: OpenQuestion
-  texts:
-    en: Where do you see room for improvement?
-  section_name: Overall assessment
-  section_index: 9
