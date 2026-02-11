@@ -21,7 +21,7 @@
       "fr"
     ],
     "sections": {
-      "(OhneTitel) Identifikation und Weichenfragen": [
+      "Identifikation und Weichenfragen": [
         "KontaktCheck",
         "GenerelleEmail",
         "UnternehmenArt",
@@ -46,10 +46,13 @@
         "InnoArt",
         "AusmassDisruptivitaet",
         "FoerderSNF",
-        "FoerderInnosuisse"
+        "FoerderInnosuisse",
+        "NeueKompetenzen",
+        "Disziplinaritaet"
       ],
-      "ProjektLancierung fur MitUP": [
-        "ErstesTreffen"
+      "Projektlancierung und Ziele": [
+        "ErstesTreffen",
+        "StrategischeZiele"
       ],
       "Ursprung der Idee": [
         "Foerder",
@@ -67,10 +70,18 @@
         "IPR_Inhaber",
         "ErgebnisAnlagenPrototyp",
         "BeurteilungForPar",
-        "ForParAngestellt"
-      ],
-      "Projektlancierung und Ziele": [
-        "StrategischeZiele"
+        "ForParAngestellt",
+        "IPR_Geregelt",
+        "IPRVereinbarung",
+        "TRL",
+        "Nachhaltigkeit_1",
+        "Nachhaltigkeit_2",
+        "IPRInhaber",
+        "IPRForm",
+        "IPRFormRegistrierung",
+        "IPR_Unterstuetzung",
+        "ErgebnisseGeplant",
+        "ErgebnisseAbgeschlossen"
       ],
       "Ökonomische Projektwirkungen": [
         "PersonalFuE",
@@ -87,16 +98,14 @@
       "Zielerreichung des Innovationscheck": [
         "WichtigsteZiele",
         "ErgebnisseErreicht",
-        "ZielNichtGrund_ISf"
+        "ZielNichtGrund_ISf",
+        "ErgebnisseWeitere"
       ],
       "Weitere, nicht ökonomische Wirkungen": [
         "Nachhaltigkeit",
         "NachhaltigkeitOffen",
         "WirkFoerderung",
         "WirkProjekt"
-      ],
-      "Ergebnisse des Innovationschecks": [
-        "ErgebnisseWeitere"
       ],
       "Zusammenarbeit Im Projekt (Start Nicht UP)": [
         "ZusArbeit_Doch",
@@ -115,13 +124,17 @@
         "SozialerOffen",
         "ProjektBenefit",
         "GesamtNutzen",
-        "EinflussProjekt"
+        "EinflussProjekt",
+        "WirkProjekt_InEinheit",
+        "ForschungWeiter"
       ],
-      "Weiterfuehrung": [
+      "Weiterführung des Projekts": [
         "WeiterEntwickelt",
         "WeiterEntForm",
         "WeiterEntPhase",
-        "WeiterEntNichtGrund"
+        "WeiterEntNichtGrund",
+        "ProjektWeiter",
+        "UmsetzungWahrscheinlich"
       ],
       "Zusammenarbeit im Projekt (Weiter)": [
         "ZusArbeitBeurteilung",
@@ -137,7 +150,10 @@
         "Stellenwert",
         "Involvement",
         "Zufriedenheit",
-        "ZufNichtGrund"
+        "ZufNichtGrund",
+        "Nutzen",
+        "Verbesserungen",
+        "WeitereVerbesserungen"
       ],
       "Zusammenarbeit mit Forschungspartner": [
         "ForPaZA_ErstesMal",
@@ -158,46 +174,6 @@
         "C19_EinflussInnokraft",
         "C19_Offen"
       ],
-      "Weiterführung des Projekts": [
-        "ProjektWeiter",
-        "UmsetzungWahrscheinlich"
-      ],
-      "Eigentumsrechte": [
-        "IPR_Geregelt"
-      ],
-      "IPR (Teil UP Start)": [
-        "IPRVereinbarung"
-      ],
-      "Eigenschaften der Innovation": [
-        "TRL",
-        "Nachhaltigkeit_1",
-        "Nachhaltigkeit_2"
-      ],
-      "IPR (Rest)": [
-        "IPRInhaber",
-        "IPRForm",
-        "IPRFormRegistrierung",
-        "IPR_Unterstuetzung"
-      ],
-      "Zufriedenheit mit Innosuisse Programm": [
-        "Nutzen",
-        "Verbesserungen",
-        "WeitereVerbesserungen"
-      ],
-      "Charakterisierung (TRL ) + Komeptenzen": [
-        "NeueKompetenzen"
-      ],
-      "Charakterisierung (Surveyübergreifend)": [
-        "Disziplinaritaet"
-      ],
-      "Zielerreichung und Ergebnisse": [
-        "ErgebnisseGeplant",
-        "ErgebnisseAbgeschlossen"
-      ],
-      "Wirkungen und Nutzen": [
-        "WirkProjekt_InEinheit",
-        "ForschungWeiter"
-      ],
       "Zufriedenheit": [
         "ZufriedenNichtOffen"
       ],
@@ -208,8 +184,35 @@
     },
     "total_questions": 122,
     "section_aliases": {
+      "Identifikation und Weichenfragen": [
+        "(OhneTitel) Identifikation und Weichenfragen"
+      ],
+      "Projektlancierung und Ziele": [
+        "ProjektLancierung fur MitUP"
+      ],
+      "Ergebnisse": [
+        "IPR (Teil UP Start)",
+        "IPR (Rest)",
+        "Zielerreichung und Ergebnisse",
+        "Eigentumsrechte",
+        "Eigenschaften der Innovation"
+      ],
       "Charakterisierung des Projekts": [
-        "Charakterisierung des Projektes"
+        "Charakterisierung des Projektes",
+        "Charakterisierung (TRL ) + Komeptenzen",
+        "Charakterisierung (Surveyübergreifend)"
+      ],
+      "Nutzen": [
+        "Wirkungen und Nutzen"
+      ],
+      "Projekterfolg und Abschluss": [
+        "Zufriedenheit mit Innosuisse Programm"
+      ],
+      "Zielerreichung des Innovationscheck": [
+        "Ergebnisse des Innovationschecks"
+      ],
+      "Weiterführung des Projekts": [
+        "Weiterfuehrung"
       ]
     }
   },
