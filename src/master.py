@@ -15,6 +15,7 @@ from src.models import (
     MatrixRow,
     Question,
 )
+from src.parse import clean_text
 
 
 # ---------------------------------------------------------------------------
@@ -88,7 +89,7 @@ def load_master(path: str | Path) -> dict[str, Any]:
 # ---------------------------------------------------------------------------
 
 def _dict_to_texts(d: dict[str, str]) -> list[LocalizedText]:
-    return [LocalizedText(language=lang, text=text) for lang, text in d.items()]
+    return [LocalizedText(language=lang, text=clean_text(text)) for lang, text in d.items()]
 
 
 def _dict_to_choice(d: dict[str, Any], idx: int) -> AnswerOption:

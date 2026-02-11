@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import html
 import json
 import re
 from pathlib import Path
@@ -56,12 +57,24 @@ def extract_short_name(filename: str) -> str:
 # Low-level helpers
 # ---------------------------------------------------------------------------
 
+_RE_HTML_TAG = re.compile(r"<[^>]+>")
+
+
+def clean_text(text: str) -> str:
+    """Strip HTML tags and decode HTML entities from survey text."""
+    text = _RE_HTML_TAG.sub("", text)       # remove <...> tags
+    text = html.unescape(text)              # &nbsp; → space, &amp; → &, etc.
+    text = text.replace("\u200b", "")        # remove zero-width spaces
+    text = re.sub(r"[ \t]+", " ", text)      # collapse multiple spaces
+    return text.strip()
+
+
 def _parse_localized(raw: list[dict[str, str]] | None) -> list[LocalizedText]:
     """Convert a Survalyzer multilingual text array to LocalizedText list."""
     if not raw:
         return []
     return [
-        LocalizedText(language=item["languageCode"].lower(), text=item.get("text", ""))
+        LocalizedText(language=item["languageCode"].lower(), text=clean_text(item.get("text", "")))
         for item in raw
     ]
 
