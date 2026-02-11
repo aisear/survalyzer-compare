@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'data/exports/**'
+      - 'config/section_aliases.yaml'
 
   workflow_dispatch:
 
