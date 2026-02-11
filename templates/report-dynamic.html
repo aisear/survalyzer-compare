@@ -97,6 +97,7 @@
   <div class="loading">Loading data...</div>
 </div>
 
+<!-- EMBEDDED_DATA_PLACEHOLDER -->
 <script>
 const STATUS_COLOR = {
   identical: 'green',
@@ -118,9 +119,14 @@ let hideUnmatched = true;   // hide questions not present in any selected target
 
 async function loadData() {
   try {
-    const response = await fetch('data.json');
-    if (!response.ok) throw new Error('Failed to load data.json');
-    DATA = await response.json();
+    // Try embedded data first (works offline / file://), fall back to fetch
+    if (typeof EMBEDDED_DATA !== 'undefined') {
+      DATA = EMBEDDED_DATA;
+    } else {
+      const response = await fetch('data.json');
+      if (!response.ok) throw new Error('Failed to load data.json');
+      DATA = await response.json();
+    }
     currentLanguage = DATA.meta.languages.includes('de-ch') ? 'de-ch' : DATA.meta.languages[0];
     currentReference = DATA.meta.default_reference || DATA.meta.sources[0];
     selectedTargets = DATA.meta.sources.filter(s => s !== currentReference);
