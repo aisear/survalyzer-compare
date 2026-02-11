@@ -6,86 +6,198 @@
 <title>Survalyzer Questionnaire Comparison</title>
 <style>
   :root {
-    --green: #d4edda;
-    --green-border: #28a745;
-    --blue: #d1ecf1;
-    --blue-border: #17a2b8;
-    --grey: #e9e9e9;
-    --grey-border: #aaa;
-    --lightgrey: #f5f5f5;
-    --lightgrey-border: #ccc;
+    --accent: #3B6CB4;
+    --accent-bg: rgba(59, 108, 180, 0.10);
+    --neutral: #E8E5E1;
+    --text: #1A1A1A;
+    --text-secondary: #777;
+    --rule: #E0E0E0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Arial, sans-serif; font-size: 14px; color: #333; padding: 20px; background: #fafafa; }
-  h1 { margin-bottom: 8px; }
-  .subtitle { margin-bottom: 16px; color: #666; font-size: 13px; }
-  .loading { text-align: center; padding: 40px; color: #666; }
-  .error { text-align: center; padding: 40px; color: #cc0000; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    padding: 32px;
+    background: #fff;
+    line-height: 1.5;
+  }
 
-  .summary { margin-bottom: 20px; padding: 12px 16px; background: #fff; border: 1px solid #ddd; border-radius: 6px; display: flex; gap: 24px; flex-wrap: wrap; }
-  .summary .stat { text-align: center; }
-  .summary .stat .num { font-size: 24px; font-weight: 700; }
-  .summary .stat .label { font-size: 12px; color: #666; text-transform: uppercase; }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .subtitle { font-size: 14px; color: #888; margin-bottom: 48px; }
+  .loading { text-align: center; padding: 48px; color: var(--text-secondary); }
+  .error { text-align: center; padding: 48px; color: #cc0000; }
 
-  .legend { margin-bottom: 16px; display: flex; gap: 12px; flex-wrap: wrap; }
-  .legend span { padding: 3px 10px; border-radius: 4px; font-size: 12px; }
-  .legend .green { background: var(--green); border: 1px solid var(--green-border); }
-  .legend .blue { background: var(--blue); border: 1px solid var(--blue-border); }
-  .legend .grey { background: var(--grey); border: 1px solid var(--grey-border); }
+  /* Summary bar */
+  .summary { margin-bottom: 24px; }
+  .summary-bar {
+    display: flex;
+    height: 8px;
+    width: 100%;
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .bar-identical { background: #fff; }
+  .bar-changed { background: var(--accent); }
+  .bar-missing { background: var(--neutral); }
+  .summary-text { font-size: 14px; color: var(--text-secondary); }
 
-  .filter-bar { margin-bottom: 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-  .filter-bar label { font-weight: 600; }
-  .filter-bar select, .filter-bar input { padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px; }
+  /* Toolbar */
+  .toolbar { margin-bottom: 24px; }
+  .toolbar-primary {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .toolbar-secondary {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .toolbar label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+  }
+  .toolbar select,
+  .toolbar input[type="text"] {
+    padding: 8px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-size: 14px;
+    color: var(--text);
+    background: #fff;
+  }
+  .target-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .target-option input[type="checkbox"] { cursor: pointer; }
+  .target-option > label {
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 400;
+    color: var(--text);
+  }
+  .checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text);
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 400;
+  }
 
-  .target-selector { margin-bottom: 16px; padding: 10px 16px; background: #fff; border: 1px solid #ddd; border-radius: 6px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-  .target-selector label.group-label { font-weight: 600; margin-right: 4px; }
-  .target-selector .target-option { display: flex; align-items: center; gap: 4px; }
-  .target-selector .target-option input { cursor: pointer; }
-  .target-selector .target-option label { cursor: pointer; font-size: 13px; }
+  /* Sections */
+  .section-group { margin-bottom: 32px; }
+  .section-title {
+    border-top: 2px solid var(--text);
+    padding: 8px 0 16px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    cursor: pointer;
+    background: none;
+  }
+  .section-title:hover { opacity: 0.7; }
+  .section-count {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+  .section-alias {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    margin-left: 8px;
+  }
 
-  .section-group { margin-bottom: 24px; }
-  .section-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; padding: 6px 12px; background: #e8e8e8; border-radius: 4px; cursor: pointer; }
-  .section-title:hover { background: #ddd; }
-  .section-alias { font-size: 11px; color: #888; font-weight: normal; margin-left: 8px; }
-
-  table { width: 100%; border-collapse: collapse; background: #fff; font-size: 12px; }
-  th, td { padding: 8px 10px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: none; border-right: none; text-align: left; vertical-align: top; }
-  th { background: #f5f5f5; font-weight: 600; position: sticky; top: 0; z-index: 2; }
-  th.survey-col { font-size: 11px; min-width: 80px; max-width: 120px; }
-  .code-col { width: 200px; }
-  .type-col { width: 110px; }
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 8px 16px; text-align: left; vertical-align: top; }
+  th {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--rule);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+  }
+  th.survey-col { min-width: 90px; max-width: 130px; text-align: center; }
+  .code-col { width: 180px; font-weight: 600; }
+  .type-col { width: 110px; color: var(--text-secondary); }
   .text-col { min-width: 200px; }
 
-  .cell-green { background: var(--green); }
-  .cell-blue { background: var(--blue); }
-  .cell-grey { background: var(--grey); }
-  .cell-lightgrey { background: var(--lightgrey); }
+  /* Row change indicators */
+  tr.row-changed > td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+  tr.row-missing > td:first-child { box-shadow: inset 3px 0 0 var(--neutral); }
 
-  .status-badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
-  .badge-identical { background: var(--green); color: #155724; }
-  .badge-exact { background: var(--green); color: #155724; }
-  .badge-different { background: var(--blue); color: #0c5460; }
-  .badge-text_changed { background: var(--blue); color: #0c5460; }
-  .badge-similar { background: var(--blue); color: #0c5460; }
-  .badge-structure_changed { background: var(--blue); color: #0c5460; }
-  .badge-added { background: var(--grey); color: #333; }
-  .badge-removed { background: transparent; color: #999; font-weight: normal; }
+  /* Status badges - text only */
+  .status-badge {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .badge-identical, .badge-exact { color: var(--text); }
+  .badge-text_changed, .badge-similar, .badge-different, .badge-structure_changed { color: var(--accent); }
+  .badge-added, .badge-removed { color: var(--text-secondary); }
 
+  /* Detail rows */
   .detail-row { display: none; }
   .detail-row.open { display: table-row; }
-  .detail-content { padding: 12px 16px; background: #fefefe; }
-  .detail-content h4 { margin: 16px 0 8px; font-size: 14px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  .detail-content {
+    padding: 16px 16px 16px 24px;
+    border-left: 3px solid var(--rule);
+  }
+  .detail-content h4 {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    margin: 24px 0 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
   .detail-content h4:first-child { margin-top: 0; }
-  .detail-content table { margin: 4px 0 12px; font-size: 12px; table-layout: fixed; width: 100%; }
-  .detail-content td, .detail-content th { padding: 4px 8px; }
+  .detail-content table { margin: 8px 0 16px; font-size: 14px; table-layout: fixed; width: 100%; }
+  .detail-content td, .detail-content th { padding: 8px; }
   .detail-content .text-cell { overflow: hidden; text-overflow: ellipsis; }
-  .detail-content .col-code { width: 200px; }
+  .detail-content .col-code { width: 180px; }
   .detail-content .col-status { width: 100px; }
   .detail-content .col-sim { width: 70px; text-align: right; }
   .detail-content .col-text { min-width: 150px; }
 
-  .clickable { cursor: pointer; }
-  .clickable:hover { filter: brightness(0.95); }
+  /* Clickable cells */
+  .clickable { cursor: pointer; text-align: center; }
+  .clickable:hover { opacity: 0.7; }
 </style>
 </head>
 <body>
@@ -98,23 +210,15 @@
 </div>
 
 <script>
-const STATUS_COLOR = {
-  identical: 'green',
-  text_changed: 'blue',
-  structure_changed: 'blue',
-  added: 'grey',
-  removed: 'lightgrey'
-};
-
 const ARROW = '\u2192';
 
 let DATA = null;
 let currentLanguage = 'de-ch';
 let currentFilter = 'all';
 let searchTerm = '';
-let currentReference = '';  // selected reference source
-let selectedTargets = [];   // selected target sources to compare against
-let hideUnmatched = true;   // hide questions not present in any selected target
+let currentReference = '';
+let selectedTargets = [];
+let hideUnmatched = true;
 
 async function loadData() {
   try {
@@ -196,7 +300,6 @@ function getShortName(source) {
 }
 
 function renderSummary() {
-  // Compute summary stats dynamically based on current reference/targets
   const counts = { identical: 0, text_changed: 0, structure_changed: 0, added: 0, removed: 0 };
   const allCodes = new Set();
   for (const source of DATA.meta.sources) {
@@ -211,35 +314,34 @@ function renderSummary() {
     visibleCount++;
   }
 
+  const changedCount = counts.text_changed + counts.structure_changed;
+  const missingCount = counts.added + counts.removed;
+  const identicalPct = visibleCount > 0 ? (counts.identical / visibleCount * 100) : 0;
+  const changedPct = visibleCount > 0 ? (changedCount / visibleCount * 100) : 0;
+  const missingPct = visibleCount > 0 ? (missingCount / visibleCount * 100) : 0;
+
   return `
     <div class="summary">
-      <div class="stat"><div class="num">${visibleCount}</div><div class="label">Total</div></div>
-      <div class="stat"><div class="num">${counts.identical}</div><div class="label">Identical</div></div>
-      <div class="stat"><div class="num">${counts.text_changed}</div><div class="label">Text Changed</div></div>
-      <div class="stat"><div class="num">${counts.structure_changed}</div><div class="label">Structure Changed</div></div>
-      <div class="stat"><div class="num">${counts.added}</div><div class="label">Added</div></div>
-      <div class="stat"><div class="num">${counts.removed}</div><div class="label">Removed</div></div>
-    </div>
-    <div class="legend">
-      <span class="green">Identical</span>
-      <span class="blue">Different</span>
-      <span class="grey">Not in survey</span>
+      <div class="summary-bar">
+        <div class="bar-identical" style="width:${identicalPct.toFixed(1)}%"></div>
+        <div class="bar-changed" style="width:${changedPct.toFixed(1)}%"></div>
+        <div class="bar-missing" style="width:${missingPct.toFixed(1)}%"></div>
+      </div>
+      <p class="summary-text">${visibleCount} total &mdash; ${counts.identical} identical, ${counts.text_changed} text changed, ${counts.structure_changed} structure changed, ${missingCount} added/removed</p>
     </div>
   `;
 }
 
-function renderReferenceSelector() {
-  const options = DATA.meta.sources.map(s =>
+function renderFilters() {
+  const langOptions = DATA.meta.languages.map(l =>
+    `<option value="${l}"${l === currentLanguage ? ' selected' : ''}>${l}</option>`
+  ).join('');
+
+  const refOptions = DATA.meta.sources.map(s =>
     `<option value="${escapeHtml(s)}"${s === currentReference ? ' selected' : ''}>${escapeHtml(getShortName(s))}</option>`
   ).join('');
-  return `
-    <label for="reference-selector">Reference:</label>
-    <select id="reference-selector">${options}</select>
-  `;
-}
 
-function renderTargetCheckboxes() {
-  const checkboxes = DATA.meta.sources
+  const targetCheckboxes = DATA.meta.sources
     .filter(s => s !== currentReference)
     .map(s => {
       const checked = selectedTargets.includes(s) ? ' checked' : '';
@@ -249,38 +351,33 @@ function renderTargetCheckboxes() {
         <label for="${id}">${escapeHtml(getShortName(s))}</label>
       </span>`;
     }).join('');
-  return `
-    <div class="target-selector">
-      <label class="group-label">Compare against:</label>
-      ${checkboxes}
-    </div>
-  `;
-}
 
-function renderFilters() {
-  const langOptions = DATA.meta.languages.map(l =>
-    `<option value="${l}"${l === currentLanguage ? ' selected' : ''}>${l}</option>`
-  ).join('');
   return `
-    <div class="filter-bar">
-      ${renderReferenceSelector()}
-      <label for="language-filter">Language:</label>
-      <select id="language-filter">${langOptions}</select>
-      <label for="status-filter">Filter:</label>
-      <select id="status-filter">
-        <option value="all"${currentFilter === 'all' ? ' selected' : ''}>All</option>
-        <option value="identical"${currentFilter === 'identical' ? ' selected' : ''}>Identical</option>
-        <option value="different"${currentFilter === 'different' ? ' selected' : ''}>Different</option>
-        <option value="removed"${currentFilter === 'removed' ? ' selected' : ''}>Not in Survey</option>
-      </select>
-      <label for="search-box">Search:</label>
-      <input type="text" id="search-box" placeholder="Question code or text..." value="${escapeHtml(searchTerm)}">
-      <label style="display:flex;align-items:center;gap:4px;cursor:pointer">
-        <input type="checkbox" id="hide-unmatched" ${hideUnmatched ? 'checked' : ''}>
-        Only matched
-      </label>
+    <div class="toolbar">
+      <div class="toolbar-primary">
+        <label for="reference-selector">Reference</label>
+        <select id="reference-selector">${refOptions}</select>
+        <label>Compare against</label>
+        ${targetCheckboxes}
+      </div>
+      <div class="toolbar-secondary">
+        <label for="language-filter">Language</label>
+        <select id="language-filter">${langOptions}</select>
+        <label for="status-filter">Filter</label>
+        <select id="status-filter">
+          <option value="all"${currentFilter === 'all' ? ' selected' : ''}>All</option>
+          <option value="identical"${currentFilter === 'identical' ? ' selected' : ''}>Identical</option>
+          <option value="different"${currentFilter === 'different' ? ' selected' : ''}>Changed</option>
+          <option value="removed"${currentFilter === 'removed' ? ' selected' : ''}>Not in Survey</option>
+        </select>
+        <label for="search-box">Search</label>
+        <input type="text" id="search-box" placeholder="Question code or text..." value="${escapeHtml(searchTerm)}">
+        <label class="checkbox-label">
+          <input type="checkbox" id="hide-unmatched" ${hideUnmatched ? 'checked' : ''}>
+          Only matched
+        </label>
+      </div>
     </div>
-    ${renderTargetCheckboxes()}
   `;
 }
 
@@ -291,23 +388,31 @@ function renderQuestionRow(code) {
   const refText = refQ ? escapeHtml(truncate(refQ.texts[currentLanguage] || '', 120)) : '\u2014';
   const elementType = refQ ? refQ.element_type : '\u2014';
 
+  // Determine row class for left border
+  let rowClass = 'question-row';
+  if (worstStatus === 'text_changed' || worstStatus === 'structure_changed') {
+    rowClass += ' row-changed';
+  } else if (worstStatus === 'added' || worstStatus === 'removed') {
+    rowClass += ' row-missing';
+  }
+
   let surveyCells = '';
   for (const target of selectedTargets) {
     const pairDiffs = getDiffsForPair(currentReference, target);
     const diff = pairDiffs[code];
     if (diff) {
       const label = diff.status === 'removed' ? '\u2014' :
-        (diff.status === 'text_changed' || diff.status === 'structure_changed') ? 'different' : diff.status;
+        (diff.status === 'text_changed' || diff.status === 'structure_changed') ? 'changed' : diff.status;
       surveyCells += `<td class="clickable" onclick="toggleDetail('${code}')">
         <span class="status-badge badge-${diff.status}">${label}</span>
       </td>`;
     } else {
-      surveyCells += `<td><span class="status-badge badge-removed">\u2014</span></td>`;
+      surveyCells += `<td class="clickable" onclick="toggleDetail('${code}')"><span class="status-badge badge-removed">\u2014</span></td>`;
     }
   }
 
   return `
-    <tr class="question-row" data-code="${code}" data-status="${worstStatus}">
+    <tr class="${rowClass}" data-code="${code}" data-status="${worstStatus}">
       <td class="code-col">${escapeHtml(code)}</td>
       <td class="type-col">${escapeHtml(elementType)}</td>
       <td class="text-col">${refText || '\u2014'}</td>
@@ -356,11 +461,9 @@ function renderDetailContent(code) {
         }
       }
     } else if (diff && diff.status === 'removed') {
-      // Question exists in reference but not in target — no text_diffs available
       worstStatus = 'removed';
       worstSim = 0;
     } else if (diff && diff.status === 'added') {
-      // Question exists in target but not in reference
       surveyText = targetQ ? (targetQ.texts[currentLanguage] || '') : '';
       worstStatus = 'added';
       worstSim = 0;
@@ -613,7 +716,10 @@ function renderSection(sectionName, codes) {
 
   return `
     <div class="section-group" data-section="${escapeHtml(sectionName)}">
-      <div class="section-title" onclick="toggleSection(this)">${escapeHtml(sectionName)} (${filteredCodes.length} questions)${aliasHtml}</div>
+      <div class="section-title" onclick="toggleSection(this)">
+        <span>${escapeHtml(sectionName)}${aliasHtml}</span>
+        <span class="section-count">${filteredCodes.length} questions</span>
+      </div>
       <table>
         <thead>
           <tr>
@@ -632,7 +738,7 @@ function renderSection(sectionName, codes) {
 function render() {
   if (selectedTargets.length === 0) {
     document.getElementById('app').innerHTML = renderFilters() +
-      '<div style="text-align:center;padding:40px;color:#666">Select at least one target survey to compare against.</div>';
+      '<div style="text-align:center;padding:48px;color:var(--text-secondary)">Select at least one target survey to compare against.</div>';
     document.getElementById('subtitle').textContent =
       `Reference: ${getShortName(currentReference)}`;
     attachEventListeners();
@@ -655,7 +761,6 @@ function render() {
 function attachEventListeners() {
   document.getElementById('reference-selector').addEventListener('change', function() {
     currentReference = this.value;
-    // Remove the new reference from targets, keep the rest
     selectedTargets = selectedTargets.filter(s => s !== currentReference);
     render();
   });
@@ -680,7 +785,6 @@ function attachEventListeners() {
     render();
   });
 
-  // Target checkboxes
   const checkboxes = document.querySelectorAll('.target-option input[type="checkbox"]');
   checkboxes.forEach(cb => {
     cb.addEventListener('change', function() {
@@ -703,7 +807,6 @@ function toggleSection(el) {
   if (table) table.style.display = table.style.display === 'none' ? '' : 'none';
 }
 
-// Load data on page load
 loadData();
 </script>
 

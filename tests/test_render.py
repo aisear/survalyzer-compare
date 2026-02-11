@@ -100,18 +100,17 @@ class TestRenderReport:
         assert "badge-removed" in html
         assert "badge-added" in html
 
-    def test_contains_color_classes(self):
+    def test_contains_row_change_indicators(self):
         result, qbs, master = _build_fixture()
         html = render_report([result], qbs, master, default_language="en")
-        assert "cell-green" in html
-        assert "cell-yellow" in html
-        assert "cell-grey" in html
+        assert "row-changed" in html
+        assert "row-missing" in html
 
     def test_contains_summary_stats(self):
         result, qbs, master = _build_fixture()
         html = render_report([result], qbs, master, default_language="en")
         # Total questions = 4 (Q1, Q2, Q3 from master + Q4 from survey)
-        assert ">4<" in html
+        assert "4 total" in html
 
     def test_contains_section_name(self):
         result, qbs, master = _build_fixture()
