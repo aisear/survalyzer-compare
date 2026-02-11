@@ -349,8 +349,10 @@ function renderDetailContent(code) {
   for (const target of selectedTargets) {
     const pairDiffs = getDiffsForPair(currentReference, target);
     const diff = pairDiffs[code];
+    const targetQ = DATA.questions[target] ? DATA.questions[target][code] : null;
     let surveyText = '';
-    if (diff && diff.text_diffs) {
+
+    if (diff && diff.text_diffs && diff.text_diffs.length > 0) {
       for (const td of diff.text_diffs) {
         if (td.language === currentLanguage) {
           surveyText = td.new_text || '';
@@ -359,12 +361,21 @@ function renderDetailContent(code) {
           if (td.similarity < worstSim) worstSim = td.similarity;
         }
       }
+    } else if (diff && diff.status === 'removed') {
+      // Question exists in reference but not in target — no text_diffs available
+      worstStatus = 'removed';
+      worstSim = 0;
+    } else if (diff && diff.status === 'added') {
+      // Question exists in target but not in reference
+      surveyText = targetQ ? (targetQ.texts[currentLanguage] || '') : '';
+      worstStatus = 'added';
+      worstSim = 0;
     }
     surveyTexts.push(surveyText);
   }
 
   html += `<tr><td><span class="status-badge badge-${worstStatus}">${worstStatus}</span></td>`;
-  html += `<td>${Math.round(worstSim * 100)}%</td>`;
+  html += `<td>${worstSim > 0 ? Math.round(worstSim * 100) + '%' : '\u2014'}</td>`;
   html += `<td class="text-cell">${escapeHtml(truncate(refText, 150)) || '\u2014'}</td>`;
   for (const st of surveyTexts) {
     html += `<td class="text-cell">${escapeHtml(truncate(st, 150)) || '\u2014'}</td>`;
