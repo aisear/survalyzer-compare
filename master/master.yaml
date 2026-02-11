@@ -661,34 +661,31 @@ ZusArbeit_DochTypIPMain:
 SpinOff:
   element_type: SingleChoice
   texts:
-    en: Is a start-up/spin-off planned or already established using the project results?
-    fr: La création d'une start-up/spin-off utilisant les résultats du projet est-elle
-      prévue ou a-t-elle déjà eu lieu ?
-    de-ch: Ist eine Gründung eines Start-up/Spin-offs unter Verwendung der Projektergebnisse
-      geplant oder bereits erfolgt?
-  section_name: Zusammenarbeit Im Projekt (Start Nicht UP)
-  section_index: 6
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>Has your involvement
+      in the project contributed to the creation of a spin-off?&nbsp;<span style="background-color:
+      rgb(84, 172, 210);"><br></span><span style="letter-spacing: 0.496px;">If so,
+      please add the company''s name and/or VAT identifier.</span>'
+  section_name: Economic project results
+  section_index: 7
   choices:
   - code: '6'
     texts:
-      en: Yes, is already in the process of founding or founded
-      fr: Oui, est déjà en cours de création ou a été créée
-      de-ch: Ja, ist bereits im Gründungsprozess oder gegründet
+      en: Yes, it is already founded
   - code: '5'
     texts:
-      en: Yes, is planned
-      fr: Oui, est prévu
-      de-ch: Ja, ist geplant<br>
+      en: Yes, it is in the process of founding
   - code: '4'
     texts:
-      de-ch: Noch nicht entschieden
-      fr: Pas encore décidé
+      en: Yes, it is planned
+  - code: '3'
+    texts:
       en: Not yet decided
+  - code: '2'
+    texts:
+      en: No plans to found
   - code: '1'
     texts:
-      de-ch: Keine Pläne zur Gründung
-      en: No plans to found
-      fr: Pas de projet de création
+      en: 'No'
 ZusArbeit_DochTypIPRest:
   element_type: MultipleChoice
   texts:
@@ -2737,69 +2734,55 @@ FoerderAnders:
       en: Don't know
       de-ch: Weiss nicht
 Motivation:
-  element_type: MultipleChoice
+  element_type: Matrix
   texts:
-    fr: Qu'est-ce qui vous a motivé à déposer un chèque d'innovation ?
-    en: What motivated you to submit an innovation cheque?
-    de-ch: Was hat Sie dazu motiviert, einen Innovationsscheck einzureichen?
-  section_name: Ursprung der Idee
-  section_index: 3
-  choices:
-  - code: '12'
+    en: '<span style="background-color: rgb(147, 101, 184); color: rgb(0, 0, 0);"></span>How
+      important were the following criteria for your decision to apply for this specific
+      international programme?&nbsp;<span style="background-color: rgb(147, 101, 184);
+      color: rgb(0, 0, 0);"></span>'
+  section_name: Direct results
+  section_index: 5
+  matrix_rows:
+  - code: '1'
     texts:
-      de-ch: '...unsere F&E Aktivitäten mit externem Knowhow stärken'
-      fr: '...renforcer nos activités de R&D avec un savoir-faire externe'
-      en: ..strengthen our R&D activities with external expertise
-  - code: '10'
-    texts:
-      fr: '...envisager une collaboration avec un partenaire de recherche'
-      en: '...explore collaboration with a research partner'
-      de-ch: '...die Zusammenarbeit mit einem Forschungspartner prüfen'
+      en: Direct financial funding
   - code: '2'
     texts:
-      fr: '...préparer un projet d''innovation auprès d''Innosuisse'
-      en: '...prepare an innovation project at Innosuisse'
-      de-ch: '...ein Innovationsprojekt bei Innosuisse vorbereiten'
+      en: Strengthening of an existing partnership with an international implementation
+        partner
   - code: '3'
     texts:
-      fr: '...préparer un autre projet d’encouragement auprès d''Innosuisse'
-      en: '...prepare another innovation funding at Innosuisse'
-      de-ch: '...eine andere Innovationsförderung bei Innosuisse vorbereiten'
+      en: Exploration/Establishment of a new partnership with an international implementation
+        partner
   - code: '4'
     texts:
-      fr: '...développer / tester une idée d''innovation'
-      en: '...further develop / test an innovation idea'
-      de-ch: '...eine Innovationsidee weiterentwickeln / testen'
-  - code: '11'
-    texts:
-      de-ch: …unsere F&E Aktivitäten ressourcenmässig entlasten
-      en: '...relieve our R&D activities in terms of resources'
-      fr: '...soulager nos activités de R&D en termes de ressources'
+      en: Possibility to collaborate exclusively with an implementation partner (no
+        research partner required)
   - code: '5'
     texts:
-      fr: '...obtenir des résultats concrets et utilisables'
-      en: '...achieve concrete and usable results'
-      de-ch: '...konkrete und bereits nutzbare Ergebnisse erzielen'
-  - code: '8'
-    texts:
-      fr: '...vérifier la faisabilité d''une nouvelle idée'
-      en: '...test the feasibility of a new idea'
-      de-ch: '...die Umsetzbarkeit / Machbarkeit einer neuen Idee prüfen'
-  - code: '9'
-    texts:
-      fr: '...chercher une nouvelle solution pour le développement de nos produits'
-      en: '...look for a new solution approach for our product development'
-      de-ch: '...einen neuen Lösungsansatz für unsere Produktentwicklung suchen'
+      en: Collaboration with an international research partner
   - code: '6'
     texts:
-      fr: 'Autre, veuillez préciser :'
-      en: 'Other, please specify:'
-      de-ch: 'Sonstiges, bitte angeben:'
-  - code: '99'
+      en: Accelerated access to international markets
+  matrix_columns:
+  - code: '1'
     texts:
-      fr: Ne sait pas
-      en: Don't know
-      de-ch: Weiss nicht
+      en: Not important at all
+  - code: '2'
+    texts:
+      en: Slightly important
+  - code: '3'
+    texts:
+      en: Rather unimportant
+  - code: '4'
+    texts:
+      en: Rather important
+  - code: '5'
+    texts:
+      en: Important
+  - code: '6'
+    texts:
+      en: Essential
 WichtigsteZiele:
   element_type: MultipleChoice
   texts:
@@ -5452,31 +5435,29 @@ VerbesserungOffen:
     en: Where do you see room for improvement?
   section_name: Overall assessment
   section_index: 9
-PersonalImProjekt:
-  element_type: Matrix
+OrgRole:
+  element_type: SingleChoice
   texts:
-    en: On average, how many employees of your organisation worked directly on the
-      project during the Innosuisse funding period (incl. application)?<br>
-    fr: Combien de personnel de votre organisation ont travaillé en moyenne directement
-      sur votre projet pendant la période de financement par Innosuisse (y compris
-      la demande) ?
-    de-ch: Wie viele Mitarbeitende Ihrer Organisation haben während der Innosuisse-Förderung
-      des Projektes (inkl. Gesuch) im Durchschnitt direkt an Ihrem Innosuisse Projekt
-      gearbeitet? <br>
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+    en: '<span style="background-color: rgb(97, 189, 109);"></span>What was the role
+      of your organisation in the project?<span style="background-color: rgb(97, 189,
+      109);"></span>'
+    fr: Votre organisation, est-elle ...
+    de-ch: Ist Ihre Organisation …
+  section_name: (OhneTitel) Identification and filter questions
   section_index: 1
-  matrix_rows:
-  - code: heute
+  choices:
+  - code: '1'
     texts:
-      en: Employees of the own organisation working on the project
-      fr: Employées de la propre organisation travaillant sur le projet
-      de-ch: Im Projekt tätige Mitarbeitende der eigenen Organisation
-  matrix_columns:
-  - code: Organisation
+      fr: une entreprise du secteur privé à but lucratif
+      en: Implementation partner<br>
+      de-ch: ein gewinnorientiertes privatwirtschaftliches Unternehmen
+  - code: '2'
     texts:
-      en: Average annual full-time equivalents
-      fr: Moyenne annuelle des équivalents temps plein
-      de-ch: Durchschnittliche jährliche Vollzeitäquivalente
+      de-ch: ein öffentliches Unternehmen oder eine der öffentlichen Verwaltung zugeordnete
+        Institution (inkl. öffentliche Spitäler)
+      fr: une entreprise publique ou une institution rattachée à l'administration
+        publique (y compris les hôpitaux publiques)
+      en: Research partner<br>
 InnoAlsZiel:
   element_type: SingleChoice
   texts:
@@ -5504,6 +5485,1179 @@ InnoAlsZiel:
       fr: Non, nous participions au projet en tant que partenaire de mise en œuvre
         supplémentaire.
       de-ch: Nein, wir waren als weiterer Umsetzungspartner am Projekt beteiligt.
+GenderAddressed:
+  element_type: SingleChoice
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>Have you addressed
+      the differing needs and challenges of women and men (with the goal of eliminating
+      inequalities and promoting gender equality) in the design, methodologies or
+      results of your project?<span style="background-color: rgb(84, 172, 210);"></span>'
+  section_name: Personnel
+  section_index: 2
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+  - code: '1'
+    texts:
+      en: 'No'
+  - code: '99'
+    texts:
+      en: Other
+GenderDetail:
+  element_type: OpenQuestion
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>Which aspects featured
+      a gender dimension and how were they incorporated?<span style="background-color:
+      rgb(84, 172, 210);"></span><br>'
+  section_name: Personnel
+  section_index: 2
+ExistingMarkets:
+  element_type: MultipleChoice
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>Which existing
+      geographical markets (if any) have your products, processes and services entered
+      as a result of your participation in the project?<span style="background-color:
+      rgb(84, 172, 210);"></span><br>'
+  section_name: Market entry
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: Domestic market
+  - code: '2'
+    texts:
+      en: Europe (including Israel and Türkiye)
+  - code: '3'
+    texts:
+      en: Central and East Asia
+  - code: '4'
+    texts:
+      en: Middle East
+  - code: '5'
+    texts:
+      en: North America
+  - code: '6'
+    texts:
+      en: Central and South America
+  - code: '7'
+    texts:
+      en: Africa
+  - code: '8'
+    texts:
+      en: Oceania
+  - code: '99'
+    texts:
+      en: 'None of the above '
+NewMarkets:
+  element_type: MultipleChoice
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>Which new geographical
+      markets (if any) have your products, processes and services entered as a result
+      of your participation in the project?<span style="background-color: rgb(84,
+      172, 210);"></span>'
+  section_name: Market entry
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: Domestic market
+  - code: '2'
+    texts:
+      en: Europe (including Israel and Türkiye)
+  - code: '3'
+    texts:
+      en: Central and East Asia
+  - code: '4'
+    texts:
+      en: Middle East
+  - code: '5'
+    texts:
+      en: North America
+  - code: '6'
+    texts:
+      en: Central and South America
+  - code: '7'
+    texts:
+      en: Africa
+  - code: '8'
+    texts:
+      en: Oceania
+  - code: '99'
+    texts:
+      en: 'None of the above '
+NoEntryReason:
+  element_type: MultipleChoice
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>What were the reasons
+      the products, processes or services you developed in your project did not enter
+      a market?<span style="background-color: rgb(84, 172, 210);"></span>'
+  section_name: Market entry
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: Commercialisation is/was not intended
+  - code: '2'
+    texts:
+      en: Market entry is/was too costly
+  - code: '3'
+    texts:
+      en: Market demand is/was too low
+  - code: '4'
+    texts:
+      en: Technology not yet ready
+  - code: '5'
+    texts:
+      en: The product or service is not competitive
+  - code: '6'
+    texts:
+      en: Certification or other regulatory approval is needed
+  - code: '7'
+    texts:
+      en: 'Other (please specify) '
+EntrySupport:
+  element_type: MultipleChoice
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>What&nbsp;additional&nbsp;support
+      would have been useful during or after the lifetime of the project for bringing
+      your products, processes and services to the market?<span style="background-color:
+      rgb(84, 172, 210);"></span>'
+  section_name: Market entry
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: Legal advice (e.g., policy, compliance)
+  - code: '2'
+    texts:
+      en: Non-legal and technical advice (e.g., support developing a business plan,
+        obtaining expert technical inputs)
+  - code: '3'
+    texts:
+      en: Financial advice (e.g., on taxation or other subsidy schemes)
+  - code: '4'
+    texts:
+      en: Marketing and promotion
+  - code: '5'
+    texts:
+      en: Access to private investors (e.g., corporate equity, business angels)
+  - code: '6'
+    texts:
+      en: Business matchmaking activities
+  - code: '7'
+    texts:
+      en: 'Other (please specify) '
+InnoDev:
+  element_type: Matrix
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>How many distinct
+      products, processes and services were developed by your organisation as a result
+      of your project?<span style="background-color: rgb(84, 172, 210);"></span>'
+  section_name: Characterisation of the project
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Products
+  - code: '2'
+    texts:
+      en: Services
+  - code: '3'
+    texts:
+      en: Processes
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Number of...
+InnoCategory:
+  element_type: MultipleChoice
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>Select all categories
+      that apply to your project results:<span style="background-color: rgb(84, 172,
+      210);"></span>'
+  section_name: Characterisation of the project
+  section_index: 4
+  choices:
+  - code: '1'
+    texts:
+      en: New market / new target market
+  - code: '2'
+    texts:
+      en: New product, process or service in one of your existing market(s)
+  - code: '3'
+    texts:
+      en: New product, process, or service for your organisation
+  - code: '4'
+    texts:
+      en: Improvement of an existing product, process or service
+  - code: '5'
+    texts:
+      en: Other
+PatentsDetail:
+  element_type: Matrix
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>If you have filed
+      any patent applications in relation to your project results, please specify
+      for each of them the title of the patent/s, the application number/s, and the
+      name of the patent office/s:<span style="background-color: rgb(84, 172, 210);"></span>'
+  section_name: Direct results
+  section_index: 5
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: '1'
+  - code: '2'
+    texts:
+      en: '2'
+  - code: '3'
+    texts:
+      en: '3'
+  - code: '4'
+    texts:
+      en: '4'
+  - code: '5'
+    texts:
+      en: '5'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Title
+  - code: '2'
+    texts:
+      en: Application number
+  - code: '3'
+    texts:
+      en: Patent office/s
+ResultsAcquired:
+  element_type: SingleChoice
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>Have your project
+      results been acquired or licensed by another legal entity?<span style="background-color:
+      rgb(84, 172, 210);"></span>'
+  section_name: Direct results
+  section_index: 5
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+  - code: '1'
+    texts:
+      en: 'No'
+ScientificOutputs:
+  element_type: Matrix
+  texts:
+    en: ​​​​Which and how many scientific outputs has your organisation generated
+      in connection with your project results?
+  section_name: Direct results
+  section_index: 5
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Peer-reviewed articles
+  - code: '2'
+    texts:
+      en: Conference proceedings
+  - code: '3'
+    texts:
+      en: Datasets
+  - code: '4'
+    texts:
+      en: Trainings
+  - code: '5'
+    texts:
+      en: 'Bachelor thesis
+
+        '
+  - code: '6'
+    texts:
+      en: Master thesis
+  - code: '7'
+    texts:
+      en: '<span style="background-color: rgb(97, 189, 109);"></span>Dissertation<span
+        style="background-color: rgb(97, 189, 109);"></span>'
+  - code: '8'
+    texts:
+      en: 'Other scientific outputs such as books, chapters or reports '
+  matrix_columns:
+  - code: '1'
+    texts: {}
+Benefit:
+  element_type: MultipleChoice
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>How did your organisation
+      benefit from participating in the project?<span style="background-color: rgb(84,
+      172, 210);"></span>'
+  section_name: Direct results
+  section_index: 5
+  choices:
+  - code: '1'
+    texts:
+      en: Collaboration with research organisations and academia
+  - code: '2'
+    texts:
+      en: Collaboration with large companies and multi-national corporates
+  - code: '3'
+    texts:
+      en: Collaboration with SMEs
+  - code: '4'
+    texts:
+      en: Visibility and reputation
+  - code: '5'
+    texts:
+      en: Reaching international markets
+  - code: '6'
+    texts:
+      en: Scaling up
+  - code: '7'
+    texts:
+      en: Attracting new investors
+  - code: '8'
+    texts:
+      en: Technical or other knowledge transfer
+  - code: '9'
+    texts:
+      en: Mitigate R&amp;D and Innovation risks
+  - code: '10'
+    texts:
+      en: 'Other '
+BenefitDetail:
+  element_type: MultipleChoice
+  texts:
+    en: '<span style="background-color: rgb(97, 189, 109);"></span>For the selected
+      benefits in the last question, please specify which of the following more detailed
+      benefits were important:<span style="background-color: rgb(97, 189, 109);"></span>'
+  section_name: Direct results
+  section_index: 5
+  choices:
+  - code: '1'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Collaboration
+        with research organisations and academia</div>Access to leading expertise
+        in the field
+  - code: '2'
+    texts:
+      en: Access to knowledge not available in Switzerland
+  - code: '3'
+    texts:
+      en: Acceleration of R&amp;D
+  - code: '4'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Collaboration
+        with large companies and multi-national corporates:</div>Expansion of value
+        chain through new partnerships
+  - code: '5'
+    texts:
+      en: Enhancement of existing  value chain though innovation
+  - code: '6'
+    texts:
+      en: Transfer knowledge and technology
+  - code: '7'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Collaboration
+        with SME(s)</div>Expansion of the value chain through new partnerships
+  - code: '8'
+    texts:
+      en: Enhancement of existing value chain though innovation
+  - code: '9'
+    texts:
+      en: Transfer of knowledge and technology
+  - code: '10'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Reaching
+        international markets</div>Acceleration of market entry/implementation
+  - code: '11'
+    texts:
+      en: <div style="position:absolute;left:0px;top:-15px;font-weight:bold;background-color:lightgrey;width:100%;">Mitigate
+        R&amp;D and Innovation risks</div>Risk reduction through direct financial
+        support
+  - code: '12'
+    texts:
+      en: Risk reduction through collaborative partnerships
+DirectFunding:
+  element_type: Matrix
+  texts:
+    en: '<span style="background-color: rgb(147, 101, 184); color: rgb(0, 0, 0);"></span>Which
+      aspects of your project were strengthened through the direct funding?<span style="background-color:
+      rgb(147, 101, 184); color: rgb(0, 0, 0);"></span>'
+  section_name: Direct results
+  section_index: 5
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: <strong>Scientific and technological progress </strong><br>(research advances,
+        prototypes, validation)
+  - code: '2'
+    texts:
+      en: <strong>Reduction of technical and implementation risks</strong><br>(feasibility,
+        proof of concept)
+  - code: '3'
+    texts:
+      en: <strong>International collaboration and access to expertise/infrastructure</strong><br>(partnerships,
+        complementary know-how, shared facilities)
+  - code: '4'
+    texts:
+      en: <strong>Market readiness</strong><br>(use-cases, early testing with users,
+        relevance for later implementation)
+  - code: '5'
+    texts:
+      en: <strong>Visibility, credibility and attractiveness for follow-up funding</strong><br>(strengthening
+        reputation, strategic positioning)
+  - code: '6'
+    texts:
+      en: <strong>Application orientation of collaboration with research partner</strong><br>(influence
+        over research direction, ownership of results, e.g. intellectual property,
+        timeliness of collaboration)<strong><br></strong><br>
+  - code: '7'
+    texts:
+      en: <strong>Overall realisation of the project</strong>
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all
+  - code: '2'
+    texts:
+      en: To a small extent
+  - code: '3'
+    texts:
+      en: To a rather small extent
+  - code: '4'
+    texts:
+      en: To a rather great extent
+  - code: '5'
+    texts:
+      en: To a great extent
+  - code: '6'
+    texts:
+      en: To a very great extent
+CollabInt:
+  element_type: SingleChoice
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>Are you still collaborating
+      internationally?<span style="background-color: rgb(84, 172, 210);"></span>'
+  section_name: Direct results
+  section_index: 5
+  choices:
+  - code: '6'
+    texts:
+      en: Yes, with the same partner(s)
+  - code: '5'
+    texts:
+      en: Yes, with the same and other partners
+  - code: '4'
+    texts:
+      en: Yes, with other partners
+  - code: '1'
+    texts:
+      en: 'No'
+ForParAngestellt:
+  element_type: SingleChoice
+  texts:
+    en: Has your organisation employed <strong>people from the former research partner(s)</strong>
+      as a result of the supported project?
+    fr: Votre organisation a-t-elle employé <strong>des personnes de l’ancien ou des
+      anciens partenaires de recherche</strong> à la suite du projet encouragé ?
+    de-ch: Hat Ihre Organisation als Folge des geförderten Projektes <strong>Personen
+      des/der ehemaligen Forschungspartner(s) angestellt</strong>?
+  section_name: Ergebnisse
+  section_index: 3
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+      fr: Oui
+      de-ch: Ja
+  - code: '1'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+  - code: '99'
+    texts:
+      en: I cannot answer this question
+      fr: Je ne peux pas répondre à cette question
+      de-ch: Das kann ich nicht beantworten
+Umsatz:
+  element_type: Matrix
+  texts:
+    en: <strong>Total revenue </strong>(excluding VAT) from location Switzerland
+    fr: <strong>Chiffre d’affaires total</strong> (hors TVA) à partir du lieu d’implantation
+      en Suisse
+    de-ch: <strong>Gesamtumsatz</strong> (ohne MWSt) ab Standort Schweiz
+  section_name: Ökonomische Projektwirkungen
+  section_index: 4
+  matrix_rows:
+  - code: PEnde
+    texts:
+      de-ch: '... bei Projektabschluss, d.h. im Jahr'
+      fr: '... à la fin du projet, c.à.d. au cours de'
+      en: '... at the end of the project, i. e. in the year'
+  - code: heute
+    texts:
+      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
+      fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
+      en: '... today, i.e. in the last completed business year'
+  matrix_columns:
+  - code: Jahr
+    texts:
+      de-ch: Jahr
+      fr: Année
+      en: Year
+  - code: CHF
+    texts:
+      de-ch: Mio. CHF
+      fr: CHF mio.
+      en: CHF million
+AusgabenFuE:
+  element_type: Matrix
+  texts:
+    en: <strong>Total expenditure on research and development </strong>in your organisation
+    fr: <b>Total dépenses liées à la recherche et au développement </b>au sein de
+      votre organisation
+    de-ch: <strong>Gesamte Ausgaben für </strong><strong>Forschung und Entwicklung</strong>
+      in Ihrer Organisation
+  section_name: Ökonomische Projektwirkungen
+  section_index: 4
+  matrix_rows:
+  - code: PEnde
+    texts:
+      de-ch: '... bei Projektabschluss, d.h. im Jahr'
+      en: '... at the end of the project, i. e. in the year<br><br>'
+      fr: '... à la fin du projet, c.à.d. au cours de '
+  - code: Heute
+    texts:
+      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
+      en: '... today, i.e. in the last completed business year'
+      fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
+  matrix_columns:
+  - code: Jahr
+    texts:
+      de-ch: Jahr
+      en: Year
+      fr: Année
+  - code: CHF
+    texts:
+      de-ch: Mio. CHF
+      en: CHF million
+      fr: CHF mio.
+WirtSituation:
+  element_type: Matrix
+  texts:
+    de-ch: Trägt das geförderte Projekt dazu bei, ….
+    en: Does the funded project help to ....
+    fr: Le projet soutenu contribue-t-il à ...
+  section_name: Ökonomische Projektwirkungen
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      de-ch: '... die wirtschaftliche Situation Ihrer Organisation zu stärken?'
+      en: '... strengthen the economic situation of your organisation?'
+      fr: '... renforcer la situation économique de votre organisation ?'
+  - code: '2'
+    texts:
+      de-ch: '... die Wettbewerbsfähigkeit auf den Märkten zu stärken?'
+      en: '... strengthen competitiveness in the markets?'
+      fr: '... renforcer la compétitivité sur les marchés ?'
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+  - code: '2'
+    texts:
+      de-ch: nur wenig
+      en: only a little
+      fr: très peu
+  - code: '3'
+    texts:
+      de-ch: eher wenig
+      en: rather little
+      fr: plutôt peu
+  - code: '4'
+    texts:
+      de-ch: eher stark
+      en: rather strong
+      fr: plutôt fort
+  - code: '5'
+    texts:
+      de-ch: stark
+      en: strong
+      fr: fort
+  - code: '6'
+    texts:
+      de-ch: sehr stark
+      en: very strong
+      fr: très fort
+ImpOrg:
+  element_type: Matrix
+  texts:
+    en: '<span style="background-color: rgb(247, 218, 100);"></span>How did participating
+      in your project impact your organisation?<span style="background-color: rgb(247,
+      218, 100);"></span>'
+    fr: Le projet encouragé par Innosuisse a-t-il entraîné une augmentation ou une
+      diminution des paramètres économiques suivants après la fin du projet ?
+    de-ch: Hat das von Innosuisse geförderte Projekt nach dem Projektabschluss bei
+      folgenden wirtschaftlichen Grössen zu einer Zu- oder Abnahme geführt?
+  section_name: Economic project results
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Access to new geographical markets
+  - code: '2'
+    texts:
+      en: Access to new sectors
+  - code: '3'
+    texts:
+      en: Attraction of private investment
+  - code: '4'
+    texts:
+      en: Ability and confidence to access to new public funding
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: no effect<br>
+      fr: a/ont diminué
+      de-ch: abgenommen
+  - code: '2'
+    texts:
+      en: ''
+      fr: n’a/n’ont pas changé
+      de-ch: sich nicht verändert
+  - code: '3'
+    texts:
+      en: ''
+      fr: a/ont augmenté
+      de-ch: zugenommen
+  - code: '4'
+    texts:
+      en: ''
+  - code: '5'
+    texts:
+      en: ''
+  - code: '6'
+    texts:
+      en: very positive effect<br>
+WirtImpQual:
+  element_type: Matrix
+  texts:
+    en: Did the project supported by Innosuisse lead to an increase or decrease in
+      the following economic variables after project completion?
+    fr: Le projet encouragé par Innosuisse a-t-il entraîné une augmentation ou une
+      diminution des paramètres économiques suivants après la fin du projet ?
+    de-ch: Hat das von Innosuisse geförderte Projekt nach dem Projektabschluss bei
+      folgenden wirtschaftlichen Grössen zu einer Zu- oder Abnahme geführt?
+  section_name: Ökonomische Projektwirkungen
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: The <strong>revenue resulting directly from the innovation implemented in
+        the supported project </strong>has ...
+      fr: Le <strong>chiffre d’affaires directement généré par l’innovation mise en
+        œuvre dans le cadre du projet</strong> ...
+      de-ch: Der <strong>Umsatz, der sich direkt aus der umgesetzten Innovation des
+        geförderten Projekts</strong> ergibt, hat …
+  - code: '2'
+    texts:
+      en: As a result of the project, <strong>total revenue</strong> (excluding VAT)
+        from location Switzerland has ...
+      fr: Suite au projet,<strong> la chiffre d’affaires en millions de CHF (hors
+        TVA) à partir du lieu d’implantation en Suisse </strong>...
+      de-ch: Der <strong>Gesamtumsatz </strong>(ohne MWSt) ab Standort Schweiz hat
+        als Folge des Projektes …
+  - code: Export
+    texts:
+      de-ch: Das <strong>Exportvolumen</strong> hat als Folge des Projekts ...
+      fr: Suite au projet, <strong>le volume des exportations</strong> ...
+      en: As a result of the project, <strong>the export volume</strong> ...
+  - code: '3'
+    texts:
+      en: As a result of the project, <strong>expenditure on research and development </strong>has
+        ...
+      fr: Suite au projet, <b>les dépenses de recherche et développement</b> ...
+      de-ch: Die <strong>Ausgaben für Forschung und Entwicklung</strong> haben als
+        Folge des Projektes …
+  - code: '4'
+    texts:
+      en: As a result of the project, <strong>employment in research and development</strong>
+        has ...
+      fr: Suite au projet, l’emploi dans <b>la recherche et le développement</b> ...
+      de-ch: Die<strong> Beschäftigung in Forschung und Entwicklung</strong> hat als
+        Folge des Projektes …
+  - code: '5'
+    texts:
+      en: As a result of the project, the <strong>overall employment</strong> of your
+        organisation has ...
+      fr: Suite au projet, <strong>l’effectif total de notre organisation </strong>
+        ...
+      de-ch: Die <strong>Gesamtbeschäftigung</strong> Ihrer Organisation hat als Folge
+        des Projektes …
+  - code: '6'
+    texts:
+      de-ch: Die <strong>Produktivität</strong> (d.h. Wertschöpfung je Vollzeitstelle)
+        in Ihrer Organisation hat als Folge des Projektes ….
+      en: As a result of the project,<strong> productivity</strong>  (i.e. value added
+        per full-time positions) in our organisation has ...
+      fr: Suite au projet, la <strong>productivité</strong> (c.à.d. valeur ajoutée
+        par poste à temps plein) dans notre organisation  ....
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: decreased
+      fr: a/ont diminué
+      de-ch: abgenommen
+  - code: '2'
+    texts:
+      en: not changed
+      fr: n’a/n’ont pas changé
+      de-ch: sich nicht verändert
+  - code: '3'
+    texts:
+      en: increased
+      fr: a/ont augmenté
+      de-ch: zugenommen
+  - code: '99'
+    texts:
+      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
+        this question</div>
+      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
+        répondre à cette question</div>
+      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
+        nicht beantworten</div>
+WirtImpQuan:
+  element_type: Matrix
+  texts:
+    en: To what extent have these variables changed as <strong>a result of the supported
+      project</strong> up to the present time?<br>Please refer your estimation to
+      the current year compared to the year of the project launch.
+    fr: <strong>Suite au projet encouragé</strong>, dans quelle mesure ces paramètres
+      ont évolué à ce jour ?<br>Veuillez référer votre estimation à l'année en cours
+      par rapport à l'année de lancement du projet.
+    de-ch: In welchem Ausmass haben sich diese Grössen als <strong>Folge des geförderten
+      Projektes</strong> bis zum aktuellen Zeitpunkt verändert?<br>Bitte beziehen
+      Sie sich in Ihrer Schätzung auf das aktuelle Jahr im Vergleich zum Jahr des
+      Projektstartes.
+  section_name: Ökonomische Projektwirkungen
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: '<strong>Total revenue (excluding VAT) from location Switzerland</strong>,
+        in #.# million CHF'
+      fr: '<strong>Chiffre d’affaires en millions de CHF (hors TVA) à partir du lieu
+        d’implantation en Suisse </strong> en CHF #.# mio.'
+      de-ch: '<strong>Gesamtumsatz (ohne MWSt) ab Standort Schweiz</strong>, in #.#
+        Mio. CHF'
+  - code: '2'
+    texts:
+      en: '<b>Research and development expenditure</b>, in #.# million CHF'
+      fr: <b>Dépenses de recherche et développement</b>, en CHF #.# mio.
+      de-ch: '<strong>Ausgaben für Forschung und Entwicklung</strong>, in #.# Mio.
+        CHF'
+  - code: '3'
+    texts:
+      en: <strong>Employees in research and development</strong>, in full-time equivalents
+        (#.#)
+      fr: <b>Employés en recherche et développement</b>, à temps plein ETP (#.#)
+      de-ch: <strong>Beschäftigte in Forschung und Entwicklung</strong>, in Vollzeitstellen
+        (#.#)
+  - code: '4'
+    texts:
+      en: <b>Total employees</b>, in full-time equivalents (#.#)
+      fr: <b>Total des employés</b>, à temps plein ETP (#.#)
+      de-ch: <strong>Beschäftigte insgesamt, </strong>in Vollzeitstellen (#.#)
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Direct change as a result of the project<br>Please indicate any decreases
+        as negative figures.
+      fr: Changement direct résultant du projet<br>Veuillez indiquer toute diminution
+        en employant des chiffres négatifs.
+      de-ch: Direkte Veränderung als Folge des Projekts<br>Bitte geben Sie allfällige
+        Abnahmen als negative Zahl an.
+ComplementaryFunding:
+  element_type: SingleChoice
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>Has your organisation
+      received any complementary research, development or innovation (R&amp;D&amp;I)
+      funding to exploit or scale up your project results?<span style="background-color:
+      rgb(84, 172, 210);"></span>'
+  section_name: Economic project results
+  section_index: 7
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+  - code: '1'
+    texts:
+      en: 'No'
+Kosteneinsparungen:
+  element_type: SingleChoice
+  texts:
+    en: Did the supported project or the implemented innovation lead to <strong>direct
+      cost savings</strong> in your organisation overall?
+    fr: Le projet encouragé ou l’innovation mise en œuvre ont-ils permis de réaliser
+      dans l’ensemble <strong>des économies de coûts directes</strong> dans votre
+      organisation ?
+    de-ch: Hat das geförderte Projekt resp. die umgesetzte Innovation insgesamt <strong>zu
+      direkten Kosteneinsparungen</strong> in Ihrer Organisation geführt?
+  section_name: Ökonomische Projektwirkungen
+  section_index: 4
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+      fr: Oui
+      de-ch: Ja
+  - code: '1'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+  - code: '99'
+    texts:
+      en: I cannot answer this question
+      fr: Je ne peux pas répondre à cette question
+      de-ch: Das kann ich nicht beantworten
+MarktanteilGewinn:
+  element_type: SingleChoice
+  texts:
+    en: Was it possible to gain <b>additional market share</b> thanks to the implemented
+      innovation?
+    fr: A-t-il été possible de gagner <strong>des parts de marché supplémentaires</strong>
+      grâce à l’innovation mise en œuvre ?
+    de-ch: Konnten dank der umgesetzten Innovation <strong>zusätzliche Marktanteile</strong>
+      gewonnen werden?
+  section_name: Ökonomische Projektwirkungen
+  section_index: 4
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+      fr: Oui
+      de-ch: Ja
+  - code: '1'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+  - code: '99'
+    texts:
+      en: I cannot answer this question
+      fr: Je ne peux pas répondre à cette question
+      de-ch: Das kann ich nicht beantworten
+Neuheitslevel:
+  element_type: Matrix
+  texts:
+    en: Is the implemented/planned innovation <strong>currently</strong> a ...
+    fr: L’innovation mise en œuvre/planifiée est-elle ...
+    de-ch: Ist die umgesetzte/geplante Innovation<strong> derzeit </strong>eine ...
+  section_name: Ökonomische Projektwirkungen
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Novelty for the organisation
+      fr: une nouveauté pour votre organisation ?
+      de-ch: Neuheit für die Organisation
+  - code: '2'
+    texts:
+      de-ch: Neuheit für den nationalen Markt
+      fr: une nouveauté sur le marché national ?
+      en: Novelty for the national market
+  - code: '3'
+    texts:
+      de-ch: Neuheit auf einem oder mehreren internationalen Märkten
+      en: Novelty on one or more international markets
+      fr: une nouveauté sur un ou plusieurs marchés internationaux ?
+  - code: '4'
+    texts:
+      de-ch: Neuheit auf allen internationalen Märkten (globaler Markt)
+      en: Novelty on all international markets (global market)?
+      fr: und nouveauté sur tous les marchés internationaux (marché mondial) ?
+  matrix_columns:
+  - code: '6'
+    texts:
+      en: 'Yes'
+      fr: Oui
+      de-ch: Ja
+  - code: '1'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+  - code: '99'
+    texts:
+      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
+        this question</div>
+      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
+        répondre à cette question</div>
+      de-ch: Das kann ich nicht beantworten
+WirkFoerderung:
+  element_type: Matrix
+  texts:
+    en: Has the<strong> project funding by Innosuisse </strong>led to the following
+      direct effects in your organisation?
+    fr: <strong>L'encouragement du projet par Innosuisse</strong> a-t-il eu les effets
+      directs suivants dans votre organisation ?<br><br>
+    de-ch: Hat die <strong>Projektförderung von Innosuisse</strong> in Ihrer Organisation
+      zu folgenden, direkten Wirkungen geführt?
+  section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 5
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Accelerated research and development in the project
+      fr: Accélération de la recherche et du développement dans le projet
+      de-ch: Beschleunigung der Forschung und Entwicklung im Projekt
+  - code: '2'
+    texts:
+      en: Accelerated market implementation of the project
+      fr: Accélération de l’introduction du projet sur le marché
+      de-ch: Beschleunigung der Marktumsetzung des Projektes
+  - code: '3'
+    texts:
+      en: Increased knowledge and technology transfer (KTT) with the research partner
+      fr: Renforcement du transfert de savoir et de technologie (TST) avec le partenaire
+        de recherche
+      de-ch: Stärkung des Wissens- und Technologietransfers (WTT) mit dem Forschungspartner
+  matrix_columns:
+  - code: '6'
+    texts:
+      en: 'Yes'
+      fr: Oui
+      de-ch: Ja
+  - code: '1'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+  - code: '99'
+    texts:
+      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
+        this question</div>
+      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
+        répondre à cette question</div>
+      de-ch: Das kann ich nicht beantworten
+SozialerNutzen:
+  element_type: Matrix
+  texts:
+    en: How do you assess the <strong>societal and/or social benefit</strong> of the
+      Innosuisse-supported project, <strong>outside of</strong> your organisation?
+    fr: Comment évaluez-vous <strong>l’utilité sociétale et/ou sociale</strong> du
+      projet encouragé par Innosuisse, <strong>en dehors</strong> de votre organisation ?
+    de-ch: Wie bewerten sie den <strong>gesellschaftlichen und/oder sozialen Nutzen</strong>
+      des von Innosuisse geförderten Projekts <strong>ausserhalb</strong> Ihrer Organisation?
+  section_name: Nutzen
+  section_index: 6
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: The <strong>societal and/or social</strong> benefit is ...
+      fr: L’utilité <strong>sociétale et/ou sociale</strong> est ...
+      de-ch: Der<strong> gesellschaftliche und/oder soziale</strong> Nutzen ist ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not existing
+      fr: inexistante
+      de-ch: nicht vorhanden
+  - code: '2'
+    texts:
+      en: small
+      fr: faible
+      de-ch: gering
+  - code: '3'
+    texts:
+      en: relatively small
+      fr: plutôt faible
+      de-ch: eher gering
+  - code: '4'
+    texts:
+      en: relatively big
+      fr: plutôt élevée
+      de-ch: eher hoch
+  - code: '5'
+    texts:
+      en: big
+      fr: élevée
+      de-ch: hoch
+  - code: '6'
+    texts:
+      en: very big
+      fr: très élevée
+      de-ch: sehr hoch
+  - code: '99'
+    texts:
+      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
+        this question</div>
+      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
+        répondre à cette question</div>
+      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
+        nicht beantworten</div>
+SozialerOffen_angepasst:
+  element_type: OpenQuestion
+  texts:
+    en: '<span style="background-color: rgb(84, 172, 210);"></span>In simple terms,
+      please describe the outcome of your project and its impact on society and your
+      sector. If your organisation has received media attention because of, or connected
+      with your project results, please include a hyperlink to any articles.<span
+      style="background-color: rgb(84, 172, 210);"></span>'
+    fr: 'Veuillez décrire en quelques phrases l<strong>''utilité sociétale ou sociale</strong>
+      obtenue :'
+    de-ch: 'Bitte umschreiben Sie den erzielten <strong>gesellschaftlichen oder sozialen
+      Nutzen</strong> in einigen wenigen Sätzen:'
+  section_name: Further impacts and benefits
+  section_index: 8
+Zielerreichung_RP:
+  element_type: Matrix
+  texts:
+    en: ​​​​​​​​​​​​​​​​From the point of view of your research unit:&nbsp;<br>Were
+      the objectives of the project achieved in the strategically important areas
+      of research, application and implementation?
+    fr: Les objectifs du projet ont-ils été atteints ?
+    de-ch: Wurden die Projektziele erreicht?
+  section_name: Project goals and success
+  section_index: 9
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: The objectives in the area of <strong>research </strong>were overall ...
+      fr: '... d''un point de vue technique'
+      de-ch: '... aus technischer Sicht'
+  - code: '2'
+    texts:
+      de-ch: '... aus wirtschaftlicher und inhaltlicher Sicht'
+      fr: '... du point de vue économique et du contenu'
+      en: The objectives in the area of <strong>application and implementation</strong>
+        were overall ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not achieved at all
+      fr: pas du tout atteints
+      de-ch: überhaupt nicht erreicht
+  - code: '2'
+    texts:
+      en: not achieved
+      fr: pas atteints
+      de-ch: nicht erreicht
+  - code: '3'
+    texts:
+      en: rather not achieved
+      fr: plutôt pas atteints
+      de-ch: eher nicht erreicht
+  - code: '4'
+    texts:
+      en: rather achieved
+      fr: plutôt atteints
+      de-ch: eher erreicht
+  - code: '5'
+    texts:
+      en: fully achieved
+      fr: complètement atteints
+      de-ch: vollständig erreicht
+  - code: '6'
+    texts:
+      en: exceeded
+      fr: surpassés
+      de-ch: übertroffen
+Stellenwert:
+  element_type: Matrix
+  texts:
+    en: What is the significance of the supported project in your organisation?
+    fr: Quelle est l'importance du projet encouragé dans votre organisation ?
+    de-ch: Welchen Stellenwert besitzt das geförderte Projekt in Ihrer Organisation?
+  section_name: Projekterfolg und Abschluss
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: '... from a strategic point of view'
+      fr: '... d''un point de vue stratégique'
+      de-ch: '... aus strategischer Sicht'
+  - code: '2'
+    texts:
+      de-ch: '... aus wirtschaftlicher oder betrieblicher Sicht'
+      fr: '... d''un point de vue économique ou opérationnel'
+      en: '... from an economic or operational point of view'
+  - code: '3'
+    texts:
+      de-ch: '... aus Sicht von Innovation, Forschung und Entwicklung'
+      fr: '... d''un point de vue de l''innovation, de la recherche et développement'
+      en: '... from the point of view of innovation, research and development'
+  - code: '4'
+    texts:
+      de-ch: Insgesamt
+      fr: Globalement
+      en: Overall
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: very low
+      fr: très faible
+      de-ch: sehr gering
+  - code: '2'
+    texts:
+      en: low
+      fr: faible
+      de-ch: gering
+  - code: '3'
+    texts:
+      en: rather low
+      fr: plutôt faible
+      de-ch: eher gering
+  - code: '4'
+    texts:
+      en: rather high
+      fr: plutôt élevée
+      de-ch: eher hoch
+  - code: '5'
+    texts:
+      en: high
+      fr: élevée
+      de-ch: hoch
+  - code: '6'
+    texts:
+      en: very high
+      fr: très élevée
+      de-ch: sehr hoch
+  - code: '99'
+    texts:
+      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
+        this question</div>
+      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
+        répondre à cette question</div>
+      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
+        nicht beantworten</div>
+PersonalImProjekt:
+  element_type: Matrix
+  texts:
+    en: On average, how many employees of your organisation worked directly on the
+      project during the Innosuisse funding period (incl. application)?<br>
+    fr: Combien de personnel de votre organisation ont travaillé en moyenne directement
+      sur votre projet pendant la période de financement par Innosuisse (y compris
+      la demande) ?
+    de-ch: Wie viele Mitarbeitende Ihrer Organisation haben während der Innosuisse-Förderung
+      des Projektes (inkl. Gesuch) im Durchschnitt direkt an Ihrem Innosuisse Projekt
+      gearbeitet? <br>
+  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_index: 1
+  matrix_rows:
+  - code: heute
+    texts:
+      en: Employees of the own organisation working on the project
+      fr: Employées de la propre organisation travaillant sur le projet
+      de-ch: Im Projekt tätige Mitarbeitende der eigenen Organisation
+  matrix_columns:
+  - code: Organisation
+    texts:
+      en: Average annual full-time equivalents
+      fr: Moyenne annuelle des équivalents temps plein
+      de-ch: Durchschnittliche jährliche Vollzeitäquivalente
 FoerderSNF:
   element_type: MultipleChoice
   texts:
@@ -5739,165 +6893,6 @@ BeurteilungForPar:
         répondre à cette question</div>
       de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
         nicht beantworten</div>
-Umsatz:
-  element_type: Matrix
-  texts:
-    en: <strong>Total revenue </strong>(excluding VAT) from location Switzerland
-    fr: <strong>Chiffre d’affaires total</strong> (hors TVA) à partir du lieu d’implantation
-      en Suisse
-    de-ch: <strong>Gesamtumsatz</strong> (ohne MWSt) ab Standort Schweiz
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
-  matrix_rows:
-  - code: PEnde
-    texts:
-      de-ch: '... bei Projektabschluss, d.h. im Jahr'
-      fr: '... à la fin du projet, c.à.d. au cours de'
-      en: '... at the end of the project, i. e. in the year'
-  - code: heute
-    texts:
-      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
-      fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
-      en: '... today, i.e. in the last completed business year'
-  matrix_columns:
-  - code: Jahr
-    texts:
-      de-ch: Jahr
-      fr: Année
-      en: Year
-  - code: CHF
-    texts:
-      de-ch: Mio. CHF
-      fr: CHF mio.
-      en: CHF million
-AusgabenFuE:
-  element_type: Matrix
-  texts:
-    en: <strong>Total expenditure on research and development </strong>in your organisation
-    fr: <b>Total dépenses liées à la recherche et au développement </b>au sein de
-      votre organisation
-    de-ch: <strong>Gesamte Ausgaben für </strong><strong>Forschung und Entwicklung</strong>
-      in Ihrer Organisation
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
-  matrix_rows:
-  - code: PEnde
-    texts:
-      de-ch: '... bei Projektabschluss, d.h. im Jahr'
-      en: '... at the end of the project, i. e. in the year<br><br>'
-      fr: '... à la fin du projet, c.à.d. au cours de '
-  - code: Heute
-    texts:
-      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
-      en: '... today, i.e. in the last completed business year'
-      fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
-  matrix_columns:
-  - code: Jahr
-    texts:
-      de-ch: Jahr
-      en: Year
-      fr: Année
-  - code: CHF
-    texts:
-      de-ch: Mio. CHF
-      en: CHF million
-      fr: CHF mio.
-WirtSituation:
-  element_type: Matrix
-  texts:
-    de-ch: Trägt das geförderte Projekt dazu bei, ….
-    en: Does the funded project help to ....
-    fr: Le projet soutenu contribue-t-il à ...
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
-  matrix_rows:
-  - code: '1'
-    texts:
-      de-ch: '... die wirtschaftliche Situation Ihrer Organisation zu stärken?'
-      en: '... strengthen the economic situation of your organisation?'
-      fr: '... renforcer la situation économique de votre organisation ?'
-  - code: '2'
-    texts:
-      de-ch: '... die Wettbewerbsfähigkeit auf den Märkten zu stärken?'
-      en: '... strengthen competitiveness in the markets?'
-      fr: '... renforcer la compétitivité sur les marchés ?'
-  matrix_columns:
-  - code: '1'
-    texts:
-      de-ch: nein
-      en: 'no'
-      fr: non
-  - code: '2'
-    texts:
-      de-ch: nur wenig
-      en: only a little
-      fr: très peu
-  - code: '3'
-    texts:
-      de-ch: eher wenig
-      en: rather little
-      fr: plutôt peu
-  - code: '4'
-    texts:
-      de-ch: eher stark
-      en: rather strong
-      fr: plutôt fort
-  - code: '5'
-    texts:
-      de-ch: stark
-      en: strong
-      fr: fort
-  - code: '6'
-    texts:
-      de-ch: sehr stark
-      en: very strong
-      fr: très fort
-WirkFoerderung:
-  element_type: Matrix
-  texts:
-    en: Has the<strong> project funding by Innosuisse </strong>led to the following
-      direct effects in your organisation?
-    fr: <strong>L'encouragement du projet par Innosuisse</strong> a-t-il eu les effets
-      directs suivants dans votre organisation ?<br><br>
-    de-ch: Hat die <strong>Projektförderung von Innosuisse</strong> in Ihrer Organisation
-      zu folgenden, direkten Wirkungen geführt?
-  section_name: Weitere, nicht ökonomische Wirkungen
-  section_index: 5
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Accelerated research and development in the project
-      fr: Accélération de la recherche et du développement dans le projet
-      de-ch: Beschleunigung der Forschung und Entwicklung im Projekt
-  - code: '2'
-    texts:
-      en: Accelerated market implementation of the project
-      fr: Accélération de l’introduction du projet sur le marché
-      de-ch: Beschleunigung der Marktumsetzung des Projektes
-  - code: '3'
-    texts:
-      en: Increased knowledge and technology transfer (KTT) with the research partner
-      fr: Renforcement du transfert de savoir et de technologie (TST) avec le partenaire
-        de recherche
-      de-ch: Stärkung des Wissens- und Technologietransfers (WTT) mit dem Forschungspartner
-  matrix_columns:
-  - code: '6'
-    texts:
-      en: 'Yes'
-      fr: Oui
-      de-ch: Ja
-  - code: '1'
-    texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
-        répondre à cette question</div>
-      de-ch: Das kann ich nicht beantworten
 WirkProjekt:
   element_type: Matrix
   texts:
@@ -6024,62 +7019,6 @@ WirtNutzenPotenzial:
     texts:
       en: very big
       fr: très élevé
-      de-ch: sehr hoch
-  - code: '99'
-    texts:
-      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
-        répondre à cette question</div>
-      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
-        nicht beantworten</div>
-SozialerNutzen:
-  element_type: Matrix
-  texts:
-    en: How do you assess the <strong>societal and/or social benefit</strong> of the
-      Innosuisse-supported project, <strong>outside of</strong> your organisation?
-    fr: Comment évaluez-vous <strong>l’utilité sociétale et/ou sociale</strong> du
-      projet encouragé par Innosuisse, <strong>en dehors</strong> de votre organisation ?
-    de-ch: Wie bewerten sie den <strong>gesellschaftlichen und/oder sozialen Nutzen</strong>
-      des von Innosuisse geförderten Projekts <strong>ausserhalb</strong> Ihrer Organisation?
-  section_name: Nutzen
-  section_index: 6
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: The <strong>societal and/or social</strong> benefit is ...
-      fr: L’utilité <strong>sociétale et/ou sociale</strong> est ...
-      de-ch: Der<strong> gesellschaftliche und/oder soziale</strong> Nutzen ist ...
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: not existing
-      fr: inexistante
-      de-ch: nicht vorhanden
-  - code: '2'
-    texts:
-      en: small
-      fr: faible
-      de-ch: gering
-  - code: '3'
-    texts:
-      en: relatively small
-      fr: plutôt faible
-      de-ch: eher gering
-  - code: '4'
-    texts:
-      en: relatively big
-      fr: plutôt élevée
-      de-ch: eher hoch
-  - code: '5'
-    texts:
-      en: big
-      fr: élevée
-      de-ch: hoch
-  - code: '6'
-    texts:
-      en: very big
-      fr: très élevée
       de-ch: sehr hoch
   - code: '99'
     texts:
@@ -7015,74 +7954,6 @@ ZielNichtGrund:
       en: 'Other reasons (please indicate):'
       fr: 'Autres raisons (veuillez préciser):'
       de-ch: 'Andere Gründe (bitte angeben):'
-Stellenwert:
-  element_type: Matrix
-  texts:
-    en: What is the significance of the supported project in your organisation?
-    fr: Quelle est l'importance du projet encouragé dans votre organisation ?
-    de-ch: Welchen Stellenwert besitzt das geförderte Projekt in Ihrer Organisation?
-  section_name: Projekterfolg und Abschluss
-  section_index: 7
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: '... from a strategic point of view'
-      fr: '... d''un point de vue stratégique'
-      de-ch: '... aus strategischer Sicht'
-  - code: '2'
-    texts:
-      de-ch: '... aus wirtschaftlicher oder betrieblicher Sicht'
-      fr: '... d''un point de vue économique ou opérationnel'
-      en: '... from an economic or operational point of view'
-  - code: '3'
-    texts:
-      de-ch: '... aus Sicht von Innovation, Forschung und Entwicklung'
-      fr: '... d''un point de vue de l''innovation, de la recherche et développement'
-      en: '... from the point of view of innovation, research and development'
-  - code: '4'
-    texts:
-      de-ch: Insgesamt
-      fr: Globalement
-      en: Overall
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: very low
-      fr: très faible
-      de-ch: sehr gering
-  - code: '2'
-    texts:
-      en: low
-      fr: faible
-      de-ch: gering
-  - code: '3'
-    texts:
-      en: rather low
-      fr: plutôt faible
-      de-ch: eher gering
-  - code: '4'
-    texts:
-      en: rather high
-      fr: plutôt élevée
-      de-ch: eher hoch
-  - code: '5'
-    texts:
-      en: high
-      fr: élevée
-      de-ch: hoch
-  - code: '6'
-    texts:
-      en: very high
-      fr: très élevée
-      de-ch: sehr hoch
-  - code: '99'
-    texts:
-      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
-        répondre à cette question</div>
-      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
-        nicht beantworten</div>
 Involvement:
   element_type: Matrix
   texts:
@@ -7170,273 +8041,6 @@ IrgendeineInnoUm:
     texts:
       en: I cannot answer this question
       fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
-ForParAngestellt:
-  element_type: SingleChoice
-  texts:
-    en: Has your organisation employed <strong>people from the former research partner(s)</strong>
-      as a result of the supported project?
-    fr: Votre organisation a-t-elle employé <strong>des personnes de l’ancien ou des
-      anciens partenaires de recherche</strong> à la suite du projet encouragé ?
-    de-ch: Hat Ihre Organisation als Folge des geförderten Projektes <strong>Personen
-      des/der ehemaligen Forschungspartner(s) angestellt</strong>?
-  section_name: Ergebnisse
-  section_index: 3
-  choices:
-  - code: '6'
-    texts:
-      en: 'Yes'
-      fr: Oui
-      de-ch: Ja
-  - code: '1'
-    texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
-WirtImpQual:
-  element_type: Matrix
-  texts:
-    en: Did the project supported by Innosuisse lead to an increase or decrease in
-      the following economic variables after project completion?
-    fr: Le projet encouragé par Innosuisse a-t-il entraîné une augmentation ou une
-      diminution des paramètres économiques suivants après la fin du projet ?
-    de-ch: Hat das von Innosuisse geförderte Projekt nach dem Projektabschluss bei
-      folgenden wirtschaftlichen Grössen zu einer Zu- oder Abnahme geführt?
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: The <strong>revenue resulting directly from the innovation implemented in
-        the supported project </strong>has ...
-      fr: Le <strong>chiffre d’affaires directement généré par l’innovation mise en
-        œuvre dans le cadre du projet</strong> ...
-      de-ch: Der <strong>Umsatz, der sich direkt aus der umgesetzten Innovation des
-        geförderten Projekts</strong> ergibt, hat …
-  - code: '2'
-    texts:
-      en: As a result of the project, <strong>total revenue</strong> (excluding VAT)
-        from location Switzerland has ...
-      fr: Suite au projet,<strong> la chiffre d’affaires en millions de CHF (hors
-        TVA) à partir du lieu d’implantation en Suisse </strong>...
-      de-ch: Der <strong>Gesamtumsatz </strong>(ohne MWSt) ab Standort Schweiz hat
-        als Folge des Projektes …
-  - code: Export
-    texts:
-      de-ch: Das <strong>Exportvolumen</strong> hat als Folge des Projekts ...
-      fr: Suite au projet, <strong>le volume des exportations</strong> ...
-      en: As a result of the project, <strong>the export volume</strong> ...
-  - code: '3'
-    texts:
-      en: As a result of the project, <strong>expenditure on research and development </strong>has
-        ...
-      fr: Suite au projet, <b>les dépenses de recherche et développement</b> ...
-      de-ch: Die <strong>Ausgaben für Forschung und Entwicklung</strong> haben als
-        Folge des Projektes …
-  - code: '4'
-    texts:
-      en: As a result of the project, <strong>employment in research and development</strong>
-        has ...
-      fr: Suite au projet, l’emploi dans <b>la recherche et le développement</b> ...
-      de-ch: Die<strong> Beschäftigung in Forschung und Entwicklung</strong> hat als
-        Folge des Projektes …
-  - code: '5'
-    texts:
-      en: As a result of the project, the <strong>overall employment</strong> of your
-        organisation has ...
-      fr: Suite au projet, <strong>l’effectif total de notre organisation </strong>
-        ...
-      de-ch: Die <strong>Gesamtbeschäftigung</strong> Ihrer Organisation hat als Folge
-        des Projektes …
-  - code: '6'
-    texts:
-      de-ch: Die <strong>Produktivität</strong> (d.h. Wertschöpfung je Vollzeitstelle)
-        in Ihrer Organisation hat als Folge des Projektes ….
-      en: As a result of the project,<strong> productivity</strong>  (i.e. value added
-        per full-time positions) in our organisation has ...
-      fr: Suite au projet, la <strong>productivité</strong> (c.à.d. valeur ajoutée
-        par poste à temps plein) dans notre organisation  ....
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: decreased
-      fr: a/ont diminué
-      de-ch: abgenommen
-  - code: '2'
-    texts:
-      en: not changed
-      fr: n’a/n’ont pas changé
-      de-ch: sich nicht verändert
-  - code: '3'
-    texts:
-      en: increased
-      fr: a/ont augmenté
-      de-ch: zugenommen
-  - code: '99'
-    texts:
-      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
-        répondre à cette question</div>
-      de-ch: <div style="border-left:1px solid black;padding-left:4px;">Das kann ich
-        nicht beantworten</div>
-WirtImpQuan:
-  element_type: Matrix
-  texts:
-    en: To what extent have these variables changed as <strong>a result of the supported
-      project</strong> up to the present time?<br>Please refer your estimation to
-      the current year compared to the year of the project launch.
-    fr: <strong>Suite au projet encouragé</strong>, dans quelle mesure ces paramètres
-      ont évolué à ce jour ?<br>Veuillez référer votre estimation à l'année en cours
-      par rapport à l'année de lancement du projet.
-    de-ch: In welchem Ausmass haben sich diese Grössen als <strong>Folge des geförderten
-      Projektes</strong> bis zum aktuellen Zeitpunkt verändert?<br>Bitte beziehen
-      Sie sich in Ihrer Schätzung auf das aktuelle Jahr im Vergleich zum Jahr des
-      Projektstartes.
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: '<strong>Total revenue (excluding VAT) from location Switzerland</strong>,
-        in #.# million CHF'
-      fr: '<strong>Chiffre d’affaires en millions de CHF (hors TVA) à partir du lieu
-        d’implantation en Suisse </strong> en CHF #.# mio.'
-      de-ch: '<strong>Gesamtumsatz (ohne MWSt) ab Standort Schweiz</strong>, in #.#
-        Mio. CHF'
-  - code: '2'
-    texts:
-      en: '<b>Research and development expenditure</b>, in #.# million CHF'
-      fr: <b>Dépenses de recherche et développement</b>, en CHF #.# mio.
-      de-ch: '<strong>Ausgaben für Forschung und Entwicklung</strong>, in #.# Mio.
-        CHF'
-  - code: '3'
-    texts:
-      en: <strong>Employees in research and development</strong>, in full-time equivalents
-        (#.#)
-      fr: <b>Employés en recherche et développement</b>, à temps plein ETP (#.#)
-      de-ch: <strong>Beschäftigte in Forschung und Entwicklung</strong>, in Vollzeitstellen
-        (#.#)
-  - code: '4'
-    texts:
-      en: <b>Total employees</b>, in full-time equivalents (#.#)
-      fr: <b>Total des employés</b>, à temps plein ETP (#.#)
-      de-ch: <strong>Beschäftigte insgesamt, </strong>in Vollzeitstellen (#.#)
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Direct change as a result of the project<br>Please indicate any decreases
-        as negative figures.
-      fr: Changement direct résultant du projet<br>Veuillez indiquer toute diminution
-        en employant des chiffres négatifs.
-      de-ch: Direkte Veränderung als Folge des Projekts<br>Bitte geben Sie allfällige
-        Abnahmen als negative Zahl an.
-Kosteneinsparungen:
-  element_type: SingleChoice
-  texts:
-    en: Did the supported project or the implemented innovation lead to <strong>direct
-      cost savings</strong> in your organisation overall?
-    fr: Le projet encouragé ou l’innovation mise en œuvre ont-ils permis de réaliser
-      dans l’ensemble <strong>des économies de coûts directes</strong> dans votre
-      organisation ?
-    de-ch: Hat das geförderte Projekt resp. die umgesetzte Innovation insgesamt <strong>zu
-      direkten Kosteneinsparungen</strong> in Ihrer Organisation geführt?
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
-  choices:
-  - code: '6'
-    texts:
-      en: 'Yes'
-      fr: Oui
-      de-ch: Ja
-  - code: '1'
-    texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
-MarktanteilGewinn:
-  element_type: SingleChoice
-  texts:
-    en: Was it possible to gain <b>additional market share</b> thanks to the implemented
-      innovation?
-    fr: A-t-il été possible de gagner <strong>des parts de marché supplémentaires</strong>
-      grâce à l’innovation mise en œuvre ?
-    de-ch: Konnten dank der umgesetzten Innovation <strong>zusätzliche Marktanteile</strong>
-      gewonnen werden?
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
-  choices:
-  - code: '6'
-    texts:
-      en: 'Yes'
-      fr: Oui
-      de-ch: Ja
-  - code: '1'
-    texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
-Neuheitslevel:
-  element_type: Matrix
-  texts:
-    en: Is the implemented/planned innovation <strong>currently</strong> a ...
-    fr: L’innovation mise en œuvre/planifiée est-elle ...
-    de-ch: Ist die umgesetzte/geplante Innovation<strong> derzeit </strong>eine ...
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Novelty for the organisation
-      fr: une nouveauté pour votre organisation ?
-      de-ch: Neuheit für die Organisation
-  - code: '2'
-    texts:
-      de-ch: Neuheit für den nationalen Markt
-      fr: une nouveauté sur le marché national ?
-      en: Novelty for the national market
-  - code: '3'
-    texts:
-      de-ch: Neuheit auf einem oder mehreren internationalen Märkten
-      en: Novelty on one or more international markets
-      fr: une nouveauté sur un ou plusieurs marchés internationaux ?
-  - code: '4'
-    texts:
-      de-ch: Neuheit auf allen internationalen Märkten (globaler Markt)
-      en: Novelty on all international markets (global market)?
-      fr: und nouveauté sur tous les marchés internationaux (marché mondial) ?
-  matrix_columns:
-  - code: '6'
-    texts:
-      en: 'Yes'
-      fr: Oui
-      de-ch: Ja
-  - code: '1'
-    texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: <div style="border-left:1px solid black;padding-left:4px;">I cannot answer
-        this question</div>
-      fr: <div style="border-left:1px solid black;padding-left:4px;">Je ne peux pas
-        répondre à cette question</div>
       de-ch: Das kann ich nicht beantworten
 NeuheitslevelOffen:
   element_type: OpenQuestion
