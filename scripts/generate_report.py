@@ -8,7 +8,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import json
+import shutil
 import sys
 from pathlib import Path
 
@@ -130,15 +130,9 @@ def main() -> None:
     save_data(data, data_path)
     print(f"Data written to {data_path}")
 
-    # Build self-contained HTML: embed JSON data into template
+    # Copy HTML template
     html_path = args.output_dir / "index.html"
-    template_html = TEMPLATE_PATH.read_text(encoding="utf-8")
-    data_json = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-    embedded_script = f"<script>const EMBEDDED_DATA = {data_json};</script>"
-    html_content = template_html.replace(
-        "<!-- EMBEDDED_DATA_PLACEHOLDER -->", embedded_script
-    )
-    html_path.write_text(html_content, encoding="utf-8")
+    shutil.copy(TEMPLATE_PATH, html_path)
     print(f"Report written to {html_path}")
 
 
