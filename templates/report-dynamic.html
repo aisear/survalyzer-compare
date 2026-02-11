@@ -114,6 +114,7 @@ let currentFilter = 'all';
 let searchTerm = '';
 let currentReference = '';  // selected reference source
 let selectedTargets = [];   // selected target sources to compare against
+let hideUnmatched = true;   // hide questions not present in any selected target
 
 async function loadData() {
   try {
@@ -162,7 +163,15 @@ function getWorstStatus(code) {
   return worst;
 }
 
+function isMatchedInAnyTarget(code) {
+  for (const target of selectedTargets) {
+    if (DATA.questions[target] && DATA.questions[target][code]) return true;
+  }
+  return false;
+}
+
 function shouldShowRow(code) {
+  if (hideUnmatched && !isMatchedInAnyTarget(code)) return false;
   const status = getWorstStatus(code);
   if (currentFilter === 'all') return true;
   if (currentFilter === 'different') return status === 'text_changed' || status === 'structure_changed';
@@ -194,14 +203,17 @@ function renderSummary() {
     const qs = DATA.questions[source];
     if (qs) for (const code of Object.keys(qs)) allCodes.add(code);
   }
+  let visibleCount = 0;
   for (const code of allCodes) {
+    if (hideUnmatched && !isMatchedInAnyTarget(code)) continue;
     const worst = getWorstStatus(code);
     counts[worst] = (counts[worst] || 0) + 1;
+    visibleCount++;
   }
 
   return `
     <div class="summary">
-      <div class="stat"><div class="num">${allCodes.size}</div><div class="label">Total</div></div>
+      <div class="stat"><div class="num">${visibleCount}</div><div class="label">Total</div></div>
       <div class="stat"><div class="num">${counts.identical}</div><div class="label">Identical</div></div>
       <div class="stat"><div class="num">${counts.text_changed}</div><div class="label">Text Changed</div></div>
       <div class="stat"><div class="num">${counts.structure_changed}</div><div class="label">Structure Changed</div></div>
@@ -263,6 +275,10 @@ function renderFilters() {
       </select>
       <label for="search-box">Search:</label>
       <input type="text" id="search-box" placeholder="Question code or text..." value="${escapeHtml(searchTerm)}">
+      <label style="display:flex;align-items:center;gap:4px;cursor:pointer">
+        <input type="checkbox" id="hide-unmatched" ${hideUnmatched ? 'checked' : ''}>
+        Only matched
+      </label>
     </div>
     ${renderTargetCheckboxes()}
   `;
@@ -645,6 +661,11 @@ function attachEventListeners() {
 
   document.getElementById('search-box').addEventListener('input', function() {
     searchTerm = this.value;
+    render();
+  });
+
+  document.getElementById('hide-unmatched').addEventListener('change', function() {
+    hideUnmatched = this.checked;
     render();
   });
 
