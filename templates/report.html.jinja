@@ -6,76 +6,154 @@
 <title>Survalyzer Questionnaire Comparison</title>
 <style>
   :root {
-    --green: #c6efce;
-    --green-border: #6aa84f;
-    --yellow: #fff2cc;
-    --yellow-border: #f1c232;
-    --red: #f4cccc;
-    --red-border: #cc4125;
-    --grey: #d9d9d9;
-    --grey-border: #999;
+    --accent: #3B6CB4;
+    --accent-bg: rgba(59, 108, 180, 0.10);
+    --neutral: #E8E5E1;
+    --text: #1A1A1A;
+    --text-secondary: #777;
+    --rule: #E0E0E0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; color: #333; padding: 20px; background: #fafafa; }
-  h1 { margin-bottom: 8px; }
-  .subtitle { margin-bottom: 16px; color: #666; font-size: 13px; }
-  .summary { margin-bottom: 20px; padding: 12px 16px; background: #fff; border: 1px solid #ddd; border-radius: 6px; display: flex; gap: 24px; flex-wrap: wrap; }
-  .summary .stat { text-align: center; }
-  .summary .stat .num { font-size: 24px; font-weight: 700; }
-  .summary .stat .label { font-size: 12px; color: #666; text-transform: uppercase; }
-  .legend { margin-bottom: 16px; display: flex; gap: 12px; flex-wrap: wrap; }
-  .legend span { padding: 3px 10px; border-radius: 4px; font-size: 12px; }
-  .legend .green { background: var(--green); border: 1px solid var(--green-border); }
-  .legend .yellow { background: var(--yellow); border: 1px solid var(--yellow-border); }
-  .legend .red { background: var(--red); border: 1px solid var(--red-border); }
-  .legend .grey { background: var(--grey); border: 1px solid var(--grey-border); }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    padding: 32px;
+    background: #fff;
+    line-height: 1.5;
+  }
 
-  .filter-bar { margin-bottom: 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-  .filter-bar label { font-weight: 600; }
-  .filter-bar select, .filter-bar input { padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px; }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .subtitle { font-size: 14px; color: #888; margin-bottom: 48px; }
 
-  .section-group { margin-bottom: 24px; }
-  .section-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; padding: 6px 12px; background: #e8e8e8; border-radius: 4px; cursor: pointer; }
-  .section-title:hover { background: #ddd; }
+  /* Summary bar */
+  .summary { margin-bottom: 24px; }
+  .summary-bar {
+    display: flex;
+    height: 8px;
+    width: 100%;
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .bar-identical { background: #fff; }
+  .bar-changed { background: var(--accent); }
+  .bar-missing { background: var(--neutral); }
+  .summary-text { font-size: 14px; color: var(--text-secondary); }
 
-  table { width: 100%; border-collapse: collapse; background: #fff; }
-  th, td { padding: 8px 10px; border: 1px solid #ddd; text-align: left; vertical-align: top; }
-  th { background: #f5f5f5; font-weight: 600; position: sticky; top: 0; z-index: 2; }
-  th.survey-col { font-size: 11px; min-width: 80px; max-width: 120px; word-wrap: break-word; }
-  .code-col { width: 140px; font-family: monospace; font-weight: 600; }
-  .type-col { width: 110px; font-size: 12px; color: #666; }
+  /* Toolbar */
+  .toolbar { margin-bottom: 24px; }
+  .toolbar-secondary {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .toolbar label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+  }
+  .toolbar select,
+  .toolbar input[type="text"] {
+    padding: 8px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-size: 14px;
+    color: var(--text);
+    background: #fff;
+  }
+
+  /* Sections */
+  .section-group { margin-bottom: 32px; }
+  .section-title {
+    border-top: 2px solid var(--text);
+    padding: 8px 0 16px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    cursor: pointer;
+    background: none;
+  }
+  .section-title:hover { opacity: 0.7; }
+  .section-count {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 8px 16px; text-align: left; vertical-align: top; }
+  th {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--rule);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+  }
+  th.survey-col { min-width: 90px; max-width: 130px; text-align: center; word-wrap: break-word; }
+  .code-col { width: 180px; font-weight: 600; }
+  .type-col { width: 110px; color: var(--text-secondary); }
   .text-col { min-width: 200px; }
 
-  .cell-green { background: var(--green); }
-  .cell-yellow { background: var(--yellow); }
-  .cell-red { background: var(--red); }
-  .cell-grey { background: var(--grey); }
+  /* Row change indicators */
+  tr.row-changed > td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+  tr.row-missing > td:first-child { box-shadow: inset 3px 0 0 var(--neutral); }
 
-  .status-badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
-  .badge-identical { background: var(--green); color: #274e13; }
-  .badge-exact { background: var(--green); color: #274e13; }
-  .badge-text_changed { background: var(--yellow); color: #7f6000; }
-  .badge-similar { background: var(--yellow); color: #7f6000; }
-  .badge-different { background: var(--red); color: #660000; }
-  .badge-structure_changed { background: var(--red); color: #660000; }
-  .badge-added { background: var(--grey); color: #333; }
-  .badge-removed { background: var(--grey); color: #333; }
+  /* Status badges - text only */
+  .status-badge {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .badge-identical, .badge-exact { color: var(--text); }
+  .badge-text_changed, .badge-similar, .badge-different, .badge-structure_changed { color: var(--accent); }
+  .badge-added, .badge-removed { color: var(--text-secondary); }
 
+  /* Detail rows */
   .detail-row { display: none; }
   .detail-row.open { display: table-row; }
-  .detail-content { padding: 12px 16px; background: #fefefe; }
-  .detail-content h4 { margin: 16px 0 8px; font-size: 14px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  .detail-content {
+    padding: 16px 16px 16px 24px;
+    border-left: 3px solid var(--rule);
+  }
+  .detail-content h4 {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    margin: 24px 0 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
   .detail-content h4:first-child { margin-top: 0; }
-  .detail-content table { margin: 4px 0 12px; font-size: 13px; }
-  .detail-content td, .detail-content th { padding: 4px 8px; }
+  .detail-content table { margin: 8px 0 16px; font-size: 14px; }
+  .detail-content td, .detail-content th { padding: 8px; }
   .detail-content .text-cell { max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
 
-  .diff-added { color: #274e13; font-weight: 600; }
-  .diff-removed { text-decoration: line-through; color: #990000; }
-  .diff-changed { color: #7f6000; }
+  .diff-added { color: var(--accent); font-weight: 600; }
+  .diff-removed { text-decoration: line-through; color: var(--text-secondary); }
+  .diff-changed { color: var(--accent); }
 
-  .clickable { cursor: pointer; }
-  .clickable:hover { filter: brightness(0.95); }
+  /* Clickable cells */
+  .clickable { cursor: pointer; text-align: center; }
+  .clickable:hover { opacity: 0.7; }
 
   .lang-text { display: none; }
   .lang-text.active { display: inline; }
@@ -87,45 +165,49 @@
 <h1>Questionnaire Comparison Report</h1>
 <p class="subtitle">Each survey compared against {{ short_names.get(reference_name, reference_name) }}</p>
 
+{% set changed_count = status_counts.get('text_changed', 0) + status_counts.get('structure_changed', 0) %}
+{% set missing_count = status_counts.get('added', 0) + status_counts.get('removed', 0) %}
+{% set identical_pct = (status_counts.get('identical', 0) / total_questions * 100) if total_questions > 0 else 0 %}
+{% set changed_pct = (changed_count / total_questions * 100) if total_questions > 0 else 0 %}
+{% set missing_pct = (missing_count / total_questions * 100) if total_questions > 0 else 0 %}
 <div class="summary">
-  <div class="stat"><div class="num">{{ total_questions }}</div><div class="label">Total Questions</div></div>
-  <div class="stat"><div class="num">{{ status_counts.get('identical', 0) }}</div><div class="label">Identical</div></div>
-  <div class="stat"><div class="num">{{ status_counts.get('text_changed', 0) }}</div><div class="label">Text Changed</div></div>
-  <div class="stat"><div class="num">{{ status_counts.get('structure_changed', 0) }}</div><div class="label">Structure Changed</div></div>
-  <div class="stat"><div class="num">{{ status_counts.get('added', 0) + status_counts.get('removed', 0) }}</div><div class="label">Added / Removed</div></div>
+  <div class="summary-bar">
+    <div class="bar-identical" style="width:{{ "%.1f"|format(identical_pct) }}%"></div>
+    <div class="bar-changed" style="width:{{ "%.1f"|format(changed_pct) }}%"></div>
+    <div class="bar-missing" style="width:{{ "%.1f"|format(missing_pct) }}%"></div>
+  </div>
+  <p class="summary-text">{{ total_questions }} total &mdash; {{ status_counts.get('identical', 0) }} identical, {{ status_counts.get('text_changed', 0) }} text changed, {{ status_counts.get('structure_changed', 0) }} structure changed, {{ missing_count }} added/removed</p>
 </div>
 
-<div class="legend">
-  <span class="green">Identical to {{ short_names.get(reference_name, reference_name) }}</span>
-  <span class="yellow">Text changed</span>
-  <span class="red">Structure changed</span>
-  <span class="grey">Not in {{ short_names.get(reference_name, reference_name) }} / Not in survey</span>
-</div>
-
-<div class="filter-bar">
-  <label for="language-filter">Language:</label>
-  <select id="language-filter">
-    {% for lang in languages %}
-    <option value="{{ lang }}"{% if lang == default_language %} selected{% endif %}>{{ lang }}</option>
-    {% endfor %}
-  </select>
-  <label for="status-filter">Filter:</label>
-  <select id="status-filter">
-    <option value="all">All</option>
-    <option value="identical">Identical</option>
-    <option value="text_changed">Text Changed</option>
-    <option value="structure_changed">Structure Changed</option>
-    <option value="added">Added (not in {{ short_names.get(reference_name, reference_name) }})</option>
-    <option value="removed">Removed (not in survey)</option>
-    <option value="changed">Any Change</option>
-  </select>
-  <label for="search-box">Search:</label>
-  <input type="text" id="search-box" placeholder="Question code or text...">
+<div class="toolbar">
+  <div class="toolbar-secondary">
+    <label for="language-filter">Language</label>
+    <select id="language-filter">
+      {% for lang in languages %}
+      <option value="{{ lang }}"{% if lang == default_language %} selected{% endif %}>{{ lang }}</option>
+      {% endfor %}
+    </select>
+    <label for="status-filter">Filter</label>
+    <select id="status-filter">
+      <option value="all">All</option>
+      <option value="identical">Identical</option>
+      <option value="text_changed">Text Changed</option>
+      <option value="structure_changed">Structure Changed</option>
+      <option value="added">Added (not in {{ short_names.get(reference_name, reference_name) }})</option>
+      <option value="removed">Removed (not in survey)</option>
+      <option value="changed">Any Change</option>
+    </select>
+    <label for="search-box">Search</label>
+    <input type="text" id="search-box" placeholder="Question code or text...">
+  </div>
 </div>
 
 {% for section in sections %}
 <div class="section-group" data-section="{{ section.name }}">
-  <div class="section-title" onclick="toggleSection(this)">{{ section.name }} ({{ section.codes | length }} questions)</div>
+  <div class="section-title" onclick="toggleSection(this)">
+    <span>{{ section.name }}</span>
+    <span class="section-count">{{ section.codes | length }} questions</span>
+  </div>
   <table>
     <thead>
       <tr>
@@ -150,7 +232,10 @@
         {% elif qd.status in ('added', 'removed') and ns.worst == 'identical' %}{% set ns.worst = qd.status %}
         {% endif %}
       {% endfor %}
-      <tr class="question-row" data-code="{{ code }}" data-status="{{ ns.worst }}">
+      {% set row_class = 'question-row' %}
+      {% if ns.worst in ('text_changed', 'structure_changed') %}{% set row_class = 'question-row row-changed' %}
+      {% elif ns.worst in ('added', 'removed') %}{% set row_class = 'question-row row-missing' %}{% endif %}
+      <tr class="{{ row_class }}" data-code="{{ code }}" data-status="{{ ns.worst }}">
         <td class="code-col">{{ code }}</td>
         <td class="type-col">{{ q_ref.element_type if q_ref else '—' }}</td>
         <td class="text-col">
@@ -163,11 +248,11 @@
         {% for survey in survey_names %}
           {% set qd = code_diffs.get(survey) %}
           {% if qd %}
-          <td class="cell-{{ status_color.get(qd.status, '') }} clickable" onclick="toggleDetail('{{ code }}')">
+          <td class="clickable" onclick="toggleDetail('{{ code }}')">
             <span class="status-badge badge-{{ qd.status }}">{{ qd.status | replace('_', ' ') }}</span>
           </td>
           {% else %}
-          <td class="cell-grey">—</td>
+          <td>—</td>
           {% endif %}
         {% endfor %}
       </tr>
