@@ -2,13 +2,17 @@
 
 from src.models import (
     AnswerOption,
+    ChoiceDiff,
     ComparisonResult,
     LocalizedText,
+    MatrixColumn,
+    MatrixColumnGroup,
+    MatrixRow,
     Question,
     QuestionDiff,
     TextDiff,
 )
-from src.export import export_data, _diff_pair_key
+from src.export import export_data, _diff_pair_key, _question_diff_to_dict
 
 
 # ---------------------------------------------------------------------------
@@ -120,6 +124,41 @@ class TestExportDataFlexible:
         pair_key = "surveyA\u2192surveyB"
         assert pair_key in data["diffs"]
         assert data["diffs"][pair_key]["Q1"]["status"] == "text_changed"
+
+    def test_matrix_row_diffs_include_text_diffs(self):
+        """Matrix row diffs must include text_diffs in exported JSON (not just code+status)."""
+        td = TextDiff("en", "different", 0.5, "Old row", "New row")
+        row_diff = ChoiceDiff(code="4", status="text_changed", text_diffs=[td])
+        qd = QuestionDiff(
+            code="Q1", element_type="Matrix", status="text_changed",
+            matrix_row_diffs=[row_diff],
+        )
+        exported = _question_diff_to_dict(qd)
+        assert len(exported["matrix_row_diffs"]) == 1
+        rd = exported["matrix_row_diffs"][0]
+        assert rd["code"] == "4"
+        assert rd["status"] == "text_changed"
+        assert "text_diffs" in rd
+        assert len(rd["text_diffs"]) == 1
+        assert rd["text_diffs"][0]["language"] == "en"
+        assert rd["text_diffs"][0]["similarity"] == 0.5
+        assert rd["text_diffs"][0]["old_text"] == "Old row"
+        assert rd["text_diffs"][0]["new_text"] == "New row"
+
+    def test_matrix_column_diffs_include_text_diffs(self):
+        """Matrix column diffs must include text_diffs in exported JSON."""
+        td = TextDiff("de-ch", "similar", 0.92, "Schlecht", "Schlechter")
+        col_diff = ChoiceDiff(code="1", status="text_changed", text_diffs=[td])
+        qd = QuestionDiff(
+            code="Q1", element_type="Matrix", status="text_changed",
+            matrix_column_diffs=[col_diff],
+        )
+        exported = _question_diff_to_dict(qd)
+        assert len(exported["matrix_column_diffs"]) == 1
+        cd = exported["matrix_column_diffs"][0]
+        assert "text_diffs" in cd
+        assert len(cd["text_diffs"]) == 1
+        assert cd["text_diffs"][0]["language"] == "de-ch"
 
     def test_no_master_key_in_output(self):
         """The new format uses 'questions' not 'master'+'surveys'."""

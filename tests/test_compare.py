@@ -160,6 +160,31 @@ class TestCompareQuestions:
         diff = compare_questions(a, b)
         assert diff.status == "structure_changed"
 
+    def test_choice_text_change_not_structure_changed(self):
+        """A choice with same code but different text should be text_changed, not structure_changed."""
+        a = _question("Q1", "Pick", choices=[_option("1", "Yes"), _option("2", "No")])
+        b = _question("Q1", "Pick", choices=[_option("1", "Absolutely"), _option("2", "No")])
+        diff = compare_questions(a, b)
+        assert diff.status == "text_changed"
+
+    def test_choice_text_and_structure_change(self):
+        """If a choice is added AND another has text change, status should be structure_changed."""
+        a = _question("Q1", "Pick", choices=[_option("1", "Yes")])
+        b = _question("Q1", "Pick", choices=[_option("1", "Absolutely"), _option("2", "New")])
+        diff = compare_questions(a, b)
+        assert diff.status == "structure_changed"
+
+    def test_matrix_row_text_change_not_structure_changed(self):
+        """Matrix row with same code but different text should be text_changed, not structure_changed."""
+        a = _question("Q1", "Rate", etype="Matrix",
+                       matrix_rows=[_row("1", "Row A")],
+                       matrix_column_groups=[_colgroup([_col("1", "C1")])])
+        b = _question("Q1", "Rate", etype="Matrix",
+                       matrix_rows=[_row("1", "Row A modified")],
+                       matrix_column_groups=[_colgroup([_col("1", "C1")])])
+        diff = compare_questions(a, b)
+        assert diff.status == "text_changed"
+
     def test_matrix_structure(self):
         a = _question("Q1", "Rate", etype="Matrix",
                        matrix_rows=[_row("1", "R1")],

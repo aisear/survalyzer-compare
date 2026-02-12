@@ -78,11 +78,37 @@ def _question_diff_to_dict(qd) -> dict[str, Any]:
             for cd in qd.choice_diffs
         ],
         "matrix_row_diffs": [
-            {"code": rd.code, "status": rd.status}
+            {
+                "code": rd.code,
+                "status": rd.status,
+                "text_diffs": [
+                    {
+                        "language": td.language,
+                        "status": td.status,
+                        "similarity": td.similarity,
+                        "old_text": td.old_text,
+                        "new_text": td.new_text,
+                    }
+                    for td in rd.text_diffs
+                ],
+            }
             for rd in qd.matrix_row_diffs
         ],
         "matrix_column_diffs": [
-            {"code": cd.code, "status": cd.status}
+            {
+                "code": cd.code,
+                "status": cd.status,
+                "text_diffs": [
+                    {
+                        "language": td.language,
+                        "status": td.status,
+                        "similarity": td.similarity,
+                        "old_text": td.old_text,
+                        "new_text": td.new_text,
+                    }
+                    for td in cd.text_diffs
+                ],
+            }
             for cd in qd.matrix_column_diffs
         ],
     }
