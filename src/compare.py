@@ -155,13 +155,17 @@ def compare_questions(
     # Determine overall status
     has_text_change = any(td.status != "exact" for td in text_diffs)
     has_structure_change = any(
-        cd.status != "unchanged"
+        cd.status in ("added", "removed")
+        for cd in choice_diffs + matrix_row_diffs + matrix_col_diffs
+    )
+    has_child_text_change = any(
+        cd.status == "text_changed"
         for cd in choice_diffs + matrix_row_diffs + matrix_col_diffs
     )
 
     if has_structure_change:
         status = "structure_changed"
-    elif has_text_change:
+    elif has_text_change or has_child_text_change:
         status = "text_changed"
     else:
         status = "identical"

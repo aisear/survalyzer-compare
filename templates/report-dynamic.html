@@ -254,14 +254,59 @@ function getDiffsForPair(refSource, targetSource) {
   return DATA.diffs[getDiffKey(refSource, targetSource)] || {};
 }
 
+function getLanguageFilteredStatus(diff) {
+  // Structural presence/absence is language-independent
+  if (diff.status === 'added' || diff.status === 'removed') return diff.status;
+
+  // Check question-level text diffs for current language
+  let hasTextChange = false;
+  if (diff.text_diffs) {
+    for (const td of diff.text_diffs) {
+      if (td.language === currentLanguage && td.status !== 'exact') {
+        hasTextChange = true;
+        break;
+      }
+    }
+  }
+
+  // Check child items for structural changes (language-independent)
+  // and text changes (language-specific)
+  let hasStructureChange = false;
+  let hasChildTextChange = false;
+  const allChildDiffs = [
+    ...(diff.choice_diffs || []),
+    ...(diff.matrix_row_diffs || []),
+    ...(diff.matrix_column_diffs || []),
+  ];
+  for (const cd of allChildDiffs) {
+    if (cd.status === 'added' || cd.status === 'removed') {
+      hasStructureChange = true;
+    } else if (cd.status === 'text_changed' && cd.text_diffs) {
+      for (const td of cd.text_diffs) {
+        if (td.language === currentLanguage && td.status !== 'exact') {
+          hasChildTextChange = true;
+          break;
+        }
+      }
+    }
+  }
+
+  if (hasStructureChange) return 'structure_changed';
+  if (hasTextChange || hasChildTextChange) return 'text_changed';
+  return 'identical';
+}
+
 function getWorstStatus(code) {
   let worst = 'identical';
   const priority = ['structure_changed', 'text_changed', 'added', 'removed', 'identical'];
   for (const target of selectedTargets) {
     const pairDiffs = getDiffsForPair(currentReference, target);
     const diff = pairDiffs[code];
-    if (diff && priority.indexOf(diff.status) < priority.indexOf(worst)) {
-      worst = diff.status;
+    if (diff) {
+      const status = getLanguageFilteredStatus(diff);
+      if (priority.indexOf(status) < priority.indexOf(worst)) {
+        worst = status;
+      }
     }
   }
   return worst;
@@ -401,10 +446,10 @@ function renderQuestionRow(code) {
     const pairDiffs = getDiffsForPair(currentReference, target);
     const diff = pairDiffs[code];
     if (diff) {
-      const label = diff.status === 'removed' ? '\u2014' :
-        (diff.status === 'text_changed' || diff.status === 'structure_changed') ? 'changed' : diff.status;
+      const langStatus = getLanguageFilteredStatus(diff);
+      const label = langStatus.replace('_', ' ');
       surveyCells += `<td class="clickable" onclick="toggleDetail('${code}')">
-        <span class="status-badge badge-${diff.status}">${label}</span>
+        <span class="status-badge badge-${langStatus}">${label}</span>
       </td>`;
     } else {
       surveyCells += `<td class="clickable" onclick="toggleDetail('${code}')"><span class="status-badge badge-removed">\u2014</span></td>`;
