@@ -781,6 +781,11 @@ function renderSection(sectionName, codes) {
 }
 
 function render() {
+  // Preserve focus state
+  const activeElement = document.activeElement;
+  const shouldRestoreFocus = activeElement && activeElement.id === 'search-box';
+  const cursorPosition = shouldRestoreFocus ? activeElement.selectionStart : null;
+
   if (selectedTargets.length === 0) {
     document.getElementById('app').innerHTML = renderFilters() +
       '<div style="text-align:center;padding:48px;color:var(--text-secondary)">Select at least one target survey to compare against.</div>';
@@ -801,6 +806,17 @@ function render() {
 
   document.getElementById('app').innerHTML = html;
   attachEventListeners();
+
+  // Restore focus to search box if it was focused before
+  if (shouldRestoreFocus) {
+    const searchBox = document.getElementById('search-box');
+    if (searchBox) {
+      searchBox.focus();
+      if (cursorPosition !== null) {
+        searchBox.setSelectionRange(cursorPosition, cursorPosition);
+      }
+    }
+  }
 }
 
 function attachEventListeners() {
