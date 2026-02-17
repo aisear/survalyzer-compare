@@ -313,6 +313,9 @@ function getWorstStatus(code) {
 }
 
 function isMatchedInAnyTarget(code) {
+  // Check if question exists in reference
+  if (DATA.questions[currentReference] && DATA.questions[currentReference][code]) return true;
+  // Check if question exists in any target
   for (const target of selectedTargets) {
     if (DATA.questions[target] && DATA.questions[target][code]) return true;
   }
