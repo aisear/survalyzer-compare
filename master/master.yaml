@@ -2223,10 +2223,10 @@ Zufriedenheit:
 ZufriedenNichtOffen:
   element_type: OpenQuestion
   texts:
-    en: 'Please let us know why you were dissatisfied:'
-    fr: 'Veuillez nous faire savoir les causes d’insatisfaction :'
-    de-ch: 'Bitte teilen Sie uns die Gründe mit, weshalb sie unzufrieden waren:'
-  section_name: Zufriedenheit
+    de-ch: 'Bitte teilen Sie uns die Gründe für Ihre Unzufriedenheit mit:'
+    en: 'Please let us know the reasons why you are unsatisfied:'
+    fr: 'Veuillez nous indiquer les raisons de votre insatisfaction :'
+  section_name: (17) Zufriedenheit Und Erfolg
   section_index: 16
 FeedbackOffen:
   element_type: OpenQuestion
@@ -4459,6 +4459,2863 @@ WeitereVerbesserungen:
     de-ch: Haben Sie weitere konkrete Verbesserungsvorschläge für den Innovationsscheck?
   section_name: Zufriedenheit mit Innosuisse Programm
   section_index: 10
+LiquidiertOderAktiv:
+  element_type: SingleChoice
+  texts:
+    de-ch: Ist Ihr Start-up derzeit noch aktiv?
+    en: Is your start-up currently still active?
+    fr: Votre start-up est-elle actuellement toujours active ?
+  section_name: '(2b CCi only): Liquidiert?'
+  section_index: 4
+  choices:
+  - code: '6'
+    texts:
+      de-ch: ja (inklusive Exit oder Verkauf)
+      en: yes (incl. exit or sale)
+      fr: oui (y compris sortie ou vente)
+  - code: '2'
+    texts:
+      de-ch: nein, wir sind zurzeit in der Phase der Liquidation
+      en: no, in liquidation phase
+      fr: non, en phase de liquidation
+  - code: '1'
+    texts:
+      de-ch: nein, unser Start-up wurde liquidiert
+      en: no, liquidation completed
+      fr: non, liquidation terminée
+LiquidiertGruende:
+  element_type: MultipleChoice
+  texts:
+    de-ch: Welches sind/waren die wichtigsten Gründe, die zur Liquidation Ihres Start-ups
+      führten?
+    fr: Veuillez-nous indiquer les principales raisons qui ont conduit à la liquidation
+      de votre start-up ?
+    en: What are/were the main reasons that led to the liquidation of your start-up?
+  section_name: '(2b CCi only): Liquidiert?'
+  section_index: 4
+  choices:
+  - code: '1'
+    texts:
+      de-ch: mangelnde finanzielle Mittel
+      fr: Manque de ressources financières
+      en: Lack of financial resources
+  - code: '2'
+    texts:
+      de-ch: mangelnde nicht-finanzielle Ressourcen (Personal, Räumlichkeiten, etc.)
+      fr: Manque de ressources non-financières (personnel, locaux, etc.)
+      en: Lack of non-financial resources (staff, premises, etc.)
+  - code: '3'
+    texts:
+      de-ch: mangelnde externe Unterstützung (Coaching, Beratung, Förderstellen)
+      fr: Manque de soutien externe (coaching, conseil, agences d'innovation/de soutien)
+      en: Lack of external support (coaching, counselling, innovation/support agencies)
+  - code: '4'
+    texts:
+      de-ch: Abgang im Gründerteam
+      fr: Départ dans l'équipe fondatrice
+      en: Departure among founding team
+  - code: '5'
+    texts:
+      de-ch: regulatorische Hindernisse
+      fr: Obstacles réglementaires
+      en: Regulatory obstacles
+  - code: '6'
+    texts:
+      de-ch: schwierige interne Weiterentwicklung und Umsetzung der Geschäftsidee/Innovation
+      fr: Développement et mise en œuvre internes difficiles de l'idée commerciale/l'innovation
+      en: Difficult internal development and implementation of the business idea/innovation
+  - code: '7'
+    texts:
+      de-ch: Marktentwicklung (Wettbewerb, Trends, Angebot und Nachfrage, usw.)
+      fr: Développement du marché (concurrence, tendances, offre et demande, etc.)
+      en: Market development (competition, trends, supply and demand, etc.)
+  - code: '8'
+    texts:
+      de-ch: 'Sonstiges, bitte angeben:'
+      fr: 'Autre, veuillez préciser:'
+      en: 'Other, please specify:'
+GeschaeftsSitz:
+  element_type: SingleChoice
+  texts:
+    de-ch: Wo befindet sich die Hauptniederlassung Ihres Start-ups zum gegenwärtigen
+      Zeitpunkt?
+    en: Where is your start-up's headquarters located at the moment?
+    fr: Où se situe actuellement le siège de votre start-up ?
+  section_name: (1) Einstieg
+  choices:
+  - code: '1'
+    texts:
+      de-ch: Aargau (AG)
+      en: Aargau (AG)
+      fr: Argovie (AG)
+  - code: '2'
+    texts:
+      de-ch: Appenzell Ausserrhoden (AR)
+      en: Appenzell Ausserrhoden (AR)
+      fr: Appenzell Rhodes-Extérieures (AR)
+  - code: '3'
+    texts:
+      de-ch: Appenzell Innerrhoden (AI)
+      en: Appenzell Innerrhoden (AI)
+      fr: Appenzell Rhodes-Intérieures (AI)
+  - code: '4'
+    texts:
+      de-ch: Basel-Stadt (BS)
+      en: Basel-Stadt (BS)
+      fr: Bâle-Ville (BS)
+  - code: '5'
+    texts:
+      de-ch: Basel-Landschaft (BL)
+      en: Basel-Landschaft (BL)
+      fr: Bâle-Campagne (BL)
+  - code: '6'
+    texts:
+      de-ch: Bern (BE)
+      en: Berne (BE)
+      fr: Berne (BE)
+  - code: '7'
+    texts:
+      de-ch: Freiburg (FR)
+      en: Fribourg (FR)
+      fr: Fribourg (FR)
+  - code: '8'
+    texts:
+      de-ch: Genf (GE)
+      en: Geneva (GE)
+      fr: Genève (GE)
+  - code: '9'
+    texts:
+      de-ch: Glarus (GL)
+      en: Glarus (GL)
+      fr: Glaris (GL)
+  - code: '10'
+    texts:
+      de-ch: Graubünden (GR)
+      en: Graubünden (GR)
+      fr: Grisons (GR)
+  - code: '11'
+    texts:
+      de-ch: Jura (JU)
+      en: Jura (JU)
+      fr: Jura (JU)
+  - code: '12'
+    texts:
+      de-ch: Luzern (LU)
+      en: Lucerne (LU)
+      fr: Lucerne (LU)
+  - code: '13'
+    texts:
+      de-ch: Neuenburg (NE)
+      en: Neuchâtel (NE)
+      fr: Neuchâtel (NE)
+  - code: '14'
+    texts:
+      de-ch: Nidwalden (NW)
+      en: Nidwalden (NW)
+      fr: Nidwald (NW)
+  - code: '15'
+    texts:
+      de-ch: Obwalden (OW)
+      en: Obwalden (OW)
+      fr: Obwald (OW)
+  - code: '16'
+    texts:
+      de-ch: St. Gallen (SG)
+      en: St. Gallen (SG)
+      fr: St. Gall (SG)
+  - code: '17'
+    texts:
+      de-ch: Schaffhausen (SH)
+      en: Schaffhausen (SH)
+      fr: Schaffhouse (SH)
+  - code: '18'
+    texts:
+      de-ch: Schwyz (SZ)
+      en: Schwyz (SZ)
+      fr: Schwytz (SZ)
+  - code: '19'
+    texts:
+      de-ch: Solothurn (SO)
+      en: Solothurn (SO)
+      fr: Soleure (SO)
+  - code: '20'
+    texts:
+      de-ch: Thurgau (TG)
+      en: Thurgau (TG)
+      fr: Thurgovie (TG)
+  - code: '21'
+    texts:
+      de-ch: Tessin (TI)
+      en: Ticino (TI)
+      fr: Tessin (TI)
+  - code: '22'
+    texts:
+      de-ch: Uri (UR)
+      en: Uri (UR)
+      fr: Uri (UR)
+  - code: '23'
+    texts:
+      de-ch: Wallis (VS)
+      en: Valais (VS)
+      fr: Valais (VS)
+  - code: '24'
+    texts:
+      de-ch: Waadt (VD)
+      en: Vaud (VD)
+      fr: Vaud (VD)
+  - code: '25'
+    texts:
+      de-ch: Zug (ZG)
+      en: Zug (ZG)
+      fr: Zug (ZG)
+  - code: '26'
+    texts:
+      de-ch: Zürich (ZH)
+      en: Zurich (ZH)
+      fr: Zurich (ZH)
+  - code: '27'
+    texts:
+      de-ch: Liechtenstein
+      en: Liechtenstein
+      fr: Liechtenstein
+  - code: '28'
+    texts:
+      de-ch: Im Ausland
+      en: Abroad
+      fr: A l'étranger
+GruendTeam:
+  element_type: Matrix
+  texts:
+    de-ch: Wie viele Personen umfasste das Gründungsteam Ihres Start-ups?
+    en: How many people founded the start-up?
+    fr: Combien de personnes ont fondé la start-up ?
+  section_name: (2) Gründungsphase
+  section_index: 1
+  matrix_rows:
+  - code: Total
+    texts:
+      de-ch: Personen total im Gründungsteam
+      en: Total number of people in foundation team
+      fr: Nombre total de personnes dans l'équipe fondatrice
+  - code: Frauen
+    texts:
+      de-ch: '... davon Frauen'
+      en: '... of which were women'
+      fr: '... dont femmes'
+  - code: GenderNonKonform
+    texts:
+      de-ch: '... davon gender-nonkonforme Personen'
+      en: '... of which were gender-nonconforming persons'
+      fr: '... dont personnes non conformes au genre'
+  - code: Ausl
+    texts:
+      de-ch: Personen ohne Schweizer Staatsbürgerschaft insgesamt
+      en: Persons without Swiss citizenship in total
+      fr: Total des personnes sans nationalité suisse
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: Anzahl Personen
+      en: number of people
+      fr: nombre de personnes
+TeilnahmeCoaching:
+  element_type: Matrix
+  texts:
+    de-ch: Hat Ihr Start-up ...
+    en: Has your start-up ...
+    fr: Est-ce que votre start-up a ...
+  section_name: (3) Herkunft Geschäftsidee
+  section_index: 2
+  matrix_rows:
+  - code: InitialC
+    texts:
+      de-ch: '... ein Initial Coaching der Innosuisse durchlaufen?'
+      fr: '... effectué un Initial Coaching'
+      en: '... undergone an initial coaching by Innosuisse?'
+  - code: Camps
+    texts:
+      de-ch: '... an den von Innosuisse unterstützten Start-up Camps teilgenommen?'
+      en: '... participated in the start-up camps supported by Innosuisse?'
+      fr: '... participé aux Start-up Camps soutenus par Innosuisse ?'
+  - code: Fairs
+    texts:
+      de-ch: '... an einer von Innosuisse unterstützten International Trade Fairs teilgenommen?'
+      en: '... participated in one of the international trade fairs  supported by
+        Innosuisse?'
+      fr: '... participé à l''un des International Trade Fairs soutenus par Innosuisse
+        ?'
+  matrix_columns:
+  - code: '6'
+    texts:
+      de-ch: ja
+      en: 'yes'
+      fr: oui
+  - code: '1'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+TeilnahmeInnosuisse:
+  element_type: MultipleChoice
+  texts:
+    de-ch: Hat Ihr Start-up oder dessen Gründungspersonen vor oder während des Coachings an
+      einem der nachfolgenden Innosuisse Förderprogramme teilgenommen oder nehmen
+      Sie aktuell daran teil?
+    en: Did your start-up or its founding persons participate or are currently participating
+      in one of the following Innosuisse support programmes before or during the coaching?
+    fr: Votre start-up ou ses fondateurs ont-ils participé à l'un des programmes d'encouragement
+      Innosuisse suivants avant ou pendant le coaching, ou y participez-vous actuellement
+      ?
+  section_name: (3) Herkunft Geschäftsidee
+  section_index: 2
+  choices:
+  - code: 12f
+    texts:
+      de-ch: Start-Up Training
+      fr: Start-Up Training
+      en: Start-Up Training
+  - code: 16i
+    texts:
+      de-ch: Start-up Scale Up Coaching
+      fr: Start-up Scale Up Coaching
+      en: Start-up Scale Up Coaching
+  - code: 7f
+    texts:
+      de-ch: BRIDGE - Proof of Concept
+      en: Bridge - Proof of Concept
+      fr: Bridge - Proof of Concept
+  - code: '4'
+    texts:
+      de-ch: Innovationsprojekt mit Umsetzungspartner
+      en: Innovation project with implementation partner
+      fr: Projet d'innovation avec partenaire de mise en œuvre
+  - code: 3f
+    texts:
+      de-ch: Innovationsprojekt ohne Umsetzungspartner
+      en: Innovation project without implementation partner
+      fr: Projet d'innovation sans partenaire de mise en œuvre
+  - code: 17i
+    texts:
+      de-ch: Swiss Accelerator / EIC
+      fr: Swiss Accelerator / EIC
+      en: Swiss Accelerator / EIC
+  - code: SIP
+    texts:
+      de-ch: Start-up Innovationsprojekt (SIP)
+      fr: Projet d’innovation pour start-up
+      en: Innovation project for start-ups
+  - code: '5'
+    texts:
+      de-ch: Innovationsprojekt mit internationalen Partnern (Europäische Union, Eurostars,
+        Eureka, bilaterale Projekte mit anderen Ländern)
+      en: Innovation project with international partners (European Union, Eurostars,
+        Eureka, bilateral projects with other countries)
+      fr: Projet d'innovation avec des partenaires internationaux (Union européenne,
+        Eurostars, Eureka, projets bilatéraux avec d'autres pays)
+  - code: '2'
+    texts:
+      de-ch: Innovationsscheck
+      fr: Chèque d'innovation
+      en: Innovation cheque
+  - code: 1f
+    texts:
+      de-ch: Mentoring Innosuisse
+      fr: Mentoring Innosuisse
+      en: Mentoring Innosuisse
+  - code: 6f
+    texts:
+      de-ch: BRIDGE - Discovery
+      en: Bridge - Discovery
+      fr: Bridge - Discovery
+  - code: '10'
+    texts:
+      de-ch: Energieforschung (SCCER)
+      en: Energy Research (SCCER)
+      fr: Recherche sur l'énergie (SCCER)
+  - code: '8'
+    texts:
+      de-ch: Innovation Booster
+      en: NTN Innovation Booster
+      fr: NTN Innovation Booster
+  - code: 9i
+    texts:
+      de-ch: Flagship Initiative
+      en: Flagship Initiative
+      fr: Initiative Flagship
+  - code: '11'
+    texts:
+      de-ch: Patentrecherchen beim Institut für Geistiges Eigentum
+      fr: Recherches de brevets accompagnées auprès de l'Institut de la propriété
+        intellectuelle
+      en: Patent searches at the Institute of Intellectual Property
+  - code: '14'
+    texts:
+      de-ch: 'Andere, bitten nennen:'
+      en: 'Other, please specify:'
+      fr: 'Autres, veuillez préciser :'
+GIdeeForschBasiert:
+  element_type: SingleChoice
+  texts:
+    de-ch: Beruht die Geschäftsidee Ihres Start-ups entscheidend auf Forschungsergebnissen
+      eines Gründungsmitglieds im Rahmen einer Anstellung an einer Forschungsinstitution
+      oder Hochschule?
+    en: Is your start-up's business idea decisively based on research results of a
+      founding member in the context of employment at a research institution or university?
+    fr: L'idée commerciale de votre start-up repose-t-elle de manière décisive sur
+      les résultats de recherche d'un membre fondateur dans le cadre d'un emploi dans
+      une institution de recherche ou une université?
+  section_name: (4) Spin-Offs
+  section_index: 3
+  choices:
+  - code: '6'
+    texts:
+      de-ch: ja Die Geschäftsidee beruht ausschliesslich oder entscheidend darauf.
+      en: yesThe business idea is based exclusively or decisively on it.
+      fr: ouiL'idée commerciale repose exclusivement ou de manière décisive sur elle.
+  - code: '4'
+    texts:
+      de-ch: teilweiseDie Geschäftsidee beruht teilweise direkt auf Forschungsergebnissen
+        und teilweise auf beruflichen Erfahrungen in Wirtschaft und Gesellschaft oder
+        auf Erkenntnissen aus dem privaten Bereich.
+      en: partiallyThe business idea is partly based directly on research results
+        and partly on professional experience in the economy and society or on knowledge
+        acquired in the private sector.
+      fr: partiellementL'idée commerciale repose en partie directement sur des résultats
+        de recherche et en partie sur des expériences professionnelles dans l'économie
+        et la société ou sur des connaissances acquises dans la domaine privé.
+  - code: '1'
+    texts:
+      de-ch: neinDie Geschäftsidee beruht ausschliesslich oder überwiegend auf beruflichen
+        Erfahrungen in Wirtschaft und Gesellschaft oder auf Erkenntnissen aus dem
+        privaten Bereich.
+      en: noThe business idea is based exclusively or mainly on professional experience
+        in the economy and society or on knowledge acquired in the private sector.
+      fr: nonL'idée commerciale repose exclusivement ou principalement sur des expériences
+        professionnelles dans l'économie et la société ou sur des connaissances acquises
+        dans le domaine privé.
+GIdeeForsch_Aus:
+  element_type: SingleChoice
+  texts:
+    de-ch: Aus welcher Forschungsinstitution oder Hochschule stammen die Forschungsergebnisse,
+      auf denen die Geschäftsidee Ihres Start-ups beruht?
+    en: From which research institution or university do the research results originate
+      on which the business idea of your start-up is based?
+    fr: De quelle institution de recherche ou de quelle université proviennent les
+      résultats de recherche sur lesquels se base l'idée commerciale de votre start-up
+      ?
+  section_name: (4) Spin-Offs
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      de-ch: Universitäre Hochschulen:ETH/EPFL-Bereich
+      en: Universities:ETH/EPFL Domain
+      fr: Universités:Domaine des EPF
+  - code: '2'
+    texts:
+      de-ch: Universität und assoziierte Institutionen in der Schweiz
+      en: University and affiliated institutions in Switzerland
+      fr: Université et institutions affiliées en Suisse
+  - code: '3'
+    texts:
+      de-ch: Universität im Ausland
+      en: University abroad
+      fr: Université à l'étranger
+  - code: '4'
+    texts:
+      de-ch: Weitere HochschulenFachhochschule in der Schweiz (FH)
+      en: Other universitiesUniversitiy of Applied Sciences in Switzerland (FH)
+      fr: Autres hautes écolesHaute école spécialisée en Suisse (HES)
+  - code: '5'
+    texts:
+      de-ch: Pädagogische Hochschule in der Schweiz (PH)
+      en: University of Teacher Education in Switzerland (PH)
+      fr: Haute école pédagogique en Suisse (HEP)
+  - code: '6'
+    texts:
+      de-ch: Fachhochschule im Ausland
+      en: University of Applied Sciences abroad
+      fr: Haute école spécialisée à l'étranger
+  - code: '7'
+    texts:
+      de-ch: Weitere Forschungsinstitution:Andere Forschungsinstitution in der Schweiz
+      en: Other research institutions:Other research institution in Switzerland
+      fr: Autres institutions de recherche:Autre institution de recherche en Suisse
+  - code: '8'
+    texts:
+      de-ch: Andere Forschungsinstitution im Ausland
+      en: Other research institution abroad
+      fr: Autre institution de recherche à l'étranger
+Branche:
+  element_type: MultipleChoice
+  texts:
+    de-ch: In welchen Märkten/Technologien ist Ihr Start-up gegenwärtig tätig?
+    en: In which markets/technologies is your start-up currently active?
+    fr: Sur quels marchés/technologies votre start-up est-elle actuellement active
+      ?
+  section_name: (5) Charakterisierung Geschäftsidee
+  section_index: 4
+  choices:
+  - code: Agro
+    texts:
+      de-ch: Land- und Forstwirtschaft, Fischerei / Agritech
+      en: Agriculture, forestry, fishery / Agritech
+      fr: Agriculture, sylviculture, pêche / Agritech
+  - code: Food
+    texts:
+      de-ch: Ernährung, Nahrungsmittel, Konsumgüter / Food-Tech
+      en: Nutrition, food, consumer goods / Food tech
+      fr: Nutrition, alimentation, biens de consommation / Foodtech
+  - code: BioMed
+    texts:
+      de-ch: Pharma, Biologie, Medizin, Life Sciences / Medtech
+      en: Pharma, biology, medicine, life sciences / Medtech
+      fr: Pharma, biologie, médecine, sciences de la vie / Medtech
+  - code: MEM
+    texts:
+      de-ch: Maschinen-, Elektro- und Metallindustrie (MEM), Optik, Uhren, Chemikalien,
+        Mineralöl, übrige Industriegüter
+      en: Machinery, electrical and metal industry (MEM), optics, watches, chemicals,
+        mineral oil, other industrial goods
+      fr: Industrie des machines, des équipements électriques et des métaux (MEM),
+        optique, montres, produits chimiques, huile minérale, autres produits industriels
+  - code: Robot
+    texts:
+      de-ch: Advanced Manufacturing, Robotics, Internet of Things
+      en: Advanced manufacturing, robotics, internet of things
+      fr: Fabrication avancée, robotique, internet des objets
+  - code: EffEner
+    texts:
+      de-ch: Energie / Effiziente und erneuerbare Energien
+      fr: Énergie / Énergie efficace et renouvelable
+      en: Energy / Efficient and renewable energies
+  - code: Green
+    texts:
+      de-ch: Umwelttechnik, Recycling / Cleantech
+      en: Environmental technology, recycling / Cleantech
+      fr: Technologie environnementale, recyclage / Cleantech
+  - code: Transport
+    texts:
+      de-ch: Transport, Lagerung, Logistik
+      en: Transport, storage, logistics
+      fr: Transport, stockage, logistique
+  - code: Trade
+    texts:
+      de-ch: eCommerce, Handel / Tradetech
+      en: eCommerce, trade / Tradetech
+      fr: eCommerce, commerce / Tradetech
+  - code: Immobilien
+    texts:
+      de-ch: Bau und Immobilien, Architektur / Proptech
+      en: Building and real estate, architecture / Proptech
+      fr: Bâtiment et immobilier, architecture / Proptech
+  - code: ICT
+    texts:
+      de-ch: ICT undKommunikationstechnologie
+      en: ICT and communication technology
+      fr: TIC et technologie de la communication
+  - code: KI_AI
+    texts:
+      de-ch: Künstliche Intelligenz / Artificial intelligence
+      fr: Intelligence artificielle / Artificial intelligence
+      en: Artificial intelligence
+  - code: Quantum
+    texts:
+      de-ch: Quantentechnologie / Quantum technology
+  - code: Gesund
+    texts:
+      de-ch: Gesundheitsdienstleistungen & Healthcare
+      en: Healthcare services & healthcare
+      fr: Services et soins de santé
+  - code: Consult
+    texts:
+      de-ch: Beratung und Consulting, Marktforschung
+      en: Advice and consulting, market research
+      fr: Conseil et consultation, études de marché
+  - code: Banken
+    texts:
+      de-ch: Banken, Versicherung, Finanzdienstleistungen / Fintech, Insuretech
+      en: Banking, financial services, insurance / Fintech, insuretech
+      fr: Banque, services financiers, assurance / Fintech, insuretech
+  - code: Bildung
+    texts:
+      de-ch: Bildung / Edutech
+      en: Education / Edutech
+      fr: Éducation / Edutech
+  - code: Medien
+    texts:
+      de-ch: Medien & Soziale Medien
+      en: Media & social media
+      fr: Médias et médias sociaux
+  - code: Kreativ
+    texts:
+      de-ch: Kreativwirtschaft, Gaming, Unterhaltung
+      en: Creative economy, gaming, entertainment
+      fr: Économie créative, jeux, divertissement
+  - code: Touris
+    texts:
+      de-ch: Tourismus, Freizeit, Sport
+      en: Tourism, leisure, sports
+      fr: Tourisme, loisirs, sports
+  - code: HRTech
+    texts:
+      de-ch: Human Resources / HR-Tech
+      en: Human resources / HR-Tech
+      fr: Ressources humaines / HR-Tech
+  - code: SozTech
+    texts:
+      de-ch: Soziale Dienstleistungen / Soztech
+      en: Social services / Soztech
+      fr: Services sociaux / Soztech
+  - code: NonProfit
+    texts:
+      de-ch: Non-Profit Bereich
+      en: Non profit area
+      fr: Secteur à but non lucratif
+  - code: Anderes
+    texts:
+      de-ch: Sonstiges, bitte nachfolgend präzisieren
+      en: Miscellaneous, please specify below
+      fr: Divers, veuillez préciser ci-dessous
+Neuheitslevel:
+  element_type: Matrix
+  texts:
+    en: Is the implemented/planned innovation currently a ...
+    fr: L’innovation mise en œuvre/planifiée est-elle ...
+    de-ch: Ist die umgesetzte/geplante Innovation derzeit eine ...
+  section_name: Ökonomische Projektwirkungen
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Novelty for the organisation
+      fr: une nouveauté pour votre organisation ?
+      de-ch: Neuheit für die Organisation
+  - code: '2'
+    texts:
+      de-ch: Neuheit für den nationalen Markt
+      fr: une nouveauté sur le marché national ?
+      en: Novelty for the national market
+  - code: '3'
+    texts:
+      de-ch: Neuheit auf einem oder mehreren internationalen Märkten
+      en: Novelty on one or more international markets
+      fr: une nouveauté sur un ou plusieurs marchés internationaux ?
+  - code: '4'
+    texts:
+      de-ch: Neuheit auf allen internationalen Märkten (globaler Markt)
+      en: Novelty on all international markets (global market)?
+      fr: und nouveauté sur tous les marchés internationaux (marché mondial) ?
+  matrix_columns:
+  - code: '6'
+    texts:
+      en: 'Yes'
+      fr: Oui
+      de-ch: Ja
+  - code: '1'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+  - code: '99'
+    texts:
+      en: I cannot answer this question
+      fr: Je ne peux pas répondre à cette question
+      de-ch: Das kann ich nicht beantworten
+ForschungZusArbeit:
+  element_type: MultipleChoice
+  texts:
+    de-ch: Bestand in den letzten 12 Monaten eine Zusammenarbeit zwischen Ihrem Start-up
+      (Gründungsteam und Mitarbeitende) und einer Forschungsinstitution oder Hochschule?
+      Wenn ja, in welcher Form bestand diese Zusammenarbeit?
+    en: Has there been any collaboration between your start-up (founding team and
+      staff) and a research institution or university in the last 12 months? If so,
+      what form did this collaboration take?
+    fr: Y a-t-il eu une collaboration entre votre start-up (équipe fondatrice et collaborateurs)
+      et une institution de recherche ou une université dans ces 12 derniers mois
+      ? Si oui, quelle forme a pris cette collaboration ?
+  section_name: (6) Forschung
+  section_index: 5
+  choices:
+  - code: Auftrag
+    texts:
+      de-ch: ProjektarbeitenAuftragsarbeiten für eine Forschungsinstitution oder Hochschule
+      en: 'Project workCommissioned work for a research institution
+
+        or university'
+      fr: Travaux de projetTravaux commandés pour l'institution de recherche ou l'université
+  - code: InProj
+    texts:
+      de-ch: Innovationsprojekt Innosuisse
+      fr: Projet d'innovation Innosuisse
+      en: Innosuisse innovation project
+  - code: InCheck
+    texts:
+      de-ch: Innovationsscheck Innosuisse
+      fr: Chèques d'innovation Innosuisse
+      en: Innosuisse innovation cheque
+  - code: Personal
+    texts:
+      de-ch: Personelle ZusammenarbeitGründungspersonen oder Mitarbeitende des Start-ups
+        sind an einer Forschungsinstitution oder Hochschule angestellt
+      en: Personnel cooperationFounders or employees of the start-up are employed
+        at a research institution or university
+      fr: Collaboration en matière de personnelLes membres fondateurs ou les employé.e.s
+        de la start-up sont employé.e.s par une institution de recherche ou une université
+  - code: Lehre
+    texts:
+      de-ch: Beteiligung an der Lehre oder Weiterbildung
+      en: Involvement in teaching or further education
+      fr: Participation à l'enseignement ou à la formation continue
+  - code: Prakt
+    texts:
+      de-ch: Internship / Praktikum
+      fr: Stages
+      en: Internship / Practical training
+  - code: ZAFuE
+    texts:
+      de-ch: Weitere ZusammenarbeitZusammenarbeit in Forschung und Entwicklung
+      en: Further cooperationCollaboration in research and development
+      fr: Autres collaborationsCollaboration en matière de recherche et de développement
+  - code: Infra
+    texts:
+      de-ch: Nutzung der Infrastruktur (z.B. eines Labors) an der Forschungsinstitution
+        oder Hochschule
+      en: Use of the infrastructure (e.g. a laboratory) at the research institution
+        or university
+      fr: Utilisation de l'infrastructure (par exemple un laboratoire) de l'institution
+        de recherche ou de l'université
+  - code: Erfa
+    texts:
+      de-ch: Regelmässiger Erfahrungsaustausch
+      en: Regular exchange of experience
+      fr: Echange régulier d'expériences
+  - code: Anderes
+    texts:
+      de-ch: 'Weitere Formen der Zusammenarbeit, bitte präzisieren:'
+      en: 'Other forms of collaboration, please specify:'
+      fr: 'Autres formes de collaboration, veuillez préciser :'
+  - code: NEIN
+    texts:
+      de-ch: Keine Zusammenarbeit
+      en: No collaboration
+      fr: Pas de collaboration
+ForschungEigene:
+  element_type: SingleChoice
+  texts:
+    de-ch: Betreibt Ihr Start-up gegenwärtig eigenständig und «in-house» wissenschaftliche
+      Forschung?
+    en: Is your start-up currently conducting scientific research independently and
+      in-house?
+    fr: Votre start-up fait-elle actuellement de la recherche scientifique de manière
+      autonome et "en interne" ?
+  section_name: (6) Forschung
+  section_index: 5
+  choices:
+  - code: '6'
+    texts:
+      de-ch: ja
+      en: 'yes'
+      fr: oui
+  - code: '5'
+    texts:
+      de-ch: nein, aber wir planen es
+      fr: non, mais nous le planifions
+      en: no, but we are planning it
+  - code: '1'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+BRLStart:
+  element_type: Dropdown
+  texts:
+    en: Which Business Readiness Level (BRL) did your project have at the beginning
+      of the BRIDGE Proof of Concept funding?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: Early concept phaseBRL 1 – Basic hypothesesInitial hypotheses regarding
+        a possible business, implementation or societal impact concept.
+  - code: '2'
+    texts:
+      en: BRL 2 – First business model or concept describedFirst description of a
+        business, implementation or societal impact concept. Initial understanding
+        of target groups, needs or problem context.
+  - code: '3'
+    texts:
+      en: Business model and concept development phase BRL 3 – Development of business
+        model or conceptDraft business model or draft implementation / impact logic.
+        Market potential and/or societal relevance and stakeholder landscape described.
+  - code: '4'
+    texts:
+      en: BRL 4 – First validated business model or conceptFirst structured business
+        model or implementation and impact concept. Initial projections of economic
+        viability, market potential and/or societal relevance. Initial assumptions
+        on feasibility, relevance and potential effects.
+  - code: '5'
+    texts:
+      en: Validation phase BRL 5 – Business model or concept testingTesting of the
+        business model or of implementation pathways, user acceptance or societal
+        relevance. Key assumptions validated with external stakeholders or; where
+        applicable, first revenue model and initial competitive positioning.
+  - code: '6'
+    texts:
+      en: BRL 6 – Advanced business model or concept validationBusiness model or implementation
+        / impact concept largely validated. Pricing or cost assumptions verified with
+        customers, users or implementing actors, where applicable Product-market fit
+        and finetuning
+  - code: '7'
+    texts:
+      en: BRL 7 – Demonstrated applicability and relevanceProduct-market fit or solution/context
+        fit demonstrated. Clear value proposition for customers or beneficiaries and
+        implementing actors.
+  - code: '8'
+    texts:
+      en: BRL 8 – Business model or concept finetunedBusiness model or broader implementation
+        readiness / impact model refined. Evidence that the approach is robust and
+        transferable to broader contexts.
+  - code: '9'
+    texts:
+      en: Scaling and broader implementation BRL 9 – Scaling and implementation readinessBusiness
+        scaling with recurring revenues or readiness for larger-scale implementation,
+        institutional embedding or policy uptake.
+  - code: '99'
+    texts:
+      en: BRL not applicable / don't know
+EPhase2024:
+  element_type: SingleChoice
+  texts:
+    de-ch: In welcher Entwicklungsphase befindet sich Ihr Start-up heute?
+    en: What stage of development is your start-up in today?
+    fr: À quel stade de développement se trouve votre start-up aujourd'hui ?
+  section_name: (7) Entwicklungsphase / Märkte
+  section_index: 6
+  choices:
+  - code: '2'
+    texts:
+      de-ch: 'Pre-Seed stage: Ideenvalidierung, Teambildung, Marktforschung, Geschäftsplan
+        in Entwicklung'
+      en: 'Pre-Seed stage: idea validation, team-building, market research, business
+        plan in development'
+      fr: 'Pre-Seed stage : validation des idées, constitution d''une équipe, étude
+        de marché, plan d''affaires en cours de développement'
+  - code: '3'
+    texts:
+      de-ch: 'Seed stage / validation: Anfangsfinanzierung, Prototyp oder MVP, Verfeinerung
+        des Geschäftsplans'
+      en: 'Seed stage / validation: initial funding, prototype or MVP, business plan
+        refinement'
+      fr: 'Seed stage / validation : financement initial, prototype ou MVP, affinement
+        du plan d''affaires'
+  - code: '4'
+    texts:
+      de-ch: 'Market launch stage: Produkt-Markt-Fit erreicht, erste Umsätze'
+      en: 'Market launch stage: Product-market fit achieved, first revenues'
+      fr: 'Market launch stage : adaptation produit-marché réalisée, premières recettes'
+  - code: '5'
+    texts:
+      de-ch: 'Growth stage: Umsatzwachstum und Skalierung des Geschäfts'
+      fr: 'Growth stage : croissance du chiffre d''affaires et mise à l''échelle de
+        l''entreprise'
+      en: 'Growth stage: Revenue growth and scaling business'
+  - code: '6'
+    texts:
+      de-ch: 'Expansion stage: Diversifizierung in neue Märkte oder Produkte'
+      fr: 'Expansion stage : diversification vers de nouveaux marchés ou produits'
+      en: 'Expansion stage: Diversification into new markets or products'
+  - code: '7'
+    texts:
+      de-ch: 'Maturity stage: Langfristige Aufrechterhaltung und Wachstum des Unternehmens'
+      fr: 'Maturity stage : soutenir et développer l''entreprise à long terme'
+      en: 'Maturity stage: sustaining and growing the business long-term'
+BRLEnd:
+  element_type: Dropdown
+  texts:
+    en: Which Business Readiness Level (BRL) best describes the status of your project
+      at the end of the BRIDGE Proof of Concept funding?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: Basic hypothesesBRL 1 - Hypothesizing on possible business concept
+  - code: '2'
+    texts:
+      en: BRL 2 - First business concept described. Identified overall market & some
+        competitors.
+  - code: '3'
+    texts:
+      en: Development of business modelBRL 3 - Draft of business model. Described
+        market potential & competitive overview.
+  - code: '4'
+    texts:
+      en: BRL 4 - First version of business model, first projections of economic viability
+        & market potential
+  - code: '5'
+    texts:
+      en: BRL 5 - Business model testing, first revenue model, competitive position
+        verified im market
+  - code: '6'
+    texts:
+      en: BRL 6 - Full business model including pricing verified on customers
+  - code: '7'
+    texts:
+      en: Product market fit / finetuningBRL 7 - Product/market fit demonstrated.
+        Attractive revenue/cost projections.
+  - code: '8'
+    texts:
+      en: BRL 8 - Business model is finetuned. Sales & metrics show business model
+        holds and can scale
+  - code: '9'
+    texts:
+      en: Business scalingBRL 9 - Business model finalised. Business scaling with
+        recurring revenues
+  - code: '10'
+    texts:
+      en: BRL not applicable / don't know
+Entwicklungsphase:
+  element_type: SingleChoice
+  texts:
+    de-ch: Wie entwickelt sich der Umsatz?
+    en: How is revenue developing?
+    fr: Comment les ventes évoluent-elles ?
+  section_name: (7) Entwicklungsphase / Märkte
+  section_index: 6
+  choices:
+  - code: '2'
+    texts:
+      de-ch: Aufbau des Start-ups: Geschäftsstrategie noch in der Entwicklung, Umsetzung
+        der Go-to-Market-Strategie, Pilotprojekte, Markteintritt ist noch nicht erfolgt
+      en: Early stage : Business strategy still under development, implementation
+        of go-to-market strategy, pilot projects, but market entry not yet achieved
+      fr: Stade de démarrage : Stratégie commerciale en cours d'élaboration, mise
+        en œuvre d'une stratégie de mise sur le marché, projets pilote, mais entrée
+        sur le marché pas encore réalisée
+  - code: '3'
+    texts:
+      de-ch: Markteintritt: Erste Einnahmen, Entwicklung und Umsetzung einer Wachstumsstrategie
+      en: Market entry : First revenues, development and implementation of a growth
+        strategy
+      fr: Entrée sur le marché : Premières ventes, élaboration et mise en œuvre d'une
+        stratégie de croissance
+  - code: '-1'
+    texts:
+      de-ch: Wir erzielen noch keinen Umsatz
+      en: We are not yet generating any revenue
+      fr: Nous ne réalisons pas encore de ventes
+  - code: '4'
+    texts:
+      de-ch: Umsatzwachstum > 0 - 5% pro Jahr
+      en: Revenue growth >0 -5% per year
+      fr: Croissance des ventes >0 -5% par an
+  - code: '5'
+    texts:
+      de-ch: Umsatzwachstum 5 - 20% pro Jahr
+      fr: Croissance des ventes 5 - 20% par an
+      en: Revenue growth 5 - 20% per year
+  - code: '6'
+    texts:
+      de-ch: Umsatzwachstum 20 - 50% pro Jahr
+      fr: Croissance des ventes 20 - 50% par an
+      en: Revenue growth 20 - 50% per year
+  - code: '7'
+    texts:
+      de-ch: Umsatzwachstum 50 - 100% pro Jahr
+      fr: Croissance des ventes 50 - 100% par an
+      en: Revenue growth 50 - 100% per year
+  - code: '8'
+    texts:
+      de-ch: Umsatzwachstum > 100% pro Jahr
+      fr: Croissance des ventes > 100% par an
+      en: Revenue growth > 100% per year
+  - code: '0'
+    texts:
+      de-ch: Unser Start-up befindet sich in Liquidation
+      en: Our start-up is in liquidation
+      fr: Notre start-up est en liquidation
+WachstumsRateEntw:
+  element_type: SingleChoice
+  texts:
+    de-ch: Wie entwickelt sich die Wachstumsrate beim Umsatz gegenwärtig?
+    en: How is the growth rate in revenue currently developing ?
+    fr: Comment évolue actuellement le taux de croissance du chiffre d'affaires ?
+  section_name: (7) Entwicklungsphase / Märkte
+  section_index: 6
+  choices:
+  - code: '4'
+    texts:
+      de-ch: Die Wachstumsrate ist gleichbleibend (lineares Wachstum)
+      en: The growth rate is constant (=linear growth)
+      fr: Le taux de croissance est constant (croissance linéaire)
+  - code: '5'
+    texts:
+      de-ch: Die Wachstumsrate nimmt zu (=zunehmendes Wachstum)
+      en: The growth rate increases (=increasing growth)
+      fr: Le taux de croissance augmente (= croissance accrue)
+  - code: '6'
+    texts:
+      de-ch: Die Wachstumsrate nimmt stark zu (=exponentielles Wachstum)
+      en: The growth rate increases strongly (=exponential growth)
+      fr: Le taux de croissance augmente fortement (= croissance exponentielle)
+  - code: '1'
+    texts:
+      de-ch: Die Wachstumsrate ist abnehmend
+      fr: Le taux de croissance diminue
+      en: The growth rate is decreasing
+MarkteintrittGeplant:
+  element_type: SingleChoice
+  texts:
+    de-ch: Wann plant Ihr Start-up konkret den Markteintritt?
+    en: When does your start-up specifically plan to enter the market?
+    fr: Quand votre start-up prévoit-elle concrètement d'entrer sur le marché ?
+  section_name: (7) Entwicklungsphase / Märkte
+  section_index: 6
+  choices:
+  - code: '6'
+    texts:
+      de-ch: in den nächsten 12 Monaten
+      en: in the next 12 months
+      fr: dans les 12 prochains mois
+  - code: '5'
+    texts:
+      de-ch: in ein bis zwei Jahren
+      en: in one to two years
+      fr: dans un à deux ans
+  - code: '4'
+    texts:
+      de-ch: in mehr als zwei Jahren
+      en: in more than two years
+      fr: dans plus que deux ans
+  - code: '2'
+    texts:
+      de-ch: zurzeit ist noch kein konkreter Markteintritt geplant
+      en: at the moment no concrete market entry is planned yet
+      fr: pour le moment, aucune entrée concrète sur le marché n'est encore prévue
+WeltweitTaetig:
+  element_type: SingleChoice
+  texts:
+    de-ch: Ist Ihr Start-Up auf mindestens einem Markt ausserhalb der Schweiz und
+      Liechtenstein tätig und erzielt dort erste Umsätze?
+    en: Is your start-up active in at least one market outside Switzerland and Liechtenstein
+      and is it generating its first revenues there?
+    fr: Votre start-up est-elle active sur au moins un marché en dehors de la Suisse
+      et du Liechtenstein et y réalise-t-elle ses premiers revenus ?
+  section_name: (7) Entwicklungsphase / Märkte
+  section_index: 6
+  choices:
+  - code: '6'
+    texts:
+      de-ch: ja
+      en: 'yes'
+      fr: oui
+  - code: '5'
+    texts:
+      de-ch: geplant
+      en: planned
+      fr: prévu
+  - code: '1'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+WeltweitTaetig_Wo:
+  element_type: MultipleChoice
+  texts:
+    de-ch: 'Bitte geben Sie an, welche Märkte dies sind:'
+    en: 'Please indicate which markets these are:'
+    fr: 'Veuillez indiquer de quels marchés il s''agit :'
+  section_name: (7) Entwicklungsphase / Märkte
+  section_index: 6
+  choices:
+  - code: EuroW
+    texts:
+      de-ch: Europa:Westeuropa (Belgien, Deutschland, Frankreich, Großbritannien,
+        Irland, Luxemburg, Niederlande, Österreich)
+      en: Europe:Western Europe (Austria, Belgium, France, Germany, Ireland, Luxembourg,
+        Netherlands, UK)
+      fr: Europe:Europe occidentale (Allemagne, Autriche, Belgique, France, Irlande,
+        Luxembourg, Pays-Bas, Royaume-Uni)
+  - code: EuroN
+    texts:
+      de-ch: Nordeuropa (Dänemark, Finnland, Island, Norwegen, Schweden)
+      en: Northern Europe (Denmark, Finland, Iceland, Norway, Sweden)
+      fr: Europe du Nord (Danemark, Finlande, Islande, Norvège, Suède)
+  - code: EuroS
+    texts:
+      de-ch: Südeuropa (Griechenland, Italien, Portugal, Spanien, Türkei, Zypern)
+      en: Southern Europe (Cyprus, Greece, Italy, Portugal, Spain, Turkey)
+      fr: Europe du Sud (Chypre, Grèce, Italie, Portugal, Espagne, Turquie)
+  - code: EuroO
+    texts:
+      de-ch: Osteuropa (alle anderen europäischen Länder inkl. Russland)
+      en: Eastern Europe (all other European countries incl. Russia)
+      fr: Europe de l'Est (tous les autres pays européens, y.c. Russie)
+  - code: AmerN
+    texts:
+      de-ch: Amerika:Nord-Amerika
+      en: America:North-America
+      fr: Amérique:Amérique du Nord
+  - code: AmerS
+    texts:
+      de-ch: Mittel- und Südamerika
+      en: Central and South America
+      fr: Amérique centrale et du Sud
+  - code: AsieIsrael
+    texts:
+      de-ch: Asien:Israel
+      en: Asia:Israel
+      fr: Asie:Israël
+  - code: AsieChina
+    texts:
+      de-ch: China
+      en: China
+      fr: Chine
+  - code: AsieJapan
+    texts:
+      de-ch: Japan
+      en: Japan
+      fr: Japon
+  - code: AsieSKorea
+    texts:
+      de-ch: Südkorea
+      en: South Korea
+      fr: Corée du Sud
+  - code: AsieAnderes
+    texts:
+      de-ch: Anderes Asien
+      en: Other Asian countries
+      fr: Autres pays d'Asie
+  - code: AsieMitOsten
+    texts:
+      de-ch: Mittlerer Osten
+      en: Middle East
+      fr: Moyen-Orient
+  - code: Afri
+    texts:
+      de-ch: Sonstige:Afrika
+      en: Other:Africa
+      fr: Autres:Afrique
+  - code: Aust
+    texts:
+      de-ch: Australien / Ozeanien
+      en: Australia / Oceania
+      fr: Australie / Océanie
+NeueMaerkteWegenCo:
+  element_type: Matrix
+  texts:
+    de-ch: '{{custom.ScaleUndVoranCore_Core}} Ihr Start-up konkret dabei unterstützt,
+      in den internationalen Markt / in internationale Märkte einzutreten oder die
+      Präsenz zu verstärken?'
+    en: '{{custom.ScaleUndVoranCore_Core}} specifically help your start-up to enter
+      the international market(s) or to strengthen its presence?'
+    fr: '{{custom.ScaleUndVoranCore_Core}} concrètement aidé votre start-up à entrer
+      sur le(s) marché(s) international(s) ou y renforcer sa présence ?'
+  section_name: (8) Entwicklungsphase / Märkte
+  section_index: 10
+  matrix_rows:
+  - code: ScalingUp
+    texts:
+      de-ch: Core Coaching
+      fr: Core Coaching
+      en: Core Coaching
+  - code: Finanzierung
+    texts:
+      de-ch: Scale-up Coaching
+      en: Scale-up coaching
+      fr: Scale-up Coaching
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: überhaupt nicht
+      en: not at all
+      fr: pas du tout
+  - code: '2'
+    texts:
+      de-ch: wenig
+      en: little
+      fr: peu
+  - code: '3'
+    texts:
+      de-ch: eher wenig
+      en: rather little
+      fr: plutôt peu
+  - code: '4'
+    texts:
+      de-ch: eher stark
+      en: rather strongly
+      fr: plutôt fort
+  - code: '5'
+    texts:
+      de-ch: stark
+      en: strongly
+      fr: fort
+  - code: '6'
+    texts:
+      de-ch: sehr stark
+      en: very strong
+      fr: très forte
+GSitzVerlagerung:
+  element_type: SingleChoice
+  texts:
+    de-ch: Planen Sie, den Hauptsitz Ihres Start-ups in ein anderes Land ausserhalb
+      der Schweiz zu verlegen?
+    en: Are you planning to move the headquarters of your start-up abroad?
+    fr: Envisagez-vous de transférer votre siège social à l'étranger ?
+  section_name: (7) Entwicklungsphase / Märkte
+  section_index: 6
+  choices:
+  - code: '6'
+    texts:
+      de-ch: 'ja, wir planen kurz- oder mittelfristig den Hauptsitz ins Ausland zu
+        verlegenBitte nennen Sie uns den Hauptgrund:'
+      en: 'yes, we are planning to move the headquarters abroad in the short or medium
+        termPlease tell us the main reason:'
+      fr: 'oui, nous envisageons de déplacer le siège à l''étranger à court ou moyen
+        terme.Veuillez nous indiquer la raison principale :'
+  - code: '4'
+    texts:
+      de-ch: Wir können uns dies längerfristig vorstellen
+      fr: Nous pouvons envisager cela à plus long terme
+  - code: '1'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+PropertyRights:
+  element_type: MultipleChoice
+  texts:
+    de-ch: Welche eigentumsrechtlichen Schutzstrategien verfolgt Ihr Start-up?
+    en: What property protection strategies does your start-up pursue?
+    fr: Quelles stratégies de protection de la propriété votre start-up poursuit-elle
+      ?
+  section_name: (8) Strategieaspekte
+  section_index: 7
+  choices:
+  - code: JurPatent
+    texts:
+      de-ch: Patente / Patentanmeldung
+      en: Patents / Patent application
+      fr: Brevets / Demande de brevet
+  - code: JurTradeM
+    texts:
+      de-ch: Trademarks / Urheberrechte (inkl. Software) / Designrechte
+      en: Trademarks / Copyrights (incl. software) / Design rights
+      fr: Marques commerciales / Droits d'auteur (y inclus des logiciels)/ Droits
+        des dessins et modèles
+  - code: JurLizenz
+    texts:
+      de-ch: Lizenzvereinbarungen (in-licensing)
+      en: Licence agreements (in-licensing)
+      fr: Accords de licence (in-licensing)
+  - code: JurLizenzOut
+    texts:
+      de-ch: Lizenzvereinbarungen (out-licensing)
+      fr: Accords de licence (out-licensing)
+      en: Licence agreements (out-licensing)
+  - code: NJurSpeed
+    texts:
+      de-ch: Kurze Innovationszyklen / Speed to market
+      en: Short innovation cycles / Speed to market
+      fr: Cycles d'innovation courts / rapidité de mise sur le marché
+  - code: NJurGeheim
+    texts:
+      de-ch: Trade secret (Geheimhaltung)
+      fr: Confidentialité / Secret
+      en: Trade secret (secrecy)
+  - code: NJurKomplex
+    texts:
+      de-ch: Komplexität der Innovation, des Prozesses oder der Produktionsmethoden
+      en: Complexity of innovation, of process or of production methods
+      fr: Complexité de l'innovation, du processus ou des méthodes de production
+  - code: NJurAnderes
+    texts:
+      de-ch: Andere, bitte präzisieren
+      en: Other, please specify
+      fr: Autre, veuillez préciser
+  - code: NEIN
+    texts:
+      de-ch: Eigentumsrechtliche Schutzstrategien sind für uns keine relevante Thematik
+      en: Property protection strategies are not a relevant topic for us
+      fr: Les stratégies de protection de la propriété ne sont pas un sujet pertinent
+        pour nous
+PropertyRightsUmgesetzt:
+  element_type: Matrix
+  texts:
+    de-ch: Haben Sie die Schutzstrategie(n) bereits umgesetzt ?
+    en: Have you already implemented the protection strategy(ies)?
+    fr: Avez-vous déjà mis en œuvre la ou les stratégies de protection ?
+  section_name: (8) Strategieaspekte
+  section_index: 7
+  matrix_rows:
+  - code: JurPatent
+    texts:
+      de-ch: Patente / Patentanmeldung
+      fr: Brevets / Demande de brevet
+      en: Patents / Patent application
+  - code: TradeM
+    texts:
+      de-ch: Trademarks / Urheberrechte (inkl. Software) / Designrechte
+      fr: Marques commerciales / Droits d'auteur (y inclus des logiciels)/ Droits
+        des dessins et modèles
+      en: Trademarks / Copyrights (incl. software) / Design rights
+  - code: JurLizenz
+    texts:
+      de-ch: Lizenzvereinbarungen (in-licensing)
+      fr: Accords de licence (in-licensing)
+      en: Licence agreements (in-licensing)
+  - code: JurLizenzOut
+    texts:
+      de-ch: Lizenzvereinbarungen (out-licensing)
+      fr: Accords de licence (out-licensing)
+      en: Licence agreements (out-licensing)
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: ja
+      en: 'yes'
+      fr: oui
+  - code: '2'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+StrategieExit:
+  element_type: Matrix
+  texts:
+    de-ch: Wie stark treffen die folgenden strategischen Ausrichtungen auf Ihr Start-up
+      zu?
+    fr: Dans quelle mesure les orientations stratégiques suivantes s'appliquent-elles
+      à votre start-up ?
+    en: To what extent do the following strategic orientations apply to your start-up?
+  section_name: (8) Strategieaspekte
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      de-ch: Weiterentwicklung und eigenständiger Aufbau des Start-ups ohne geplanten
+        Exit
+      fr: Poursuite du développement et mise en place autonome de la start-up sans
+        sortie/vente (exit)
+      en: Further development and independent establishment of the start-up without
+        a planned exit
+  - code: '2'
+    texts:
+      de-ch: Ausrichtung auf einen Exit (Verkauf des Start-ups oder der Technologie)
+      fr: Orientation vers un exit (sortie/vente de la start-up ou de la technologie)
+      en: Orientation towards an exit (sale of the start-up or the technology)
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: trifft überhaupt nicht zu
+      fr: pas du tout
+      en: applies not at all
+  - code: '2'
+    texts:
+      de-ch: trifft nicht zu
+      fr: très faiblement
+      en: a little
+  - code: '3'
+    texts:
+      de-ch: trifft eher nicht zu
+      fr: faiblement
+      en: rather little
+  - code: '4'
+    texts:
+      de-ch: trifft eher zu
+      fr: plutôt fortement
+      en: rather strongly
+  - code: '5'
+    texts:
+      de-ch: trifft zu
+      fr: fortement
+      en: strongly
+  - code: '6'
+    texts:
+      de-ch: trifft voll und ganz zu
+      fr: très fortement
+      en: fully applies
+ExitErfolgt:
+  element_type: SingleChoice
+  texts:
+    de-ch: Hat Ihr Start-up einen Exit/Verkauf durchlaufen oder ist ein solcher geplant?
+    en: Has your start-up undergone an exit/sale, or are you planning to do so?
+    fr: Votre start-up a-t-elle fait l'objet d'une sortie/vente (exit) ou prévoyez-vous
+      de le faire?
+  section_name: (9) Strategieaspekte
+  section_index: 11
+  choices:
+  - code: '6'
+    texts:
+      de-ch: ja, Exit/Verkauf abgeschlossen
+      en: yes, exit/sale completed
+      fr: oui, sortie/vente achévée
+  - code: '5'
+    texts:
+      de-ch: ja, in Phase des Exits/Verkaufs
+      en: yes, in phase of exit/sale
+      fr: oui, en phase de sortie/vente
+  - code: '4'
+    texts:
+      de-ch: ja, kurzfristig (in 1 Jahr oder weniger)
+      en: yes, in the short term (in 1 year or less)
+      fr: oui, à court terme (dans 1 an ou moins)
+  - code: '3'
+    texts:
+      de-ch: ja, mittelfristig (in 2 bis 5 Jahren)
+      en: yes, in the medium term (2-5 years)
+      fr: oui, à moyen terme (2-5 ans)
+  - code: '2'
+    texts:
+      de-ch: ja, langfristig (in 6 Jahren oder später)
+      en: yes, in the long term (6 years or more)
+      fr: oui, à long terme (6 ans ou plus)
+  - code: '1'
+    texts:
+      de-ch: nein, ein Exit ist für uns momentan kein Ziel
+      en: no, an exit is not a goal for us at the moment.
+      fr: non, une sortie/exit n'est pas un objectif pour nous actuellement
+ExitGeplant:
+  element_type: SingleChoice
+  texts:
+    de-ch: Hat Ihr Start-up einen Exit/Verkauf durchlaufen oder ist ein solcher geplant?
+    en: Has your start-up undergone an exit/sale, or are you planning to do so?
+    fr: Votre start-up a-t-elle fait l'objet d'une sortie/vente (exit) ou prévoyez-vous
+      de le faire?
+  section_name: (8) Strategieaspekte
+  section_index: 7
+  choices:
+  - code: '9'
+    texts:
+      de-ch: ja, Exit/Verkauf abgeschlossen
+      en: yes, exit/sale completed
+      fr: oui, sortie/vente achévée
+  - code: '8'
+    texts:
+      de-ch: ja, in Phase des Exits/Verkaufs
+      en: yes, in phase of exit/sale
+      fr: oui, en phase de sortie/vente
+  - code: '6'
+    texts:
+      de-ch: ja, kurzfristig (in 1 Jahr oder weniger)
+      en: yes, in the short term (in 1 year or less)
+      fr: oui, à court terme (dans 1 an ou moins)
+  - code: '5'
+    texts:
+      de-ch: ja, mittelfristig (in 2 bis 5 Jahren)
+      en: yes, in the medium term (2-5 years)
+      fr: oui, à moyen terme (2-5 ans)
+  - code: '4'
+    texts:
+      de-ch: ja, langfristig (in 6 Jahren oder später)
+      en: yes, in the long term (6 years or more)
+      fr: oui, à long terme (6 ans ou plus)
+  - code: '1'
+    texts:
+      de-ch: nein, ein Exit ist für uns momentan kein Ziel
+      en: no, an exit is not a goal for us at the moment.
+      fr: non, une sortie/exit n'est pas un objectif pour nous actuellement
+SerialEntrepreneur:
+  element_type: SingleChoice
+  texts:
+    de-ch: Hat eine der Gründungspersonen mindestens einen weiteren Start-up gegründet?
+    en: Has at least one other start-up been founded by a founding member?
+    fr: Est-ce qu'une autre start-up a-t-elle été fondée par un.e membre fondateur.rice
+      ?
+  section_name: (9) Strategieaspekte
+  section_index: 11
+  choices:
+  - code: '6'
+    texts:
+      de-ch: ja, Gründung mindestens eines weiteren Start-ups
+      en: yes, founding at least one more start-up
+      fr: oui, fondation d'au moins une autre start-up
+  - code: '3'
+    texts:
+      de-ch: nein, aber Kauf eines bestehenden Unternehmens oder Aufbau eines Dienstleistungsunternehmens
+      fr: non, mais achat d'une entreprise existante ou création d'une entreprise
+        de services
+      en: no, but purchase of an existing company or establishment of a service company
+  - code: '1'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+Umsatz:
+  element_type: Matrix
+  texts:
+    en: Total revenue (excluding VAT) from location Switzerland
+    fr: Chiffre d’affaires total (hors TVA) à partir du lieu d’implantation en Suisse
+    de-ch: Gesamtumsatz (ohne MWSt) ab Standort Schweiz
+  section_name: Ökonomische Projektwirkungen
+  section_index: 4
+  matrix_rows:
+  - code: PEnde
+    texts:
+      de-ch: '... bei Projektabschluss, d.h. im Jahr'
+      fr: '... à la fin du projet, c.à.d. au cours de'
+      en: '... at the end of the project, i. e. in the year'
+  - code: heute
+    texts:
+      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
+      fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
+      en: '... today, i.e. in the last completed business year'
+  matrix_columns:
+  - code: Jahr
+    texts:
+      de-ch: Jahr
+      fr: Année
+      en: Year
+  - code: CHF
+    texts:
+      de-ch: Mio. CHF
+      fr: CHF mio.
+      en: CHF million
+BreakEvenErzielt:
+  element_type: SingleChoice
+  texts:
+    de-ch: Ist Ihr Start-up profitabel (auf der Basis von EBIT)?
+    en: Is your start-up profitable (on the basis of EBIT)?
+    fr: Votre start-up est-elle rentable (sur la base de l'EBIT) ?
+  section_name: (9) Beschäftigung und Umsatz
+  section_index: 8
+  choices:
+  - code: '6'
+    texts:
+      de-ch: ja
+      en: 'yes'
+      fr: oui
+  - code: '1'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+BreakEvenErwartetIn:
+  element_type: SingleChoice
+  texts:
+    de-ch: Wann wird Ihr Start-up voraussichtlich profitabel sein (gemäss EBIT)?
+    en: When is your start-up expected to be profitable (according to EBIT)?
+    fr: Quand votre start-up sera-t-elle vraisemblablement rentable (selon l'EBIT)
+      ?
+  section_name: (9) Beschäftigung und Umsatz
+  section_index: 8
+  choices:
+  - code: '6'
+    texts:
+      de-ch: in den nächsten 12 Monaten
+      en: in the next 12 months
+      fr: dans les 12 prochains mois
+  - code: '5'
+    texts:
+      de-ch: in ein bis zwei Jahren
+      en: in one to two years
+      fr: dans un à deux ans
+  - code: '4'
+    texts:
+      de-ch: in drei bis fünf Jahren
+      en: in three to five years
+      fr: dans trois à cinq ans
+  - code: '3'
+    texts:
+      de-ch: in sechs Jahren oder später
+      en: in six years or later
+      fr: dans six ans ou plus tard
+  - code: '1'
+    texts:
+      de-ch: gegenwärtig keine konkreten Erwartungen
+      en: at the moment, there are no concrete expectations
+      fr: pas d'attentes concrètes pour le moment
+RK_Akquise:
+  element_type: SingleChoice
+  texts:
+    en: Since the founding of your start-up, have you undertaken concrete efforts
+      to raise risk capital (dilutive funding)?
+  section_name: 'Start-up Development '
+  section_index: 6
+  choices:
+  - code: '1'
+    texts:
+      en: Yes, with successful financing
+  - code: '2'
+    texts:
+      en: Yes, but without a successful outcome so far
+  - code: '3'
+    texts:
+      en: No, not yet
+  - code: '4'
+    texts:
+      en: No, we are pursuing a bootstrapping strategy (financing exclusively through
+        internal resources and revenues; no external equity financing planned)
+  - code: '99'
+    texts:
+      en: Can’t answer
+RK_Aktuell:
+  element_type: SingleChoice
+  texts:
+    de-ch: Sind Sie aktuell in eine Finanzierung mit Risikokapital (dilutive funding)
+      involviert oder planen Sie in naher Zukunft eine entsprechende Runde?
+    en: Are you currently involved in dilutive funding or are you planning a corresponding
+      round in the near future?.
+    fr: Êtes-vous actuellement impliqué dans un financement par capital-risque (dilutive
+      funding) ou prévoyez-vous un tel financement dans un avenir proche ?
+  section_name: (11) Finanzierung
+  section_index: 13
+  choices:
+  - code: '6'
+    texts:
+      de-ch: ja, wir befinden uns derzeit in einer Finanzierungsrunde
+      en: yes, we are currently in a funding round.
+      fr: oui, nous sommes actuellement dans une phase de financement
+  - code: '4'
+    texts:
+      de-ch: ja, wir planen innerhalb der nächsten 12 Monate eine Finanzierungsrunde
+      en: yes, we are planning a funding round within the next 12 months.
+      fr: oui, nous prévoyons une phase de financement dans les 12 prochains mois
+  - code: '1'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+RK_Total:
+  element_type: SingleChoice
+  texts:
+    de-ch: Wie hoch ist der Gesamtbetrag des Risikokapitals, das seit der Gründung
+      des Start-ups aufgenommen wurde?
+    en: What is the total amount of venture capital raised so far since the start-up
+      was founded?
+    fr: Quel est le montant total du capital-risque levé depuis la création de la
+      start-up ?
+  section_name: (11) Risikokapital
+  section_index: 10
+  choices:
+  - code: '1'
+    texts:
+      de-ch: < 250'000
+      en: < 250,000
+      fr: < 250'000
+  - code: '2'
+    texts:
+      de-ch: 250’000 bis unter 500’000
+      en: 250,000 to under 500,000
+      fr: 250 000 à moins de 500 000
+  - code: '3'
+    texts:
+      de-ch: 500’000 bis unter 1 Mio.
+      en: 500,000 to under 1 million
+      fr: 500'000 à moins de 1 million
+  - code: '4'
+    texts:
+      de-ch: 1 Mio. bis unter 2 Mio.
+      en: 1 million to under 2 million
+      fr: 1 million à moins de 2 millions
+  - code: '5'
+    texts:
+      de-ch: 2 Mio. bis unter 5 Mio.
+      en: 2 million to under 5 million
+      fr: 2 millions à moins de 5 millions
+  - code: '6'
+    texts:
+      de-ch: 5 Mio. bis unter 10 Mio.
+      en: 5 million to under 10 million
+      fr: 5 millions à moins de 10 millions
+  - code: '7'
+    texts:
+      de-ch: 10 Mio. bis unter 20 Mio.
+      en: 10 million to under 20 million
+      fr: 10 millions à moins de 20 millions
+  - code: '8'
+    texts:
+      de-ch: 20 Mio. bis 50 Mio.
+      en: 20 million to 50 million
+      fr: 20 millions à 50 millions
+  - code: '9'
+    texts:
+      de-ch: '> 50 Mio.'
+      en: '> 50 millions'
+      fr: '> 50 millions'
+RK_SeitEndeCC:
+  element_type: SingleChoice
+  texts:
+    de-ch: Wie hoch ist der Betrag des Risikokapitals (in CHF), das seit Abschluss
+      des Core Coachings aufgenommen wurde?
+    en: What is the amount of venture capital (in CHF) that has been raised since
+      completing the core coaching programme?
+    fr: Quel est le montant du capital-risque (en CHF) qui a été levé depuis la fin
+      du core coaching ?
+  section_name: (12) Risikokapital
+  section_index: 14
+  choices:
+  - code: '1'
+    texts:
+      de-ch: < 250'000
+      en: < 250,000
+      fr: < 250'000
+  - code: '2'
+    texts:
+      de-ch: 250’000 bis unter 500’000
+      en: 250,000 to under 500,000
+      fr: 250 000 à moins de 500 000
+  - code: '3'
+    texts:
+      de-ch: 500’000 bis unter 1 Mio.
+      en: 500,000 to under 1 million
+      fr: 500'000 à moins de 1 million
+  - code: '4'
+    texts:
+      de-ch: 1 Mio. bis unter 2 Mio.
+      en: 1 million to under 2 million
+      fr: 1 million à moins de 2 millions
+  - code: '5'
+    texts:
+      de-ch: 2 Mio. bis unter 5 Mio.
+      en: 2 million to under 5 million
+      fr: 2 millions à moins de 5 millions
+  - code: '6'
+    texts:
+      de-ch: 5 Mio. bis unter 10 Mio.
+      en: 5 million to under 10 million
+      fr: 5 millions à moins de 10 millions
+  - code: '7'
+    texts:
+      de-ch: 10 Mio. bis unter 20 Mio.
+      en: 10 million to under 20 million
+      fr: 10 millions à moins de 20 millions
+  - code: '8'
+    texts:
+      de-ch: 20 Mio. bis 50 Mio.
+      en: 20 million to 50 million
+      fr: 20 millions à 50 millions
+  - code: '9'
+    texts:
+      de-ch: '> 50 Mio.'
+      en: '> 50 millions'
+      fr: '> 50 millions'
+NonDilutivesPrices:
+  element_type: Matrix
+  texts:
+    en: Have you raised other funds (non-dilutive) at home or abroad (since the start-up
+      was established)?
+  section_name: 'Start-up Development '
+  section_index: 6
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Scholarships
+  - code: '2'
+    texts:
+      en: Prizes
+  - code: '3'
+    texts:
+      en: Grants not to be reimbursed
+  - code: '4'
+    texts:
+      en: 'Other, please specify:'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: 'yes'
+  - code: '2'
+    texts:
+      en: 'no'
+  - code: '99'
+    texts:
+      en: can't answer
+FinanzLuecke:
+  element_type: SingleChoice
+  texts:
+    de-ch: Besteht aus Ihrer Sicht derzeit eine Finanzierungslücke zur Weiterentwicklung
+      Ihres Start-ups (z. B. für Produktentwicklung, Markteintritt, Skalierung)?
+    en: Is there currently a funding gap for the further development of your start-up
+      (e.g. for product development, market entry, scaling)?
+    fr: Existe-t-il actuellement un déficit de financement pour le développement de
+      votre start-up (par exemple pour le développement de produits, l'entrée sur
+      le marché, la mise à l'échelle) ?
+  section_name: (12) Dilutiv
+  section_index: 11
+  choices:
+  - code: '1'
+    texts:
+      de-ch: nein, es besteht keine Finanzierungslücke
+      en: no, there is no funding gap.
+      fr: Non, il n'y a pas de déficit de financement
+  - code: '3'
+    texts:
+      de-ch: ja, bis unter 1 Mio. CHF
+      en: yes, up to CHF 1 million.
+      fr: Oui, jusqu'à moins de 1 million de CHF
+  - code: '5'
+    texts:
+      de-ch: ja, 1 Mio. bis unter 5 Mio. CHF
+      en: yes, CHF 1 million to less than CHF 5 million.
+      fr: Oui, entre 1 million et moins de 5 millions de CHF
+  - code: '6'
+    texts:
+      de-ch: ja, 5 Mio. bis unter 10 Mio. CHF
+      en: yes, CHF 5 million to less than CHF 10 million.
+      fr: Oui, entre 5 millions et moins de 10 millions de CHF
+  - code: '7'
+    texts:
+      de-ch: ja, 10 Mio. bis unter 20 Mio. CHF
+      en: yes, CHF 10 million to less than CHF 20 million
+      fr: Oui, entre 10 et moins de 20 millions de francs suisses
+  - code: '8'
+    texts:
+      de-ch: ja, 20 Mio. bis unter 50 Mio. CHF
+      en: yes, CHF 20 million to less than CHF 50 million
+      fr: Oui, entre 20 et moins de 50 millions de francs suisses
+  - code: '9'
+    texts:
+      de-ch: ja, über 50 Mio. CHF
+      en: yes, over CHF 50 million
+      fr: Oui, plus de 50 millions de francs suisses
+HilfreichVereinbart:
+  element_type: Matrix
+  texts:
+    de-ch: Wie hilfreich war das Coaching (inkl. allfälliger geförderter Start-up
+      Camps oder Innosuisse International Trade Fairs) rückblickend in Bezug auf die
+      folgenden Themen?
+    en: In retrospect, how helpful was the coaching (including any subsidised start-up
+      camps or Innosuisse International Trade Fairs) with regard to the following
+      topics?
+    fr: Rétrospectivement, dans quelle mesure le coaching (y compris les éventuels
+      Start-up Camps subventionnés ou les Innosuisse International Trade Fairs) a-t-il
+      aidé en ce qui concerne les thèmes suivants ?
+  section_name: (13) Beitrag Coaching zu Themen
+  section_index: 12
+  matrix_rows:
+  - code: GModell
+    texts:
+      de-ch: (Weiter-)Entwicklung des Business Modells, Geschäftskonzept und Unternehmensstrategie d.h.
+        Problem-Solution-Fit, Value Proposition, usw.d.h. Problem-Solution-Fit, Value
+        Proposition, usw.
+      en: (Further) development of the business model, business concept and corporate
+        strategy  that is Problem-Solution-Fit, Value Proposition, etc.
+      fr: Développement du modèle d'affaires, du concept commercial et de la stratégie
+        d'entreprise  c'est-à-dire fit problème-solution, value proposition, etc.c'est-à-dire
+        fit problème-solution, value proposition, etc.
+  - code: GModellUmsetz
+    texts:
+      de-ch: Entwicklung Roadmap / Umsetzungsplan Pitchdeck mit Finanzplan
+      en: Development of roadmap / implementation plan pitch deck with financial plan
+      fr: Développement d'un roadmap / d'un plan de mise en œuvre pitchdeck avec plan
+        financier
+  - code: Organisation
+    texts:
+      de-ch: Set-up und Organisation des Start-ups Organisationsentwicklung, Finanzen,
+        Accounting, Modell zur Erfolgsbeteiligung (ESOP) und Teamentwicklung, Governance
+      en: Set-up and organisation of the start-up Organisational development, finance,
+        accounting, profit-sharing (ESOP) and team development, Governance.
+      fr: Mise en place et organisation de la start-up Développement organisationnel,
+        finance, comptabilité, participation aux bénéfices (ESOP) et développement
+        de l'équipe, gouvernanceDéveloppement organisationnel, finance, comptabilité,
+        participation aux bénéfices (ESOP) et développement de l'équipe, gouvernance
+  - code: Juristisch
+    texts:
+      de-ch: Klärung zu Eigentumsrechten, regulatorischen und Themen und weiteren
+        rechtlichen Fragen IP-Roadmap bzgl. Eigentumsrechte, Markenrechte, Patentabklärungen,
+        LizenzierungenIP-Roadmap bzgl. Eigentumsrechte, Markenrechte, Patentabklärungen,
+        Lizenzierungen
+      en: Clarification of property rights issues and of other regulatory topics IP-Roadmap
+        regarding property rights, trademark rights, patent clarifications, licensing
+      fr: Clarification des questions relatives aux droits de propriété et d'autres
+        sujets réglementaires IP-roadmap concernant les droits de propriété, les droits
+        de marque, les clarifications de brevets, licences
+  - code: MarktEintritt
+    texts:
+      de-ch: Unterstützung beim Markteintritt
+      en: Support in the preparation of the market entry
+      fr: Soutien à la préparation de l'entrée sur le marché
+  - code: ScalingUp
+    texts:
+      de-ch: Scaling-up und Erhöhung des Marktanteils Identifizierung von Wachstumschancen,
+        Optimierung Geschäftsmodell, etc.
+      fr: Expansion/Scaling-up et augmentation de la part de marché Identification
+        des opportunités de croissance, optimisation du modèle d'entreprise, etc.
+      en: Scaling-up and increasing market share Identification of growth opportunities,
+        optimisation of business model, etc.
+  - code: Finanzierung
+    texts:
+      de-ch: Aufgleisung Finanzierung und Schaffung besserer Voraussetzungen für Kapitalbeschaffung   
+        Finanzierungsstrategie, Vermittlung Kontakte, Hinweis auf Schlüsselpersonen,
+        konkrete Vorbereitung Investoren-TreffenFinanzierungsstrategie, Vermittlung
+        Kontakte, Hinweis auf Schlüsselpersonen, konkrete Vorbereitung Investoren-Treffen
+      en: Getting funding on track and creating better conditions for raising capital  Funding
+        strategy, arranging contacts, pointing out key people, concrete preparation
+        investor meetings
+      fr: Mise en place d'un financement et création de meilleures conditions pour
+        lever des capitaux  Stratégie de financement, organisation des contacts, indication
+        des personnes clés, préparation concrète des réunions avec les investisseurs.
+  - code: Internat
+    texts:
+      de-ch: Internationalisierung der Geschäftstätigkeit des Start-ups    Internationalisierungsstrategie,
+        Markteintritte in ausländische Märkte, Networking für InternationalisierungInternationalisierungsstrategie,
+        Markteintritte in ausländische Märkte, Networking für Internationalisierung
+      en: Start-up's internationalisation Internationalisation strategy, entering
+        foreign markets, networking for internationalisation
+      fr: Internationalisation de la start-up Stratégie d'internationalisation, entrée
+        sur des marchés étrangers, mise en réseau pour l'internationalisation
+  - code: Anderes
+    texts:
+      de-ch: 'Anderes, bitte präzisieren:'
+      en: 'Other, please specify:'
+      fr: 'Autre, veuillez préciser :'
+  matrix_columns:
+  - code: '7'
+    texts:
+      de-ch: War nicht Gegenstand des Coachings
+      en: Was not part of the coaching
+      fr: n'a pas fait l'objet du coaching
+  - code: '1'
+    texts:
+      de-ch: überhaupt nicht hilfreich
+      en: not helpful at all
+      fr: pas du tout
+  - code: '2'
+    texts:
+      de-ch: wenig hilfreich
+      en: not helpful
+      fr: peu
+  - code: '3'
+    texts:
+      de-ch: eher wenig hilfreich
+      en: rather not helpful
+      fr: plutôt peu
+  - code: '4'
+    texts:
+      de-ch: eher hilfreich
+      en: rather helpful
+      fr: plutôt beaucoup
+  - code: '5'
+    texts:
+      de-ch: hilfreich
+      en: helpful
+      fr: beaucoup
+  - code: '6'
+    texts:
+      de-ch: sehr hilfreich
+      en: very helpful
+      fr: énormement
+HilfVereinbartOffen:
+  element_type: OpenQuestion
+  texts:
+    de-ch: Haben Sie Rückmeldungen zu diesen Themen oder Ihrer Bewertung?
+    en: Do you have any feedback on these topics or your assessment?
+    fr: Avez-vous des commentaires sur ces thèmes ou sur votre évaluation ?
+  section_name: (13) Beitrag Coaching zu Themen
+  section_index: 12
+HilfreichWeiteres:
+  element_type: Matrix
+  texts:
+    de-ch: Wie hilfreich war das Coaching in Bezug auf die folgenden weiteren Themenbereiche?
+    en: How helpful was the coaching in relation to the following other topics?
+    fr: Vu d'aujourd'hui, le coaching a-t-il aidé en ce qui concerne les thèmes suivants
+      ?
+  section_name: (13) Beitrag Coaching zu Themen
+  section_index: 12
+  matrix_rows:
+  - code: Kompetenz
+    texts:
+      de-ch: Kompetenzen und Wissen für die Unternehmensgründung und Entwicklung
+      fr: Compétences et connaissances pour la création et le développement d'entreprises
+      en: Skills and knowledge for company foundation and development
+  - code: Riskomind
+    texts:
+      de-ch: Umgang mit unternehmerischen Risiken und Risikominderung (Risk Mitigation)
+      en: Dealing with entrepreneurial risks and risk mitigation
+      fr: Gestion des risques d'entreprise et réduction des risques (Risk Mitigation)
+  - code: Netzwerk
+    texts:
+      de-ch: Schaffung von Kontakten und Netzwerken
+      en: Creating contacts and networks
+      fr: Création de contacts et de réseaux
+  - code: Pivot
+    texts:
+      de-ch: Explizite Neupositionierung der Technologie / des Marktes (Pivot)
+      en: Explicit repositioning of the technology / market (pivot)
+      fr: Repositionnement explicite de la technologie / du marché (pivot)
+  - code: ProductFit
+    texts:
+      de-ch: Product-Market Fit
+      fr: Adéquation produit-marché
+      en: Product-Market Fit
+  - code: Branding
+    texts:
+      de-ch: Marktpositionierung / Branding
+      fr: Positionnement sur le marché / Branding
+      en: Market positioning / branding
+  - code: RiskoKap
+    texts:
+      de-ch: Erfolg bei der Akquisition von Risikokapital / Venture Capital
+      en: Success in the acquisition of risk capital / venture capital
+      fr: Succès dans l'acquisition de capital-risque / capital-investissement
+  - code: Preise
+    texts:
+      de-ch: Erfolg beim Einwerben anderer Mittel wie Stipendien, Preise, Forschungsgelder
+      en: Success in the acquisition of other funds such as grants, prizes, research
+        funding
+      fr: Succès dans l'acquisition d'autres fonds comme des bourses, des prix, des
+        fonds de recherche
+  - code: SDG
+    texts:
+      de-ch: Ausrichtung der Geschäftsziele auf ökologische oder soziale Nachhaltigkeit
+        bzw. auf die SDG (Sustainable Development Goals der UN)
+      en: Alignment of business objectives with environmental or social sustainability
+        or the SDGs (UN Sustainable Development Goals)
+      fr: Alignement des objectifs commerciaux sur la durabilité environnementale
+        ou sociale ou sur les ODD (Objectifs de développement durable des Nations
+        unies)
+  - code: Anderes
+    texts:
+      de-ch: 'Anderes, bitte präzisieren:'
+      en: 'Other, please specify:'
+      fr: 'Autre, veuillez préciser :'
+  matrix_columns:
+  - code: '7'
+    texts:
+      de-ch: war im Coaching nicht relevant
+      en: was not relevant in the coaching process
+      fr: pas pertinent dans le processus de coaching
+  - code: '1'
+    texts:
+      de-ch: überhaupt nicht hilfreich
+      en: not helpful at all
+      fr: pas du tout
+  - code: '2'
+    texts:
+      de-ch: wenig hilfreich
+      en: not helpful
+      fr: peu
+  - code: '3'
+    texts:
+      de-ch: eher wenig hilfreich
+      en: rather not helpful
+      fr: plutôt peu
+  - code: '4'
+    texts:
+      de-ch: eher hilfreich
+      en: rather helpful
+      fr: plutôt beaucoup
+  - code: '5'
+    texts:
+      de-ch: hilfreich
+      en: helpful
+      fr: beaucoup
+  - code: '6'
+    texts:
+      de-ch: sehr hilfreich
+      en: very helpful
+      fr: énormément
+Zertifikat:
+  element_type: SingleChoice
+  texts:
+    de-ch: Haben Sie bei Abschluss des Core Coachings ein Innosuisse Certificate erhalten?
+    en: Did you receive an Innosuisse Certificate at the end of the Core Coaching
+      programme?
+    fr: Avez-vous reçu un certificat Innosuisse à la fin du core coaching ?
+  section_name: (14) Beitrag Coaching zu Themen
+  section_index: 16
+  choices:
+  - code: '6'
+    texts:
+      de-ch: ja
+      en: 'yes'
+      fr: oui
+  - code: '5'
+    texts:
+      de-ch: ja, ein KTI Startup Label
+      en: yes, a CTI Startup Label
+      fr: oui, un label KTI
+  - code: '1'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+ZertifikatNutzen:
+  element_type: Matrix
+  texts:
+    de-ch: Wie bewerten Sie den Nutzen dieses Innosuisse Certificate?
+    en: How would you rate the benefits of this Innosuisse Certificate?
+    fr: Comment évaluez-vous l'utilité de ce certificat Innosuisse ?
+  section_name: (14) Beitrag Coaching zu Themen
+  section_index: 16
+  matrix_rows:
+  - code: Erreichung
+    texts:
+      de-ch: Der Nutzen ist des Innosuisse Certificate ist ...
+      en: The benefit of the Innosuisse Certificate is ...
+      fr: L'utilité de l'Innosuisse Certificate est ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: nicht vorhanden
+      en: non-existent
+      fr: inexistante
+  - code: '2'
+    texts:
+      de-ch: gering
+      en: low
+      fr: faible
+  - code: '3'
+    texts:
+      de-ch: eher gering
+      en: rather low
+      fr: plutôt faible
+  - code: '4'
+    texts:
+      de-ch: eher hoch
+      en: rather high
+      fr: plutôt élevée
+  - code: '5'
+    texts:
+      de-ch: hoch
+      en: high
+      fr: élevée
+  - code: '6'
+    texts:
+      de-ch: sehr hoch
+      en: very high
+      fr: très élevée
+ErwartungErfuellt:
+  element_type: Matrix
+  texts:
+    de-ch: 'Zusammenfassend: Hat das Core Coaching Ihre Erwartungen an dessen Unterstützung
+      erfüllt?'
+    en: In summary, did the core coaching meet your expectations for its support?
+    fr: En résumé, le core coaching a-t-il répondu à vos attentes concernant son soutien
+      ?
+  section_name: (13) Beitrag Coaching zu Themen
+  section_index: 12
+  matrix_rows:
+  - code: Erreichung
+    texts:
+      de-ch: Unsere Erwartungen wurden ...
+      en: Our expectations were ...
+      fr: Nos attentes sont ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: überhaupt nicht erfüllt
+      en: not met at all
+      fr: pas du tout atteints
+  - code: '2'
+    texts:
+      de-ch: nicht erfüllt
+      en: not met
+      fr: non atteints
+  - code: '3'
+    texts:
+      de-ch: eher nicht erfüllt
+      en: rather not met
+      fr: plutôt non atteints
+  - code: '4'
+    texts:
+      de-ch: eher erfüllt
+      en: rather met
+      fr: plutôt atteints
+  - code: '5'
+    texts:
+      de-ch: vollständig erfüllt
+      en: fully met
+      fr: complètement atteints
+  - code: '6'
+    texts:
+      de-ch: übertroffen
+      en: exceeded
+      fr: surpassés
+HilfreichCamps:
+  element_type: Matrix
+  texts:
+    de-ch: Sie haben an einem Start-up Camp teilgenommen. Wie hilfreich war die Teilnahme
+      für die nachfolgenden Themenbereiche?
+    en: You have participated in a start-up camp. How helpful was the participation for
+      the following topics?
+    fr: Vous avez participé à un Start-up Camp. Dans quelle mesure la participation
+      a-t-elle aidée en ce qui concèrne les thèmes suivants ?
+  section_name: (15) BeitragCamps
+  section_index: 14
+  matrix_rows:
+  - code: Kompetenzen
+    texts:
+      de-ch: Stärkung unternehmerische Fähigkeiten und Kompetenzen
+      fr: Renforcement des capacités et des compétences entrepreneuriales
+      en: Strengthening entrepreneurial skills and competences
+  - code: Wachs
+    texts:
+      de-ch: Stärkung des Wachstums des Start-ups
+      en: Strengthening the growth of the start-up
+      fr: Renforcement de la croissance de la start-up
+  - code: Maerkte
+    texts:
+      de-ch: Zielmärkte besser kennenlernen
+      en: Get to know target markets better
+      fr: Meilleure connaissance des  marchés cibles
+  - code: PMFit
+    texts:
+      de-ch: Validierung der Geschäftsidee im ausländischen Zielmarkt (u.a. Product-Market-Fit)
+      en: Validation of the business idea in the foreign target market (including
+        product-market fit)
+      fr: Validation de l'idée commerciale sur le marché cible à l'étranger (entre
+        autre: l'adéquation produit-marché)
+  - code: Internat
+    texts:
+      de-ch: Vorbereitung und Umsetzung des Markteintritts im ausländischen Zielmarkt
+      fr: Préparation et mise en œuvre de l'entrée sur le marché cible à l'étranger
+      en: Preparation and implementation of market entry in the foreign target market
+  - code: Konta
+    texts:
+      de-ch: Aufbau von Netzwerken und Partnerschaften in den Zielmärkten der Camps
+      fr: Mise en place de réseaux et de partenariats sur les marchés cibles des camps
+      en: Building networks and partnerships in the camps' target markets
+  matrix_columns:
+  - code: '7'
+    texts:
+      de-ch: war beim Start-up Camp nicht relevant
+      en: was not relevant for the start-up camp
+      fr: pas pertinent pour le Start-up Camp
+  - code: '1'
+    texts:
+      de-ch: überhaupt nicht hilfreich
+      en: not helpful at all
+      fr: pas du tout
+  - code: '2'
+    texts:
+      de-ch: wenig hilfreich
+      en: not helpfully
+      fr: peu
+  - code: '3'
+    texts:
+      de-ch: eher wenig hilfreich
+      en: rather not helpful
+      fr: plutôt peu
+  - code: '4'
+    texts:
+      de-ch: eher hilfreich
+      en: rather helpful
+      fr: plutôt beaucoup
+  - code: '5'
+    texts:
+      de-ch: hilfreich
+      en: helpful
+      fr: beaucoup
+  - code: '6'
+    texts:
+      de-ch: sehr hilfreich
+      en: very helpful
+      fr: énormément
+HilfreichMessen:
+  element_type: Matrix
+  texts:
+    de-ch: Sie haben an International Trade Fairs teilgenommen. Wie hilfreich war
+      dies für die nachfolgenden Themenbereiche?
+    en: You have participated in international trade fairs. How helpful was this for
+      the following topics?
+    fr: Vous avez participé aux International Trade Fairs. Dans quelle mesure cela
+      vous a-t-il été utile pour les thèmes suivants ?
+  section_name: (16) Beitrag Messen
+  section_index: 15
+  matrix_rows:
+  - code: Kompetenzen
+    texts:
+      de-ch: Stärkung unternehmerische Fähigkeiten und Kompetenzen
+      fr: Renforcement des capacités et des compétences entrepreneuriales
+      en: Strengthening entrepreneurial skills and competences
+  - code: Wachs
+    texts:
+      de-ch: Stärkung des Wachstums des Start-ups
+      en: Strengthening the growth of the start-up
+      fr: Renforcement de la croissance de la start-up
+  - code: Maerkte
+    texts:
+      de-ch: Zielmärkte besser kennenlernen
+      en: Get to know target markets better
+      fr: Meilleure connaissance des marchés cibles
+  - code: PMFit
+    texts:
+      de-ch: Validierung der Geschäftsidee im ausländischen Zielmarkt (u.a. Produkt-Market-Fit)
+      en: Validation of the business idea in the foreign target market (including
+        product-market fit)
+      fr: Validation de l'idée commerciale sur le marché cible à l'étranger (fit  produit-marché)
+  - code: Internat
+    texts:
+      de-ch: Vorbereitung und Umsetzung des Markteintritt im ausländischen Zielmarkt
+      fr: Préparation et mise en œuvre de l'entrée sur le marché cible à l'étranger
+      en: Preparation and implementation of market entry in the foreign target market
+  - code: Konta
+    texts:
+      de-ch: Aufbau von Netzwerken und Partnerschaften in den Zielmärkten der Messen
+      fr: Mise en place de réseaux et de partenariats sur les marchés cibles des salons
+      en: Building networks and partnerships in the fairs' target markets
+  matrix_columns:
+  - code: '7'
+    texts:
+      de-ch: war bei International Trade Fairs nicht relevant
+      en: was not relevant for the international trade fairs
+      fr: pas pertinent pour les International Trade Fairs
+  - code: '1'
+    texts:
+      de-ch: überhaupt nicht hilfreich
+      en: not helpful at all
+      fr: pas du tout
+  - code: '2'
+    texts:
+      de-ch: wenig hilfreich
+      en: not helpfully
+      fr: peu
+  - code: '3'
+    texts:
+      de-ch: eher wenig hilfreich
+      en: rather not helpful
+      fr: plutôt peu
+  - code: '4'
+    texts:
+      de-ch: eher hilfreich
+      en: rather helpful
+      fr: plutôt beaucoup
+  - code: '5'
+    texts:
+      de-ch: hilfreich
+      en: helpful
+      fr: beaucoup
+  - code: '6'
+    texts:
+      de-ch: sehr hilfreich
+      en: very helpful
+      fr: énormément
+HilfreichInsgesamt:
+  element_type: Matrix
+  texts:
+    de-ch: Wie hilfreich war das Coaching für die Entwicklung Ihres Start-ups insgesamt?
+    en: How helpful was the coaching for the development of your start-up overall?
+    fr: Dans quelle mesure le coaching a-t-il aidé au développement de votre start-up
+      dans son ensemble ?
+  section_name: (17) Zufriedenheit Und Erfolg
+  section_index: 16
+  matrix_rows:
+  - code: InitialC
+    texts:
+      de-ch: Für die Entwicklung unseres Start-ups war das Initial Coaching ...
+      fr: Pour le développement de notre start-up, le Initial Coaching a ...
+      en: For the development of our start-up, the initial coaching was ...
+  - code: Camps
+    texts:
+      de-ch: Für die Entwicklung unseres Start-ups waren die Start-up Camps ...
+      en: For the development of our start-up, the start-up camps were ...
+      fr: Pour le développement de notre start-up, les Start-up Camps ont ...
+  - code: Fairs
+    texts:
+      de-ch: Für die Entwicklung unseres Start-ups waren die International Trade Fairs
+        ...
+      en: For the development of our start-up, the international trade fairs were
+        ...
+      fr: Pour le développement de notre start-up, les International Trade Fairs ont
+        ...
+  - code: CoreC
+    texts:
+      de-ch: Das Core Coaching insgesamt war für die Entwicklung unseres Start-ups
+        ...
+      en: For the development of our start-up, the core coaching as a whole was ...
+      fr: Pour le développement de notre start-up, le Core Coaching a globalement 
+        ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: überhaupt nicht hilfreich
+      en: not helpful at all
+      fr: pas du tout aidé
+  - code: '2'
+    texts:
+      de-ch: wenig hilfreich
+      en: not helpfully
+      fr: peu aidé
+  - code: '3'
+    texts:
+      de-ch: eher wenig hilfreich
+      en: rather not helpful
+      fr: plutôt peu aidé
+  - code: '4'
+    texts:
+      de-ch: eher hilfreich
+      en: rather helpful
+      fr: plutôt beaucoup aidé
+  - code: '5'
+    texts:
+      de-ch: hilfreich
+      en: helpful
+      fr: beaucoup aidé
+  - code: '6'
+    texts:
+      de-ch: sehr hilfreich
+      en: very helpful
+      fr: énormément aidé
+ErfolgFaktorenEntw:
+  element_type: Matrix
+  texts:
+    de-ch: Was hat generell zur Entwicklung Ihres Start-ups beigetragen?
+    en: What has generally contributed to the development of your start-up?
+    fr: Qu'est-ce qui a généralement contribué au développement de votre start-up
+      ?
+  section_name: (17) Zufriedenheit Und Erfolg
+  section_index: 16
+  matrix_rows:
+  - code: Total
+    texts:
+      de-ch: Total (berechnet)
+      en: Total (calculated)
+      fr: Total (calculé)
+  - code: Strat
+    texts:
+      de-ch: Geschäftsidee, Business Modell und Strategie des Start-ups
+      en: Business idea, business model and strategy of the start-up
+      fr: Idée commerciale, modèle d'entreprise et stratégie de la start-up
+  - code: Team
+    texts:
+      de-ch: Fähigkeiten und Kompetenzen des Gründungs- und Managementteams
+      en: Skills and competencies of the founding and management team
+      fr: Capacités et compétences des membres fondateurs et de la direction
+  - code: Kapit
+    texts:
+      de-ch: Verfügbarkeit von Kapital, Finanzierung (z.B. durch Business Angels)
+      en: Availability of capital, financing (e.g. through business angels)
+      fr: Disponibilité des capitaux, financement (p.ex par des Business Angels)
+  - code: Timing
+    texts:
+      de-ch: Timing bezüglich gesellschaftlicher und wirtschaftlicher Trends/Entwicklungen
+      en: Timing in relation to social and economic trends
+      fr: Timing concernant des tendances sociales et économiques
+  - code: Innosuisse
+    texts:
+      de-ch: Coachingunterstützung durch Innosuisse (inkl. Start-up Camps oder International
+        Trade Fairs)
+      en: Coaching support from Innosuisse (incl. start-up camps or international
+        trade fairs)
+      fr: Soutien de coaching par Innosuisse (y compris Start-up Camps ou International
+        Trade Fairs)
+  - code: AndereInnos
+    texts:
+      de-ch: Weitere Unterstützung durch Innosuisse (Projektförderung, Bridge Proof-of-Concept,
+        Start-up Training, etc.)
+      en: Other support by Innosuisse (innovation projects, Bridge Proof-of-Concept,
+        Start-up training, etc.)
+      fr: Autres soutiens d'Innosuisse (projet d’innovation, Bridge Proof-of-Concept,
+        Start-up training, etc.)
+  - code: AndNichtMon
+    texts:
+      de-ch: Weitere Unterstützung ausserhalb der Innosuisse Förderung
+      en: Other support outside of Innosuisse
+      fr: Autre soutien en dehors d'Innosuisse
+  - code: Anderes
+    texts:
+      de-ch: Andere Faktoren, bitte nennen
+      en: Other factors, please specify
+      fr: Autres facteurs, veuillez préciser
+  matrix_columns:
+  - code: Beitr
+    texts:
+      de-ch: relativer Anteil an der Entwicklung
+      en: relative share of development
+      fr: part relative du développement
+Involvement:
+  element_type: Matrix
+  texts:
+    de-ch: Können Sie uns noch sagen, wie stark Ihre Organisation oder die betreffende
+      Abteilung im geförderten Projekt involviert war?
+    fr: Dans quelle mesure votre organisation ou la division concernée était impliquée
+      dans le projet encouragé par Innosuisse ?
+    en: Can you tell us how involved your organisation or the department concerned was
+      in the supported project?
+  section_name: Projekterfolg und Abschluss
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      de-ch: Meine Organisation/Abteilung war ...
+      fr: Mon organisation/division était ...
+      en: My organisation/department was ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: überhaupt nicht involviert
+      fr: pratiquement pas impliquée
+      en: practically not involved
+  - code: '2'
+    texts:
+      de-ch: schwach involviert
+      fr: peu impliquée
+      en: little involved
+  - code: '3'
+    texts:
+      de-ch: eher schwach involviert
+      fr: plutôt peu impliquée
+      en: rather little involved
+  - code: '4'
+    texts:
+      de-ch: eher stark involviert
+      fr: plutôt fortement impliquée
+      en: rather strongly involved
+  - code: '5'
+    texts:
+      de-ch: stark involviert
+      fr: fortement impliquée
+      en: strongly involved
+  - code: '6'
+    texts:
+      de-ch: sehr stark involviert
+      fr: très fortement impliquée
+      en: very strongly involved
+  - code: '99'
+    texts:
+      de-ch: Das kann ich nicht beantworten
+      fr: Je ne peux pas répondre à cette question
+      en: I cannot answer this question
+BedeutungInno_J24:
+  element_type: Matrix
+  texts:
+    de-ch: Zum Abschluss der Befragung möchten wir noch gerne von Ihnen wissen: Wie
+      bedeutend ist Innosuisse für das Schweizer Start-up Ökosystem?
+    en: 'To conclude the survey, we would like to know from you: How important is
+      Innosuisse for the Swiss start-up ecosystem?'
+    fr: 'Pour terminer l''enquête, nous aimerions encore vous demander : Quelle est
+      l''importance d''Innosuisse pour l''écosystème suisse des start-up ?'
+  section_name: (18) Feedback
+  section_index: 17
+  matrix_rows:
+  - code: InitialC
+    texts:
+      de-ch: Für das Schweizer Start-up Ökosystem hat Innosuisse  ...
+      fr: Pour l'écosystème suisse des start-up, Innosuisse ...
+      en: For the Swiss start-up ecosystem, Innosuisse has ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      de-ch: keine Bedeutung
+      en: no importance
+      fr: aucune importance
+  - code: '2'
+    texts:
+      de-ch: eine geringe Bedeutung
+      en: minor importance
+      fr: une faible importance
+  - code: '3'
+    texts:
+      de-ch: eine eher geringe Bedeutung
+      en: rather low importance
+      fr: une importance plutôt faible
+  - code: '4'
+    texts:
+      de-ch: eine eher hohe Bedeutung
+      en: rather high importance
+      fr: une importance plutôt élevée
+  - code: '5'
+    texts:
+      de-ch: eine hohe Bedeutung
+      en: high importance
+      fr: une importance élevée
+  - code: '6'
+    texts:
+      de-ch: eine sehr hohe Bedeutung
+      en: very high importance
+      fr: une importance très élevée
+FoerderInnosuisse:
+  element_type: MultipleChoice
+  texts:
+    en: Has the project idea or a significant part of the project already been funded
+      or supported elsewhere by Innosuisse?
+    fr: L'idée du projet ou une partie importante du projet a-t-elle déjà été encouragée
+      ou soutenue ailleurs par Innosuisse ?
+    de-ch: Wurde die Projektidee oder ein massgeblicher Teil des Projektes bereits
+      anderweitig durch Innosuisse gefördert oder unterstützt?
+  section_name: Charakterisierung des Projekts
+  section_index: 2
+  choices:
+  - code: '1'
+    texts:
+      en: Yes, Mentoring Innosuisse
+      fr: Oui, Mentoring Innosuisse
+      de-ch: Ja, Mentoring Innosuisse
+  - code: '2'
+    texts:
+      de-ch: Ja, Innovationsscheck
+      fr: Oui, Chèque d'innovation
+      en: Yes, Innovation cheque
+  - code: '3'
+    texts:
+      en: Yes, innovation project without implementation partner
+      fr: Oui, projet d'innovation sans partenaire
+      de-ch: Ja, Innovationsprojekt ohne Umsetzungspartner
+  - code: '4'
+    texts:
+      de-ch: Ja, Innovationsprojekt mit Umsetzungspartner
+      en: Yes, innovation project with implementation partner
+      fr: Oui, projet d'innovation avec partenaire
+  - code: '5'
+    texts:
+      en: Yes, innovation project with international partners or cross-border innovation
+        project (European Union, Eurostars, Eureka, bilateral projects with other
+        countries)
+      fr: Oui, projet d'innovation avec des partenaires internationaux ou projet d'innovation
+        transfrontalier (Union européenne, Eurostars, Eureka, projets bilatéraux avec
+        d'autres pays)
+      de-ch: Ja, Innovationsprojekt mit internationalen Partnern oder grenzüberschreitendes
+        Innovationsprojekt (Europäische Union, Eurostars, Eureka, bilaterale Projekte
+        mit anderen Ländern)
+  - code: '6'
+    texts:
+      en: Yes, BRIDGE Discovery
+      fr: Oui, BRIDGE Discovery
+      de-ch: Ja, BRIDGE Discovery
+  - code: '7'
+    texts:
+      de-ch: Ja, BRIDGE Proof-of-Concept
+      fr: Oui, BRIDGE Preuve de concept
+      en: Yes, BRIDGE Proof-of-Concept
+  - code: '8'
+    texts:
+      de-ch: Ja, Innovationsbooster
+      fr: Oui, Innovation Booster
+      en: Yes, Innovation Booster
+  - code: '9'
+    texts:
+      de-ch: Ja, Flagship-Projekt
+      en: Yes, Flagship project
+      fr: Oui, projet Flagship
+  - code: '10'
+    texts:
+      de-ch: Ja, Energieprogramm Innosuisse (SCCER)
+      fr: Oui, programme énergétique Innosuisse (SCCER)
+      en: Yes, Innosuisse energy programme (SCCER)
+  - code: '11'
+    texts:
+      de-ch: Ja, Patentrecherchen beim Institut für Geistiges Eigentum
+      fr: Oui, recherches de brevets accompagnées auprès de l'Institut de la propriété
+        intellectuelle
+      en: Yes, patent searches at the Institute of Intellectual Property
+  - code: '12'
+    texts:
+      de-ch: Ja, Start-up Training
+      fr: Oui, Start-up Training
+      en: Yes, Start-up Training
+  - code: '13'
+    texts:
+      de-ch: Ja, Start-up Coaching Innosuisse
+      fr: Oui, coaching de start-up Innosuisse
+      en: Yes, Start-up Coaching Innosuisse
+  - code: '14'
+    texts:
+      de-ch: Ja, durch ein anderes Innosuisse Programm
+      fr: Oui, par un autre programme Innosuisse
+      en: Yes, through another Innosuisse programme
+  - code: '15'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+  - code: '99'
+    texts:
+      de-ch: Das kann ich nicht beantworten
+      fr: Je ne peux pas répondre à cette question
+      en: I cannot answer this question
+TeilnahmeSNF:
+  element_type: MultipleChoice
+  texts:
+    de-ch: Hat eine der Gründungspersonen an einer der nachfolgenden Förderungen des
+      Schweizerischen Nationalfonds partizipiert?
+    en: Did any of the founders participate in one of the following Swiss National
+      Science Foundation grants?
+    fr: Est-ce que l'une des personnes fondatrices a participé à l'un des encouragements
+      suivants du Fonds national suisse ?
+  section_name: (3) Herkunft Geschäftsidee
+  section_index: 2
+  choices:
+  - code: NFP
+    texts:
+      de-ch: ja, Nationales Forschungsprogramm (NFP)
+      en: yes, National Research Program (NRP)
+      fr: oui, programmes nationaux de recherche (PNR)
+  - code: NCCR
+    texts:
+      de-ch: ja, Nationale Forschungsschwerpunkte (NFS)
+      en: yes, National Centers of Competence in Research (NCCR)
+      fr: oui, pôles de recherche nationaux (PRN)
+  - code: SNFProj
+    texts:
+      de-ch: ja, Projektförderung SNF
+      en: yes, Project funding SNSF
+      fr: oui, encouragement de projet par le FNS
+  - code: SNFPers
+    texts:
+      de-ch: ja, Personenförderung SNF
+      en: yes, Researcher funding SNSF
+      fr: oui, subside pour chercheur FNS
+  - code: SNFgen
+    texts:
+      de-ch: ja, übrige Förderung des SNF
+      en: yes, other SNSF funding
+      fr: oui, autre encouragement FNS
+  - code: NEIN
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+FoerderSNF:
+  element_type: MultipleChoice
+  texts:
+    en: Is the project idea or a significant part of the project based on research
+      funding from the Swiss National Science Foundation SNSF?
+    fr: L'idée du projet ou une partie importante du projet repose-t-elle sur un encouragement
+      de la recherche par le Fonds national suisse FNS ?
+    de-ch: Beruht die Projektidee oder ein massgeblicher Teil des Projektes auf einer
+      Forschungsförderung des Schweizerischen Nationalfonds SNF?
+  section_name: Charakterisierung des Projekts
+  section_index: 2
+  choices:
+  - code: '1'
+    texts:
+      de-ch: Ja, Nationales Forschungsprogramm (NFP)
+      en: Yes, National Research Programme (NRP)
+      fr: Oui, programmes nationaux de recherche (PNR)
+  - code: '2'
+    texts:
+      en: Yes, National Centers of Competence in Research (NCCR)
+      fr: Oui, pôles de recherche nationaux (PRN)
+      de-ch: Ja, Nationale Forschungsschwerpunkte (NFS)
+  - code: '3'
+    texts:
+      en: Yes, Project funding SNSF
+      fr: Oui, encouragement de projet par le FNS
+      de-ch: Ja, Projektförderung SNF
+  - code: '4'
+    texts:
+      en: Yes, Researcher funding SNSF
+      fr: Oui, subside pour chercheur FNS
+      de-ch: Ja, Personenförderung SNF
+  - code: '5'
+    texts:
+      en: Yes, other SNSF funding
+      fr: Oui, autre encouragement FNS
+      de-ch: Ja, übrige Förderung des SNF
+  - code: '6'
+    texts:
+      en: 'No'
+      fr: Non
+      de-ch: Nein
+  - code: '99'
+    texts:
+      de-ch: Das kann ich nicht beantworten
+      en: I cannot answer this question
+      fr: Je ne peux pas répondre à cette question
+RK_aktuell:
+  element_type: SingleChoice
+  texts:
+    de-ch: Sind Sie aktuell in eine Finanzierung mit Risikokapital (dilutive funding)
+      involviert oder planen Sie in naher Zukunft eine entsprechende Runde?
+    en: Are you currently involved in dilutive funding or are you planning a corresponding
+      round in the near future?.
+    fr: Êtes-vous actuellement impliqué dans un financement par capital-risque (dilutive
+      funding) ou prévoyez-vous un tel financement dans un avenir proche ?
+  section_name: (10) Finanzierung
+  section_index: 9
+  choices:
+  - code: '6'
+    texts:
+      de-ch: ja, wir befinden uns derzeit in einer Finanzierungsrunde
+      en: yes, we are currently in a funding round.
+      fr: oui, nous sommes actuellement dans une phase de financement
+  - code: '4'
+    texts:
+      de-ch: ja, wir planen innerhalb der nächsten 12 Monate eine Finanzierungsrunde
+      en: yes, we are planning a funding round within the next 12 months.
+      fr: oui, nous prévoyons une phase de financement dans les 12 prochains mois
+  - code: '1'
+    texts:
+      de-ch: nein
+      en: 'no'
+      fr: non
+HilfreichInitial:
+  element_type: Matrix
+  texts:
+    de-ch: Sie haben am Initial Coaching Programm teilgenommen.Wie hilfreich war das
+      Initial Coaching für die nachfolgenden Themenbereiche?
+    en: You have participated in the Initial Coaching Programme.How helpful was the
+      Initial Coaching for the following topics?
+    fr: Vous avez participé au Initial Coaching d'Innosuisse. Dans quelle mesure le
+      Initial Coaching a-t-il aidé en ce qui concèrne les thèmes suivants ?
+  section_name: (14) BeitragInitialCoaching
+  section_index: 13
+  matrix_rows:
+  - code: Application
+    texts:
+      de-ch: Vorbereitung auf das Innosuisse Core Coaching (application)
+      en: Preparation for Innosuisse core coaching (application)
+      fr: Préparation au core coaching Innosuisse (candidature)
+  - code: GModell
+    texts:
+      de-ch: Schärfung des Geschäftsmodells und des Geschäftsplans
+      en: Sharpening business model and business plan
+      fr: Affinage du modèle d'entreprise et du business plan
+  - code: Risiken
+    texts:
+      de-ch: Identifizierung von Stärken und Schwächen, Chancen und Risiken
+      en: Identification of strengths, weaknesses, opportunities, and threats
+      fr: Identification des forces et des faiblesses, des opportunités et des menaces
+  - code: Aktionsplan
+    texts:
+      de-ch: Festlegung der nächsten Schritte und Entwicklung eines Aktionsplans zur
+        Bewältigung der anstehenden Herausforderungen
+      fr: Définition des prochaines étapes et élaboration d'un plan d'action pour
+        relever les défis à venir
+      en: Definition of next steps and development of an action plan to meet upcoming
+        challenges
+  - code: Kompetenzen
+    texts:
+      de-ch: Stärkung unternehmerische Fähigkeiten und Kompetenzen
+      fr: Renforcement des capacités et des compétences entrepreneuriales
+      en: Strengthening entrepreneurial skills and competences
+  matrix_columns:
+  - code: '7'
+    texts:
+      de-ch: war beim Initial Coaching nicht relevant
+      en: was not relevant at the Initial Coaching
+      fr: pas pertinent pour le coaching  initial
+  - code: '1'
+    texts:
+      de-ch: überhaupt nicht hilfreich
+      en: not helpful at all
+      fr: pas du tout
+  - code: '2'
+    texts:
+      de-ch: wenig hilfreich
+      en: not helpfully
+      fr: peu
+  - code: '3'
+    texts:
+      de-ch: eher wenig hilfreich
+      en: rather not helpful
+      fr: plutôt peu
+  - code: '4'
+    texts:
+      de-ch: eher hilfreich
+      en: rather helpful
+      fr: plutôt beaucoup
+  - code: '5'
+    texts:
+      de-ch: hilfreich
+      en: helpful
+      fr: beaucoup
+  - code: '6'
+    texts:
+      de-ch: sehr hilfreich
+      en: very helpful
+      fr: énormément
+WarumBedeutungOffen:
+  element_type: OpenQuestion
+  texts:
+    de-ch: 'Vielen Dank, wenn Sie uns Ihre Bewertung kurz kommentieren:'
+    en: 'Thank you very much if you could leave us a brief comment on your review:'
+    fr: 'Merci de nous laisser un bref commentaire sur votre évaluation :'
+  section_name: (18) Feedback
+  section_index: 17
 BerufzielZuBeginn:
   element_type: MultipleChoice
   texts:
@@ -4988,109 +7845,6 @@ MainObstacle:
   - code: '20'
     texts:
       en: '{{ObstaclesFaced_20_text}}'
-BRLStart:
-  element_type: Dropdown
-  texts:
-    en: Which Business Readiness Level (BRL) did your project have at the beginning
-      of the BRIDGE Proof of Concept funding?
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: Early concept phaseBRL 1 – Basic hypothesesInitial hypotheses regarding
-        a possible business, implementation or societal impact concept.
-  - code: '2'
-    texts:
-      en: BRL 2 – First business model or concept describedFirst description of a
-        business, implementation or societal impact concept. Initial understanding
-        of target groups, needs or problem context.
-  - code: '3'
-    texts:
-      en: Business model and concept development phase BRL 3 – Development of business
-        model or conceptDraft business model or draft implementation / impact logic.
-        Market potential and/or societal relevance and stakeholder landscape described.
-  - code: '4'
-    texts:
-      en: BRL 4 – First validated business model or conceptFirst structured business
-        model or implementation and impact concept. Initial projections of economic
-        viability, market potential and/or societal relevance. Initial assumptions
-        on feasibility, relevance and potential effects.
-  - code: '5'
-    texts:
-      en: Validation phase BRL 5 – Business model or concept testingTesting of the
-        business model or of implementation pathways, user acceptance or societal
-        relevance. Key assumptions validated with external stakeholders or; where
-        applicable, first revenue model and initial competitive positioning.
-  - code: '6'
-    texts:
-      en: BRL 6 – Advanced business model or concept validationBusiness model or implementation
-        / impact concept largely validated. Pricing or cost assumptions verified with
-        customers, users or implementing actors, where applicable Product-market fit
-        and finetuning
-  - code: '7'
-    texts:
-      en: BRL 7 – Demonstrated applicability and relevanceProduct-market fit or solution/context
-        fit demonstrated. Clear value proposition for customers or beneficiaries and
-        implementing actors.
-  - code: '8'
-    texts:
-      en: BRL 8 – Business model or concept finetunedBusiness model or broader implementation
-        readiness / impact model refined. Evidence that the approach is robust and
-        transferable to broader contexts.
-  - code: '9'
-    texts:
-      en: Scaling and broader implementation BRL 9 – Scaling and implementation readinessBusiness
-        scaling with recurring revenues or readiness for larger-scale implementation,
-        institutional embedding or policy uptake.
-  - code: '99'
-    texts:
-      en: BRL not applicable / don't know
-BRLEnd:
-  element_type: Dropdown
-  texts:
-    en: Which Business Readiness Level (BRL) best describes the status of your project
-      at the end of the BRIDGE Proof of Concept funding?
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: Basic hypothesesBRL 1 - Hypothesizing on possible business concept
-  - code: '2'
-    texts:
-      en: BRL 2 - First business concept described. Identified overall market & some
-        competitors.
-  - code: '3'
-    texts:
-      en: Development of business modelBRL 3 - Draft of business model. Described
-        market potential & competitive overview.
-  - code: '4'
-    texts:
-      en: BRL 4 - First version of business model, first projections of economic viability
-        & market potential
-  - code: '5'
-    texts:
-      en: BRL 5 - Business model testing, first revenue model, competitive position
-        verified im market
-  - code: '6'
-    texts:
-      en: BRL 6 - Full business model including pricing verified on customers
-  - code: '7'
-    texts:
-      en: Product market fit / finetuningBRL 7 - Product/market fit demonstrated.
-        Attractive revenue/cost projections.
-  - code: '8'
-    texts:
-      en: BRL 8 - Business model is finetuned. Sales & metrics show business model
-        holds and can scale
-  - code: '9'
-    texts:
-      en: Business scalingBRL 9 - Business model finalised. Business scaling with
-        recurring revenues
-  - code: '10'
-    texts:
-      en: BRL not applicable / don't know
 OutcomeAchievedEnd:
   element_type: Matrix
   texts:
@@ -5342,30 +8096,6 @@ PersonalCH:
       / currently (full-time equivalents, FTE)?
   section_name: 'Start-up Development '
   section_index: 6
-RK_Akquise:
-  element_type: SingleChoice
-  texts:
-    en: Since the founding of your start-up, have you undertaken concrete efforts
-      to raise risk capital (dilutive funding)?
-  section_name: 'Start-up Development '
-  section_index: 6
-  choices:
-  - code: '1'
-    texts:
-      en: Yes, with successful financing
-  - code: '2'
-    texts:
-      en: Yes, but without a successful outcome so far
-  - code: '3'
-    texts:
-      en: No, not yet
-  - code: '4'
-    texts:
-      en: No, we are pursuing a bootstrapping strategy (financing exclusively through
-        internal resources and revenues; no external equity financing planned)
-  - code: '99'
-    texts:
-      en: Can’t answer
 InvestorsContacted:
   element_type: MultipleChoice
   texts:
@@ -5388,36 +8118,6 @@ InvestorsContacted:
   - code: '5'
     texts:
       en: 'Other (please specify):'
-NonDilutivesPrices:
-  element_type: Matrix
-  texts:
-    en: Have you raised other funds (non-dilutive) at home or abroad (since the start-up
-      was established)?
-  section_name: 'Start-up Development '
-  section_index: 6
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Scholarships
-  - code: '2'
-    texts:
-      en: Prizes
-  - code: '3'
-    texts:
-      en: Grants not to be reimbursed
-  - code: '4'
-    texts:
-      en: 'Other, please specify:'
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: 'yes'
-  - code: '2'
-    texts:
-      en: 'no'
-  - code: '99'
-    texts:
-      en: can't answer
 KarriereNuetzlichkeit:
   element_type: Matrix
   texts:
@@ -6217,36 +8917,6 @@ ForParAngestellt:
       en: I cannot answer this question
       fr: Je ne peux pas répondre à cette question
       de-ch: Das kann ich nicht beantworten
-Umsatz:
-  element_type: Matrix
-  texts:
-    en: Total revenue (excluding VAT) from location Switzerland
-    fr: Chiffre d’affaires total (hors TVA) à partir du lieu d’implantation en Suisse
-    de-ch: Gesamtumsatz (ohne MWSt) ab Standort Schweiz
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
-  matrix_rows:
-  - code: PEnde
-    texts:
-      de-ch: '... bei Projektabschluss, d.h. im Jahr'
-      fr: '... à la fin du projet, c.à.d. au cours de'
-      en: '... at the end of the project, i. e. in the year'
-  - code: heute
-    texts:
-      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
-      fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
-      en: '... today, i.e. in the last completed business year'
-  matrix_columns:
-  - code: Jahr
-    texts:
-      de-ch: Jahr
-      fr: Année
-      en: Year
-  - code: CHF
-    texts:
-      de-ch: Mio. CHF
-      fr: CHF mio.
-      en: CHF million
 AusgabenFuE:
   element_type: Matrix
   texts:
@@ -6571,51 +9241,6 @@ MarktanteilGewinn:
       en: I cannot answer this question
       fr: Je ne peux pas répondre à cette question
       de-ch: Das kann ich nicht beantworten
-Neuheitslevel:
-  element_type: Matrix
-  texts:
-    en: Is the implemented/planned innovation currently a ...
-    fr: L’innovation mise en œuvre/planifiée est-elle ...
-    de-ch: Ist die umgesetzte/geplante Innovation derzeit eine ...
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Novelty for the organisation
-      fr: une nouveauté pour votre organisation ?
-      de-ch: Neuheit für die Organisation
-  - code: '2'
-    texts:
-      de-ch: Neuheit für den nationalen Markt
-      fr: une nouveauté sur le marché national ?
-      en: Novelty for the national market
-  - code: '3'
-    texts:
-      de-ch: Neuheit auf einem oder mehreren internationalen Märkten
-      en: Novelty on one or more international markets
-      fr: une nouveauté sur un ou plusieurs marchés internationaux ?
-  - code: '4'
-    texts:
-      de-ch: Neuheit auf allen internationalen Märkten (globaler Markt)
-      en: Novelty on all international markets (global market)?
-      fr: und nouveauté sur tous les marchés internationaux (marché mondial) ?
-  matrix_columns:
-  - code: '6'
-    texts:
-      en: 'Yes'
-      fr: Oui
-      de-ch: Ja
-  - code: '1'
-    texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 WirkFoerderung:
   element_type: Matrix
   texts:
@@ -6867,152 +9492,6 @@ PersonalImProjekt:
       en: Average annual full-time equivalents
       fr: Moyenne annuelle des équivalents temps plein
       de-ch: Durchschnittliche jährliche Vollzeitäquivalente
-FoerderSNF:
-  element_type: MultipleChoice
-  texts:
-    en: Is the project idea or a significant part of the project based on research
-      funding from the Swiss National Science Foundation SNSF?
-    fr: L'idée du projet ou une partie importante du projet repose-t-elle sur un encouragement
-      de la recherche par le Fonds national suisse FNS ?
-    de-ch: Beruht die Projektidee oder ein massgeblicher Teil des Projektes auf einer
-      Forschungsförderung des Schweizerischen Nationalfonds SNF?
-  section_name: Charakterisierung des Projekts
-  section_index: 2
-  choices:
-  - code: '1'
-    texts:
-      de-ch: Ja, Nationales Forschungsprogramm (NFP)
-      en: Yes, National Research Programme (NRP)
-      fr: Oui, programmes nationaux de recherche (PNR)
-  - code: '2'
-    texts:
-      en: Yes, National Centers of Competence in Research (NCCR)
-      fr: Oui, pôles de recherche nationaux (PRN)
-      de-ch: Ja, Nationale Forschungsschwerpunkte (NFS)
-  - code: '3'
-    texts:
-      en: Yes, Project funding SNSF
-      fr: Oui, encouragement de projet par le FNS
-      de-ch: Ja, Projektförderung SNF
-  - code: '4'
-    texts:
-      en: Yes, Researcher funding SNSF
-      fr: Oui, subside pour chercheur FNS
-      de-ch: Ja, Personenförderung SNF
-  - code: '5'
-    texts:
-      en: Yes, other SNSF funding
-      fr: Oui, autre encouragement FNS
-      de-ch: Ja, übrige Förderung des SNF
-  - code: '6'
-    texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      de-ch: Das kann ich nicht beantworten
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-FoerderInnosuisse:
-  element_type: MultipleChoice
-  texts:
-    en: Has the project idea or a significant part of the project already been funded
-      or supported elsewhere by Innosuisse?
-    fr: L'idée du projet ou une partie importante du projet a-t-elle déjà été encouragée
-      ou soutenue ailleurs par Innosuisse ?
-    de-ch: Wurde die Projektidee oder ein massgeblicher Teil des Projektes bereits
-      anderweitig durch Innosuisse gefördert oder unterstützt?
-  section_name: Charakterisierung des Projekts
-  section_index: 2
-  choices:
-  - code: '1'
-    texts:
-      en: Yes, Mentoring Innosuisse
-      fr: Oui, Mentoring Innosuisse
-      de-ch: Ja, Mentoring Innosuisse
-  - code: '2'
-    texts:
-      de-ch: Ja, Innovationsscheck
-      fr: Oui, Chèque d'innovation
-      en: Yes, Innovation cheque
-  - code: '3'
-    texts:
-      en: Yes, innovation project without implementation partner
-      fr: Oui, projet d'innovation sans partenaire
-      de-ch: Ja, Innovationsprojekt ohne Umsetzungspartner
-  - code: '4'
-    texts:
-      de-ch: Ja, Innovationsprojekt mit Umsetzungspartner
-      en: Yes, innovation project with implementation partner
-      fr: Oui, projet d'innovation avec partenaire
-  - code: '5'
-    texts:
-      en: Yes, innovation project with international partners or cross-border innovation
-        project (European Union, Eurostars, Eureka, bilateral projects with other
-        countries)
-      fr: Oui, projet d'innovation avec des partenaires internationaux ou projet d'innovation
-        transfrontalier (Union européenne, Eurostars, Eureka, projets bilatéraux avec
-        d'autres pays)
-      de-ch: Ja, Innovationsprojekt mit internationalen Partnern oder grenzüberschreitendes
-        Innovationsprojekt (Europäische Union, Eurostars, Eureka, bilaterale Projekte
-        mit anderen Ländern)
-  - code: '6'
-    texts:
-      en: Yes, BRIDGE Discovery
-      fr: Oui, BRIDGE Discovery
-      de-ch: Ja, BRIDGE Discovery
-  - code: '7'
-    texts:
-      de-ch: Ja, BRIDGE Proof-of-Concept
-      fr: Oui, BRIDGE Preuve de concept
-      en: Yes, BRIDGE Proof-of-Concept
-  - code: '8'
-    texts:
-      de-ch: Ja, Innovationsbooster
-      fr: Oui, Innovation Booster
-      en: Yes, Innovation Booster
-  - code: '9'
-    texts:
-      de-ch: Ja, Flagship-Projekt
-      en: Yes, Flagship project
-      fr: Oui, projet Flagship
-  - code: '10'
-    texts:
-      de-ch: Ja, Energieprogramm Innosuisse (SCCER)
-      fr: Oui, programme énergétique Innosuisse (SCCER)
-      en: Yes, Innosuisse energy programme (SCCER)
-  - code: '11'
-    texts:
-      de-ch: Ja, Patentrecherchen beim Institut für Geistiges Eigentum
-      fr: Oui, recherches de brevets accompagnées auprès de l'Institut de la propriété
-        intellectuelle
-      en: Yes, patent searches at the Institute of Intellectual Property
-  - code: '12'
-    texts:
-      de-ch: Ja, Start-up Training
-      fr: Oui, Start-up Training
-      en: Yes, Start-up Training
-  - code: '13'
-    texts:
-      de-ch: Ja, Start-up Coaching Innosuisse
-      fr: Oui, coaching de start-up Innosuisse
-      en: Yes, Start-up Coaching Innosuisse
-  - code: '14'
-    texts:
-      de-ch: Ja, durch ein anderes Innosuisse Programm
-      fr: Oui, par un autre programme Innosuisse
-      en: Yes, through another Innosuisse programme
-  - code: '15'
-    texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      de-ch: Das kann ich nicht beantworten
-      fr: Je ne peux pas répondre à cette question
-      en: I cannot answer this question
 ErgebnisAnlagenPrototyp:
   element_type: SingleChoice
   texts:
@@ -8061,59 +10540,6 @@ ZielNichtGrund:
       en: 'Other reasons (please indicate):'
       fr: 'Autres raisons (veuillez préciser):'
       de-ch: 'Andere Gründe (bitte angeben):'
-Involvement:
-  element_type: Matrix
-  texts:
-    de-ch: Können Sie uns noch sagen, wie stark Ihre Organisation oder die betreffende
-      Abteilung im geförderten Projekt involviert war?
-    fr: Dans quelle mesure votre organisation ou la division concernée était impliquée
-      dans le projet encouragé par Innosuisse ?
-    en: Can you tell us how involved your organisation or the department concerned was
-      in the supported project?
-  section_name: Projekterfolg und Abschluss
-  section_index: 7
-  matrix_rows:
-  - code: '1'
-    texts:
-      de-ch: Meine Organisation/Abteilung war ...
-      fr: Mon organisation/division était ...
-      en: My organisation/department was ...
-  matrix_columns:
-  - code: '1'
-    texts:
-      de-ch: überhaupt nicht involviert
-      fr: pratiquement pas impliquée
-      en: practically not involved
-  - code: '2'
-    texts:
-      de-ch: schwach involviert
-      fr: peu impliquée
-      en: little involved
-  - code: '3'
-    texts:
-      de-ch: eher schwach involviert
-      fr: plutôt peu impliquée
-      en: rather little involved
-  - code: '4'
-    texts:
-      de-ch: eher stark involviert
-      fr: plutôt fortement impliquée
-      en: rather strongly involved
-  - code: '5'
-    texts:
-      de-ch: stark involviert
-      fr: fortement impliquée
-      en: strongly involved
-  - code: '6'
-    texts:
-      de-ch: sehr stark involviert
-      fr: très fortement impliquée
-      en: very strongly involved
-  - code: '99'
-    texts:
-      de-ch: Das kann ich nicht beantworten
-      fr: Je ne peux pas répondre à cette question
-      en: I cannot answer this question
 IrgendeineInnoUm:
   element_type: SingleChoice
   texts:
