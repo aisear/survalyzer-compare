@@ -333,8 +333,33 @@ function matchesSearch(code) {
   if (code.toLowerCase().includes(term)) return true;
   const refQ = DATA.questions[currentReference] ? DATA.questions[currentReference][code] : null;
   if (refQ) {
+    // Search question texts
     for (const text of Object.values(refQ.texts)) {
       if (text.toLowerCase().includes(term)) return true;
+    }
+    // Search answer option texts
+    if (refQ.choices) {
+      for (const choice of refQ.choices) {
+        for (const text of Object.values(choice.texts)) {
+          if (text.toLowerCase().includes(term)) return true;
+        }
+      }
+    }
+    // Search matrix row texts
+    if (refQ.matrix_rows) {
+      for (const row of refQ.matrix_rows) {
+        for (const text of Object.values(row.texts)) {
+          if (text.toLowerCase().includes(term)) return true;
+        }
+      }
+    }
+    // Search matrix column texts
+    if (refQ.matrix_columns) {
+      for (const col of refQ.matrix_columns) {
+        for (const text of Object.values(col.texts)) {
+          if (text.toLowerCase().includes(term)) return true;
+        }
+      }
     }
   }
   return false;
