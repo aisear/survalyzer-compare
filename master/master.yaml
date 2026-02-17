@@ -335,122 +335,65 @@ StrategischeZiele:
   texts:
     en: Which of the following mentioned themes were strategically important to you
       when submitting the project or during the course of the project?
-    fr: Parmi les thèmes suivants, quels sont ceux qui ont été stratégiquement importants
-      pour vous lors de la soumission du projet ou au cours de son déroulement ?
-    de-ch: Welche der folgenden der genannten Themen waren für Sie bei der Einreichung
-      des Projekts oder während des Projektverlaufs strategisch wichtig?
-  section_name: Projektlancierung und Ziele
-  section_index: 4
+  section_name: Motivation
+  section_index: 3
   matrix_rows:
   - code: '1'
     texts:
-      de-ch: Forschung:Stärkung der eher grundlagenorientierten Forschung
-      fr: Recherche :Renforcement de la recherche plutôt fondamentale
-      en: Research:Strengthening more basic research
+      en: Research themesDeveloping basic research topics
   - code: '2'
     texts:
-      de-ch: Stärkung der eher anwendungsorientierten Forschung und Entwicklung
-      fr: Renforcement de la recherche plutôt appliquée et du développement
-      en: Strengthening of more application-oriented research and development
+      en: Strengthening application-oriented research and development
   - code: '3'
     texts:
-      de-ch: Akademische Qualifikationen (Master, PhD, Postdoc) und Stärkung von akademischen
-        Laufbahnen
-      fr: Qualifications académiques (master, PhD, postdoc) et renforcement des carrières
-        académiques
       en: Academic qualifications (Master, PhD, Postdoc) and strengthening of academic
         careers
   - code: '4'
     texts:
-      de-ch: Verfassen von wissenschaftlichen Publikationen (reviewed, peer reviewed)
-      fr: Rédaction de publications scientifiques (évaluées, évaluées par les pairs)
-      en: Writing scientific publications (reviewed, peer reviewed)
+      en: Peer reviewed publications
   - code: '5'
     texts:
-      de-ch: Einbringen von Drittmittteln für die Finanzierung der Forschung
-      fr: Obtention de fonds de tiers pour le financement de la recherche
       en: Raising third-party funds to finance research
-  - code: '6'
-    texts:
-      de-ch: 'Weitere Themen der Forschung (bitte angeben):'
-      fr: 'Autres thèmes de recherche (à préciser) :'
-      en: 'Other research themes (please specify):'
   - code: '7'
     texts:
-      de-ch: Anwendung und Umsetzung der Ergebnisse:Transferieren von Forschungsergebnissen
-        in Markt und in Praxis
-      fr: Application et mise en œuvre des résultats :Transfert des résultats de la
-        recherche sur le marché et dans la pratique
-      en: Application and implementation of results:Transferring research results
-        into the market and into practice
+      en: Application themesTransferring research to the market and into practice
   - code: '8'
     texts:
-      de-ch: Gewinnen von Erfahrungen aus Wirtschaft und Praxis für die Forschung
-      fr: Obtention d'expériences de l'économie et de la pratique pour la recherche
-      en: Gaining experience from business and practice for research
+      en: Gathering experience from the business world and practice for use in research
   - code: '9'
     texts:
-      de-ch: Vorbereiten einer Spin-off/Start-up Gründung
-      fr: Préparation pour la création d'une spin-off/start-up
-      en: Preparing a spin-off/start-up foundation
+      en: Preparing a spin-off/start-up
   - code: '10'
     texts:
-      de-ch: Stärken einer nicht akademischen Karriere von Projektmitarbeiter:innen
-      fr: Renforcement de la carrière non académique des collaborateurs/trices du
-        projet
-      en: Strengthening a non-academic career of project members
+      en: Strenghtening a non-academic career
   - code: '11'
     texts:
-      de-ch: Stärken der Zusammenarbeit mit Umsetzungspartner(n) oder Spin-off
-      fr: Renforcement de la collaboration avec les partenaires de mise en œuvre ou
-        spin-off
       en: Strengthening cooperation with implementation partner(s) or spin-off
   - code: '12'
     texts:
-      de-ch: Sicherung des geistigen Eigentums / Patentanmeldung
-      fr: Sécurisation de la propriété intellectuelle / dépôt de brevet
-      en: Securing intellectual property / patent application
+      en: Preparing a follow-up project with an implementation partner
   - code: '13'
     texts:
-      de-ch: Vorbereiten eines Folgeprojektes mit einem Umsetzungspartner
-      fr: Préparation d'un projet de suivi avec un partenaire de mise en oeuvre
-      en: Preparing a follow-up project with an implementation partner
-  - code: '14'
-    texts:
-      de-ch: 'Weitere Themen der Anwendung und Umsetzung (bitte angeben):'
-      fr: 'Autres thèmes d''application et de mise en œuvre (à préciser) :'
-      en: 'Other topics of application and implementation (please specify):'
+      en: Securing intellectual property / filing patent application
   matrix_columns:
   - code: '1'
     texts:
-      de-ch: überhaupt nicht wichtig
-      en: not important at all
-      fr: pas du tout important
+      en: Strongly disagree
   - code: '2'
     texts:
-      de-ch: nicht wichtig
-      en: not important
-      fr: pas important
+      en: Disagree
   - code: '3'
     texts:
-      de-ch: eher nicht wichtig
-      en: rather not important
-      fr: plutôt pas important
+      en: Rather disagree
   - code: '4'
     texts:
-      de-ch: eher wichtig
-      en: rather important
-      fr: plutôt important
+      en: Rather agree
   - code: '5'
     texts:
-      de-ch: wichtig
-      en: important
-      fr: important
+      en: Agree
   - code: '6'
     texts:
-      de-ch: sehr wichtig
-      en: very important
-      fr: très important
+      en: Strongly agree
 ProjektStand:
   element_type: SingleChoice
   texts:
@@ -737,50 +680,32 @@ ZA_Anderes:
 ZusArbeitBeurteilung:
   element_type: Matrix
   texts:
-    en: How successful was the collaboration with the implementation partner(s)?
-    fr: Dans quelle mesure estimez-vous que la collaboration avec le(s) partenaire(s)
-      de mise en œuvre impliqué(s) est réussie ?
-    de-ch: Wie erfolgreich stufen Sie die Zusammenarbeit mit dem/den beteiligten Umsetzungspartner/n
-      ein?
-  section_name: Zusammenarbeit im Projekt (Weiter)
-  section_index: 7
+    en: How successful was your collaboration with the implementation partner(s) overall?
+  section_name: Collaboration with implementation partner
+  section_index: 9
   matrix_rows:
   - code: '1'
     texts:
-      de-ch: Die Zusammenarbeit war
-      en: The collaboration was
-      fr: La collaboration a été
+      en: Success of the cooperation with implementation partner
   matrix_columns:
   - code: '1'
     texts:
-      en: highly unsuccessful
-      fr: pas du tout réussie
-      de-ch: gar nicht erfolgreich
+      en: Highly unsuccessful
   - code: '2'
     texts:
-      en: unsuccessful
-      fr: non-réussie
-      de-ch: wenig erfolgreich
+      en: Unsuccessful
   - code: '3'
     texts:
-      en: rather unsuccessful
-      fr: plutôt non-réussie
-      de-ch: eher wenig erfolgreich
+      en: Rather unsuccessful
   - code: '4'
     texts:
-      en: rather successful
-      fr: plutôt réussie
-      de-ch: eher erfolgreich
+      en: Rather successful
   - code: '5'
     texts:
-      en: successful
-      fr: réussie
-      de-ch: erfolgreich
+      en: Successful
   - code: '6'
     texts:
-      de-ch: sehr erfolgreich
-      fr: très réussie
-      en: highly successful
+      en: Highly successful
 ZusArbeitNichtGutOffen:
   element_type: OpenQuestion
   texts:
@@ -1145,45 +1070,27 @@ IPRFormRegistrierung:
 IPR_Unterstuetzung:
   element_type: Matrix
   texts:
-    en: Have you used external support to settle property rights?
-    fr: Avez-vous fait appel à une aide extérieure pour régler les droits de propriété
-      ?
-    de-ch: Haben Sie eine externe Unterstützung zur Regelung der Eigentumsrechte in
-      Anspruch genommen?
-  section_name: IPR (Rest)
-  section_index: 10
+    en: What assistance have you used or plan on using to protect your intellectual
+      property rights?
+  section_name: Intellectual property rights
+  section_index: 6
   matrix_rows:
   - code: '1'
     texts:
-      de-ch: Bei der Transferstelle unserer Forschungsinstitution
-      fr: Auprès du service de transfert de notre institution de recherche
-      en: At the transfer office of our research institution
+      en: Transfer office of your research organisation
   - code: '2'
     texts:
-      de-ch: Beim Eidgenössischen Institut für geistiges Eigentum
-      fr: Auprès de l'Institut fédéral de la propriété intellectuelle
-      en: At the Swiss Federal Institute of Intellectual Property
+      en: Federal Institute of Intellectual Property
   - code: '3'
     texts:
-      de-ch: 'Bei einer weiteren Organisation, bitte nennen:'
-      fr: 'Auprès d''une autre organisation, veuillez préciser :'
-      en: 'At another organisation, please name:'
+      en: Other support
   matrix_columns:
-  - code: '6'
-    texts:
-      de-ch: ja, erfolgt
-      fr: oui, achevé
-      en: yes, done
-  - code: '4'
-    texts:
-      de-ch: ja, geplant
-      fr: oui, prévu
-      en: yes, planned
   - code: '1'
     texts:
-      de-ch: nein
-      fr: non
-      en: 'no'
+      en: Used
+  - code: '2'
+    texts:
+      en: Planned
 InnoTechOderSozial:
   element_type: SingleChoice
   texts:
@@ -2355,6 +2262,850 @@ FeedbackArt:
       de-ch: Verbesserungsvorschlag für die Projektförderung Innosuisse
       en: Improvement proposal for the project promotion by Innosuisse
       fr: Proposition d'amélioration pour l'encouragement des projets par Innosuisse
+KontaktCheck_1_1:
+  element_type: OpenQuestion
+  texts:
+    en: Full name of main applicant
+  section_name: Personalien
+KontaktCheck_4_1:
+  element_type: OpenQuestion
+  texts:
+    en: Title of BRIDGE Proof of Concept project (as in application)
+  section_name: Personalien
+q4:
+  element_type: MultipleChoice
+  texts:
+    en: Has the project idea been the subject of SNSF funding before project submission?
+  section_name: Previous research and projects
+  section_index: 2
+  choices:
+  - code: '1'
+    texts:
+      en: 'No'
+  - code: '2'
+    texts:
+      en: Yes, SNSF Project Funding
+  - code: '3'
+    texts:
+      en: Yes, SNSF Career Funding
+  - code: NCCR
+    texts:
+      en: Yes, SNSF National Centres of Competence in Research (NCCR)
+  - code: NRP
+    texts:
+      en: Yes, SNSF National Resarch Programmes (NRP)
+  - code: '4'
+    texts:
+      en: 'Yes, another SNSF funding instrument:'
+q5:
+  element_type: OpenQuestion
+  texts:
+    en: Were other themes strategically important to you when submitting the project?
+  section_name: Motivation
+  section_index: 3
+Nachhaltigkeit_1:
+  element_type: Matrix
+  texts:
+    fr: L'idée d'innovation peut-elle contribuer à la durabilité environnementale
+      si elle est mise en œuvre concrètement ?
+    en: Can the innovation idea contribute to environmental sustainability when implemented
+      in practice?
+    de-ch: Kann die Innovationsidee bei einer konkreten Umsetzung zur ökologischen
+      Nachhaltigkeit beitragen?
+  section_name: Eigenschaften der Innovation
+  section_index: 9
+  matrix_rows:
+  - code: '1'
+    texts:
+      fr: La contribution à la durabilité environnementale est ...
+      en: The contribution to environmental sustainability is ...
+      de-ch: Der Beitrag an die ökologische Nachhaltigkeit ist …
+  matrix_columns:
+  - code: '1'
+    texts:
+      fr: Inexistante
+      en: Non-existent
+      de-ch: Nicht vorhanden
+  - code: '2'
+    texts:
+      fr: Faible
+      en: Weak
+      de-ch: Gering
+  - code: '3'
+    texts:
+      fr: Plutôt faible
+      en: Rather weak
+      de-ch: Eher gering
+  - code: '4'
+    texts:
+      fr: Plutôt forte
+      en: Rather strong
+      de-ch: Eher stark
+  - code: '5'
+    texts:
+      fr: Forte
+      en: Strong
+      de-ch: Stark
+  - code: '6'
+    texts:
+      fr: Très forte
+      en: Very strong
+      de-ch: Sehr stark
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+Nachhaltigkeit_2:
+  element_type: Matrix
+  texts:
+    fr: L'idée d'innovation peut-elle contribuer à la durabilité sociale si elle est
+      mise en œuvre concrètement ?
+    en: Can the innovation idea contribute to social sustainability when implemented
+      in practice?
+    de-ch: Kann die Innovationsidee bei einer konkreten Umsetzung zur sozialen Nachhaltigkeit
+      beitragen?
+  section_name: Eigenschaften der Innovation
+  section_index: 9
+  matrix_rows:
+  - code: '1'
+    texts:
+      fr: La contribution à la durabilité sociale est ...
+      en: The contribution to social sustainability is ...
+      de-ch: Der Beitrag an die soziale Nachhaltigkeit ist …
+  matrix_columns:
+  - code: '1'
+    texts:
+      fr: Inexistante
+      en: Non-existent
+      de-ch: Nicht vorhanden
+  - code: '2'
+    texts:
+      fr: Faible
+      en: Weak
+      de-ch: Gering
+  - code: '3'
+    texts:
+      fr: Plutôt faible
+      en: Rather weak
+      de-ch: Eher gering
+  - code: '4'
+    texts:
+      fr: Plutôt forte
+      en: Rather strong
+      de-ch: Eher stark
+  - code: '5'
+    texts:
+      fr: Forte
+      en: Strong
+      de-ch: Stark
+  - code: '6'
+    texts:
+      fr: Très forte
+      en: Very strong
+      de-ch: Sehr stark
+  - code: '99'
+    texts:
+      fr: Ne sait pas
+      en: Don't know
+      de-ch: Weiss nicht
+NachhaltigkeitSozialOffen:
+  element_type: OpenQuestion
+  texts:
+    en: 'Please describe the contribution to social sustainability in a few sentences:'
+  section_name: Characteristics of your BRIDGE Proof of Concept project
+  section_index: 1
+AusmassDigital_1:
+  element_type: SingleChoice
+  texts:
+    en: In your BRIDGE Discovery project, to what extent did your research focus on
+      the development of digital technologies?
+  section_name: Sustainability, Digitalisation and Multidisciplinarity
+  section_index: 5
+  choices:
+  - code: '1'
+    texts:
+      en: Very weakly
+  - code: '2'
+    texts:
+      en: Weakly
+  - code: '3'
+    texts:
+      en: Rather weakly
+  - code: '4'
+    texts:
+      en: Rather strongly
+  - code: '5'
+    texts:
+      en: Strongly
+  - code: '6'
+    texts:
+      en: Very strongly
+AusmassDigital_2:
+  element_type: SingleChoice
+  texts:
+    en: To what extent did your research focus on developing new digital business
+      models?
+  section_name: Sustainability, Digitalisation and Multidisciplinarity
+  section_index: 5
+  choices:
+  - code: '1'
+    texts:
+      en: Very weakly
+  - code: '2'
+    texts:
+      en: Weakly
+  - code: '3'
+    texts:
+      en: Rather weakly
+  - code: '4'
+    texts:
+      en: Rather strongly
+  - code: '5'
+    texts:
+      en: Strongly
+  - code: '6'
+    texts:
+      en: Very strongly
+IPR_Ergebnisse:
+  element_type: Matrix
+  texts:
+    en: What kind of intellectual property rights protection is being realised and
+      planned?
+  section_name: Property rights
+  section_index: 5
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Patent application(s)
+  - code: '2'
+    texts:
+      en: Trademark(s) / Copyright / Design right(s)
+  - code: '3'
+    texts:
+      en: In-licensing (rights to use, develop, or commercialize intellectual property
+        assets that are owned by another entity)
+  - code: '4'
+    texts:
+      en: Out-licensing (granting another entity the rights to use, develop, or commercialize
+        its own intellectual property assets)
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: planned
+  - code: '2'
+    texts:
+      en: already realised
+  - code: '3'
+    texts:
+      en: not relevant
+IPRErgebnisseNeu:
+  element_type: Matrix
+  texts:
+    en: Have the results of the project led to property rights or are such rights
+      planned?
+  section_name: Intellectual property rights
+  section_index: 6
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Patent / Patent applications
+  - code: '2'
+    texts:
+      en: Trademarks / copyrights / design rights
+  - code: '3'
+    texts:
+      en: In-licensing (rights to use, develop or commercialise intellectual property
+        owned by another organisation)
+  - code: '5'
+    texts:
+      en: Out-licensing (granting rights to use, develop or commercialise one's own
+        intellectual property to another organisation)
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: yes, already done
+  - code: '2'
+    texts:
+      en: yes, planned
+  - code: '3'
+    texts:
+      en: 'no'
+Outcomes:
+  element_type: Matrix
+  texts:
+    en: Have the following outcomes been achieved at the end of the BRIDGE Discovery
+      project?
+  section_name: Achievements and results
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: ResearchEstablishing a link between basic and application-oriented research
+  - code: '2'
+    texts:
+      en: Strengthening basic research
+  - code: '3'
+    texts:
+      en: Strengthening application-oriented research
+  - code: '4'
+    texts:
+      en: Developing academic career opportunities (e.g., PhD, Postdoc) for project
+        staff
+  - code: '5'
+    texts:
+      en: Using the research and project results in education and training
+  - code: '6'
+    texts:
+      en: Research cooperationEstablishing cooperation with another research organisation
+        or exploiting synergies
+  - code: '8'
+    texts:
+      en: Knowledge and technology transferStrengthening the exchange between science
+        and industry
+  - code: '9'
+    texts:
+      en: Strengthening the exchange between science and the public sector
+  - code: '10'
+    texts:
+      en: Strengthening the exchange between science and NGOs / non-profit organisations
+  - code: '11'
+    texts:
+      en: (Steps towards) Foundation of a start-up/spin-off
+  - code: '12'
+    texts:
+      en: Concretisation of a non-academic career / future employment for project
+        staff
+  - code: '13'
+    texts:
+      en: ImplementationExchange of ideas with implementation partner
+  - code: '14'
+    texts:
+      en: Collaboration with implementation partner in a project
+  - code: '15'
+    texts:
+      en: Concrete plans to implement the results with an existing implementation
+        partner / enterprise
+  - code: '16'
+    texts:
+      en: Further achievementsEmergence of new research ideas outside the project.
+  - code: '17'
+    texts:
+      en: Emergence of new innovation ideas outside the project
+  - code: '18'
+    texts:
+      en: The objectives in the area of research were overall ...
+  - code: '19'
+    texts:
+      en: The objectives in the area of application and implementation were overall
+        ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Strongly disagree
+  - code: '2'
+    texts:
+      en: Disagree
+  - code: '3'
+    texts:
+      en: Rather disagree
+  - code: '4'
+    texts:
+      en: Rather agree
+  - code: '5'
+    texts:
+      en: Agree
+  - code: '6'
+    texts:
+      en: Strongly agree
+q9:
+  element_type: Matrix
+  texts:
+    en: 'Please enter the concrete numbers for the results ongoing or planned:'
+  section_name: Achievements and results
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Master thesis
+  - code: '2'
+    texts:
+      en: Dissertation(s) PhD
+  - code: '3'
+    texts:
+      en: 'Research publications
+
+        (double peer reviewed)'
+  - code: '4'
+    texts:
+      en: Other scientific publications
+  - code: '5'
+    texts:
+      en: 'Co-publications with
+
+        implementation partner'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Ongoing / planned
+q10:
+  element_type: Matrix
+  texts:
+    en: 'Please enter the concrete numbers for the results you achieved:'
+  section_name: Achievements and results
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Master thesis
+  - code: '2'
+    texts:
+      en: Dissertation(s) PhD
+  - code: '3'
+    texts:
+      en: 'Research publications
+
+        (double peer reviewed)'
+  - code: '4'
+    texts:
+      en: Other scientific publications
+  - code: '5'
+    texts:
+      en: 'Co-publications with
+
+        implementation partner'
+  matrix_columns:
+  - code: '2'
+    texts:
+      en: Achieved
+UmsetzungsWahrscheinlichkeit:
+  element_type: Matrix
+  texts:
+    en: How do you assess the likelihood of implementing the research results in an
+      innovation on the market and/or society in the medium and long term?
+  section_name: Achievements and results
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Implementation of the research results...
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Very unlikely
+  - code: '2'
+    texts:
+      en: Unlikely
+  - code: '3'
+    texts:
+      en: Rather unlikely
+  - code: '4'
+    texts:
+      en: Rather likely
+  - code: '5'
+    texts:
+      en: Likely
+  - code: '6'
+    texts:
+      en: Very likely
+ProjektWeiterfuehren:
+  element_type: MultipleChoice
+  texts:
+    en: 'Are you planning to (or do you already) continue your project after the
+
+      BRIDGE Discovery funding has ended?'
+  section_name: Continuation of the project
+  section_index: 8
+  choices:
+  - code: '1'
+    texts:
+      en: 'No'
+  - code: '2'
+    texts:
+      en: Yes, but without additional funding
+  - code: '3'
+    texts:
+      en: Yes, with additional funding from Innosuisse
+  - code: '4'
+    texts:
+      en: Yes, with additional funding from SNSF
+  - code: Bridge
+    texts:
+      en: Yes, with additional funding from BRIDGE
+  - code: '5'
+    texts:
+      en: Yes, with other funding
+ProjektWeiterfuehrenBridge:
+  element_type: Matrix
+  texts:
+    en: Please tick all planned or ongoing applications for additional funding from
+      BRIDGE for the continuation of the project.
+  section_name: Continuation of the project
+  section_index: 8
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: BRIDGE Proof of Concept
+  - code: '2'
+    texts:
+      en: BRIDGE Discovery
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Planned
+  - code: '2'
+    texts:
+      en: Ongoing
+  - code: '3'
+    texts:
+      en: Not planned
+ProjektWeiterfuehrenInnosuisse:
+  element_type: Matrix
+  texts:
+    en: Please tick all planned or ongoing applications for additional funding from
+      Innosuisse for the continuation of the project.
+  section_name: Continuation of the project
+  section_index: 8
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Innovation project with implementation partners
+  - code: '2'
+    texts:
+      en: Innovation project without implementation partners
+  - code: '3'
+    texts:
+      en: International project funding
+  - code: '4'
+    texts:
+      en: Innovation Booster
+  - code: '11'
+    texts:
+      en: Network Event Series
+  - code: '5'
+    texts:
+      en: Flagship project
+  - code: '6'
+    texts:
+      en: Start-up Training
+  - code: '7'
+    texts:
+      en: Start-up Coaching
+  - code: '8'
+    texts:
+      en: Start-up Innovation project
+  - code: '9'
+    texts:
+      en: BRIDGE Proof of Concept
+  - code: '10'
+    texts:
+      en: Swiss Accelerator
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Planned
+  - code: '2'
+    texts:
+      en: Ongoing
+  - code: '3'
+    texts:
+      en: Not planned
+ProjektWeiterFuehrenSNF:
+  element_type: Matrix
+  texts:
+    en: Please tick all planned or ongoing applications for additional funding from
+      SNSF
+  section_name: Continuation of the project
+  section_index: 8
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Project funding
+  - code: '2'
+    texts:
+      en: Career funding
+  - code: '3'
+    texts:
+      en: National Research Programmes (NRPs)
+  - code: '4'
+    texts:
+      en: National Centres of Competence in Research (NCCRs)
+  - code: '5'
+    texts:
+      en: Other
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Planned
+  - code: '2'
+    texts:
+      en: Ongoing
+  - code: '3'
+    texts:
+      en: Not planned
+ProjektWeiterfuehrenAndere:
+  element_type: Matrix
+  texts:
+    en: Please tick all planned or ongoing applications for further funding
+  section_name: Continuation of the project
+  section_index: 8
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Grant from research institution
+  - code: '2'
+    texts:
+      en: Other funding
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Planned
+  - code: '2'
+    texts:
+      en: Ongoing
+  - code: '3'
+    texts:
+      en: Not planned
+ZusArbeit_IP:
+  element_type: SingleChoice
+  texts:
+    en: Did you or do you collaborate or exchange with one or more implementation
+      partners on your BRIDGE Discovery project?
+  section_name: Collaboration with implementation partner
+  section_index: 9
+  choices:
+  - code: '1'
+    texts:
+      en: 'No'
+  - code: '2'
+    texts:
+      en: Yes, one implementation partner
+  - code: '3'
+    texts:
+      en: Yes, two or more implementation partners
+ZusArbeit_IPTyp:
+  element_type: SingleChoice
+  texts:
+    en: How would you characterise your main implementation partner?
+  section_name: Collaboration with implementation partner
+  section_index: 9
+  choices:
+  - code: '6'
+    texts:
+      en: Start-up / Spin-off that has been founded on the basis of the BRIDGE research
+        results
+  - code: '7'
+    texts:
+      en: Start-up / Spin-off that will be founded on the basis of the BRIDGE research
+        results
+  - code: '1'
+    texts:
+      en: Other Start-up/Spin-off (< 10 years old)
+  - code: '2'
+    texts:
+      en: SME
+  - code: '3'
+    texts:
+      en: Large company
+  - code: '4'
+    texts:
+      en: Public sector / administration
+  - code: '5'
+    texts:
+      en: NGOs / non-profit organisations
+q7:
+  element_type: MultipleChoice
+  texts:
+    en: How would you characterise the other implementation partner(s)?
+  section_name: Collaboration with implementation partner
+  section_index: 9
+  choices:
+  - code: '6'
+    texts:
+      en: Start-up / Spin-off that has been founded on the basis of the BRIDGE research
+        results
+  - code: '7'
+    texts:
+      en: Start-up / Spin-off that will be founded on the basis of the BRIDGE research
+        results
+  - code: '1'
+    texts:
+      en: Other Start-up/Spin-off (< 10 years old)
+  - code: '2'
+    texts:
+      en: SME
+  - code: '3'
+    texts:
+      en: Large company
+  - code: '4'
+    texts:
+      en: Public sector / administration
+  - code: '5'
+    texts:
+      en: NGOs / non-profit organisations
+ZusArbeitForm:
+  element_type: Matrix
+  texts:
+    en: How would you describe the collaboration between your project and the implementation
+      partner(s)?
+  section_name: Collaboration with implementation partner
+  section_index: 9
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Integration of the implementation partner's expertise in research and development
+  - code: '2'
+    texts:
+      en: Utilisation of the implementation partner's infrastructure
+  - code: '3'
+    texts:
+      en: Collaboration for the development and design of the product, process, or
+        service
+  - code: '4'
+    texts:
+      en: Collaboration for the market introduction phase
+  - code: '5'
+    texts:
+      en: Agreements on property rights
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Exchange of information
+  - code: '2'
+    texts:
+      en: Loose collaboration
+  - code: '3'
+    texts:
+      en: Intense collaboration
+q6:
+  element_type: OpenQuestion
+  texts:
+    en: Did you have other forms of exchange or collaboration with your implementation
+      partner(s)?
+  section_name: Collaboration with implementation partner
+  section_index: 9
+ZusArbeit_WeiterFuehren:
+  element_type: SingleChoice
+  texts:
+    en: Did the cooperation with your implementation partner(s) during the BRIDGE
+      Discovery project lead to further collaboration with them?
+  section_name: Collaboration with implementation partner
+  section_index: 9
+  choices:
+  - code: '1'
+    texts:
+      en: 'No'
+  - code: '2'
+    texts:
+      en: Yes, such cooperation is planned (e.g. within another project) but has not
+        yet started
+  - code: '3'
+    texts:
+      en: Yes, cooperation has already started (e.g. within another project)
+BedeutungSuvbention:
+  element_type: MultipleChoice
+  texts:
+    en: How would your project have developed if the BRIDGE Discovery application
+      had been unsuccessful?
+  section_name: Project application and financing
+  section_index: 10
+  choices:
+  - code: '1'
+    texts:
+      en: I would have looked for another funding opportunity
+  - code: '2'
+    texts:
+      en: I would have developed the project further with funds from my university
+        / research institution
+  - code: '3'
+    texts:
+      en: I would have reduced the project design compared to the application for
+        funding
+  - code: '4'
+    texts:
+      en: The project would have been realized more slowly
+  - code: '6'
+    texts:
+      en: 'Other:'
+q8:
+  element_type: Matrix
+  texts:
+    en: Overall, how satisfied are you with the BRIDGE Discovery funding programme?
+  section_name: Support processes
+  section_index: 12
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Overall satisfaction with BRIDGE Discovery
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Very unsatisfied
+  - code: '2'
+    texts:
+      en: Unsatisfied
+  - code: '3'
+    texts:
+      en: Rather unsatisfied
+  - code: '4'
+    texts:
+      en: Rather satisfied
+  - code: '5'
+    texts:
+      en: Satisfied
+  - code: '6'
+    texts:
+      en: Very satisfied
+Zufriedenheit_Umsetzung:
+  element_type: Matrix
+  texts:
+    en: Specifically, how satisfied are you with the support you received during the
+      project?
+  section_name: Overall assessment
+  section_index: 9
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Support from the university/research institution (e.g., Research Office,
+        Technology Transfer Office, etc.)
+  - code: '2'
+    texts:
+      en: Support from the BRIDGE Office
+  - code: '3'
+    texts:
+      en: Support from SNSF and/or Innosuisse
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all satisfied
+  - code: '2'
+    texts:
+      en: Slightly satisfied
+  - code: '3'
+    texts:
+      en: Rather slightly satisfied
+  - code: '4'
+    texts:
+      en: Rather satisfied
+  - code: '5'
+    texts:
+      en: Satisfied
+  - code: '6'
+    texts:
+      en: Very satisfied
+SupportFeedbackOffen:
+  element_type: OpenQuestion
+  texts:
+    en: Would you like to comment on external support?
+  section_name: Support processes
+  section_index: 12
+Feedback:
+  element_type: OpenQuestion
+  texts:
+    en: Where do you see room for improvement for BRIDGE Discovery? What do you think
+      works very well?
+  section_name: Feedback
+  section_index: 13
 UnternehmenArt:
   element_type: SingleChoice
   texts:
@@ -3607,112 +4358,6 @@ AusmassDisruptivitaet:
       en: I cannot answer this question
       fr: Je ne peux pas répondre à cette question
       de-ch: Das kann ich nicht beantworten
-Nachhaltigkeit_1:
-  element_type: Matrix
-  texts:
-    fr: L'idée d'innovation peut-elle contribuer à la durabilité environnementale
-      si elle est mise en œuvre concrètement ?
-    en: Can the innovation idea contribute to environmental sustainability when implemented
-      in practice?
-    de-ch: Kann die Innovationsidee bei einer konkreten Umsetzung zur ökologischen
-      Nachhaltigkeit beitragen?
-  section_name: Eigenschaften der Innovation
-  section_index: 9
-  matrix_rows:
-  - code: '1'
-    texts:
-      fr: La contribution à la durabilité environnementale est ...
-      en: The contribution to environmental sustainability is ...
-      de-ch: Der Beitrag an die ökologische Nachhaltigkeit ist …
-  matrix_columns:
-  - code: '1'
-    texts:
-      fr: Inexistante
-      en: Non-existent
-      de-ch: Nicht vorhanden
-  - code: '2'
-    texts:
-      fr: Faible
-      en: Weak
-      de-ch: Gering
-  - code: '3'
-    texts:
-      fr: Plutôt faible
-      en: Rather weak
-      de-ch: Eher gering
-  - code: '4'
-    texts:
-      fr: Plutôt forte
-      en: Rather strong
-      de-ch: Eher stark
-  - code: '5'
-    texts:
-      fr: Forte
-      en: Strong
-      de-ch: Stark
-  - code: '6'
-    texts:
-      fr: Très forte
-      en: Very strong
-      de-ch: Sehr stark
-  - code: '99'
-    texts:
-      fr: Ne sait pas
-      en: Don't know
-      de-ch: Weiss nicht
-Nachhaltigkeit_2:
-  element_type: Matrix
-  texts:
-    fr: L'idée d'innovation peut-elle contribuer à la durabilité sociale si elle est
-      mise en œuvre concrètement ?
-    en: Can the innovation idea contribute to social sustainability when implemented
-      in practice?
-    de-ch: Kann die Innovationsidee bei einer konkreten Umsetzung zur sozialen Nachhaltigkeit
-      beitragen?
-  section_name: Eigenschaften der Innovation
-  section_index: 9
-  matrix_rows:
-  - code: '1'
-    texts:
-      fr: La contribution à la durabilité sociale est ...
-      en: The contribution to social sustainability is ...
-      de-ch: Der Beitrag an die soziale Nachhaltigkeit ist …
-  matrix_columns:
-  - code: '1'
-    texts:
-      fr: Inexistante
-      en: Non-existent
-      de-ch: Nicht vorhanden
-  - code: '2'
-    texts:
-      fr: Faible
-      en: Weak
-      de-ch: Gering
-  - code: '3'
-    texts:
-      fr: Plutôt faible
-      en: Rather weak
-      de-ch: Eher gering
-  - code: '4'
-    texts:
-      fr: Plutôt forte
-      en: Rather strong
-      de-ch: Eher stark
-  - code: '5'
-    texts:
-      fr: Forte
-      en: Strong
-      de-ch: Stark
-  - code: '6'
-    texts:
-      fr: Très forte
-      en: Very strong
-      de-ch: Sehr stark
-  - code: '99'
-    texts:
-      fr: Ne sait pas
-      en: Don't know
-      de-ch: Weiss nicht
 ZufNichtGrund:
   element_type: OpenQuestion
   texts:
@@ -3814,16 +4459,6 @@ WeitereVerbesserungen:
     de-ch: Haben Sie weitere konkrete Verbesserungsvorschläge für den Innovationsscheck?
   section_name: Zufriedenheit mit Innosuisse Programm
   section_index: 10
-KontaktCheck_1_1:
-  element_type: OpenQuestion
-  texts:
-    en: Full name of main applicant
-  section_name: Personalien
-KontaktCheck_4_1:
-  element_type: OpenQuestion
-  texts:
-    en: Title of BRIDGE Proof of Concept project (as in application)
-  section_name: Personalien
 BerufzielZuBeginn:
   element_type: MultipleChoice
   texts:
@@ -3945,12 +4580,6 @@ Nachhaltigkeitoffen:
   texts:
     en: 'Please describe the contribution to environmental sustainability in a few
       sentences:'
-  section_name: Characteristics of your BRIDGE Proof of Concept project
-  section_index: 1
-NachhaltigkeitSozialOffen:
-  element_type: OpenQuestion
-  texts:
-    en: 'Please describe the contribution to social sustainability in a few sentences:'
   section_name: Characteristics of your BRIDGE Proof of Concept project
   section_index: 1
 FundingBefore:
@@ -4631,38 +5260,6 @@ BeitragZuStartupGruendung:
   - code: '6'
     texts:
       en: Essential (the implementation would not have occurred without BRIDGE funding)
-IPR_Ergebnisse:
-  element_type: Matrix
-  texts:
-    en: What kind of intellectual property rights protection is being realised and
-      planned?
-  section_name: Property rights
-  section_index: 5
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Patent application(s)
-  - code: '2'
-    texts:
-      en: Trademark(s) / Copyright / Design right(s)
-  - code: '3'
-    texts:
-      en: In-licensing (rights to use, develop, or commercialize intellectual property
-        assets that are owned by another entity)
-  - code: '4'
-    texts:
-      en: Out-licensing (granting another entity the rights to use, develop, or commercialize
-        its own intellectual property assets)
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: planned
-  - code: '2'
-    texts:
-      en: already realised
-  - code: '3'
-    texts:
-      en: not relevant
 StartUpEntwicklungsstand:
   element_type: Matrix
   texts:
@@ -5080,43 +5677,6 @@ ZufriedenheitOverall:
   matrix_rows:
   - code: '1'
     texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all satisfied
-  - code: '2'
-    texts:
-      en: Slightly satisfied
-  - code: '3'
-    texts:
-      en: Rather slightly satisfied
-  - code: '4'
-    texts:
-      en: Rather satisfied
-  - code: '5'
-    texts:
-      en: Satisfied
-  - code: '6'
-    texts:
-      en: Very satisfied
-Zufriedenheit_Umsetzung:
-  element_type: Matrix
-  texts:
-    en: Specifically, how satisfied are you with the support you received during the
-      project?
-  section_name: Overall assessment
-  section_index: 9
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Support from the university/research institution (e.g., Research Office,
-        Technology Transfer Office, etc.)
-  - code: '2'
-    texts:
-      en: Support from the BRIDGE Office
-  - code: '3'
-    texts:
-      en: Support from SNSF and/or Innosuisse
   matrix_columns:
   - code: '1'
     texts:
