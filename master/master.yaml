@@ -3,52 +3,35 @@ KontaktCheck:
   texts:
     en: Please check the following information about yourself and your innovation
       project and correct it if necessary.
-    fr: Tout d’abord, veuillez vérifier les informations suivantes concernant votre
-      personne et votre projet d’innovation, et les corriger si nécessaire.
-    de-ch: Bitte überprüfen Sie als Erstes die folgenden Angaben zu Ihrer Person und
-      zu Ihrem Innovationsprojekt und korrigieren Sie diese, falls erforderlich.
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_name: (OhneTitel) Identifikation und Weichenfragen
   section_index: 1
   matrix_rows:
   - code: '1'
     texts:
       en: 'Surname:'
-      fr: 'Nom de famille:'
-      de-ch: 'Nachname:'
   - code: '2'
     texts:
       en: 'First name:'
-      fr: 'Prénom:'
-      de-ch: 'Vorname:'
   - code: '3'
     texts:
       en: 'E-Mail:'
-      fr: 'E-Mail:'
-      de-ch: 'E-Mail:'
   - code: '4'
     texts:
-      en: 'Innosuisse project number:'
-      fr: 'Numéro de projet Innosuisse:'
-      de-ch: 'Innosuisse-Projektnummer:'
+      en: 'Project number:'
   - code: '5'
     texts:
-      en: 'Title of the project funded by Innosuisse:'
-      fr: 'Titre du projet encouragé par Innosuisse:'
-      de-ch: 'Titel des von Innosuisse geförderten Projektes:'
+      en: 'Title of the funded project:'
   matrix_columns:
   - code: '1'
     texts: {}
 GenerelleEmail:
   element_type: OpenQuestion
   texts:
-    en: Please provide us with a general e-mail address for your organisation (i.e.,
-      an e-mail address not tied to an individual).
-    fr: 'Veuillez nous indiquer une adresse électronique neutre de votre organisation
-      (c’est-à-dire non liée à une personne):'
-    de-ch: Bitte geben Sie uns eine generelle E-Mail-Adresse Ihrer Organisation an
-      (d.h. eine nicht an eine Person gebundene E-Mail-Adresse).
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
-  section_index: 1
+    en: To enable a follow-up survey approximately three years after project completion,
+      please provide an email address that is likely to remain valid in the longer
+      term (for example a personal or institutional email address that you expect
+      to keep using).
+  section_name: Personalien
 ProjektBeteiligte:
   element_type: Matrix
   texts:
@@ -142,46 +125,35 @@ Beteiligte:
       en: Number of persons
       de-ch: Anzahl Personen
 Treiber:
-  element_type: SingleChoice
+  element_type: Matrix
   texts:
-    en: Where did the impulse or the initiative for the funded innovation project
-      come from?
-    fr: D'où est venue l'impulsion ou l'initiative pour le projet d'innovation encouragé
-      ?
-    de-ch: Woher kam der Impuls respektive die Initiative für das geförderte Innovationsprojekt?
-  section_name: Charakterisierung des Projekts
-  section_index: 2
-  choices:
+    en: Who was primarily responsible for developing the innovation idea and submitting
+      the application?
+  section_name: Charakterisierung des Projektes
+  section_index: 3
+  matrix_rows:
   - code: '1'
     texts:
-      de-ch: Von unserer Organisation
-      fr: De notre organisation
-      en: From our organisation
+      en: Developing the innovation idea
   - code: '2'
     texts:
-      en: On the part of the research partner(s) involved
-      fr: De la part du/des partenaire(s) de recherche impliqué(s)
-      de-ch: Seitens des/der beteiligten Forschungspartner(s)
+      en: Submitting the application
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Clearly the implementation partner/s (typically company/ies)
+  - code: '2'
+    texts:
+      en: Mainly the implementation partner/s
   - code: '3'
     texts:
-      en: Jointly on the part of research and implementation partners
-      fr: En commun de la part des partenaires de recherche et de mise en œuvre
-      de-ch: Gemeinsam seitens Forschungs- und Umsetzungspartner
+      en: The implementation and research partners in equal parts
   - code: '4'
     texts:
-      en: From another implementation partner of the project
-      fr: Autre partenaire de mise en œuvre impliqué dans le projet
-      de-ch: Seitens eines weiteren beteiligten Umsetzungspartners des Projekts
+      en: Mainly the research partner/s
   - code: '5'
     texts:
-      de-ch: Weitere Quelle
-      en: Other source
-      fr: Autre source
-  - code: '99'
-    texts:
-      de-ch: Das kann ich nicht beantworten
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
+      en: Clearly the research partner/s
 ErstesTreffen:
   element_type: Matrix
   texts: {}
@@ -397,66 +369,44 @@ StrategischeZiele:
 ProjektStand:
   element_type: SingleChoice
   texts:
-    de-ch: Wie beurteilen Sie das bei Projektabschluss erreichte Ziel der kommerziellen
-      Nutzung der Projektergebnisse und die weitere Umsetzung auf dem Markt?
-    en: How do you assess at the end of the project the achieved goal of commercial
-      utilisation of the project results and the further implementation on the market?
-    fr: Comment évaluez-vous, à la fin du projet, la réalisation de l'objectif d'utilisation
-      commerciale des résultats du projet et la poursuite de la mise en œuvre sur
-      le marché ?
-  section_name: Ergebnisse
+    en: How do you assess, at the end of the project, the achieved goal of utilisation
+      of the project results and the further implementation (e.g. commercial, societal
+      or organisational)?
+  section_name: Implementation pathways
   section_index: 3
   choices:
   - code: '1'
     texts:
-      en: The project results are not yet sufficiently advanced to be able to decide
-        on a possible application.
-      fr: Les résultats du projet ne sont pas encore suffisamment avancés pour pouvoir
-        décider d'une éventuelle application.
-      de-ch: Die Projektergebnisse sind noch nicht so weit fortgeschritten, um über
-        eine mögliche Anwendung entscheiden zu können.
+      en: The project results are not yet sufficiently advanced to decide on a concrete
+        application or implementation path (e.g. start-up, implementation within an
+        existing organisation or collaboration with implementation partners)
+  - code: '2'
+    texts:
+      en: The feasibility of the project goals has been examined and potential implementation
+        paths and concrete next steps are identifiable (e.g. start-up formation, licensing,
+        market or societal implementation within an existing organisation, or collaboration
+        with implementation partners).
+  - code: '3'
+    texts:
+      en: Conclusive results make it possible to take concrete next steps towards
+        implementation or application.
   - code: '4'
     texts:
-      en: The feasibility of the project goals has been examined and concrete implementation
-        steps are possible.
-      fr: La faisabilité des objectifs du projet a été vérifiée et des étapes concrètes
-        de mise en œuvre sont possibles.
-      de-ch: Die Machbarkeit der Projektziele wurde geprüft und konkrete Umsetzungsschritte
-        sind möglich.
+      en: The project or the innovation is currently in the implementation and introduction
+        phase, either on the market or in a societal or institutional context (e.g.
+        through a start-up, within an existing organisation, or together with implementation
+        partners)
+  - code: '5'
+    texts:
+      en: The project or the innovation has been successfully implemented and already
+        generates first revenues and/or demonstrates measurable societal benefits
+        or strengthens organisational performance.
   - code: '6'
     texts:
-      en: Conclusive results make it possible to take concrete and further implementation
-        steps.
-      fr: Des résultats concluants permettent de prendre des mesures concrètes et
-        supplémentaires de mise en œuvre.
-      de-ch: Schlüssige Ergebnisse ermöglichen es, konkrete und weitere Umsetzungsschritte
-        vorzunehmen.
-  - code: '7'
-    texts:
-      en: The project/the innovation is currently in the implementation and introduction
-        phase (internally or on the market).
-      fr: Le projet/l'innovation est concrètement en phase de réalisation et de lancement
-        (en interne ou sur le marché).
-      de-ch: Das Projekt/die Innovation befindet sich konkret in der Umsetzungs- und
-        Einführungsphase (intern oder auf dem Markt).
-  - code: '8'
-    texts:
-      en: The project/the innovation has been successfully implemented in the organisation
-        and generates sales and/or strengthens the performance of the organisation.
-      fr: Le projet/l'innovation a été mis en œuvre avec succès dans l'organisation
-        et génère des revenus et/ou renforce les performances de l'organisation.
-      de-ch: Das Projekt/die Innovation wurde erfolgreich in der Organisation umgesetzt
-        und generiert Umsatz und/oder stärkt die Leistung der Organisation.
-  - code: '9'
-    texts:
-      de-ch: Das Projekt wird nicht weitergeführt bzw. umgesetzt.
-      fr: Le projet n'est pas poursuivi ou mis en œuvre.
       en: The project will not be continued or implemented.
   - code: '99'
     texts:
       en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 ZusArbeit_Doch:
   element_type: SingleChoice
   texts:
@@ -562,8 +512,8 @@ SpinOff:
   texts:
     en: Has your involvement in the project contributed to the creation of a spin-off? If
       so, please add the company's name and/or VAT identifier.
-  section_name: Economic project results
-  section_index: 7
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
   choices:
   - code: '6'
     texts:
@@ -884,59 +834,47 @@ IPRVereinbarung:
 IPRErgebnisse:
   element_type: Matrix
   texts:
-    de-ch: Haben die Ergebnisse des Projekts zu Eigentumsrechten geführt oder sind
-      solche geplant (in Ihrer Organisation und/oder beim Forschungspartner)?
-    en: Have the results of the project led to property rights or are such rights
-      planned (in your organisation and/or at the research partner)?
-    fr: Les résultats du projet ont-ils donné lieu à des droits de propriété ou de
-      tels droits sont-ils prévus (dans votre organisation et/ou chez le partenaire
-      de recherche) ?
+    en: Have the results of the project led to property rights (granted or applied
+      for) or are such rights planned?
   section_name: Ergebnisse
-  section_index: 3
+  section_index: 4
   matrix_rows:
   - code: '1'
     texts:
-      de-ch: Patent / Patentanmeldungen
       en: Patent / Patent applications
-      fr: Brevet / Demandes de brevet
   - code: '2'
     texts:
-      en: Trademarks / copyrights / design rights
-      fr: Marques déposées / droits d'auteur / droits sur les dessins et modèles
-      de-ch: Trademarks / Urheberrechte / Designrechte
+      en: Trademarks
   - code: '3'
     texts:
-      en: In-licensing (rights to use, develop or commercialise intellectual property
-        owned by another organisation)
-      fr: In-licensing (droits d'utiliser, de développer ou de commercialiser la propriété
-        intellectuelle détenue par une autre organisation)
-      de-ch: In-licensing (Rechte zur Nutzung, Entwicklung oder Kommerzialisierung
-        von geistigem Eigentum, welches sich im Besitz einer anderen Organisation
-        befindet)
+      en: Registered designs
   - code: '4'
+    texts:
+      en: Copyrights
+  - code: '5'
+    texts:
+      en: Standards
+  - code: '6'
+    texts:
+      en: In-licensing(rights to use, develop or commercialise intellectual property
+        owned by another organisation)
+  - code: '7'
     texts:
       en: Out-licensing (granting rights to use, develop or commercialise one's own
         intellectual property to another organisation)
-      fr: Out-licensing (octroi de droits d'utilisation, de développement ou de commercialisation
-        de sa propre propriété intellectuelle à une autre organisation)
-      de-ch: Out-licensing (Einräumung von Rechten zur Nutzung, Entwicklung oder Kommerzialisierung
-        des eigenen geistigen Eigentums an eine andere Organisation)
+  - code: '8'
+    texts:
+      en: Other
   matrix_columns:
   - code: '6'
     texts:
-      de-ch: ja, bereits erfolgt
-      en: yes, already done
-      fr: oui, déjà fait
+      en: Yes, granted or applied
   - code: '4'
     texts:
-      de-ch: ja, geplant
-      en: yes, planned
-      fr: oui, prévu
+      en: Yes, planned
   - code: '1'
     texts:
-      de-ch: nein
-      en: 'no'
-      fr: non
+      en: 'No'
 IPRInhaber:
   element_type: SingleChoice
   texts:
@@ -1094,227 +1032,125 @@ IPR_Unterstuetzung:
 InnoTechOderSozial:
   element_type: SingleChoice
   texts:
-    en: Is the innovation from your Innosuisse-supported project primarily based on
-      ...
-    fr: L’innovation issue de votre projet encouragé par Innosuisse repose-t-elle
-      en premier lieu sur ...
-    de-ch: Beruht die Innovation aus Ihrem von Innosuisse geförderten Projekt primär
-      auf ...
-  section_name: Charakterisierung des Projektes
-  section_index: 2
+    en: Is the innovation from your supported project primarily based on ...
+  section_name: Characteristics of your BRIDGE Proof of Concept project
+  section_index: 1
   choices:
   - code: '1'
     texts:
-      en: technology-oriented or scientific basics
-      fr: des bases technologiques ou orientées vers les sciences naturelles
-      de-ch: technologieorientierten oder naturwissenschaftlichen Grundlagen
+      en: technological or natural science-based results (e.g. engineering, ICT, life
+        sciences)
   - code: '2'
     texts:
-      en: economic, social science or humanities basics
-      fr: des bases en sciences économiques, sociales ou humaines
-      de-ch: wirtschafts-, sozial- oder geisteswissenschaftlichen Grundlagen
+      en: results from social sciences, humanities or economic sciences
+  - code: '3'
+    texts:
+      en: other non-technological results or approaches
   - code: '99'
     texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
+      en: don't know / no answer
 TRLStart:
   element_type: Dropdown
   texts:
-    en: 'Innovations go through different stages of maturity: In your estimation,
-      what stage did your project have at the beginning of the funding period?'
-    fr: 'Les innovations passent par différents stades de maturité: Selon vous, à
-      quel stade se trouvait votre projet au début de l''encouragement ?'
-    de-ch: 'Innovationen durchlaufen verschiedene Reifestufen: Nach Ihrer Einschätzung,
-      welche Stufe hatte Ihr Projekt zu Beginn der Förderung?'
-  section_name: Ergebnisse
+    en: Which Technology Readiness Level (TRL) or Social Readiness Level (SRL) best
+      describes the maturity of your project at the beginning of the BRIDGE Proof
+      of Concept funding?
+  section_name: Implementation pathways
   section_index: 3
   choices:
   - code: '1'
     texts:
-      de-ch: GrundlagenforschungTRL/SRL 1 - Beobachtung und Beschreibung des Grundprinzips
-        einer Technologie und/oder einer Funktion oder einer Anwendung. Grundlagenforschung
-        wird durchgeführt und dargestellt.
-      fr: Recherche fondamentaleTRL/SRL 1 - Observation et description du principe
-        de base d'une technologie et/ou d'une fonction ou d'une application. La recherche
-        fondamentale est enregistrée et présentée.
-      en: Basic researchTRL/SRL 1 - Observation and description of the basic principle
-        of a technology and/or a function or an application. Basic research is recorded
-        and presented.
+      en: TRL/SRL 1 – Observation and description of the basic principle of a technology,
+        solution, approach or application. Basic research is recorded and presented.
   - code: '2'
     texts:
-      de-ch: TRL/SRL 2 - Technologie- und/oder Anwendungskonzept formuliert (Identifikation
-        von möglichen Anwendungen). Beschreibung der Anwendung
-      fr: TRL/SRL 2 - Formulation du concept de technologie et/ou d'application (identification
-        des applications possibles). Description de l'application.
-      en: TRL/SRL 2 - Technology and/or application concept formulated (identification
+      en: TRL/SRL 2 – Technology, solution or application concept formulated (identification
         of possible applications). Description of the application.
   - code: '3'
     texts:
-      en: Application oriented research / Applied research / Experimental developmentTRL/SRL
-        3 - Experimental proof of concept. Analytical and experimental demonstration
-        concept of critical function and/or specification.
-      fr: Recherche orientée vers l'application / Recherche appliquée / Développement
-        expérimentalTRL/SRL 3 - Preuve expérimentale du concept. Concept de démonstration
-        analytique et expérimentale d'une fonction critique et/ou d'une spécification.
-      de-ch: Anwendungsorientierte Forschung / Angewandte Forschung / Experimentelle
-        EntwicklungTRL/SRL 3 - Experimenteller Nachweis des Konzepts. Analytisches
-        und experimentelles Demonstrationskonzept der kritischen Funktion und/oder
-        Spezifikation.
+      en: TRL/SRL 3 – Experimental or analytical proof of concept of the proposed
+        technology, solution or approach.
   - code: '4'
     texts:
-      en: TRL/SRL 4 - Technology or solution validated in the laboratory/in the field.
-        Test setup in the laboratory/in the field.
-      fr: TRL/SRL 4 - Technologie ou solution validée en laboratoire ou sur le terrain.
-        Mise en place d'essais en laboratoire ou sur le terrain.
-      de-ch: TRL/SRL 4 - Technologie/Lösung im Labor oder Feld validiert. Testaufbau
-        im Labor/im Feld.
+      en: TRL/SRL 4 – Technology, solution or approach validated in a laboratory,
+        simulated or smale scale field environment. Test setup in the laboratory or
+        in the field.
   - code: '5'
     texts:
-      en: TRL/SRL 5 - Experimental development. Test set-up and technology or solution
-        validated in operational environment.
-      fr: TRL/SRL 5 - Développement expérimental. Montage d'essai et validation de
-        la technologie ou de la solution dans un environnement opérationnel.
-      de-ch: TRL/SRL 5 - Experimentelle Entwicklung. Versuchsaufbau und Technologie
-        bzw. Lösung in betrieblicher Umgebung validiert.
+      en: TRL/SRL 5 – Experimental development. Test set-up, technology, solution
+        or approach validated in a relevant or operational environment.
   - code: '6'
     texts:
-      en: TRL/SRL 6 - Technology/solution demonstrated in relevant environment.
-      fr: TRL/SRL 6 - Démonstration de la technologie/solution dans un environnement
-        pertinent.
-      de-ch: TRL/SRL 6 - Technologie/Lösung in relevanter Umgebung demonstriert.
+      en: TRL/SRL 6 – Technology, solution or approach demonstrated or tested in a
+        relevant environment.
   - code: '7'
     texts:
-      en: Demonstration and pilot plants / Prototypes / Solution demonstratedTRL/SRL
-        7 - System/solution prototype demonstrated in a development environment. Prototype
-        in use.
-      fr: Démonstration et installations pilotes / Prototypes / Solution démontréeTRL/SRL
-        7 - Prototype de système/solution démontré dans un environnement de développement.
-        Prototype utilisé.
-      de-ch: Demonstrations- und Pilotanlagen / Prototypen / Demonstrierte LösungTRL/SRL
-        7 - System-/Lösungsprototyp in einer Entwicklungsumgebung demonstriert. Prototyp
-        im Einsatz.
+      en: TRL/SRL 7 – System, prototype or solution demonstrated in a development
+        or pilot environment. Prototype or solution in use.
   - code: '8'
     texts:
-      en: TRL/SRL 8 - System/solution complete and qualified with proof of functionality
-        in operational environment through testing and demonstration.
-      fr: TRL/SRL 8 - Système/solution complet et qualifié avec preuve de fonctionnalité
-        dans un environnement opérationnel par le biais d'essais et de démonstrations.
-      de-ch: TRL/SRL 8 - System/Lösung vollständig qualifiziert mit Nachweis der Funktionstüchtigkeit
-        in betrieblicher Umgebung durch Tests und Demonstration.
+      en: TRL/SRL 8 – System or solution complete and qualified with proof of functionality
+        in operational or real-world conditions.
   - code: '9'
     texts:
-      de-ch: UmsetzungTRL/SRL 9 - Qualifiziertes System/Lösung hat sich im betrieblichen
-        Umfeld bewährt, mit Nachweis des erfolgreichen Einsatzes. Produktion unter
-        Wettbewerbsbedingungen.
-      fr: Mise en œuvreTRL/SRL 9 - Le système/la solution qualifié(e) a été éprouvé(e)
-        dans l'environnement opérationnel, avec la preuve d'une utilisation réussie.
-        Production dans des conditions concurrentielles..
-      en: Implementation TRL/SRL 9 - Qualified system/solution has been proven in
-        the operational environment with evidence of successful use. Production under
-        competitive conditions.
-  - code: '99'
+      en: TRL/SRL 9 – Qualified system or solution has been proven in the operational
+        environment with evidence of successful use or implementation in practice.
+        Production under competitive conditions or sustained implementation in real
+        world settings.
+  - code: '10'
     texts:
-      en: TRL resp. SRL not applicable to project / don't know
-      fr: TRL ou SRL non applicable au projet / ne sait pas
-      de-ch: TRL resp. SRL nicht auf Projekt anwendbar / weiss nicht
+      en: TRL/SRL does not apply to my project / no answer
 TRLEnde:
   element_type: Dropdown
   texts:
-    en: '... and what level did it reach at the end of the funding period?'
-    fr: '... et quel stade a-t-il atteint à la fin de l''encouragement ?'
-    de-ch: '... und welche Stufe erreichte es beim Abschluss der Förderung?'
-  section_name: Ergebnisse
+    en: Which Technology Readiness Level (TRL) or Social Readiness Level (SRL) best
+      describes the status of your project at the end of the BRIDGE Proof of Concept
+      funding?
+  section_name: Implementation pathways
   section_index: 3
   choices:
   - code: '1'
     texts:
-      de-ch: GrundlagenforschungTRL/SRL 1 - Beobachtung und Beschreibung des Grundprinzips
-        einer Technologie und/oder einer Funktion oder einer Anwendung. Grundlagenforschung
-        wird durchgeführt und dargestellt.
-      fr: Recherche fondamentaleTRL/SRL 1 - Observation et description du principe
-        de base d'une technologie et/ou d'une fonction ou d'une application. La recherche
-        fondamentale est enregistrée et présentée.
-      en: Basic researchTRL/SRL 1 - Observation and description of the basic principle
-        of a technology and/or a function or an application. Basic research is recorded
-        and presented.
+      en: TRL/SRL 1 – Observation and description of the basic principle of a technology,
+        solution, approach or application. Basic research is recorded and presented.
   - code: '2'
     texts:
-      de-ch: TRL/SRL 2 - Technologie- und/oder Anwendungskonzept formuliert (Identifikation
-        von möglichen Anwendungen). Beschreibung der Anwendung
-      fr: TRL/SRL 2 - Formulation du concept de technologie et/ou d'application (identification
-        des applications possibles). Description de l'application.
-      en: TRL/SRL 2 - Technology and/or application concept formulated (identification
+      en: TRL/SRL 2 – Technology, solution or application concept formulated (identification
         of possible applications). Description of the application.
   - code: '3'
     texts:
-      en: Application oriented research / Applied research / Experimental developmentTRL/SRL
-        3 - Experimental proof of concept. Analytical and experimental demonstration
-        concept of critical function and/or specification.
-      fr: Recherche orientée vers l'application / Recherche appliquée / Développement
-        expérimentalTRL/SRL 3 - Preuve expérimentale du concept. Concept de démonstration
-        analytique et expérimentale d'une fonction critique et/ou d'une spécification.
-      de-ch: Anwendungsorientierte Forschung / Angewandte Forschung / Experimentelle
-        EntwicklungTRL/SRL 3 - Experimenteller Nachweis des Konzepts. Analytisches
-        und experimentelles Demonstrationskonzept der kritischen Funktion und/oder
-        Spezifikation.
+      en: TRL/SRL 3 – Experimental or analytical proof of concept of the proposed
+        technology, solution or approach.
   - code: '4'
     texts:
-      en: TRL/SRL 4 - Technology or solution validated in the laboratory/in the field.
-        Test setup in the laboratory/in the field.
-      fr: TRL/SRL 4 - Technologie ou solution validée en laboratoire ou sur le terrain.
-        Mise en place d'essais en laboratoire ou sur le terrain.
-      de-ch: TRL/SRL 4 - Technologie/Lösung im Labor oder Feld validiert. Testaufbau
-        im Labor/im Feld.
+      en: TRL/SRL 4 – Technology, solution or approach validated in a laboratory,
+        simulated or smale scale field environment. Test setup in the laboratory or
+        in the field.
   - code: '5'
     texts:
-      en: TRL/SRL 5 - Experimental development. Test set-up and technology or solution
-        validated in operational environment.
-      fr: TRL/SRL 5 - Développement expérimental. Montage d'essai et validation de
-        la technologie ou de la solution dans un environnement opérationnel.
-      de-ch: TRL/SRL 5 - Experimentelle Entwicklung. Versuchsaufbau und Technologie
-        bzw. Lösung in betrieblicher Umgebung validiert.
+      en: TRL/SRL 5 – Experimental development. Test set-up, technology, solution
+        or approach validated in a relevant or operational environment.
   - code: '6'
     texts:
-      en: TRL/SRL 6 - Technology/solution demonstrated in relevant environment.
-      fr: TRL/SRL 6 - Démonstration de la technologie/solution dans un environnement
-        pertinent.
-      de-ch: TRL/SRL 6 - Technologie/Lösung in relevanter Umgebung demonstriert.
+      en: TRL/SRL 6 – Technology, solution or approach demonstrated or tested in a
+        relevant environment.
   - code: '7'
     texts:
-      en: Demonstration and pilot plants / Prototypes / Solution demonstratedTRL/SRL
-        7 - System/solution prototype demonstrated in a development environment. Prototype
-        in use.
-      fr: Démonstration et installations pilotes / Prototypes / Solution démontréeTRL/SRL
-        7 - Prototype de système/solution démontré dans un environnement de développement.
-        Prototype utilisé.
-      de-ch: Demonstrations- und Pilotanlagen / Prototypen / Demonstrierte LösungTRL/SRL
-        7 - System-/Lösungsprototyp in einer Entwicklungsumgebung demonstriert. Prototyp
-        im Einsatz.
+      en: TRL/SRL 7 – System, prototype or solution demonstrated in a development
+        or pilot environment. Prototype or solution in use.
   - code: '8'
     texts:
-      en: TRL/SRL 8 - System/solution complete and qualified with proof of functionality
-        in operational environment through testing and demonstration.
-      fr: TRL/SRL 8 - Système/solution complet et qualifié avec preuve de fonctionnalité
-        dans un environnement opérationnel par le biais d'essais et de démonstrations.
-      de-ch: TRL/SRL 8 - System/Lösung vollständig qualifiziert mit Nachweis der Funktionstüchtigkeit
-        in betrieblicher Umgebung durch Tests und Demonstration.
+      en: TRL/SRL 8 – System or solution complete and qualified with proof of functionality
+        in operational or real-world conditions.
   - code: '9'
     texts:
-      de-ch: UmsetzungTRL/SRL 9 - Qualifiziertes System/Lösung hat sich im betrieblichen
-        Umfeld bewährt, mit Nachweis des erfolgreichen Einsatzes. Produktion unter
-        Wettbewerbsbedingungen.
-      fr: Mise en œuvreTRL/SRL 9 - Le système/la solution qualifié(e) a été éprouvé(e)
-        dans l'environnement opérationnel, avec la preuve d'une utilisation réussie.
-        Production dans des conditions concurrentielles..
-      en: Implementation TRL/SRL 9 - Qualified system/solution has been proven in
-        the operational environment with evidence of successful use. Production under
-        competitive conditions.
-  - code: '99'
+      en: TRL/SRL 9 – Qualified system or solution has been proven in the operational
+        environment with evidence of successful use or implementation in practice.
+        Production under competitive conditions or sustained implementation in real
+        world settings.
+  - code: '10'
     texts:
-      en: TRL resp. SRL not applicable to project / don't know
-      fr: TRL ou SRL non applicable au projet / ne sait pas
-      de-ch: TRL resp. SRL nicht auf Projekt anwendbar / weiss nicht
+      en: TRL/SRL does not apply to my project / no answer
 NeueKompetenzen:
   element_type: MultipleChoice
   texts:
@@ -1348,119 +1184,71 @@ NeueKompetenzen:
 AusmassRadikalitaet:
   element_type: Matrix
   texts:
-    en: Innovations can be incremental or radical in nature. Please indicate which
-      applies to your innovation pursued with the project.
-    fr: 'Les innovations peuvent être de nature incrémentale ou radicale. Veuillez
-      indiquer ce qui s’applique à l’innovation poursuivie dans le cadre du projet:'
-    de-ch: Innovationen können inkrementeller oder radikaler Natur sein. Bitte geben
-      Sie an, was auf Ihre mit dem Projekt verfolgte Innovation zutrifft.
-  section_name: Charakterisierung des Projektes
-  section_index: 2
+    en: 'Innovation can be incremental or radical in nature.
+
+      Please indicate which applies to the innovation you pursued with your
+
+      BRIDGE Proof of Concept project.'
+  section_name: Characteristics of your BRIDGE Proof of Concept project
+  section_index: 1
   matrix_rows:
   - code: '1'
-    texts:
-      en: The innovation pursued by the project is ...
-      fr: L’innovation à laquelle le projet est voué est...
-      de-ch: Die mit dem Projekt verfolgte Innovation ist….
+    texts: {}
   matrix_columns:
   - code: '1'
     texts:
-      en: very incremental
-      fr: fortement incrémentale
-      de-ch: ausgesprochen inkrementell
+      en: strongly incremental
   - code: '2'
     texts:
       en: incremental
-      fr: incrémentale
-      de-ch: inkrementell
   - code: '3'
     texts:
-      en: relatively incremental
-      fr: plutôt incrémentale
-      de-ch: eher inkrementell
+      en: rather incremental
   - code: '4'
     texts:
-      en: relatively radical
-      fr: plutôt radicale
-      de-ch: eher radikal
+      en: rather radical
   - code: '5'
     texts:
       en: radical
-      fr: radicale
-      de-ch: radikal
   - code: '6'
     texts:
-      en: very radical
-      fr: fortement radicale
-      de-ch: ausgesprochen radikal
+      en: strongly radical
   - code: '99'
     texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
+      en: don't know / no answer
 Nachhaltigkeit:
   element_type: Matrix
   texts:
-    en: Does the supported project or the innovation since introduced make a specific
-      contribution to ecological and/or social sustainability in the market or for
-      society?
-    fr: Le projet ou l’innovation lancé(e) depuis a-t-il/elle apporté une contribution
-      concrète en termes de durabilité environnementale et/ou sociale sur le marché
-      ou pour la société ?
-    de-ch: Leistet das geförderte Projekt oder die inzwischen eingeführte Innovation
-      einen konkreten Beitrag zur ökologischen und/oder sozialen Nachhaltigkeit auf
-      dem Markt oder für die Gesellschaft?
-  section_name: Weitere, nicht ökonomische Wirkungen
-  section_index: 5
+    en: Does the BRIDGE Proof of Concept project lead to environmentally and/or social
+      sustainable solutions?
+  section_name: Characteristics of your BRIDGE Proof of Concept project
+  section_index: 1
   matrix_rows:
   - code: '1'
     texts:
-      en: The contribution to ecological sustainability is ...
-      fr: La contribution apportée jusqu’à présent en termes de durabilité environnementale
-        est ...
-      de-ch: Der Beitrag an die ökologische Nachhaltigkeit ist …
+      en: Contribution to environmental sustainability
   - code: '2'
     texts:
-      en: The contribution to social sustainability is ...
-      fr: La contribution apportée jusqu’à présent en termes de durabilité sociale
-        est ...
-      de-ch: Der Beitrag an die soziale Nachhaltigkeit ist …
+      en: Contribution to social sustainability
   matrix_columns:
   - code: '1'
     texts:
-      en: not existing
-      fr: inexistante
-      de-ch: nicht vorhanden
+      en: Not at all
   - code: '2'
     texts:
-      en: small
-      fr: faible
-      de-ch: gering
+      en: Very weakly
   - code: '3'
     texts:
-      en: relatively small
-      fr: plutôt faible
-      de-ch: eher gering
+      en: Rather weakly
   - code: '4'
     texts:
-      en: relatively big
-      fr: plutôt élevée
-      de-ch: eher hoch
+      en: Rather strongly
   - code: '5'
     texts:
-      en: big
-      fr: élevée
-      de-ch: hoch
+      en: Strongly
   - code: '6'
     texts:
-      en: very big
-      fr: très élevée
-      de-ch: sehr hoch
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
+      en: Very strongly
 NachhaltigkeitOffen:
   element_type: OpenQuestion
   texts:
@@ -1474,65 +1262,40 @@ NachhaltigkeitOffen:
 AusmassDigital:
   element_type: Matrix
   texts:
-    en: Is the Innosuisse-supported project based on new digital technologies or new
-      digital business models?
-    fr: Le projet soutenu par Innosuisse repose-t-il sur de nouvelles technologies
-      numériques ou sur de nouveaux modèles commerciaux numériques ?
-    de-ch: Beruht das von Innosuisse geförderte Projekt auf neuen digitalen Technologien
-      oder auf neuen digitalen Geschäftsmodellen?
-  section_name: Charakterisierung des Projekts
-  section_index: 2
+    en: To what extent did your BRIDGE Proof of Concept project focus on the development
+      of digital technologies and / or digital business models?
+  section_name: Characteristics of your BRIDGE Proof of Concept project
+  section_index: 1
   matrix_rows:
-  - code: '1'
+  - code: tech
     texts:
-      en: It is based on new digital technologies ...
-      fr: Sur des nouvelles technologies numériques ...
-      de-ch: Auf neuen digitalen Technologien beruht es ...
-  - code: '2'
+      en: Focus on digital technologies
+  - code: models
     texts:
-      de-ch: Auf neuen digitalen Geschäftsmodellen beruht es ...
-      en: It is based on new digital business models ...
-      fr: Sue des nouveaux modèles commerciaux numériques ...
+      en: Focus on digital business models
   matrix_columns:
   - code: '1'
     texts:
-      en: not at all
-      fr: pas du tout
-      de-ch: gar nicht
+      en: Not at all
   - code: '2'
     texts:
-      en: little
-      fr: peu
-      de-ch: wenig
+      en: Very weakly
   - code: '3'
     texts:
-      en: rather little
-      fr: plutôt peu
-      de-ch: eher wenig
+      en: Rather weakly
   - code: '4'
     texts:
-      en: rather strongly
-      fr: plutôt fort
-      de-ch: eher stark
+      en: Rather strongly
   - code: '5'
     texts:
-      en: strongly
-      fr: fort
-      de-ch: stark
+      en: Strongly
   - code: '6'
     texts:
-      en: very strongly
-      fr: très fort
-      de-ch: sehr stark
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
+      en: Very strongly
 Disziplinaritaet:
   element_type: SingleChoice
   texts:
-    en: How do you assess the funded project with regard to the integration of different
+    en: How do you assess the funded project regarding the integration of different
       disciplines?
   section_name: Characteristics of your BRIDGE Proof of Concept project
   section_index: 1
@@ -1557,114 +1320,78 @@ ZielErreichung:
   element_type: Matrix
   texts:
     en: Were the project goals achieved?
-    fr: Les objectifs du projet ont-ils été atteints ?
-    de-ch: Wurden die Projektziele erreicht?
   section_name: Projekterfolg und Abschluss
-  section_index: 7
+  section_index: 8
   matrix_rows:
   - code: '1'
     texts:
       en: '... from a technical point of view'
-      fr: '... d''un point de vue technique'
-      de-ch: '... aus technischer Sicht'
   - code: '2'
     texts:
-      de-ch: '... aus wirtschaftlicher und inhaltlicher Sicht'
-      fr: '... du point de vue économique et du contenu'
       en: '... from an economic and content point of view'
   - code: '3'
     texts:
-      de-ch: Insgesamt
-      fr: Dans l'ensemble
       en: Overall
   matrix_columns:
   - code: '1'
     texts:
       en: not achieved at all
-      fr: pas du tout atteints
-      de-ch: überhaupt nicht erreicht
   - code: '2'
     texts:
       en: not achieved
-      fr: pas atteints
-      de-ch: nicht erreicht
   - code: '3'
     texts:
       en: rather not achieved
-      fr: plutôt pas atteints
-      de-ch: eher nicht erreicht
   - code: '4'
     texts:
       en: rather achieved
-      fr: plutôt atteints
-      de-ch: eher erreicht
   - code: '5'
     texts:
       en: fully achieved
-      fr: complètement atteints
-      de-ch: vollständig erreicht
   - code: '6'
     texts:
       en: exceeded
-      fr: surpassés
-      de-ch: übertroffen
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 Ergebnisse:
-  element_type: MultipleChoice
+  element_type: Matrix
   texts:
-    en: Has the supported project so far led to any of the following concrete results?
-    fr: Le projet encouragé a-t-il à ce jour abouti à l’un des résultats concrets
-      suivants ?
-    de-ch: DIESE FRAGE IST AUS HISTORISCHEN/DATENTECHNISCHEN GRünden Hier und wird
-      NIE angezeigtHat das geförderte Projekt bis jetzt zu einem der folgenden konkreten
-      Ergebnissen geführt?
-  section_name: Ergebnisse
+    en: To what extent have the following outcomes been achieved by the end of your
+      BRIDGE Proof of Concept project?
+  section_name: Implementation pathways
   section_index: 3
-  choices:
+  matrix_rows:
   - code: '1'
     texts:
-      en: Pilot and demonstration equipment
-      fr: Installations pilotes et de démonstration
-      de-ch: Pilot- und Demonstrationsanlagen
+      en: 'Concrete results and validation
+
+        Prototype, demonstrator or Minimum Viable Product developed (incl. user perspective)'
   - code: '2'
     texts:
-      de-ch: Konzept oder Dienstleistung umsetzungsreif
-      fr: Concept ou service prêt à être mis en œuvre
-      en: Concept or service ready to be implemented
+      en: Technical or methodological feasibility validated
   - code: '3'
     texts:
-      de-ch: Produkt, Konzept oder Dienstleistung auf dem Markt eingeführt
-      fr: Produit, concept ou service mis en œuvre sur le marché
-      en: Product, concept or service introduced to the market
+      en: Business feasibility or implementation pathways clarified
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not relevant for my BRIDGE Proof of Concept project
+  - code: '2'
+    texts:
+      en: not achieved
+  - code: '3'
+    texts:
+      en: slightly achieved
   - code: '4'
     texts:
-      en: Process innovation introduced in the organisation
-      fr: Processus mis en œuvre dans l'organisation
-      de-ch: Prozessinnovation in der Organisation eingeführt
+      en: rather slightly achieved
   - code: '5'
     texts:
-      en: Patent or patent application
-      fr: Brevet ou demande de brevet
-      de-ch: Patent oder Patentanmeldung
+      en: rather achieved
   - code: '6'
     texts:
-      en: Trademark or design rights
-      fr: Droits sur les marques ou les modèles
-      de-ch: Rechte an Marken oder Design
+      en: fully achieved
   - code: '7'
     texts:
-      en: Licences
-      fr: Licences
-      de-ch: Lizenzen
-  - code: '8'
-    texts:
-      en: 'Other, please specify:'
-      fr: 'Autres, veuillez préciser:'
-      de-ch: 'Anderes, bitte präzisieren:'
+      en: exceeded expectations
 ErgebnisseGeplant:
   element_type: Matrix
   texts:
@@ -2038,89 +1765,55 @@ ErfolgBewertung:
   texts:
     en: How do you assess the supported project today from your organisation's point
       of view?
-    fr: Comment évalueriez-vous aujourd’hui le projet encouragé du point de vue de
-      votre organisation ?
-    de-ch: Wie beurteilen Sie heute das geförderte Projekt aus Sicht Ihrer Organisation?
   section_name: Projekterfolg und Abschluss
-  section_index: 7
+  section_index: 8
   matrix_rows:
   - code: '1'
     texts:
       en: The project was ...
-      fr: Le projet est ...
-      de-ch: Das Projekt ist …
   matrix_columns:
   - code: '1'
     texts:
       en: not successful
-      fr: un échec
-      de-ch: kein Erfolg
   - code: '2'
     texts:
       en: a small success
-      fr: un succès restreint
-      de-ch: ein geringer Erfolg
   - code: '3'
     texts:
       en: a rather small success
-      fr: un succès plutôt restreint
-      de-ch: ein eher geringer Erfolg
   - code: '4'
     texts:
       en: a rather big success
-      fr: un succès plutôt important
-      de-ch: ein eher grosser Erfolg
   - code: '5'
     texts:
       en: a big success
-      fr: un succès important
-      de-ch: ein grosser Erfolg
   - code: '6'
     texts:
       en: a very big success
-      fr: un succès très important
-      de-ch: ein sehr grosser Erfolg
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 Additionalitaet:
   element_type: SingleChoice
   texts:
-    en: Would you have carried out your innovation project even without the innovation
-      support from Innosuisse?
-    fr: Auriez-vous réalisé votre projet d'innovation même sans le soutien d'Innosuisse ?
-    de-ch: Hätten Sie Ihr Innovationsprojekt auch ohne die Innovationsförderung von
-      Innosuisse durchgeführt?
-  section_name: Nutzen
-  section_index: 6
+    en: Would you have carried out the project or taken comparable steps towards practical
+      implementation without BRIDGE Proof of Concept funding?
+  section_name: 'Impact of the BRIDGE support '
+  section_index: 4
   choices:
-  - code: '6'
-    texts:
-      en: Yes, to the same extent
-      fr: Oui, dans la même mesure
-      de-ch: Ja, im gleichen Umfang
-  - code: '5'
-    texts:
-      en: Yes, to a somewhat reduced extent
-      fr: Oui, dans une mesure quelque peu réduite
-      de-ch: Ja, in etwas reduziertem Umfang
-  - code: '4'
-    texts:
-      en: Yes, to a greatly reduced extent
-      fr: Oui, dans une mesure très réduite
-      de-ch: Ja, in stark reduziertem Umfang
   - code: '1'
     texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
+      en: No, I would not have carried out the project or taken steps towards practical
+        implementation.
+  - code: '2'
+    texts:
+      en: Yes, but likely to a much lesser extent.
+  - code: '3'
+    texts:
+      en: Yes, but likely to a slightly lesser extent.
+  - code: '4'
+    texts:
+      en: Yes, most likely to more or less the same extent.
   - code: '99'
     texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
+      en: Don’t know
 Additionalitaet_WasTun:
   element_type: MultipleChoice
   texts:
@@ -2172,54 +1865,32 @@ Additionalitaet_WasTun:
 Zufriedenheit:
   element_type: Matrix
   texts:
-    en: From the point of view of your organisation, how satisfied are you with Innosuisse’s
-      project promotion?
-    fr: Du point de vue de votre organisation, dans quelle mesure êtes-vous satisfait
-      de l'encouragement des projets par Innosuisse ?
-    de-ch: Wie zufrieden sind Sie aus Sicht Ihrer Organisation mit der Projektförderung
-      von Innosuisse?
-  section_name: Projekterfolg und Abschluss
-  section_index: 8
+    en: Overall, how satisfied are you with the BRIDGE Proof of Concept funding and
+      support?
+  section_name: Overall assessment
+  section_index: 9
   matrix_rows:
   - code: '1'
-    texts:
-      en: With the structure of the funding instrument and the implementation of the
-        project promotion by Innosuisse, I am …
-      fr: Avec la conception de l’instrument de l'encouragement et son mise en œuvre
-        par Innosuisse, je suis …
-      de-ch: Mit der Ausgestaltung des Förderinstrumentes und der Umsetzung der Projektförderung
-        durch Innosuisse bin ich ...
+    texts: {}
   matrix_columns:
   - code: '1'
     texts:
-      en: not at all satisfied
-      fr: pas du tout satisfait
-      de-ch: überhaupt nicht zufrieden
+      en: Not at all satisfied
   - code: '2'
     texts:
-      en: not satisfied
-      fr: pas satisfait
-      de-ch: nicht zufrieden
+      en: Slightly satisfied
   - code: '3'
     texts:
-      en: rather not satisfied
-      fr: plutôt insatisfait
-      de-ch: eher nicht zufrieden
+      en: Rather slightly satisfied
   - code: '4'
     texts:
-      en: rather satisfied
-      fr: plutôt satisfait
-      de-ch: eher zufrieden
+      en: Rather satisfied
   - code: '5'
     texts:
-      en: satisfied
-      fr: satisfait
-      de-ch: zufrieden
+      en: Satisfied
   - code: '6'
     texts:
-      en: very satisfied
-      fr: très satisfait
-      de-ch: sehr zufrieden
+      en: Very satisfied
 ZufriedenNichtOffen:
   element_type: OpenQuestion
   texts:
@@ -2232,36 +1903,24 @@ FeedbackOffen:
   element_type: OpenQuestion
   texts:
     en: 'Thank you for sharing your feedback, comments and suggestions on the survey:'
-    fr: 'Nous vous remercions de nous faire part de vos réactions, commentaires et
-      suggestions sur l''enquête ci-dessus:'
-    de-ch: 'Vielen Dank, wenn Sie uns nachfolgend Ihre Rückmeldungen, Kommentare und
-      Anregungen zur Umfrage mitteilen:'
-  section_name: Projekterfolg und Abschluss
-  section_index: 7
+  section_name: Feedback
+  section_index: 9
 FeedbackArt:
   element_type: MultipleChoice
   texts:
-    de-ch: Handelt es sich bei Ihrer Rückmeldung um eine/einen ... ?
     en: Is your feedback a/an ... ?
-    fr: Votre feed-back concerne-t-il un/une ... ?
-  section_name: Projekterfolg und Abschluss
-  section_index: 7
+  section_name: Feedback
+  section_index: 9
   choices:
   - code: '1'
     texts:
-      de-ch: Präzisierung Ihrer Antworten
       en: Clarification of your answers
-      fr: Précision de vos réponses
   - code: '2'
     texts:
-      de-ch: Rückmeldung zum Innovationsprojekt
       en: Feedback on your innovation project
-      fr: Retour sur votre projet d'innovation
   - code: '3'
     texts:
-      de-ch: Verbesserungsvorschlag für die Projektförderung Innosuisse
       en: Improvement proposal for the project promotion by Innosuisse
-      fr: Proposition d'amélioration pour l'encouragement des projets par Innosuisse
 KontaktCheck_1_1:
   element_type: OpenQuestion
   texts:
@@ -3110,58 +2769,38 @@ UnternehmenArt:
   element_type: SingleChoice
   texts:
     en: Is your organisation ...
-    fr: Votre organisation, est-elle ...
-    de-ch: Ist Ihre Organisation …
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_name: (OhneTitel) Identifikation und Weichenfragen
   section_index: 1
   choices:
   - code: '1'
     texts:
-      fr: une entreprise du secteur privé à but lucratif
       en: a profit-oriented private enterprise
-      de-ch: ein gewinnorientiertes privatwirtschaftliches Unternehmen
   - code: '2'
     texts:
-      de-ch: ein öffentliches Unternehmen oder eine der öffentlichen Verwaltung zugeordnete
-        Institution (inkl. öffentliche Spitäler)
-      fr: une entreprise publique ou une institution rattachée à l'administration
-        publique (y compris les hôpitaux publiques)
       en: a public enterprise or an institution assigned to the public administration
         (incl. public hospitals)
   - code: '3'
     texts:
-      fr: un autre type d'organisation (par ex. ONG, NPO, association, fondation)
       en: another type of organisation (e.g. NGO, NPO, association, foundation)
-      de-ch: eine andere Art von Organisation (z.B. NGO, NPO, Verein, Stiftung)
 Gruendungsjahr:
   element_type: OpenQuestion
   texts:
-    de-ch: Bitte geben Sie das Gründungsjahr Ihrer Organisation gemäss Handelsregister
-      an.
     en: Please indicate the year of foundation of your organisation according to the
       commercial register.
-    fr: Veuillez indiquer l'année de fondation de votre organisation selon le registre
-      du commerce.
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_name: (OhneTitel) Identifikation und Weichenfragen
   section_index: 1
 IstStartup:
   element_type: SingleChoice
   texts:
     en: Do you consider your organisation to be a start-up?
-    fr: Considérez-vous votre organisation comme une start-up ?
-    de-ch: Bezeichnen Sie Ihre Organisation als Start-up?
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_name: (OhneTitel) Identifikation und Weichenfragen
   section_index: 1
   choices:
   - code: '6'
     texts:
-      fr: Oui
       en: 'Yes'
-      de-ch: Ja
   - code: '1'
     texts:
-      de-ch: Nein
-      fr: Non
       en: 'No'
 Spinoff:
   element_type: SingleChoice
@@ -3206,73 +2845,52 @@ Spinoff:
 Personal:
   element_type: Matrix
   texts:
-    en: How many staff (full-time positions, including apprentices and interns) ...
-    fr: Combien de personnel (postes à plein temps, y compris les apprentis et les
-      stagiaires) votre organisation compte-t-elle ...
-    de-ch: Wie viel Personal (Vollzeitäquivalente, inklusive Lernende und Praktikant/-innen)
-      ...
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+    en: How many staff...
+  section_name: (OhneTitel) Identifikation und Weichenfragen
   section_index: 1
   matrix_rows:
   - code: PEnde
     texts:
-      de-ch: … hatte Ihre Organisation bei Projektabschluss, d.h. per Ende {{member.AbschlussJahr}}
-      fr: '... à la fin du projet, c''est-à-dire fin {{member.AbschlussJahr}} (en
-        ETP)'
       en: '... did your organisation have at the end of the project, i.e. at the end
         of {{member.AbschlussJahr}}'
   - code: heute
     texts:
       en: '... does your organisation have today, i.e. at the end of the last completed
         business year'
-      fr: '... aujourd''hui, c''est-à-dire à la fin du dernier exercice clos'
-      de-ch: … hat Ihre Organisation heute, d.h. per Ende des letzten abgeschlossenen
-        Geschäftsjahres
   matrix_columns:
   - code: '1'
     texts:
       en: '... in Switzerland'
-      fr: '... en Suisse'
-      de-ch: in der Schweiz
   - code: '2'
     texts:
       en: '... abroad'
-      fr: '... à l’étranger'
-      de-ch: im Ausland
+  - code: '1'
+    texts:
+      en: '... in Switzerland'
+  - code: '2'
+    texts:
+      en: '... abroad'
 PersonalFuE:
   element_type: Matrix
   texts:
     en: How many staff (full-time positions, including apprentices and interns) does
       your organisation have in research and development ...?
-    fr: Combien de personnel (postes à plein temps, y compris les apprentis et les
-      stagiaires) votre organisation a-t-elle dans le domaine de la recherche et du
-      développement ... ?
-    de-ch: Wie viel Personal (Vollzeitäquivalente, inklusive Lernende und Praktikant/-innen)
-      hat Ihre Organisation im Bereich Forschung und Entwicklung …?
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
+  section_name: Ökonomische Projektwirkungen I
+  section_index: 5
   matrix_rows:
   - code: PEnde
     texts:
       en: '... at the end of the project, i.e. at the end of the year {{member.AbschlussJahr}}'
-      fr: '... à la fin du projet, c''est-à-dire à la fin de l''année {{member.AbschlussJahr}}'
-      de-ch: … bei Projektabschluss, d.h. per Ende {{member.AbschlussJahr}}
   - code: Heute
     texts:
-      de-ch: … heute, d.h. per Ende des letzten abgeschlossenen Geschäftsjahres
-      fr: '... aujourd''hui, c''est-à-dire à la fin du dernier exercice clos'
       en: '... today, i.e. at the end of the last completed business year'
   matrix_columns:
   - code: '1'
     texts:
       en: '... in Switzerland'
-      fr: '... en Suisse'
-      de-ch: in der Schweiz
   - code: '2'
     texts:
       en: '... abroad'
-      fr: '... à l’étranger'
-      de-ch: im Ausland
 FoerderMentoring:
   element_type: SingleChoice
   texts:
@@ -3330,8 +2948,8 @@ Motivation:
   texts:
     en: How important were the following criteria for your decision to apply for this
       specific international programme?
-  section_name: Direct results
-  section_index: 5
+  section_name: Ergebnisse
+  section_index: 4
   matrix_rows:
   - code: '1'
     texts:
@@ -3676,55 +3294,35 @@ ErgebnisseWeitere:
 InnoUmgesetzt:
   element_type: SingleChoice
   texts:
-    en: Has this innovation already been implemented in the market, in society or
-      in your organisation, or is this implementation planned within the next 24 months?
-    fr: Votre organisation a-t-elle déjà introduit cette innovation concrète sur le
-      marché, dans la société ou dans votre organisation, ou cette introduction est-elle
-      prévue dans les 24 mois à venir?
-    de-ch: Wurde diese Innovation auf dem Markt, in der Gesellschaft oder in Ihrer
-      Organisation bereits umgesetzt oder ist diese Umsetzung innerhalb der nächsten
-      24 Monate geplant?
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
-  section_index: 1
+    en: Have any of the project results already been implemented in the market, in
+      society or in your organisation, or is this implementation planned within the
+      next 24 months?
+  section_name: Markteintritt
+  section_index: 2
   choices:
+  - code: '7'
+    texts:
+      en: Yes, they have already entered the market.
   - code: '6'
     texts:
-      en: Yes, it has already been implemented and the supported project has since
-        been completed.
-      fr: Oui, elle e a déjà été mise en œuvre et le projet encouragé est entretemps
-        clos.
-      de-ch: Ja, sie wurde bereits umgesetzt, und das geförderte Projekt wurde inzwischen
-        abgeschlossen.
+      en: Yes, they have already been implemented (but not entered the market) and
+        the supported project has since been completed.
   - code: '5'
     texts:
-      en: Yes, it has already been implemented and the supported project will continue.
-      fr: Oui,elle a déjà été mise en œuvre, mais le projet encouragé est toujours
-        en cours.
-      de-ch: Ja, sie wurde bereits umgesetzt, und das geförderte Projekt wird noch
-        weitergeführt.
+      en: Yes, they have already been implemented and the supported project will continue.
   - code: '4'
     texts:
-      en: Yes, it will be implemented in the next 24 months.
-      fr: Oui, elle va être mise en œuvre dans les 24 prochains mois.
-      de-ch: Ja, sie wird in den nächsten 24 Monaten umgesetzt werden.
+      en: Yes, they will be implemented in the next 24 months.
   - code: '3'
     texts:
-      en: No, but an implementation is planned for later.
-      fr: Non, mais une mise en œuvre est prévue pour plus tard.
-      de-ch: Nein, aber eine Umsetzung ist für später geplant.
+      en: No, but implementation is planned for later.
   - code: '2'
     texts:
       en: No implementation is planned, but the supported innovation idea will be
         continued in a follow-up project.
-      fr: Non, aucune mise en œuvre n’est prévue, mais l’idée d’innovation encouragée
-        sera poursuivie dans le cadre d’un projet subséquent.
-      de-ch: Nein, es ist keine Umsetzung geplant, aber die geförderte Innovationsidee
-        wird in einem Folgeprojekt weitergeführt.
   - code: '1'
     texts:
       en: No, the supported project will not be continued.
-      fr: Non, le projet encouragé ne sera pas poursuivi.
-      de-ch: Nein, das geförderte Projekt wird nicht fortgeführt.
 WeiterEntwickelt:
   element_type: SingleChoice
   texts:
@@ -4086,37 +3684,29 @@ ForPa_LeistungUnzufrieden:
   section_name: 'Zusammenarbeit mit Forschungspartner '
   section_index: 7
 FoParZusArbeitWeiter:
-  element_type: SingleChoice
+  element_type: Matrix
   texts:
-    en: Was the collaboration with one or more research partners of the supported
-      innovation project continued after project completion?
-    fr: La collaboration avec un ou plusieurs partenaires de recherche du projet d’innovation
-      encouragé s’est-elle poursuivie après la fin du projet ?
-    de-ch: Wurde nach dem Projektabschluss die Zusammenarbeit mit einem oder mehreren
-      Forschungspartnern des geförderten Innovationsprojekts fortgeführt?
+    en: Please indicate the status of collaboration with one or more of the original
+      project partners after project completion
   section_name: Ergebnisse
-  section_index: 3
-  choices:
-  - code: '6'
-    texts:
-      en: Yes, the cooperation still exists today.
-      fr: Oui, la coopération fructifie encore aujourd’hui.
-      de-ch: Ja, die Zusammenarbeit besteht heute noch.
-  - code: '5'
-    texts:
-      en: Yes, but the cooperation has since been terminated.
-      fr: Oui, mais la coopération est entre-temps terminée.
-      de-ch: Ja, aber die Zusammenarbeit wurde inzwischen wieder beendet.
+  section_index: 4
+  matrix_rows:
   - code: '1'
     texts:
-      en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
+      en: Implementation partner
+  - code: '2'
     texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
+      en: Research partner
+  matrix_columns:
+  - code: '6'
+    texts:
+      en: The collaboration continued and still exists today.
+  - code: '5'
+    texts:
+      en: The collaboration had continued but has since been terminated.
+  - code: '1'
+    texts:
+      en: The collaboration ended with project completion.
 IPR_Geregelt:
   element_type: SingleChoice
   texts:
@@ -4189,45 +3779,29 @@ InnoArt:
   element_type: MultipleChoice
   texts:
     en: What type of innovation is the supported project?
-    fr: Quel est le type d’innovation sur lequel le projet encouragé a porté ?
-    de-ch: Um welche Art von Innovation handelt es sich bei dem geförderten Projekt?
-  section_name: Charakterisierung des Projektes
-  section_index: 2
+  section_name: Characteristics of your BRIDGE Proof of Concept project
+  section_index: 1
   choices:
   - code: '1'
     texts:
       en: Product innovation
-      fr: Innovation de produit
-      de-ch: Produktinnovation
   - code: '2'
     texts:
       en: Service innovation
-      fr: Innovation de service
-      de-ch: Dienstleistungsinnovation
   - code: '3'
     texts:
       en: Process innovation
-      fr: Innovation de processus
-      de-ch: Prozessinnovation
   - code: '4'
     texts:
       en: Business model innovation
-      fr: Innovation de modèle d’entreprise
-      de-ch: Innovation beim Geschäftsmodell
   - code: '5'
     texts:
       en: Organisational innovation
-      fr: Innovation organisationnelle
-      de-ch: Innovation bei der Organisation
   - code: '6'
     texts:
       en: Marketing innovation
-      fr: Innovation marketing
-      de-ch: Innovation beim Marketing
   - code: '7'
     texts:
-      de-ch: Soziale Innovation
-      fr: Innovation sociale
       en: Social innovation
 TRL:
   element_type: Matrix
@@ -4308,17 +3882,10 @@ TRL:
 AusmassDisruptivitaet:
   element_type: Matrix
   texts:
-    en: To what extent do you believe that the potential of the innovation supported
-      by the project will be disruptive on the market in the long term, even if the
-      innovation is not (yet) implemented?
-    fr: Dans quelle mesure pensez-vous que le potentiel de l'innovation soutenue par
-      le projet sera disruptif sur le marché à long terme, même si l'innovation n'est
-      pas (encore) mise en œuvre ?
-    de-ch: Wie disruptiv schätzen Sie das Potenzial der im Projekt geförderten Innovation
-      langfristig auf dem Markt ein (auch wenn die Innovation noch nicht umgesetzt
-      ist)?
-  section_name: Charakterisierung des Projektes
-  section_index: 2
+    en: To what extent does the business idea/innovation of your BRIDGE Proof of Concept
+      project have a disruptive market potential?
+  section_name: Characteristics of your BRIDGE Proof of Concept project
+  section_index: 1
   matrix_rows:
   - code: '1'
     texts: {}
@@ -4326,44 +3893,28 @@ AusmassDisruptivitaet:
   - code: '1'
     texts:
       en: not at all disruptive
-      fr: pas du tout disruptif
-      de-ch: überhaupt nicht disruptiv
   - code: '2'
     texts:
       en: hardly disruptive
-      fr: à peine disruptif
-      de-ch: kaum disruptiv
   - code: '3'
     texts:
       en: slightly disruptive
-      fr: peu disruptif
-      de-ch: eher wenig disruptiv
   - code: '4'
     texts:
       en: somewhat disruptive
-      fr: plutôt disruptif
-      de-ch: eher disruptiv
   - code: '5'
     texts:
       en: disruptive
-      fr: disruptif
-      de-ch: disruptiv
   - code: '6'
     texts:
       en: very disruptive
-      fr: fortement disruptif
-      de-ch: ausgesprochen disruptiv
   - code: '99'
     texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
+      en: don't know/no answer
 ZufNichtGrund:
   element_type: OpenQuestion
   texts:
     en: 'Please let us know why you were dissatisfied:'
-    fr: 'Veuillez nous faire savoir les causes d’insatisfaction :'
-    de-ch: 'Bitte teilen Sie uns mit, was Unzufriedenheit verursachte:'
   section_name: Projekterfolg und Abschluss
   section_index: 8
 Verbesserungen:
@@ -5081,47 +4632,28 @@ Neuheitslevel:
   element_type: Matrix
   texts:
     en: Is the implemented/planned innovation currently a ...
-    fr: L’innovation mise en œuvre/planifiée est-elle ...
-    de-ch: Ist die umgesetzte/geplante Innovation derzeit eine ...
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
   matrix_rows:
   - code: '1'
     texts:
       en: Novelty for the organisation
-      fr: une nouveauté pour votre organisation ?
-      de-ch: Neuheit für die Organisation
   - code: '2'
     texts:
-      de-ch: Neuheit für den nationalen Markt
-      fr: une nouveauté sur le marché national ?
-      en: Novelty for the national market
+      en: Novelty for the Swiss market
   - code: '3'
     texts:
-      de-ch: Neuheit auf einem oder mehreren internationalen Märkten
       en: Novelty on one or more international markets
-      fr: une nouveauté sur un ou plusieurs marchés internationaux ?
   - code: '4'
     texts:
-      de-ch: Neuheit auf allen internationalen Märkten (globaler Markt)
-      en: Novelty on all international markets (global market)?
-      fr: und nouveauté sur tous les marchés internationaux (marché mondial) ?
+      en: Novelty on all international markets (global market)
   matrix_columns:
   - code: '6'
     texts:
       en: 'Yes'
-      fr: Oui
-      de-ch: Ja
   - code: '1'
     texts:
       en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 ForschungZusArbeit:
   element_type: MultipleChoice
   texts:
@@ -5946,32 +5478,22 @@ SerialEntrepreneur:
 Umsatz:
   element_type: Matrix
   texts:
-    en: Total revenue (excluding VAT) from location Switzerland
-    fr: Chiffre d’affaires total (hors TVA) à partir du lieu d’implantation en Suisse
-    de-ch: Gesamtumsatz (ohne MWSt) ab Standort Schweiz
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
+    en: Net turnover (excluding VAT) from location Switzerland
+  section_name: Ökonomische Projektwirkungen I
+  section_index: 5
   matrix_rows:
   - code: PEnde
     texts:
-      de-ch: '... bei Projektabschluss, d.h. im Jahr'
-      fr: '... à la fin du projet, c.à.d. au cours de'
       en: '... at the end of the project, i. e. in the year'
   - code: heute
     texts:
-      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
-      fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
       en: '... today, i.e. in the last completed business year'
   matrix_columns:
   - code: Jahr
     texts:
-      de-ch: Jahr
-      fr: Année
       en: Year
   - code: CHF
     texts:
-      de-ch: Mio. CHF
-      fr: CHF mio.
       en: CHF million
 BreakEvenErzielt:
   element_type: SingleChoice
@@ -7444,7 +6966,7 @@ FundingBefore:
   texts:
     en: Before submitting your BRIDGE Proof of Concept project, were the scientific
       foundations or the underlying project idea (for Proof of Concept) previously
-      supported by funding from the SNSF or Innosuisse?
+      supported by funding from the Swiss National Science Foundation (SNSF) or Innosuisse?
   section_name: Project development
   section_index: 2
   choices:
@@ -7467,7 +6989,7 @@ FundedBeforeBy:
   choices:
   - code: '15'
     texts:
-      en: SNSF fundingSNSF project funding
+      en: SNSF project funding
   - code: '1'
     texts:
       en: SNSF career funding
@@ -7484,29 +7006,29 @@ FundedBeforeBy:
       en: 'Other SNSF funding instrument:'
   - code: '3'
     texts:
-      en: Innosuisse fundingInnovation project with implementation partner
+      en: Innovation project with implementation partner
   - code: '4'
     texts:
       en: Innovation project without implementation partner
   - code: '7'
     texts:
       en: International innovation funding (e.g. EUREKA/Eurostars via Innosuisse,
-        bilateral projects))
+        Bilateral projects)
+  - code: '12'
+    texts:
+      en: Innovation Booster
   - code: '11'
     texts:
       en: Flagship projects
-  - code: '12'
-    texts:
-      en: Innovation booster
   - code: '13'
     texts:
-      en: SCEER (Swiss Competence Centers of Energy Research)
+      en: SCCER (Swiss Competence Centers of Energy Research)
   - code: '14'
     texts:
-      en: Other Innosuisse funding (please specify)
+      en: Other Innosuisse funding
   - code: '10'
     texts:
-      en: Other Other (please specify)
+      en: Other (please specify)
 BridgeCoachingYesNo:
   element_type: SingleChoice
   texts:
@@ -7538,7 +7060,7 @@ BridgeCoachingNuetzlichkeit:
       en: Slightly useful
   - code: '3'
     texts:
-      en: Rather sligthly useful
+      en: Rather slightly useful
   - code: '4'
     texts:
       en: Rather useful
@@ -7633,28 +7155,26 @@ AktuellerStatus:
   choices:
   - code: '1'
     texts:
-      en: Start-ups and spin-offs A start-up or spin-off has been established (legal
-        entity)
+      en: A start-up or spin-off has been established (legal entity)
   - code: '2'
     texts:
       en: A start-up or spin-off is in preparation or planned
   - code: '3'
     texts:
-      en: Non-profit initiatives A non-profit organisation / NGO has been established
+      en: A non-profit organisation / NGO has been established
   - code: '4'
     texts:
       en: A non-profit organisation / NGO is in preparation or planned
   - code: '5'
     texts:
-      en: Licensing / transfer Licensing or transfer of results to a company or organisation
-        has been completed
+      en: Licensing or transfer of results to a company or organisation has been completed
   - code: '6'
     texts:
       en: Licensing or transfer of results is planned or under negotiation
   - code: '7'
     texts:
-      en: Collaboration with partners Further development with an implementation partner
-        is ongoing (cooperation, employment)
+      en: Further development with an implementation partner is ongoing (cooperation,
+        employment)
   - code: '8'
     texts:
       en: Further development with an implementation partner is planned (cooperation,
@@ -7665,7 +7185,7 @@ AktuellerStatus:
         employment)
   - code: '11'
     texts:
-      en: 'Other Project has been completed but not further implemented: overall feasibility
+      en: 'Project has been completed but not further implemented: overall feasibility
         not confirmed (technical, business, organisational)'
   - code: '10'
     texts:
@@ -7705,15 +7225,11 @@ FinanzierungSicherheitFuerNaechstesJahr:
 ObstaclesFaced:
   element_type: MultipleChoice
   texts:
-    en: In which areas did you face the most significant barriers obstacles during
-      the project or in the follow-up phase after the end of the project?
+    en: In which areas did you face the most significant obstacles during the project
+      or in the follow-up phase after the end of the project?
   section_name: Implementation pathways
   section_index: 3
   choices:
-  - code: '1'
-    texts:
-      en: Research-to-Application and Implementation Pathways Unclear pathway to application
-        or implementation
   - code: '2'
     texts:
       en: Unclear pathway to application or implementation
@@ -7722,83 +7238,11 @@ ObstaclesFaced:
       en: Intended start-up pathway not realistic or not suitable
   - code: '4'
     texts:
-      en: No suitable implementation (e.g. industry, public sector)
+      en: No suitable implementation partner (e.g. industry, public sector)
   - code: '5'
     texts:
-      en: Limited career opportunities outside academia
-  - code: '6'
-    texts:
-      en: Scientific, Conceptual or Technical Challenges Scientific results not sufficiently
-        promising
-  - code: '7'
-    texts:
-      en: Technical or conceptional feasibility too low
-  - code: '8'
-    texts:
-      en: Scientific, methodological issues or data-related challenge
-  - code: '9'
-    texts:
-      en: Personal or Career Related Factors Missing career opportunity outside of
-        BRIDGE Proof of Concept
-  - code: '10'
-    texts:
-      en: Lack of time or personal capacity
-  - code: '11'
-    texts:
-      en: Shift in personal or other priorities
-  - code: '12'
-    texts:
-      en: Institutional or Resources-related Constraints Lack of staff or relevant
-        expertise
-  - code: '13'
-    texts:
-      en: No follow-up funding available
-  - code: '14'
-    texts:
-      en: High administrative or organisational burden
-  - code: '15'
-    texts:
-      en: Market or Stakeholder-related Challenges Low or unclear market potential
-        or societal demand
-  - code: '16'
-    texts:
-      en: Collaboration challenges with partners or stakeholders
-  - code: '17'
-    texts:
-      en: Intellectual Property and Legal Aspects Unclear ownership or access to intellectual
-        property
-  - code: '18'
-    texts:
-      en: Negotiation with host institution about intellectual property rights
-  - code: '19'
-    texts:
-      en: Limited support or clarity regarding IP strategy at the Proof of Concept
-        stage
-  - code: '20'
-    texts:
-      en: Other Other factors (please specify)
-MainObstacle:
-  element_type: SingleChoice
-  texts:
-    en: Which of the selected obstacles is the main or most decisive one?
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: Unclear pathway to application or implementation
-  - code: '2'
-    texts:
-      en: Unclear pathway to application or implementation
-  - code: '3'
-    texts:
-      en: Intended start-up pathway not realistic or not suitable
-  - code: '4'
-    texts:
-      en: No suitable implementation (e.g. industry, public sector)
-  - code: '5'
-    texts:
-      en: Limited career opportunities outside academia
+      en: Challenges related to commercialisation of the results (e.g. business model,
+        market entry, investment)
   - code: '6'
     texts:
       en: Scientific results not sufficiently promising
@@ -7810,7 +7254,7 @@ MainObstacle:
       en: Scientific, methodological issues or data-related challenge
   - code: '9'
     texts:
-      en: Missing career opportunity outside of BRIDGE Proof of Concept
+      en: Missing career opportunity outside of academia
   - code: '10'
     texts:
       en: Lack of time or personal capacity
@@ -7834,14 +7278,90 @@ MainObstacle:
       en: Collaboration challenges with partners or stakeholders
   - code: '17'
     texts:
-      en: Unclear ownership or access to intellectual property
+      en: Unclear or unsatisfactory agreement on ownership or access to intellectual
+        property
   - code: '18'
     texts:
-      en: Negotiation with host institution about intellectual property rights
+      en: Difficult or time-consuming negotiations with the host institution regarding
+        intellectual property rights)
   - code: '19'
     texts:
       en: Limited support or clarity regarding IP strategy at the Proof of Concept
         stage
+  - code: '22'
+    texts:
+      en: Unsatisfactory contacts or support with TTO (technology transfer office)
+  - code: '20'
+    texts:
+      en: Other factors (please specify)
+MainObstacle:
+  element_type: MultipleChoice
+  texts:
+    en: Which of the selected obstacles were most decisive ones?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: Unclear pathway to application or implementation
+  - code: '2'
+    texts:
+      en: Intended start-up pathway not realistic or not suitable
+  - code: '3'
+    texts:
+      en: No suitable implementation partner (e.g. industry, public sector)
+  - code: '4'
+    texts:
+      en: Challenges related to commercialisation of the results (e.g. business model,
+        market entry, investment
+  - code: '5'
+    texts:
+      en: Scientific results not sufficiently promising
+  - code: '6'
+    texts:
+      en: Technical or conceptional feasibility too low
+  - code: '7'
+    texts:
+      en: Scientific, methodological issues or data-related challenge
+  - code: '8'
+    texts:
+      en: Missing career opportunity outside of academia
+  - code: '9'
+    texts:
+      en: Lack of time or personal capacity
+  - code: '10'
+    texts:
+      en: Shift in personal or other priorities
+  - code: '11'
+    texts:
+      en: Lack of staff or relevant expertise
+  - code: '12'
+    texts:
+      en: No follow-up funding available
+  - code: '13'
+    texts:
+      en: High administrative or organisational burden
+  - code: '14'
+    texts:
+      en: Low or unclear market potential or societal demand
+  - code: '15'
+    texts:
+      en: Collaboration challenges with partners or stakeholders
+  - code: '16'
+    texts:
+      en: Unclear or unsatisfactory agreement on ownership or access to intellectual
+        property
+  - code: '17'
+    texts:
+      en: Difficult or time-consuming negotiations with the host institution regarding
+        intellectual property rights)
+  - code: '18'
+    texts:
+      en: Limited support or clarity regarding IP strategy at the Proof of Concept
+        stage
+  - code: '19'
+    texts:
+      en: Unsatisfactory contacts or support with TTO (technology transfer office)
   - code: '20'
     texts:
       en: '{{ObstaclesFaced_20_text}}'
@@ -7988,13 +7508,14 @@ BeitragZuStartupGruendung:
   matrix_rows:
   - code: '1'
     texts:
-      en: Decision for founding a start-up or to pursue an implementation pathway
+      en: Decision for founding a start-up or a non-profit organisation or to pursue
+        an implementation pathway
   - code: '2'
     texts:
       en: Timing or acceleration of the founding or implementation process
   - code: '3'
     texts:
-      en: Quality of the start-up or implementation setup
+      en: Viability of the start-up or implementation setup
   matrix_columns:
   - code: '1'
     texts:
@@ -8017,39 +7538,41 @@ BeitragZuStartupGruendung:
 StartUpEntwicklungsstand:
   element_type: Matrix
   texts:
-    en: What is the current development status of your organisation or implementation
-      setup with regard to the following elements?
+    en: What is the current development status of your organisation, initiative or
+      implementation setup with regard to the following elements?
   section_name: 'Start-up Development '
   section_index: 6
   matrix_rows:
   - code: '1'
     texts:
-      en: Team & OrganisationFounding team assembled
+      en: Team & OrganisationCore team assembled
   - code: '2'
     texts:
-      en: Basic company structures set up (e.g. roles, responsibilities, processes)
+      en: Basic organisational structures set up (e.g. roles, responsibilities, processes)
   - code: '3'
     texts:
       en: Suitable location or infrastructure identified
   - code: '4'
     texts:
-      en: Legal entity registered or preparations underway
+      en: Legal entity registered or preparations underway (if applicable)
   - code: '5'
     texts:
-      en: Market & BusinessInitial contacts established with potential customers or
-        pilot partners
+      en: Market & BusinessInitial contacts established with potential customers,
+        users or pilot partners
   - code: '6'
     texts:
-      en: Minimum viable product (MVP developed or tested
+      en: Minimum viable product (MVP) or equivalent prototype, solution or pilot
+        developed or tested.
   - code: '7'
     texts:
-      en: First customers acquired and / or renvenues achieved
+      en: First customers, users or implementing partners engaged and/or revenues
+        generated
   - code: '8'
     texts:
-      en: Funding & StrategyInitial funding plan or financing options mapped out
+      en: Funding & StrategyInitial funding or financing options mapped out
   - code: '9'
     texts:
-      en: Preliminary go-to-market approach outlined
+      en: Preliminary market or implementation approach outlined
   matrix_columns:
   - code: '1'
     texts:
@@ -8076,7 +7599,7 @@ StartupGruendungWann:
   choices:
   - code: '1'
     texts:
-      en: Before the start of the BRIDGE PoC project
+      en: Before the start of the BRIDGE Proof of Concept project
   - code: '2'
     texts:
       en: Shortly after the start of the project
@@ -8092,17 +7615,21 @@ StartupGruendungWann:
 PersonalCH:
   element_type: OpenQuestion
   texts:
-    en: How many employees (FTE) did your company have at the end of [previous year]
-      / currently (full-time equivalents, FTE)?
+    en: How many employees (FTE) did your organisation have at the end of [previous
+      year] / currently (full-time equivalents, FTE)?
   section_name: 'Start-up Development '
   section_index: 6
 InvestorsContacted:
   element_type: MultipleChoice
   texts:
-    en: Which type(s) of investors provided the financing or were actively approached?
+    en: Which type(s) of investors or funding sources provided financing or were actively
+      approached?
   section_name: 'Start-up Development '
   section_index: 6
   choices:
+  - code: '6'
+    texts:
+      en: Own resources
   - code: '1'
     texts:
       en: Family, Friends and Fools (FFF)
@@ -8115,6 +7642,12 @@ InvestorsContacted:
   - code: '4'
     texts:
       en: Corporate or strategic investors
+  - code: '7'
+    texts:
+      en: Public funding programmes (e.g. grants or innovation funding)
+  - code: '8'
+    texts:
+      en: Foundations or philanthropic funding
   - code: '5'
     texts:
       en: 'Other (please specify):'
@@ -8221,17 +7754,16 @@ EinbezugKunden:
       en: No, customers or users were not actively involved
   - code: '2'
     texts:
-      en: Exporation and early feedback Interviews, surveys or exploratory feedback
+      en: Interviews, surveys or exploratory feedback
   - code: '3'
     texts:
-      en: Validation Testing with prototypes, mock-ups or demonstrators
+      en: Testing with prototypes, mock-ups or demonstrators
   - code: '4'
     texts:
       en: Pilot projects or test phases with users, customers or beneficiaries
   - code: '5'
     texts:
-      en: Market-oriented or contextual validation (where applicable) Letters of Intent
-        (LoI) or Memoranda of Understanding (MoU)
+      en: Letters of Intent (LoI) or Memoranda of Understanding (MoU)
   - code: '6'
     texts:
       en: Testing willingness to pay or willingness to adopt
@@ -8240,7 +7772,7 @@ EinbezugKunden:
       en: Initial sales, pre-orders or comparable commitments
   - code: '8'
     texts:
-      en: Other Other activities, (please specify)
+      en: Other activities, (please specify)
 BeitragSoftImpacts:
   element_type: Matrix
   texts:
@@ -8251,7 +7783,8 @@ BeitragSoftImpacts:
   matrix_rows:
   - code: '1'
     texts:
-      en: Recognising opportunities and thinking entrepreneurially
+      en: Recognising opportunities and thinking entrepreneurially or in an implementation-oriented
+        way
   - code: '2'
     texts:
       en: Experimenting with ideas and validating assumptions
@@ -8260,7 +7793,7 @@ BeitragSoftImpacts:
       en: Dealing with uncertainty, setbacks and learning from failure
   - code: '4'
     texts:
-      en: Bringing innovation ideas into practice(e.g. engaging users, beneficiaries,
+      en: Bringing innovation ideas into practice(e.g. engaging users, organisations,
         partners or markets)
   - code: '5'
     texts:
@@ -8294,7 +7827,8 @@ BeitragKompetenzen:
   matrix_rows:
   - code: '1'
     texts:
-      en: Customer, user or beneficiary discovery (problem–solution fit)
+      en: Customer, user or beneficiary discovery (understanding needs, problem–solution
+        fit)
   - code: '2'
     texts:
       en: Developing and testing ideas in practice
@@ -8313,7 +7847,8 @@ BeitragKompetenzen:
     texts:
       en: 'Go-to-market or implementation basics
 
-        (e.g. positioning, channels, pricing, cost recovery or adoption tests)'
+        (e.g. positioning, channels, pricing, cost recovery or adoption or scaling
+        tests)'
   - code: '7'
     texts:
       en: 'Understanding and preparing financing options for further development
@@ -8357,7 +7892,7 @@ Zielerreichung:
       en: Slightly successful
   - code: '3'
     texts:
-      en: Rather sligtly successful
+      en: Rather slightly successful
   - code: '4'
     texts:
       en: Rather successful
@@ -8400,7 +7935,7 @@ GutwarOffen:
   element_type: OpenQuestion
   texts:
     en: Looking back at your participation in the BRIDGE Proof of Concept programme:What
-      worked particulary well?
+      worked particularly well?
   section_name: Overall assessment
   section_index: 9
 VerbesserungOffen:
@@ -8413,58 +7948,38 @@ OrgRole:
   element_type: SingleChoice
   texts:
     en: What was the role of your organisation in the project?
-    fr: Votre organisation, est-elle ...
-    de-ch: Ist Ihre Organisation …
-  section_name: (OhneTitel) Identification and filter questions
+  section_name: (OhneTitel) Identifikation und Weichenfragen
   section_index: 1
   choices:
   - code: '1'
     texts:
-      fr: une entreprise du secteur privé à but lucratif
       en: Implementation partner
-      de-ch: ein gewinnorientiertes privatwirtschaftliches Unternehmen
   - code: '2'
     texts:
-      de-ch: ein öffentliches Unternehmen oder eine der öffentlichen Verwaltung zugeordnete
-        Institution (inkl. öffentliche Spitäler)
-      fr: une entreprise publique ou une institution rattachée à l'administration
-        publique (y compris les hôpitaux publiques)
       en: Research partner
 InnoAlsZiel:
   element_type: SingleChoice
   texts:
     en: Does or did your organisation pursue the goal of implementing a concrete innovation
       in the organisation or on the market with the supported project?
-    fr: Votre organisation poursuit-elle ou a-t-elle poursuivi avec le projet encouragé
-      par Innosuisse l'objectif de mettre en œuvre une innovation concrète au sein
-      de l'organisation ou sur le marché ?
-    de-ch: Verfolgt(e) Ihre Organisation das Ziel, mit dem geförderten Projekt eine
-      konkrete Innovation in Ihrer Organisation oder auf dem Markt umzusetzen?
-  section_name: '(OhneTitel) Identifikation und Weichenfragen '
+  section_name: (OhneTitel) Identifikation und Weichenfragen
   section_index: 1
   choices:
   - code: '6'
     texts:
-      en: Yes, our participation in the project aims/aimed to implement the innovation
+      en: Yes, our participation in the project aimed to implement the innovation
         in our organisation or on the market.
-      fr: Oui, notre participation au projet a/a eu pour but de mettre en œuvre l'innovation
-        dans notre organisation ou sur le marché.
-      de-ch: Ja, unsere Beteiligung am Projekt verfolgt(e) das Ziel, die Innovation
-        in unserer Organisation oder auf dem Markt umzusetzen.
   - code: '1'
     texts:
       en: No, we were involved in the project as another implementation partner.
-      fr: Non, nous participions au projet en tant que partenaire de mise en œuvre
-        supplémentaire.
-      de-ch: Nein, wir waren als weiterer Umsetzungspartner am Projekt beteiligt.
 GenderAddressed:
   element_type: SingleChoice
   texts:
     en: Have you addressed the differing needs and challenges of women and men (with
       the goal of eliminating inequalities and promoting gender equality) in the design,
       methodologies or results of your project?
-  section_name: Personnel
-  section_index: 2
+  section_name: (OhneTitel) Identifikation und Weichenfragen
+  section_index: 1
   choices:
   - code: '6'
     texts:
@@ -8479,15 +7994,15 @@ GenderDetail:
   element_type: OpenQuestion
   texts:
     en: Which aspects featured a gender dimension and how were they incorporated?
-  section_name: Personnel
-  section_index: 2
+  section_name: (OhneTitel) Identifikation und Weichenfragen
+  section_index: 1
 ExistingMarkets:
   element_type: MultipleChoice
   texts:
     en: Which existing geographical markets (if any) have your products, processes
       and services entered as a result of your participation in the project?
-  section_name: Market entry
-  section_index: 3
+  section_name: Markteintritt
+  section_index: 2
   choices:
   - code: '1'
     texts:
@@ -8521,8 +8036,8 @@ NewMarkets:
   texts:
     en: Which new geographical markets (if any) have your products, processes and
       services entered as a result of your participation in the project?
-  section_name: Market entry
-  section_index: 3
+  section_name: Markteintritt
+  section_index: 2
   choices:
   - code: '1'
     texts:
@@ -8556,8 +8071,8 @@ NoEntryReason:
   texts:
     en: What were the reasons the products, processes or services you developed in
       your project did not enter a market?
-  section_name: Market entry
-  section_index: 3
+  section_name: Markteintritt
+  section_index: 2
   choices:
   - code: '1'
     texts:
@@ -8585,8 +8100,8 @@ EntrySupport:
   texts:
     en: What additional support would have been useful during or after the lifetime
       of the project for bringing your products, processes and services to the market?
-  section_name: Market entry
-  section_index: 3
+  section_name: Markteintritt
+  section_index: 2
   choices:
   - code: '1'
     texts:
@@ -8615,8 +8130,8 @@ InnoDev:
   texts:
     en: How many distinct products, processes and services were developed by your
       organisation as a result of your project?
-  section_name: Characterisation of the project
-  section_index: 4
+  section_name: Charakterisierung des Projektes
+  section_index: 3
   matrix_rows:
   - code: '1'
     texts:
@@ -8635,8 +8150,8 @@ InnoCategory:
   element_type: MultipleChoice
   texts:
     en: 'Select all categories that apply to your project results:'
-  section_name: Characterisation of the project
-  section_index: 4
+  section_name: Charakterisierung des Projektes
+  section_index: 3
   choices:
   - code: '1'
     texts:
@@ -8659,8 +8174,8 @@ PatentsDetail:
     en: 'If you have filed any patent applications in relation to your project results,
       please specify for each of them the title of the patent/s, the application number/s,
       and the name of the patent office/s:'
-  section_name: Direct results
-  section_index: 5
+  section_name: Ergebnisse
+  section_index: 4
   matrix_rows:
   - code: '1'
     texts:
@@ -8691,8 +8206,8 @@ ResultsAcquired:
   element_type: SingleChoice
   texts:
     en: Have your project results been acquired or licensed by another legal entity?
-  section_name: Direct results
-  section_index: 5
+  section_name: Ergebnisse
+  section_index: 4
   choices:
   - code: '6'
     texts:
@@ -8705,8 +8220,8 @@ ScientificOutputs:
   texts:
     en: Which and how many scientific outputs has your organisation generated in connection
       with your project results?
-  section_name: Direct results
-  section_index: 5
+  section_name: Ergebnisse
+  section_index: 4
   matrix_rows:
   - code: '1'
     texts:
@@ -8739,8 +8254,8 @@ Benefit:
   element_type: MultipleChoice
   texts:
     en: How did your organisation benefit from participating in the project?
-  section_name: Direct results
-  section_index: 5
+  section_name: Ergebnisse
+  section_index: 4
   choices:
   - code: '1'
     texts:
@@ -8777,8 +8292,8 @@ BenefitDetail:
   texts:
     en: 'For the selected benefits in the last question, please specify which of the
       following more detailed benefits were important:'
-  section_name: Direct results
-  section_index: 5
+  section_name: Ergebnisse
+  section_index: 4
   choices:
   - code: '1'
     texts:
@@ -8823,8 +8338,8 @@ DirectFunding:
   element_type: Matrix
   texts:
     en: Which aspects of your project were strengthened through the direct funding?
-  section_name: Direct results
-  section_index: 5
+  section_name: Ergebnisse
+  section_index: 4
   matrix_rows:
   - code: '1'
     texts:
@@ -8875,8 +8390,8 @@ CollabInt:
   element_type: SingleChoice
   texts:
     en: Are you still collaborating internationally?
-  section_name: Direct results
-  section_index: 5
+  section_name: Ergebnisse
+  section_index: 4
   choices:
   - code: '6'
     texts:
@@ -8893,120 +8408,75 @@ CollabInt:
 ForParAngestellt:
   element_type: SingleChoice
   texts:
-    en: Has your organisation employed people from the former research partner(s)
-      as a result of the supported project?
-    fr: Votre organisation a-t-elle employé des personnes de l’ancien ou des anciens
-      partenaires de recherche à la suite du projet encouragé ?
-    de-ch: Hat Ihre Organisation als Folge des geförderten Projektes Personen des/der
-      ehemaligen Forschungspartner(s) angestellt?
+    en: Has your organisation employed people from the research partner(s) as a result
+      of the supported project?
   section_name: Ergebnisse
-  section_index: 3
+  section_index: 4
   choices:
   - code: '6'
     texts:
       en: 'Yes'
-      fr: Oui
-      de-ch: Ja
   - code: '1'
     texts:
       en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 AusgabenFuE:
   element_type: Matrix
   texts:
-    en: Total expenditure on research and development in your organisation
-    fr: Total dépenses liées à la recherche et au développement au sein de votre organisation
-    de-ch: Gesamte Ausgaben für Forschung und Entwicklung in Ihrer Organisation
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
+    en: Total expenditure on research and development in your organisation
+  section_name: Ökonomische Projektwirkungen I
+  section_index: 5
   matrix_rows:
   - code: PEnde
     texts:
-      de-ch: '... bei Projektabschluss, d.h. im Jahr'
       en: '... at the end of the project, i. e. in the year'
-      fr: '... à la fin du projet, c.à.d. au cours de'
   - code: Heute
     texts:
-      de-ch: '... heute, d.h. im letzten abgeschlossenen Geschäftsjahr'
       en: '... today, i.e. in the last completed business year'
-      fr: '... aujourd''hui, c.à.d. au cours du dernier exercice clos'
   matrix_columns:
   - code: Jahr
     texts:
-      de-ch: Jahr
       en: Year
-      fr: Année
   - code: CHF
     texts:
-      de-ch: Mio. CHF
       en: CHF million
-      fr: CHF mio.
 WirtSituation:
   element_type: Matrix
   texts:
-    de-ch: Trägt das geförderte Projekt dazu bei, ….
-    en: Does the funded project help to ....
-    fr: Le projet soutenu contribue-t-il à ...
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
+    en: Does the funded project help to ...
+  section_name: Ökonomische Projektwirkungen I
+  section_index: 5
   matrix_rows:
   - code: '1'
     texts:
-      de-ch: '... die wirtschaftliche Situation Ihrer Organisation zu stärken?'
       en: '... strengthen the economic situation of your organisation?'
-      fr: '... renforcer la situation économique de votre organisation ?'
   - code: '2'
     texts:
-      de-ch: '... die Wettbewerbsfähigkeit auf den Märkten zu stärken?'
       en: '... strengthen competitiveness in the markets?'
-      fr: '... renforcer la compétitivité sur les marchés ?'
   matrix_columns:
   - code: '1'
     texts:
-      de-ch: nein
       en: 'no'
-      fr: non
   - code: '2'
     texts:
-      de-ch: nur wenig
       en: only a little
-      fr: très peu
   - code: '3'
     texts:
-      de-ch: eher wenig
       en: rather little
-      fr: plutôt peu
   - code: '4'
     texts:
-      de-ch: eher stark
       en: rather strong
-      fr: plutôt fort
   - code: '5'
     texts:
-      de-ch: stark
       en: strong
-      fr: fort
   - code: '6'
     texts:
-      de-ch: sehr stark
       en: very strong
-      fr: très fort
 ImpOrg:
   element_type: Matrix
   texts:
     en: How did participating in your project impact your organisation?
-    fr: Le projet encouragé par Innosuisse a-t-il entraîné une augmentation ou une
-      diminution des paramètres économiques suivants après la fin du projet ?
-    de-ch: Hat das von Innosuisse geförderte Projekt nach dem Projektabschluss bei
-      folgenden wirtschaftlichen Grössen zu einer Zu- oder Abnahme geführt?
-  section_name: Economic project results
-  section_index: 7
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
   matrix_rows:
   - code: '1'
     texts:
@@ -9024,162 +8494,104 @@ ImpOrg:
   - code: '1'
     texts:
       en: no effect
-      fr: a/ont diminué
-      de-ch: abgenommen
   - code: '2'
     texts:
-      en: ''
-      fr: n’a/n’ont pas changé
-      de-ch: sich nicht verändert
+      en: slightly positive effect
   - code: '3'
     texts:
-      en: ''
-      fr: a/ont augmenté
-      de-ch: zugenommen
+      en: somewhat positive effect
   - code: '4'
     texts:
-      en: ''
+      en: moderately positive effect
   - code: '5'
     texts:
-      en: ''
+      en: positive effect
   - code: '6'
     texts:
       en: very positive effect
 WirtImpQual:
   element_type: Matrix
   texts:
-    en: Did the project supported by Innosuisse lead to an increase or decrease in
-      the following economic variables after project completion?
-    fr: Le projet encouragé par Innosuisse a-t-il entraîné une augmentation ou une
-      diminution des paramètres économiques suivants après la fin du projet ?
-    de-ch: Hat das von Innosuisse geförderte Projekt nach dem Projektabschluss bei
-      folgenden wirtschaftlichen Grössen zu einer Zu- oder Abnahme geführt?
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
+    en: Did the supported project lead to an increase or decrease in the following
+      economic variables after project completion?
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
   matrix_rows:
   - code: '1'
     texts:
-      en: The revenue resulting directly from the innovation implemented in the supported
-        project has ...
-      fr: Le chiffre d’affaires directement généré par l’innovation mise en œuvre
-        dans le cadre du projet ...
-      de-ch: Der Umsatz, der sich direkt aus der umgesetzten Innovation des geförderten
-        Projekts ergibt, hat …
+      en: net turnover resulting directly from the innovation implemented ...
   - code: '2'
     texts:
-      en: As a result of the project, total revenue (excluding VAT) from location
-        Switzerland has ...
-      fr: Suite au projet, la chiffre d’affaires en millions de CHF (hors TVA) à partir
-        du lieu d’implantation en Suisse ...
-      de-ch: Der Gesamtumsatz (ohne MWSt) ab Standort Schweiz hat als Folge des Projektes
-        …
+      en: net turnover (excluding VAT) from location Switzerland ...
   - code: Export
     texts:
-      de-ch: Das Exportvolumen hat als Folge des Projekts ...
-      fr: Suite au projet, le volume des exportations ...
-      en: As a result of the project, the export volume ...
+      en: export volume ...
   - code: '3'
     texts:
-      en: As a result of the project, expenditure on research and development has
-        ...
-      fr: Suite au projet, les dépenses de recherche et développement ...
-      de-ch: Die Ausgaben für Forschung und Entwicklung haben als Folge des Projektes
-        …
+      en: expenditure on research and development ...
   - code: '4'
     texts:
-      en: As a result of the project, employment in research and development has ...
-      fr: Suite au projet, l’emploi dans la recherche et le développement ...
-      de-ch: Die Beschäftigung in Forschung und Entwicklung hat als Folge des Projektes
-        …
+      en: employment in research and development ...
   - code: '5'
     texts:
-      en: As a result of the project, the overall employment of your organisation
-        has ...
-      fr: Suite au projet, l’effectif total de notre organisation ...
-      de-ch: Die Gesamtbeschäftigung Ihrer Organisation hat als Folge des Projektes
-        …
+      en: overall employment of your organisation...
   - code: '6'
     texts:
-      de-ch: Die Produktivität (d.h. Wertschöpfung je Vollzeitstelle) in Ihrer Organisation
-        hat als Folge des Projektes ….
-      en: As a result of the project, productivity  (i.e. value added per full-time
-        positions) in our organisation has ...
-      fr: Suite au projet, la productivité (c.à.d. valeur ajoutée par poste à temps
-        plein) dans notre organisation  ....
+      en: productivity  (i.e. value added per full-time positions) in our organisation
+        ...
   matrix_columns:
   - code: '1'
     texts:
-      en: decreased
-      fr: a/ont diminué
-      de-ch: abgenommen
-  - code: '2'
+      en: has decreased
+  - code: '0'
     texts:
-      en: not changed
-      fr: n’a/n’ont pas changé
-      de-ch: sich nicht verändert
-  - code: '3'
+      en: has not changed
+  - code: '6'
     texts:
-      en: increased
-      fr: a/ont augmenté
-      de-ch: zugenommen
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
+      en: has increased
 WirtImpQuan:
   element_type: Matrix
   texts:
-    en: To what extent have these variables changed as a result of the supported project
-      up to the present time?Please refer your estimation to the current year compared
-      to the year of the project launch.
-    fr: Suite au projet encouragé, dans quelle mesure ces paramètres ont évolué à
-      ce jour ?Veuillez référer votre estimation à l'année en cours par rapport à
-      l'année de lancement du projet.
-    de-ch: In welchem Ausmass haben sich diese Grössen als Folge des geförderten Projektes
-      bis zum aktuellen Zeitpunkt verändert?Bitte beziehen Sie sich in Ihrer Schätzung
-      auf das aktuelle Jahr im Vergleich zum Jahr des Projektstartes.
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
+    en: To what extent have these variables changed as a result of the supported project
+      up to the present time?
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
   matrix_rows:
   - code: '1'
     texts:
-      en: 'Total revenue (excluding VAT) from location Switzerland, in #.# million
-        CHF'
-      fr: 'Chiffre d’affaires en millions de CHF (hors TVA) à partir du lieu d’implantation
-        en Suisse  en CHF #.# mio.'
-      de-ch: 'Gesamtumsatz (ohne MWSt) ab Standort Schweiz, in #.# Mio. CHF'
+      en: 'Net turnover (excluding VAT), in #.## million CHF'
   - code: '2'
     texts:
-      en: 'Research and development expenditure, in #.# million CHF'
-      fr: Dépenses de recherche et développement, en CHF #.# mio.
-      de-ch: 'Ausgaben für Forschung und Entwicklung, in #.# Mio. CHF'
+      en: 'Total cost of the project, in #.## million CHF'
   - code: '3'
     texts:
-      en: Employees in research and development, in full-time equivalents (#.#)
-      fr: Employés en recherche et développement, à temps plein ETP (#.#)
-      de-ch: Beschäftigte in Forschung und Entwicklung, in Vollzeitstellen (#.#)
+      en: 'Additional public funding received by your organisation (excluding funding
+        for this specific project), in #.## million CHF'
   - code: '4'
     texts:
+      en: 'Additional private funding/own resources (excluding funding for this specific
+        project), in #.## million CHF'
+  - code: '5'
+    texts:
+      en: 'Research and development expenditure, in #.# million CHF'
+  - code: '6'
+    texts:
+      en: Employees in research and development, in full-time equivalents (#.#)
+  - code: '7'
+    texts:
       en: Total employees, in full-time equivalents (#.#)
-      fr: Total des employés, à temps plein ETP (#.#)
-      de-ch: Beschäftigte insgesamt, in Vollzeitstellen (#.#)
   matrix_columns:
   - code: '1'
     texts:
-      en: Direct change as a result of the projectPlease indicate any decreases as
-        negative figures.
-      fr: Changement direct résultant du projetVeuillez indiquer toute diminution
-        en employant des chiffres négatifs.
-      de-ch: Direkte Veränderung als Folge des ProjektsBitte geben Sie allfällige
-        Abnahmen als negative Zahl an.
+      en: Direct change, specifically as a result of the project. Please indicate
+        any decreases as negative figures.
 ComplementaryFunding:
   element_type: SingleChoice
   texts:
     en: Has your organisation received any complementary research, development or
       innovation (R&D&I) funding to exploit or scale up your project results?
-  section_name: Economic project results
-  section_index: 7
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
   choices:
   - code: '6'
     texts:
@@ -9192,152 +8604,83 @@ Kosteneinsparungen:
   texts:
     en: Did the supported project or the implemented innovation lead to direct cost
       savings in your organisation overall?
-    fr: Le projet encouragé ou l’innovation mise en œuvre ont-ils permis de réaliser
-      dans l’ensemble des économies de coûts directes dans votre organisation ?
-    de-ch: Hat das geförderte Projekt resp. die umgesetzte Innovation insgesamt zu
-      direkten Kosteneinsparungen in Ihrer Organisation geführt?
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
   choices:
   - code: '6'
     texts:
       en: 'Yes'
-      fr: Oui
-      de-ch: Ja
   - code: '1'
     texts:
       en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 MarktanteilGewinn:
   element_type: SingleChoice
   texts:
     en: Was it possible to gain additional market share thanks to the implemented
       innovation?
-    fr: A-t-il été possible de gagner des parts de marché supplémentaires grâce à
-      l’innovation mise en œuvre ?
-    de-ch: Konnten dank der umgesetzten Innovation zusätzliche Marktanteile gewonnen
-      werden?
-  section_name: Ökonomische Projektwirkungen
-  section_index: 4
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
   choices:
   - code: '6'
     texts:
       en: 'Yes'
-      fr: Oui
-      de-ch: Ja
   - code: '1'
     texts:
       en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 WirkFoerderung:
   element_type: Matrix
   texts:
     en: Has the project funding by Innosuisse led to the following direct effects
       in your organisation?
-    fr: L'encouragement du projet par Innosuisse a-t-il eu les effets directs suivants
-      dans votre organisation ?
-    de-ch: Hat die Projektförderung von Innosuisse in Ihrer Organisation zu folgenden,
-      direkten Wirkungen geführt?
   section_name: Weitere, nicht ökonomische Wirkungen
-  section_index: 5
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
       en: Accelerated research and development in the project
-      fr: Accélération de la recherche et du développement dans le projet
-      de-ch: Beschleunigung der Forschung und Entwicklung im Projekt
   - code: '2'
     texts:
       en: Accelerated market implementation of the project
-      fr: Accélération de l’introduction du projet sur le marché
-      de-ch: Beschleunigung der Marktumsetzung des Projektes
   - code: '3'
     texts:
       en: Increased knowledge and technology transfer (KTT) with the research partner
-      fr: Renforcement du transfert de savoir et de technologie (TST) avec le partenaire
-        de recherche
-      de-ch: Stärkung des Wissens- und Technologietransfers (WTT) mit dem Forschungspartner
   matrix_columns:
   - code: '6'
     texts:
       en: 'Yes'
-      fr: Oui
-      de-ch: Ja
   - code: '1'
     texts:
       en: 'No'
-      fr: Non
-      de-ch: Nein
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 SozialerNutzen:
   element_type: Matrix
   texts:
     en: How do you assess the societal and/or social benefit of the Innosuisse-supported
       project, outside of your organisation?
-    fr: Comment évaluez-vous l’utilité sociétale et/ou sociale du projet encouragé
-      par Innosuisse, en dehors de votre organisation ?
-    de-ch: Wie bewerten sie den gesellschaftlichen und/oder sozialen Nutzen des von
-      Innosuisse geförderten Projekts ausserhalb Ihrer Organisation?
-  section_name: Nutzen
-  section_index: 6
+  section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 7
   matrix_rows:
   - code: '1'
     texts:
       en: The societal and/or social benefit is ...
-      fr: L’utilité sociétale et/ou sociale est ...
-      de-ch: Der gesellschaftliche und/oder soziale Nutzen ist ...
   matrix_columns:
   - code: '1'
     texts:
       en: not existing
-      fr: inexistante
-      de-ch: nicht vorhanden
   - code: '2'
     texts:
       en: small
-      fr: faible
-      de-ch: gering
   - code: '3'
     texts:
       en: relatively small
-      fr: plutôt faible
-      de-ch: eher gering
   - code: '4'
     texts:
       en: relatively big
-      fr: plutôt élevée
-      de-ch: eher hoch
   - code: '5'
     texts:
       en: big
-      fr: élevée
-      de-ch: hoch
   - code: '6'
     texts:
       en: very big
-      fr: très élevée
-      de-ch: sehr hoch
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 SozialerOffen_angepasst:
   element_type: OpenQuestion
   texts:
@@ -9345,128 +8688,80 @@ SozialerOffen_angepasst:
       on society and your sector. If your organisation has received media attention
       because of, or connected with your project results, please include a hyperlink
       to any articles.
-    fr: 'Veuillez décrire en quelques phrases l''utilité sociétale ou sociale obtenue :'
-    de-ch: 'Bitte umschreiben Sie den erzielten gesellschaftlichen oder sozialen Nutzen
-      in einigen wenigen Sätzen:'
-  section_name: Further impacts and benefits
-  section_index: 8
+  section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 7
 Zielerreichung_RP:
   element_type: Matrix
   texts:
     en: From the point of view of your research unit: Were the objectives of the project
       achieved in the strategically important areas of research, application and implementation?
-    fr: Les objectifs du projet ont-ils été atteints ?
-    de-ch: Wurden die Projektziele erreicht?
-  section_name: Project goals and success
-  section_index: 9
+  section_name: Projekterfolg und Abschluss
+  section_index: 8
   matrix_rows:
   - code: '1'
     texts:
       en: The objectives in the area of research were overall ...
-      fr: '... d''un point de vue technique'
-      de-ch: '... aus technischer Sicht'
   - code: '2'
     texts:
-      de-ch: '... aus wirtschaftlicher und inhaltlicher Sicht'
-      fr: '... du point de vue économique et du contenu'
       en: The objectives in the area of application and implementation were overall
         ...
   matrix_columns:
   - code: '1'
     texts:
       en: not achieved at all
-      fr: pas du tout atteints
-      de-ch: überhaupt nicht erreicht
   - code: '2'
     texts:
       en: not achieved
-      fr: pas atteints
-      de-ch: nicht erreicht
   - code: '3'
     texts:
       en: rather not achieved
-      fr: plutôt pas atteints
-      de-ch: eher nicht erreicht
   - code: '4'
     texts:
       en: rather achieved
-      fr: plutôt atteints
-      de-ch: eher erreicht
   - code: '5'
     texts:
       en: fully achieved
-      fr: complètement atteints
-      de-ch: vollständig erreicht
   - code: '6'
     texts:
       en: exceeded
-      fr: surpassés
-      de-ch: übertroffen
 Stellenwert:
   element_type: Matrix
   texts:
     en: What is the significance of the supported project in your organisation?
-    fr: Quelle est l'importance du projet encouragé dans votre organisation ?
-    de-ch: Welchen Stellenwert besitzt das geförderte Projekt in Ihrer Organisation?
   section_name: Projekterfolg und Abschluss
-  section_index: 7
+  section_index: 8
   matrix_rows:
   - code: '1'
     texts:
       en: '... from a strategic point of view'
-      fr: '... d''un point de vue stratégique'
-      de-ch: '... aus strategischer Sicht'
   - code: '2'
     texts:
-      de-ch: '... aus wirtschaftlicher oder betrieblicher Sicht'
-      fr: '... d''un point de vue économique ou opérationnel'
       en: '... from an economic or operational point of view'
   - code: '3'
     texts:
-      de-ch: '... aus Sicht von Innovation, Forschung und Entwicklung'
-      fr: '... d''un point de vue de l''innovation, de la recherche et développement'
       en: '... from the point of view of innovation, research and development'
   - code: '4'
     texts:
-      de-ch: Insgesamt
-      fr: Globalement
       en: Overall
   matrix_columns:
   - code: '1'
     texts:
       en: very low
-      fr: très faible
-      de-ch: sehr gering
   - code: '2'
     texts:
       en: low
-      fr: faible
-      de-ch: gering
   - code: '3'
     texts:
       en: rather low
-      fr: plutôt faible
-      de-ch: eher gering
   - code: '4'
     texts:
       en: rather high
-      fr: plutôt élevée
-      de-ch: eher hoch
   - code: '5'
     texts:
       en: high
-      fr: élevée
-      de-ch: hoch
   - code: '6'
     texts:
       en: very high
-      fr: très élevée
-      de-ch: sehr hoch
-  - code: '99'
-    texts:
-      en: I cannot answer this question
-      fr: Je ne peux pas répondre à cette question
-      de-ch: Das kann ich nicht beantworten
 PersonalImProjekt:
   element_type: Matrix
   texts:
@@ -10580,3 +9875,135 @@ NeuheitslevelOffen:
       Markt ist: Können Sie nachfolgend kurz beschreiben, was die Neuheit ausmacht:'
   section_name: Ökonomische Projektwirkungen
   section_index: 4
+BridgeCoachingWarumNicht:
+  element_type: OpenQuestion
+  texts:
+    en: What were the main reasons for not using the BRIDGE Coaching support?
+  section_name: Project development
+  section_index: 2
+WeitereErgebnisse:
+  element_type: Matrix
+  texts:
+    en: To what extent have the following results related to implementation, utilisation
+      and further development been achieved by the end of your BRIDGE Proof of Concept
+      project?
+  section_name: Implementation pathways
+  section_index: 3
+  matrix_rows:
+  - code: '4'
+    texts:
+      en: Implementation and exploitationMarket, user or societal demand verified
+  - code: '5'
+    texts:
+      en: Preparation for implementation (e.g. start-up, licensing, organisation)
+  - code: '6'
+    texts:
+      en: Establishment or strengthening of cooperation with potential implementation
+        partners
+  - code: '7'
+    texts:
+      en: Employment in a business environment
+  - code: '8'
+    texts:
+      en: Licensing or sale of results to a company or organisation
+  - code: '11'
+    texts:
+      en: Societal and other impactsContribution to a societal, environmental or technological
+        challenge
+  - code: '12'
+    texts:
+      en: Other results or impacts achieved (please specify)
+  - code: '9'
+    texts:
+      en: Intellectual property and fundingSecuring intellectual property / filing
+        a patent or similar protection (licences)
+  - code: '10'
+    texts:
+      en: Follow-up funding acquired or prepared
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not relevant for my BRIDGE Proof of Concept project
+  - code: '2'
+    texts:
+      en: not achieved
+  - code: '3'
+    texts:
+      en: slightly achieved
+  - code: '4'
+    texts:
+      en: rather slightly achieved
+  - code: '5'
+    texts:
+      en: rather achieved
+  - code: '6'
+    texts:
+      en: fully achieved
+  - code: '7'
+    texts:
+      en: exceeded expectations
+ArbeitenAnzahl:
+  element_type: Matrix
+  texts:
+    en: Please indicate the number of results that were achieved during the BRIDGE
+      Proof of Concept project or as a direct consequence of the project.
+  section_name: Implementation pathways
+  section_index: 3
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: 'Scientific outputs
+
+        Scientific publications (peer-reviewed)'
+  - code: '2'
+    texts:
+      en: Other scientific publications
+  - code: '4'
+    texts:
+      en: 'Knowledge and data outputs
+
+        Data and knowledge outputs (e.g. datasets, databases, software, tools or research
+        methods)'
+  - code: '5'
+    texts:
+      en: 'Collaboration outputs (optional)
+
+        Joint publications or outputs with implementation partners'
+  - code: '6'
+    texts:
+      en: Cooperation with non-profit organisations or societal actors
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Number
+Implementiert:
+  element_type: SingleChoice
+  texts:
+    en: Has the innovation or solution emerging from your BRIDGE Proof of Concept
+      project already been implemented in practice, or is such an implementation planned?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: Yes, it has already been implemented in practice (e.g. through a start-up,
+        within an existing organisation, or through implementation partners).
+  - code: '2'
+    texts:
+      en: Yes, implementation is planned within the next 12 months.
+  - code: '3'
+    texts:
+      en: Yes, implementation is planned within the next 24 months.
+  - code: '4'
+    texts:
+      en: No, but implementation is planned at a later stage.
+  - code: '5'
+    texts:
+      en: No implementation is currently planned, but the innovation will be further
+        developed in a follow-up project.
+  - code: '6'
+    texts:
+      en: No, the project will not be further pursued.
+  - code: '99'
+    texts:
+      en: I cannot answer this question.
