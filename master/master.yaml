@@ -4762,61 +4762,101 @@ ForschungEigene:
 BRLStart:
   element_type: Dropdown
   texts:
-    en: Which Business Readiness Level (BRL) did your project have at the beginning
-      of the BRIDGE Proof of Concept funding?
-  section_name: Implementation pathways
-  section_index: 3
+    de-ch: In welchem Reifegrad des Business Readiness Level (BRL) befand sich das
+      Start-up zu Beginn des Innosuisse Core Coachings?
+    en: In which maturity level of the Business Readiness Level (BRL) was the Start-up
+      at the start of Innosuisse Core Coaching?
+    fr: Dans quel niveau de maturité du Business Readiness Level (BRL) se trouvait
+      le Start-up au début du Core Coaching d'Innosuisse ?
+  section_name: (7) Entwicklungsphase / Märkte
+  section_index: 6
   choices:
   - code: '1'
     texts:
-      en: Early concept phaseBRL 1 – Basic hypothesesInitial hypotheses regarding
-        a possible business, implementation or societal impact concept.
+      de-ch: 'Grundlegende Annahmen
+
+        BRL 1 - Hypothese über ein mögliches Geschäftskonzept'
+      en: Basic hypothesesBRL 1 - Hypothesizing on possible business concept
+      fr: 'Hypothèses de base
+
+        BRL 1 - Hypothèse sur un éventuel concept d''entreprise'
   - code: '2'
     texts:
-      en: BRL 2 – First business model or concept describedFirst description of a
-        business, implementation or societal impact concept. Initial understanding
-        of target groups, needs or problem context.
+      de-ch: BRL 2 - Erstes Geschäftskonzept beschrieben. Gesamtmarkt und einige Wettbewerber
+        identifiziert.
+      en: BRL 2 - First business concept described. Identified overall market & some
+        competitors.
+      fr: BRL 2 - Premier concept d'entreprise décrit. Identification du marché total
+        et de quelques concurrents.
   - code: '3'
     texts:
-      en: Business model and concept development phase BRL 3 – Development of business
-        model or conceptDraft business model or draft implementation / impact logic.
-        Market potential and/or societal relevance and stakeholder landscape described.
+      de-ch: 'Entwicklung eines Geschäftsmodells
+
+        BRL 3 - Entwurf eines Geschäftsmodells. Beschriebenes Marktpotenzial und Wettbewerbsübersicht.'
+      en: Development of business modelBRL 3 - Draft of business model. Described
+        market potential & competitive overview.
+      fr: 'Élaboration du modèle d''entreprise
+
+        BRL 3 - Projet de modèle d''entreprise. Description du potentiel du marché
+        et aperçu de la concurrence.'
   - code: '4'
     texts:
-      en: BRL 4 – First validated business model or conceptFirst structured business
-        model or implementation and impact concept. Initial projections of economic
-        viability, market potential and/or societal relevance. Initial assumptions
-        on feasibility, relevance and potential effects.
+      de-ch: BRL 4 - Erste Version des Geschäftsmodells, erste Projektionen der wirtschaftlichen
+        Tragfähigkeit und des Marktpotenzials
+      en: BRL 4 - First version of business model, first projections of economic viability
+        & market potential
+      fr: BRL 4 - Première version du modèle d'entreprise, premières projections de
+        la viabilité économique et du potentiel du marché
   - code: '5'
     texts:
-      en: Validation phase BRL 5 – Business model or concept testingTesting of the
-        business model or of implementation pathways, user acceptance or societal
-        relevance. Key assumptions validated with external stakeholders or; where
-        applicable, first revenue model and initial competitive positioning.
+      de-ch: BRL 5 - Prüfung des Geschäftsmodells, erstes Ertragsmodell, Überprüfung
+        der Wettbewerbsposition im Markt
+      en: BRL 5 - Business model testing, first revenue model, competitive position
+        verified im market
+      fr: BRL 5 - Test du modèle d'entreprise, premier modèle de revenu, vérification
+        de la position concurrentielle sur le marché
   - code: '6'
     texts:
-      en: BRL 6 – Advanced business model or concept validationBusiness model or implementation
-        / impact concept largely validated. Pricing or cost assumptions verified with
-        customers, users or implementing actors, where applicable Product-market fit
-        and finetuning
+      de-ch: BRL 6 - Vollständiges Geschäftsmodell einschliesslich der Preisgestaltung,
+        geprüft am Kunden
+      en: BRL 6 - Full business model including pricing verified on customers
+      fr: BRL 6 - Modèle d'entreprise complet, y compris la tarification vérifiée
+        sur les clients
   - code: '7'
     texts:
-      en: BRL 7 – Demonstrated applicability and relevanceProduct-market fit or solution/context
-        fit demonstrated. Clear value proposition for customers or beneficiaries and
-        implementing actors.
+      de-ch: 'Produkt-Markt-Fit / Feinabstimmung
+
+        BRL 7 - Produkt/Markt-Fit nachgewiesen. Attraktive Umsatz-/Kostenprognosen.'
+      en: Product market fit / finetuningBRL 7 - Product/market fit demonstrated.
+        Attractive revenue/cost projections.
+      fr: 'Adéquation produit-marché / réglage fin
+
+        BRL 7 - Adéquation produit/marché prouvée. Prévisions de ventes/coûts attrayantes.'
   - code: '8'
     texts:
-      en: BRL 8 – Business model or concept finetunedBusiness model or broader implementation
-        readiness / impact model refined. Evidence that the approach is robust and
-        transferable to broader contexts.
+      de-ch: BRL 8 - Das Geschäftsmodell ist feinabgestimmt. Umsätze und Kennzahlen
+        zeigen, dass das Geschäftsmodell Bestand hat und skalierbar ist
+      en: BRL 8 - Business model is finetuned. Sales & metrics show business model
+        holds and can scale
+      fr: BRL 8 - Le modèle d'entreprise est peaufiné. Les ventes et les mesures montrent
+        que le modèle d'entreprise tient la route et peut être mis à l'échelle.
   - code: '9'
     texts:
-      en: Scaling and broader implementation BRL 9 – Scaling and implementation readinessBusiness
-        scaling with recurring revenues or readiness for larger-scale implementation,
-        institutional embedding or policy uptake.
-  - code: '99'
+      de-ch: 'Skalierung des Geschäfts
+
+        BRL 9 - Geschäftsmodell fertiggestellt. Skalierung des Geschäfts mit wiederkehrenden
+        Einnahmen'
+      en: Business scalingBRL 9 - Business model finalised. Business scaling with
+        recurring revenues
+      fr: 'Mise à l''échelle de l''entreprise
+
+        BRL 9 - Modèle d''entreprise finalisé. Développement de l''activité avec des
+        revenus récurrents'
+  - code: '-99'
     texts:
+      de-ch: BRL nicht anwendbar / weiss nicht
       en: BRL not applicable / don't know
+      fr: BRL non applicable / ne sait pas
 EPhase2024:
   element_type: SingleChoice
   texts:
@@ -4866,48 +4906,103 @@ EPhase2024:
 BRLEnd:
   element_type: Dropdown
   texts:
-    en: Which Business Readiness Level (BRL) best describes the status of your project
-      at the end of the BRIDGE Proof of Concept funding?
-  section_name: Implementation pathways
-  section_index: 3
+    de-ch: '... und welchen Business Readiness Level (BRL) hat Ihr Start-up heute,
+      d.h. nach Abschluss des Innosuisse Core Coaching?'
+    en: '... and what business readiness level (BRL) does your start-up have today,
+      i.e. after completing Innosuisse Core Coaching?'
+    fr: '... et quel est le Business Readiness Level (BRL) de votre start-up aujourd''hui,
+      c''est-à-dire à l''issue du Core Coaching Innosuisse ?'
+  section_name: (7) Entwicklungsphase / Märkte
+  section_index: 6
   choices:
   - code: '1'
     texts:
-      en: Basic hypothesesBRL 1 - Hypothesizing on possible business concept
+      de-ch: 'Grundlegende Annahmen
+
+        BRL 1 - Hypothese über ein mögliches Geschäftskonzept'
+      fr: 'Hypothèses de base
+
+        BRL 1 - Hypothèse sur un éventuel concept d''entreprise'
+      en: 'Basic hypotheses
+
+        BRL 1 - Hypothesizing on possible business concept'
   - code: '2'
     texts:
+      de-ch: BRL 2 - Erstes Geschäftskonzept beschrieben. Gesamtmarkt und einige Wettbewerber
+        identifiziert.
       en: BRL 2 - First business concept described. Identified overall market & some
         competitors.
+      fr: BRL 2 - Premier concept d'entreprise décrit. Identification du marché total
+        et de quelques concurrents.
   - code: '3'
     texts:
+      de-ch: 'Entwicklung eines Geschäftsmodells
+
+        BRL 3 - Entwurf eines Geschäftsmodells. Beschriebenes Marktpotenzial und Wettbewerbsübersicht.'
       en: Development of business modelBRL 3 - Draft of business model. Described
         market potential & competitive overview.
+      fr: 'Élaboration du modèle d''entreprise
+
+        BRL 3 - Projet de modèle d''entreprise. Description du potentiel du marché
+        et aperçu de la concurrence.'
   - code: '4'
     texts:
+      de-ch: BRL 4 - Erste Version des Geschäftsmodells, erste Projektionen der wirtschaftlichen
+        Tragfähigkeit und des Marktpotenzials
       en: BRL 4 - First version of business model, first projections of economic viability
         & market potential
+      fr: BRL 4 - Première version du modèle d'entreprise, premières projections de
+        la viabilité économique et du potentiel du marché
   - code: '5'
     texts:
+      de-ch: BRL 5 - Prüfung des Geschäftsmodells, erstes Ertragsmodell, Überprüfung
+        der Wettbewerbsposition im Markt
       en: BRL 5 - Business model testing, first revenue model, competitive position
         verified im market
+      fr: BRL 5 - Test du modèle d'entreprise, premier modèle de revenu, vérification
+        de la position concurrentielle sur le marché
   - code: '6'
     texts:
+      de-ch: BRL 6 - Vollständiges Geschäftsmodell einschliesslich der Preisgestaltung,
+        geprüft am Kunden
       en: BRL 6 - Full business model including pricing verified on customers
+      fr: BRL 6 - Modèle d'entreprise complet, y compris la tarification vérifiée
+        sur les clients
   - code: '7'
     texts:
+      de-ch: 'Produkt-Markt-Fit / Feinabstimmung
+
+        BRL 7 - Produkt/Markt-Fit nachgewiesen. Attraktive Umsatz-/Kostenprognosen.'
       en: Product market fit / finetuningBRL 7 - Product/market fit demonstrated.
         Attractive revenue/cost projections.
+      fr: 'Adéquation produit-marché / réglage fin
+
+        BRL 7 - Adéquation produit/marché prouvée. Prévisions de ventes/coûts attrayantes.'
   - code: '8'
     texts:
+      de-ch: BRL 8 - Das Geschäftsmodell ist feinabgestimmt. Umsätze und Kennzahlen
+        zeigen, dass das Geschäftsmodell Bestand hat und skalierbar ist
       en: BRL 8 - Business model is finetuned. Sales & metrics show business model
         holds and can scale
+      fr: BRL 8 - Le modèle d'entreprise est peaufiné. Les ventes et les mesures montrent
+        que le modèle d'entreprise tient la route et peut être mis à l'échelle.
   - code: '9'
     texts:
+      de-ch: 'Skalierung des Geschäfts
+
+        BRL 9 - Geschäftsmodell fertiggestellt. Skalierung des Geschäfts mit wiederkehrenden
+        Einnahmen'
       en: Business scalingBRL 9 - Business model finalised. Business scaling with
         recurring revenues
-  - code: '10'
+      fr: 'Mise à l''échelle de l''entreprise
+
+        BRL 9 - Modèle d''entreprise finalisé. Développement de l''activité avec des
+        revenus récurrents'
+  - code: '-99'
     texts:
+      de-ch: BRL nicht anwendbar / weiss nicht
       en: BRL not applicable / don't know
+      fr: BRL non applicable / ne sait pas
 Entwicklungsphase:
   element_type: SingleChoice
   texts:
@@ -6838,1930 +6933,6 @@ WarumBedeutungOffen:
     fr: 'Merci de nous laisser un bref commentaire sur votre évaluation :'
   section_name: (18) Feedback
   section_index: 17
-BerufzielZuBeginn:
-  element_type: MultipleChoice
-  texts:
-    en: At the start of the BRIDGE Proof of Concept project, what was your intended
-      career or professional direction?
-  section_name: Personalien
-  choices:
-  - code: '1'
-    texts:
-      en: Continue and further develop my current role in academia
-  - code: '2'
-    texts:
-      en: Found or co-found a start-up
-  - code: '3'
-    texts:
-      en: Transition from academia to industry
-  - code: '4'
-    texts:
-      en: Transition from academia to the public sector
-  - code: '5'
-    texts:
-      en: Transition from academia to a non-profit / NGO context
-  - code: '6'
-    texts:
-      en: Explore new career options without a fixed plan
-  - code: '9'
-    texts:
-      en: 'Other (please specify):'
-BerufsstatusAktuell:
-  element_type: Matrix
-  texts:
-    en: Which of the following professional situations currently applies to you?
-  section_name: Personalien
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Current professional situation
-  - code: '3'
-    texts:
-      en: Foreseeable future situation (in the next 12 to 24 months
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Founder / co-founder of a start-up or company
-  - code: '2'
-    texts:
-      en: Employed in a start-up or young company
-  - code: '3'
-    texts:
-      en: Employed in an established company (industry / SME / corporate group)
-  - code: '4'
-    texts:
-      en: Employed in the public sector
-  - code: '5'
-    texts:
-      en: Employed in a non-profit / NGO organisation
-  - code: '6'
-    texts:
-      en: Employed in academia or a research institution
-  - code: '7'
-    texts:
-      en: Self-employed / freelancer
-  - code: '8'
-    texts:
-      en: Currently not employed / in transition
-  - code: '9'
-    texts:
-      en: Other (please specify)
-BerufstandAktuellAnders:
-  element_type: Matrix
-  texts:
-    en: ''
-  section_name: Personalien
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: 'Please specify the other situation:'
-  matrix_columns:
-  - code: '9'
-    texts:
-      en: Current professional situation
-  - code: '10'
-    texts:
-      en: Foreseeable future situation (in the next 12 to 24 months
-AktSitRelatedToBridge:
-  element_type: Matrix
-  texts:
-    en: To what extent is your current or future professional situation related to
-      the BRIDGE Proof of Concept project?
-  section_name: Personalien
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: ''
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: not related
-  - code: '2'
-    texts:
-      en: weakly related
-  - code: '3'
-    texts:
-      en: rather weakly related
-  - code: '4'
-    texts:
-      en: rather strongly related
-  - code: '5'
-    texts:
-      en: strongly related
-  - code: '6'
-    texts:
-      en: very strongly related
-  - code: '99'
-    texts:
-      en: don't know / no answer
-Nachhaltigkeitoffen:
-  element_type: OpenQuestion
-  texts:
-    en: 'Please describe the contribution to environmental sustainability in a few
-      sentences:'
-  section_name: Characteristics of your BRIDGE Proof of Concept project
-  section_index: 1
-FundingBefore:
-  element_type: SingleChoice
-  texts:
-    en: Before submitting your BRIDGE Proof of Concept project, were the scientific
-      foundations or the underlying project idea (for Proof of Concept) previously
-      supported by funding from the Swiss National Science Foundation (SNSF) or Innosuisse?
-  section_name: Project development
-  section_index: 2
-  choices:
-  - code: '1'
-    texts:
-      en: 'Yes'
-  - code: '2'
-    texts:
-      en: 'No'
-  - code: '3'
-    texts:
-      en: Don't know / no answer
-FundedBeforeBy:
-  element_type: MultipleChoice
-  texts:
-    en: Which funding instruments supported the scientific foundations or project
-      idea prior to the BRIDGE Proof of Concept ?
-  section_name: Project development
-  section_index: 2
-  choices:
-  - code: '15'
-    texts:
-      en: SNSF project funding
-  - code: '1'
-    texts:
-      en: SNSF career funding
-  - code: '16'
-    texts:
-      en: SNSF National Centres of Competence in Research (NCCR)please provide NCCR
-        number and name
-  - code: '17'
-    texts:
-      en: SNSF National Research Programmes (NRP)please provide the programme number
-        and title of the project
-  - code: '18'
-    texts:
-      en: 'Other SNSF funding instrument:'
-  - code: '3'
-    texts:
-      en: Innovation project with implementation partner
-  - code: '4'
-    texts:
-      en: Innovation project without implementation partner
-  - code: '7'
-    texts:
-      en: International innovation funding (e.g. EUREKA/Eurostars via Innosuisse,
-        Bilateral projects)
-  - code: '12'
-    texts:
-      en: Innovation Booster
-  - code: '11'
-    texts:
-      en: Flagship projects
-  - code: '13'
-    texts:
-      en: SCCER (Swiss Competence Centers of Energy Research)
-  - code: '14'
-    texts:
-      en: Other Innosuisse funding
-  - code: '10'
-    texts:
-      en: Other (please specify)
-BridgeCoachingYesNo:
-  element_type: SingleChoice
-  texts:
-    en: Did you use the BRIDGE Coaching support (10 hours) during the project?
-  section_name: Project development
-  section_index: 2
-  choices:
-  - code: '6'
-    texts:
-      en: 'yes'
-  - code: '1'
-    texts:
-      en: 'no'
-BridgeCoachingNuetzlichkeit:
-  element_type: Matrix
-  texts:
-    en: How useful was the BRIDGE Coaching (10 hours) for you and your project?
-  section_name: Project development
-  section_index: 2
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all useful
-  - code: '2'
-    texts:
-      en: Slightly useful
-  - code: '3'
-    texts:
-      en: Rather slightly useful
-  - code: '4'
-    texts:
-      en: Rather useful
-  - code: '5'
-    texts:
-      en: Useful
-  - code: '6'
-    texts:
-      en: Very useful
-  - code: '99'
-    texts:
-      en: Not applicable / no opinion
-BridgeCoachingNutzen_Offen:
-  element_type: OpenQuestion
-  texts:
-    en: In which areas was the BRIDGE Coaching most useful for you?
-  section_name: Project development
-  section_index: 2
-InnosuisseSupportYesNo:
-  element_type: Matrix
-  texts:
-    en: Did you use or are you planning to use any additional coaching or support
-      related to the implementation of the project?
-  section_name: Project development
-  section_index: 2
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Innosuisse Entrepreneurship Training
-  - code: '2'
-    texts:
-      en: Innosuisse Start-up Coaching
-  - code: '3'
-    texts:
-      en: Other, please specify
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: used
-  - code: '2'
-    texts:
-      en: planned
-  - code: '3'
-    texts:
-      en: neither
-NutzlichkeitTraining:
-  element_type: Matrix
-  texts:
-    en: How useful was the Innosuisse Entrepreneurship Training for you in relation
-      to your BRIDGE Proof of Concept project?
-  section_name: Project development
-  section_index: 2
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all useful
-  - code: '2'
-    texts:
-      en: Slightly useful
-  - code: '3'
-    texts:
-      en: Rather sligthly useful
-  - code: '4'
-    texts:
-      en: Rather useful
-  - code: '5'
-    texts:
-      en: Useful
-  - code: '6'
-    texts:
-      en: Very useful
-  - code: '99'
-    texts:
-      en: Not applicable / no opinion
-StartUpTrainingNutzen_offen:
-  element_type: OpenQuestion
-  texts:
-    en: In which areas was the Innosuisse Entrepreneurship Training most useful for
-      you?
-  section_name: Project development
-  section_index: 2
-AktuellerStatus:
-  element_type: SingleChoice
-  texts:
-    en: Which status best describes your BRIDGE Proof of Concept-funded project at
-      the end of the funding?
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: A start-up or spin-off has been established (legal entity)
-  - code: '2'
-    texts:
-      en: A start-up or spin-off is in preparation or planned
-  - code: '3'
-    texts:
-      en: A non-profit organisation / NGO has been established
-  - code: '4'
-    texts:
-      en: A non-profit organisation / NGO is in preparation or planned
-  - code: '5'
-    texts:
-      en: Licensing or transfer of results to a company or organisation has been completed
-  - code: '6'
-    texts:
-      en: Licensing or transfer of results is planned or under negotiation
-  - code: '7'
-    texts:
-      en: Further development with an implementation partner is ongoing (cooperation,
-        employment)
-  - code: '8'
-    texts:
-      en: Further development with an implementation partner is planned (cooperation,
-        employment)
-  - code: '9'
-    texts:
-      en: Project continues mainly in research and development (cooperation, further
-        employment)
-  - code: '11'
-    texts:
-      en: 'Project has been completed but not further implemented: overall feasibility
-        not confirmed (technical, business, organisational)'
-  - code: '10'
-    texts:
-      en: Other (please specify)
-FinanzierungSicherheitFuerNaechstesJahr:
-  element_type: Matrix
-  texts:
-    en: To what extent is the financing of your project secured?
-  section_name: Implementation pathways
-  section_index: 3
-  matrix_rows:
-  - code: short
-    texts:
-      en: for the next 12 months
-  - code: long
-    texts:
-      en: and in a longer perspective (2 to 5 years)
-  matrix_columns:
-  - code: '2'
-    texts:
-      en: No financing / financing is not secured at all
-  - code: '3'
-    texts:
-      en: Financing is hardly secured
-  - code: '4'
-    texts:
-      en: Financing is partially secured
-  - code: '5'
-    texts:
-      en: Financing is largely secured
-  - code: '6'
-    texts:
-      en: Financing is fully secured
-  - code: '99'
-    texts:
-      en: Don’t know / not applicable
-ObstaclesFaced:
-  element_type: MultipleChoice
-  texts:
-    en: In which areas did you face the most significant obstacles during the project
-      or in the follow-up phase after the end of the project?
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '2'
-    texts:
-      en: Unclear pathway to application or implementation
-  - code: '3'
-    texts:
-      en: Intended start-up pathway not realistic or not suitable
-  - code: '4'
-    texts:
-      en: No suitable implementation partner (e.g. industry, public sector)
-  - code: '5'
-    texts:
-      en: Challenges related to commercialisation of the results (e.g. business model,
-        market entry, investment)
-  - code: '6'
-    texts:
-      en: Scientific results not sufficiently promising
-  - code: '7'
-    texts:
-      en: Technical or conceptional feasibility too low
-  - code: '8'
-    texts:
-      en: Scientific, methodological issues or data-related challenge
-  - code: '9'
-    texts:
-      en: Missing career opportunity outside of academia
-  - code: '10'
-    texts:
-      en: Lack of time or personal capacity
-  - code: '11'
-    texts:
-      en: Shift in personal or other priorities
-  - code: '12'
-    texts:
-      en: Lack of staff or relevant expertise
-  - code: '13'
-    texts:
-      en: No follow-up funding available
-  - code: '14'
-    texts:
-      en: High administrative or organisational burden
-  - code: '15'
-    texts:
-      en: Low or unclear market potential or societal demand
-  - code: '16'
-    texts:
-      en: Collaboration challenges with partners or stakeholders
-  - code: '17'
-    texts:
-      en: Unclear or unsatisfactory agreement on ownership or access to intellectual
-        property
-  - code: '18'
-    texts:
-      en: Difficult or time-consuming negotiations with the host institution regarding
-        intellectual property rights)
-  - code: '19'
-    texts:
-      en: Limited support or clarity regarding IP strategy at the Proof of Concept
-        stage
-  - code: '22'
-    texts:
-      en: Unsatisfactory contacts or support with TTO (technology transfer office)
-  - code: '20'
-    texts:
-      en: Other factors (please specify)
-MainObstacle:
-  element_type: MultipleChoice
-  texts:
-    en: Which of the selected obstacles were most decisive ones?
-  section_name: Implementation pathways
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: Unclear pathway to application or implementation
-  - code: '2'
-    texts:
-      en: Intended start-up pathway not realistic or not suitable
-  - code: '3'
-    texts:
-      en: No suitable implementation partner (e.g. industry, public sector)
-  - code: '4'
-    texts:
-      en: Challenges related to commercialisation of the results (e.g. business model,
-        market entry, investment
-  - code: '5'
-    texts:
-      en: Scientific results not sufficiently promising
-  - code: '6'
-    texts:
-      en: Technical or conceptional feasibility too low
-  - code: '7'
-    texts:
-      en: Scientific, methodological issues or data-related challenge
-  - code: '8'
-    texts:
-      en: Missing career opportunity outside of academia
-  - code: '9'
-    texts:
-      en: Lack of time or personal capacity
-  - code: '10'
-    texts:
-      en: Shift in personal or other priorities
-  - code: '11'
-    texts:
-      en: Lack of staff or relevant expertise
-  - code: '12'
-    texts:
-      en: No follow-up funding available
-  - code: '13'
-    texts:
-      en: High administrative or organisational burden
-  - code: '14'
-    texts:
-      en: Low or unclear market potential or societal demand
-  - code: '15'
-    texts:
-      en: Collaboration challenges with partners or stakeholders
-  - code: '16'
-    texts:
-      en: Unclear or unsatisfactory agreement on ownership or access to intellectual
-        property
-  - code: '17'
-    texts:
-      en: Difficult or time-consuming negotiations with the host institution regarding
-        intellectual property rights)
-  - code: '18'
-    texts:
-      en: Limited support or clarity regarding IP strategy at the Proof of Concept
-        stage
-  - code: '19'
-    texts:
-      en: Unsatisfactory contacts or support with TTO (technology transfer office)
-  - code: '20'
-    texts:
-      en: '{{ObstaclesFaced_20_text}}'
-OutcomeAchievedEnd:
-  element_type: Matrix
-  texts:
-    en: To what extent have the following outcomes been achieved by the end of your
-      BRIDGE Proof of Concept project?
-  section_name: Implementation pathways
-  section_index: 3
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Concrete outputs and validationPrototype, demonstrator or Minimum Viable
-        Product developed (incl. user perspective)
-  - code: '2'
-    texts:
-      en: Technical or methodological feasibility validated
-  - code: '3'
-    texts:
-      en: Business feasibility or implementation pathways clarified
-  - code: '4'
-    texts:
-      en: Implementation and exploitationMarket, user or societal demand verified
-  - code: '5'
-    texts:
-      en: Preparation for implementation (e.g. start-up, licensing, organisation)
-  - code: '6'
-    texts:
-      en: Establishment or strengthening of cooperation with potential implementation
-        partners
-  - code: '7'
-    texts:
-      en: Employment in a business environment
-  - code: '8'
-    texts:
-      en: Licensing or sale of results to a company or organisation
-  - code: '9'
-    texts:
-      en: Intellectual property and fundingSecuring intellectual property / filing
-        a patent or similar protection (licences)
-  - code: '10'
-    texts:
-      en: Follow-up funding acquired or prepared
-  - code: '11'
-    texts:
-      en: Societal and other impactsContribution to a societal, environmental or technological
-        challenge
-  - code: '12'
-    texts:
-      en: Other results or impacts achieved (please specify)
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not relevant for my BRIDGE Proof of Concept project
-  - code: '2'
-    texts:
-      en: not achieved
-  - code: '3'
-    texts:
-      en: slightly achieved
-  - code: '4'
-    texts:
-      en: rather slightly achieved
-  - code: '5'
-    texts:
-      en: rather achieved
-  - code: '6'
-    texts:
-      en: fully achieved
-  - code: '7'
-    texts:
-      en: exceeded expectations
-OutcomesAdditionalitaet:
-  element_type: Matrix
-  texts:
-    en: How likely is it that the above-mentioned outcomes would have been achieved
-      without BRIDGE funding?
-  section_name: Implementation pathways
-  section_index: 3
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: ''
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: not at all – only possible because of BRIDGE
-  - code: '2'
-    texts:
-      en: unlikely
-  - code: '3'
-    texts:
-      en: rather unlikely
-  - code: '4'
-    texts:
-      en: rather likely
-  - code: '5'
-    texts:
-      en: likely
-  - code: '6'
-    texts:
-      en: very likely – would have happened anyway
-  - code: '7'
-    texts:
-      en: no answer possible
-WahrscheinlichkeitUmsetzung:
-  element_type: Matrix
-  texts:
-    en: How likely is it that your innovation will achieve implementation on the market
-      and/or in society in the medium to long term (e.g. through sales, licensing,
-      integration into an organisation, continued use or long-term application)?
-  section_name: Implementation pathways
-  section_index: 3
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: not at all likely
-  - code: '2'
-    texts:
-      en: slightly likely
-  - code: '3'
-    texts:
-      en: rather unlikely
-  - code: '4'
-    texts:
-      en: rather likely
-  - code: '5'
-    texts:
-      en: likely
-  - code: '6'
-    texts:
-      en: very likely
-BeitragZuStartupGruendung:
-  element_type: Matrix
-  texts:
-    en: To what extent did the BRIDGE Proof of Concept funding contribute to the implementation
-      of your innovative idea?
-  section_name: 'Impact of the BRIDGE support '
-  section_index: 4
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Decision for founding a start-up or a non-profit organisation or to pursue
-        an implementation pathway
-  - code: '2'
-    texts:
-      en: Timing or acceleration of the founding or implementation process
-  - code: '3'
-    texts:
-      en: Viability of the start-up or implementation setup
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all
-  - code: '2'
-    texts:
-      en: Slightly
-  - code: '3'
-    texts:
-      en: Rather weak
-  - code: '4'
-    texts:
-      en: Rather strong
-  - code: '5'
-    texts:
-      en: Strong
-  - code: '6'
-    texts:
-      en: Essential (the implementation would not have occurred without BRIDGE funding)
-StartUpEntwicklungsstand:
-  element_type: Matrix
-  texts:
-    en: What is the current development status of your organisation, initiative or
-      implementation setup with regard to the following elements?
-  section_name: 'Start-up Development '
-  section_index: 6
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Team & OrganisationCore team assembled
-  - code: '2'
-    texts:
-      en: Basic organisational structures set up (e.g. roles, responsibilities, processes)
-  - code: '3'
-    texts:
-      en: Suitable location or infrastructure identified
-  - code: '4'
-    texts:
-      en: Legal entity registered or preparations underway (if applicable)
-  - code: '5'
-    texts:
-      en: Market & BusinessInitial contacts established with potential customers,
-        users or pilot partners
-  - code: '6'
-    texts:
-      en: Minimum viable product (MVP) or equivalent prototype, solution or pilot
-        developed or tested.
-  - code: '7'
-    texts:
-      en: First customers, users or implementing partners engaged and/or revenues
-        generated
-  - code: '8'
-    texts:
-      en: Funding & StrategyInitial funding or financing options mapped out
-  - code: '9'
-    texts:
-      en: Preliminary market or implementation approach outlined
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not started
-  - code: '2'
-    texts:
-      en: In progress
-  - code: '3'
-    texts:
-      en: Mostly completed
-  - code: '4'
-    texts:
-      en: Fully completed
-  - code: '5'
-    texts:
-      en: Not relevant
-StartupGruendungWann:
-  element_type: SingleChoice
-  texts:
-    en: When did or will the foundation of a start-up related to your BRIDGE Proof
-      of Concept project take place?
-  section_name: 'Start-up Development '
-  section_index: 6
-  choices:
-  - code: '1'
-    texts:
-      en: Before the start of the BRIDGE Proof of Concept project
-  - code: '2'
-    texts:
-      en: Shortly after the start of the project
-  - code: '3'
-    texts:
-      en: During the project (before completion)
-  - code: '4'
-    texts:
-      en: After completion of the project
-  - code: '5'
-    texts:
-      en: Not yet founded, but planned
-PersonalCH:
-  element_type: OpenQuestion
-  texts:
-    en: How many employees (FTE) did your organisation have at the end of [previous
-      year] / currently (full-time equivalents, FTE)?
-  section_name: 'Start-up Development '
-  section_index: 6
-InvestorsContacted:
-  element_type: MultipleChoice
-  texts:
-    en: Which type(s) of investors or funding sources provided financing or were actively
-      approached?
-  section_name: 'Start-up Development '
-  section_index: 6
-  choices:
-  - code: '6'
-    texts:
-      en: Own resources
-  - code: '1'
-    texts:
-      en: Family, Friends and Fools (FFF)
-  - code: '2'
-    texts:
-      en: Business Angels
-  - code: '3'
-    texts:
-      en: Venture capital investors
-  - code: '4'
-    texts:
-      en: Corporate or strategic investors
-  - code: '7'
-    texts:
-      en: Public funding programmes (e.g. grants or innovation funding)
-  - code: '8'
-    texts:
-      en: Foundations or philanthropic funding
-  - code: '5'
-    texts:
-      en: 'Other (please specify):'
-KarriereNuetzlichkeit:
-  element_type: Matrix
-  texts:
-    en: To what extent did the BRIDGE Proof of Concept project contribute to your
-      knowledge development and career development?
-  section_name: Career path
-  section_index: 7
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Development of knowledge and understanding(e.g. scientific, technical, entrepreneurial
-        or application-related knowledge)
-  - code: '2'
-    texts:
-      en: Concrete career development(e.g. new career direction, transition to another
-        sector, strengthened professional role)
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all
-  - code: '2'
-    texts:
-      en: Slightly
-  - code: '3'
-    texts:
-      en: Rather slightly
-  - code: '4'
-    texts:
-      en: Rather strongly
-  - code: '5'
-    texts:
-      en: Strongly
-  - code: '6'
-    texts:
-      en: Very strongly
-  - code: '99'
-    texts:
-      en: Not relevant for my situation
-KarriereNutzenFuer:
-  element_type: MultipleChoice
-  texts:
-    en: In which areas did the BRIDGE PoC funding contribute most to your career development?
-  section_name: Career path
-  section_index: 7
-  choices:
-  - code: '1'
-    texts:
-      en: Improving employability outside academia
-  - code: '2'
-    texts:
-      en: Strengthening professional networks
-  - code: '3'
-    texts:
-      en: Developing entrepreneurial and innovation skills
-  - code: '4'
-    texts:
-      en: Gaining experience in project management and leadership
-  - code: '5'
-    texts:
-      en: Increasing visibility or reputation within the research community
-  - code: '6'
-    texts:
-      en: Enhancing confidence to take risks or pursue new ideas
-  - code: '7'
-    texts:
-      en: Other (please specify)
-ImagineOffer:
-  element_type: SingleChoice
-  texts:
-    en: Imagine you received an attractive job offer from a prestigious research institution
-      or company, but accepting it would mean discontinuing your work on commercializing
-      or practically implementing your BRIDGE innovation. What would you do?
-  section_name: Career path
-  section_index: 7
-  choices:
-  - code: '1'
-    texts:
-      en: Accept the position – advancing my research career is the priority
-  - code: '2'
-    texts:
-      en: Negotiate to continue the innovation work part-time or in parallel
-  - code: '3'
-    texts:
-      en: Decline the offer – bringing this innovation to application is too important
-  - code: '4'
-    texts:
-      en: Accept, but plan to return to the innovation later
-  - code: '5'
-    texts:
-      en: Not sure / depends on circumstances
-EinbezugKunden:
-  element_type: MultipleChoice
-  texts:
-    en: Were customers or users actively involved in the development within your BRIDGE
-      Proof of Concept project?
-  section_name: Entrepreneurial Mindset and Behaviour
-  section_index: 8
-  choices:
-  - code: '1'
-    texts:
-      en: No, customers or users were not actively involved
-  - code: '2'
-    texts:
-      en: Interviews, surveys or exploratory feedback
-  - code: '3'
-    texts:
-      en: Testing with prototypes, mock-ups or demonstrators
-  - code: '4'
-    texts:
-      en: Pilot projects or test phases with users, customers or beneficiaries
-  - code: '5'
-    texts:
-      en: Letters of Intent (LoI) or Memoranda of Understanding (MoU)
-  - code: '6'
-    texts:
-      en: Testing willingness to pay or willingness to adopt
-  - code: '7'
-    texts:
-      en: Initial sales, pre-orders or comparable commitments
-  - code: '8'
-    texts:
-      en: Other activities, (please specify)
-BeitragSoftImpacts:
-  element_type: Matrix
-  texts:
-    en: To what extent did the BRIDGE Proof of Concept funding support you in the
-      following aspects?
-  section_name: Entrepreneurial Mindset and Behaviour
-  section_index: 8
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Recognising opportunities and thinking entrepreneurially or in an implementation-oriented
-        way
-  - code: '2'
-    texts:
-      en: Experimenting with ideas and validating assumptions
-  - code: '3'
-    texts:
-      en: Dealing with uncertainty, setbacks and learning from failure
-  - code: '4'
-    texts:
-      en: Bringing innovation ideas into practice(e.g. engaging users, organisations,
-        partners or markets)
-  - code: '5'
-    texts:
-      en: Enhancing negotiation and interaction skills
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all
-  - code: '2'
-    texts:
-      en: Slightly
-  - code: '3'
-    texts:
-      en: Rather weak
-  - code: '4'
-    texts:
-      en: Rather strong
-  - code: '5'
-    texts:
-      en: Strong
-  - code: '6'
-    texts:
-      en: Essential
-BeitragKompetenzen:
-  element_type: Matrix
-  texts:
-    en: To what extent did the BRIDGE Proof of Concept funding strengthen your entrepreneurial
-      and innovation-related competencies?
-  section_name: Entrepreneurial Mindset and Behaviour
-  section_index: 8
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Customer, user or beneficiary discovery (understanding needs, problem–solution
-        fit)
-  - code: '2'
-    texts:
-      en: Developing and testing ideas in practice
-  - code: '3'
-    texts:
-      en: 'Building networks and partnerships relevant for implementation
-
-        (e.g. companies, public sector, NGOs or other organisations)'
-  - code: '4'
-    texts:
-      en: Leading and taking responsibility for implementation
-  - code: '5'
-    texts:
-      en: Designing value propositions and implementation or business models
-  - code: '6'
-    texts:
-      en: 'Go-to-market or implementation basics
-
-        (e.g. positioning, channels, pricing, cost recovery or adoption or scaling
-        tests)'
-  - code: '7'
-    texts:
-      en: 'Understanding and preparing financing options for further development
-
-        (e.g. private, public or blended financing)'
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all
-  - code: '2'
-    texts:
-      en: Slightly
-  - code: '3'
-    texts:
-      en: Rather weak
-  - code: '4'
-    texts:
-      en: Rather strong
-  - code: '5'
-    texts:
-      en: Strong
-  - code: '6'
-    texts:
-      en: Essential (would not have developed without funding)
-Zielerreichung:
-  element_type: Matrix
-  texts:
-    en: Overall, how successful do you consider your BRIDGE Proof of Concept project
-      to have been in achieving its intended objectives?
-  section_name: Overall assessment
-  section_index: 9
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all successful
-  - code: '2'
-    texts:
-      en: Slightly successful
-  - code: '3'
-    texts:
-      en: Rather slightly successful
-  - code: '4'
-    texts:
-      en: Rather successful
-  - code: '5'
-    texts:
-      en: Successful
-  - code: '6'
-    texts:
-      en: Very successful
-ZufriedenheitOverall:
-  element_type: Matrix
-  texts:
-    en: Overall, how satisfied are you with the BRIDGE Proof of Concept funding and
-      support?
-  section_name: Overall assessment
-  section_index: 9
-  matrix_rows:
-  - code: '1'
-    texts: {}
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all satisfied
-  - code: '2'
-    texts:
-      en: Slightly satisfied
-  - code: '3'
-    texts:
-      en: Rather slightly satisfied
-  - code: '4'
-    texts:
-      en: Rather satisfied
-  - code: '5'
-    texts:
-      en: Satisfied
-  - code: '6'
-    texts:
-      en: Very satisfied
-GutwarOffen:
-  element_type: OpenQuestion
-  texts:
-    en: Looking back at your participation in the BRIDGE Proof of Concept programme:What
-      worked particularly well?
-  section_name: Overall assessment
-  section_index: 9
-VerbesserungOffen:
-  element_type: OpenQuestion
-  texts:
-    en: Where do you see room for improvement?
-  section_name: Overall assessment
-  section_index: 9
-OrgRole:
-  element_type: SingleChoice
-  texts:
-    en: What was the role of your organisation in the project?
-  section_name: (OhneTitel) Identifikation und Weichenfragen
-  section_index: 1
-  choices:
-  - code: '1'
-    texts:
-      en: Implementation partner
-  - code: '2'
-    texts:
-      en: Research partner
-InnoAlsZiel:
-  element_type: SingleChoice
-  texts:
-    en: Does or did your organisation pursue the goal of implementing a concrete innovation
-      in the organisation or on the market with the supported project?
-  section_name: (OhneTitel) Identifikation und Weichenfragen
-  section_index: 1
-  choices:
-  - code: '6'
-    texts:
-      en: Yes, our participation in the project aimed to implement the innovation
-        in our organisation or on the market.
-  - code: '1'
-    texts:
-      en: No, we were involved in the project as another implementation partner.
-GenderAddressed:
-  element_type: SingleChoice
-  texts:
-    en: Have you addressed the differing needs and challenges of women and men (with
-      the goal of eliminating inequalities and promoting gender equality) in the design,
-      methodologies or results of your project?
-  section_name: (OhneTitel) Identifikation und Weichenfragen
-  section_index: 1
-  choices:
-  - code: '6'
-    texts:
-      en: 'Yes'
-  - code: '1'
-    texts:
-      en: 'No'
-  - code: '99'
-    texts:
-      en: Other
-GenderDetail:
-  element_type: OpenQuestion
-  texts:
-    en: Which aspects featured a gender dimension and how were they incorporated?
-  section_name: (OhneTitel) Identifikation und Weichenfragen
-  section_index: 1
-ExistingMarkets:
-  element_type: MultipleChoice
-  texts:
-    en: Which existing geographical markets (if any) have your products, processes
-      and services entered as a result of your participation in the project?
-  section_name: Markteintritt
-  section_index: 2
-  choices:
-  - code: '1'
-    texts:
-      en: Domestic market
-  - code: '2'
-    texts:
-      en: Europe (including Israel and Türkiye)
-  - code: '3'
-    texts:
-      en: Central and East Asia
-  - code: '4'
-    texts:
-      en: Middle East
-  - code: '5'
-    texts:
-      en: North America
-  - code: '6'
-    texts:
-      en: Central and South America
-  - code: '7'
-    texts:
-      en: Africa
-  - code: '8'
-    texts:
-      en: Oceania
-  - code: '99'
-    texts:
-      en: None of the above
-NewMarkets:
-  element_type: MultipleChoice
-  texts:
-    en: Which new geographical markets (if any) have your products, processes and
-      services entered as a result of your participation in the project?
-  section_name: Markteintritt
-  section_index: 2
-  choices:
-  - code: '1'
-    texts:
-      en: Domestic market
-  - code: '2'
-    texts:
-      en: Europe (including Israel and Türkiye)
-  - code: '3'
-    texts:
-      en: Central and East Asia
-  - code: '4'
-    texts:
-      en: Middle East
-  - code: '5'
-    texts:
-      en: North America
-  - code: '6'
-    texts:
-      en: Central and South America
-  - code: '7'
-    texts:
-      en: Africa
-  - code: '8'
-    texts:
-      en: Oceania
-  - code: '99'
-    texts:
-      en: None of the above
-NoEntryReason:
-  element_type: MultipleChoice
-  texts:
-    en: What were the reasons the products, processes or services you developed in
-      your project did not enter a market?
-  section_name: Markteintritt
-  section_index: 2
-  choices:
-  - code: '1'
-    texts:
-      en: Commercialisation is/was not intended
-  - code: '2'
-    texts:
-      en: Market entry is/was too costly
-  - code: '3'
-    texts:
-      en: Market demand is/was too low
-  - code: '4'
-    texts:
-      en: Technology not yet ready
-  - code: '5'
-    texts:
-      en: The product or service is not competitive
-  - code: '6'
-    texts:
-      en: Certification or other regulatory approval is needed
-  - code: '7'
-    texts:
-      en: Other (please specify)
-EntrySupport:
-  element_type: MultipleChoice
-  texts:
-    en: What additional support would have been useful during or after the lifetime
-      of the project for bringing your products, processes and services to the market?
-  section_name: Markteintritt
-  section_index: 2
-  choices:
-  - code: '1'
-    texts:
-      en: Legal advice (e.g., policy, compliance)
-  - code: '2'
-    texts:
-      en: Non-legal and technical advice (e.g., support developing a business plan,
-        obtaining expert technical inputs)
-  - code: '3'
-    texts:
-      en: Financial advice (e.g., on taxation or other subsidy schemes)
-  - code: '4'
-    texts:
-      en: Marketing and promotion
-  - code: '5'
-    texts:
-      en: Access to private investors (e.g., corporate equity, business angels)
-  - code: '6'
-    texts:
-      en: Business matchmaking activities
-  - code: '7'
-    texts:
-      en: Other (please specify)
-InnoDev:
-  element_type: Matrix
-  texts:
-    en: How many distinct products, processes and services were developed by your
-      organisation as a result of your project?
-  section_name: Charakterisierung des Projektes
-  section_index: 3
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Products
-  - code: '2'
-    texts:
-      en: Services
-  - code: '3'
-    texts:
-      en: Processes
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Number of...
-InnoCategory:
-  element_type: MultipleChoice
-  texts:
-    en: 'Select all categories that apply to your project results:'
-  section_name: Charakterisierung des Projektes
-  section_index: 3
-  choices:
-  - code: '1'
-    texts:
-      en: New market / new target market
-  - code: '2'
-    texts:
-      en: New product, process or service in one of your existing market(s)
-  - code: '3'
-    texts:
-      en: New product, process, or service for your organisation
-  - code: '4'
-    texts:
-      en: Improvement of an existing product, process or service
-  - code: '5'
-    texts:
-      en: Other
-PatentsDetail:
-  element_type: Matrix
-  texts:
-    en: 'If you have filed any patent applications in relation to your project results,
-      please specify for each of them the title of the patent/s, the application number/s,
-      and the name of the patent office/s:'
-  section_name: Ergebnisse
-  section_index: 4
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: '1'
-  - code: '2'
-    texts:
-      en: '2'
-  - code: '3'
-    texts:
-      en: '3'
-  - code: '4'
-    texts:
-      en: '4'
-  - code: '5'
-    texts:
-      en: '5'
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Title
-  - code: '2'
-    texts:
-      en: Application number
-  - code: '3'
-    texts:
-      en: Patent office/s
-ResultsAcquired:
-  element_type: SingleChoice
-  texts:
-    en: Have your project results been acquired or licensed by another legal entity?
-  section_name: Ergebnisse
-  section_index: 4
-  choices:
-  - code: '6'
-    texts:
-      en: 'Yes'
-  - code: '1'
-    texts:
-      en: 'No'
-ScientificOutputs:
-  element_type: Matrix
-  texts:
-    en: Which and how many scientific outputs has your organisation generated in connection
-      with your project results?
-  section_name: Ergebnisse
-  section_index: 4
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Peer-reviewed articles
-  - code: '2'
-    texts:
-      en: Conference proceedings
-  - code: '3'
-    texts:
-      en: Datasets
-  - code: '4'
-    texts:
-      en: Trainings
-  - code: '5'
-    texts:
-      en: Bachelor thesis
-  - code: '6'
-    texts:
-      en: Master thesis
-  - code: '7'
-    texts:
-      en: Dissertation
-  - code: '8'
-    texts:
-      en: Other scientific outputs such as books, chapters or reports
-  matrix_columns:
-  - code: '1'
-    texts: {}
-Benefit:
-  element_type: MultipleChoice
-  texts:
-    en: How did your organisation benefit from participating in the project?
-  section_name: Ergebnisse
-  section_index: 4
-  choices:
-  - code: '1'
-    texts:
-      en: Collaboration with research organisations and academia
-  - code: '2'
-    texts:
-      en: Collaboration with large companies and multi-national corporates
-  - code: '3'
-    texts:
-      en: Collaboration with SMEs
-  - code: '4'
-    texts:
-      en: Visibility and reputation
-  - code: '5'
-    texts:
-      en: Reaching international markets
-  - code: '6'
-    texts:
-      en: Scaling up
-  - code: '7'
-    texts:
-      en: Attracting new investors
-  - code: '8'
-    texts:
-      en: Technical or other knowledge transfer
-  - code: '9'
-    texts:
-      en: Mitigate R&D and Innovation risks
-  - code: '10'
-    texts:
-      en: Other
-BenefitDetail:
-  element_type: MultipleChoice
-  texts:
-    en: 'For the selected benefits in the last question, please specify which of the
-      following more detailed benefits were important:'
-  section_name: Ergebnisse
-  section_index: 4
-  choices:
-  - code: '1'
-    texts:
-      en: Collaboration with research organisations and academiaAccess to leading
-        expertise in the field
-  - code: '2'
-    texts:
-      en: Access to knowledge not available in Switzerland
-  - code: '3'
-    texts:
-      en: Acceleration of R&D
-  - code: '4'
-    texts:
-      en: Collaboration with large companies and multi-national corporates:Expansion
-        of value chain through new partnerships
-  - code: '5'
-    texts:
-      en: Enhancement of existing value chain though innovation
-  - code: '6'
-    texts:
-      en: Transfer knowledge and technology
-  - code: '7'
-    texts:
-      en: Collaboration with SME(s)Expansion of the value chain through new partnerships
-  - code: '8'
-    texts:
-      en: Enhancement of existing value chain though innovation
-  - code: '9'
-    texts:
-      en: Transfer of knowledge and technology
-  - code: '10'
-    texts:
-      en: Reaching international marketsAcceleration of market entry/implementation
-  - code: '11'
-    texts:
-      en: Mitigate R&D and Innovation risksRisk reduction through direct financial
-        support
-  - code: '12'
-    texts:
-      en: Risk reduction through collaborative partnerships
-DirectFunding:
-  element_type: Matrix
-  texts:
-    en: Which aspects of your project were strengthened through the direct funding?
-  section_name: Ergebnisse
-  section_index: 4
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Scientific and technological progress (research advances, prototypes, validation)
-  - code: '2'
-    texts:
-      en: Reduction of technical and implementation risks(feasibility, proof of concept)
-  - code: '3'
-    texts:
-      en: International collaboration and access to expertise/infrastructure(partnerships,
-        complementary know-how, shared facilities)
-  - code: '4'
-    texts:
-      en: Market readiness(use-cases, early testing with users, relevance for later
-        implementation)
-  - code: '5'
-    texts:
-      en: Visibility, credibility and attractiveness for follow-up funding(strengthening
-        reputation, strategic positioning)
-  - code: '6'
-    texts:
-      en: Application orientation of collaboration with research partner(influence
-        over research direction, ownership of results, e.g. intellectual property,
-        timeliness of collaboration)
-  - code: '7'
-    texts:
-      en: Overall realisation of the project
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Not at all
-  - code: '2'
-    texts:
-      en: To a small extent
-  - code: '3'
-    texts:
-      en: To a rather small extent
-  - code: '4'
-    texts:
-      en: To a rather great extent
-  - code: '5'
-    texts:
-      en: To a great extent
-  - code: '6'
-    texts:
-      en: To a very great extent
-CollabInt:
-  element_type: SingleChoice
-  texts:
-    en: Are you still collaborating internationally?
-  section_name: Ergebnisse
-  section_index: 4
-  choices:
-  - code: '6'
-    texts:
-      en: Yes, with the same partner(s)
-  - code: '5'
-    texts:
-      en: Yes, with the same and other partners
-  - code: '4'
-    texts:
-      en: Yes, with other partners
-  - code: '1'
-    texts:
-      en: 'No'
-ForParAngestellt:
-  element_type: SingleChoice
-  texts:
-    en: Has your organisation employed people from the research partner(s) as a result
-      of the supported project?
-  section_name: Ergebnisse
-  section_index: 4
-  choices:
-  - code: '6'
-    texts:
-      en: 'Yes'
-  - code: '1'
-    texts:
-      en: 'No'
-AusgabenFuE:
-  element_type: Matrix
-  texts:
-    en: Total expenditure on research and development in your organisation
-  section_name: Ökonomische Projektwirkungen I
-  section_index: 5
-  matrix_rows:
-  - code: PEnde
-    texts:
-      en: '... at the end of the project, i. e. in the year'
-  - code: Heute
-    texts:
-      en: '... today, i.e. in the last completed business year'
-  matrix_columns:
-  - code: Jahr
-    texts:
-      en: Year
-  - code: CHF
-    texts:
-      en: CHF million
-WirtSituation:
-  element_type: Matrix
-  texts:
-    en: Does the funded project help to ...
-  section_name: Ökonomische Projektwirkungen I
-  section_index: 5
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: '... strengthen the economic situation of your organisation?'
-  - code: '2'
-    texts:
-      en: '... strengthen competitiveness in the markets?'
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: 'no'
-  - code: '2'
-    texts:
-      en: only a little
-  - code: '3'
-    texts:
-      en: rather little
-  - code: '4'
-    texts:
-      en: rather strong
-  - code: '5'
-    texts:
-      en: strong
-  - code: '6'
-    texts:
-      en: very strong
-ImpOrg:
-  element_type: Matrix
-  texts:
-    en: How did participating in your project impact your organisation?
-  section_name: Ökonomische Projektwirkungen II
-  section_index: 6
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Access to new geographical markets
-  - code: '2'
-    texts:
-      en: Access to new sectors
-  - code: '3'
-    texts:
-      en: Attraction of private investment
-  - code: '4'
-    texts:
-      en: Ability and confidence to access to new public funding
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: no effect
-  - code: '2'
-    texts:
-      en: slightly positive effect
-  - code: '3'
-    texts:
-      en: somewhat positive effect
-  - code: '4'
-    texts:
-      en: moderately positive effect
-  - code: '5'
-    texts:
-      en: positive effect
-  - code: '6'
-    texts:
-      en: very positive effect
-WirtImpQual:
-  element_type: Matrix
-  texts:
-    en: Did the supported project lead to an increase or decrease in the following
-      economic variables after project completion?
-  section_name: Ökonomische Projektwirkungen II
-  section_index: 6
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: net turnover resulting directly from the innovation implemented ...
-  - code: '2'
-    texts:
-      en: net turnover (excluding VAT) from location Switzerland ...
-  - code: Export
-    texts:
-      en: export volume ...
-  - code: '3'
-    texts:
-      en: expenditure on research and development ...
-  - code: '4'
-    texts:
-      en: employment in research and development ...
-  - code: '5'
-    texts:
-      en: overall employment of your organisation...
-  - code: '6'
-    texts:
-      en: productivity  (i.e. value added per full-time positions) in our organisation
-        ...
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: has decreased
-  - code: '0'
-    texts:
-      en: has not changed
-  - code: '6'
-    texts:
-      en: has increased
-WirtImpQuan:
-  element_type: Matrix
-  texts:
-    en: To what extent have these variables changed as a result of the supported project
-      up to the present time?
-  section_name: Ökonomische Projektwirkungen II
-  section_index: 6
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: 'Net turnover (excluding VAT), in #.## million CHF'
-  - code: '2'
-    texts:
-      en: 'Total cost of the project, in #.## million CHF'
-  - code: '3'
-    texts:
-      en: 'Additional public funding received by your organisation (excluding funding
-        for this specific project), in #.## million CHF'
-  - code: '4'
-    texts:
-      en: 'Additional private funding/own resources (excluding funding for this specific
-        project), in #.## million CHF'
-  - code: '5'
-    texts:
-      en: 'Research and development expenditure, in #.# million CHF'
-  - code: '6'
-    texts:
-      en: Employees in research and development, in full-time equivalents (#.#)
-  - code: '7'
-    texts:
-      en: Total employees, in full-time equivalents (#.#)
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: Direct change, specifically as a result of the project. Please indicate
-        any decreases as negative figures.
-ComplementaryFunding:
-  element_type: SingleChoice
-  texts:
-    en: Has your organisation received any complementary research, development or
-      innovation (R&D&I) funding to exploit or scale up your project results?
-  section_name: Ökonomische Projektwirkungen II
-  section_index: 6
-  choices:
-  - code: '6'
-    texts:
-      en: 'Yes'
-  - code: '1'
-    texts:
-      en: 'No'
-Kosteneinsparungen:
-  element_type: SingleChoice
-  texts:
-    en: Did the supported project or the implemented innovation lead to direct cost
-      savings in your organisation overall?
-  section_name: Ökonomische Projektwirkungen II
-  section_index: 6
-  choices:
-  - code: '6'
-    texts:
-      en: 'Yes'
-  - code: '1'
-    texts:
-      en: 'No'
-MarktanteilGewinn:
-  element_type: SingleChoice
-  texts:
-    en: Was it possible to gain additional market share thanks to the implemented
-      innovation?
-  section_name: Ökonomische Projektwirkungen II
-  section_index: 6
-  choices:
-  - code: '6'
-    texts:
-      en: 'Yes'
-  - code: '1'
-    texts:
-      en: 'No'
-WirkFoerderung:
-  element_type: Matrix
-  texts:
-    en: Has the project funding by Innosuisse led to the following direct effects
-      in your organisation?
-  section_name: Weitere, nicht ökonomische Wirkungen
-  section_index: 7
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: Accelerated research and development in the project
-  - code: '2'
-    texts:
-      en: Accelerated market implementation of the project
-  - code: '3'
-    texts:
-      en: Increased knowledge and technology transfer (KTT) with the research partner
-  matrix_columns:
-  - code: '6'
-    texts:
-      en: 'Yes'
-  - code: '1'
-    texts:
-      en: 'No'
-SozialerNutzen:
-  element_type: Matrix
-  texts:
-    en: How do you assess the societal and/or social benefit of the Innosuisse-supported
-      project, outside of your organisation?
-  section_name: Weitere, nicht ökonomische Wirkungen
-  section_index: 7
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: The societal and/or social benefit is ...
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: not existing
-  - code: '2'
-    texts:
-      en: small
-  - code: '3'
-    texts:
-      en: relatively small
-  - code: '4'
-    texts:
-      en: relatively big
-  - code: '5'
-    texts:
-      en: big
-  - code: '6'
-    texts:
-      en: very big
-SozialerOffen_angepasst:
-  element_type: OpenQuestion
-  texts:
-    en: In simple terms, please describe the outcome of your project and its impact
-      on society and your sector. If your organisation has received media attention
-      because of, or connected with your project results, please include a hyperlink
-      to any articles.
-  section_name: Weitere, nicht ökonomische Wirkungen
-  section_index: 7
-Zielerreichung_RP:
-  element_type: Matrix
-  texts:
-    en: From the point of view of your research unit: Were the objectives of the project
-      achieved in the strategically important areas of research, application and implementation?
-  section_name: Projekterfolg und Abschluss
-  section_index: 8
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: The objectives in the area of research were overall ...
-  - code: '2'
-    texts:
-      en: The objectives in the area of application and implementation were overall
-        ...
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: not achieved at all
-  - code: '2'
-    texts:
-      en: not achieved
-  - code: '3'
-    texts:
-      en: rather not achieved
-  - code: '4'
-    texts:
-      en: rather achieved
-  - code: '5'
-    texts:
-      en: fully achieved
-  - code: '6'
-    texts:
-      en: exceeded
-Stellenwert:
-  element_type: Matrix
-  texts:
-    en: What is the significance of the supported project in your organisation?
-  section_name: Projekterfolg und Abschluss
-  section_index: 8
-  matrix_rows:
-  - code: '1'
-    texts:
-      en: '... from a strategic point of view'
-  - code: '2'
-    texts:
-      en: '... from an economic or operational point of view'
-  - code: '3'
-    texts:
-      en: '... from the point of view of innovation, research and development'
-  - code: '4'
-    texts:
-      en: Overall
-  matrix_columns:
-  - code: '1'
-    texts:
-      en: very low
-  - code: '2'
-    texts:
-      en: low
-  - code: '3'
-    texts:
-      en: rather low
-  - code: '4'
-    texts:
-      en: rather high
-  - code: '5'
-    texts:
-      en: high
-  - code: '6'
-    texts:
-      en: very high
 PersonalImProjekt:
   element_type: Matrix
   texts:
@@ -8787,6 +6958,21 @@ PersonalImProjekt:
       en: Average annual full-time equivalents
       fr: Moyenne annuelle des équivalents temps plein
       de-ch: Durchschnittliche jährliche Vollzeitäquivalente
+InnoAlsZiel:
+  element_type: SingleChoice
+  texts:
+    en: Does or did your organisation pursue the goal of implementing a concrete innovation
+      in the organisation or on the market with the supported project?
+  section_name: (OhneTitel) Identifikation und Weichenfragen
+  section_index: 1
+  choices:
+  - code: '6'
+    texts:
+      en: Yes, our participation in the project aimed to implement the innovation
+        in our organisation or on the market.
+  - code: '1'
+    texts:
+      en: No, we were involved in the project as another implementation partner.
 ErgebnisAnlagenPrototyp:
   element_type: SingleChoice
   texts:
@@ -8867,6 +7053,82 @@ BeurteilungForPar:
       en: I cannot answer this question
       fr: Je ne peux pas répondre à cette question
       de-ch: Das kann ich nicht beantworten
+AusgabenFuE:
+  element_type: Matrix
+  texts:
+    en: Total expenditure on research and development in your organisation
+  section_name: Ökonomische Projektwirkungen I
+  section_index: 5
+  matrix_rows:
+  - code: PEnde
+    texts:
+      en: '... at the end of the project, i. e. in the year'
+  - code: Heute
+    texts:
+      en: '... today, i.e. in the last completed business year'
+  matrix_columns:
+  - code: Jahr
+    texts:
+      en: Year
+  - code: CHF
+    texts:
+      en: CHF million
+WirtSituation:
+  element_type: Matrix
+  texts:
+    en: Does the funded project help to ...
+  section_name: Ökonomische Projektwirkungen I
+  section_index: 5
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: '... strengthen the economic situation of your organisation?'
+  - code: '2'
+    texts:
+      en: '... strengthen competitiveness in the markets?'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: 'no'
+  - code: '2'
+    texts:
+      en: only a little
+  - code: '3'
+    texts:
+      en: rather little
+  - code: '4'
+    texts:
+      en: rather strong
+  - code: '5'
+    texts:
+      en: strong
+  - code: '6'
+    texts:
+      en: very strong
+WirkFoerderung:
+  element_type: Matrix
+  texts:
+    en: Has the project funding by Innosuisse led to the following direct effects
+      in your organisation?
+  section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Accelerated research and development in the project
+  - code: '2'
+    texts:
+      en: Accelerated market implementation of the project
+  - code: '3'
+    texts:
+      en: Increased knowledge and technology transfer (KTT) with the research partner
+  matrix_columns:
+  - code: '6'
+    texts:
+      en: 'Yes'
+  - code: '1'
+    texts:
+      en: 'No'
 WirkProjekt:
   element_type: Matrix
   texts:
@@ -8994,6 +7256,36 @@ WirtNutzenPotenzial:
       en: I cannot answer this question
       fr: Je ne peux pas répondre à cette question
       de-ch: Das kann ich nicht beantworten
+SozialerNutzen:
+  element_type: Matrix
+  texts:
+    en: How do you assess the societal and/or social benefit of the Innosuisse-supported
+      project, outside of your organisation?
+  section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: The societal and/or social benefit is ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not existing
+  - code: '2'
+    texts:
+      en: small
+  - code: '3'
+    texts:
+      en: relatively small
+  - code: '4'
+    texts:
+      en: relatively big
+  - code: '5'
+    texts:
+      en: big
+  - code: '6'
+    texts:
+      en: very big
 SozialerOffen:
   element_type: OpenQuestion
   texts:
@@ -9835,6 +8127,44 @@ ZielNichtGrund:
       en: 'Other reasons (please indicate):'
       fr: 'Autres raisons (veuillez préciser):'
       de-ch: 'Andere Gründe (bitte angeben):'
+Stellenwert:
+  element_type: Matrix
+  texts:
+    en: What is the significance of the supported project in your organisation?
+  section_name: Projekterfolg und Abschluss
+  section_index: 8
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: '... from a strategic point of view'
+  - code: '2'
+    texts:
+      en: '... from an economic or operational point of view'
+  - code: '3'
+    texts:
+      en: '... from the point of view of innovation, research and development'
+  - code: '4'
+    texts:
+      en: Overall
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: very low
+  - code: '2'
+    texts:
+      en: low
+  - code: '3'
+    texts:
+      en: rather low
+  - code: '4'
+    texts:
+      en: rather high
+  - code: '5'
+    texts:
+      en: high
+  - code: '6'
+    texts:
+      en: very high
 IrgendeineInnoUm:
   element_type: SingleChoice
   texts:
@@ -9863,6 +8193,124 @@ IrgendeineInnoUm:
       en: I cannot answer this question
       fr: Je ne peux pas répondre à cette question
       de-ch: Das kann ich nicht beantworten
+ForParAngestellt:
+  element_type: SingleChoice
+  texts:
+    en: Has your organisation employed people from the research partner(s) as a result
+      of the supported project?
+  section_name: Ergebnisse
+  section_index: 4
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+  - code: '1'
+    texts:
+      en: 'No'
+WirtImpQual:
+  element_type: Matrix
+  texts:
+    en: Did the supported project lead to an increase or decrease in the following
+      economic variables after project completion?
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: net turnover resulting directly from the innovation implemented ...
+  - code: '2'
+    texts:
+      en: net turnover (excluding VAT) from location Switzerland ...
+  - code: Export
+    texts:
+      en: export volume ...
+  - code: '3'
+    texts:
+      en: expenditure on research and development ...
+  - code: '4'
+    texts:
+      en: employment in research and development ...
+  - code: '5'
+    texts:
+      en: overall employment of your organisation...
+  - code: '6'
+    texts:
+      en: productivity  (i.e. value added per full-time positions) in our organisation
+        ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: has decreased
+  - code: '0'
+    texts:
+      en: has not changed
+  - code: '6'
+    texts:
+      en: has increased
+WirtImpQuan:
+  element_type: Matrix
+  texts:
+    en: To what extent have these variables changed as a result of the supported project
+      up to the present time?
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: 'Net turnover (excluding VAT), in #.## million CHF'
+  - code: '2'
+    texts:
+      en: 'Total cost of the project, in #.## million CHF'
+  - code: '3'
+    texts:
+      en: 'Additional public funding received by your organisation (excluding funding
+        for this specific project), in #.## million CHF'
+  - code: '4'
+    texts:
+      en: 'Additional private funding/own resources (excluding funding for this specific
+        project), in #.## million CHF'
+  - code: '5'
+    texts:
+      en: 'Research and development expenditure, in #.# million CHF'
+  - code: '6'
+    texts:
+      en: Employees in research and development, in full-time equivalents (#.#)
+  - code: '7'
+    texts:
+      en: Total employees, in full-time equivalents (#.#)
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Direct change, specifically as a result of the project. Please indicate
+        any decreases as negative figures.
+Kosteneinsparungen:
+  element_type: SingleChoice
+  texts:
+    en: Did the supported project or the implemented innovation lead to direct cost
+      savings in your organisation overall?
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+  - code: '1'
+    texts:
+      en: 'No'
+MarktanteilGewinn:
+  element_type: SingleChoice
+  texts:
+    en: Was it possible to gain additional market share thanks to the implemented
+      innovation?
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+  - code: '1'
+    texts:
+      en: 'No'
 NeuheitslevelOffen:
   element_type: OpenQuestion
   texts:
@@ -9875,12 +8323,1080 @@ NeuheitslevelOffen:
       Markt ist: Können Sie nachfolgend kurz beschreiben, was die Neuheit ausmacht:'
   section_name: Ökonomische Projektwirkungen
   section_index: 4
+OrgRole:
+  element_type: SingleChoice
+  texts:
+    en: What was the role of your organisation in the project?
+  section_name: (OhneTitel) Identifikation und Weichenfragen
+  section_index: 1
+  choices:
+  - code: '1'
+    texts:
+      en: Implementation partner
+  - code: '2'
+    texts:
+      en: Research partner
+GenderAddressed:
+  element_type: SingleChoice
+  texts:
+    en: Have you addressed the differing needs and challenges of women and men (with
+      the goal of eliminating inequalities and promoting gender equality) in the design,
+      methodologies or results of your project?
+  section_name: (OhneTitel) Identifikation und Weichenfragen
+  section_index: 1
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+  - code: '1'
+    texts:
+      en: 'No'
+  - code: '99'
+    texts:
+      en: Other
+GenderDetail:
+  element_type: OpenQuestion
+  texts:
+    en: Which aspects featured a gender dimension and how were they incorporated?
+  section_name: (OhneTitel) Identifikation und Weichenfragen
+  section_index: 1
+ExistingMarkets:
+  element_type: MultipleChoice
+  texts:
+    en: Which existing geographical markets (if any) have your products, processes
+      and services entered as a result of your participation in the project?
+  section_name: Markteintritt
+  section_index: 2
+  choices:
+  - code: '1'
+    texts:
+      en: Domestic market
+  - code: '2'
+    texts:
+      en: Europe (including Israel and Türkiye)
+  - code: '3'
+    texts:
+      en: Central and East Asia
+  - code: '4'
+    texts:
+      en: Middle East
+  - code: '5'
+    texts:
+      en: North America
+  - code: '6'
+    texts:
+      en: Central and South America
+  - code: '7'
+    texts:
+      en: Africa
+  - code: '8'
+    texts:
+      en: Oceania
+  - code: '99'
+    texts:
+      en: None of the above
+NewMarkets:
+  element_type: MultipleChoice
+  texts:
+    en: Which new geographical markets (if any) have your products, processes and
+      services entered as a result of your participation in the project?
+  section_name: Markteintritt
+  section_index: 2
+  choices:
+  - code: '1'
+    texts:
+      en: Domestic market
+  - code: '2'
+    texts:
+      en: Europe (including Israel and Türkiye)
+  - code: '3'
+    texts:
+      en: Central and East Asia
+  - code: '4'
+    texts:
+      en: Middle East
+  - code: '5'
+    texts:
+      en: North America
+  - code: '6'
+    texts:
+      en: Central and South America
+  - code: '7'
+    texts:
+      en: Africa
+  - code: '8'
+    texts:
+      en: Oceania
+  - code: '99'
+    texts:
+      en: None of the above
+NoEntryReason:
+  element_type: MultipleChoice
+  texts:
+    en: What were the reasons the products, processes or services you developed in
+      your project did not enter a market?
+  section_name: Markteintritt
+  section_index: 2
+  choices:
+  - code: '1'
+    texts:
+      en: Commercialisation is/was not intended
+  - code: '2'
+    texts:
+      en: Market entry is/was too costly
+  - code: '3'
+    texts:
+      en: Market demand is/was too low
+  - code: '4'
+    texts:
+      en: Technology not yet ready
+  - code: '5'
+    texts:
+      en: The product or service is not competitive
+  - code: '6'
+    texts:
+      en: Certification or other regulatory approval is needed
+  - code: '7'
+    texts:
+      en: Other (please specify)
+EntrySupport:
+  element_type: MultipleChoice
+  texts:
+    en: What additional support would have been useful during or after the lifetime
+      of the project for bringing your products, processes and services to the market?
+  section_name: Markteintritt
+  section_index: 2
+  choices:
+  - code: '1'
+    texts:
+      en: Legal advice (e.g., policy, compliance)
+  - code: '2'
+    texts:
+      en: Non-legal and technical advice (e.g., support developing a business plan,
+        obtaining expert technical inputs)
+  - code: '3'
+    texts:
+      en: Financial advice (e.g., on taxation or other subsidy schemes)
+  - code: '4'
+    texts:
+      en: Marketing and promotion
+  - code: '5'
+    texts:
+      en: Access to private investors (e.g., corporate equity, business angels)
+  - code: '6'
+    texts:
+      en: Business matchmaking activities
+  - code: '7'
+    texts:
+      en: Other (please specify)
+InnoDev:
+  element_type: Matrix
+  texts:
+    en: How many distinct products, processes and services were developed by your
+      organisation as a result of your project?
+  section_name: Charakterisierung des Projektes
+  section_index: 3
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Products
+  - code: '2'
+    texts:
+      en: Services
+  - code: '3'
+    texts:
+      en: Processes
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Number of...
+InnoCategory:
+  element_type: MultipleChoice
+  texts:
+    en: 'Select all categories that apply to your project results:'
+  section_name: Charakterisierung des Projektes
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: New market / new target market
+  - code: '2'
+    texts:
+      en: New product, process or service in one of your existing market(s)
+  - code: '3'
+    texts:
+      en: New product, process, or service for your organisation
+  - code: '4'
+    texts:
+      en: Improvement of an existing product, process or service
+  - code: '5'
+    texts:
+      en: Other
+PatentsDetail:
+  element_type: Matrix
+  texts:
+    en: 'If you have filed any patent applications in relation to your project results,
+      please specify for each of them the title of the patent/s, the application number/s,
+      and the name of the patent office/s:'
+  section_name: Ergebnisse
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: '1'
+  - code: '2'
+    texts:
+      en: '2'
+  - code: '3'
+    texts:
+      en: '3'
+  - code: '4'
+    texts:
+      en: '4'
+  - code: '5'
+    texts:
+      en: '5'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Title
+  - code: '2'
+    texts:
+      en: Application number
+  - code: '3'
+    texts:
+      en: Patent office/s
+ResultsAcquired:
+  element_type: SingleChoice
+  texts:
+    en: Have your project results been acquired or licensed by another legal entity?
+  section_name: Ergebnisse
+  section_index: 4
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+  - code: '1'
+    texts:
+      en: 'No'
+ScientificOutputs:
+  element_type: Matrix
+  texts:
+    en: Which and how many scientific outputs has your organisation generated in connection
+      with your project results?
+  section_name: Ergebnisse
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Peer-reviewed articles
+  - code: '2'
+    texts:
+      en: Conference proceedings
+  - code: '3'
+    texts:
+      en: Datasets
+  - code: '4'
+    texts:
+      en: Trainings
+  - code: '5'
+    texts:
+      en: Bachelor thesis
+  - code: '6'
+    texts:
+      en: Master thesis
+  - code: '7'
+    texts:
+      en: Dissertation
+  - code: '8'
+    texts:
+      en: Other scientific outputs such as books, chapters or reports
+  matrix_columns:
+  - code: '1'
+    texts: {}
+Benefit:
+  element_type: MultipleChoice
+  texts:
+    en: How did your organisation benefit from participating in the project?
+  section_name: Ergebnisse
+  section_index: 4
+  choices:
+  - code: '1'
+    texts:
+      en: Collaboration with research organisations and academia
+  - code: '2'
+    texts:
+      en: Collaboration with large companies and multi-national corporates
+  - code: '3'
+    texts:
+      en: Collaboration with SMEs
+  - code: '4'
+    texts:
+      en: Visibility and reputation
+  - code: '5'
+    texts:
+      en: Reaching international markets
+  - code: '6'
+    texts:
+      en: Scaling up
+  - code: '7'
+    texts:
+      en: Attracting new investors
+  - code: '8'
+    texts:
+      en: Technical or other knowledge transfer
+  - code: '9'
+    texts:
+      en: Mitigate R&D and Innovation risks
+  - code: '10'
+    texts:
+      en: Other
+BenefitDetail:
+  element_type: MultipleChoice
+  texts:
+    en: 'For the selected benefits in the last question, please specify which of the
+      following more detailed benefits were important:'
+  section_name: Ergebnisse
+  section_index: 4
+  choices:
+  - code: '1'
+    texts:
+      en: Collaboration with research organisations and academiaAccess to leading
+        expertise in the field
+  - code: '2'
+    texts:
+      en: Access to knowledge not available in Switzerland
+  - code: '3'
+    texts:
+      en: Acceleration of R&D
+  - code: '4'
+    texts:
+      en: Collaboration with large companies and multi-national corporates:Expansion
+        of value chain through new partnerships
+  - code: '5'
+    texts:
+      en: Enhancement of existing value chain though innovation
+  - code: '6'
+    texts:
+      en: Transfer knowledge and technology
+  - code: '7'
+    texts:
+      en: Collaboration with SME(s)Expansion of the value chain through new partnerships
+  - code: '8'
+    texts:
+      en: Enhancement of existing value chain though innovation
+  - code: '9'
+    texts:
+      en: Transfer of knowledge and technology
+  - code: '10'
+    texts:
+      en: Reaching international marketsAcceleration of market entry/implementation
+  - code: '11'
+    texts:
+      en: Mitigate R&D and Innovation risksRisk reduction through direct financial
+        support
+  - code: '12'
+    texts:
+      en: Risk reduction through collaborative partnerships
+DirectFunding:
+  element_type: Matrix
+  texts:
+    en: Which aspects of your project were strengthened through the direct funding?
+  section_name: Ergebnisse
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Scientific and technological progress (research advances, prototypes, validation)
+  - code: '2'
+    texts:
+      en: Reduction of technical and implementation risks(feasibility, proof of concept)
+  - code: '3'
+    texts:
+      en: International collaboration and access to expertise/infrastructure(partnerships,
+        complementary know-how, shared facilities)
+  - code: '4'
+    texts:
+      en: Market readiness(use-cases, early testing with users, relevance for later
+        implementation)
+  - code: '5'
+    texts:
+      en: Visibility, credibility and attractiveness for follow-up funding(strengthening
+        reputation, strategic positioning)
+  - code: '6'
+    texts:
+      en: Application orientation of collaboration with research partner(influence
+        over research direction, ownership of results, e.g. intellectual property,
+        timeliness of collaboration)
+  - code: '7'
+    texts:
+      en: Overall realisation of the project
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all
+  - code: '2'
+    texts:
+      en: To a small extent
+  - code: '3'
+    texts:
+      en: To a rather small extent
+  - code: '4'
+    texts:
+      en: To a rather great extent
+  - code: '5'
+    texts:
+      en: To a great extent
+  - code: '6'
+    texts:
+      en: To a very great extent
+CollabInt:
+  element_type: SingleChoice
+  texts:
+    en: Are you still collaborating internationally?
+  section_name: Ergebnisse
+  section_index: 4
+  choices:
+  - code: '6'
+    texts:
+      en: Yes, with the same partner(s)
+  - code: '5'
+    texts:
+      en: Yes, with the same and other partners
+  - code: '4'
+    texts:
+      en: Yes, with other partners
+  - code: '1'
+    texts:
+      en: 'No'
+ImpOrg:
+  element_type: Matrix
+  texts:
+    en: How did participating in your project impact your organisation?
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Access to new geographical markets
+  - code: '2'
+    texts:
+      en: Access to new sectors
+  - code: '3'
+    texts:
+      en: Attraction of private investment
+  - code: '4'
+    texts:
+      en: Ability and confidence to access to new public funding
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: no effect
+  - code: '2'
+    texts:
+      en: slightly positive effect
+  - code: '3'
+    texts:
+      en: somewhat positive effect
+  - code: '4'
+    texts:
+      en: moderately positive effect
+  - code: '5'
+    texts:
+      en: positive effect
+  - code: '6'
+    texts:
+      en: very positive effect
+ComplementaryFunding:
+  element_type: SingleChoice
+  texts:
+    en: Has your organisation received any complementary research, development or
+      innovation (R&D&I) funding to exploit or scale up your project results?
+  section_name: Ökonomische Projektwirkungen II
+  section_index: 6
+  choices:
+  - code: '6'
+    texts:
+      en: 'Yes'
+  - code: '1'
+    texts:
+      en: 'No'
+SozialerOffen_angepasst:
+  element_type: OpenQuestion
+  texts:
+    en: In simple terms, please describe the outcome of your project and its impact
+      on society and your sector. If your organisation has received media attention
+      because of, or connected with your project results, please include a hyperlink
+      to any articles.
+  section_name: Weitere, nicht ökonomische Wirkungen
+  section_index: 7
+Zielerreichung_RP:
+  element_type: Matrix
+  texts:
+    en: From the point of view of your research unit: Were the objectives of the project
+      achieved in the strategically important areas of research, application and implementation?
+  section_name: Projekterfolg und Abschluss
+  section_index: 8
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: The objectives in the area of research were overall ...
+  - code: '2'
+    texts:
+      en: The objectives in the area of application and implementation were overall
+        ...
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not achieved at all
+  - code: '2'
+    texts:
+      en: not achieved
+  - code: '3'
+    texts:
+      en: rather not achieved
+  - code: '4'
+    texts:
+      en: rather achieved
+  - code: '5'
+    texts:
+      en: fully achieved
+  - code: '6'
+    texts:
+      en: exceeded
+BerufzielZuBeginn:
+  element_type: MultipleChoice
+  texts:
+    en: At the start of the BRIDGE Proof of Concept project, what was your intended
+      career or professional direction?
+  section_name: Personalien
+  choices:
+  - code: '1'
+    texts:
+      en: Continue and further develop my current role in academia
+  - code: '2'
+    texts:
+      en: Found or co-found a start-up
+  - code: '3'
+    texts:
+      en: Transition from academia to industry
+  - code: '4'
+    texts:
+      en: Transition from academia to the public sector
+  - code: '5'
+    texts:
+      en: Transition from academia to a non-profit / NGO context
+  - code: '6'
+    texts:
+      en: Explore new career options without a fixed plan
+  - code: '9'
+    texts:
+      en: 'Other (please specify):'
+BerufsstatusAktuell:
+  element_type: Matrix
+  texts:
+    en: Which of the following professional situations currently applies to you?
+  section_name: Personalien
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Current professional situation
+  - code: '3'
+    texts:
+      en: Foreseeable future situation (in the next 12 to 24 months
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Founder / co-founder of a start-up or company
+  - code: '2'
+    texts:
+      en: Employed in a start-up or young company
+  - code: '3'
+    texts:
+      en: Employed in an established company (industry / SME / corporate group)
+  - code: '4'
+    texts:
+      en: Employed in the public sector
+  - code: '5'
+    texts:
+      en: Employed in a non-profit / NGO organisation
+  - code: '6'
+    texts:
+      en: Employed in academia or a research institution
+  - code: '7'
+    texts:
+      en: Self-employed / freelancer
+  - code: '8'
+    texts:
+      en: Currently not employed / in transition
+  - code: '9'
+    texts:
+      en: Other (please specify)
+BerufstandAktuellAnders:
+  element_type: Matrix
+  texts:
+    en: ''
+  section_name: Personalien
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: 'Please specify the other situation:'
+  matrix_columns:
+  - code: '9'
+    texts:
+      en: Current professional situation
+  - code: '10'
+    texts:
+      en: Foreseeable future situation (in the next 12 to 24 months
+AktSitRelatedToBridge:
+  element_type: Matrix
+  texts:
+    en: To what extent is your current or future professional situation related to
+      the BRIDGE Proof of Concept project?
+  section_name: Personalien
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: ''
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not related
+  - code: '2'
+    texts:
+      en: weakly related
+  - code: '3'
+    texts:
+      en: rather weakly related
+  - code: '4'
+    texts:
+      en: rather strongly related
+  - code: '5'
+    texts:
+      en: strongly related
+  - code: '6'
+    texts:
+      en: very strongly related
+  - code: '99'
+    texts:
+      en: don't know / no answer
+Nachhaltigkeitoffen:
+  element_type: OpenQuestion
+  texts:
+    en: 'Please describe the contribution to environmental sustainability in a few
+      sentences:'
+  section_name: Characteristics of your BRIDGE Proof of Concept project
+  section_index: 1
+FundingBefore:
+  element_type: SingleChoice
+  texts:
+    en: Before submitting your BRIDGE Proof of Concept project, were the scientific
+      foundations or the underlying project idea (for Proof of Concept) previously
+      supported by funding from the Swiss National Science Foundation (SNSF) or Innosuisse?
+  section_name: Project development
+  section_index: 2
+  choices:
+  - code: '1'
+    texts:
+      en: 'Yes'
+  - code: '2'
+    texts:
+      en: 'No'
+  - code: '3'
+    texts:
+      en: Don't know / no answer
+FundedBeforeBy:
+  element_type: MultipleChoice
+  texts:
+    en: Which funding instruments supported the scientific foundations or project
+      idea prior to the BRIDGE Proof of Concept ?
+  section_name: Project development
+  section_index: 2
+  choices:
+  - code: '15'
+    texts:
+      en: SNSF project funding
+  - code: '1'
+    texts:
+      en: SNSF career funding
+  - code: '16'
+    texts:
+      en: SNSF National Centres of Competence in Research (NCCR)please provide NCCR
+        number and name
+  - code: '17'
+    texts:
+      en: SNSF National Research Programmes (NRP)please provide the programme number
+        and title of the project
+  - code: '18'
+    texts:
+      en: 'Other SNSF funding instrument:'
+  - code: '3'
+    texts:
+      en: Innovation project with implementation partner
+  - code: '4'
+    texts:
+      en: Innovation project without implementation partner
+  - code: '7'
+    texts:
+      en: International innovation funding (e.g. EUREKA/Eurostars via Innosuisse,
+        Bilateral projects)
+  - code: '12'
+    texts:
+      en: Innovation Booster
+  - code: '11'
+    texts:
+      en: Flagship projects
+  - code: '13'
+    texts:
+      en: SCCER (Swiss Competence Centers of Energy Research)
+  - code: '14'
+    texts:
+      en: Other Innosuisse funding
+  - code: '10'
+    texts:
+      en: Other (please specify)
+BridgeCoachingYesNo:
+  element_type: SingleChoice
+  texts:
+    en: Did you use the BRIDGE Coaching support (10 hours) during the project?
+  section_name: Project development
+  section_index: 2
+  choices:
+  - code: '6'
+    texts:
+      en: 'yes'
+  - code: '1'
+    texts:
+      en: 'no'
 BridgeCoachingWarumNicht:
   element_type: OpenQuestion
   texts:
     en: What were the main reasons for not using the BRIDGE Coaching support?
   section_name: Project development
   section_index: 2
+BridgeCoachingNuetzlichkeit:
+  element_type: Matrix
+  texts:
+    en: How useful was the BRIDGE Coaching (10 hours) for you and your project?
+  section_name: Project development
+  section_index: 2
+  matrix_rows:
+  - code: '1'
+    texts: {}
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all useful
+  - code: '2'
+    texts:
+      en: Slightly useful
+  - code: '3'
+    texts:
+      en: Rather slightly useful
+  - code: '4'
+    texts:
+      en: Rather useful
+  - code: '5'
+    texts:
+      en: Useful
+  - code: '6'
+    texts:
+      en: Very useful
+  - code: '99'
+    texts:
+      en: Not applicable / no opinion
+BridgeCoachingNutzen_Offen:
+  element_type: OpenQuestion
+  texts:
+    en: In which areas was the BRIDGE Coaching most useful for you?
+  section_name: Project development
+  section_index: 2
+InnosuisseSupportYesNo:
+  element_type: Matrix
+  texts:
+    en: Did you use or are you planning to use any additional coaching or support
+      related to the implementation of the project?
+  section_name: Project development
+  section_index: 2
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Innosuisse Entrepreneurship Training
+  - code: '2'
+    texts:
+      en: Innosuisse Start-up Coaching
+  - code: '3'
+    texts:
+      en: Other, please specify
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: used
+  - code: '2'
+    texts:
+      en: planned
+  - code: '3'
+    texts:
+      en: neither
+NutzlichkeitTraining:
+  element_type: Matrix
+  texts:
+    en: How useful was the Innosuisse Entrepreneurship Training for you in relation
+      to your BRIDGE Proof of Concept project?
+  section_name: Project development
+  section_index: 2
+  matrix_rows:
+  - code: '1'
+    texts: {}
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all useful
+  - code: '2'
+    texts:
+      en: Slightly useful
+  - code: '3'
+    texts:
+      en: Rather sligthly useful
+  - code: '4'
+    texts:
+      en: Rather useful
+  - code: '5'
+    texts:
+      en: Useful
+  - code: '6'
+    texts:
+      en: Very useful
+  - code: '99'
+    texts:
+      en: Not applicable / no opinion
+StartUpTrainingNutzen_offen:
+  element_type: OpenQuestion
+  texts:
+    en: In which areas was the Innosuisse Entrepreneurship Training most useful for
+      you?
+  section_name: Project development
+  section_index: 2
+AktuellerStatus:
+  element_type: SingleChoice
+  texts:
+    en: Which status best describes your BRIDGE Proof of Concept-funded project at
+      the end of the funding?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: A start-up or spin-off has been established (legal entity)
+  - code: '2'
+    texts:
+      en: A start-up or spin-off is in preparation or planned
+  - code: '3'
+    texts:
+      en: A non-profit organisation / NGO has been established
+  - code: '4'
+    texts:
+      en: A non-profit organisation / NGO is in preparation or planned
+  - code: '5'
+    texts:
+      en: Licensing or transfer of results to a company or organisation has been completed
+  - code: '6'
+    texts:
+      en: Licensing or transfer of results is planned or under negotiation
+  - code: '7'
+    texts:
+      en: Further development with an implementation partner is ongoing (cooperation,
+        employment)
+  - code: '8'
+    texts:
+      en: Further development with an implementation partner is planned (cooperation,
+        employment)
+  - code: '9'
+    texts:
+      en: Project continues mainly in research and development (cooperation, further
+        employment)
+  - code: '11'
+    texts:
+      en: 'Project has been completed but not further implemented: overall feasibility
+        not confirmed (technical, business, organisational)'
+  - code: '10'
+    texts:
+      en: Other (please specify)
+FinanzierungSicherheitFuerNaechstesJahr:
+  element_type: Matrix
+  texts:
+    en: To what extent is the financing of your project secured?
+  section_name: Implementation pathways
+  section_index: 3
+  matrix_rows:
+  - code: short
+    texts:
+      en: for the next 12 months
+  - code: long
+    texts:
+      en: and in a longer perspective (2 to 5 years)
+  matrix_columns:
+  - code: '2'
+    texts:
+      en: No financing / financing is not secured at all
+  - code: '3'
+    texts:
+      en: Financing is hardly secured
+  - code: '4'
+    texts:
+      en: Financing is partially secured
+  - code: '5'
+    texts:
+      en: Financing is largely secured
+  - code: '6'
+    texts:
+      en: Financing is fully secured
+  - code: '99'
+    texts:
+      en: Don’t know / not applicable
+ObstaclesFaced:
+  element_type: MultipleChoice
+  texts:
+    en: In which areas did you face the most significant obstacles during the project
+      or in the follow-up phase after the end of the project?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '2'
+    texts:
+      en: Unclear pathway to application or implementation
+  - code: '3'
+    texts:
+      en: Intended start-up pathway not realistic or not suitable
+  - code: '4'
+    texts:
+      en: No suitable implementation partner (e.g. industry, public sector)
+  - code: '5'
+    texts:
+      en: Challenges related to commercialisation of the results (e.g. business model,
+        market entry, investment)
+  - code: '6'
+    texts:
+      en: Scientific results not sufficiently promising
+  - code: '7'
+    texts:
+      en: Technical or conceptional feasibility too low
+  - code: '8'
+    texts:
+      en: Scientific, methodological issues or data-related challenge
+  - code: '9'
+    texts:
+      en: Missing career opportunity outside of academia
+  - code: '10'
+    texts:
+      en: Lack of time or personal capacity
+  - code: '11'
+    texts:
+      en: Shift in personal or other priorities
+  - code: '12'
+    texts:
+      en: Lack of staff or relevant expertise
+  - code: '13'
+    texts:
+      en: No follow-up funding available
+  - code: '14'
+    texts:
+      en: High administrative or organisational burden
+  - code: '15'
+    texts:
+      en: Low or unclear market potential or societal demand
+  - code: '16'
+    texts:
+      en: Collaboration challenges with partners or stakeholders
+  - code: '17'
+    texts:
+      en: Unclear or unsatisfactory agreement on ownership or access to intellectual
+        property
+  - code: '18'
+    texts:
+      en: Difficult or time-consuming negotiations with the host institution regarding
+        intellectual property rights)
+  - code: '19'
+    texts:
+      en: Limited support or clarity regarding IP strategy at the Proof of Concept
+        stage
+  - code: '22'
+    texts:
+      en: Unsatisfactory contacts or support with TTO (technology transfer office)
+  - code: '20'
+    texts:
+      en: Other factors (please specify)
+MainObstacle:
+  element_type: MultipleChoice
+  texts:
+    en: Which of the selected obstacles were most decisive ones?
+  section_name: Implementation pathways
+  section_index: 3
+  choices:
+  - code: '1'
+    texts:
+      en: Unclear pathway to application or implementation
+  - code: '2'
+    texts:
+      en: Intended start-up pathway not realistic or not suitable
+  - code: '3'
+    texts:
+      en: No suitable implementation partner (e.g. industry, public sector)
+  - code: '4'
+    texts:
+      en: Challenges related to commercialisation of the results (e.g. business model,
+        market entry, investment
+  - code: '5'
+    texts:
+      en: Scientific results not sufficiently promising
+  - code: '6'
+    texts:
+      en: Technical or conceptional feasibility too low
+  - code: '7'
+    texts:
+      en: Scientific, methodological issues or data-related challenge
+  - code: '8'
+    texts:
+      en: Missing career opportunity outside of academia
+  - code: '9'
+    texts:
+      en: Lack of time or personal capacity
+  - code: '10'
+    texts:
+      en: Shift in personal or other priorities
+  - code: '11'
+    texts:
+      en: Lack of staff or relevant expertise
+  - code: '12'
+    texts:
+      en: No follow-up funding available
+  - code: '13'
+    texts:
+      en: High administrative or organisational burden
+  - code: '14'
+    texts:
+      en: Low or unclear market potential or societal demand
+  - code: '15'
+    texts:
+      en: Collaboration challenges with partners or stakeholders
+  - code: '16'
+    texts:
+      en: Unclear or unsatisfactory agreement on ownership or access to intellectual
+        property
+  - code: '17'
+    texts:
+      en: Difficult or time-consuming negotiations with the host institution regarding
+        intellectual property rights)
+  - code: '18'
+    texts:
+      en: Limited support or clarity regarding IP strategy at the Proof of Concept
+        stage
+  - code: '19'
+    texts:
+      en: Unsatisfactory contacts or support with TTO (technology transfer office)
+  - code: '20'
+    texts:
+      en: '{{ObstaclesFaced_20_text}}'
 WeitereErgebnisse:
   element_type: Matrix
   texts:
@@ -9976,6 +9492,69 @@ ArbeitenAnzahl:
   - code: '1'
     texts:
       en: Number
+OutcomesAdditionalitaet:
+  element_type: Matrix
+  texts:
+    en: How likely is it that the above-mentioned outcomes would have been achieved
+      without BRIDGE funding?
+  section_name: Implementation pathways
+  section_index: 3
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: ''
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not at all – only possible because of BRIDGE
+  - code: '2'
+    texts:
+      en: unlikely
+  - code: '3'
+    texts:
+      en: rather unlikely
+  - code: '4'
+    texts:
+      en: rather likely
+  - code: '5'
+    texts:
+      en: likely
+  - code: '6'
+    texts:
+      en: very likely – would have happened anyway
+  - code: '7'
+    texts:
+      en: no answer possible
+WahrscheinlichkeitUmsetzung:
+  element_type: Matrix
+  texts:
+    en: How likely is it that your innovation will achieve implementation on the market
+      and/or in society in the medium to long term (e.g. through sales, licensing,
+      integration into an organisation, continued use or long-term application)?
+  section_name: Implementation pathways
+  section_index: 3
+  matrix_rows:
+  - code: '1'
+    texts: {}
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: not at all likely
+  - code: '2'
+    texts:
+      en: slightly likely
+  - code: '3'
+    texts:
+      en: rather unlikely
+  - code: '4'
+    texts:
+      en: rather likely
+  - code: '5'
+    texts:
+      en: likely
+  - code: '6'
+    texts:
+      en: very likely
 Implementiert:
   element_type: SingleChoice
   texts:
@@ -10007,3 +9586,420 @@ Implementiert:
   - code: '99'
     texts:
       en: I cannot answer this question.
+BeitragZuStartupGruendung:
+  element_type: Matrix
+  texts:
+    en: To what extent did the BRIDGE Proof of Concept funding contribute to the implementation
+      of your innovative idea?
+  section_name: 'Impact of the BRIDGE support '
+  section_index: 4
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Decision for founding a start-up or a non-profit organisation or to pursue
+        an implementation pathway
+  - code: '2'
+    texts:
+      en: Timing or acceleration of the founding or implementation process
+  - code: '3'
+    texts:
+      en: Viability of the start-up or implementation setup
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all
+  - code: '2'
+    texts:
+      en: Slightly
+  - code: '3'
+    texts:
+      en: Rather weak
+  - code: '4'
+    texts:
+      en: Rather strong
+  - code: '5'
+    texts:
+      en: Strong
+  - code: '6'
+    texts:
+      en: Essential (the implementation would not have occurred without BRIDGE funding)
+StartUpEntwicklungsstand:
+  element_type: Matrix
+  texts:
+    en: What is the current development status of your organisation, initiative or
+      implementation setup with regard to the following elements?
+  section_name: 'Start-up Development '
+  section_index: 6
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Team & OrganisationCore team assembled
+  - code: '2'
+    texts:
+      en: Basic organisational structures set up (e.g. roles, responsibilities, processes)
+  - code: '3'
+    texts:
+      en: Suitable location or infrastructure identified
+  - code: '4'
+    texts:
+      en: Legal entity registered or preparations underway (if applicable)
+  - code: '5'
+    texts:
+      en: Market & BusinessInitial contacts established with potential customers,
+        users or pilot partners
+  - code: '6'
+    texts:
+      en: Minimum viable product (MVP) or equivalent prototype, solution or pilot
+        developed or tested.
+  - code: '7'
+    texts:
+      en: First customers, users or implementing partners engaged and/or revenues
+        generated
+  - code: '8'
+    texts:
+      en: Funding & StrategyInitial funding or financing options mapped out
+  - code: '9'
+    texts:
+      en: Preliminary market or implementation approach outlined
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not started
+  - code: '2'
+    texts:
+      en: In progress
+  - code: '3'
+    texts:
+      en: Mostly completed
+  - code: '4'
+    texts:
+      en: Fully completed
+  - code: '5'
+    texts:
+      en: Not relevant
+StartupGruendungWann:
+  element_type: SingleChoice
+  texts:
+    en: When did or will the foundation of a start-up related to your BRIDGE Proof
+      of Concept project take place?
+  section_name: 'Start-up Development '
+  section_index: 6
+  choices:
+  - code: '1'
+    texts:
+      en: Before the start of the BRIDGE Proof of Concept project
+  - code: '2'
+    texts:
+      en: Shortly after the start of the project
+  - code: '3'
+    texts:
+      en: During the project (before completion)
+  - code: '4'
+    texts:
+      en: After completion of the project
+  - code: '5'
+    texts:
+      en: Not yet founded, but planned
+PersonalCH:
+  element_type: OpenQuestion
+  texts:
+    en: How many employees (FTE) did your organisation have at the end of [previous
+      year] / currently (full-time equivalents, FTE)?
+  section_name: 'Start-up Development '
+  section_index: 6
+InvestorsContacted:
+  element_type: MultipleChoice
+  texts:
+    en: Which type(s) of investors or funding sources provided financing or were actively
+      approached?
+  section_name: 'Start-up Development '
+  section_index: 6
+  choices:
+  - code: '6'
+    texts:
+      en: Own resources
+  - code: '1'
+    texts:
+      en: Family, Friends and Fools (FFF)
+  - code: '2'
+    texts:
+      en: Business Angels
+  - code: '3'
+    texts:
+      en: Venture capital investors
+  - code: '4'
+    texts:
+      en: Corporate or strategic investors
+  - code: '7'
+    texts:
+      en: Public funding programmes (e.g. grants or innovation funding)
+  - code: '8'
+    texts:
+      en: Foundations or philanthropic funding
+  - code: '5'
+    texts:
+      en: 'Other (please specify):'
+KarriereNuetzlichkeit:
+  element_type: Matrix
+  texts:
+    en: To what extent did the BRIDGE Proof of Concept project contribute to your
+      knowledge development and career development?
+  section_name: Career path
+  section_index: 7
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Development of knowledge and understanding(e.g. scientific, technical, entrepreneurial
+        or application-related knowledge)
+  - code: '2'
+    texts:
+      en: Concrete career development(e.g. new career direction, transition to another
+        sector, strengthened professional role)
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all
+  - code: '2'
+    texts:
+      en: Slightly
+  - code: '3'
+    texts:
+      en: Rather slightly
+  - code: '4'
+    texts:
+      en: Rather strongly
+  - code: '5'
+    texts:
+      en: Strongly
+  - code: '6'
+    texts:
+      en: Very strongly
+  - code: '99'
+    texts:
+      en: Not relevant for my situation
+KarriereNutzenFuer:
+  element_type: MultipleChoice
+  texts:
+    en: In which areas did the BRIDGE PoC funding contribute most to your career development?
+  section_name: Career path
+  section_index: 7
+  choices:
+  - code: '1'
+    texts:
+      en: Improving employability outside academia
+  - code: '2'
+    texts:
+      en: Strengthening professional networks
+  - code: '3'
+    texts:
+      en: Developing entrepreneurial and innovation skills
+  - code: '4'
+    texts:
+      en: Gaining experience in project management and leadership
+  - code: '5'
+    texts:
+      en: Increasing visibility or reputation within the research community
+  - code: '6'
+    texts:
+      en: Enhancing confidence to take risks or pursue new ideas
+  - code: '7'
+    texts:
+      en: Other (please specify)
+ImagineOffer:
+  element_type: SingleChoice
+  texts:
+    en: Imagine you received an attractive job offer from a prestigious research institution
+      or company, but accepting it would mean discontinuing your work on commercializing
+      or practically implementing your BRIDGE innovation. What would you do?
+  section_name: Career path
+  section_index: 7
+  choices:
+  - code: '1'
+    texts:
+      en: Accept the position – advancing my research career is the priority
+  - code: '2'
+    texts:
+      en: Negotiate to continue the innovation work part-time or in parallel
+  - code: '3'
+    texts:
+      en: Decline the offer – bringing this innovation to application is too important
+  - code: '4'
+    texts:
+      en: Accept, but plan to return to the innovation later
+  - code: '5'
+    texts:
+      en: Not sure / depends on circumstances
+EinbezugKunden:
+  element_type: MultipleChoice
+  texts:
+    en: Were customers or users actively involved in the development within your BRIDGE
+      Proof of Concept project?
+  section_name: Entrepreneurial Mindset and Behaviour
+  section_index: 8
+  choices:
+  - code: '1'
+    texts:
+      en: No, customers or users were not actively involved
+  - code: '2'
+    texts:
+      en: Interviews, surveys or exploratory feedback
+  - code: '3'
+    texts:
+      en: Testing with prototypes, mock-ups or demonstrators
+  - code: '4'
+    texts:
+      en: Pilot projects or test phases with users, customers or beneficiaries
+  - code: '5'
+    texts:
+      en: Letters of Intent (LoI) or Memoranda of Understanding (MoU)
+  - code: '6'
+    texts:
+      en: Testing willingness to pay or willingness to adopt
+  - code: '7'
+    texts:
+      en: Initial sales, pre-orders or comparable commitments
+  - code: '8'
+    texts:
+      en: Other activities, (please specify)
+BeitragSoftImpacts:
+  element_type: Matrix
+  texts:
+    en: To what extent did the BRIDGE Proof of Concept funding support you in the
+      following aspects?
+  section_name: Entrepreneurial Mindset and Behaviour
+  section_index: 8
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Recognising opportunities and thinking entrepreneurially or in an implementation-oriented
+        way
+  - code: '2'
+    texts:
+      en: Experimenting with ideas and validating assumptions
+  - code: '3'
+    texts:
+      en: Dealing with uncertainty, setbacks and learning from failure
+  - code: '4'
+    texts:
+      en: Bringing innovation ideas into practice(e.g. engaging users, organisations,
+        partners or markets)
+  - code: '5'
+    texts:
+      en: Enhancing negotiation and interaction skills
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all
+  - code: '2'
+    texts:
+      en: Slightly
+  - code: '3'
+    texts:
+      en: Rather weak
+  - code: '4'
+    texts:
+      en: Rather strong
+  - code: '5'
+    texts:
+      en: Strong
+  - code: '6'
+    texts:
+      en: Essential
+BeitragKompetenzen:
+  element_type: Matrix
+  texts:
+    en: To what extent did the BRIDGE Proof of Concept funding strengthen your entrepreneurial
+      and innovation-related competencies?
+  section_name: Entrepreneurial Mindset and Behaviour
+  section_index: 8
+  matrix_rows:
+  - code: '1'
+    texts:
+      en: Customer, user or beneficiary discovery (understanding needs, problem–solution
+        fit)
+  - code: '2'
+    texts:
+      en: Developing and testing ideas in practice
+  - code: '3'
+    texts:
+      en: 'Building networks and partnerships relevant for implementation
+
+        (e.g. companies, public sector, NGOs or other organisations)'
+  - code: '4'
+    texts:
+      en: Leading and taking responsibility for implementation
+  - code: '5'
+    texts:
+      en: Designing value propositions and implementation or business models
+  - code: '6'
+    texts:
+      en: 'Go-to-market or implementation basics
+
+        (e.g. positioning, channels, pricing, cost recovery or adoption or scaling
+        tests)'
+  - code: '7'
+    texts:
+      en: 'Understanding and preparing financing options for further development
+
+        (e.g. private, public or blended financing)'
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all
+  - code: '2'
+    texts:
+      en: Slightly
+  - code: '3'
+    texts:
+      en: Rather weak
+  - code: '4'
+    texts:
+      en: Rather strong
+  - code: '5'
+    texts:
+      en: Strong
+  - code: '6'
+    texts:
+      en: Essential (would not have developed without funding)
+Zielerreichung:
+  element_type: Matrix
+  texts:
+    en: Overall, how successful do you consider your BRIDGE Proof of Concept project
+      to have been in achieving its intended objectives?
+  section_name: Overall assessment
+  section_index: 9
+  matrix_rows:
+  - code: '1'
+    texts: {}
+  matrix_columns:
+  - code: '1'
+    texts:
+      en: Not at all successful
+  - code: '2'
+    texts:
+      en: Slightly successful
+  - code: '3'
+    texts:
+      en: Rather slightly successful
+  - code: '4'
+    texts:
+      en: Rather successful
+  - code: '5'
+    texts:
+      en: Successful
+  - code: '6'
+    texts:
+      en: Very successful
+GutwarOffen:
+  element_type: OpenQuestion
+  texts:
+    en: Looking back at your participation in the BRIDGE Proof of Concept programme:What
+      worked particularly well?
+  section_name: Overall assessment
+  section_index: 9
+VerbesserungOffen:
+  element_type: OpenQuestion
+  texts:
+    en: Where do you see room for improvement?
+  section_name: Overall assessment
+  section_index: 9
